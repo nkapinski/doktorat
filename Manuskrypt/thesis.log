@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  10 APR 2018 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  10 APR 2018 15:19
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -821,16 +821,22 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] (Rozdzialy/wprowadzenie.tex
 Rozdzia\PlPrIeC {\l } 1.
+<figures/rodzajeSieciNeuronowych.png, id=31, 2706.36093pt x 573.64313pt>
+File: figures/rodzajeSieciNeuronowych.png Graphic file (type png)
+<use figures/rodzajeSieciNeuronowych.png>
+Package pdftex.def Info: figures/rodzajeSieciNeuronowych.png  used on input lin
+e 25.
+(pdftex.def)             Requested size: 441.01773pt x 93.4741pt.
 [1
 
 
-]
+ <./figures/rodzajeSieciNeuronowych.png>]
 Rozdzia\PlPrIeC {\l } 2.
 ) (Rozdzialy/monitorowanie.tex [2
 
 ]
 Rozdzia\PlPrIeC {\l } 3.
-<figures/muscleStructure.jpg, id=37, 394.47375pt x 335.2525pt>
+<figures/muscleStructure.jpg, id=40, 394.47375pt x 335.2525pt>
 File: figures/muscleStructure.jpg Graphic file (type jpg)
 <use figures/muscleStructure.jpg>
 Package pdftex.def Info: figures/muscleStructure.jpg  used on input line 6.
@@ -850,11 +856,20 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [5]
 Rozdzia\PlPrIeC {\l } 4.
-) (Rozdzialy/opis_metody.tex [6
+<figures/AlexNet.png, id=52, 225.84375pt x 147.55125pt>
+File: figures/AlexNet.png Graphic file (type png)
+<use figures/AlexNet.png>
+Package pdftex.def Info: figures/AlexNet.png  used on input line 9.
+(pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
+[6
 
-]
+ <./figures/AlexNet.png>]) (Rozdzialy/opis_metody.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[7]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [7
+) (Rozdzialy/wyniki_podsumowanie.tex [8
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -863,37 +878,39 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[8
+[9
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [9
+) (thesis.bbl [10
 
-]) (appendix.tex [10
+]) (appendix.tex [11
 
 ]
 Dodatek A.
-) [11
+) [12
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 5214 strings out of 493305
- 78578 string characters out of 3128932
- 135440 words of memory out of 3000000
- 8596 multiletter control sequences out of 15000+200000
+ 5227 strings out of 493305
+ 78912 string characters out of 3128932
+ 135460 words of memory out of 3000000
+ 8606 multiletter control sequences out of 15000+200000
  14743 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,40p,671b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
-9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
-.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb>
-Output written on thesis.pdf (19 pages, 302131 bytes).
+9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
+.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 
+2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb>
+Output written on thesis.pdf (20 pages, 551602 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

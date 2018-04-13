@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  11 APR 2018 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  13 APR 2018 15:10
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -856,24 +856,71 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [5]
 Rozdzia\PlPrIeC {\l } 4.
-<figures/AlexNet.png, id=52, 225.84375pt x 147.55125pt>
-File: figures/AlexNet.png Graphic file (type png)
-<use figures/AlexNet.png>
-Package pdftex.def Info: figures/AlexNet.png  used on input line 9.
-(pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
 [6
 
- <./figures/AlexNet.png>]) (Rozdzialy/opis_metody.tex
+]
+<figures/AlexNet.png, id=55, 225.84375pt x 147.55125pt>
+File: figures/AlexNet.png Graphic file (type png)
+<use figures/AlexNet.png>
+Package pdftex.def Info: figures/AlexNet.png  used on input line 47.
+(pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 52.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 52.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 52.
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[7]
+[7 <./figures/AlexNet.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [8]
+<figures/AlexNet-multiGPU.png, id=69, 627.5445pt x 208.98074pt>
+File: figures/AlexNet-multiGPU.png Graphic file (type png)
+<use figures/AlexNet-multiGPU.png>
+Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 77.
+(pdftex.def)             Requested size: 352.81552pt x 117.49397pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[9 <./figures/AlexNet-multiGPU.png>]
+<figures/InceptionModules.png, id=76, 553.46774pt x 149.358pt>
+File: figures/InceptionModules.png Graphic file (type png)
+<use figures/InceptionModules.png>
+Package pdftex.def Info: figures/InceptionModules.png  used on input line 95.
+(pdftex.def)             Requested size: 352.81552pt x 95.21503pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[10 <./figures/InceptionModules.png>]
+<figures/GoogleNet.png, id=81, 1071.40276pt x 248.72925pt>
+File: figures/GoogleNet.png Graphic file (type png)
+<use figures/GoogleNet.png>
+Package pdftex.def Info: figures/GoogleNet.png  used on input line 105.
+(pdftex.def)             Requested size: 441.01773pt x 102.38574pt.
+<figures/GoogleNetparams.png, id=82, 578.76225pt x 310.15875pt>
+File: figures/GoogleNetparams.png Graphic file (type png)
+<use figures/GoogleNetparams.png>
+Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 114.
+(pdftex.def)             Requested size: 441.01773pt x 236.34306pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[11 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>])
+(Rozdzialy/opis_metody.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[12]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [9
+) (Rozdzialy/wyniki_podsumowanie.tex [13
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -882,43 +929,52 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[10
+[14
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [11
+) (thesis.bbl [15
 
-]) (appendix.tex [12
+]) (appendix.tex [16
 
 ]
 Dodatek A.
-) [13
+) [17
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 5227 strings out of 493305
- 78912 string characters out of 3128932
- 137460 words of memory out of 3000000
- 8606 multiletter control sequences out of 15000+200000
- 14743 words of font info for 45 fonts, out of 3000000 for 9000
+ 5289 strings out of 493305
+ 79961 string characters out of 3128932
+ 137523 words of memory out of 3000000
+ 8651 multiletter control sequences out of 15000+200000
+ 20293 words of font info for 64 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,40p,1128b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,12n,40p,1136b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
-9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
+9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/nor
-bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Use
-rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C
-:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.
-pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
-lsy10.pfb>
-Output written on thesis.pdf (21 pages, 565911 bytes).
+2.9/fonts/enc/dvips/pl/plme.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKT
+eX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/n
+orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/U
+sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb
+><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi
+8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl
+/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/pl/plr7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on thesis.pdf (25 pages, 826726 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

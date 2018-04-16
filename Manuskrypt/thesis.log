@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  13 APR 2018 15:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  16 APR 2018 15:42
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -641,29 +641,29 @@ Package: `anysize' 1.0 <1994/08/13>
 ) (thesis.aux (header.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Info: Redefining \celsius on input line 38.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Info: Redefining \celsius on input line 39.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 39.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 38.
-Package gensymb Info: Using \Omega for \ohm on input line 38.
+LaTeX Info: Redefining \ohm on input line 39.
+Package gensymb Info: Using \Omega for \ohm on input line 39.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -862,14 +862,14 @@ Rozdzia\PlPrIeC {\l } 4.
 <figures/AlexNet.png, id=55, 225.84375pt x 147.55125pt>
 File: figures/AlexNet.png Graphic file (type png)
 <use figures/AlexNet.png>
-Package pdftex.def Info: figures/AlexNet.png  used on input line 47.
+Package pdftex.def Info: figures/AlexNet.png  used on input line 48.
 (pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 52.
+(Font)              <10> on input line 53.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 52.
+(Font)              <7> on input line 53.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 52.
+(Font)              <5> on input line 53.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -882,7 +882,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/AlexNet-multiGPU.png, id=69, 627.5445pt x 208.98074pt>
 File: figures/AlexNet-multiGPU.png Graphic file (type png)
 <use figures/AlexNet-multiGPU.png>
-Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 77.
+Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 78.
 (pdftex.def)             Requested size: 352.81552pt x 117.49397pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -892,7 +892,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/InceptionModules.png, id=76, 553.46774pt x 149.358pt>
 File: figures/InceptionModules.png Graphic file (type png)
 <use figures/InceptionModules.png>
-Package pdftex.def Info: figures/InceptionModules.png  used on input line 95.
+Package pdftex.def Info: figures/InceptionModules.png  used on input line 96.
 (pdftex.def)             Requested size: 352.81552pt x 95.21503pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -902,25 +902,65 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/GoogleNet.png, id=81, 1071.40276pt x 248.72925pt>
 File: figures/GoogleNet.png Graphic file (type png)
 <use figures/GoogleNet.png>
-Package pdftex.def Info: figures/GoogleNet.png  used on input line 105.
+Package pdftex.def Info: figures/GoogleNet.png  used on input line 106.
 (pdftex.def)             Requested size: 441.01773pt x 102.38574pt.
 <figures/GoogleNetparams.png, id=82, 578.76225pt x 310.15875pt>
 File: figures/GoogleNetparams.png Graphic file (type png)
 <use figures/GoogleNetparams.png>
-Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 114.
+Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 115.
 (pdftex.def)             Requested size: 441.01773pt x 236.34306pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[11 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>])
-(Rozdzialy/opis_metody.tex
+[11 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>]
+<figures/ResidualBlock.jpg, id=87, 472.164pt x 186.09525pt>
+File: figures/ResidualBlock.jpg Graphic file (type jpg)
+<use figures/ResidualBlock.jpg>
+Package pdftex.def Info: figures/ResidualBlock.jpg  used on input line 134.
+(pdftex.def)             Requested size: 220.50887pt x 86.9082pt.
+
+Underfull \vbox (badness 1845) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [12]
+
+LaTeX Warning: Reference `gradResBlock' on page 13 undefined on input line 154.
+
+
+
+Overfull \hbox (16.15782pt too wide) in paragraph at lines 156--158
+[]$ \OT4/cmr/m/n/12 pro-pa-go-wa-n¡ bez wpªy-wu na war-stwy za-wie-ra-j¡-ce wa-
+gi i (2) $\OML/plm/m/it/12 $ \OT4/cmr/m/n/12 = $[][] [][] \OML/plm/m/it/12 F\O
+T4/cmr/m/n/12 (\OML/plm/m/it/12 x[]; W[]\OT4/cmr/m/n/12 )$
+ []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[13 <./figures/ResidualBlock.jpg>]
+Overfull \hbox (3.12766pt too wide) in paragraph at lines 166--169
+[]\OT4/cmr/m/n/12 (https://medium.com/@14prakash/understanding-and-implementing
+-architectures-
+ []
+
+
+Overfull \hbox (3.58252pt too wide) in paragraph at lines 166--169
+\OT4/cmr/m/n/12 of-resnet-and-resnext-for-state-of-the-art-image-cc5d0adf648e) 
+Przy-kªad: lamb-da = gra-
+ []
+
+) (Rozdzialy/opis_metody.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[14]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [13
+) (Rozdzialy/wyniki_podsumowanie.tex [15
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -929,52 +969,57 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[14
+[16
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [15
+) (thesis.bbl [17
 
-]) (appendix.tex [16
+]) (appendix.tex [18
 
 ]
 Dodatek A.
-) [17
+) [19
 
-] (thesis.aux (header.aux)) ) 
+] (thesis.aux (header.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 5289 strings out of 493305
- 79961 string characters out of 3128932
- 137523 words of memory out of 3000000
- 8651 multiletter control sequences out of 15000+200000
- 20293 words of font info for 64 fonts, out of 3000000 for 9000
+ 5301 strings out of 493305
+ 80171 string characters out of 3128932
+ 137546 words of memory out of 3000000
+ 8660 multiletter control sequences out of 15000+200000
+ 21310 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,40p,1136b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
-9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
-.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/pl/plme.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTe
-X 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKT
-eX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/n
-orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/U
-sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb
-><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi
-8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl
-/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/pl/plr7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on thesis.pdf (25 pages, 826726 bytes).
+ 41i,15n,40p,1167b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.e
+nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plit.
+enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms
+.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plm
+e.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
+rm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/p
+lsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Users/norbert/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users/norbert/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Users/norbert/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/norber
+t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/n
+orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Us
+ers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C
+:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pf
+b><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pls
+l12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/pl/plti12.pfb>
+Output written on thesis.pdf (27 pages, 878026 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 167 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

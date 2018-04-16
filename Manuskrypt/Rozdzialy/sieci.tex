@@ -41,6 +41,7 @@ substantial overfitting. Dropout roughly doubles the number of iterations requir
 
 \section{Przykłady współczesnych topologii}
 \subsection{AlexNet}
+\label{AlexNet}
 Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architektury Alexa Krizhevsky, zawiera blisko 60 milionów parametrów i 650 tysięcy neuronów. Architekturę zaprezentowano na Rys. \ref{AlexNetTopology}
 \begin{figure}[h!]
 	\centering
@@ -118,11 +119,65 @@ Dokładne zestawienie parametrów znajduje się w Tabeli \ref{GoogleNetParams}
 
 Ważną cechą sieci GoogleNet jest brak warstw typu FC na zakończeniu, gdzie w przypadku sieci AlexNet znajdowało się około 90\% parametrów. Końcowe wnioskowanie jest realizowane na podstawie wartości średniej z dwuwymiarowych map cech.
 
-Dla lepszego zrozumienia przetwarzania sygnału z wykorzystaniem modułów incepcji, podobnie jak w przypadku sieci AlexNet, przeanalizowane zostanie działanie pierwszego modułu w topologii z Rys. \ref{GoogleNetTopo}.
+Dla lepszego zrozumienia idei redukcji wymiarowości realizowanej przez moduły incepcji, podobnie jak w przypadku sieci AlexNet, przeanalizowane zostanie działanie pierwszego modułu w topologii z Rys. \ref{GoogleNetTopo}.
 Moduł zawiera 128 filtrów z jądrami o wymiarach 3$\times$3 i 32 filtry z jądrami o wymiarach 5$\times$5. Dane na wejściu modułu mają 192 kanały (zob. Tabela \ref{GoogleNetParams}). Dla przykładu, rząd wielkości obliczeń operacji splotów 32 filtrów 5$\times$5 wynosi 25$\times$32$\times$192=153 600 i dalej wzrastałby z głębokością sieci. W celu zapobiegnięcia nadmiarowi obliczeń stosowana jest redukcja z użyciem 16 filtrów z jądrem o wymiarach 1$\times$1. W efekcie rząd wielkości obliczeń spada do 16$\times$192 +  25$\times$32$\times$16=15 876, co pozwala na dalsze budowanie wielowarstwowych struktur.
 
 Topologia GoogLeNet jest wciąż rozwijana. Po pierwszej prezentacji pojawiły się kolejne modernizacje wprowadzjące dodatkowe faktoryzacje modułów jak w Inception-v2 [Inception-v2], lub normalizacje wartości wynikowych poszczególnych warstw jak w Inception-v3 [Inception-v3]. Kolejny innowacyjny pomysł, bazujący na dodatkowych połączeniach między blokami, został wprowadzony w 2015 roku w sieci ResNet, która została opisana w kolejnej podsekcji.
 
 \subsection{ResNet}
+
+Jednym z najbardziej oczywistych pomysłów na polepszenie dokładności działania sieci neuronowych jest zwiększenie liczby warstw. Jednak wraz ze wzrostem liczby warstw, trening takich architektur z użyciem tradycyjnych metod gradientowych (takich jak algorytm wstecznej propagacji błędu) staje się mniej wydajny. Problem wynika z faktu, że zmiana wartości sygnału na wyjściu sieci w odpowiedzi na sygnał wejściowy jest mniejsza wraz ze wzrostem liczby warstw [ResNet]. W takiej sytuacji gradient wyliczany na podstawie sygnału będącego różnicą pomiędzy sygnałem wejściowym a wejściowym może przyjmować wartości bliskie 0 uniemożliwiając progres uczenia się. Problem zanikającego gradientu (ang. \textit{vanishing gradient problem}) rozwiązywany jest poprzez zastosowanie normalizacji oraz nieliniowych funkcji aktywacji, których przykłady zostały opisane w sekcji \ref{AlexNet} oraz szeroko w literaturze np. w [ResNet 2,3,4]. Dzięki tym mechanizmom algorytm treningu głębokich sieci neuronowych w większej liczbie przypadków zbiega do użytecznego minimum lokalnego. 
+
+W momencie znalezienia takiego minimum dodanie kolejnych warstw i parametrów sieci jest redundatne, a nawet prowadzi do pogorszenia wyników treningu sieci, co związane jest z trudnościami optymalizacji przestrzeni wieloparametrycznych [Opt]. Zjawiskio to nosi nazwę degradacji treningu (ang. \textit{degradation problem}). Twórcy architektury ResNet zaproponowali rozwiązanie tego problemu poprzez implementację bloków rezydualnych (ang. \textit{Residuum Units}) zawierających dodatkowe, skrótowe połączenia (ang. \textit{skip conections}) pomiędzy wejściem a wyjściem bloków. Porównanie schematów funkcjonalnych nowych bloków i wcześniej istniejącego rozwiązania stosowanego np. w AlexNet został przedstawiony na Rys. \ref{ResNetBlock}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/ResidualBlock.jpg}
+	\caption{Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.}
+	\label{ResNetBlock}
+\end{figure} 
+
+Ogólną postać równania bloku rezydualnego można zapisać następująco:
+\begin{equation}
+\begin{split}
+y_l = h(x_l) + F(x_l, W_l),\\
+x_{l+1} = f(y_l),
+\end{split}
+\end{equation}
+gdzie $x_l$ i $x_{l+1}$ stanowią sygnał wejściowy i wyjściowy $l$-tego bloku. $F$ stanowi funkcję rezydualną optymalizowaną podczas treningu sieci, $h$($x_l$) stanowi funkcję przekształcenia sygnału $x_l$ przekazywanego skrótowym połączeniem, $f$ jest funkcją ReLU, a $W$ stanowi macierz wag.
+
+Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci skłądającej się z bloków rezydualnych. Dla każdego $L$-tego bloku zachodzi równanie:
+\begin{equation}
+x_L = x_l + \sum_{i=l}^{L-1}F(x_i, W_i)
+\end{equation}
+Korzystając z reguły łąńcuchowej [ResNet-wyj-9] można zapisać równanie na gradient funkcji kosztu $\varepsilon$:
+\begin{equation}
+\ref{gradResBlock}
+\frac{\partial \varepsilon}{\partial x} =  \frac{\partial \varepsilon}{\partial x_L} \frac{\partial x_L}{\partial x_l} =  \frac{\partial \varepsilon}{\partial x_L}\left (1 +   \frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i) \right )
+\end{equation}
+z czego wynika, że gradient może być podzielony na dwie addytywne składowe: (1) $w$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
+
+Rozważając przykład sieci składający się z trzech bloków można zapisać:
+\begin{equation}
+\frac{\partial \varepsilon}{\partial x_0} =  \frac{\partial \varepsilon}{\partial x_3}*(w_2+\lambda_2)*(w_1+\lambda_1)*(w_0+\lambda_0)
+\end{equation}
+
+Można następnie wyszczególnić 4 przypadki:
+
+(https://medium.com/@14prakash/understanding-and-implementing-architectures-of-resnet-and-resnext-for-state-of-the-art-image-cc5d0adf648e)
+Przykład: lambda = gradient 
+Case-1, Lambda = 0: This will be a plain network. Since w2, w1, w0 are all between {-1, 1}, the gradient vanishes as the network depth increases. This clearly shows vanishing gradient problem
+
+Case-2, Lambda >1: In this case, The backprop value increases incrementally and lead to exploding of gradients.
+
+Case-3, Lambda <1: For shallow networks this might not be problem. But for extra large networks, weight+lambda is still less than <1 in most cases and it achieves the same problem as case-1
+
+case-4, Lambda =1: In this case, Every weight is incremented by 1, This eliminates the problem of multiplying with very large numbers as in case-2 and small numbers as in case-1 and acts as a good barrier.
+
+Kompletna sieć zaproponowana w 2015 roku została pokazana na Rys.:
+(wstaw rysunek topo)
+
+
+ Warianty ResNet: (https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035)
+
 \subsection{Złożenia}
 \section{Zastosowania w medycynie}

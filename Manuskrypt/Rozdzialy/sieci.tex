@@ -156,28 +156,68 @@ Korzystając z reguły łąńcuchowej [ResNet-wyj-9] można zapisać równanie n
 \end{equation}
 z czego wynika, że gradient może być podzielony na dwie addytywne składowe: (1) $w$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
 
-Rozważając przykład sieci składający się z trzech bloków można zapisać:
+Przykład propagacji gradientu w sieci składającej się z trzech bloków wyglądałby następująco:
 \begin{equation}
 \frac{\partial \varepsilon}{\partial x_0} =  \frac{\partial \varepsilon}{\partial x_3}*(w_2+\lambda_2)*(w_1+\lambda_1)*(w_0+\lambda_0)
 \end{equation}
 
-Można następnie wyszczególnić 4 przypadki:
+Przyjmując, że wartości $w$ są zazwyczaj znormalizowane do przedziału (-1;1) można rozważyć 4 istotne przypadki:
+\begin{enumerate}
+	\item $\lambda$ = 0 -- nie ma skrótowych połączeń, co odpowiada płaskiej strukturze sieci. Ponieważ wartości $w$ są z przedziału (-1;1) dodawanie kolejnych warstw wzmacnia wcześniej omówiony efekt zanikającego gradietu.
+	\item $\lambda$ $>$ 1 -- z każdą warstwą, sumaryczna wartość gradientu zwiększa się inkrementalnie, co nazywane jest \textit{problemem eksplozji gradientu} (ang. \textit{exploding gradient problem}).
+	\item $\lambda$ $<$ 1 -- przy założeniu, że $w$ + $\lambda$ $<$ 1, dla sieci skłądających się z wielu warstw występuje problem zaniku gradientu, jak w przypadku 1. Natomiast, gdy $w$ + $\lambda$ $>$ 1 podobnie jak w przypadku 2 może występować problem eksplozji gradienu.
+	\item $\lambda$ $=$ 1 -- wartości $w$ są inkrementowane dokładnie o 1, co eliminuje problemy podane w przypadkach 1, 2 i 3 i stanowiło motywacje dla twórców architektury ResNet dla wyboru funkcji tożsamościowej $h$($x_l$).
+\end{enumerate}
 
-(https://medium.com/@14prakash/understanding-and-implementing-architectures-of-resnet-and-resnext-for-state-of-the-art-image-cc5d0adf648e)
-Przykład: lambda = gradient 
-Case-1, Lambda = 0: This will be a plain network. Since w2, w1, w0 are all between {-1, 1}, the gradient vanishes as the network depth increases. This clearly shows vanishing gradient problem
+Dokładny opis matematyczny funkcjonowania bloków rezydualnych wraz z dowodami znajduje się w [ResNet-wyj]. Przykład topologii sieci składającej się z 8 bloków i łącznie 18 warstw tzw. ResNet-18, przedstawiono na Rys.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/ResNet.png}
+	\caption{Topologia architektury ResNet-18.}
+	\label{ResNetBlock}
+\end{figure} 
 
-Case-2, Lambda >1: In this case, The backprop value increases incrementally and lead to exploding of gradients.
+Pierwsza warstwa konwolucyjna zawiera filtry z jądrem splotu o wymiarach 7$\times$7. W kolejnych zastosowano wymiar 3$\times$3. Zastosowanie mniejszych wymiarów jąder splotu niż w AlexNet oraz podobnie jak w przypadku sieci GoogLeNet wyliczenie na końcu wartości średniej z dwuwymiarowych map cech zredukowało liczbę parametrów.
 
-Case-3, Lambda <1: For shallow networks this might not be problem. But for extra large networks, weight+lambda is still less than <1 in most cases and it achieves the same problem as case-1
+Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze przykładów. W praktyce, z powodzeniem wykorzystywano topologie składające się nawet z 1202 warstw [ResNet]. W 2016 roku zaprezentowano hybrydę sieci GoogleNet i ResNet [InceptionResNet]. Pracowano również nad bardziej złożonymi blokami, co w konsekwencji doporwadziło w 2017 roku do zaprezentowania architektury ResNetX, która w wielu testach klasyfikacji różnych zbiorów okazała się być lepsza niż poprzednicy [ResNetX]. Ciekawy przegląd dotyczący historii tych prac można znaleźć w [https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035].
 
-case-4, Lambda =1: In this case, Every weight is incremented by 1, This eliminates the problem of multiplying with very large numbers as in case-2 and small numbers as in case-1 and acts as a good barrier.
-
-Kompletna sieć zaproponowana w 2015 roku została pokazana na Rys.:
-(wstaw rysunek topo)
-
-
- Warianty ResNet: (https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035)
+Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR czy COCO osiągneły dokładność klasyfikacji porównywalną z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
 
 \subsection{Złożenia}
+Uczenie złożeń sieci (ang. \textit{esemble learning}) polega na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii. Koncepcja nie jest nowa i stosowana była już przed etapem kiedy metody głębokiego uczenia się zyskały na popularności. Dobry przegląd wcześniejszych prac bazujących na tradycyjnym podejściu do uczenia maszynowego można znaleźć w  [Ensemble 1-3].
+
+W kontekście głębokiego uczenia się stosowane są różnea metody kombinacji finalnych predykcji modeli bazowych [Ensemble]. Do najczęściej stosowanych można zaliczyć: uśrednianie, głosowanie, optymalną klasyfikację Bayesa, generalizację stosów.
+
+\subsubsection{Uśrednianie}
+Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednianie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez liczbę tych modeli. Uśredniać można bezpośrednio wyniki finalnej predykcji jak również prawdopodobieństwa przynależności do odpowiednich klas, które są np. wynikiem funkcji softmax. 
+
+Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (Breiman, 2001).
+
+Zastosowanie uśredniania przy silnie odstających od średniej najgorszych predykcjach znacząco obniża dokładność całego złożenia. Dlatego przy silnie nieheterogenicznych modelach bazowych dających bardzo różne wyniki często poszukiwane są inne metody.
+
+\subsubsection{Głosowanie}
+
+W głosowaniu stosuje się mechanizm zliczania przewidzianych przez modele bazowe etykiet. Etykieta, która została wybrana przez największą liczbę modeli bazowych jest obierana jako wynik ostatecznej predykcji. Jest to tzw. \textit{głosowanie większościowe}.
+
+W porównaniu do uśredniania, głosowanie jest mniej czułe na predykcje pojedynczych modeli. Wykorzystuje jednak jedynie informacje o przewidzianych etykietach, co utrudnia konstrukcje bardziej wyszukanych rozwiązań.
+
+\subsubsection{Optymalna klasyfikacja Bayesa}
+
+W przypadku tej metody, każdy model bazowy $j$ postrzegany jest jako hipoteza $h_j$. Każda z hipotez posiada wagę proporcjonalną do prawdopodobieństwa zdarzenia, w którym dany zbiór danych trenujących zostałby wybrany z ogółu danych gdyby dana hipotez była prawdziwa. Stwierdzenie to można zapisać następującycm równaniem:
+\begin{equation}
+y = armax_{c_j \in C} \sum_{h_i \in H} P(c_j \mid h_i)P(T \mid h_i)P(h_i)
+\end{equation}
+gdzie $y$ to przewidziana etykieta, $C$ jest zbiorem wszystkich możliwych klas, $H$ to przestrzeń hipotez, a $T$ to zbiór danych trenujących.
+
+W praktyce z uwagi na dużą złożoność obliczeniową optymalną klasyfikację Bayesa wykorzystuje się rzadko. Cześćiej stosowane są techniki BPA (od ang. \textit{Bayesian parameter averaging}), BMA (od ang. \textit{Bayesian model averaging}), czy teć BMC (od ang. \textit{Bayesian model combination}) (zob. [BPA, BMA, BMC]), które aproksymują optymalną metodę.
+
+\subsubsection{Generalizacja stosów}
+Idea generalizacji stosów oryginalnie została zaproponowana w [Wolpert, 1992]. Wykorzystana została koncepcja meta-uczenia, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadniem jest wybór optymalnego wektora wag $a$ dla stosu $s$ predykcji dla danych $x$:
+\begin{equation}
+s(x) = \sum_{i=1}^{m}a_i s_i(x)
+\end{equation}
+
+W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do swojego treningu poprawnych wartości $a$ wykorzystując jako odniesienie znane, poprawne etykiety.
+ 
+
 \section{Zastosowania w medycynie}

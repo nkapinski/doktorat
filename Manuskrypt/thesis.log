@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  16 APR 2018 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  17 APR 2018 15:03
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -638,7 +638,11 @@ Package: `anysize' 1.0 <1994/08/13>
 \@Bottommargin=\dimen144
 ) (fancyhdr.sty
 \headwidth=\dimen145
-) (thesis.aux (header.aux))
+) (thesis.aux (header.aux)
+
+LaTeX Warning: Label `ResNetBlock' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -943,24 +947,33 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [13 <./figures/ResidualBlock.jpg>]
-Overfull \hbox (3.12766pt too wide) in paragraph at lines 166--169
-[]\OT4/cmr/m/n/12 (https://medium.com/@14prakash/understanding-and-implementing
--architectures-
- []
+<figures/ResNet.png, id=95, 676.32675pt x 208.3785pt>
+File: figures/ResNet.png Graphic file (type png)
+<use figures/ResNet.png>
+Package pdftex.def Info: figures/ResNet.png  used on input line 175.
+(pdftex.def)             Requested size: 441.01773pt x 135.88pt.
 
-
-Overfull \hbox (3.58252pt too wide) in paragraph at lines 166--169
-\OT4/cmr/m/n/12 of-resnet-and-resnext-for-state-of-the-art-image-cc5d0adf648e) 
-Przy-kªad: lamb-da = gra-
- []
-
-) (Rozdzialy/opis_metody.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[14]
+[14 <./figures/ResNet.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[15]
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[16]) (Rozdzialy/opis_metody.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[17]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [15
+) (Rozdzialy/wyniki_podsumowanie.tex [18
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -969,28 +982,31 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[16
+[19
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [17
+) (thesis.bbl [20
 
-]) (appendix.tex [18
+]) (appendix.tex [21
 
 ]
 Dodatek A.
-) [19
+) [22
 
 ] (thesis.aux (header.aux))
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 5301 strings out of 493305
- 80171 string characters out of 3128932
- 137546 words of memory out of 3000000
- 8660 multiletter control sequences out of 15000+200000
+ 5306 strings out of 493305
+ 80272 string characters out of 3128932
+ 137585 words of memory out of 3000000
+ 8664 multiletter control sequences out of 15000+200000
  21310 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,40p,1167b,282s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1017,9 +1033,9 @@ l12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/pl/plti12.pfb>
-Output written on thesis.pdf (27 pages, 878026 bytes).
+Output written on thesis.pdf (30 pages, 1109284 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

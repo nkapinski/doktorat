@@ -1,19 +1,51 @@
 \chapter{Konwolucyjne sieci neuronowe}
-Konwolucyjne sieci neuronowe (ang. Convolutional Neural Networks)
+\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Główna inspiracja pochodzi od badań nad korą wzrokową zapoczątkowanych w pracach Hubel'a i Wiesel’a w roku 1968 dotyczących widzenia kotów. Wiadomo, że kora wzrokowa zawiera złożone układy komórek. Komórki te odpowiadają za przetwarzanie informacji z regionów pola widzenia, tak żeby sumarycznie pokryć je w całości. Komórki te działają jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
 
 funkcja obrazowa;
 splot;
 filtr;
 jądro;
 warstwy konwolucyjne;
-wartwy aktywacji neuronów;
-warstwy FC;
-Dropout;
-Normalizacja;
-
-FP, TP, FN, TN
 
 \section{Zarys historyczny}
+
+Głębokie sieci neuronowe, a wraz znimi sieci konwolucyjne mają długą i bogatą historię, która zaczyna się jeszcze w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien określony próg. 
+
+Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi połączeniami między sobą została zaproponowana w 1957 roku przez Franka Rosenblatta [Perc]. Sieć, pokazaną na Rys. \ref{Perceptron} nazwano perceptronem, co związane było z zamiłowaniem jego twórcy do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/perceptron.png}
+	\caption{Topologia perceptronu.}
+	\label{Perceptron}
+\end{figure}
+
+/* Dodaj opisy funkcji aktywackji*/
+Przy pomocy wprowadzenia do perceptronu wag uzyskano możliwość uczenia się architektury poprzez dostrajanie ich warotści do danego problemu. Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
+
+Dopiero w 1986 roku część z zarysowanych przez Minsky'ego i Paperta problemów udało się rozwiązać za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams traktującej o praktycznym zastosowaniu opisanego w latach 70-tych algorytmu wstecznej propagacji, umożliwajacym trening perceptronów wielowarstwowych [Backprop]. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/MLperceptron.png}
+	\caption{Topologia perceptronu wielowarstwowego.}
+	\label{MLperceptron}
+\end{figure}
+
+Z wykorzystaniem sieci wielowarstwowych możliwe stało się moelowanie funkcji XOR jak i innych problemów nieliniowych o praktycznym wymiarze. 
+
+/*opisz FC, algorytm wstecznej propagacji i regułę łańcuchową*/
+
+W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych i algorytmu wstecznej propagacji przy klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/lenet.png}
+	\caption{Topologia sieci LeNet.}
+	\label{LeNet}
+\end{figure}
+
+Sieć składała się z 7 warstw, w tym pięciu konwolucyjnych. Zawierała około 60,000 parametrów. Oryginalnie, sygnałem wejściowym sieci stanowił obrazek o wymiarach 32$\times$32. Każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach i z filtrami o różnych wymiarach jąder splotu. Końcowe dwie warstwy stanowiły warstwy typu FC. 
+
+Wraz z rozwojem metod sztucznej inteligencji, w tym konwolucyjnych sieci neuronowych pojawiały się problemy związane z klasyfikacją zbiorów danych. Dwa najważniejsze tj. problem nadmiernego dopasowania i redukcji wymiarowości zostaną przedstawione w kolejnych sekcjach.
+
 \section{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
 -dropout
@@ -42,6 +74,17 @@ substantial overfitting. Dropout roughly doubles the number of iterations requir
 \section{Problem redukcji wymiarowości}
 
 \section{Przykłady współczesnych topologii}
+
+
+wartwy aktywacji neuronów;
+warstwy FC;
+Dropout;
+Normalizacja;
+
+FP, TP, FN, TN
+
+SGD, ADAM
+
 \subsection{AlexNet}
 \label{AlexNet}
 Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architektury Alexa Krizhevsky, zawiera blisko 60 milionów parametrów i 650 tysięcy neuronów. Architekturę zaprezentowano na Rys. \ref{AlexNetTopology}
@@ -259,7 +302,9 @@ Tym razem umieszczono odwrotną zależność (tj. czułość od swoistości), cz
 
 Obrazy medyczne nie są jedynymi danymi, które z powodzeniem są przetwarzane za pomocą metod głębokiego uczenia się. W lipcu 2017, przez grupę ze Stanford University została opublikowana praca dotycząca klasyfikacji arytmii na podstawie szeregów czasowych zapisanych na elektrokardiogramach [Rajpurkar, 2017]. Autorzy wykorzystali dane z 64,121 elektrokardiogramów, próbkowanych z częstotliwością 200 Hz, pochodzących od 29,163 pacjentów. Zaprojektowano dedykowaną, 34-warstwową sieć konwolucyjną do detekcji 12 różnych dysfunkcji pracy serca, pracy prawidłowej i szumów (łącznie 14 klas). Wyniki klasyfikacji porównano z oceną prowadzoną przez 3 kardiologów. Średnia dokładność klasyfikacji automatycznej wyniosła 80\% , natomiast manualnej 72\%.
 
-Naturalnie, podobnych przykładów zostało opublikowanych dużo więcej. Architektura AlexNet z sukcesem była użyta do detekcji polipów w kolonospokopii [AlexNet-kolo, 2017]. Sieć ResNet sprawdziła się w badaniach w Mayo Clinic Rotschester, dotyczących radiogenomiki i rozróżnienia zmian w mózgu bez konieczności biopsji [Mayo]. Złożenia natomiast z sukcesem zostały zaaplikowany w pracach dotyczących detekcji raka płuc, gdzie modele bazowe analizowały różne skale problemu [LungChalenge]. Przytoczone prace pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany przez algorytmy głębokiego uczenia się. Należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem sztucznej inteligencji w medycynie. Do najważniejszych należą:
+Naturalnie, podobnych przykładów zostało opublikowanych dużo więcej. Architektura AlexNet z sukcesem była użyta do detekcji polipów w kolonospokopii [AlexNet-kolo, 2017]. Sieć ResNet sprawdziła się w badaniach w Mayo Clinic Rotschester, dotyczących radiogenomiki i rozróżnienia zmian w mózgu bez konieczności biopsji [Mayo]. Złożenia natomiast z sukcesem zostały zaaplikowany w pracach dotyczących detekcji raka płuc, gdzie modele bazowe analizowały różne skale problemu [LungChalenge]. W wielu pracach raportuje się dokładność klasyfikacji automatycznej znaczącą przewyższające możliwości dziedzinowych ekspertów np. [https://doi.org/10.1016/j.cell.2018.03.040, FNP].
+
+ Przytoczone prace pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany przez algorytmy głębokiego uczenia się. Należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem sztucznej inteligencji w medycynie. Do najważniejszych należą:
 \begin{enumerate}
 	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
 	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.

@@ -1,15 +1,19 @@
 \chapter{Konwolucyjne sieci neuronowe}
 \textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Główna inspiracja pochodzi od badań nad korą wzrokową zapoczątkowanych w pracach Hubel'a i Wiesel’a w roku 1968 dotyczących widzenia kotów. Wiadomo, że kora wzrokowa zawiera złożone układy komórek. Komórki te odpowiadają za przetwarzanie informacji z regionów pola widzenia, tak żeby sumarycznie pokryć je w całości. Komórki te działają jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
 
-funkcja obrazowa;
-splot;
-filtr;
-jądro;
-warstwy konwolucyjne;
+W zapisie cyfrowym wykorzystywanym najczęściej w przetwarzaniu obrazów metodami sztucznej inteligencji informację wejściową stanowi dyskretna \textit{funkcja obrazowa} $I$, która przypisuje kolejnym punktom obrazu tzw. \textit{pikselom} kolor zdefiniowany w zadanej przestrzeni barw np. RGB, CMYK, GrayScale (zob. [barwy]). W praktyce przetwarzania obrazów medycznych najczęściej spotyka się z dwuwymiarowe funkcje $I$($x$, $y$) lub trójwymiarowe $I$($x$, $y$, $z$).
+
+Filtracje obrazów cyfrowych mające na celu wydobycie istotnych cech uzyskuje się za pomocą operacji splotu maski $K$ filtru z kolejnymi fragmentami obrazu I, co można zapisać następująco:
+\begin{equation}
+	I'\left(x, y\right) = \sum_{n=0}^{N} \sum_{k=0}^{N} I\left(x + n, y + k \right)K\left(n, k\right).
+\end{equation}
+Najczęściej spotykane wymiary masek $K$ to 3$\times$3 -- 11$\times$11. 
+
+W sieciach konwolucyjnych filtry pogrupowane są w tzw. \textit{wartstwy konwolucyjne} stanowiące główną składową części sieci pełniącą funkcję ekstrakcji cech obrazowych. Drugim kompont sieci odpowiedzialny jest za klasyfikacje wybranych cech i ostateczne rozróżnienie zbioru. Ewolucja sieci konwolucyjnych do obecnej postaci przebiegała stopniowo, a najważniejsze jej elementy zostały przedstawione w kolejnych podsekcjach. 
 
 \section{Zarys historyczny}
 
-Głębokie sieci neuronowe, a wraz znimi sieci konwolucyjne mają długą i bogatą historię, która zaczyna się jeszcze w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien określony próg. 
+Głębokie sieci neuronowe, a wraz z nimi sieci konwolucyjne mają długą i bogatą historię, która zaczyna się jeszcze w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
 
 Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi połączeniami między sobą została zaproponowana w 1957 roku przez Franka Rosenblatta [Perc]. Sieć, pokazaną na Rys. \ref{Perceptron} nazwano perceptronem, co związane było z zamiłowaniem jego twórcy do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. 
 \begin{figure}[h!]
@@ -34,7 +38,7 @@ Z wykorzystaniem sieci wielowarstwowych możliwe stało się moelowanie funkcji 
 
 /*opisz FC, algorytm wstecznej propagacji i regułę łańcuchową*/
 
-W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych i algorytmu wstecznej propagacji przy klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
+W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych i algorytmu wstecznej propagacji użytych do klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/lenet.png}
@@ -44,7 +48,7 @@ W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje bada
 
 Sieć składała się z 7 warstw, w tym pięciu konwolucyjnych. Zawierała około 60,000 parametrów. Oryginalnie, sygnałem wejściowym sieci stanowił obrazek o wymiarach 32$\times$32. Każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach i z filtrami o różnych wymiarach jąder splotu. Końcowe dwie warstwy stanowiły warstwy typu FC. 
 
-Wraz z rozwojem metod sztucznej inteligencji, w tym konwolucyjnych sieci neuronowych pojawiały się problemy związane z klasyfikacją zbiorów danych. Dwa najważniejsze tj. problem nadmiernego dopasowania i redukcji wymiarowości zostaną przedstawione w kolejnych sekcjach.
+Wraz z rozwojem metod sztucznej inteligencji, w tym konwolucyjnych sieci neuronowych pojawiały się problemy związane z poprawną klasyfikacją zbiorów danych. Dwa najważniejsze tj. problem nadmiernego dopasowania i redukcji wymiarowości zostaną przedstawione w kolejnych sekcjach.
 
 \section{Problem nadmiernego dopasowania}
 \label{sec-overffiting}

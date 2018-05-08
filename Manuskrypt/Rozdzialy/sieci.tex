@@ -1,5 +1,5 @@
 \chapter{Konwolucyjne sieci neuronowe}
-\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Główna inspiracja pochodzi od badań nad korą wzrokową zapoczątkowanych w pracach Hubel'a i Wiesel’a w roku 1968 dotyczących widzenia kotów. Wiadomo, że kora wzrokowa zawiera złożone układy komórek. Komórki te odpowiadają za przetwarzanie informacji z regionów pola widzenia, tak żeby sumarycznie pokryć je w całości. Komórki te działają jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
+\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Podłoże pochodzi od badań nad korą wzrokową zapoczątkowanych w pracach Hubel'a i Wiesel’a w roku 1968 dotyczących widzenia kotów. Dzięki paracom neurofizjologów nauka o sztucznych sieciach rozwiajana od lat 40-tych XX wieku obrała obecny kierunek. Wiadomo, że kora wzrokowa zawiera złożone układy komórek. Komórki te odpowiadają za przetwarzanie informacji z regionów pola widzenia, tak żeby sumarycznie pokryć je w całości. Komórki te działają jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
 
 W zapisie cyfrowym wykorzystywanym najczęściej w przetwarzaniu obrazów metodami sztucznej inteligencji informację wejściową stanowi dyskretna \textit{funkcja obrazowa} $I$, która przypisuje kolejnym punktom obrazu tzw. \textit{pikselom} kolor zdefiniowany w zadanej przestrzeni barw np. RGB, CMYK, GrayScale (zob. [barwy]). W praktyce przetwarzania obrazów medycznych najczęściej spotyka się z dwuwymiarowe funkcje $I$($x$, $y$) lub trójwymiarowe $I$($x$, $y$, $z$).
 
@@ -9,11 +9,13 @@ Filtracje obrazów cyfrowych mające na celu wydobycie istotnych cech uzyskuje s
 \end{equation}
 Najczęściej spotykane wymiary masek $K$ to 3$\times$3 -- 11$\times$11. 
 
-W sieciach konwolucyjnych filtry pogrupowane są w tzw. \textit{wartstwy konwolucyjne} stanowiące główną składową części sieci pełniącą funkcję ekstrakcji cech obrazowych. Drugim kompont sieci odpowiedzialny jest za klasyfikacje wybranych cech i ostateczne rozróżnienie zbioru. Ewolucja sieci konwolucyjnych do obecnej postaci przebiegała stopniowo, a najważniejsze jej elementy zostały przedstawione w kolejnych podsekcjach. 
+/*definicje krawędzi, kształtów, obiektów*/
+
+Ewolucja sieci konwolucyjnych do obecnej postaci przebiegała stopniowo, a najważniejsze jej elementy zostały przedstawione w kolejnej sekcji. 
 
 \section{Zarys historyczny}
 
-Głębokie sieci neuronowe, a wraz z nimi sieci konwolucyjne mają długą i bogatą historię, która zaczyna się jeszcze w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
+Historia głębokich sieci neuronowe zaczęła się w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
 
 Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi połączeniami między sobą została zaproponowana w 1957 roku przez Franka Rosenblatta [Perc]. Sieć, pokazaną na Rys. \ref{Perceptron} nazwano perceptronem, co związane było z zamiłowaniem jego twórcy do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. 
 \begin{figure}[h!]
@@ -23,8 +25,23 @@ Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi 
 	\label{Perceptron}
 \end{figure}
 
-/* Dodaj opisy funkcji aktywackji*/
-Przy pomocy wprowadzenia do perceptronu wag uzyskano możliwość uczenia się architektury poprzez dostrajanie ich warotści do danego problemu. Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
+Model neuronu zaproponowany przez Rosenblatta charakteryzuje się strukturą o wielu wejściach i jednym wyjściu. Sygnał wyjściowy $y$ ściśle zależy od sygnałów wejściowych $x_1$...$x_n$, a zależność ta, podana wzorem \ref{eqActFunc}, nazywana jest \textit{funkcją aktywacji neuronu}. 
+\begin{equation}
+\label{eqActFunc}
+y=f\left(x_1, x_2,..., x_n\right)
+\end{equation}
+Funkcja $y$ ma za zadanie modelować biologiczne własności neuronu związane z warunkową propagacją sygnału nerwowego. Dla przykładu liniowa funkcja aktywacji neuronu realizowana jest sumą:
+
+\begin{equation}
+\label{eqLinActFunc}
+y=\sum_{i=1}^{n}w_i x_i
+\end{equation}
+
+gdzie $w_i$ są to wagi wektora $w$ = ($w_1$,...,$w_n$). Wprowadzenia do perceptronu wag $w$ dało możliwość uczenia się architektury poprzez modyfikację ich wartości. Badania nad różnymi funkcjami aktywacji doprowadziły do wielu sukcesów modelu Rosenblatta. Wyszczególnić można zwłaszcza funkcję typu Sgmoid i ReLU.
+
+/*Master algorithm użyj opisy S-curve tutaj*/
+
+Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
 
 Dopiero w 1986 roku część z zarysowanych przez Minsky'ego i Paperta problemów udało się rozwiązać za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams traktującej o praktycznym zastosowaniu opisanego w latach 70-tych algorytmu wstecznej propagacji, umożliwajacym trening perceptronów wielowarstwowych [Backprop]. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
 \begin{figure}[h!]
@@ -34,11 +51,9 @@ Dopiero w 1986 roku część z zarysowanych przez Minsky'ego i Paperta problemó
 	\label{MLperceptron}
 \end{figure}
 
-Z wykorzystaniem sieci wielowarstwowych możliwe stało się moelowanie funkcji XOR jak i innych problemów nieliniowych o praktycznym wymiarze. 
+Z wykorzystaniem sieci wielowarstwowych możliwe stało się modelowanie funkcji XOR jak i innych problemów nieliniowych o praktycznym wymiarze. 
 
-/*opisz FC, algorytm wstecznej propagacji i regułę łańcuchową*/
-
-W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych i algorytmu wstecznej propagacji użytych do klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
+W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych do klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/lenet.png}
@@ -46,48 +61,60 @@ W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje bada
 	\label{LeNet}
 \end{figure}
 
-Sieć składała się z 7 warstw, w tym pięciu konwolucyjnych. Zawierała około 60,000 parametrów. Oryginalnie, sygnałem wejściowym sieci stanowił obrazek o wymiarach 32$\times$32. Każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach i z filtrami o różnych wymiarach jąder splotu. Końcowe dwie warstwy stanowiły warstwy typu FC. 
+Sieć składała się z 7 warstw i zawierała około 60,000 parametrów. Oryginalnie, sygnałem wejściowym sieci stanowił obrazek o wymiarach 32$\times$32.
+
+W architekturze LeNet uwidoczniły się dwie podstawowe składowe współczesnych sieci konwolucyjnych tj. \textit{ekstraktor cech} -- zawierający filtry, których wartości parametrów masek są optymalizowane pod kątem wyboru cech charakterystycznych dla zadanego zbioru danych oraz \textit{klasyfikator} -- zawierający neurony z wagami, których wartości są optymalizowane w celu końcowego rozróznienia zbioru danych na podstawie wyekstrachowanego wczęsniej wektora cech. 
+
+W uproszczeniu można opisać sieć konwolucyjną jako klasyczną topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej (LeNet miała 2 warstwy FC).
+
+Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
+
+Złożoność budowy sieci konwolucyjnych oraz duża liczba parametrów spowodowała szereg wyzwań związanych z praktycznym ich wykorzystaniem m.in. poprawną klasyfikacją zbioru danych. Najważniejsze z wyzwań zostały opisane w kolejnej sekcji.  
+
+\section{Szkolenie głębokich sieci neuronowych}
+
+/*Trening, SGD, ADAM, wsteczna propagacja reguła łańcuchowa*/
+/*FP, TP, FN, TN*/
+/*Normalizacja*/
 
 Wraz z rozwojem metod sztucznej inteligencji, w tym konwolucyjnych sieci neuronowych pojawiały się problemy związane z poprawną klasyfikacją zbiorów danych. Dwa najważniejsze tj. problem nadmiernego dopasowania i redukcji wymiarowości zostaną przedstawione w kolejnych sekcjach.
 
-\section{Problem nadmiernego dopasowania}
+\subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
--dropout
-Kolejnym zabiegiem wykorzystywanym tym razem w celu polepszenia generalizacji klasyfikacji zbioru danych było użycie techniki dropout [Dropout].
 
-Combining the predictions of many different models is a very successful way to reduce test errors
-[1, 3], but it appears to be too expensive for big neural networks that already take several days
-to train. There is, however, a very efficient version of model combination that only costs about a
-factor of two during training. The recently-introduced technique, called “dropout” [10], consists
-of setting to zero the output of each hidden neuron with probability 0.5. The neurons which are
-“dropped out” in this way do not contribute to the forward pass and do not participate in backpropagation.
-So every time an input is presented, the neural network samples a different architecture,
-but all these architectures share weights. This technique reduces complex co-adaptations of neurons,
-since a neuron cannot rely on the presence of particular other neurons. It is, therefore, forced to
-learn more robust features that are useful in conjunction with many different random subsets of the
-other neurons. At test time, we use all the neurons but multiply their outputs by 0.5, which is a
-reasonable approximation to taking the geometric mean of the predictive distributions produced by
-the exponentially-many dropout networks.
-We use dropout in the first two fully-connected layers of Figure 2. Without dropout, our network exhibits
-substantial overfitting. Dropout roughly doubles the number of iterations required to converge.
+Jak wiadomo proces uczenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli zbiorze uczącym $U$. Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$ zawierającego przykłady inne niż w $U$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż nowe dane nie są poprawnie klasyfikowane.
 
---data augmentation
+Z uwagi na ten fakt ogólnym dążeniem w procesie uczenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wekto-
+rów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$.
+
+W celu uzyskania generalizacji należy wybrać taki model klasyfikatora, który wystarczy do zachowania
+poprawnej klasyfikacji w mocy. Empirycznie ustalane są zatem maksymalnie ogólne, dostateczne warunki poprawnej klasyfikacji. Dzięki generalizacji wzrasta prawdopodobieństwo, że przykład z poza zbioru $U$ będzie poprawnie klasyfikowany przez algorytm sieci.
+
+W celu osiągnięcia kompromisu pomiędzy maksymalnie dobrą klasyfikacją zbioru $U$ i wysoką generalizacją sieci neuronowej można zastosować metodę oceny krzyżowej (ang. cross-validation). Metoda ta polega na podziale zbioru uczącego na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/cross-validation.png}
+	\caption{Reprezentacja graficzna oceny krzyżowej.}
+	\label{cross-validation}
+\end{figure}
+
+Stosując metodę oceny krzyżowej dla różnych modeli sieci można stwierdzić, który z nich spełnia najlepiej kompromis między dobrą klasyfikacją zbioru $U$ i wysoką generalizacją.
+
+Kombinacja predykcji wielu różnych modeli jest bardzo wydajną metodą do polepszenia generalizacji i zmniejszenia błędu klasyfikacji na zbiorach testowych oraz walidacyjnych (zob. [AlexNet 1, 3]). Jednak współczesne sieci neuronowe, których przykłady zostały opisane w dalszych sekcjach mogą zawierać miliony parametrów, których optymalizacja jest wymagająca obliczeniowo. Z uwagi na ten fakt trening $s$ segmentów jest mało wydajny i stosuje się go w ograniczonym zakresie np. obierając $s$ = 5 lub $s$ = 10.
+
+W 2012, w [AlexNet-10] zaproponowano technikę zwaną \textit{dropout}, której główna idea bazuje na zerowaniu wyjścia neuronów sieci z prawdopodobieństwem 0,5 przy każdej iteracji treningu sieci. Neurony, które są w ten sposób tymczasowo dezaktywowane nie mają wpływu w danej iteracji na predykcję sieci i nie są uwzględniane przy wstecznej propagacji gradientu. Podejście to można porównać do treningu w każdej iteracji różnych modeli sieci. Dla przykładu w [AlexNet] wykazano, że metoda dropout wymaga jedynie 2 razy więcej iteracji do przybliżenia zbioru $U$, przy tym uzyskuje znacznie lepszą generalizację. 
+
+Kluczowym składnikiem potrzebnym do treningu sieci i maksymalizacji generalizacji jest odpowiedni rozmiar zbioru danych. W praktyce jest to problem szeroko dyskutowany, gdyż zwłaszcza w danych medycznych istnieje szereg ograniczeń związanych z dostępem i akwizycją odpowiedniego materiału badawczego (np. ograniczenia: prawne, związane z prywatnością, czy z etyką). W przypadku, gdy zgromadzenie odpowiedniego zbioru danych jest niemożliwe pewnym rozwiązaniem problemu jest zastosowanie metod jego sztuczego powiększania (ang. \textit{data augmentation}).
+
+W przypadku obrazów stosuje się metody afinicznych przekształceń. Są to najczęściej rotacje, odbicia lub skalowanie. W określonych przypadkach używane są również nielioowe przekształcenia. Np. w [Ronneberger et al., arXiv:1505.04597v1, 2015] wykorzystano m.in. deformacje do powiększenia zbioru 30 obrazów mikroskopowych przedstawiających macierz komórkową i uzyskano znacząco lepsze wyniki niż istniejące w 2015 algorytmy typu state-of-the-art.
+
+W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powiększony zbiór zawierał dane przypominające w rzeczywistości występujące przypadki np. nieduże obroty występujące u pacjentów skanowanych rezonansem magnetycznym lub niewielkie skalowania rozmiaru organów. Szeroką dyskusję prowadzi się również na temat wykorzystania sztucznie generowanych zbiorów danych o czym więcej można przeczytać w pracach [Sztuczna generacja danych medycznych]. 
 
 
--5 fold
-\section{Problem redukcji wymiarowości}
+\subsection{Problem redukcji wymiarowości}
 
 \section{Przykłady współczesnych topologii}
 
-
-wartwy aktywacji neuronów;
-warstwy FC;
-Dropout;
-Normalizacja;
-
-FP, TP, FN, TN
-
-SGD, ADAM
 
 \subsection{AlexNet}
 \label{AlexNet}

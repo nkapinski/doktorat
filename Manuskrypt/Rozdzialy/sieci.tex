@@ -73,7 +73,30 @@ Złożoność budowy sieci konwolucyjnych oraz duża liczba parametrów spowodow
 
 \section{Szkolenie głębokich sieci neuronowych}
 
-/*Trening, SGD, ADAM, wsteczna propagacja reguła łańcuchowa*/
+Wiekszość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat}, \textit{funkcja błędów} (za [DL-IANGoodfellow]). 
+
+Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jako $\bigtriangledown f$($x$). Dodatkowo czasami istnieje konieczność znalezienia wszystkich pochodnych cząstkowych funkcji, której wejście i wyjście stanowią wektory. Taka macież nosi nazwę \textit{macierzy Jacobiego}, natomiast macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}.
+
+Metody optymalizacji bazujące na wartości gradientu w kolejnych krokach iteracji obierają kolejne wartości funkcji $f$ przesuwając się w kierunku spadku gradientu:
+\begin{equation}
+x' = x - \epsilon \bigtriangledown f(x),
+\end{equation} 
+gdzie $\epsilon$ to \textit{szybkość uczenia się}, parametr określający wielkość kroku. 
+
+Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest zazwyczaj \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacją wykonywanym przez szereg funkcji. Do obliczeń pochodnych funkcji złożonych z funkcji, których pochodne są znane stosuje się tzw. \textit{regułę łańcuchową}. Przypuśćmy, że y = g(x) i z = f(g(x)) = f(y), $x$ i $y$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
+\begin{equation}
+\frac{\delta z}{\delta x_i} = \sum_{j} {\delta z}/{\delta y_j}{\delta y_j}/{\delta x_i}, 
+\end{equation}
+co w zapisie wektorowym równoważne jest z równaniem:
+\begin{equation}
+\bigtriangledown_x z = \left({\delta y}/{\delta x}\right)^T \bigtriangledown_y z, 
+\end{equation}
+gdzie $\frac{\delta y}{\delta x}$ to macierz Jacobiego. Regułę tak zapisaną prosto uogólnie się do zmiennych tensorowych (zob. IanGoodf-205). 
+
+Można zatem gradient zmiennej $x$ otrzymać przez pomnożenie macierzy Jacobiego przez gradient $\bigtriangledown_y z$. W tym celu w metodach głębokiego uczenia się wykorzystuje się algorytm \textit{propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie (zob. [Backprop]).
+
+ /*SGD, ADAM, */
+-pakiety, liczenie gradientu na pakietach zapewnia wydjaność 
 /*FP, TP, FN, TN*/
 /*Normalizacja*/
 
@@ -124,7 +147,8 @@ Problem (2) jest szczególnie istotny w dość prostych algorytmach takich jak a
 W przypadku głębokich sieci neuronowych zastosowanie wag zmniejsza znaczenie problemu (2), gdyż wpływ poszczególnych cech może być regulowany poprzez wartość $w$. W przypadku problemu wynikającego z (1) można wyróżnić dwa podejścia stosowane do jego niwelacji:
 \begin{itemize}
 \item wybór podzbioru istotnych cech o liczności $n'$ $<<$ $n$,
-\item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
+\item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
+
 \end{itemize}
 
 /*rozwinąć i wprowadzić definicję korelacji oraz entropii - zapytać Kubę jakby ten akapit widział*/

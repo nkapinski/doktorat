@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  8 MAY 2018 13:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  9 MAY 2018 12:59
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -882,9 +882,6 @@ File: figures/MLperceptron.png Graphic file (type png)
 Package pdftex.def Info: figures/MLperceptron.png  used on input line 49.
 (pdftex.def)             Requested size: 242.5611pt x 231.14742pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -919,55 +916,81 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [11 <./figures/cross-validation.png>]
-<figures/AlexNet.png, id=87, 225.84375pt x 147.55125pt>
-File: figures/AlexNet.png Graphic file (type png)
-<use figures/AlexNet.png>
-Package pdftex.def Info: figures/AlexNet.png  used on input line 124.
-(pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [12]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 126.
+
+
+("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[13 <./figures/AlexNet.png>]
+[13]
+Overfull \hbox (46.1779pt too wide) in paragraph at lines 145--146
+\OT4/cmr/m/n/12 /*przykªad nu-me-rycz-ny https://www.itl.nist.gov/div898/handbo
+ok/pmc/section5/pmc552.htm
+ []
+
+
+Overfull \hbox (21.79274pt too wide) in paragraph at lines 156--157
+[]\OT4/cmr/m/n/12 https://www.quora.com/What-are-different-unsupervised-feature
+-selection-methods-
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [14]
-<figures/AlexNet-multiGPU.png, id=99, 627.5445pt x 208.98074pt>
+<figures/AlexNet.png, id=97, 225.84375pt x 147.55125pt>
+File: figures/AlexNet.png Graphic file (type png)
+<use figures/AlexNet.png>
+Package pdftex.def Info: figures/AlexNet.png  used on input line 171.
+(pdftex.def)             Requested size: 242.5611pt x 158.48164pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[15 <./figures/AlexNet.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[16]
+<figures/AlexNet-multiGPU.png, id=106, 627.5445pt x 208.98074pt>
 File: figures/AlexNet-multiGPU.png Graphic file (type png)
 <use figures/AlexNet-multiGPU.png>
-Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 154.
+Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 201.
 (pdftex.def)             Requested size: 352.81552pt x 117.49397pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[15 <./figures/AlexNet-multiGPU.png>]
-<figures/InceptionModules.png, id=103, 553.46774pt x 149.358pt>
+[17 <./figures/AlexNet-multiGPU.png>]
+<figures/InceptionModules.png, id=111, 553.46774pt x 149.358pt>
 File: figures/InceptionModules.png Graphic file (type png)
 <use figures/InceptionModules.png>
-Package pdftex.def Info: figures/InceptionModules.png  used on input line 172.
+Package pdftex.def Info: figures/InceptionModules.png  used on input line 219.
 (pdftex.def)             Requested size: 352.81552pt x 95.21503pt.
-<figures/GoogleNet.png, id=104, 1071.40276pt x 248.72925pt>
+<figures/GoogleNet.png, id=112, 1071.40276pt x 248.72925pt>
 File: figures/GoogleNet.png Graphic file (type png)
 <use figures/GoogleNet.png>
-Package pdftex.def Info: figures/GoogleNet.png  used on input line 182.
+Package pdftex.def Info: figures/GoogleNet.png  used on input line 229.
 (pdftex.def)             Requested size: 441.01773pt x 102.38574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/GoogleNetparams.png, id=105, 578.76225pt x 310.15875pt>
+<figures/GoogleNetparams.png, id=113, 578.76225pt x 310.15875pt>
 File: figures/GoogleNetparams.png Graphic file (type png)
 <use figures/GoogleNetparams.png>
-Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 191.
+Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 238.
 (pdftex.def)             Requested size: 441.01773pt x 236.34306pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -976,27 +999,27 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[16 <./figures/InceptionModules.png>]
+[18 <./figures/InceptionModules.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[17 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>]
-<figures/ResidualBlock.jpg, id=113, 472.164pt x 186.09525pt>
+[19 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>]
+<figures/ResidualBlock.jpg, id=120, 472.164pt x 186.09525pt>
 File: figures/ResidualBlock.jpg Graphic file (type jpg)
 <use figures/ResidualBlock.jpg>
-Package pdftex.def Info: figures/ResidualBlock.jpg  used on input line 210.
+Package pdftex.def Info: figures/ResidualBlock.jpg  used on input line 257.
 (pdftex.def)             Requested size: 220.50887pt x 86.9082pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[18 <./figures/ResidualBlock.jpg>]
+[20 <./figures/ResidualBlock.jpg>]
 
-LaTeX Warning: Reference `gradResBlock' on page 19 undefined on input line 230.
+LaTeX Warning: Reference `gradResBlock' on page 21 undefined on input line 277.
 
 
 
-Overfull \hbox (16.15782pt too wide) in paragraph at lines 232--234
+Overfull \hbox (16.15782pt too wide) in paragraph at lines 279--281
 []$ \OT4/cmr/m/n/12 pro-pa-go-wa-n¡ bez wpªy-wu na war-stwy za-wie-ra-j¡-ce wa-
 gi i (2) $\OML/plm/m/it/12 $ \OT4/cmr/m/n/12 = $[][] [][] \OML/plm/m/it/12 F\O
 T4/cmr/m/n/12 (\OML/plm/m/it/12 x[]; W[]\OT4/cmr/m/n/12 )$
@@ -1006,32 +1029,32 @@ T4/cmr/m/n/12 (\OML/plm/m/it/12 x[]; W[]\OT4/cmr/m/n/12 )$
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[19]
-<figures/ResNet.png, id=121, 676.32675pt x 208.3785pt>
+[21]
+<figures/ResNet.png, id=128, 676.32675pt x 208.3785pt>
 File: figures/ResNet.png Graphic file (type png)
 <use figures/ResNet.png>
-Package pdftex.def Info: figures/ResNet.png  used on input line 251.
+Package pdftex.def Info: figures/ResNet.png  used on input line 298.
 (pdftex.def)             Requested size: 441.01773pt x 135.88pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[20 <./figures/ResNet.png>]
+[22 <./figures/ResNet.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[21]
+[23]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[22]
-<figures/DL_CAD_statystyka.jpg, id=131, 554.07pt x 298.11375pt>
+[24]
+<figures/DL_CAD_statystyka.jpg, id=139, 554.07pt x 298.11375pt>
 File: figures/DL_CAD_statystyka.jpg Graphic file (type jpg)
 <use figures/DL_CAD_statystyka.jpg>
-Package pdftex.def Info: figures/DL_CAD_statystyka.jpg  used on input line 306.
+Package pdftex.def Info: figures/DL_CAD_statystyka.jpg  used on input line 353.
 
 (pdftex.def)             Requested size: 441.01773pt x 237.28587pt.
 
@@ -1041,16 +1064,16 @@ Underfull \vbox (badness 1270) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[23 <./figures/DL_CAD_statystyka.jpg>]
-<figures/CAD-okulisci.jpg, id=136, 500.62032pt x 237.88875pt>
+[25 <./figures/DL_CAD_statystyka.jpg>]
+<figures/CAD-okulisci.jpg, id=143, 500.62032pt x 237.88875pt>
 File: figures/CAD-okulisci.jpg Graphic file (type jpg)
 <use figures/CAD-okulisci.jpg>
-Package pdftex.def Info: figures/CAD-okulisci.jpg  used on input line 316.
+Package pdftex.def Info: figures/CAD-okulisci.jpg  used on input line 363.
 (pdftex.def)             Requested size: 308.71106pt x 146.7018pt.
-<figures/CAD-dermatolodzy.jpg, id=137, 494.44725pt x 169.23225pt>
+<figures/CAD-dermatolodzy.jpg, id=144, 494.44725pt x 169.23225pt>
 File: figures/CAD-dermatolodzy.jpg Graphic file (type jpg)
 <use figures/CAD-dermatolodzy.jpg>
-Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 327.
+Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 374.
 (pdftex.def)             Requested size: 396.91325pt x 135.85078pt.
 
 
@@ -1060,20 +1083,20 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[24 <./figures/CAD-okulisci.jpg>]
+[26 <./figures/CAD-okulisci.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[25 <./figures/CAD-dermatolodzy.jpg>]) (Rozdzialy/opis_metody.tex
+[27 <./figures/CAD-dermatolodzy.jpg>]) (Rozdzialy/opis_metody.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[26]
+[28]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [27
+) (Rozdzialy/wyniki_podsumowanie.tex [29
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -1082,17 +1105,17 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[28
+[30
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [29
+) (thesis.bbl [31
 
-]) (appendix.tex [30
+]) (appendix.tex [32
 
 ]
 Dodatek A.
-) [31
+) [33
 
 ] (thesis.aux (header.aux))
 
@@ -1103,11 +1126,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5350 strings out of 493305
- 81320 string characters out of 3128932
- 137680 words of memory out of 3000000
- 8701 multiletter control sequences out of 15000+200000
- 21310 words of font info for 66 fonts, out of 3000000 for 9000
+ 5368 strings out of 493305
+ 81669 string characters out of 3128932
+ 137690 words of memory out of 3000000
+ 8716 multiletter control sequences out of 15000+200000
+ 21567 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,40p,1167b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.e
@@ -1117,25 +1140,26 @@ enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms
 e.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
 it.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/p
 lsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Users/norbert/AppData/Local/
-Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users/norbert/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Users/norbert/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/norber
-t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/n
-orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Us
-ers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C
-:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pf
-b><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pls
-l12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plti12.pfb>
-Output written on thesis.pdf (39 pages, 1957487 bytes).
+amsfonts/cm/cmsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Users/norbert
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users/n
+orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Us
+ers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><
+C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.
+pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
+lr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/pl/plr7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on thesis.pdf (41 pages, 1971847 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
+ 228 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

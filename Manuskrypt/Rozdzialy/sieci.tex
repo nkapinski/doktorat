@@ -39,7 +39,7 @@ y=\sum_{i=1}^{n}w_i x_i
 
 gdzie $w_i$ są to wagi wektora $w$ = ($w_1$,...,$w_n$). Wprowadzenia do perceptronu wag $w$ dało możliwość uczenia się architektury poprzez modyfikację ich wartości. Badania nad różnymi funkcjami aktywacji doprowadziły do wielu sukcesów modelu Rosenblatta. Wyszczególnić można zwłaszcza funkcję typu Sgmoid i ReLU.
 
-/*Master algorithm użyj opisy S-curve tutaj*/
+/*Master algorithm użyj opisy S-curve tutaj w odniesieniu do rozwiązania problemu Minsky*/
 
 Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
 
@@ -113,8 +113,54 @@ W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powięk
 
 \subsection{Problem redukcji wymiarowości}
 
+Rozmiar wektora cech wejściowych we współczesnych problemach rozwiązywanych przez algorytmy sztucznej inteligencji często osiąga liczby liczone w tysiącach (zob. [przykłądy dużych problemów FB, Google]). Również w powszechnie używanych głębokich sieciach neuronowych ekstraktor cech tworzy wektor o rozmiarach tego rzędu.
+
+Duży rozmiar wektora cech wejściowych prowadzi do problemu nazwanego \textit{przekleństwem wymiarowości} (ang. \textit{curse of dimensionality}). Określenie te zostało poraz pierwszy sformułowane przez Richarda Bellmana w latach 50-tych XX wieku. Naukowca zajmującego się teorią sterowania (zob. [teoria sterowania]), który podczas swojej pracy obserwował algorytmy doskonale działające w 3 wymiarach, a prezentujące znacząco gorsze wyniki w hiperprzestrzeni. 
+
+Problemy z zastosowaniem algorytmów szucznej inteligencji w tym głębokich sieci neuronowych w dużej liczbie wymiarów mają dwie główne przyczyny: (1) w miarę wzrostu liczby wymiarów cech liczba obserwacji w zbiorze trenującym potrzebnych do wiarygodnego oszacowania funkcji wyjściowej rośnie wykładniczo; (2) nie wszystkie cechy są jednakowo znaczące w kontekście rozróżnienia danych.  
+
+Problem (2) jest szczególnie istotny w dość prostych algorytmach takich jak algorytm K najbliższych sąsiadów, gdzie do poprawnego działania należy policzyć dystans pomiędzy sąsiednimi obserwacjami. Uwzględniając dużą liczbę nieistotnych cech jako argumenty funkcji dystansu uzyskuje się wyniki uniemożliwiające poprawną klasyfikację zbioru. 
+
+W przypadku głębokich sieci neuronowych zastosowanie wag zmniejsza znaczenie problemu (2), gdyż wpływ poszczególnych cech może być regulowany poprzez wartość $w$. W przypadku problemu wynikającego z (1) można wyróżnić dwa podejścia stosowane do jego niwelacji:
+\begin{itemize}
+\item wybór podzbioru istotnych cech o liczności $n'$ $<<$ $n$,
+\item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
+\end{itemize}
+
+/*rozwinąć i wprowadzić definicję korelacji oraz entropii - zapytać Kubę jakby ten akapit widział*/
+
+Wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. W tym celu stosuje się np.: miary siły związku [], testy wykorzystujące entropię względną [], badania korelacji wzajemnych [], teorię zbiorów przybliżonych [] itp.
+
+W kontekście przekształcenia zbioru cech najczęściej wykorzystywaną metodą jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. PCA) opracowany przez Karla Pearsona w 1901 r (zob. Pearson1901).  
+Istotą PCA jest ortogonalne przekształcenie początkowych skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Każdy z nowych wektorów jest kombinacją liniową pewnych
+składowych głównych (odnoszących się do oryginalnych cech). Nowe nieskorelowane zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są wartościami własnymi macierzy kowariancji oryginalnych zmiennych. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną której nie redukowała poprzednia itp.
+
+Procedure PCA można zapisać następująco:
+\begin{enumerate}
+\item oblicz macierz kowariancji: Sx = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. macierz Sx jest symetryczna i pozwala ocenić: (1) wariancje zmiennych (elementy na głównej przekątnej); (2) zależności pomiędzy zmiennymi (elementy poza główną przekątną) 
+\item dokonaj rozkładu: Sx = $KLK^T$
+\item utwórz nowe zmienne wykonując operację: Y = XK
+\end{enumerate}
+/*przykład numeryczny https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm */
+
+Oprócz PCA można również wyróznić nastepujące algorytmy: 
+\begin{enumerate}
+	\item t-SNE
+	\item ISOMAP: Isomap Homepage 
+	\item ICA: What is Independent Component Analysis ?
+	\item LSA: Popular in NLP domain :: LSA @ CU Boulder
+	\item Sammon mapping: Implementation in python tompollard/sammon
+	\item Self Organizing Maps: Matlab implementation SOM Toolbox	
+	
+	https://www.quora.com/What-are-different-unsupervised-feature-selection-methods-other-than-principle-component-analysis-PCA
+\end{enumerate}
+
+
+
+
 \section{Przykłady współczesnych topologii}
 
+/*co pozwoliło na obliczenia NVIDIA, TPU, RAM, Google Brain i głębokość obecnych sieci*/
 
 \subsection{AlexNet}
 \label{AlexNet}

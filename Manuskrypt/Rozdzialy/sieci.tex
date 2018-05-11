@@ -39,7 +39,7 @@ y=\sum_{i=1}^{n}w_i x_i
 
 gdzie $w_i$ są to wagi wektora $w$ = ($w_1$,...,$w_n$). Wprowadzenia do perceptronu wag $w$ dało możliwość uczenia się architektury poprzez modyfikację ich wartości. Badania nad różnymi funkcjami aktywacji doprowadziły do wielu sukcesów modelu Rosenblatta. Wyszczególnić można zwłaszcza funkcję typu Sgmoid i ReLU.
 
-/*Master algorithm użyj opisy S-curve tutaj w odniesieniu do rozwiązania problemu Minsky*/
+/*Master algorithm użyj opisy S-curve tutaj w odniesieniu do rozwiązania problemu Minsky*/ /*Normalizacja*/
 
 Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
 
@@ -77,7 +77,14 @@ Wiekszość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie
 
 Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jako $\bigtriangledown f$($x$). Dodatkowo czasami istnieje konieczność znalezienia wszystkich pochodnych cząstkowych funkcji, której wejście i wyjście stanowią wektory. Taka macież nosi nazwę \textit{macierzy Jacobiego}, natomiast macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}.
 
-Metody optymalizacji bazujące na wartości gradientu w kolejnych krokach iteracji obierają kolejne wartości funkcji $f$ przesuwając się w kierunku spadku gradientu:
+Szereg metod optymalizacyjnych niegradientowych zostało opracowanych (zob. []). Jednak to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w głębokich sieciach neuronowych z uwagi na szybkie znajdowanie lokalnych minimów. Lokalne minimum nie jest zazwyczaj najlepszym możliwym rozwiązaniem, ale wiele badań wykazało następujące fakty (por. [WhyGradientMethodsoinDL]):
+\begin{enumerate}
+	\item Dla sieci neuronowych o dużych rozmiarach większość lokalnych minimów charakteryzuje się podobnymi wynikami w kontekście osiągnięć zadanych problemów na zbiorze testowym.
+	\item Prawdopodobieństwo znalezienia lokalnego minimum, którego implikacją będą niskie rezultaty sieci maleje wraz ze wzrostem rozmiaru sieci.
+	\item Próba znalezienia globalnego minimum bardzo często prowadzi do problemu nadmiarowego dopasowania, który został omówiony w kolejnej sekcji.
+\end{enumerate}
+
+Podsumowując, metody gradientowe są wydajne obliczeniowo i prowadzą do znalezienia wielu satysfakcjonujących rozwiązań, które mogą być wykorzystane do rozwiązania praktycznych problemów. Metody gradientowe w kolejnych krokach iteracji obierają kolejne wartości funkcji $f$ przesuwając się w kierunku spadku gradientu:
 \begin{equation}
 x' = x - \epsilon \bigtriangledown f(x),
 \end{equation} 
@@ -93,19 +100,59 @@ co w zapisie wektorowym równoważne jest z równaniem:
 \end{equation}
 gdzie $\frac{\delta y}{\delta x}$ to macierz Jacobiego. Regułę tak zapisaną prosto uogólnie się do zmiennych tensorowych (zob. IanGoodf-205). 
 
-Można zatem gradient zmiennej $x$ otrzymać przez pomnożenie macierzy Jacobiego przez gradient $\bigtriangledown_y z$. W tym celu w metodach głębokiego uczenia się wykorzystuje się algorytm \textit{propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie (zob. [Backprop]).
+Można zatem gradient zmiennej $x$ otrzymać przez pomnożenie macierzy Jacobiego przez gradient $\bigtriangledown_y z$. W tym celu w metodach głębokiego uczenia się wykorzystuje się algorytm \textit{propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie, którego przykładową strukturę stanowi perceptron wielowarstwowy. Przykład zastosowania algorytmu wstecznej propagacji do perceptronu wielowarstwowego znajduje się [], a oryginalna praca na temat algorytmu można znaleźć w [].
 
- /*SGD, ADAM, */
--pakiety, liczenie gradientu na pakietach zapewnia wydjaność 
-/*FP, TP, FN, TN*/
-/*Normalizacja*/
+Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę jeszcze dodatkowy podzbiór, rozłączny z $U$ i $T$ - \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszej architektury sieci oraz najlepszych algorytmów i wartości parametrów odpowiedzialnych za jej szkolenie.
 
-Wraz z rozwojem metod sztucznej inteligencji, w tym konwolucyjnych sieci neuronowych pojawiały się problemy związane z poprawną klasyfikacją zbiorów danych. Dwa najważniejsze tj. problem nadmiernego dopasowania i redukcji wymiarowości zostaną przedstawione w kolejnych sekcjach.
+W procesie szkolenia zmniejszana jest funkcja kosztów $f$ w oparciu na o $U$, a celem jest poprawa $P$. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetważają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. W praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby z przedziału 8-256. Takie podejście zapewnia kompromis między szybkością obliczeń i dokładnością esymacji wartości gradientu.
+
+Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{stochastic gradient descent}, SGD). Bazuje on na założeniu, że nieobciążoną estymację gradientu można otrzymać wyciągając średnią gradinetu na minipakiecie $m$ przykładów. Kolejne kroki algorytmu można zapisać nastepująco:
+\begin{enumerate}
+	\item Wybierz wrtość parametru szybkości uczenia się $\epsilon_k$.
+	\item Próbkuj minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
+	\item Oblicz estymację gradientu $g$ = $frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$ to funkcja strat na jeden przykład o wejściej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
+	\item Zastosuj aktualizację wartości funkcji celu równą $\epsilon_k g$.
+	\item Jeżeli kryterium stopu nie zostało spełnione, wówczas wróć do kroku 2. 
+\end{enumerate}
+Przy czym kryterium stopu jest najczęściej określone liczbą iteracji lub satysfakcjonującą wartością funkcji $f$. Kwestia optymalnego wyboru parametru $\epsilon_k$ również silnie zależy od problemu i najczęściej stosowane są metody empiryczne, przy czym zazwyczaj $\epsilon_k$ maleje wraz ze zbliżaniem się do satysfakcjonującego rozwiązania.
+
+Kwestia strategii nadawania parametrom wartości początkowych w procesie szkolenia się sieci jest silnie dyskutowana w literaturze (zob. []) i jej kompleksowy obraz wykracza poza zakres tej pracy. Warto jednak wspomnieć o algorytmach z adaptacyjnyą szybkością uczenia się, gdyż jest to jeden z najtrudniejszych do ustawienia hiperparametrów, a jednocześnie bardzo istotny. Są to m.in.:
+\begin{itemize}
+ \item Adaptive Gradient Algorithm (AdaGrad) [] -- indywidualnie adaptuje szybkość uczenia się wszystkich parametrów modelu, skalując je odwrotnie proporcjonalnie do pierwiastka kwadratowego sumy wszystkich historycznych kwadratów gradientów.
+ \item Root Mean Square Propagation (RMSProp) [] -- jest to modyfikacja AdaGrad, która zmienia akumulację gradientu w wykładniczo ważoną ruchomą średnią.
+ \item Adaptive moments algorithm (Adam) [] -- W porównaniu z RMSProp, Adam poza momentem pierwszego rzędu (tj. średnią) wykorzystuje również moment drugiego rzędu (tj. wariancję). Dokładniej rzecz biorąc, w algorytmie liczona jest wykładnicza ruchoma średnia gradientu i kwadratu z gradientu, a parametry $\beta_1$ i $\beta_2$ kontrolują zakres liczenia średnich.
+\end{itemize}
+W praktyce ten ostatni jest w momencie pisania tej pracy najczęściej rekomendowanym algorytmem jako domyślna metoda szkolenia głębokich sieci neuronowych dlatego poniżej zamieszczono dokładny opis procedury:
+\begin{enumerate}
+	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s$ = 0 i $r$ = 0, warość kroku czasowego $t$ = 0 i stałą $\sigma$ używaną do stabilizacji numerycznej.
+	\item Próbkuj minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
+	\item Oblicz estymację gradientu $g$ = $frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1
+	\item aktualizuj estymację pierwszego momentu. $s$ = $\beta_1$$s$ + (1-$\beta_1$)$g$
+	\item aktualizuj estymację drugiego momentu. $r$ = $\beta_2$$r$ + (1-$\beta_2$)$g\bigodot g$
+	\item skoryguj obciążenie momentu pierwszego rzędu $s$ = $\frac{s}{1-\beta_1^t}$
+	\item skoryguj obciążenie momentu drugiego rzędu $r$ = $\frac{r}{1-\beta_2^t}$
+	\item Zastosuj aktualizację wartości funkcji celu równą -$\epsilon$$\frac{s}{\sqrt{r}+\sigma}$.
+	\item Jeżeli kryterium stopu nie zostało spełnione, wówczas wróć do kroku 2. 
+\end{enumerate}
+
+Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ lub/i $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji, ocenianym również w tej pracy korzysta się z następujących parametrów:
+\begin{itemize}
+	\item \textit{Fałszywie pozytywna klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
+	\item \textit{Fałszywie negatywna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklsyfikowanych jako fałszywie negatywne, a należących do klasy obserwacji pozytywnych. 
+	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
+	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne. 
+	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy}) -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
+	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity}) -- $TPR = \frac{TP}{TP + FN}$.
+	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity}) -- $TNR = \frac{TN}{TN + FP}$.
+	\item \textit{Precyzja klasyfikacji} (ang. \textit{Precision}) -- $PPV = \frac{TP}{TP + FP}$.
+\end{itemize}
+
+W problemach empirycznych dąży się do maksymalizowania bądź minimalizowania powyższych współczynników. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. Z tymi zadanimi związane są problemy nadmiernego dopasowania i redukcji wymiarowości, które zostały opisane w kolejnych podsekcjach.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
 
-Jak wiadomo proces uczenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli zbiorze uczącym $U$. Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$ zawierającego przykłady inne niż w $U$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż nowe dane nie są poprawnie klasyfikowane.
+ Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż nowe dane nie są poprawnie klasyfikowane.
 
 Z uwagi na ten fakt ogólnym dążeniem w procesie uczenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wekto-
 rów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$.

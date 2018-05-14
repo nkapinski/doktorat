@@ -226,12 +226,19 @@ Oprócz PCA można również wyróznić nastepujące algorytmy:
 	https://www.quora.com/What-are-different-unsupervised-feature-selection-methods-other-than-principle-component-analysis-PCA
 \end{enumerate}
 
-
-
-
 \section{Przykłady współczesnych topologii}
 
-/*co pozwoliło na obliczenia NVIDIA, TPU, RAM, Google Brain i głębokość obecnych sieci*/
+W ostatnich latach wprowadzono wiele rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania, które przyczyniły się do wzrostu liczby zastosowań głębokich sieci neuronowych wtym sieci konwolucyjnych. 
+
+W głównej mierze prace te skupiły się na rozwiązaniach dedykowanych do optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest d przetwarzania kolejnych obserwacji.
+
+W fazie szkolenia największy problem obliczeniowy wynika z konieczności ciągłej aktualizacji parametrów. Natomiast w fazie wnioskowania wynika z propagacji sygnału w sieci. Ponieważ liczby parametrów we współpcześnie wykorzystywanych topologiach wahają się od milionów jak w [AlexNet] do nawet bilionów [GoogleBrain 23-TTCF],problemy te stanowią poważne wąskie gardło w pracach badawczych i rozwojowych.
+
+Najczęściej wykorzystywanymi operacjami w szkoleniu sieci jest mnożenie i dodawanie tensorów, dlatego wiodące firmy sprzętowe takie jak Intel, czy NVIDIA, zdecydowały się przedstawić dedykowane tym celom akceleratory sprzętowe np. NVIDIA Tensor Processing Unit (w skr. TPU) [] czy Intel Lakecrest []. W chwili pisania tej pracy umożliwiają one nawet do 120 tera operacji tensorowych na sekundę (w skr. TTOPs).
+
+Faza wnioskowania jest znacznie mniej wymagająca obliczeniowo lecz w praktyce często wymaga wykonywania w czasie rzeczywistym lub zbliżonym do niego. Rozwiązania takie jak [24-TTCF] minimalizują czasy przetwarzania wykorzystując np. optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy.
+
+Dodatkowo, mnogość rozwiązań takich jak Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet, dedykowanych do wspierania obliczeń z udziałem głebokich sieci neuronowych, przyspiesza znacząco rozwój dziedziny i prace nad współczesnymi topologiami (zob. [porównania]). Wybrane przykłady takich architektur zostały omówione w kolejnych podsekcjach. 
 
 \subsection{AlexNet}
 \label{AlexNet}

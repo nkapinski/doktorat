@@ -1,21 +1,54 @@
 \chapter{Konwolucyjne sieci neuronowe}
-\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Podłoże pochodzi od badań nad korą wzrokową zapoczątkowanych w pracach Hubel'a i Wiesel’a w roku 1968 dotyczących widzenia kotów. Dzięki paracom neurofizjologów nauka o sztucznych sieciach rozwiajana od lat 40-tych XX wieku obrała obecny kierunek. Wiadomo, że kora wzrokowa zawiera złożone układy komórek. Komórki te odpowiadają za przetwarzanie informacji z regionów pola widzenia, tak żeby sumarycznie pokryć je w całości. Komórki te działają jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
+\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}, CNN) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Tak jak opisano we wstępie, należą one do zbioru \textit{głębokich sieci neuronowych} (ang. \textit{Deep Neural Networks}, DNN), które są zkolei podzbiorem \textit{systemów uczących się} (ang. \textit{Machine Learning systems}) tj. algorytmów nie wymagających eksplisite programowania do ustalenia swoich parametrów.
 
-W zapisie cyfrowym wykorzystywanym najczęściej w przetwarzaniu obrazów metodami sztucznej inteligencji informację wejściową stanowi dyskretna \textit{funkcja obrazowa} $I$, która przypisuje kolejnym punktom obrazu tzw. \textit{pikselom} kolor zdefiniowany w zadanej przestrzeni barw np. RGB, CMYK, GrayScale (zob. [barwy]). W praktyce przetwarzania obrazów medycznych najczęściej spotyka się z dwuwymiarowe funkcje $I$($x$, $y$) lub trójwymiarowe $I$($x$, $y$, $z$).
+Pierwsze matematyczne formalizmy dotyczące CNN zostały zapropozonwane już w latach 40-tych XX wieku, natomiast podłoże do inspiracji biologicznych dały badania nad korą wzrokową kotów Hubel'a i Wiesel’a z roku 1968. Dzięki tym pracom oraz badaniom kolejnych neurofizjologów (m.in. zob. []) ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji z wybranów regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne cechy z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
 
-Filtracje obrazów cyfrowych mające na celu wydobycie istotnych cech uzyskuje się za pomocą operacji splotu maski $K$ filtru z kolejnymi fragmentami obrazu I, co można zapisać następująco:
+W sieciach konwolucyjnych procesy zachodzące w korze wzrokowej są modelowane, prowadząc do utworzenia bazy filtrów, za pomocą których istotne informacje obrazowe mogą być wyekstrahowane i następnie przetworzone. Fakt ten wykorzystywany jest w problemach dotyczących przetwarzania cyfrowych obrazów medycznych pochodzących np. z MR, TK czy USG.
+
+Cyfrowy obraz zapisywany jest w postaci macierzy punktów o współrzędnych ($x$,$y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze składowa $z$, a zamiast macierzy użyty jest tensor. Dodatkowo dla każdego punktu kodowana jest informacja o wartości funkcji obrazu $I$($x$,$y$). Na tej podstawie dzielimy obrazy na:
+\begin{itemize}
+	\item binarne – kodowane są jedynie dwie możliwe wartości I (0 lub 1);
+	\item monochromatyczne – kodowana jest informacja o natężeniu jednej barwy (najczęściej są to odcienie szarości lub brązu tzw. sepia);
+	\item kolorowe – kodowane są wartości natężenia składowych.
+\end{itemize}
+Do zakodowania informacji o wartości funkcji $I$ w obrazie binarnym potrzebny jest jeden bit na punkt. Odcienie obrazu monochromatycznego i pojedyncze składowe punktu obrazu kolorowego kodowane są na 8–16 bitach, w zależności od zakresu wartości występujących w danych. 
+
+Obrazy medyczne przetwarzane w tej pracy należą do grupy obrazów monochromatycznych. Należy jednak wiedzieć, ze w praktyce sygnałem wejściowym dla sieci konwolucyjnych są często obrazy kolowe, reprezentowane odpowiednim  \textit{modelem przestrzennym barw} stanowiącym zestawienie składowych np. RGB, YUV, HSV, HLS (zob. [barwy])
+
+Podstawową operacją wykorzystywaną w sieciach konwolucyjnych do wydobycia istotnych cech obrazowych jest \textit{splot} maski $K$ filtru z kolejnymi fragmentami funkcji $I$. $K$ jest najczęściej macierzą kwadratową o wymiarze $N$ i (z uwagi na rosnącą wraz z $N$ złożonością obliczeniową) ogranicza się do wymiarów $N$ = {1, 3, 5, 7, 9, 11}. Splot zdefiniowany jest następująco:
 \begin{equation}
-	I'\left(x, y\right) = \sum_{n=0}^{N} \sum_{k=0}^{N} I\left(x + n, y + k \right)K\left(n, k\right).
+	I'\left(x, y\right) = \sum_{n} \sum_{k} I\left(x - n, y - k \right)K\left(n, k\right),
 \end{equation}
-Najczęściej spotykane wymiary masek $K$ to 3$\times$3 -- 11$\times$11. 
+gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $n$ i $k$ to kolejne współrzędne maski filtru w odniesienia do jego punktu centralnego. W realizacji splotu dla wartości brzegowych, dla współrzędnych poza sygnałem przyjmuje się z reguły wartości 0. Inne metody to: odbicie obrazu poza jego granicami; powtórzenie obrazu bez odbicia; powielenie brzegowych wartości; modyfikacji maski filtru na brzegu obrazu, tak by maska nie wychodziła poza obraz.
 
-/*definicje krawędzi, kształtów, obiektów*/
+Operacje, takie jak splot maski z funkcją $I$ polegające na modyfikacji danego piksela biorąc pod uwagę piksel i jego otoczenie nazywane są \textit{przekształceniami kontekstowymi}. Przy ich użyciu można bardzo efektywnie wydobywać charakterystyczne cechy funkcji $I$, takie jak: 
+\begin{itemize}
+	\item \textit{krawędzie} -- ciągi punktów o gwałtownych zmianach $I$($x$,$y$);
+	\item \textit{rogi} -- przecięcia dwóch krawędzi;
+	\item \textit{grzbiety} lub \textit{doliny} -- lokalne maksimum lub odpowiednio minimum funkcji $I$;
+	\item \textit{skupiska} (ang. \textit{blob}) -- obszary jednorodnych wartości funkcji $I$, różniących się znacząco od najbliższego otoczenia; 
+	\item \textit{tekstury} -- charakterystyczne przestrzenne ułożenie wartości funkcji $I$ w powtarzające się wzory.
+\end{itemize}
 
-Ewolucja sieci konwolucyjnych do obecnej postaci przebiegała stopniowo, a najważniejsze jej elementy zostały przedstawione w kolejnej sekcji. 
+Na podstawie wektora cech można ustalić kryterium $T_p$, celem klasyfikacji pikseli na należące do \textit{obiektów} i do \textit{tła}:
+\begin{equation*}
+\begin{aligned}
+I(x,y) \geq T_p \Rightarrow (x,y) \in "obiekt" \\
+I(x,y) < T_p \Rightarrow (x,y) \in "tlo"
+\end{aligned}
+\end{equation*} 
+
+Na podstawie rozróxnienia pikseli można wykonać końcowe zadanie np.:
+/*klasyfikacja;
+segmentacja;
+śledzenie;
+itp*/
+
+Niewątpliwą zaletą algorytmów głębokiego uczenia się jest fakt, że zarówno ekstrakcję cech jak i ostateczne wnioskowanie na ich podstawie realizują w jednym kroku, co nazywane jest paradygmatem \textit{end-to-end learning}. Dla porównania, schemat stosowany jeszcze do niedawna w większości badań wykorzystujących uczenie się maszyn polegał na rozdzieleniu tych dwóch kroków i zdefiniowania wektora cech na podstawie wiedzy eksperckiej, a dopiero następnie użycia go do końcowego zadania np. klasyfikacji zbiorów\footnote{SVM}. W kolejnej sekcji omówiono jak wyglądała ewolucja tego procesu. 
 
 \section{Zarys historyczny}
 
-Historia głębokich sieci neuronowe zaczęła się w latach 40-tych XX wieku. Pierwszy formalny model neuronu był zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
+Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
 
 Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi połączeniami między sobą została zaproponowana w 1957 roku przez Franka Rosenblatta [Perc]. Sieć, pokazaną na Rys. \ref{Perceptron} nazwano perceptronem, co związane było z zamiłowaniem jego twórcy do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. 
 \begin{figure}[h!]

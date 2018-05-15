@@ -26,31 +26,44 @@ Operacje, takie jak splot maski z funkcją $I$ polegające na modyfikacji danego
 	\item \textit{krawędzie} -- ciągi punktów o gwałtownych zmianach $I$($x$,$y$);
 	\item \textit{rogi} -- przecięcia dwóch krawędzi;
 	\item \textit{grzbiety} lub \textit{doliny} -- lokalne maksimum lub odpowiednio minimum funkcji $I$;
-	\item \textit{skupiska} (ang. \textit{blob}) -- obszary jednorodnych wartości funkcji $I$, różniących się znacząco od najbliższego otoczenia; 
+	\item \textit{skupiska} (ang. \textit{blobs}) -- obszary jednorodnych wartości funkcji $I$, różniących się znacząco od najbliższego otoczenia; 
 	\item \textit{tekstury} -- charakterystyczne przestrzenne ułożenie wartości funkcji $I$ w powtarzające się wzory.
 \end{itemize}
 
-Na podstawie wektora cech można ustalić kryterium $T_p$, celem klasyfikacji pikseli na należące do \textit{obiektów} i do \textit{tła}:
-\begin{equation*}
-\begin{aligned}
-I(x,y) \geq T_p \Rightarrow (x,y) \in "obiekt" \\
-I(x,y) < T_p \Rightarrow (x,y) \in "tlo"
-\end{aligned}
-\end{equation*} 
+Z powyższych cech można sformułować wektor cech $w$, który wykorzystywany jest do wnioskowania końcowego na temat obiektów znajdujących się w obrazach. Do tego celu służą grupy metod wśród których wyszczególnić można:
+\begin{itemize}
+	\item \textit{segmentację} -- podział obrazu na spójne fragmenty, najczęściej wiążące się z wyodrębnieniem \textit{obiektu} z \textit{tła} na podstawie ustalonego progu lub miary np.:
+	\begin{equation*}
+	\begin{aligned}
+	I(x,y) \geq T_p \Rightarrow (x,y) \in "obiekt" \\
+	I(x,y) < T_p \Rightarrow (x,y) \in "tlo",
+	\end{aligned}
+	\end{equation*} 
+	przy czym metody ustalania wartości progowej $T_p$ lub wielu wartości {$T_p^1$,...,$T_p^n$} są obszarem szerokich badań (zob. [Prog]).
+	\item \textit{klasyfikację} -- przyporządkowanie obiektu do odpowiedniej klasy (np. tkanka zdrowa lub patologiczna).
+	\item \textit{detekcję} -- binarne rozróżnienie traktujące o tym czy obiekt znajduje się w obrazie czy nie.
+	\item \textit{śledzenie} -- detekcja lub też klasyfikacja obiektów w kolejnych krokach czasowych.
+\end{itemize} 
 
-Na podstawie rozróxnienia pikseli można wykonać końcowe zadanie np.:
-/*klasyfikacja;
-segmentacja;
-śledzenie;
-itp*/
+Schemat stosowany jeszcze do niedawna (zob. Rys. \ref{DLworkflow}) w większości badań wykorzystujących uczenie się maszyn uwzględniał  wyliczenie wektora cech i wnioskowanie końcowe jako oddzielne kroki\footnote{Wyjątki typu SVM}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/DLworkflow.png}
+	\caption{Porównanie schematów przetwarzania danych z wykorzystaniem metod głębokiego uczenia się i innych algorytmów.}
+	\label{DLworkflow}
+\end{figure}
 
-Niewątpliwą zaletą algorytmów głębokiego uczenia się jest fakt, że zarówno ekstrakcję cech jak i ostateczne wnioskowanie na ich podstawie realizują w jednym kroku, co nazywane jest paradygmatem \textit{end-to-end learning}. Dla porównania, schemat stosowany jeszcze do niedawna w większości badań wykorzystujących uczenie się maszyn polegał na rozdzieleniu tych dwóch kroków i zdefiniowania wektora cech na podstawie wiedzy eksperckiej, a dopiero następnie użycia go do końcowego zadania np. klasyfikacji zbiorów\footnote{SVM}. W kolejnej sekcji omówiono jak wyglądała ewolucja tego procesu. 
+W algorytmach głębokiego uczenia, zarówno ekstrakcja cech jak i ostateczne wnioskowanie na ich podstawie realizowane jest w jednym kroku, co nazywane jest paradygmatem \textit{end-to-end learning}. W kolejnej sekcji omówiono dokładniej jak wyglądała ewolucja tego podejścia do obecnej postaci. 
 
 \section{Zarys historyczny}
 
-Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. 
+Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch i Waltera Pitts w roku 1943 [Pitts]. Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y$ od sygnałów wejściowych $x_1$...$x_n$ została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
+\begin{equation}
+\label{eqActFunc}
+y=f\left(x_1, x_2,..., x_n\right)
+\end{equation}
 
-Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi połączeniami między sobą została zaproponowana w 1957 roku przez Franka Rosenblatta [Perc]. Sieć, pokazaną na Rys. \ref{Perceptron} nazwano perceptronem, co związane było z zamiłowaniem jego twórcy do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. 
+W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie istniała natomiast możliwość uczenia się takiej architektury. Dlatego w 1957 zaproponowano sztuczną sieć neuronowej zawierającą wiele neuronów z ważonymi połączeniami między sobą [Perc]. Sieć nazwano perceptronem, co było implikacją zamiłowania jego twórcy Franka Rosenblatta do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. Schemat sieci pokazano na Rys. \ref{Perceptron}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{figures/perceptron.png}
@@ -58,25 +71,23 @@ Pierwsza architektura sieci neuronowej zawierająca wiele neuronów z ważonymi 
 	\label{Perceptron}
 \end{figure}
 
-Model neuronu zaproponowany przez Rosenblatta charakteryzuje się strukturą o wielu wejściach i jednym wyjściu. Sygnał wyjściowy $y$ ściśle zależy od sygnałów wejściowych $x_1$...$x_n$, a zależność ta, podana wzorem \ref{eqActFunc}, nazywana jest \textit{funkcją aktywacji neuronu}. 
+Zastosowanie wektora wag $w$ = ($w_1$,...,$w_n$) dało możliwość uczenia się poprzez adaptacyjną zmianę wartości jego elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_p$:
 \begin{equation}
-\label{eqActFunc}
-y=f\left(x_1, x_2,..., x_n\right)
+y(z)=\begin{cases} 0, & n < T_a, \\ 1, & n \ge T_a, \end{cases}
 \end{equation}
-Funkcja $y$ ma za zadanie modelować biologiczne własności neuronu związane z warunkową propagacją sygnału nerwowego. Dla przykładu liniowa funkcja aktywacji neuronu realizowana jest sumą:
-
+gdzie $z$ to suma ważona wyjść poszczególnych neuronów:
 \begin{equation}
 \label{eqLinActFunc}
 y=\sum_{i=1}^{n}w_i x_i
 \end{equation}
 
-gdzie $w_i$ są to wagi wektora $w$ = ($w_1$,...,$w_n$). Wprowadzenia do perceptronu wag $w$ dało możliwość uczenia się architektury poprzez modyfikację ich wartości. Badania nad różnymi funkcjami aktywacji doprowadziły do wielu sukcesów modelu Rosenblatta. Wyszczególnić można zwłaszcza funkcję typu Sgmoid i ReLU.
+W dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2$}  działanie perceptronu można opisać jako wyliczenie funkcji liniowej rozdzielającej obserwacje $x_1$ od $x_2$. W trzech wymiarach będzie to płaszczyzna, a w $n$-wymiarach, hiperpłaszczyzna.
 
-/*Master algorithm użyj opisy S-curve tutaj w odniesieniu do rozwiązania problemu Minsky*/ /*Normalizacja*/
+Powyżej opisane działanie jest daleko idącym uproszczeniem funkcjonowania biologicznego neuronu (opisz coś więcej o neuronie). Przez blisko dekadę nowa architektura była obiektem badań i doczekała się sukcesów na polach takich jak rozpoznawanie tekstu, czy mowy []. 
 
-Po blisko dekadzie badań nowej architektury w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najsławniejszych należał problem związany z brakiem możliwości modelowania funkcji XOR.
+Pomimo tego, liniowy charakter perceptronu wprowadzał duże ograniczenia w możliwościach jego zastosowania. W 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najszerzej dyskutowanych należał problem związany z brakiem możliwości modelowania funkcji XOR.
 
-Dopiero w 1986 roku część z zarysowanych przez Minsky'ego i Paperta problemów udało się rozwiązać za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams traktującej o praktycznym zastosowaniu opisanego w latach 70-tych algorytmu wstecznej propagacji, umożliwajacym trening perceptronów wielowarstwowych [Backprop]. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
+Po latach intensywnych prac, część z opisanych przez Minsky-Papert problemów udało się rozwiązać dopiero w 1986, za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams traktującej o perceptronach wielowarstwowych. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{figures/MLperceptron.png}
@@ -84,9 +95,15 @@ Dopiero w 1986 roku część z zarysowanych przez Minsky'ego i Paperta problemó
 	\label{MLperceptron}
 \end{figure}
 
+Spośród najważniejszych innowacji wprowadzonych w perceptronie wielowarstwowym wyszczególnić można zastosowanie w praktyce nowego algorytmu uczenia się sieci, który został opisany dalej w kolejnej sekcji jak również nowej, sigmoidalnej funkcji aktywacji:
+\begin{equation}
+\label{eqSigActFunc}
+y(x) = \frac{1}{1 + e^{-x}}
+\end{equation}
+
 Z wykorzystaniem sieci wielowarstwowych możliwe stało się modelowanie funkcji XOR jak i innych problemów nieliniowych o praktycznym wymiarze. 
 
-W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje badania z użyciem sieci wielowarstwowych do klasyfikacji odręcznego pisma [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
+Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, były uczeń Geaoffa Hintona, zaprezentował swoje wyniki dotyczące klasyfikacji odręcznego pisma z użyciem sieci wielowarstwowych [LeCun et al., 1989a]. Finalnie, badania te doprowadziły do przedstawienia w 1998 roku pierwszej sieci konwolucyjnej nazwanej LeNet [LeNet]. Architekturę tej sieci przedstawiono na Rys. \ref{LeNet}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/lenet.png}
@@ -94,11 +111,11 @@ W 1989 roku, Yann LeCunn, były uczeń Geaoffa Hintona zaprezentował swoje bada
 	\label{LeNet}
 \end{figure}
 
-Sieć składała się z 7 warstw i zawierała około 60,000 parametrów. Oryginalnie, sygnałem wejściowym sieci stanowił obrazek o wymiarach 32$\times$32.
+Sieć składała się z 7 warstw i zawierała około 60,000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32.
 
-W architekturze LeNet uwidoczniły się dwie podstawowe składowe współczesnych sieci konwolucyjnych tj. \textit{ekstraktor cech} -- zawierający filtry, których wartości parametrów masek są optymalizowane pod kątem wyboru cech charakterystycznych dla zadanego zbioru danych oraz \textit{klasyfikator} -- zawierający neurony z wagami, których wartości są optymalizowane w celu końcowego rozróznienia zbioru danych na podstawie wyekstrachowanego wczęsniej wektora cech. 
+W architekturze LeNet uwidoczniły się dwie podstawowe składowe współczesnych sieci konwolucyjnych tj. \textit{ekstraktor cech} -- zawierający filtry, których wartości parametrów masek są optymalizowane pod kątem wyboru cech charakterystycznych dla zadanego zbioru danych oraz \textit{klasyfikator} -- zawierający neurony z wagami, których wartości są optymalizowane w celu końcowego rozróznienia zbioru danych na podstawie wyekstrachowanego wczęsniej wektora cech. Oba z tych komponentów były uwzględnione w jednym procesie uczenia się, co było zgodne z paradygmatem end-to-end learning.
 
-W uproszczeniu można opisać sieć konwolucyjną jako klasyczną topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej (LeNet miała 2 warstwy FC).
+W porównaniu do poprzednich architektur, sieć konwolucyjną mozna opisać jako topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
 
 Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
 
@@ -314,7 +331,7 @@ W kontekście zwiększenia efektywności treningu zastosowano powiększenie rozm
 \end{figure}
 
 Topologia z podziałem na 2 karty zwiększyła dwukrotnie sumaryczną pamięć i pozwoliła na koalokację parametrów sieci.
-
+/*Normalizacja*/
 Praca Alexa Krizhevsky, Ilya Sutskever i Geoffrey'a Hinton zapoczątkowała wzrost zainteresowania technikami głębokiego uczenia się, co doprowadziło do publikacji kolejnych podobnych architektur. Do najbardziej znanych należą ZFNet z 2013 roku [ZFNet], gdzie m.in. zastosowano zmniejszenie wymiaru jądra stosowanego w filtrach pierwszej warstwy konwolucyjnej do 7$\times$7 oraz VGGNet z 2014 roku, gdzie zastosowano większą liczbę warstw konwolucyjnych z mniejszym wymiarem jądra splotu. Innowacyjnym pomysłym, który został zaprezentowany również w 2014 było pojawienie się nowych modułów w sieci GoogleNet, która dokładniej została opisana w kolejnej podsekcji.
 
 \subsection{GoogLeNet}

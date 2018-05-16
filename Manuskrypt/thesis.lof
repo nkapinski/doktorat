@@ -10,14 +10,14 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Topologia sieci LeNet.\relax }}{12}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Reprezentacja graficzna oceny krzy\IeC {\.z}owej.\relax }}{18}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Topologia architektury AlexNet.\relax }}{23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{24}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{26}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury GoogleNet\relax }}{26}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{28}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury ResNet-18.\relax }}{30}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{33}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{25}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{27}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury GoogleNet\relax }}{27}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{29}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury ResNet-18.\relax }}{31}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{34}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki z ocen\IeC {\k a} panelu ekspert\IeC {\'o}w\relax }}{34}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji 3 chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w\relax }}{34}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji 3 chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w\relax }}{35}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

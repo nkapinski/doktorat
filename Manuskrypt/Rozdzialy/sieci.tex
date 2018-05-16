@@ -113,25 +113,25 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, były uczeń Geaof
 
 Sieć składała się z 7 warstw i zawierała około 60,000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32.
 
-W architekturze LeNet uwidoczniły się dwie podstawowe składowe współczesnych sieci konwolucyjnych tj. \textit{ekstraktor cech} -- zawierający filtry, których wartości parametrów masek są optymalizowane pod kątem wyboru cech charakterystycznych dla zadanego zbioru danych oraz \textit{klasyfikator} -- zawierający neurony z wagami, których wartości są optymalizowane w celu końcowego rozróznienia zbioru danych na podstawie wyekstrachowanego wczęsniej wektora cech. Oba z tych komponentów były uwzględnione w jednym procesie uczenia się, co było zgodne z paradygmatem end-to-end learning.
+W architekturze LeNet zaobserwować można dwie podstawowe składowe współczesnych sieci konwolucyjnych wykorzystywanych do klasyfikacji obrazów tj.:
+\begin{itemize}
+	\item \textit{ekstraktor cech} -- część zawierająca m.in. filtry, służace do automtycznej ekstrakcji wektora cech $w$.
+	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego na podstawie $w$.
+\end{itemize}  
 
-W porównaniu do poprzednich architektur, sieć konwolucyjną mozna opisać jako topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
-
-Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
-
-Złożoność budowy sieci konwolucyjnych oraz duża liczba parametrów spowodowała szereg wyzwań związanych z praktycznym ich wykorzystaniem m.in. poprawną klasyfikacją zbioru danych. Najważniejsze z wyzwań zostały opisane w kolejnej sekcji.  
+Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu end-to-end learning rozumiane w tym kontekście jako znalezienie możliwie dobrej transformacji, która surowe obrazy przekształca bezpośrednio w ostateczną klasyfikację. Sam proces szkolenia sieci i problemów z tym związanych wymaga dokładniejszego opisu dlatego został on przedstawiony w kolejnej sekcji.  
 
 \section{Szkolenie głębokich sieci neuronowych}
 
 Wiekszość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat}, \textit{funkcja błędów} (za [DL-IANGoodfellow]). 
 
-Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jako $\bigtriangledown f$($x$). Dodatkowo czasami istnieje konieczność znalezienia wszystkich pochodnych cząstkowych funkcji, której wejście i wyjście stanowią wektory. Taka macież nosi nazwę \textit{macierzy Jacobiego}, natomiast macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}.
+Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$). Z kolei macież pochodnych cząstkowych funkcji nosi nazwę \textit{macierzy Jacobiego}, a macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}. Macierze te są w praktyce bardzo często wykorzystywane w implementacjach poszczególnych algorytmów szkolenia się sieci.
 
-Szereg metod optymalizacyjnych niegradientowych zostało opracowanych (zob. []). Jednak to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w głębokich sieciach neuronowych z uwagi na szybkie znajdowanie lokalnych minimów. Lokalne minimum nie jest zazwyczaj najlepszym możliwym rozwiązaniem, ale wiele badań wykazało następujące fakty (por. [WhyGradientMethodsoinDL]):
+Szereg metod optymalizacyjnych niegradientowych zostało opracowanych (zob. []). Jednak z uwagi na szybkie znajdowanie lokalnych minimów, to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w szkoleniu głębokich sieci neuronowych. Lokalne minimum przeważnie nie jest najlepszym możliwym rozwiązaniem, ale wiele badań wykazało następujące fakty (por. [WhyGradientMethodsoinDL]):
 \begin{enumerate}
-	\item Dla sieci neuronowych o dużych rozmiarach większość lokalnych minimów charakteryzuje się podobnymi wynikami w kontekście osiągnięć zadanych problemów na zbiorze testowym.
-	\item Prawdopodobieństwo znalezienia lokalnego minimum, którego implikacją będą niskie rezultaty sieci maleje wraz ze wzrostem rozmiaru sieci.
-	\item Próba znalezienia globalnego minimum bardzo często prowadzi do problemu nadmiarowego dopasowania, który został omówiony w kolejnej sekcji.
+	\item Dla sieci neuronowych o dużych rozmiarach większość lokalnych minimów charakteryzuje się podobnymi wartościami, przekładającymi się na porównywalny efekt wnioskowania końcowego.
+	\item Prawdopodobieństwo znalezienia lokalnego minimum, którego implikacją będą niezadawalające rezultaty sieci maleje wraz ze wzrostem rozmiaru sieci.
+	\item Próba znalezienia globalnego minimum bardzo często prowadzi do problemu nadmiarowego dopasowania, omówionego dokładniej w kolejnej sekcji.
 \end{enumerate}
 
 Podsumowując, metody gradientowe są wydajne obliczeniowo i prowadzą do znalezienia wielu satysfakcjonujących rozwiązań, które mogą być wykorzystane do rozwiązania praktycznych problemów. Metody gradientowe w kolejnych krokach iteracji obierają kolejne wartości funkcji $f$ przesuwając się w kierunku spadku gradientu:
@@ -140,39 +140,41 @@ x' = x - \epsilon \bigtriangledown f(x),
 \end{equation} 
 gdzie $\epsilon$ to \textit{szybkość uczenia się}, parametr określający wielkość kroku. 
 
-Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest zazwyczaj \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacją wykonywanym przez szereg funkcji. Do obliczeń pochodnych funkcji złożonych z funkcji, których pochodne są znane stosuje się tzw. \textit{regułę łańcuchową}. Przypuśćmy, że y = g(x) i z = f(g(x)) = f(y), $x$ i $y$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
+Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacji wykonywanym przez kilka lub wiecej funkcji po kolei. Do obliczeń pochodnych funkcji złożonych z funkcji, których pochodne są znane stosuje się tzw. \textit{regułę łańcuchową}. Przypuśćmy, że $y$ = $g$($x$) i $z$ = $f$($g$($x$)) = $f$($y$), gdzie $x$ i $y$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
 \begin{equation}
 \frac{\delta z}{\delta x_i} = \sum_{j} {\delta z}/{\delta y_j}{\delta y_j}/{\delta x_i}, 
 \end{equation}
 co w zapisie wektorowym równoważne jest z równaniem:
 \begin{equation}
+\label{regLancuch}
 \bigtriangledown_x z = \left({\delta y}/{\delta x}\right)^T \bigtriangledown_y z, 
 \end{equation}
-gdzie $\frac{\delta y}{\delta x}$ to macierz Jacobiego. Regułę tak zapisaną prosto uogólnie się do zmiennych tensorowych (zob. IanGoodf-205). 
+gdzie $\frac{\delta y}{\delta x}$ to macierz Jacobiego. 
 
-Można zatem gradient zmiennej $x$ otrzymać przez pomnożenie macierzy Jacobiego przez gradient $\bigtriangledown_y z$. W tym celu w metodach głębokiego uczenia się wykorzystuje się algorytm \textit{propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie, którego przykładową strukturę stanowi perceptron wielowarstwowy. Przykład zastosowania algorytmu wstecznej propagacji do perceptronu wielowarstwowego znajduje się [], a oryginalna praca na temat algorytmu można znaleźć w [].
+Regułę łańcuchową zapisaną w \ref{regLancuch} prosto uogólnia się do zmiennych tensorowych (zob. IanGoodf-205) i stosuje w różnych meta-algorytmach służących do szkolenia sieci. Przykładem jest \textit{algorytm propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie takim jak topologia perceptronu wielowarstwowego. Przykład takiego działania można znaleźć w [Goodfellow].
 
 Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę jeszcze dodatkowy podzbiór, rozłączny z $U$ i $T$ - \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszej architektury sieci oraz najlepszych algorytmów i wartości parametrów odpowiedzialnych za jej szkolenie.
 
-W procesie szkolenia zmniejszana jest funkcja kosztów $f$ w oparciu na o $U$, a celem jest poprawa $P$. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetważają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. W praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby z przedziału 8-256. Takie podejście zapewnia kompromis między szybkością obliczeń i dokładnością esymacji wartości gradientu.
+W procesie szkolenia zmniejszana jest funkcja kosztów $f$ w oparciu o $U$, a celem jest poprawa $P$. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetważają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. W praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby z przedziału 8-256. Takie podejście zapewnia kompromis między szybkością obliczeń i dokładnością esymacji wartości gradientu.
 
-Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{stochastic gradient descent}, SGD). Bazuje on na założeniu, że nieobciążoną estymację gradientu można otrzymać wyciągając średnią gradinetu na minipakiecie $m$ przykładów. Kolejne kroki algorytmu można zapisać nastepująco:
+Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{stochastic gradient descent}, SGD). Bazuje on na założeniu, że estymację gradientu można otrzymać wyciągając średnią gradinetu na minipakiecie $m$ przykładów. Kolejne kroki algorytmu można zapisać nastepująco:
 \begin{enumerate}
 	\item Wybierz wrtość parametru szybkości uczenia się $\epsilon_k$.
 	\item Próbkuj minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
 	\item Oblicz estymację gradientu $g$ = $frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$ to funkcja strat na jeden przykład o wejściej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
 	\item Zastosuj aktualizację wartości funkcji celu równą $\epsilon_k g$.
-	\item Jeżeli kryterium stopu nie zostało spełnione, wówczas wróć do kroku 2. 
+	\item Jeżeli kryterium stopu nie zostało spełnione wróć do kroku 2. 
 \end{enumerate}
-Przy czym kryterium stopu jest najczęściej określone liczbą iteracji lub satysfakcjonującą wartością funkcji $f$. Kwestia optymalnego wyboru parametru $\epsilon_k$ również silnie zależy od problemu i najczęściej stosowane są metody empiryczne, przy czym zazwyczaj $\epsilon_k$ maleje wraz ze zbliżaniem się do satysfakcjonującego rozwiązania.
 
-Kwestia strategii nadawania parametrom wartości początkowych w procesie szkolenia się sieci jest silnie dyskutowana w literaturze (zob. []) i jej kompleksowy obraz wykracza poza zakres tej pracy. Warto jednak wspomnieć o algorytmach z adaptacyjnyą szybkością uczenia się, gdyż jest to jeden z najtrudniejszych do ustawienia hiperparametrów, a jednocześnie bardzo istotny. Są to m.in.:
+Kryterium stopu jest najczęściej określone liczbą iteracji lub satysfakcjonującą wartością funkcji $f$. Kwestia optymalnego wyboru parametru $\epsilon_k$ zależy od problemu i najczęściej stosowane są metody empiryczne, przy czym zazwyczaj $\epsilon_k$ maleje wraz ze zbliżaniem się do satysfakcjonującego rozwiązania.
+
+Parametry algorytmów szkoleniowych nazywane są \textit{hiperparametrami}, gdyż nie są wyznaczane bezpośrednio w procedurze uczenia. Strategia nadawania hiperparametrom wartości początkowych jest silnie dyskutowana w literaturze (zob. []) i jej kompleksowy opis wykracza poza zakres tej pracy. Warto jednak wspomnieć o algorytmach z adaptacyjną szybkością uczenia się, gdyż jest to jeden z najtrudniejszych do ustawienia hiperparametrów, a jednocześnie bardzo istotny. Są to m.in.:
 \begin{itemize}
- \item Adaptive Gradient Algorithm (AdaGrad) [] -- indywidualnie adaptuje szybkość uczenia się wszystkich parametrów modelu, skalując je odwrotnie proporcjonalnie do pierwiastka kwadratowego sumy wszystkich historycznych kwadratów gradientów.
- \item Root Mean Square Propagation (RMSProp) [] -- jest to modyfikacja AdaGrad, która zmienia akumulację gradientu w wykładniczo ważoną ruchomą średnią.
- \item Adaptive moments algorithm (Adam) [] -- W porównaniu z RMSProp, Adam poza momentem pierwszego rzędu (tj. średnią) wykorzystuje również moment drugiego rzędu (tj. wariancję). Dokładniej rzecz biorąc, w algorytmie liczona jest wykładnicza ruchoma średnia gradientu i kwadratu z gradientu, a parametry $\beta_1$ i $\beta_2$ kontrolują zakres liczenia średnich.
+ \item Adaptive Gradient Algorithm (AdaGrad) [] -- wykorzystywany do indywidualnej adaptacji szybkości uczenia się wszystkich parametrów modelu, skalując je odwrotnie proporcjonalnie do pierwiastka kwadratowego sumy wszystkich historycznych kwadratów gradientów.
+ \item Root Mean Square Propagation (RMSProp) [] -- modyfikacja AdaGrad, w której zamiast akumulacji gradientu wykorzystuje się wykładniczo ważoną ruchomą średnią z gradientu.
+ \item Adaptive moments algorithm (Adam) [] -- W porównaniu z RMSProp, Adam poza momentem pierwszego rzędu (tj. średnią) wykorzystuje również moment drugiego rzędu (tj. \textit{wariancję}). Dokładniej rzecz biorąc, w algorytmie liczona jest wykładnicza ruchoma średnia gradientu i kwadrat z gradientu oraz parametry $\beta_1$ i $\beta_2$, które kontrolują zakres liczenia średnich.
 \end{itemize}
-W praktyce ten ostatni jest w momencie pisania tej pracy najczęściej rekomendowanym algorytmem jako domyślna metoda szkolenia głębokich sieci neuronowych dlatego poniżej zamieszczono dokładny opis procedury:
+W momencie pisania tej pracy algorytm Adam jest najczęściej rekomendowanym jako domyślna metoda szkolenia głębokich sieci neuronowych dlatego poniżej zamieszczono jego dokładny opis:
 \begin{enumerate}
 	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s$ = 0 i $r$ = 0, warość kroku czasowego $t$ = 0 i stałą $\sigma$ używaną do stabilizacji numerycznej.
 	\item Próbkuj minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
@@ -182,10 +184,10 @@ W praktyce ten ostatni jest w momencie pisania tej pracy najczęściej rekomendo
 	\item skoryguj obciążenie momentu pierwszego rzędu $s$ = $\frac{s}{1-\beta_1^t}$
 	\item skoryguj obciążenie momentu drugiego rzędu $r$ = $\frac{r}{1-\beta_2^t}$
 	\item Zastosuj aktualizację wartości funkcji celu równą -$\epsilon$$\frac{s}{\sqrt{r}+\sigma}$.
-	\item Jeżeli kryterium stopu nie zostało spełnione, wówczas wróć do kroku 2. 
+	\item Jeżeli kryterium stopu nie zostało spełnione wróć do kroku 2. 
 \end{enumerate}
 
-Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ lub/i $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji, ocenianym również w tej pracy korzysta się z następujących parametrów:
+Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ lub/i $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji binarnej, występującym również w tej pracy, można wyszczególnić następujące parametry oceny:
 \begin{itemize}
 	\item \textit{Fałszywie pozytywna klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
 	\item \textit{Fałszywie negatywna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklsyfikowanych jako fałszywie negatywne, a należących do klasy obserwacji pozytywnych. 
@@ -197,20 +199,20 @@ Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i wsp�
 	\item \textit{Precyzja klasyfikacji} (ang. \textit{Precision}) -- $PPV = \frac{TP}{TP + FP}$.
 \end{itemize}
 
-W problemach empirycznych dąży się do maksymalizowania bądź minimalizowania powyższych współczynników. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. Z tymi zadanimi związane są problemy nadmiernego dopasowania i redukcji wymiarowości, które zostały opisane w kolejnych podsekcjach.
+W problemach empirycznych dąży się do maksymalizowania bądź minimalizowania powyższych współczynników. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. W dalszej części zostaną omówione problemy związane z uczeniem się poprawnej klasyfikacji danych potrzebne do zrozumienia badań wykonanych w pracy.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
 
- Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż nowe dane nie są poprawnie klasyfikowane.
+Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż wnioskowania na nowych danych charakteryzuję się niską dokładnością.
 
-Z uwagi na ten fakt ogólnym dążeniem w procesie uczenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wekto-
+Z uwagi na ten fakt ogólnym dążeniem w procesie uczenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikują ogół zadanych wekto-
 rów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$.
 
 W celu uzyskania generalizacji należy wybrać taki model klasyfikatora, który wystarczy do zachowania
-poprawnej klasyfikacji w mocy. Empirycznie ustalane są zatem maksymalnie ogólne, dostateczne warunki poprawnej klasyfikacji. Dzięki generalizacji wzrasta prawdopodobieństwo, że przykład z poza zbioru $U$ będzie poprawnie klasyfikowany przez algorytm sieci.
+poprawnej klasyfikacji. W tym celu empirycznie ustalane są maksymalnie ogólne, dostateczne warunki poprawnej klasyfikacji. Dzięki generalizacji wzrasta prawdopodobieństwo, że przykład z poza zbioru $U$ będzie poprawnie klasyfikowany przez algorytm sieci.
 
-W celu osiągnięcia kompromisu pomiędzy maksymalnie dobrą klasyfikacją zbioru $U$ i wysoką generalizacją sieci neuronowej można zastosować metodę oceny krzyżowej (ang. cross-validation). Metoda ta polega na podziale zbioru uczącego na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
+W celu osiągnięcia kompromisu pomiędzy maksymalnie dobrą klasyfikacją zbioru $U$ i wysoką generalizacją sieci neuronowej można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru uczącego na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.55\textwidth]{figures/cross-validation.png}
@@ -220,16 +222,45 @@ W celu osiągnięcia kompromisu pomiędzy maksymalnie dobrą klasyfikacją zbior
 
 Stosując metodę oceny krzyżowej dla różnych modeli sieci można stwierdzić, który z nich spełnia najlepiej kompromis między dobrą klasyfikacją zbioru $U$ i wysoką generalizacją.
 
-Kombinacja predykcji wielu różnych modeli jest bardzo wydajną metodą do polepszenia generalizacji i zmniejszenia błędu klasyfikacji na zbiorach testowych oraz walidacyjnych (zob. [AlexNet 1, 3]). Jednak współczesne sieci neuronowe, których przykłady zostały opisane w dalszych sekcjach mogą zawierać miliony parametrów, których optymalizacja jest wymagająca obliczeniowo. Z uwagi na ten fakt trening $s$ segmentów jest mało wydajny i stosuje się go w ograniczonym zakresie np. obierając $s$ = 5 lub $s$ = 10.
+Kombinacja predykcji wielu różnych modeli jest bardzo wydajną metodą do polepszenia generalizacji i zmniejszenia błędu klasyfikacji na zbiorach testowych oraz walidacyjnych (zob. [AlexNet 1, 3]). Jednak współczesne sieci neuronowe, których przykłady zostały opisane w dalszych sekcjach mogą zawierać miliony parametrów i ich optymalizacja jest wymagająca obliczeniowo. Z uwagi na ten fakt w praktyce ogranicza się liczbę $s$ segmentów najczęściej obierając $s$ $\in$ (5; 10).
 
-W 2012, w [AlexNet-10] zaproponowano technikę zwaną \textit{dropout}, której główna idea bazuje na zerowaniu wyjścia neuronów sieci z prawdopodobieństwem 0,5 przy każdej iteracji treningu sieci. Neurony, które są w ten sposób tymczasowo dezaktywowane nie mają wpływu w danej iteracji na predykcję sieci i nie są uwzględniane przy wstecznej propagacji gradientu. Podejście to można porównać do treningu w każdej iteracji różnych modeli sieci. Dla przykładu w [AlexNet] wykazano, że metoda dropout wymaga jedynie 2 razy więcej iteracji do przybliżenia zbioru $U$, przy tym uzyskuje znacznie lepszą generalizację. 
+Innym podejściem zaproponowanym w 2012 w [AlexNet-10] jest technika \textit{dropout}, której główna idea bazuje na zerowaniu wyjścia neuronów sieci z prawdopodobieństwem 0,5 przy każdej iteracji treningu sieci. Neurony, które są w ten sposób tymczasowo dezaktywowane nie mają wpływu w danej iteracji na predykcję sieci i nie są uwzględniane przy wstecznej propagacji gradientu. Podejście to można porównać do treningu w każdej iteracji różnych modeli sieci. Dla przykładu w [AlexNet] wykazano, że metoda dropout wymaga jedynie 2 razy więcej iteracji do przybliżenia zbioru $U$, przy tym uzyskuje znacznie lepszą generalizację. 
 
 Kluczowym składnikiem potrzebnym do treningu sieci i maksymalizacji generalizacji jest odpowiedni rozmiar zbioru danych. W praktyce jest to problem szeroko dyskutowany, gdyż zwłaszcza w danych medycznych istnieje szereg ograniczeń związanych z dostępem i akwizycją odpowiedniego materiału badawczego (np. ograniczenia: prawne, związane z prywatnością, czy z etyką). W przypadku, gdy zgromadzenie odpowiedniego zbioru danych jest niemożliwe pewnym rozwiązaniem problemu jest zastosowanie metod jego sztuczego powiększania (ang. \textit{data augmentation}).
 
-W przypadku obrazów stosuje się metody afinicznych przekształceń. Są to najczęściej rotacje, odbicia lub skalowanie. W określonych przypadkach używane są również nielioowe przekształcenia. Np. w [Ronneberger et al., arXiv:1505.04597v1, 2015] wykorzystano m.in. deformacje do powiększenia zbioru 30 obrazów mikroskopowych przedstawiających macierz komórkową i uzyskano znacząco lepsze wyniki niż istniejące w 2015 algorytmy typu state-of-the-art.
+W przypadku obrazów stosuje się metody \textit{afinicznych przekształceń} zgodne z definicją algebraiczną:
+\begin{equation}
+	\mathbf x \mapsto \mathbf{Ax} + \mathbf b,
+\end{equation}
+gdzie $A$ jest macierzą przekształcenia liniowego, a b wektorem przesunięcia. Jako przykłady takich przekształceń można wymienić:
+\begin{itemize}
+	\item \textit{rotację} -- obrót obrazu o kąt $\theta$, gdzie:
+	\begin{equation}
+	A = \begin{bmatrix} 
+	\cos \theta & \sin \theta\\
+	-\sin \theta & \cos \theta
+	\end{bmatrix}
+	\end{equation}	
+	\item \textit{odbicie lustrzane} -- odwrócenie kolejności pikseli w każdym wierszu, gdzie:
+	\begin{equation}
+		A = \begin{bmatrix} 
+		-1 & 0\\
+		0 & 1
+	\end{bmatrix}
+	\end{equation}
+	\item \textit{skalowanie} -- zmiana rozmiaru obrazu o $S$, gdzie:
+	\begin{equation}
+			A = \begin{bmatrix} 
+		S & 0\\
+		0 & 1
+	\end{bmatrix}
+	\end{equation}
+	\item \textit{translację} -- przesunięcie punktów obrazu o wektor $b$.
+\end{itemize}
 
-W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powiększony zbiór zawierał dane przypominające w rzeczywistości występujące przypadki np. nieduże obroty występujące u pacjentów skanowanych rezonansem magnetycznym lub niewielkie skalowania rozmiaru organów. Szeroką dyskusję prowadzi się również na temat wykorzystania sztucznie generowanych zbiorów danych o czym więcej można przeczytać w pracach [Sztuczna generacja danych medycznych]. 
+W określonych przypadkach używane są również nieafiniczne przekształcenia. Np. w [Ronneberger et al., arXiv:1505.04597v1, 2015] wykorzystano m.in. deformacje do powiększenia zbioru zaledwie 30 obrazów mikroskopowych przedstawiających macierz komórkową i uzyskano znacząco lepsze wyniki niż istniejące w 2015 algorytmy typu state-of-the-art.
 
+W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powiększony zbiór zawierał dane przypominające w rzeczywistości występujące przypadki np. nieduże obroty występujące u pacjentów skanowanych rezonansem magnetycznym lub niewielkie skalowania rozmiaru kości widocznych w TK. Szeroką dyskusję prowadzi się również na temat wykorzystania sztucznie generowanych zbiorów danych o czym więcej można przeczytać w pracach [Sztuczna generacja danych medycznych]. 
 
 \subsection{Problem redukcji wymiarowości}
 
@@ -290,6 +321,12 @@ Faza wnioskowania jest znacznie mniej wymagająca obliczeniowo lecz w praktyce c
 
 Dodatkowo, mnogość rozwiązań takich jak Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet, dedykowanych do wspierania obliczeń z udziałem głebokich sieci neuronowych, przyspiesza znacząco rozwój dziedziny i prace nad współczesnymi topologiami (zob. [porównania]). Wybrane przykłady takich architektur zostały omówione w kolejnych podsekcjach. 
 
+W porównaniu do poprzednich architektur, sieć konwolucyjną mozna opisać jako topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
+
+Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
+
+/*Normalizacja*/
+
 \subsection{AlexNet}
 \label{AlexNet}
 Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architektury Alexa Krizhevsky, zawiera blisko 60 milionów parametrów i 650 tysięcy neuronów. Architekturę zaprezentowano na Rys. \ref{AlexNetTopology}
@@ -331,7 +368,7 @@ W kontekście zwiększenia efektywności treningu zastosowano powiększenie rozm
 \end{figure}
 
 Topologia z podziałem na 2 karty zwiększyła dwukrotnie sumaryczną pamięć i pozwoliła na koalokację parametrów sieci.
-/*Normalizacja*/
+
 Praca Alexa Krizhevsky, Ilya Sutskever i Geoffrey'a Hinton zapoczątkowała wzrost zainteresowania technikami głębokiego uczenia się, co doprowadziło do publikacji kolejnych podobnych architektur. Do najbardziej znanych należą ZFNet z 2013 roku [ZFNet], gdzie m.in. zastosowano zmniejszenie wymiaru jądra stosowanego w filtrach pierwszej warstwy konwolucyjnej do 7$\times$7 oraz VGGNet z 2014 roku, gdzie zastosowano większą liczbę warstw konwolucyjnych z mniejszym wymiarem jądra splotu. Innowacyjnym pomysłym, który został zaprezentowany również w 2014 było pojawienie się nowych modułów w sieci GoogleNet, która dokładniej została opisana w kolejnej podsekcji.
 
 \subsection{GoogLeNet}

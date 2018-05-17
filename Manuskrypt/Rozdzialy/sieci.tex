@@ -125,6 +125,8 @@ Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu e
 
 Wiekszość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat}, \textit{funkcja błędów} (za [DL-IANGoodfellow]). 
 
+/*wprowadzenie do algebry liniowej - skalar, wektor, macierz, tensor*/
+
 Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$). Z kolei macież pochodnych cząstkowych funkcji nosi nazwę \textit{macierzy Jacobiego}, a macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}. Macierze te są w praktyce bardzo często wykorzystywane w implementacjach poszczególnych algorytmów szkolenia się sieci.
 
 Szereg metod optymalizacyjnych niegradientowych zostało opracowanych (zob. []). Jednak z uwagi na szybkie znajdowanie lokalnych minimów, to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w szkoleniu głębokich sieci neuronowych. Lokalne minimum przeważnie nie jest najlepszym możliwym rozwiązaniem, ale wiele badań wykazało następujące fakty (por. [WhyGradientMethodsoinDL]):
@@ -187,12 +189,15 @@ W momencie pisania tej pracy algorytm Adam jest najczęściej rekomendowanym jak
 	\item Jeżeli kryterium stopu nie zostało spełnione wróć do kroku 2. 
 \end{enumerate}
 
-Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ lub/i $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji binarnej, występującym również w tej pracy, można wyszczególnić następujące parametry oceny:
+Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ lub/i $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji binarnej, występującym również w tej pracy, w kontekście oceny efektywności algorytmów można wyszczególnić następujące parametry:
 \begin{itemize}
 	\item \textit{Fałszywie pozytywna klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
 	\item \textit{Fałszywie negatywna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklsyfikowanych jako fałszywie negatywne, a należących do klasy obserwacji pozytywnych. 
 	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
-	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne. 
+	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne,
+\end{itemize}
+oraz miary:
+\begin{itemize}
 	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy}) -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
 	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity}) -- $TPR = \frac{TP}{TP + FN}$.
 	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity}) -- $TNR = \frac{TN}{TN + FP}$.
@@ -293,25 +298,33 @@ Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwoś
 
 W drugim przypadku, gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą state-of-the-art jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. PCA) opracowany przez Karla Pearsona w 1901 r (zob. [Pearson1901]).  
 
-Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} (zob. [https://www.mimuw.edu.pl/~szymtor/wartwl.pdf]) macierzy kowariancji oryginalnych zmiennych. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną której nie redukowała poprzednia itp.
+Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to wartości skalarne opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. gdzie kąt w przestrzeni euklidesowskiej pomiędzy wektorami równy jest 90$\deg$. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną, której nie redukowała poprzednia itd. Składowych głównych jest zawsze tyle ile wymiarów danych. Przykład dwuwymiarowy został przedstawiony na Rys. \ref{PCA-2dim}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/PCA.png}
+	\caption{Dwuwymiarowa przestrzeń cech wraz z zaznaczonymi poziomami warianci i składowymi głównymi.}
+	\label{PCA-2dim}
+\end{figure}
+Na rysunku można zaobserwować, że nowa przestrzeń charakteryzuje się znacznie większym zróznicowanim poziomu wariancji niż przestrzeń oryginalna. Wybierając zatem tylko pierwszą składową uzyskana zostanie reprezentacja \textit{skomprymowana stratnie} (tzn. taka która nie daje gwarancji odtworzenia oryginalnych wartości), ale za to zachowująca znaczną część wariancji.
 
-Procedure PCA można zapisać następująco:
+Szczegółową procedurę PCA można zapisać następująco:
 \begin{enumerate}
 \item oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$ jest symetryczna i pozwala ocenić: (1) wariancje zmiennych (elementy na głównej przekątnej); (2) zależności pomiędzy zmiennymi (elementy poza główną przekątną). 
-\item dokonaj rozkładu: $S_x$ = $KLK^T$
-\item utwórz nowe zmienne wykonując operację: $Y$ = $XK$
+\item dokonaj diagonalizacji: $S_x$ = $KLK^T$, gdzie $L$ to macierz diagonalna, a $K$ to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
+\item utwórz macierz nowych zmiennych wykonując operację: $Y$ = $XK$
 \end{enumerate}
-/*przykład numeryczny https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm */
 
 Oprócz PCA, w kontekście redukcji wymiarowości można również wyróznić nastepujące algorytmy: 
 \begin{enumerate}
+	\item \textit{Multidimensional scaling}, MDS -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości [].
 	\item \textit{t-distributed stochastic neighbor embedding}, t-SNE -- stosowany do wizualizacji struktur cech w różnych skalach [].
 	\item \textit{Isomap} -- algorytm nieliniowej redukcji wymiarowości pozwalający na gwarantowane znalezienie globalnego minimum []. 
 	\item \textit{Independent Component Analysis}, ICA -- stosowany do znalezienia reprezentacji danych składających się z niezależnych elementów [].
-	\item \textit{Latent Semantic Analysis}, LSA -- stosowany głównie w problemach dotyczących przetwarzania języka naturalnego, zwłaszcza do znalezienia kontekstu użycia danego słowa poprzez analizę statystyczną dużych bloków tekstów [].
-	\item \textit{Sammon mapping} -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości []. 
+	\item \textit{Latent Semantic Analysis}, LSA -- stosowany głównie w problemach dotyczących przetwarzania języka naturalnego, zwłaszcza do znalezienia kontekstu użycia danego słowa poprzez analizę statystyczną dużych bloków tekstów []. 
 	\item \textit{Self Organizing Maps}, SOM --  bazuje na zachowaniu własności topologicznych przestrzeni cech oryginalnych w zredukowanej wymiarowości [].
 \end{enumerate}
+
+Zarówno przekleństwo wymioarowości, jak i wcześniej opisany problem nadmiernego dopasowania są zjawiskami bardzo często występującymi w praktycznych zastosowaniach algorytmów głębokiego uczenia się. Szereg kolejnych wyzwań i rozwiązań został opisany w kolejnej sekcji przy okazji przedstawienia współczesnych topologii.
 
 \section{Przykłady współczesnych topologii}
 
@@ -329,9 +342,9 @@ Dodatkowo, mnogość rozwiązań takich jak Caffe, Caffe2, TensorFlow, Theano, P
 
 W porównaniu do poprzednich architektur, sieć konwolucyjną mozna opisać jako topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
 
-Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
+/*Normalizacja lokalna i inne warstwy dodatkowe*/
 
-/*Normalizacja*/
+Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
 
 \subsection{AlexNet}
 \label{AlexNet}

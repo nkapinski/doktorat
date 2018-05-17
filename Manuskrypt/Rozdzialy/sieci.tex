@@ -232,7 +232,7 @@ W przypadku obrazów stosuje się metody \textit{afinicznych przekształceń} zg
 \begin{equation}
 	\mathbf x \mapsto \mathbf{Ax} + \mathbf b,
 \end{equation}
-gdzie $A$ jest macierzą przekształcenia liniowego, a b wektorem przesunięcia. Jako przykłady takich przekształceń można wymienić:
+gdzie $A$ jest macierzą przekształcenia liniowego, a b wektorem przesunięcia. Jako przykłady takich przekształceń dla dwuwymiarowych obrazów można wymienić:
 \begin{itemize}
 	\item \textit{rotację} -- obrót obrazu o kąt $\theta$, gdzie:
 	\begin{equation}
@@ -251,60 +251,66 @@ gdzie $A$ jest macierzą przekształcenia liniowego, a b wektorem przesunięcia.
 	\item \textit{skalowanie} -- zmiana rozmiaru obrazu o $S$, gdzie:
 	\begin{equation}
 			A = \begin{bmatrix} 
-		S & 0\\
-		0 & 1
+		S_x & 0\\
+		0 & S_y
 	\end{bmatrix}
 	\end{equation}
 	\item \textit{translację} -- przesunięcie punktów obrazu o wektor $b$.
 \end{itemize}
 
-W określonych przypadkach używane są również nieafiniczne przekształcenia. Np. w [Ronneberger et al., arXiv:1505.04597v1, 2015] wykorzystano m.in. deformacje do powiększenia zbioru zaledwie 30 obrazów mikroskopowych przedstawiających macierz komórkową i uzyskano znacząco lepsze wyniki niż istniejące w 2015 algorytmy typu state-of-the-art.
+Analogiczne równania istnieją dla obrazów trójwymiarowych (zob. []). W określonych przypadkach używane są również nieafiniczne przekształcenia. Np. w [Ronneberger et al., arXiv:1505.04597v1, 2015] wykorzystano m.in. deformacje do powiększenia zbioru zaledwie 30 obrazów mikroskopowych przedstawiających macierz komórkową i uzyskano znacząco lepsze wyniki niż istniejące w 2015 algorytmy typu state-of-the-art.
 
 W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powiększony zbiór zawierał dane przypominające w rzeczywistości występujące przypadki np. nieduże obroty występujące u pacjentów skanowanych rezonansem magnetycznym lub niewielkie skalowania rozmiaru kości widocznych w TK. Szeroką dyskusję prowadzi się również na temat wykorzystania sztucznie generowanych zbiorów danych o czym więcej można przeczytać w pracach [Sztuczna generacja danych medycznych]. 
 
 \subsection{Problem redukcji wymiarowości}
 
-Rozmiar wektora cech wejściowych we współczesnych problemach rozwiązywanych przez algorytmy sztucznej inteligencji często osiąga liczby liczone w tysiącach (zob. [przykłądy dużych problemów FB, Google]). Również w powszechnie używanych głębokich sieciach neuronowych ekstraktor cech tworzy wektor o rozmiarach tego rzędu.
+Rozmiar wektora cech wejściowych $w$ we współczesnych problemach rozwiązywanych przez algorytmy sztucznej inteligencji osiąga liczby liczone w tysiącach (zob. [przykłądy dużych problemów FB, Google]). Duży rozmiar wektora cech wejściowych prowadzi do problemu nazwanego \textit{przekleństwem wymiarowości} (ang. \textit{curse of dimensionality}). Określenie zostało poraz pierwszy sformułowane przez Richarda Bellmana w latach 50-tych XX wieku. Naukowiec ten zajmował się teorią sterowania (zob. [teoria sterowania]) i podczas swojej pracy obserwował algorytmy doskonale działające w 3 wymiarach, a prezentujące znacząco gorsze wyniki w hiperprzestrzeni. 
 
-Duży rozmiar wektora cech wejściowych prowadzi do problemu nazwanego \textit{przekleństwem wymiarowości} (ang. \textit{curse of dimensionality}). Określenie te zostało poraz pierwszy sformułowane przez Richarda Bellmana w latach 50-tych XX wieku. Naukowca zajmującego się teorią sterowania (zob. [teoria sterowania]), który podczas swojej pracy obserwował algorytmy doskonale działające w 3 wymiarach, a prezentujące znacząco gorsze wyniki w hiperprzestrzeni. 
+Problem przekleństwa wymiarowości ma dwie główne przyczyny: (1) w miarę wzrostu rozmiaru $w$, liczba obserwacji w zbiorze uczącym potrzebnych do wiarygodnego oszacowania funkcji wyjściowej rośnie wykładniczo; (2) nie wszystkie cechy są jednakowo znaczące w kontekście rozróżnienia danych.  
 
-Problemy z zastosowaniem algorytmów szucznej inteligencji w tym głębokich sieci neuronowych w dużej liczbie wymiarów mają dwie główne przyczyny: (1) w miarę wzrostu liczby wymiarów cech liczba obserwacji w zbiorze trenującym potrzebnych do wiarygodnego oszacowania funkcji wyjściowej rośnie wykładniczo; (2) nie wszystkie cechy są jednakowo znaczące w kontekście rozróżnienia danych.  
+Problem (2) jest szczególnie istotny w dość prostych algorytmach takich jak algorytm $K$ najbliższych sąsiadów, gdzie do poprawnego działania należy policzyć dystans pomiędzy sąsiednimi obserwacjami. Uwzględniając dużą liczbę nieistotnych cech jako argumenty funkcji dystansu uzyskuje się wyniki utrudniające lub nawet uniemożliwiające poprawną klasyfikację zbioru. 
 
-Problem (2) jest szczególnie istotny w dość prostych algorytmach takich jak algorytm K najbliższych sąsiadów, gdzie do poprawnego działania należy policzyć dystans pomiędzy sąsiednimi obserwacjami. Uwzględniając dużą liczbę nieistotnych cech jako argumenty funkcji dystansu uzyskuje się wyniki uniemożliwiające poprawną klasyfikację zbioru. 
-
-W przypadku głębokich sieci neuronowych zastosowanie wag zmniejsza znaczenie problemu (2), gdyż wpływ poszczególnych cech może być regulowany poprzez wartość $w$. W przypadku problemu wynikającego z (1) można wyróżnić dwa podejścia stosowane do jego niwelacji:
+W przypadku głębokich sieci neuronowych problem (2) ma mniejsze znaczenie, gdyż wpływ poszczególnych cech może być regulowany poprzez wartości wag. Natomiast w kontekście problemów wynikających z (1) można wyróżnić dwa stosowane podejścia:
 \begin{itemize}
 \item wybór podzbioru istotnych cech o liczności $n'$ $<<$ $n$,
 \item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
-
 \end{itemize}
 
-/*rozwinąć i wprowadzić definicję korelacji oraz entropii - zapytać Kubę jakby ten akapit widział*/
+W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. Do tych zagadnień wykorzystywane są metody takie jak:
+\begin{itemize}
+	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacji Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X$ i $Y$ zapisywany jest następującym wzorem:
+	\begin{equation}
+	r_{XY} = \frac{\sum_{i=1}^n (X_i - \overline{X})(Y_i - \overline{Y})}{\sqrt{\sum_{i=1}^n (X_i - \overline{X})^2} \sqrt{\sum_{i=1}^n (Y_i - \overline{Y})^2}},
+	\end{equation}
+	gdzie $X_i$, $Y_i$ to wartości kolejnych obserwacji, a $\overline{X}$ i $\overline{X}$ to ich średnie. Innymi słowy tak zapisany współczynnik $r_{XY}$ jest ilorazem \textit{kowariancji} i iloczynu \textit{odchyleń standardowych} zmiennych $X$ i $Y$.
+	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$ dla dwóch rozkładów prawdopodobieństwa $p$ i $q$ zapisany jest wzorem: 
+	\begin{equation}
+	d_{KL}(p,q) = \sum_{i} p(i) \log_2 \frac{p(i)}{q(i)}
+	\end{equation}
+	\item \textit{teoria zbiorów przybliżonych} -- wykorzystująca informacje o elementach zbioru i klasyczną teorię zbiorów do porównywania rozkładów (zob. []).
+\end{itemize}
+Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwość skutecznej redukcji wymiarowości z zachowaniem efektywności algorytmu.
 
-Wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. W tym celu stosuje się np.: miary siły związku [], testy wykorzystujące entropię względną [], badania korelacji wzajemnych [], teorię zbiorów przybliżonych [] itp.
+W drugim przypadku, gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą state-of-the-art jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. PCA) opracowany przez Karla Pearsona w 1901 r (zob. [Pearson1901]).  
 
-W kontekście przekształcenia zbioru cech najczęściej wykorzystywaną metodą jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. PCA) opracowany przez Karla Pearsona w 1901 r (zob. Pearson1901).  
-Istotą PCA jest ortogonalne przekształcenie początkowych skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Każdy z nowych wektorów jest kombinacją liniową pewnych
-składowych głównych (odnoszących się do oryginalnych cech). Nowe nieskorelowane zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są wartościami własnymi macierzy kowariancji oryginalnych zmiennych. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną której nie redukowała poprzednia itp.
+Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} (zob. [https://www.mimuw.edu.pl/~szymtor/wartwl.pdf]) macierzy kowariancji oryginalnych zmiennych. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną której nie redukowała poprzednia itp.
 
 Procedure PCA można zapisać następująco:
 \begin{enumerate}
-\item oblicz macierz kowariancji: Sx = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. macierz Sx jest symetryczna i pozwala ocenić: (1) wariancje zmiennych (elementy na głównej przekątnej); (2) zależności pomiędzy zmiennymi (elementy poza główną przekątną) 
-\item dokonaj rozkładu: Sx = $KLK^T$
-\item utwórz nowe zmienne wykonując operację: Y = XK
+\item oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$ jest symetryczna i pozwala ocenić: (1) wariancje zmiennych (elementy na głównej przekątnej); (2) zależności pomiędzy zmiennymi (elementy poza główną przekątną). 
+\item dokonaj rozkładu: $S_x$ = $KLK^T$
+\item utwórz nowe zmienne wykonując operację: $Y$ = $XK$
 \end{enumerate}
 /*przykład numeryczny https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm */
 
-Oprócz PCA można również wyróznić nastepujące algorytmy: 
+Oprócz PCA, w kontekście redukcji wymiarowości można również wyróznić nastepujące algorytmy: 
 \begin{enumerate}
-	\item t-SNE
-	\item ISOMAP: Isomap Homepage 
-	\item ICA: What is Independent Component Analysis ?
-	\item LSA: Popular in NLP domain :: LSA @ CU Boulder
-	\item Sammon mapping: Implementation in python tompollard/sammon
-	\item Self Organizing Maps: Matlab implementation SOM Toolbox	
-	
-	https://www.quora.com/What-are-different-unsupervised-feature-selection-methods-other-than-principle-component-analysis-PCA
+	\item \textit{t-distributed stochastic neighbor embedding}, t-SNE -- stosowany do wizualizacji struktur cech w różnych skalach [].
+	\item \textit{Isomap} -- algorytm nieliniowej redukcji wymiarowości pozwalający na gwarantowane znalezienie globalnego minimum []. 
+	\item \textit{Independent Component Analysis}, ICA -- stosowany do znalezienia reprezentacji danych składających się z niezależnych elementów [].
+	\item \textit{Latent Semantic Analysis}, LSA -- stosowany głównie w problemach dotyczących przetwarzania języka naturalnego, zwłaszcza do znalezienia kontekstu użycia danego słowa poprzez analizę statystyczną dużych bloków tekstów [].
+	\item \textit{Sammon mapping} -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości []. 
+	\item \textit{Self Organizing Maps}, SOM --  bazuje na zachowaniu własności topologicznych przestrzeni cech oryginalnych w zredukowanej wymiarowości [].
 \end{enumerate}
 
 \section{Przykłady współczesnych topologii}

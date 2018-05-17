@@ -16,13 +16,13 @@
 \contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{17}
 \contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{19}
 \contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{22}
-\contentsline {subsection}{\numberline {4.3.1}AlexNet}{23}
+\contentsline {subsection}{\numberline {4.3.1}AlexNet}{24}
 \contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{26}
-\contentsline {subsection}{\numberline {4.3.3}ResNet}{28}
-\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{31}
-\contentsline {subsubsection}{U\IeC {\'s}rednianie}{31}
+\contentsline {subsection}{\numberline {4.3.3}ResNet}{29}
+\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{32}
+\contentsline {subsubsection}{U\IeC {\'s}rednianie}{32}
 \contentsline {subsubsection}{G\IeC {\l }osowanie}{32}
-\contentsline {subsubsection}{Klasyfikacja Bayesa}{32}
+\contentsline {subsubsection}{Klasyfikacja Bayesa}{33}
 \contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{33}
 \contentsline {section}{\numberline {4.4}Zastosowania w medycynie}{33}
 \contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{38}

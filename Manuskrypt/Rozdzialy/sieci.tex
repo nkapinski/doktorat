@@ -328,11 +328,22 @@ Zarówno przekleństwo wymioarowości, jak i wcześniej opisany problem nadmiern
 
 \section{Przykłady współczesnych topologii}
 
-W ostatnich latach wprowadzono wiele rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania, które przyczyniły się do wzrostu liczby zastosowań głębokich sieci neuronowych wtym sieci konwolucyjnych. 
+Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie jak u protoplasty tj architektury LeNet, składają się z dwóch głównych części: ekstraktora cech i klasyfikatora. W porównaniu jednak do pierwszych topologii, różnorodność warstw i ich funkcji uległa zwiększeniu. Do najczęściej stosowanych komponentów współczesnych sieci konwolucyjnych można zaliczyć:
+\begin{itemize}
+	\item \textit{warstwy konwolucyjne} -- w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty);
+	\item \textit{warstwy max-pool} -- wylicza największą wartość z obszaru $I$($x$, $y$)\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości. W uzasadnionych przypadkach stosuje się również obliczanie innych wartości takich jak średnia czy normy L2}. W praktyce obszar jest zazwyczaj wymiarów 2$\times$2, a \textit{krok} (tj. odstęp pomiędzy kolejnymi próbkowaniami funkcji $I$) jest ustawiany na 2.
+	\item \textit{warstwy aktywacji} --
+	\item \textit{warstwy fully connected}, FC --
+	\item \textit{warstwy normalizacji lokalnej} (ang. \textit{Local Response Normalization}) -- \footnote{warstwa coraz rzadziej stosowana w praktyce z uwagi na znikomy wpływ na rezultaty.}
+\end{itemize}
+Najczęściej bloki te składają się z , , z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
 
-W głównej mierze prace te skupiły się na rozwiązaniach dedykowanych do optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest d przetwarzania kolejnych obserwacji.
 
-W fazie szkolenia największy problem obliczeniowy wynika z konieczności ciągłej aktualizacji parametrów. Natomiast w fazie wnioskowania wynika z propagacji sygnału w sieci. Ponieważ liczby parametrów we współpcześnie wykorzystywanych topologiach wahają się od milionów jak w [AlexNet] do nawet bilionów [GoogleBrain 23-TTCF],problemy te stanowią poważne wąskie gardło w pracach badawczych i rozwojowych.
+W ostatnich latach wprowadzono wiele rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania, które przyczyniły się do wzrostu liczby zastosowań głębokich sieci neuronowych w tym sieci konwolucyjnych. 
+
+W głównej mierze prace te skupiły się na rozwiązaniach dedykowanych do optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest do przetwarzania kolejnych obserwacji.
+
+W fazie szkolenia największy problem obliczeniowy wynika z konieczności ciągłej aktualizacji parametrów. Natomiast w fazie wnioskowania wynika z propagacji sygnału w sieci. Ponieważ liczby parametrów we współpcześnie wykorzystywanych topologiach wahają się od milionów jak w [AlexNet] do nawet bilionów [GoogleBrain 23-TTCF], problemy te stanowią poważne wąskie gardło w pracach badawczych i rozwojowych.
 
 Najczęściej wykorzystywanymi operacjami w szkoleniu sieci jest mnożenie i dodawanie tensorów, dlatego wiodące firmy sprzętowe takie jak Intel, czy NVIDIA, zdecydowały się przedstawić dedykowane tym celom akceleratory sprzętowe np. NVIDIA Tensor Processing Unit (w skr. TPU) [] czy Intel Lakecrest []. W chwili pisania tej pracy umożliwiają one nawet do 120 tera operacji tensorowych na sekundę (w skr. TTOPs).
 
@@ -340,9 +351,7 @@ Faza wnioskowania jest znacznie mniej wymagająca obliczeniowo lecz w praktyce c
 
 Dodatkowo, mnogość rozwiązań takich jak Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet, dedykowanych do wspierania obliczeń z udziałem głebokich sieci neuronowych, przyspiesza znacząco rozwój dziedziny i prace nad współczesnymi topologiami (zob. [porównania]). Wybrane przykłady takich architektur zostały omówione w kolejnych podsekcjach. 
 
-W porównaniu do poprzednich architektur, sieć konwolucyjną mozna opisać jako topologię perceptronu wielowarstwowego poprzedzoną ciągiem bloków służących do automatycznej ekstrakcji cech obrazowych. Najczęściej bloki te składają się z \textit{warstw konwolucyjnych}, w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty), z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
 
-/*Normalizacja lokalna i inne warstwy dodatkowe*/
 
 Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
 

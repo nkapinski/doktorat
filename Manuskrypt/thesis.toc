@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {4.1}Zarys historyczny}{9}
 \contentsline {section}{\numberline {4.2}Szkolenie g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{12}
 \contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{17}
-\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{19}
+\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{20}
 \contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{23}
 \contentsline {subsection}{\numberline {4.3.1}AlexNet}{25}
 \contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{28}

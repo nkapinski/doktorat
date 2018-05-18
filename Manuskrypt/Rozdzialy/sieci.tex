@@ -21,6 +21,8 @@ Podstawową operacją wykorzystywaną w sieciach konwolucyjnych do wydobycia ist
 \end{equation}
 gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $n$ i $k$ to kolejne współrzędne maski filtru w odniesienia do jego punktu centralnego. W realizacji splotu dla wartości brzegowych, dla współrzędnych poza sygnałem przyjmuje się z reguły wartości 0. Inne metody to: odbicie obrazu poza jego granicami; powtórzenie obrazu bez odbicia; powielenie brzegowych wartości; modyfikacji maski filtru na brzegu obrazu, tak by maska nie wychodziła poza obraz.
 
+/*Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. */
+
 Operacje, takie jak splot maski z funkcją $I$ polegające na modyfikacji danego piksela biorąc pod uwagę piksel i jego otoczenie nazywane są \textit{przekształceniami kontekstowymi}. Przy ich użyciu można bardzo efektywnie wydobywać charakterystyczne cechy funkcji $I$, takie jak: 
 \begin{itemize}
 	\item \textit{krawędzie} -- ciągi punktów o gwałtownych zmianach $I$($x$,$y$);
@@ -331,29 +333,24 @@ Zarówno przekleństwo wymioarowości, jak i wcześniej opisany problem nadmiern
 Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie jak u protoplasty tj architektury LeNet, składają się z dwóch głównych części: ekstraktora cech i klasyfikatora. W porównaniu jednak do pierwszych topologii, różnorodność warstw i ich funkcji uległa zwiększeniu. Do najczęściej stosowanych komponentów współczesnych sieci konwolucyjnych można zaliczyć:
 \begin{itemize}
 	\item \textit{warstwy konwolucyjne} -- w których pogrupowane są filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, kształty, obiekty);
-	\item \textit{warstwy max-pool} -- wylicza największą wartość z obszaru $I$($x$, $y$)\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości. W uzasadnionych przypadkach stosuje się również obliczanie innych wartości takich jak średnia czy normy L2}. W praktyce obszar jest zazwyczaj wymiarów 2$\times$2, a \textit{krok} (tj. odstęp pomiędzy kolejnymi próbkowaniami funkcji $I$) jest ustawiany na 2.
-	\item \textit{warstwy aktywacji} --
-	\item \textit{warstwy fully connected}, FC --
-	\item \textit{warstwy normalizacji lokalnej} (ang. \textit{Local Response Normalization}) -- \footnote{warstwa coraz rzadziej stosowana w praktyce z uwagi na znikomy wpływ na rezultaty.}
+	\item \textit{warstwy max-pool} -- stosowana do nieliniowej redukcji wymiarowości. Z obszaru $n\times$$n$ w obrazie wyliczana jest największą wartość \footnote{W uzasadnionych przypadkach stosuje się również obliczanie średniej, normy L2 i innych współczynników} $I$($x$, $y$). W praktyce obszar jest zazwyczaj wymiarów 2$\times$2, a \textit{krok} (tj. odstęp pomiędzy kolejnymi próbkowaniami funkcji $I$) jest ustawiany na 2.
+	\item \textit{warstwy aktywacji} -- warstwa zawierająca funkcje aktywacji neuronów. We współczesnych architekturach zamiast funkcji sigmoidalnych stosuje się najczęściej funkcję ReLU:
+	\begin{equation}
+		f(x) = \max(0, x),
+	\end{equation}
+	która jest mniej wymagająca obliczeniowo niż funkcja sigmoid. Przy czym dla współczesnych topologii o dużej liczbie parametrów testy empiryczne wykazały wyniki dokładności na podobnym poziomie bez względu na rodzaj użytej aktywacji (zob. []). 
+	\item \textit{warstwy fully connected}, FC -- warstwa składająca się z neuronów, z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze.
+	\item \textit{warstwy normalizacji} -- warstwa normalizująca wyjście poprzedzającej warstwy do znormalizowanego przedziału. Wykorzystywana w celu zrównoważenia poziomu wpływu poszczególnych neuronów na wynik końcowy. Bardzo często stosuje się tzw. \textit{Local Response Normalization} zadaną wzorem:
+	\begin{equation}
+	b_{x,y}^{i} = a_{x,y}^{i}/\left ( k + \alpha \sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)}(a_{x,y}^{i})^2 \right )^\beta,
+	\end{equation}
+	gdzie $a_{x,y}^{i}$ jest aktywacją danego neuronu, a $k$, $\alpha$, $n$ i $\beta$ to stałe dobierane empirycznie na podstawie zbioru walidacyjnego (zob. [AlexNet]).
+	\footnote{warstwa coraz rzadziej stosowana w praktyce z uwagi na znikomy wpływ na rezultaty.}
 \end{itemize}
-Najczęściej bloki te składają się z , , z opisanych wcześniej warstw aktywacji oraz warstwy typu \textit{pooling} realizujące nieliniową redukcję wymiarowości (np. max-pool wybiera największą wartość z danego obszaru obrazu\footnote{operacja max-pool jest najczęściej stosowaną operacją do nieliniowej redukcji wymiarowości, o innych można przeczytać w [poolingOps]}). Warstwy wykorzystane do klasyfikatora są \textit{warstwami w pełni połączonymi} (ang. \textit{fully connected}, w skr. \textit{FC}), a więc neuron z danej warswy jest połączony z każdym neuronem z warstwy następnej. Dal przykładu LeNEt miała 2 warstwy typu FC.
 
+Wprowadzonie w ostatnich latach dedykowanych dla głębokiego uczenia się rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania umożliwiło tworzenie architektur o wysokim stopniu komplikacji. W głównej mierze rozwiązania te umożliwiły optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest do przetwarzania kolejnych obserwacji. Przede wszystkim można wyróżnić dedykowane akceleratory do operacji macierzowych takie jak \textit{NVIDIA Tensor Processing Unit} (w skr. \textit{TPU}) [] czy \textit{Intel Lakecrest} [] oraz rozwiązania takie jak [24-TTCF] minimalizują czasy przetwarzania sygnału przeez wytrenowaną sieć np. stosując optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy.
 
-W ostatnich latach wprowadzono wiele rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania, które przyczyniły się do wzrostu liczby zastosowań głębokich sieci neuronowych w tym sieci konwolucyjnych. 
-
-W głównej mierze prace te skupiły się na rozwiązaniach dedykowanych do optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest do przetwarzania kolejnych obserwacji.
-
-W fazie szkolenia największy problem obliczeniowy wynika z konieczności ciągłej aktualizacji parametrów. Natomiast w fazie wnioskowania wynika z propagacji sygnału w sieci. Ponieważ liczby parametrów we współpcześnie wykorzystywanych topologiach wahają się od milionów jak w [AlexNet] do nawet bilionów [GoogleBrain 23-TTCF], problemy te stanowią poważne wąskie gardło w pracach badawczych i rozwojowych.
-
-Najczęściej wykorzystywanymi operacjami w szkoleniu sieci jest mnożenie i dodawanie tensorów, dlatego wiodące firmy sprzętowe takie jak Intel, czy NVIDIA, zdecydowały się przedstawić dedykowane tym celom akceleratory sprzętowe np. NVIDIA Tensor Processing Unit (w skr. TPU) [] czy Intel Lakecrest []. W chwili pisania tej pracy umożliwiają one nawet do 120 tera operacji tensorowych na sekundę (w skr. TTOPs).
-
-Faza wnioskowania jest znacznie mniej wymagająca obliczeniowo lecz w praktyce często wymaga wykonywania w czasie rzeczywistym lub zbliżonym do niego. Rozwiązania takie jak [24-TTCF] minimalizują czasy przetwarzania wykorzystując np. optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy.
-
-Dodatkowo, mnogość rozwiązań takich jak Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet, dedykowanych do wspierania obliczeń z udziałem głebokich sieci neuronowych, przyspiesza znacząco rozwój dziedziny i prace nad współczesnymi topologiami (zob. [porównania]). Wybrane przykłady takich architektur zostały omówione w kolejnych podsekcjach. 
-
-
-
-Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. 
+Dodatkowo zostało również opracowanych wiele framework'ów do obliczeń z udziałem głębokich sieci neuronowych takich jak: Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet (zob. [porównania]). W kolejnych podsekcjach opisano szczegółowo wybrane architektury, które znajdują się w implementacjach powyższych framework'ów i charakteryzują się wprowadzeniem pewnych innowacyjnych rozwiązań. 
 
 \subsection{AlexNet}
 \label{AlexNet}

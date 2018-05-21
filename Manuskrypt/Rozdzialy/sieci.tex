@@ -5,25 +5,21 @@ Pierwsze matematyczne formalizmy dotyczące CNN zostały zapropozonwane już w l
 
 W sieciach konwolucyjnych procesy zachodzące w korze wzrokowej są modelowane, prowadząc do utworzenia bazy filtrów, za pomocą których istotne informacje obrazowe mogą być wyekstrahowane i następnie przetworzone. Fakt ten wykorzystywany jest w problemach dotyczących przetwarzania cyfrowych obrazów medycznych pochodzących np. z MR, TK czy USG.
 
-Cyfrowy obraz zapisywany jest w postaci macierzy punktów o współrzędnych ($x$,$y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze składowa $z$, a zamiast macierzy użyty jest tensor. Dodatkowo dla każdego punktu kodowana jest informacja o wartości funkcji obrazu $I$($x$,$y$). Na tej podstawie dzielimy obrazy na:
+Cyfrowy obraz dwuwymiarowy zapisywany jest w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$,$y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze składowa $z$, a zamiast macierzy użyty jest \textit{tensor} tj. wielowymiarowe uogólnienie. Dodatkowo dla każdego punktu ($x$,$y$), czyli tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$,$y$). Na tej podstawie dzielimy obrazy na:
 \begin{itemize}
 	\item binarne – kodowane są jedynie dwie możliwe wartości I (0 lub 1);
 	\item monochromatyczne – kodowana jest informacja o natężeniu jednej barwy (najczęściej są to odcienie szarości lub brązu tzw. sepia);
 	\item kolorowe – kodowane są wartości natężenia składowych.
 \end{itemize}
-Do zakodowania informacji o wartości funkcji $I$ w obrazie binarnym potrzebny jest jeden bit na punkt. Odcienie obrazu monochromatycznego i pojedyncze składowe punktu obrazu kolorowego kodowane są na 8–16 bitach, w zależności od zakresu wartości występujących w danych. 
+Do zakodowania informacji o wartości funkcji $I$ w obrazie binarnym potrzebny jest jeden bit na punkt. Odcienie obrazu monochromatycznego i pojedyncze składowe punktu obrazu kolorowego kodowane są na 8–16 bitach, w zależności od zakresu wartości występujących w danych lub prezcyzji wymaganej do obliczeń. 
 
-Obrazy medyczne przetwarzane w tej pracy należą do grupy obrazów monochromatycznych. Należy jednak wiedzieć, ze w praktyce sygnałem wejściowym dla sieci konwolucyjnych są często obrazy kolowe, reprezentowane odpowiednim  \textit{modelem przestrzennym barw} stanowiącym zestawienie składowych np. RGB, YUV, HSV, HLS (zob. [barwy])
-
-Podstawową operacją wykorzystywaną w sieciach konwolucyjnych do wydobycia istotnych cech obrazowych jest \textit{splot} maski $K$ filtru z kolejnymi fragmentami funkcji $I$. $K$ jest najczęściej macierzą kwadratową o wymiarze $N$ i (z uwagi na rosnącą wraz z $N$ złożonością obliczeniową) ogranicza się do wymiarów $N$ = {1, 3, 5, 7, 9, 11}. Splot zdefiniowany jest następująco:
+Obrazy medyczne przetwarzane w tej pracy należą do grupy obrazów monochromatycznych. Podstawową operacją wykorzystywaną w przetwarzaniu danych z użyciem sieci konwolucyjnych jest \textit{splot} maski $K$ filtru z kolejnymi fragmentami funkcji $I$. $K$ jest najczęściej macierzą kwadratową o wymiarze $N$ i (z uwagi na rosnącą wraz z $N$ złożonością obliczeniową) ogranicza się do wymiarów $N$ = {1, 3, 5, 7, 9, 11}. Splot zdefiniowany jest następująco:
 \begin{equation}
 	I'\left(x, y\right) = \sum_{n} \sum_{k} I\left(x - n, y - k \right)K\left(n, k\right),
 \end{equation}
 gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $n$ i $k$ to kolejne współrzędne maski filtru w odniesienia do jego punktu centralnego. W realizacji splotu dla wartości brzegowych, dla współrzędnych poza sygnałem przyjmuje się z reguły wartości 0. Inne metody to: odbicie obrazu poza jego granicami; powtórzenie obrazu bez odbicia; powielenie brzegowych wartości; modyfikacji maski filtru na brzegu obrazu, tak by maska nie wychodziła poza obraz.
 
-/*Pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} [OTR-19]. Cechy są bardzo łatwe do wizualizacji dlatego sieci konwolucyjne mogą być łatwiejsze do interpretacji niż inne algorytmy sztucznej inteligencji. W ostatnich latach powstało wiele algorytmów do wizualizacji wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Grupy cech z wybranego obszaru obrazu wejściowego, połączone w reprezentacje na róznych warstwach konwolucyjnych tworzą \textit{mapy cech}. Dla przykładu w LeNet każda z warstw zawierała po odpowiednio: 6, 6, 16, 16 i 120 map cech o różnych wymiarach. */
-
-Operacje, takie jak splot maski z funkcją $I$ polegające na modyfikacji danego piksela biorąc pod uwagę piksel i jego otoczenie nazywane są \textit{przekształceniami kontekstowymi}. Przy ich użyciu można bardzo efektywnie wydobywać charakterystyczne cechy funkcji $I$, takie jak: 
+Pojedynczy splot filtru z obrazem wejściowym w przetwarzaniu z użyciem sieci konwolucyjnych nazywany jest \textit{cechą} [OTR-19]. W ostatnich latach powstało wiele algorytmów do wizualizacji cech umożliwiających wydajną analizę wyników działania sieci konwolucyjnych np. Saliency Maps [OTR - 20], GradCam [OTR - 21] albo metody bazujące na skierowanych acyklicznych grafach [OTR - 22]. Zasada działania tych algorytmów bazuje na selekcji cech na różnych poziomach działania sieci, które mają zasadniczy wpływ na wynik końcowy. Grupy cech dotyczących wybranego obszaru obrazu wejściowego nazywane są \textit{mapami cech} (ang. \textit{feature maps}). Zazwyczaj mapy cech zawierają hierarchicznie uporządkowaną strukturę zawierającą cechy od najniższego do najwyższego poziomu komplikacji (np. od charakterystycznych skupisk pikseli, przez obiekty składowe do finalnego kształu struktury). Do cech najniższego rzędu, składowych podstawowych wszystkich struktur wyższego poziomu zaliczyć można:
 \begin{itemize}
 	\item \textit{krawędzie} -- ciągi punktów o gwałtownych zmianach $I$($x$,$y$);
 	\item \textit{rogi} -- przecięcia dwóch krawędzi;
@@ -32,7 +28,7 @@ Operacje, takie jak splot maski z funkcją $I$ polegające na modyfikacji danego
 	\item \textit{tekstury} -- charakterystyczne przestrzenne ułożenie wartości funkcji $I$ w powtarzające się wzory.
 \end{itemize}
 
-Z powyższych cech można sformułować wektor cech $w$, który wykorzystywany jest do wnioskowania końcowego na temat obiektów znajdujących się w obrazach. Do tego celu służą grupy metod wśród których wyszczególnić można:
+Cechy wykorzystywane są jako dane wejściowe do wnioskowania końcowego, gdzie w zależności od problemu można wyszczególnić następujące zadania:
 \begin{itemize}
 	\item \textit{segmentację} -- podział obrazu na spójne fragmenty, najczęściej wiążące się z wyodrębnieniem \textit{obiektu} z \textit{tła} na podstawie ustalonego progu lub miary np.:
 	\begin{equation*}
@@ -47,7 +43,7 @@ Z powyższych cech można sformułować wektor cech $w$, który wykorzystywany j
 	\item \textit{śledzenie} -- detekcja lub też klasyfikacja obiektów w kolejnych krokach czasowych.
 \end{itemize} 
 
-Schemat stosowany jeszcze do niedawna (zob. Rys. \ref{DLworkflow}) w większości badań wykorzystujących uczenie się maszyn uwzględniał  wyliczenie wektora cech i wnioskowanie końcowe jako oddzielne kroki\footnote{Wyjątki typu SVM}.
+Schemat stosowany jeszcze do niedawna (zob. Rys. \ref{DLworkflow}) w większości badań wykorzystujących uczenie się maszyn uwzględniał  wyliczenie cech i wnioskowanie końcowe jako oddzielne kroki\footnote{Wyjątki typu SVM}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/DLworkflow.png}
@@ -73,7 +69,7 @@ W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie i
 	\label{Perceptron}
 \end{figure}
 
-Zastosowanie wektora wag $w$ = ($w_1$,...,$w_n$) dało możliwość uczenia się poprzez adaptacyjną zmianę wartości jego elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_p$:
+Zastosowanie dodatkowej jednowymiarowej tablicy współczynników, czyli \textit{wektora wag} $w$ = ($w_1$,...,$w_n$) dało możliwość uczenia się poprzez adaptacyjną zmianę wartości poszczególnych elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_p$:
 \begin{equation}
 y(z)=\begin{cases} 0, & n < T_a, \\ 1, & n \ge T_a, \end{cases}
 \end{equation}
@@ -83,11 +79,7 @@ gdzie $z$ to suma ważona wyjść poszczególnych neuronów:
 y=\sum_{i=1}^{n}w_i x_i
 \end{equation}
 
-W dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2$}  działanie perceptronu można opisać jako wyliczenie funkcji liniowej rozdzielającej obserwacje $x_1$ od $x_2$. W trzech wymiarach będzie to płaszczyzna, a w $n$-wymiarach, hiperpłaszczyzna.
-
-Powyżej opisane działanie jest daleko idącym uproszczeniem funkcjonowania biologicznego neuronu (opisz coś więcej o neuronie). Przez blisko dekadę nowa architektura była obiektem badań i doczekała się sukcesów na polach takich jak rozpoznawanie tekstu, czy mowy []. 
-
-Pomimo tego, liniowy charakter perceptronu wprowadzał duże ograniczenia w możliwościach jego zastosowania. W 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najszerzej dyskutowanych należał problem związany z brakiem możliwości modelowania funkcji XOR.
+W dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2$}  działanie perceptronu można opisać jako wyliczenie funkcji liniowej rozdzielającej obserwacje $x_1$ od $x_2$. W trzech wymiarach będzie to płaszczyzna, a w $n$-wymiarach, hiperpłaszczyzna. Podejście to okazało się bardzo skuteczne m.in. na polach takich jak rozpoznawanie tekstu, czy mowy []. Z uwagi jednak na swój liniowy charakter wprowadzało również dużo ograniczeń. W 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu. Do najszerzej dyskutowanych należał problem związany z brakiem możliwości modelowania funkcji XOR.
 
 Po latach intensywnych prac, część z opisanych przez Minsky-Papert problemów udało się rozwiązać dopiero w 1986, za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams traktującej o perceptronach wielowarstwowych. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
 \begin{figure}[h!]
@@ -126,8 +118,6 @@ Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu e
 \section{Szkolenie głębokich sieci neuronowych}
 
 Wiekszość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat}, \textit{funkcja błędów} (za [DL-IANGoodfellow]). 
-
-/*wprowadzenie do algebry liniowej - skalar, wektor, macierz, tensor*/
 
 Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$). Z kolei macież pochodnych cząstkowych funkcji nosi nazwę \textit{macierzy Jacobiego}, a macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) \textit{macierzą Hessego}. Macierze te są w praktyce bardzo często wykorzystywane w implementacjach poszczególnych algorytmów szkolenia się sieci.
 
@@ -300,16 +290,16 @@ Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwoś
 
 W drugim przypadku, gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą state-of-the-art jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. PCA) opracowany przez Karla Pearsona w 1901 r (zob. [Pearson1901]).  
 
-Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to wartości skalarne opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. gdzie kąt w przestrzeni euklidesowskiej pomiędzy wektorami równy jest 90$\deg$. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną, której nie redukowała poprzednia itd. Składowych głównych jest zawsze tyle ile wymiarów danych. Przykład dwuwymiarowy został przedstawiony na Rys. \ref{PCA-2dim}.
+Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to \textit{wartości skalarne} (tj. pojedyncze liczby) opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. gdzie kąt w przestrzeni euklidesowskiej pomiędzy wektorami równy jest 90$\deg$. Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną, której nie redukowała poprzednia itd. Składowych głównych jest zawsze tyle ile wymiarów danych. Przykład dwuwymiarowy został przedstawiony na Rys. \ref{PCA-2dim}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.6\textwidth]{figures/PCA.png}
 	\caption{Dwuwymiarowa przestrzeń cech wraz z zaznaczonymi poziomami warianci i składowymi głównymi.}
 	\label{PCA-2dim}
 \end{figure}
-Na rysunku można zaobserwować, że nowa przestrzeń charakteryzuje się znacznie większym zróznicowanim poziomu wariancji niż przestrzeń oryginalna. Wybierając zatem tylko pierwszą składową uzyskana zostanie reprezentacja \textit{skomprymowana stratnie} (tzn. taka która nie daje gwarancji odtworzenia oryginalnych wartości), ale za to zachowująca znaczną część wariancji.
+Nowa przestrzeń charakteryzuje się znacznie większym zróznicowanim poziomu wariancji niż przestrzeń oryginalna. Wybierając zatem tylko pierwszą składową uzyskana zostanie reprezentacja \textit{skomprymowana stratnie} (tzn. taka która nie daje gwarancji odtworzenia oryginalnych wartości), ale za to zachowująca znaczną część wariancji.
 
-Szczegółową procedurę PCA można zapisać następująco:
+Opis szczegółowej procedury PCA wygląda następująco:
 \begin{enumerate}
 \item oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$ jest symetryczna i pozwala ocenić: (1) wariancje zmiennych (elementy na głównej przekątnej); (2) zależności pomiędzy zmiennymi (elementy poza główną przekątną). 
 \item dokonaj diagonalizacji: $S_x$ = $KLK^T$, gdzie $L$ to macierz diagonalna, a $K$ to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
@@ -342,15 +332,23 @@ Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie j
 	\item \textit{warstwy fully connected}, FC -- warstwa składająca się z neuronów, z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze.
 	\item \textit{warstwy normalizacji} -- warstwa normalizująca wyjście poprzedzającej warstwy do znormalizowanego przedziału. Wykorzystywana w celu zrównoważenia poziomu wpływu poszczególnych neuronów na wynik końcowy. Bardzo często stosuje się tzw. \textit{Local Response Normalization} zadaną wzorem:
 	\begin{equation}
+	\label{DLnormEquation}
 	b_{x,y}^{i} = a_{x,y}^{i}/\left ( k + \alpha \sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)}(a_{x,y}^{i})^2 \right )^\beta,
 	\end{equation}
 	gdzie $a_{x,y}^{i}$ jest aktywacją danego neuronu, a $k$, $\alpha$, $n$ i $\beta$ to stałe dobierane empirycznie na podstawie zbioru walidacyjnego (zob. [AlexNet]).
 	\footnote{warstwa coraz rzadziej stosowana w praktyce z uwagi na znikomy wpływ na rezultaty.}
 \end{itemize}
 
-Wprowadzonie w ostatnich latach dedykowanych dla głębokiego uczenia się rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania umożliwiło tworzenie architektur o wysokim stopniu komplikacji. W głównej mierze rozwiązania te umożliwiły optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest do przetwarzania kolejnych obserwacji. Przede wszystkim można wyróżnić dedykowane akceleratory do operacji macierzowych takie jak \textit{NVIDIA Tensor Processing Unit} (w skr. \textit{TPU}) [] czy \textit{Intel Lakecrest} [] oraz rozwiązania takie jak [24-TTCF] minimalizują czasy przetwarzania sygnału przeez wytrenowaną sieć np. stosując optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy.
+Wprowadzonie w ostatnich latach dedykowanych dla głębokiego uczenia się rozwiązań zarówno w warstwie sprzętowej jak i oprogramowania umożliwiło tworzenie architektur o wysokim stopniu komplikacji. W głównej mierze rozwiązania te umożliwiły optymalizacji fazy szkolenia omówionej w poprzedniej sekcji jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest do przetwarzania kolejnych obserwacji. W warstwie sprzętowej  wyróżnić można dedykowane akceleratory do operacji macierzowych takie jak \textit{NVIDIA Tensor Processing Unit} (w skr. \textit{TPU}) [] czy \textit{Intel Lakecrest} [] oraz rozwiązania takie jak [24-TTCF] minimalizują czasy przetwarzania sygnału przez wytrenowaną sieć np. stosując optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy. W warstwie oprogramowania należy wspomnieć o dynamicznym rozwoju framework'ów do zoptymalizowanych obliczeń z udziałem głębokich sieci neuronowych takich jak: Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet (zob. [porównania]).
 
-Dodatkowo zostało również opracowanych wiele framework'ów do obliczeń z udziałem głębokich sieci neuronowych takich jak: Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet (zob. [porównania]). W kolejnych podsekcjach opisano szczegółowo wybrane architektury, które znajdują się w implementacjach powyższych framework'ów i charakteryzują się wprowadzeniem pewnych innowacyjnych rozwiązań. 
+Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla progres w rezultatach konkursu ImageNet Large Scale Visual Recognition Competition (w skr. ILSVRC) przedstawiony na Rys. \ref{ILSVRC}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/ILSVRC.png}
+	\caption{Błąd top-5 klasyfikacji obiektów w kolejnych latach uzyskiwany przez zwycięzców konkursu ILSVRC}
+	\label{ILSVRC}
+\end{figure}
+Prezentowane wyniki dotyczą wartości błędu klasyfikacji na zbiorze danych ImageNet [ImageNet], uzyskiwanego w kolejnych latach przez zwycięskie algorytmy biorące udział w konkursie. Przy czym \textit{błąd top-$n$} należy rozumieć jako zdarzenie, w którym dla danego obrazka w $n$ wskazanych przez algorytm najbardziej prawdopodobnych etykietach nie było poprawnej. Znaczący progres dokonał się w 2012 roku, gdzie za sprawą architektury AlexNet błąd zmalał o 10.4 punkta procentowego, co w stosunku do poprzednich lat było 3 krotnie lepszym rezultatem. Kolejne architektury takei jak GoogLeNet, czy ResNet doprowadziły do spadku błędu top-5 do poziomu 3,5\%, co jest uznawane za poziom lepszy niż możliwości ludzkie klasyfikacji zbioru danych ImageNet. Ostatnie lata tj. 2016 i 2017 to intensywne prace nad syrergią i złożeniami różnego rodzaju modeli, co doprowadziło do spadku wartości błędu top-5 do poziomu 2,2\%. W kolejnych podsekcjach zaprezentowane zostaną główne koncepcje użyte w architekturach AlexNet, GoogleNet, ResNet i złożeniach, które doprowadziły do obecnego stanu rozwoju sieci konwolucyjnych. 
 
 \subsection{AlexNet}
 \label{AlexNet}
@@ -362,26 +360,21 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 	\label{AlexNetTopology}
 \end{figure}
 
-W skład topologii wchodzi pięć warstw konwolucyjnych i trzy typu fully-connected. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z jądrem o wymiarach 2$\times$2 \footnote{autorzy pracy podają też przykłady użycia jąder o wymiarze 2$\times$3, które nakładają się w przestrzeni funkcji obrazowej}. 
+W skład topologii wchodzi pięć warstw konwolucyjnych i trzy typu fully-connected. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z maską o wymiarach 2$\times$2 \footnote{autorzy pracy podają też przykłady użycia mesek o wymiarze 2$\times$3, które nakładają się w przestrzeni funkcji obrazowej}. 
 
-Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze 227$\times$227$\times$3, na których wykonywana jest operacja splotu z 96 filtrami z jądrem splotu o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256 filtrami z jądrem o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawieraja 384 filtry o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry o wymiarze 3$\times$3$\times$384, a w piątej znajdują się 256 filtry ponownie o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale - w oryginalnej pracy było to 1000 [AlexNet].
+Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze 227$\times$227$\times$3, na których wykonywana jest operacja splotu z 96 filtrami z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256 filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry z maską o wymiarze 3$\times$3$\times$384, a w piątej znajdują się 256 filtry ponownie z maską o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale - w oryginalnej pracy było to 1000 [AlexNet].
 
 W celu lepszego zrozumienia przetwarzania sygnału wejściowego przez sieć poniżej przedstawiono przykład algorytmu wykorzystywanego dla pierwszej warstwy konwolucyjnej opisywanej topologii: 
 \begin{enumerate}
-\item Z danych wejściowych o wymiarze [227$\times$227$\times$3] wybierany jest co czwarty blok (zarówno wzdłuż wysokości jak i szerokości) o wymiarach [11$\times$11$\times$3]. Punkty krawędziowe, które stanowią margines potrzebny do wyliczenia splotu są zazwyczaj pomijane. W rezultacie otrzymywanych jest 217 punktów w każdym rzędzie i w kolumnie, w których mieści się [55$\times$55] tj. 3025 bloków.
+\item Z danych wejściowych o wymiarze [227$\times$227$\times$3] wybierany jest co czwarty blok (zarówno wzdłuż wysokości jak i szerokości) o wymiarach [11$\times$11$\times$3]. W rezultacie otrzymywanych jest 217 punktów w każdym rzędzie i w kolumnie, w których mieści się [55$\times$55] tj. 3025 bloków.
 \item Zarówno 11$\times$11$\times$3 = 363 wagi znajdujące się w 96 filtrach jak i wartości 363 punktów obrazowych znajdujących sie 3025 blokach są przedstawiane w postaci macierzy $A$ o wymiarach [96$\times$363] i $B$ o wymiarach [363$\times$3025].
 \item liczony jest iloczyn skalarny w postaci A$^\intercal$B = $C$, gdzie nowa, wyjściowa macierz $C$ ma wymiar [96$\times$3025].
 \item Resultat w postaci macierzy $C$ ponownie przewymiarowywany jest na postać [55$\times$55$\times$96].  
 \end{enumerate} 
 
-W architekturze jako funkcję aktywacji neuronów wykorzystano ReLU, co znacząco przyspieszyło trening sieci. Dla przykładu uzyskano 6-krotne przyspieszenie treningu dla danych CIFAR-10 [CIFAR] w stosunku do tej samej topologii wykorzystującej funkcję aktywacji tanh.
+W architekturze jako funkcję aktywacji neuronów wykorzystano ReLU, co znacząco przyspieszyło trening sieci. Dla przykładu uzyskano 6-krotne przyspieszenie treningu dla danych CIFAR-10 [CIFAR] w stosunku do tej samej topologii wykorzystującej sigmoidalną funkcję aktywacji.
 
-Ponieważ funkcja ReLU nie posiada górnego ograniczenia neurony teoretycznie mogą posiadać nieograniczone wartości funkcji aktywacji. W celu polepszenia kontrastu pomiędzy neuronami i wydobycia tych, które na tle innych się wyróżniają, zastosowano normalizację:
-\begin{equation}
-b^i_{x,y} = a^i_{x,y}/\left ( k + \alpha \sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)} (a^i_{x,y})^2 \right  )^\beta 
-\label{AlexNetNorm}
-\end{equation}
-gdzie $n$ to liczba filtrów znajdujących się w tej samej przestrzennej lokalizacji, $N$ to suma wszystkich filtrów w warstwie, $a^i_{x,y}$ to wartość funkcji aktywacji neuronu po splocie funkcji obrazowej na pozycji ($x$, $y$) z filtrem $i$, a $b$ to wynik normalizacji. Po zastosowaniu tej techniki autorom pracy udało się zredukować błąd klasyfikacji top-5 o wartość 1,2 punkta procentowego.
+Ponieważ funkcja ReLU nie posiada górnego ograniczenia neurony teoretycznie mogą posiadać nieograniczone wartości funkcji aktywacji. W celu polepszenia kontrastu pomiędzy neuronami i wydobycia tych, które na tle innych się wyróżniają, zastosowano normalizację zgodną ze wzorem \ref{DLnormEquation}. W wyniku czego uzyskano redukcję błędu klasyfikacji top-5 o wartość 1,2 punkta procentowego.
 
 W kontekście zwiększenia efektywności treningu zastosowano powiększenie rozmiaru danych poprzez rotacje i modyfikacje funkcji obrazowej z wykorzystaniem czynników głównych (zob [AlexNet]), co zmniejszyło błąd top-1 o 1\%. Zastosowano również technikę dropout opisaną w \ref{sec-overffiting}. Ostatecznie wprowadzono także trening z wykorzystaniem wielu GPU (zob. Rys. \ref{AlexNetTopologyMultiGPU}). 
 
@@ -394,7 +387,7 @@ W kontekście zwiększenia efektywności treningu zastosowano powiększenie rozm
 
 Topologia z podziałem na 2 karty zwiększyła dwukrotnie sumaryczną pamięć i pozwoliła na koalokację parametrów sieci.
 
-Praca Alexa Krizhevsky, Ilya Sutskever i Geoffrey'a Hinton zapoczątkowała wzrost zainteresowania technikami głębokiego uczenia się, co doprowadziło do publikacji kolejnych podobnych architektur. Do najbardziej znanych należą ZFNet z 2013 roku [ZFNet], gdzie m.in. zastosowano zmniejszenie wymiaru jądra stosowanego w filtrach pierwszej warstwy konwolucyjnej do 7$\times$7 oraz VGGNet z 2014 roku, gdzie zastosowano większą liczbę warstw konwolucyjnych z mniejszym wymiarem jądra splotu. Innowacyjnym pomysłym, który został zaprezentowany również w 2014 było pojawienie się nowych modułów w sieci GoogleNet, która dokładniej została opisana w kolejnej podsekcji.
+Praca Alexa Krizhevsky, Ilya Sutskever i Geoffrey'a Hinton zapoczątkowała wzrost zainteresowania technikami głębokiego uczenia się, co doprowadziło do publikacji kolejnych podobnych architektur. Do najbardziej znanych należą ZFNet z 2013 roku [ZFNet], gdzie m.in. zastosowano zmniejszenie wymiaru maski stosowanego w filtrach pierwszej warstwy konwolucyjnej do 7$\times$7 oraz VGGNet z 2014 roku, gdzie zastosowano większą liczbę warstw konwolucyjnych z mniejszym wymiarem maski. Innowacyjnym pomysłym, który został zaprezentowany również w 2014 było pojawienie się nowych modułów w sieci GoogleNet opisanej dokładniej w następnej podsekcji.
 
 \subsection{GoogLeNet}
 
@@ -402,7 +395,7 @@ Architekturę o nazwie GoogLeNet zaprezentowano w 2014 r. w pracy [GoogleNet]. N
 
 Redukcję liczby parametrów przy jednoczesnym podwyższeniu dokładności klasyfikacji i lokalizacji obiektów (zob. [ILSCV]) udało się uzyskać poprzez poszukiwania konstrukcji optymalnych lokalnych topologii i ich połączeń. Mianowicie, wiadomo że duża część funkcji aktywacji neuronów przyjmuje wartość 0 lub jest redundatna z powodu wysokiej korelacji między sobą (zob. [Arora z GoogleNet]). Matematyka dotycząca przetwarzania \textit{macierzy rzadkich}, tj. gdzie przeważająca liczba elementów przyjmuje wartość 0, jest dobrze znana np. [3-GoogleNet]. Jednak implementacje bibliotek do obliczeń związanych z algebrą liniową są zooptymalizowane pod kątem \textit{macierzy gęstych}, gdzie przeważająca liczba elementów przyjmuje wartości różne od 0 (zob. [16, 9 googleNet]). 
 
-Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymacja rzadkich macierzy z użyciem komponentów o gęstej strukturze. Takie komponenty nazwano \textit{modułami incepcji} (ang. \textit{inception modules}). Przykłądy modułów incepcji pokazano na Rys. \ref{GoogleNetInceptionModules} 
+Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymacja rzadkich macierzy z użyciem komponentów o gęstej strukturze. Takie komponenty nazwano \textit{modułami incepcji} (ang. \textit{inception modules}), a ich przykłady pokazano na Rys. \ref{GoogleNetInceptionModules} 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/InceptionModules.png}
@@ -410,9 +403,9 @@ Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymac
 	\label{GoogleNetInceptionModules}
 \end{figure}
 
-Rys. \ref{GoogleNetInceptionModules} (a) przedstawia najwną formę modułu incepcji, gdzie grupowane są operacje filtrów z jądrem o wymiarach 5$\times$5, 3$\times$3, 1$\times$1 oraz operacja max-pool. Rys. \ref{GoogleNetInceptionModules} (b) prezentuje koncepcję zooptymalizowaną obliczeniowo gdzie filtry 1$\times$1 służą do redukcji wymiarowości i używane są bezpośrednio przed splotami z bardziej wymagającymi obliczeniowo splotami z jądrami o wymiarach 5$\times$5 i 3$\times$3. 
+Rys. \ref{GoogleNetInceptionModules} (a) przedstawia naiwną formę modułu incepcji, gdzie grupowane są operacje filtrów z maską o wymiarach 5$\times$5, 3$\times$3, 1$\times$1 oraz operacja max-pool. Rys. \ref{GoogleNetInceptionModules} (b) prezentuje koncepcję zooptymalizowaną obliczeniowo gdzie filtry z maską 1$\times$1 służą do redukcji wymiarowości i używane są bezpośrednio przed splotami z bardziej wymagającymi obliczeniowo splotami 5$\times$5 i 3$\times$3. 
 
-Złożenie różnego rodzaju modułów dało topologię zaprezentowaną na Rys.
+Przy pomocy złożenia różnego rodzaju modułów otrzymano topologię zaprezentowaną na Rys. \ref{GoogleNetTopo}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/GoogleNet.png}
@@ -432,13 +425,13 @@ Dokładne zestawienie parametrów znajduje się w Tabeli \ref{GoogleNetParams}
 Ważną cechą sieci GoogleNet jest brak warstw typu FC na zakończeniu, gdzie w przypadku sieci AlexNet znajdowało się około 90\% parametrów. Końcowe wnioskowanie jest realizowane na podstawie wartości średniej z dwuwymiarowych map cech.
 
 Dla lepszego zrozumienia idei redukcji wymiarowości realizowanej przez moduły incepcji, podobnie jak w przypadku sieci AlexNet, przeanalizowane zostanie działanie pierwszego modułu w topologii z Rys. \ref{GoogleNetTopo}.
-Moduł zawiera 128 filtrów z jądrami o wymiarach 3$\times$3 i 32 filtry z jądrami o wymiarach 5$\times$5. Dane na wejściu modułu mają 192 kanały (zob. Tabela \ref{GoogleNetParams}). Dla przykładu, rząd wielkości obliczeń operacji splotów 32 filtrów 5$\times$5 wynosi 25$\times$32$\times$192=153 600 i dalej wzrastałby z głębokością sieci. W celu zapobiegnięcia nadmiarowi obliczeń stosowana jest redukcja z użyciem 16 filtrów z jądrem o wymiarach 1$\times$1. W efekcie rząd wielkości obliczeń spada do 16$\times$192 +  25$\times$32$\times$16=15 876, co pozwala na dalsze budowanie wielowarstwowych struktur.
+Moduł zawiera 128 filtrów z maskami o wymiarach 3$\times$3 i 32 filtry z maskami o wymiarach 5$\times$5. Dane na wejściu modułu mają 192 kanały (zob. Tabela \ref{GoogleNetParams}). Dla przykładu, rząd wielkości obliczeń operacji splotów 32 filtrów 5$\times$5 wynosi 25$\times$32$\times$192=153 600 i dalej wzrastałby z głębokością sieci. W celu zapobiegnięcia nadmiarowi obliczeń stosowana jest redukcja z użyciem 16 filtrów z maską o wymiarach 1$\times$1. W efekcie rząd wielkości obliczeń spada do 16$\times$192 +  25$\times$32$\times$16=15 876, co pozwala na dalsze budowanie wielowarstwowych struktur.
 
-Topologia GoogLeNet jest wciąż rozwijana. Po pierwszej prezentacji pojawiły się kolejne modernizacje wprowadzjące dodatkowe faktoryzacje modułów jak w Inception-v2 [Inception-v2], lub normalizacje wartości wynikowych poszczególnych warstw jak w Inception-v3 [Inception-v3]. Kolejny innowacyjny pomysł, bazujący na dodatkowych połączeniach między blokami, został wprowadzony w 2015 roku w sieci ResNet, która została opisana w kolejnej podsekcji.
+Topologia GoogLeNet jest wciąż rozwijana. Po pierwszej prezentacji pojawiły się kolejne modernizacje wprowadzjące dodatkowe faktoryzacje modułów jak w Inception-v2 [Inception-v2], lub normalizacje wartości wynikowych poszczególnych warstw jak w Inception-v3 [Inception-v3]. Kolejny innowacyjny pomysł, bazujący na dodatkowych połączeniach między blokami, został wprowadzony w 2015 roku w sieci ResNet opisanej w kolejnej podsekcji.
 
 \subsection{ResNet}
 
-Jednym z najbardziej oczywistych pomysłów na polepszenie dokładności działania sieci neuronowych jest zwiększenie liczby warstw. Jednak wraz ze wzrostem liczby warstw, trening takich architektur z użyciem tradycyjnych metod gradientowych (takich jak algorytm wstecznej propagacji błędu) staje się mniej wydajny. Problem wynika z faktu, że zmiana wartości sygnału na wyjściu sieci w odpowiedzi na sygnał wejściowy jest mniejsza wraz ze wzrostem liczby warstw [ResNet]. W takiej sytuacji gradient wyliczany na podstawie sygnału będącego różnicą pomiędzy sygnałem wejściowym a wejściowym może przyjmować wartości bliskie 0 uniemożliwiając progres uczenia się. Problem zanikającego gradientu (ang. \textit{vanishing gradient problem}) rozwiązywany jest poprzez zastosowanie normalizacji oraz nieliniowych funkcji aktywacji, których przykłady zostały opisane w sekcji \ref{AlexNet} oraz szeroko w literaturze np. w [ResNet 2,3,4]. Dzięki tym mechanizmom algorytm treningu głębokich sieci neuronowych w większej liczbie przypadków zbiega do użytecznego minimum lokalnego. 
+Jednym z najbardziej oczywistych pomysłów na polepszenie dokładności działania sieci neuronowych jest zwiększenie liczby warstw. Jednak wraz ze wzrostem liczby warstw, trening takich architektur z użyciem tradycyjnych metod gradientowych (takich jak algorytm wstecznej propagacji błędu) staje się mniej wydajny. Problem wynika z faktu, że zmiana wartości sygnału na wyjściu sieci w odpowiedzi na sygnał wejściowy jest mniejsza wraz ze wzrostem liczby warstw [ResNet]. W takiej sytuacji gradient wyliczany na podstawie sygnału będącego różnicą pomiędzy sygnałem wejściowym a wejściowym może przyjmować wartości bliskie 0 uniemożliwiając progres uczenia się. Problem zanikającego gradientu (ang. \textit{vanishing gradient problem}) rozwiązywany jest poprzez zastosowanie normalizacji oraz nieliniowych funkcji aktywacji. Dzięki tym mechanizmom algorytm treningu głębokich sieci neuronowych w większej liczbie przypadków zbiega do użytecznego minimum lokalnego. 
 
 W momencie znalezienia takiego minimum dodanie kolejnych warstw i parametrów sieci jest redundatne, a nawet prowadzi do pogorszenia wyników treningu sieci, co związane jest z trudnościami optymalizacji przestrzeni wieloparametrycznych [Opt]. Zjawiskio to nosi nazwę degradacji treningu (ang. \textit{degradation problem}). Twórcy architektury ResNet zaproponowali rozwiązanie tego problemu poprzez implementację bloków rezydualnych (ang. \textit{Residuum Units}) zawierających dodatkowe, skrótowe połączenia (ang. \textit{skip conections}) pomiędzy wejściem a wyjściem bloków. Porównanie schematów funkcjonalnych nowych bloków i wcześniej istniejącego rozwiązania stosowanego np. w AlexNet został przedstawiony na Rys. \ref{ResNetBlock}.
 \begin{figure}[h!]
@@ -457,11 +450,11 @@ x_{l+1} = f(y_l),
 \end{equation}
 gdzie $x_l$ i $x_{l+1}$ stanowią sygnał wejściowy i wyjściowy $l$-tego bloku. $F$ stanowi funkcję rezydualną optymalizowaną podczas treningu sieci, $h$($x_l$) stanowi funkcję przekształcenia sygnału $x_l$ przekazywanego skrótowym połączeniem, $f$ jest funkcją ReLU, a $W$ stanowi macierz wag.
 
-Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci skłądającej się z bloków rezydualnych. Dla każdego $L$-tego bloku zachodzi równanie:
+Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci składającej się z bloków rezydualnych. Dla każdego $L$-tego bloku zachodzi równanie:
 \begin{equation}
 x_L = x_l + \sum_{i=l}^{L-1}F(x_i, W_i)
 \end{equation}
-Korzystając z reguły łąńcuchowej [ResNet-wyj-9] można zapisać równanie na gradient funkcji kosztu $\varepsilon$:
+Korzystając z reguły łańcuchowej można zapisać równanie na gradient funkcji kosztu $\varepsilon$:
 \begin{equation}
 \ref{gradResBlock}
 \frac{\partial \varepsilon}{\partial x} =  \frac{\partial \varepsilon}{\partial x_L} \frac{\partial x_L}{\partial x_l} =  \frac{\partial \varepsilon}{\partial x_L}\left (1 +   \frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i) \right )
@@ -489,23 +482,23 @@ Dokładny opis matematyczny funkcjonowania bloków rezydualnych wraz z dowodami 
 	\label{ResNetBlock}
 \end{figure} 
 
-Pierwsza warstwa konwolucyjna zawiera filtry z jądrem splotu o wymiarach 7$\times$7. W kolejnych zastosowano wymiar 3$\times$3. Zastosowanie mniejszych wymiarów jąder splotu niż w AlexNet oraz podobnie jak w przypadku sieci GoogLeNet wyliczenie na końcu wartości średniej z dwuwymiarowych map cech zredukowało liczbę parametrów.
+Pierwsza warstwa konwolucyjna zawiera filtry z maską o wymiarach 7$\times$7. W kolejnych zastosowano wymiar 3$\times$3. Zastosowanie mniejszych wymiarów maske niż w AlexNet oraz podobnie jak w przypadku sieci GoogLeNet wyliczenie na końcu wartości średniej z dwuwymiarowych map cech zredukowało liczbę parametrów.
 
-Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze przykładów. W praktyce, z powodzeniem wykorzystywano topologie składające się nawet z 1202 warstw [ResNet]. W 2016 roku zaprezentowano hybrydę sieci GoogleNet i ResNet [InceptionResNet]. Pracowano również nad bardziej złożonymi blokami, co w konsekwencji doporwadziło w 2017 roku do zaprezentowania architektury ResNetX, która w wielu testach klasyfikacji różnych zbiorów okazała się być lepsza niż poprzednicy [ResNetX]. Ciekawy przegląd dotyczący historii tych prac można znaleźć w [https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035].
+Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze przykładów tego typu. W praktyce, z powodzeniem wykorzystywano topologie składające się nawet z 1202 warstw [ResNet]. W 2016 roku zaprezentowano hybrydę sieci GoogleNet i ResNet [InceptionResNet]. Pracowano również nad bardziej złożonymi blokami, co w konsekwencji doporwadziło w 2017 roku do zaprezentowania architektury ResNetX, która w wielu testach klasyfikacji różnych zbiorów okazała się być lepsza niż poprzednicy [ResNetX]. Ciekawy przegląd dotyczący historii tych prac można znaleźć w [https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035].
 
-Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR czy COCO osiągneły dokładność klasyfikacji porównywalną z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
+Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR [CIFAR] czy COCO [COCO] osiągneły dokładność klasyfikacji porównywalną z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
 
 \subsection{Złożenia}
 Uczenie złożeń sieci (ang. \textit{esemble learning}) polega na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii. Koncepcja nie jest nowa i stosowana była już przed etapem kiedy to metody głębokiego uczenia się zyskały na popularności. Dobry przegląd wcześniejszych prac bazujących na tradycyjnym podejściu do uczenia maszynowego można znaleźć w  [Ensemble 1-3].
 
-W kontekście głębokiego uczenia się stosowane są różnea metody kombinacji modeli bazowych [Ensemble]. Jako często stosowane przykłady można podać: uśrednianie, głosowanie, klasyfikacja Bayesa, generalizację stosów. Zostaną one omówione w kolejnych paragrafach:
+W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych [Ensemble]. Jako często stosowane przykłady można podać: uśrednianie, głosowanie, klasyfikacja Bayesa, generalizację stosów. Zostaną one kolejno omówione:
 
 \subsubsection{Uśrednianie}
 Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednianie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez liczbę tych modeli. Uśredniać można bezpośrednio wyniki finalnej predykcji jak również prawdopodobieństwa przynależności do odpowiednich klas, które są np. wynikiem funkcji softmax. 
 
-Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (Breiman, 2001).
+Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty, tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (zob. [Breiman, 2001]).
 
-Zastosowanie uśredniania przy silnie odstających od średniej najgorszych predykcjach znacząco obniża dokładność całego złożenia. Dlatego przy silnie nieheterogenicznych modelach bazowych dających bardzo różne wyniki często poszukiwane są inne metody.
+Zastosowanie uśredniania przy silnie odstających od średniej najgorszych predykcjach znacząco obniża dokładność całego złożenia. Dlatego przy tak nieheterogenicznych modelach bazowych dających bardzo różne wyniki poszukiwane są inne metody.
 
 \subsubsection{Głosowanie}
 
@@ -524,19 +517,19 @@ gdzie $y$ to przewidziana etykieta, $C$ jest zbiorem wszystkich możliwych klas,
 W praktyce z uwagi na dużą złożoność obliczeniową optymalną klasyfikację Bayesa wykorzystuje się rzadko. Cześćiej stosowane są techniki BPA (od ang. \textit{Bayesian parameter averaging}), BMA (od ang. \textit{Bayesian model averaging}), czy teć BMC (od ang. \textit{Bayesian model combination}) (zob. [BPA, BMA, BMC]), które aproksymują optymalną metodę.
 
 \subsubsection{Generalizacja stosów}
-Idea generalizacji stosów oryginalnie została zaproponowana w [Wolpert, 1992]. Wykorzystana została koncepcja meta-uczenia, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadniem jest wybór optymalnego wektora wag $a$ dla stosu $s$ predykcji dla danych $x$:
+Idea generalizacji stosów oryginalnie została zaproponowana w [Wolpert, 1992]. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadniem jest wybór optymalnego wektora wag $a$ dla stosu $s$ predykcji dla danych $x$:
 \begin{equation}
 s(x) = \sum_{i=1}^{m}a_i s_i(x)
 \end{equation}
 
-W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do swojego treningu poprawnych wartości $a$ wykorzystując jako odniesienie znane, poprawne etykiety.
+W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do treningu poprawnych wartości $a$ wykorzystując jako odniesienie znane, poprawne etykiety.
  
 
 \section{Zastosowania w medycynie}
 
 W 1994 roku ukazała się pierwsza praca, która w praktyce wykorzystywała mechanizmy związane z głębokim uczeniem do przetwarzania obrazów medycznych [Zhang, 1994]. Użyte wówczas sieci nazywano sieciami typu \textit{shift-invariant}. Zastosowanie ich pozwoliło na eliminacje 55\% FP otrzymywanych przy wcześniejszych metodach stosowanych do detekcji skupisk mikrozwapnień w mommografach. \textit{Shift-invariant} oznaczało, że przesunięcie obrazu wejściowego nie powodowało zmian w klasyfikacji, co jest istotną cechą z uwagi na implementację toru akwizycji danych w praktyce radiologicznej.
 
-Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego uczenia się w medycynie. Obrazuje to praca z 2017, w której przytoczono statystyki medycznych publikacje zawierających słowa kluczowe związane z głębokim uczeniem się [arXiv:1702.05747v2]. Najważniejsze dane przedstawiono a Rys. \ref{DL_CAD_stats}.
+Po roku 2015 nastąpił znaczący wzrost zainteresowania metodami głębokiego uczenia się w medycynie. Obrazuje to praca z 2017, w której przytoczono statystyki medycznych publikacje zawierających słowa kluczowe związane z głębokim uczeniem się [arXiv:1702.05747v2]. Najważniejsze dane przedstawiono a Rys. \ref{DL_CAD_stats}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/DL_CAD_statystyka.jpg}
@@ -546,7 +539,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
 
  Widoczny wzrost liczby publikacji nastąpił począwszy od 2015, co związane było z kilkuletnią adaptacją nowych metod w dziedzinie przetwarzania obrazów medycznych i gromadzeniem odpowiednich danych. Rok 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się coraz więcej prac naukowych, w których przedstawiano rezultaty dokładności klasyfikacji medycznych zbiorów danych na poziomie dorównującym ekspertom dziedzinowym.
  
- Dla przykładu, w Listopadzie 2016 ukazał się praca grupy Google Research, Mountain View, Kalifornia [https://www.ncbi.nlm.nih.gov/pubmed/27898976], gdzie zastosowano sieć GoogLeNet w wersi inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem skjładającym się z 7 ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
+ Dla przykładu, w Listopadzie 2016 ukazał się praca grupy Google Research, Mountain View, Kalifornia [https://www.ncbi.nlm.nih.gov/pubmed/27898976], gdzie zastosowano sieć GoogLeNet w wersi inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem składającym się z 7 ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
  \begin{figure}[h!]
  	\centering
  	\includegraphics[width=0.7\textwidth]{figures/CAD-okulisci.jpg}
@@ -554,7 +547,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  	\label{CAD_opto}
  \end{figure}
  
- Na wykresach dla dwóch zadań klasyfikacyjnych umieszczono krzywe reprezentujące zależność swoistości od czułości dla algorytmu automatycznego oraz 7 punktów oznaczające wynik oceny każdego z ekspertów-okulistów. Ogółem mniej niż połowa ekspertów uzyskałą lepszy wynik niż algorytm sztucznej inteligencji.
+ Na wykresach dla dwóch zadań klasyfikacyjnych umieszczono krzywe reprezentujące zależność swoistości od czułości dla algorytmu automatycznego oraz 7 punktów oznaczających wynik oceny każdego z okulistów. Ogółem mniej niż połowa ekspertów uzyskała lepszy wynik niż algorytm sztucznej inteligencji.
  
  Kolejna ciekawa praca pojawiła się w czasopiśmie nature w styczniu 2017 i traktowała o automatycznej detekcji raka skóry na zdjęciach [Esteva, 2017]. Autorzy wykorzystali dane składające się z 129,450 obrazów klinicznych, na których zobrazowano 2,032 różne schorzenia skóry. Ponownie do klasyfikacji wykorzystano sieć GoogleNet w wersji inception-v3. Wyniki klasyfikacji automatycznej porównano z oceną przeprowadzoną przez 21 certyfikowanych dermatologów. Przykład porównania zaprezentowano na Rys. \ref{CAD_derma}. 
  
@@ -565,13 +558,13 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  	\label{CAD_derma}
  \end{figure}
 
-Tym razem umieszczono odwrotną zależność (tj. czułość od swoistości), czerwonymi punktami oznaczono wynik oceny ekspertów, a zielonym krzyżykiem wynik uśrednienia oceny eksperckiej. W każdym przypadku średnia ocena była gorsza od automatycznje klasyfikacji.
+Wykres przedstawia zależność czułości od swoistości. Czerwonymi punktami oznaczono wynik oceny poszczególnych ekspertów, a zielonym krzyżykiem wynik uśredniony. W każdym przypadku średnia ocena była gorsza od automatycznej klasyfikacji.
 
 Obrazy medyczne nie są jedynymi danymi, które z powodzeniem są przetwarzane za pomocą metod głębokiego uczenia się. W lipcu 2017, przez grupę ze Stanford University została opublikowana praca dotycząca klasyfikacji arytmii na podstawie szeregów czasowych zapisanych na elektrokardiogramach [Rajpurkar, 2017]. Autorzy wykorzystali dane z 64,121 elektrokardiogramów, próbkowanych z częstotliwością 200 Hz, pochodzących od 29,163 pacjentów. Zaprojektowano dedykowaną, 34-warstwową sieć konwolucyjną do detekcji 12 różnych dysfunkcji pracy serca, pracy prawidłowej i szumów (łącznie 14 klas). Wyniki klasyfikacji porównano z oceną prowadzoną przez 3 kardiologów. Średnia dokładność klasyfikacji automatycznej wyniosła 80\% , natomiast manualnej 72\%.
 
 Naturalnie, podobnych przykładów zostało opublikowanych dużo więcej. Architektura AlexNet z sukcesem była użyta do detekcji polipów w kolonospokopii [AlexNet-kolo, 2017]. Sieć ResNet sprawdziła się w badaniach w Mayo Clinic Rotschester, dotyczących radiogenomiki i rozróżnienia zmian w mózgu bez konieczności biopsji [Mayo]. Złożenia natomiast z sukcesem zostały zaaplikowany w pracach dotyczących detekcji raka płuc, gdzie modele bazowe analizowały różne skale problemu [LungChalenge]. W wielu pracach raportuje się dokładność klasyfikacji automatycznej znaczącą przewyższające możliwości dziedzinowych ekspertów np. [https://doi.org/10.1016/j.cell.2018.03.040, FNP].
 
- Przytoczone prace pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany przez algorytmy głębokiego uczenia się. Należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem sztucznej inteligencji w medycynie. Do najważniejszych należą:
+Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany przez algorytmy głębokiego uczenia się. Należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem sztucznej inteligencji w medycynie. Do najważniejszych należą:
 \begin{enumerate}
 	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
 	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.
@@ -582,7 +575,7 @@ Naturalnie, podobnych przykładów zostało opublikowanych dużo więcej. Archit
 
 Dyskusja na temat tych problemów wciąż jest tematem wielu paneli dyskusyjnych i debat konferencyjnych np. [NVIDIA 1-2]. Najbardziej zaawansowane prace dotyczą problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine [MedicalImageNet], Harward School of Medicine [10 mln images] czy Masachuset Hospital [NVIDIA 2018]. Ponadto w roku 2018 na konferencji NVIDIA GTC w San Jose (Kalifornia) Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych ze współpracą przy pozyskiwaniu odpowiednich danych dla wykorzystania algorytmów uczenia maszynowego.
 
-Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie, duża liczba sukcesów, które pojawiły się w ostatnich latach w aplikacjach medycznych stanowi silną motywację dla autora do przeprowadzenia własnych badań zaprezentowanych w następnym rozdziale.
+Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak, duża liczba sukcesów, które pojawiły się w ostatnich latach w aplikacjach medycznych stanowi silną motywację do przeprowadzenia własnych badań, które zostały zaprezentowane w następnym rozdziale.
 
 
     

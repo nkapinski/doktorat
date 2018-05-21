@@ -1,0 +1,11 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: header.aux
+The style file: plplain.bst
+Database file #1: refs.bib
+Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
+while executing---line 1171 of file plplain.bst
+Warning--empty booktitle in Koch2017AutomatedHT
+Warning--empty institution in Rosenblatt1957
+Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
+while executing---line 1225 of file plplain.bst
+(There were 2 error messages)

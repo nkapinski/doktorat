@@ -1,8 +1,145 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{Pokorski:1998hr}
-Witold Pokorski and Graham~G. Ross.
-\newblock Flat directions, string compactification and three generation models.
-\newblock 1998.
+\bibitem{DBLP:journals/corr/abs-1005-4020}
+Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
+\newblock Image segmentation by using threshold techniques.
+\newblock {\em CoRR}, abs/1005.4020, 2010.
+
+\bibitem{Bell2007}
+Robert~M. Bell,  Yehuda Koren.
+\newblock Lessons from the netflix prize challenge.
+\newblock {\em SIGKDD Explor. Newsl.}, 9(2):75--79, Grudzie/n 2007.
+
+\bibitem{Breiman2001}
+Leo Breiman.
+\newblock Random forests.
+\newblock {\em Machine Learning}, 45(1):5--32, Oct 2001.
+
+\bibitem{DBLP:journals/corr/ChoromanskaHMAL14}
+Anna Choromanska, Mikael Henaff, Micha{\"{e}}l Mathieu, G{\'{e}}rard~Ben Arous,
+  Yann LeCun.
+\newblock The loss surface of multilayer networks.
+\newblock {\em CoRR}, abs/1412.0233, 2014.
+
+\bibitem{Duchi:2011:ASM:1953048.2021068}
+John Duchi, Elad Hazan, Yoram Singer.
+\newblock Adaptive subgradient methods for online learning and stochastic
+  optimization.
+\newblock {\em J. Mach. Learn. Res.}, 12:2121--2159, Lipiec 2011.
+
+\bibitem{Goodfellow-et-al-2016}
+Ian Goodfellow, Yoshua Bengio, Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+
+\bibitem{Hill06}
+F.S. Hill,  Stephen~M. Kelly.
+\newblock {\em Computer Graphics using OpenGL}.
+\newblock Prentice Hall, 2006.
+
+\bibitem{DBLP:journals/corr/abs-1207-0580}
+Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, Ruslan
+  Salakhutdinov.
+\newblock Improving neural networks by preventing co-adaptation of feature
+  detectors.
+\newblock {\em CoRR}, abs/1207.0580, 2012.
+
+\bibitem{DBLP:journals/corr/KingmaB14}
+Diederik~P. Kingma,  Jimmy Ba.
+\newblock Adam: {A} method for stochastic optimization.
+\newblock {\em CoRR}, abs/1412.6980, 2014.
+
+\bibitem{Koch2017AutomatedHT}
+Patrick Koch, Brett Wujek, Oleg Golovidov, Steven Gardner.
+\newblock Automated hyperparameter tuning for effective machine learning.
+\newblock 2017.
+
+\bibitem{Krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, Geoffrey~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock {\em Proceedings of the 25th International Conference on Neural
+  Information Processing Systems - Volume 1}, NIPS'12, strony 1097--1105, USA,
+  2012. Curran Associates Inc.
+
+\bibitem{Lecun1998}
+Y.~Lecun, L.~Bottou, Y.~Bengio, P.~Haffner.
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the {IEEE}}, 86(11):2278--2324, 1998.
+
+\bibitem{NIPS1989_293}
+Yann LeCun, Bernhard~E. Boser, John~S. Denker, Donnie Henderson, R.~E. Howard,
+  Wayne~E. Hubbard, Lawrence~D. Jackel.
+\newblock Handwritten digit recognition with a back-propagation network.
+\newblock D.~S. Touretzky, redaktor, {\em Advances in Neural Information
+  Processing Systems 2}, strony 396--404. Morgan-Kaufmann, 1990.
+
+\bibitem{Litjens2017}
+Geert Litjens, Thijs Kooi, Babak~Ehteshami Bejnordi, Arnaud Arindra~Adiyoso
+  Setio, Francesco Ciompi, Mohsen Ghafoorian, Jeroen~A.W.M. van~der Laak, Bram
+  van Ginneken, Clara~I. S{\'{a}}nchez.
+\newblock A survey on deep learning in medical image analysis.
+\newblock {\em Medical Image Analysis}, 42:60--88, dec 2017.
+
+\bibitem{DBLP:journals/corr/LiuSLLZL16}
+Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
+\newblock Towards better analysis of deep convolutional neural networks.
+\newblock {\em CoRR}, abs/1604.07043, 2016.
+
+\bibitem{Minsky1969}
+Seymour~Papert Marvin Lee~Minsky.
+\newblock {\em Perceptrons: An Introduction to Computational Geometry}.
+\newblock Mit Press, 1969.
+
+\bibitem{McCulloch1943}
+Warren~S. McCulloch,  Walter Pitts.
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock {\em The bulletin of mathematical biophysics}, 5(4):115--133, Dec
+  1943.
+
+\bibitem{DBLP:journals/corr/RonnebergerFB15}
+Olaf Ronneberger, Philipp Fischer, Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock {\em CoRR}, abs/1505.04597, 2015.
+
+\bibitem{Rosenblatt1957}
+Frank Rosenblatt.
+\newblock The perceptron: A perceiving and recognizing automaton.
+\newblock Raport instytutowy, 1957.
+
+\bibitem{Hijazi2015}
+R.~Kumar S.~Hijazi,  C.~Rowen.
+\newblock Using convolutional neural networks for image recognition.
+\newblock Raport instytutowy, Cadence, 2015.
+\newblock Accessed: 2018-05-21.
+
+\bibitem{SCHMIDHUBER201585}
+Jürgen Schmidhuber.
+\newblock Deep learning in neural networks: An overview.
+\newblock {\em Neural Networks}, 61:85 -- 117, 2015.
+
+\bibitem{DBLP:journals/corr/SelvarajuDVCPB16}
+Ramprasaath~R. Selvaraju, Abhishek Das, Ramakrishna Vedantam, Michael Cogswell,
+  Devi Parikh, Dhruv Batra.
+\newblock Grad-cam: Why did you say that? visual explanations from deep
+  networks via gradient-based localization.
+\newblock {\em CoRR}, abs/1610.02391, 2016.
+
+\bibitem{DBLP:journals/corr/SimonyanVZ13}
+Karen Simonyan, Andrea Vedaldi, Andrew Zisserman.
+\newblock Deep inside convolutional networks: Visualising image classification
+  models and saliency maps.
+\newblock {\em CoRR}, abs/1312.6034, 2013.
+
+\bibitem{DBLP:journals/corr/TaylorBXSPG16}
+Gavin Taylor, Ryan Burmeister, Zheng Xu, Bharat Singh, Ankit Patel, Tom
+  Goldstein.
+\newblock Training neural networks without gradients: {A} scalable {ADMM}
+  approach.
+\newblock {\em CoRR}, abs/1605.02026, 2016.
+
+\bibitem{Wurtz2009}
+Robert~H. Wurtz.
+\newblock Recounting the impact of hubel and wiesel.
+\newblock {\em The Journal of Physiology}, 587(12):2817--2823, jun 2009.
 
 \end{thebibliography}

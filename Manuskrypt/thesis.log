@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  21 MAY 2018 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  21 MAY 2018 16:11
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -932,6 +932,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [12 <./figures/lenet.png>]
+Overfull \hbox (2.63808pt too wide) in paragraph at lines 124--125
+[]\OT4/cmr/m/n/12 Szereg me-tod opty-ma-li-za-cyj-nych nie-gra-dien-to-wych zo-
+sta-ªo opra-co-wa-nych (zob. [24]).
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1186,11 +1192,19 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 Rozdzia\PlPrIeC {\l } 7.
 ) (thesis.bbl [42
 
-]) (appendix.tex [43
+] [43
 
 ]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[44]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[45]
 Dodatek A.
-) [44
+) [46
 
 ] (thesis.aux (header.aux))
 
@@ -1201,13 +1215,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5394 strings out of 493305
- 82095 string characters out of 3128932
- 139751 words of memory out of 3000000
- 8736 multiletter control sequences out of 15000+200000
+ 5420 strings out of 493305
+ 82647 string characters out of 3128932
+ 138839 words of memory out of 3000000
+ 8762 multiletter control sequences out of 15000+200000
  23088 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,40p,1214b,314s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,40p,1215b,355s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.e
 nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.
 enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms
@@ -1233,9 +1247,9 @@ type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/
 MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on thesis.pdf (53 pages, 2273930 bytes).
+Output written on thesis.pdf (55 pages, 2282027 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
+ 281 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

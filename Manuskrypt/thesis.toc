@@ -38,5 +38,5 @@
 \contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{41}
 \contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{41}
 \contentsline {chapter}{\numberline {7}Podsumowanie}{42}
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{43}
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{44}
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{45}
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{46}

@@ -1,19 +1,71 @@
 \begin{thebibliography}{10}
 
+\bibitem{MGH}
+Deep learning: The next step in applied healthcare data.
+\newblock
+  \url{https://insights.samsung.com/2016/07/12/deep-learning-the-next-step-in-applied-healthcare-data/}.
+\newblock Accessed: 2018-22-05.
+
+\bibitem{NVIDIApanel}
+From challenges to impact of machine learning in clinical practice.
+\newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
+\newblock Accessed: 2018-22-05.
+
+\bibitem{MedicalImageNet}
+Medical image net.
+\newblock \url{http://langlotzlab.stanford.edu/projects/medical-image-net/}.
+\newblock Accessed: 2018-22-05.
+
+\bibitem{TensorRT}
+Nvidia tensorrt.
+\newblock \url{https://developer.nvidia.com/tensorrt}.
+\newblock Accessed: 2018-22-05.
+
+\bibitem{ResNetXoverview}
+An overview of resnet and its variants.
+\newblock
+  \url{https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035}.
+\newblock Accessed: 2018-22-05.
+
 \bibitem{DBLP:journals/corr/abs-1005-4020}
 Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
 \newblock Image segmentation by using threshold techniques.
 \newblock {\em CoRR}, abs/1005.4020, 2010.
+
+\bibitem{DBLP:journals/corr/AroraBGM13}
+Sanjeev Arora, Aditya Bhaskara, Rong Ge, Tengyu Ma.
+\newblock Provable bounds for learning some deep representations.
+\newblock {\em CoRR}, abs/1310.6343, 2013.
 
 \bibitem{Bell2007}
 Robert~M. Bell,  Yehuda Koren.
 \newblock Lessons from the netflix prize challenge.
 \newblock {\em SIGKDD Explor. Newsl.}, 9(2):75--79, Grudzie/n 2007.
 
+\bibitem{Bellman:1957}
+Richard~Ernest Bellman.
+\newblock {\em Dynamic Programming}.
+\newblock Princeton University Press, 1957.
+
 \bibitem{Breiman2001}
 Leo Breiman.
 \newblock Random forests.
 \newblock {\em Machine Learning}, 45(1):5--32, Oct 2001.
+
+\bibitem{Chen:2008:HDV:1370965}
+Chun-houh Chen, Wolfgang Hrdle, Antony Unwin, Chun-houh Chen, Wolfgang Hrdle,
+  Antony Unwin.
+\newblock {\em Handbook of Data Visualization (Springer Handbooks of
+  Computational Statistics)}.
+\newblock Springer-Verlag TELOS, Santa Clara, CA, USA, wydanie 1, 2008.
+
+\bibitem{HMS}
+Junghwan Cho, Eunmi Lee, Hyunkwang Lee, Bob Liu, Xinhua Li, Shahein Tajmir,
+  Dushyant Sahani, Synho Do.
+\newblock Machine learning powered automatic organ classification for patient
+  specific organ dose estimation.
+\newblock {\em Society for Imaging Informatics in Medicine}, wolumen 2017,
+  2017.
 
 \bibitem{DBLP:journals/corr/ChoromanskaHMAL14}
 Anna Choromanska, Mikael Henaff, Micha{\"{e}}l Mathieu, G{\'{e}}rard~Ben Arous,
@@ -21,16 +73,89 @@ Anna Choromanska, Mikael Henaff, Micha{\"{e}}l Mathieu, G{\'{e}}rard~Ben Arous,
 \newblock The loss surface of multilayer networks.
 \newblock {\em CoRR}, abs/1412.0233, 2014.
 
+\bibitem{Christiansen2018}
+Eric~M. Christiansen, Samuel~J. Yang, D.~Michael Ando, Ashkan Javaherian, Gaia
+  Skibinski, Scott Lipnick, Elliot Mount, Alison O'Neil, Kevan Shah, Alicia~K.
+  Lee, Piyush Goyal, William Fedus, Ryan Poplin, Andre Esteva, Marc Berndl,
+  Lee~L. Rubin, Philip Nelson, Steven Finkbeiner.
+\newblock In silico labeling: Predicting fluorescent labels in unlabeled
+  images.
+\newblock {\em Cell}, 173(3):792--803.e19, apr 2018.
+
+\bibitem{BPA}
+Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
+\newblock {Bayesian Model Averaging for Generalized Linear Models with Missing
+  Covariates}.
+\newblock Raport instytutowy, 2013.
+
+\bibitem{imagenet_cvpr09}
+J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, L.~Fei-Fei.
+\newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
+\newblock {\em CVPR09}, 2009.
+
+\bibitem{LungChalenge}
+Qi~Dou, Hao Chen, Lequan Yu, Jing Qin, Pheng-Ann Heng.
+\newblock Multilevel contextual 3-d {CNNs} for false positive reduction in
+  pulmonary nodule detection.
+\newblock {\em {IEEE} Transactions on Biomedical Engineering},
+  64(7):1558--1567, jul 2017.
+
 \bibitem{Duchi:2011:ASM:1953048.2021068}
 John Duchi, Elad Hazan, Yoram Singer.
 \newblock Adaptive subgradient methods for online learning and stochastic
   optimization.
 \newblock {\em J. Mach. Learn. Res.}, 12:2121--2159, Lipiec 2011.
 
+\bibitem{Erickson2017}
+Bradley~J. Erickson, Panagiotis Korfiatis, Zeynettin Akkus, Timothy Kline,
+  Kenneth Philbrick.
+\newblock Toolkits and libraries for deep learning.
+\newblock {\em Journal of Digital Imaging}, 30(4):400--405, Aug 2017.
+
+\bibitem{Erickson2018}
+Bradley~J. Erickson, Panagiotis Korfiatis, Timothy~L. Kline, Zeynettin Akkus,
+  Kenneth Philbrick, Alexander~D. Weston.
+\newblock Deep learning in radiology: Does one size~fit all?
+\newblock {\em Journal of the American College of Radiology}, 15(3):521--526,
+  mar 2018.
+
+\bibitem{Esteva2017}
+Andre Esteva, Brett Kuprel, Roberto~A. Novoa, Justin Ko, Susan~M. Swetter,
+  Helen~M. Blau, Sebastian Thrun.
+\newblock Dermatologist-level classification of skin cancer with deep neural
+  networks.
+\newblock {\em Nature}, 542(7639):115--118, jan 2017.
+
+\bibitem{Glasser2016}
+Matthew~F. Glasser, Timothy~S. Coalson, Emma~C. Robinson, Carl~D. Hacker, John
+  Harwell, Essa Yacoub, Kamil Ugurbil, Jesper Andersson, Christian~F. Beckmann,
+  Mark Jenkinson, Stephen~M. Smith, David C.~Van Essen.
+\newblock A multi-modal parcellation of human cerebral cortex.
+\newblock {\em Nature}, 536(7615):171--178, jul 2016.
+
 \bibitem{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, Aaron Courville.
 \newblock {\em Deep Learning}.
 \newblock MIT Press, 2016.
+
+\bibitem{Gulshan2016}
+Varun Gulshan, Lily Peng, Marc Coram, Martin~C. Stumpe, Derek Wu, Arunachalam
+  Narayanaswamy, Subhashini Venugopalan, Kasumi Widner, Tom Madams, Jorge
+  Cuadros, Ramasamy Kim, Rajiv Raman, Philip~C. Nelson, Jessica~L. Mega,
+  Dale~R. Webster.
+\newblock Development and validation of a deep learning algorithm for detection
+  of diabetic retinopathy in retinal fundus photographs.
+\newblock {\em {JAMA}}, 316(22):2402, dec 2016.
+
+\bibitem{ResNet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
+\newblock Deep residual learning for image recognition.
+\newblock {\em CoRR}, abs/1512.03385, 2015.
+
+\bibitem{DBLP:journals/corr/HeZR016}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
+\newblock Identity mappings in deep residual networks.
+\newblock {\em CoRR}, abs/1603.05027, 2016.
 
 \bibitem{Hill06}
 F.S. Hill,  Stephen~M. Kelly.
@@ -44,6 +169,12 @@ Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, Ruslan
   detectors.
 \newblock {\em CoRR}, abs/1207.0580, 2012.
 
+\bibitem{Ensemble}
+C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
+\newblock {The Relative Performance of Ensemble Methods with Deep Convolutional
+  Neural Networks for Image Classification}.
+\newblock {\em ArXiv e-prints}, Kwiecie/n 2017.
+
 \bibitem{DBLP:journals/corr/KingmaB14}
 Diederik~P. Kingma,  Jimmy Ba.
 \newblock Adam: {A} method for stochastic optimization.
@@ -54,12 +185,37 @@ Patrick Koch, Brett Wujek, Oleg Golovidov, Steven Gardner.
 \newblock Automated hyperparameter tuning for effective machine learning.
 \newblock 2017.
 
+\bibitem{Kowalik2003}
+Stanisław Kowalik.
+\newblock Zastosowanie teorii zbiorów przybliżonych do podejmowania decyzji.
+\newblock {\em Zarządzanie przedsiębiorstwem w erze postindustrialnej –
+  ekonomia, prawo, kultura, etyka}, strony 39--44, Kazimierz Dolny, Polska,
+  2003.
+
+\bibitem{CIFAR}
+Alex Krizhevsky.
+\newblock Learning multiple layers of features from tiny images.
+\newblock Raport instytutowy, 2009.
+\newblock Accessed: 2018-05-21.
+
 \bibitem{Krizhevsky2012}
 Alex Krizhevsky, Ilya Sutskever, Geoffrey~E. Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock {\em Proceedings of the 25th International Conference on Neural
   Information Processing Systems - Volume 1}, NIPS'12, strony 1097--1105, USA,
   2012. Curran Associates Inc.
+
+\bibitem{Intel}
+Y.~Kwon,  M.~Rhu.
+\newblock A case for memory-centric hpc system architecture for training deep
+  neural networks.
+\newblock {\em IEEE Computer Architecture Letters}, 17(2):134--138, July 2018.
+
+\bibitem{ICA}
+K.~N. Leach.
+\newblock A survey paper on independent component analysis.
+\newblock {\em Proceedings of the Thirty-Fourth Southeastern Symposium on
+  System Theory (Cat. No.02EX540)}, strony 239--242, 2002.
 
 \bibitem{Lecun1998}
 Y.~Lecun, L.~Bottou, Y.~Bengio, P.~Haffner.
@@ -73,6 +229,14 @@ Yann LeCun, Bernhard~E. Boser, John~S. Denker, Donnie Henderson, R.~E. Howard,
 \newblock D.~S. Touretzky, redaktor, {\em Advances in Neural Information
   Processing Systems 2}, strony 396--404. Morgan-Kaufmann, 1990.
 
+\bibitem{COCO}
+Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
+  Ramanan, Piotr Doll{\'a}r, C.~Lawrence Zitnick.
+\newblock Microsoft coco: Common objects in context.
+\newblock David Fleet, Tomas Pajdla, Bernt Schiele, Tinne Tuytelaars,
+  redaktorzy, {\em Computer Vision -- ECCV 2014}, strony 740--755, Cham, 2014.
+  Springer International Publishing.
+
 \bibitem{Litjens2017}
 Geert Litjens, Thijs Kooi, Babak~Ehteshami Bejnordi, Arnaud Arindra~Adiyoso
   Setio, Francesco Ciompi, Mohsen Ghafoorian, Jeroen~A.W.M. van~der Laak, Bram
@@ -85,6 +249,20 @@ Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 \newblock Towards better analysis of deep convolutional neural networks.
 \newblock {\em CoRR}, abs/1604.07043, 2016.
 
+\bibitem{DBLP:journals/corr/abs-1803-04014}
+Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
+  Vetter.
+\newblock {NVIDIA} tensor core programmability, performance {\&} precision.
+\newblock {\em CoRR}, abs/1803.04014, 2018.
+
+\bibitem{BMC}
+Miriam Mart{\'i}nez, Luis~Enrique Sucar, Hector~Gabriel Acosta, Nicandro Cruz.
+\newblock Bayesian model combination and its application to cervical cancer
+  detection.
+\newblock Jaime~Sim{\~a}o Sichman, Helder Coelho, Solange~Oliveira Rezende,
+  redaktorzy, {\em Advances in Artificial Intelligence - IBERAMIA-SBIA 2006},
+  strony 622--631, Berlin, Heidelberg, 2006. Springer Berlin Heidelberg.
+
 \bibitem{Minsky1969}
 Seymour~Papert Marvin Lee~Minsky.
 \newblock {\em Perceptrons: An Introduction to Computational Geometry}.
@@ -96,6 +274,23 @@ Warren~S. McCulloch,  Walter Pitts.
 \newblock {\em The bulletin of mathematical biophysics}, 5(4):115--133, Dec
   1943.
 
+\bibitem{Umit2010}
+Ümit V.~Çatalyürek, Cevdet Aykanat, Bora Uçar.
+\newblock On two-dimensional sparse matrix partitioning: Models, methods, and a
+  recipe.
+\newblock {\em SIAM Journal on Scientific Computing}, 32(2):656--683, 2010.
+
+\bibitem{PCA}
+K.~Pearson.
+\newblock On lines and planes of closest fit to systems of points in space.
+\newblock {\em Philosophical Magazine}, 2:559--572, 1901.
+
+\bibitem{2017arXiv170701836R}
+P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
+\newblock {Cardiologist-Level Arrhythmia Detection with Convolutional Neural
+  Networks}.
+\newblock {\em ArXiv e-prints}, Lipiec 2017.
+
 \bibitem{DBLP:journals/corr/RonnebergerFB15}
 Olaf Ronneberger, Philipp Fischer, Thomas Brox.
 \newblock U-net: Convolutional networks for biomedical image segmentation.
@@ -106,11 +301,23 @@ Frank Rosenblatt.
 \newblock The perceptron: A perceiving and recognizing automaton.
 \newblock Raport instytutowy, 1957.
 
+\bibitem{BMA}
+N.~{Russell}, T.~{Brendan Murphy}, A.~E {Raftery}.
+\newblock {Bayesian model averaging in model-based clustering and density
+  estimation}.
+\newblock {\em ArXiv e-prints}, Czerwiec 2015.
+
 \bibitem{Hijazi2015}
 R.~Kumar S.~Hijazi,  C.~Rowen.
 \newblock Using convolutional neural networks for image recognition.
 \newblock Raport instytutowy, Cadence, 2015.
 \newblock Accessed: 2018-05-21.
+
+\bibitem{Sarraf2016}
+Saman Sarraf,  Ghassem Tofighi.
+\newblock Deep learning-based pipeline to recognize
+  alzheimer{\textquotesingle}s disease using {fMRI} data.
+\newblock {\em 2016 Future Technologies Conference ({FTC})}. {IEEE}, dec 2016.
 
 \bibitem{SCHMIDHUBER201585}
 Jürgen Schmidhuber.
@@ -130,6 +337,43 @@ Karen Simonyan, Andrea Vedaldi, Andrew Zisserman.
   models and saliency maps.
 \newblock {\em CoRR}, abs/1312.6034, 2013.
 
+\bibitem{VGGNet}
+Karen Simonyan,  Andrew Zisserman.
+\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock {\em CoRR}, abs/1409.1556, 2014.
+
+\bibitem{DBLP:journals/corr/SixtWL16}
+Leon Sixt, Benjamin Wild, Tim Landgraf.
+\newblock Rendergan: Generating realistic labeled data.
+\newblock {\em CoRR}, abs/1611.01331, 2016.
+
+\bibitem{Song:2014:SUM:2597652.2597670}
+Fengguang Song,  Jack Dongarra.
+\newblock Scaling up matrix computations on shared-memory manycore systems with
+  1000 cpu cores.
+\newblock {\em Proceedings of the 28th ACM International Conference on
+  Supercomputing}, ICS '14, strony 333--342, New York, NY, USA, 2014. ACM.
+
+\bibitem{GoogleNet}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott~E. Reed,
+  Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich.
+\newblock Going deeper with convolutions.
+\newblock {\em CoRR}, abs/1409.4842, 2014.
+
+\bibitem{DBLP:journals/corr/SzegedyVISW15}
+Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew
+  Wojna.
+\newblock Rethinking the inception architecture for computer vision.
+\newblock {\em CoRR}, abs/1512.00567, 2015.
+
+\bibitem{Tajbakhsh2016}
+Nima Tajbakhsh, Jae~Y. Shin, Suryakanth~R. Gurudu, R.~Todd Hurst,
+  Christopher~B. Kendall, Michael~B. Gotway, Jianming Liang.
+\newblock Convolutional neural networks for medical image analysis: Full
+  training or fine tuning?
+\newblock {\em {IEEE} Transactions on Medical Imaging}, 35(5):1299--1312, may
+  2016.
+
 \bibitem{DBLP:journals/corr/TaylorBXSPG16}
 Gavin Taylor, Ryan Burmeister, Zheng Xu, Bharat Singh, Ankit Patel, Tom
   Goldstein.
@@ -137,9 +381,59 @@ Gavin Taylor, Ryan Burmeister, Zheng Xu, Bharat Singh, Ankit Patel, Tom
   approach.
 \newblock {\em CoRR}, abs/1605.02026, 2016.
 
+\bibitem{tenenbaum_global_2000}
+Joshua~B. Tenenbaum, Vin de~Silva, John~C. Langford.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock {\em Science}, 290(5500):2319, 2000.
+
+\bibitem{vanDerMaaten2008}
+Laurens van~der Maaten,  Geoffrey Hinton.
+\newblock Visualizing data using {t-SNE}.
+\newblock {\em Journal of Machine Learning Research}, 9:2579--2605, 2008.
+
+\bibitem{Vesanto00self-organizingmap}
+Juha Vesanto, Johan Himberg, Esa Alhoniemi, Juha Parhankangas.
+\newblock Self-organizing map in matlab: the som toolbox.
+\newblock {\em In Proceedings of the Matlab DSP Conference}, strony 35--40,
+  2000.
+
+\bibitem{2016arXiv160605718W}
+D.~{Wang}, A.~{Khosla}, R.~{Gargeya}, H.~{Irshad}, A.~H. {Beck}.
+\newblock {Deep Learning for Identifying Metastatic Breast Cancer}.
+\newblock {\em ArXiv e-prints}, Czerwiec 2016.
+
+\bibitem{Wolfe2003}
+Michael B.~W. Wolfe,  Susan~R. Goldman.
+\newblock Use of latent semantic analysis for predicting psychological
+  phenomena: Two issues and proposed solutions.
+\newblock {\em Behavior Research Methods, Instruments, {\&} Computers},
+  35(1):22--31, Feb 2003.
+
+\bibitem{Wolpert92stackedgeneralization}
+David~H. Wolpert.
+\newblock Stacked generalization.
+\newblock {\em Neural Networks}, 5:241--259, 1992.
+
 \bibitem{Wurtz2009}
 Robert~H. Wurtz.
 \newblock Recounting the impact of hubel and wiesel.
 \newblock {\em The Journal of Physiology}, 587(12):2817--2823, jun 2009.
+
+\bibitem{ResNetX}
+Saining Xie, Ross~B. Girshick, Piotr Doll{\'{a}}r, Zhuowen Tu, Kaiming He.
+\newblock Aggregated residual transformations for deep neural networks.
+\newblock {\em CoRR}, abs/1611.05431, 2016.
+
+\bibitem{ZFNet}
+Matthew~D. Zeiler,  Rob Fergus.
+\newblock Visualizing and understanding convolutional networks.
+\newblock {\em CoRR}, abs/1311.2901, 2013.
+
+\bibitem{Zhang1994}
+Wei Zhang, Kunio Doi, Maryellen~L. Giger, Yuzheng Wu, Robert~M. Nishikawa,
+  Robert~A. Schmidt.
+\newblock Computerized detection of clustered microcalcifications in digital
+  mammograms using a shift-invariant artificial neural network.
+\newblock {\em Medical Physics}, 21(4):517--524, apr 1994.
 
 \end{thebibliography}

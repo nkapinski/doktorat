@@ -2,10 +2,29 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: header.aux
 The style file: plplain.bst
 Database file #1: refs.bib
+Repeated entry---line 876 of file refs.bib
+ : @article{Breiman2001
+ :                     ,
+I'm skipping whatever remains of this entry
+You're missing a field part---line 899 of file refs.bib
+ :  month=
+ :        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 974 of file refs.bib
+ : @article{Litjens2017
+ :                     ,
+I'm skipping whatever remains of this entry
 Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
 while executing---line 1171 of file plplain.bst
+Warning--to sort, need author or key in TensorRT
+Warning--to sort, need author or key in ResNetXoverview
+Warning--to sort, need author or key in NVIDIApanel
+Warning--to sort, need author or key in MedicalImageNet
+Warning--to sort, need author or key in MGH
+Warning--empty institution in BPA
 Warning--empty booktitle in Koch2017AutomatedHT
+Warning--empty institution in CIFAR
 Warning--empty institution in Rosenblatt1957
 Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
 while executing---line 1225 of file plplain.bst
-(There were 2 error messages)
+(There were 5 error messages)

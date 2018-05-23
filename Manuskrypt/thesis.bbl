@@ -301,6 +301,11 @@ Frank Rosenblatt.
 \newblock The perceptron: A perceiving and recognizing automaton.
 \newblock Raport instytutowy, 1957.
 
+\bibitem{Rumelhart1986}
+David~E. Rumelhart, Geoffrey~E. Hinton, Ronald~J. Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature}, 323(6088):533--536, oct 1986.
+
 \bibitem{BMA}
 N.~{Russell}, T.~{Brendan Murphy}, A.~E {Raftery}.
 \newblock {Bayesian model averaging in model-based clustering and density
@@ -331,6 +336,15 @@ Ramprasaath~R. Selvaraju, Abhishek Das, Ramakrishna Vedantam, Michael Cogswell,
   networks via gradient-based localization.
 \newblock {\em CoRR}, abs/1610.02391, 2016.
 
+\bibitem{10.1007/978-3-319-58667-0_7}
+Dipanjan Sengupta, Yida Wang, Narayanan Sundaram, Theodore~L. Willke.
+\newblock High-performance incremental svm learning on intel
+  {\$}{\$}^{\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}}{\$}{\$}
+  xeon phi{\texttrademark} processors.
+\newblock Julian~M. Kunkel, Rio Yokota, Pavan Balaji, David Keyes, redaktorzy,
+  {\em High Performance Computing}, strony 120--138, Cham, 2017. Springer
+  International Publishing.
+
 \bibitem{DBLP:journals/corr/SimonyanVZ13}
 Karen Simonyan, Andrea Vedaldi, Andrew Zisserman.
 \newblock Deep inside convolutional networks: Visualising image classification
@@ -353,6 +367,12 @@ Fengguang Song,  Jack Dongarra.
   1000 cpu cores.
 \newblock {\em Proceedings of the 28th ACM International Conference on
   Supercomputing}, ICS '14, strony 333--342, New York, NY, USA, 2014. ACM.
+
+\bibitem{InceptionResNet}
+Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke.
+\newblock Inception-v4, inception-resnet and the impact of residual connections
+  on learning.
+\newblock {\em CoRR}, abs/1602.07261, 2016.
 
 \bibitem{GoogleNet}
 Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott~E. Reed,

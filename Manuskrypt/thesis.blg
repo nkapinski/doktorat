@@ -22,6 +22,7 @@ Warning--to sort, need author or key in NVIDIApanel
 Warning--to sort, need author or key in MedicalImageNet
 Warning--to sort, need author or key in MGH
 Warning--empty institution in BPA
+Warning--there's a number but no volume in Curie1880
 Warning--empty booktitle in Koch2017AutomatedHT
 Warning--empty institution in CIFAR
 Warning--empty institution in Rosenblatt1957

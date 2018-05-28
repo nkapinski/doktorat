@@ -169,6 +169,13 @@ Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, Ruslan
   detectors.
 \newblock {\em CoRR}, abs/1207.0580, 2012.
 
+\bibitem{Curie1880}
+Jacques,  Pierre Curie.
+\newblock Development, via compression, of electric polarization in hemihedral
+  crystals with inclined faces.
+\newblock {\em Bulletin de la Societe de Minerologique de France}, (3):90--93,
+  1880.
+
 \bibitem{Ensemble}
 C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
 \newblock {The Relative Performance of Ensemble Methods with Deep Convolutional

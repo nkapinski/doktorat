@@ -28,29 +28,58 @@ Kolejną z metod obrazowania medycznego jest \textit{Ultrasonografia}, w skr. \t
 
 Propagacja fal w przyrodzie była tematem rozważań myślicieli takich jak Pitagoras, Arystoteles czy Galileusz, którzy ugruntowali pole badań pod kolejne osiągnięcia matematyczno-inżynieryjne. W tej kwestii, do jednego z przełomów doszło w 1822 roku, kiedy to szwajcarski inżynier Daniel Colladen oraz matematyk Charles-Francois Sturm wyznaczyli przybliżoną prędkość rozchodzenia się fali akustycznej w wodzie. Badanie wykonano na Jeziorze Genewskim, symultanicznie mierząc czas jaki potrzebny był dźwiękowi podwodnego wystrzału i sygnałowi dzwonka rozchodzącego się w powietrzu, aby przebyły drogę pomiędzy dwoma łódkami oddalonymi o 10 mil. Wyliczona wartość wyniosła wówczas 1435 m/s, nie różniąc się znacząco od dzisiaj przyjmowanej estymacji równej 1484 m/s. 
 
-58 lat później, w 1880 roku bracia Curie opisali w \cite{Curie1880} \textit{efekt piezoelektryczny}, czyli zjawisko polegające na pojawieniu się ładunku elektrycznego pod wpływem naprężeń mechanicznych w krysztale o anizotropowej budowie, takiej jak ma np. kwarc. W przypadku odwrotnym, przyłożenie napięcia do odpowiedniego kryształu generuje drgania.
+58 lat później, w 1880 roku bracia Curie opisali w \cite{Curie1880} \textit{efekt piezoelektryczny}, czyli zjawisko polegające na pojawieniu się ładunku elektrycznego pod wpływem naprężeń mechanicznych w krysztale o anizotropowej budowie, takiej jak ma np. kwarc. W przypadku odwrotnym, przyłożenie napięcia do odpowiedniego kryształu generuje drgania. Efekty te są wykorzystywane w \textit{głowicy aparatu usg}, przyrządu do generowania i odbierania ultradźwięków. 
 
+Przykładowo polaryzowanie kryształu piezoelektrycznego krótkim impulsem typu $\sigma(t)$ pobudza go do drgań gasnących na własnej częstotliwości rezonansowej. Jeżeli kryształ piezoelektryczny ma kształt walca o grubości $x$=0,64mm, to będzie stanowił rezonator półfalowy, w którym wystąpi drganie rezonansowe o długości fali $\lambda = 2x$ czyli $\lambda = 1,28$ mm. Jeżeli wykonany jest z tytanianu baru, dla którego prędkość propagacji drgań wynosi $c$=4460m/s, to częstotliwość drgań własnych tego
+kryształu wyniesie:
+\begin{equation}
+f = \frac{c}{\lambda} = \frac{4460 m/s}{1,28 mm} = 3,5 MHz
+\end{equation}
 
-/*równanie dla głowicy*/ 
-/*co mierzymy - oporność akustyczna, doppler*/
-/*pole bliskie, dalekie*/
-/*artefakty - snella odbicie, rozpraszanie, absorpcja i korygujący gain*/
+Fale generowane przez głowicę aparatu USG rozchodzą się w tkankach miękkich i podobnie jak w doświadczeniu Colladena, można ocenić czas pomiędzy nadaniem i odbiorem sygnału. Dodatkowo we współczesnych aparatach pomiarowych analizowana jest również różnica w amplitudzie i częstotliwości fali nadawanej i odbieranej. Zmiany te są efektem zróżnicowania \textit{impedancji akustycznej ośrodka} $Z$ wyrażanej jako:
+\begin{equation}
+Z = \rho c = \sqrt{\epsilon \rho},
+\end{equation}
+gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka, a $\epsilon$ to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{USG-params} 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.55\textwidth]{figures/USG-params.png}
+	\caption{Parametry ośrodków często mierzonych w badaniach USG.}
+	\label{USG-params}
+\end{figure}
+Kiedy fala pada na granice dwóch ośrodków o różnych impedancjach akustycznych $Z_1$ i $Z_2$ dochodzi do zjawiska częściowego bądź całkowitego odbicia zgodnie z prawem Snella:
+\begin{equation}
+R = \frac{I_r}{I_0} = \left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2,
+\end{equation}
+gdzie $I_0$ to natężenie fali padającej, a $I_0$ odbitej. Natomiast $R$, czyli współczynnik odbicia rośnie wraz ze wzrostem kąta odchylenia od kierunku prostopadłego, aż do całkowitego odbicia.
 
-Zalety: róŜnorodność informacji: obrazowanie w
-czasie rzeczywistym, pomiary morfologiczne
-i fizjologiczne
-elastyczność zastosowań
-niskie koszty
-wykorzystanie bezpiecznego nośnika
-informacji (niejonizującego) 
+Fala propagująca się w ośrodku ulega również osłabieniu w wyniku różnego rodzaju efektów związanych z absorpcją i rozpraszaniem energii, co zapisywane jest następująco:
+\begin{equation}
+I=I_0 \epsilon^{-\gamma x},
+\end{equation}
+gdzie $\gamma$ to współczynnik osłabienia, a $x$ to droga przebyta przez falę. Korekcję osłabiania fali w zadanym torze propagacji fali wykonuje się najczęściej manualnie poprzez dobór odpowiedniego natężenia fali wytwarzanej w głowicy USG, tj. w praktyce takiego, który umożliwi radiologowi możliwie najlepszą obserwacje danego ośrodka. 
 
-Dynamicznie rozwijająca się modalność
-obrazowania
-Powszechność zastosowań
-Kompleksowa informacja diagnostyczna:
-morfologia z badaniem funkcjonalnym
-Podatność na nowe metody doskonalenia
-efektów obrazowania
+Dodatkowo należy zwrócić uwagę, że każdy punkt powierzchni drgającego przetwornika jest źródłem fali kulistej, emitowanej w ośrodku nagłaśnianym. W pobliżu przetwornika występują z tego powodu liczne interferencje, zarówno poprzeczne jak i wzdłużne. Obszar, w którym interferencje występują, nazywany jest \textit{polem bliskim}. Obszar, w którym fala mechaniczna propaguje się już w sposób jednorodny, bez interferencji, nazywany jest polem dalekim. 
+
+W przypadku przechodzenia fali przez ośrodki względem siebie się przesuwające dochodzi do efektu dopplera zapisywanego wzorem:
+\begin{equation}
+F = 2 f_o\frac{v}{c}(v/c)\cos{Q},
+\end{equation} 
+gdzie $F$ to zmiana częstotliwości fali nadawanej $f_0$, zależna od kąta $Q$ pomiędzy falą i ośrodkiem poruszającym się i prędkościami rozchodzenia się fali w obu ośrodkach tj. $v$ i $c$. Efekt Dopplera jest zwłaszcza przydatny do monitorowania przepływu krwi w tkankach.
+
+/*składanie obrazu USG*/
+\begin{itemize}
+	\item obrazowanie w czasie rzeczywistym.
+	\item pomiary morfologiczne i fizjologiczne.
+	\item niskie koszty w porównaniu np. do MR czy TK.
+	\item bezpieczeństwo - promieniowanie jest niejonizujące jak w przypadku promieni Rentgena.
+\end{itemize}
+
+/*Kontekst ścięgna wykorzystujący te plusy:
+W kontekście monitorowania gojenia się ścięgna zwraca się uwagę na unaczynienie tkanek miękkich, które być szczególnie intensywne w 1 fazie gojenia się ścięgna i stopniowo zanikać w kolejnych okresach.
+
+Funkcjonalne i morfologiczne i doppler
+*/
 
 \section{Zastosowanie badań biomechanicznych}
 \section{Inne metody}

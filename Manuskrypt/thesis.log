@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  29 MAY 2018 12:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  5 JUN 2018 15:44
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -871,18 +871,28 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [6 <./figures/USG-params.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 72.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 76.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 76.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 76.
+
+Underfull \vbox (badness 2409) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[7]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 94.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 72.
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[7]) (Rozdzialy/sieci.tex
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 94.
+) (Rozdzialy/sieci.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -895,13 +905,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [10]
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 48.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 48.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 48.
-<figures/DLworkflow.png, id=80, 1636.1125pt x 439.6425pt>
+<figures/DLworkflow.png, id=82, 1636.1125pt x 439.6425pt>
 File: figures/DLworkflow.png Graphic file (type png)
 <use figures/DLworkflow.png>
 Package pdftex.def Info: figures/DLworkflow.png  used on input line 51.
@@ -911,7 +915,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [11]
-<figures/perceptron.png, id=84, 828.09375pt x 460.72125pt>
+<figures/perceptron.png, id=86, 828.09375pt x 460.72125pt>
 File: figures/perceptron.png Graphic file (type png)
 <use figures/perceptron.png>
 Package pdftex.def Info: figures/perceptron.png  used on input line 68.
@@ -1422,7 +1426,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (62 pages, 2343607 bytes).
+Output written on thesis.pdf (62 pages, 2346971 bytes).
 PDF statistics:
  312 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

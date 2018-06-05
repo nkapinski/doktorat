@@ -47,7 +47,7 @@ gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka,
 	\caption{Parametry ośrodków często mierzonych w badaniach USG.}
 	\label{USG-params}
 \end{figure}
-Kiedy fala pada na granice dwóch ośrodków o różnych impedancjach akustycznych $Z_1$ i $Z_2$ dochodzi do zjawiska częściowego bądź całkowitego odbicia zgodnie z prawem Snella:
+Kiedy fala pada na granice dwóch ośrodków o różnych impedancjach akustycznych $Z_1$ i $Z_2$ dochodzi do zjawiska częściowego bądź całkowitego odbicia opisanego prawem Snella:
 \begin{equation}
 R = \frac{I_r}{I_0} = \left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2,
 \end{equation}
@@ -61,15 +61,37 @@ gdzie $\gamma$ to współczynnik osłabienia, a $x$ to droga przebyta przez fal�
 
 Dodatkowo należy zwrócić uwagę, że każdy punkt powierzchni drgającego przetwornika jest źródłem fali kulistej, emitowanej w ośrodku nagłaśnianym. W pobliżu przetwornika występują z tego powodu liczne interferencje, zarówno poprzeczne jak i wzdłużne. Obszar, w którym interferencje występują, nazywany jest \textit{polem bliskim}. Obszar, w którym fala mechaniczna propaguje się już w sposób jednorodny, bez interferencji, nazywany jest polem dalekim. 
 
-W przypadku przechodzenia fali przez ośrodki względem siebie się przesuwające dochodzi do efektu dopplera zapisywanego wzorem:
+/*o dopplerze masz więcej w beamforming.pdf*/
+W przypadku przechodzenia fali przez ośrodki względem siebie się przesuwające dochodzi do efektu Dopplera zapisywanego wzorem:
 \begin{equation}
 F = 2 f_o\frac{v}{c}(v/c)\cos{Q},
 \end{equation} 
-gdzie $F$ to zmiana częstotliwości fali nadawanej $f_0$, zależna od kąta $Q$ pomiędzy falą i ośrodkiem poruszającym się i prędkościami rozchodzenia się fali w obu ośrodkach tj. $v$ i $c$. Efekt Dopplera jest zwłaszcza przydatny do monitorowania przepływu krwi w tkankach.
+gdzie $F$ to zmiana częstotliwości fali nadawanej $f_0$, zależna od kąta $Q$ pomiędzy falą i ośrodkiem poruszającym się i prędkościami rozchodzenia się fali w obu ośrodkach tj. $v$ i $c$. Efekt Dopplera jest wykorzystywany w praktyce np. do monitorowania przepływu krwi w tkankach.
 
-/*składanie obrazu USG*/
+Podsumowując, obecnie stosowana najczęściej rekonstrukcja obrazu USG (tzw. \textit{beamforming}) wygląda następująco:
+
+/*zamień poniższy tekst na punkty*/
+
+Obraz tworzony jest w ten sposób, że głowica ultradźwiękowa emituje impulsy w
+postaci wąskiej wiązki w ściśle określonym kierunku. Wiązka zawiera sygnał z $N$ przetworników składających się z kryształów piezoelektrycznych\footnote{nowością i przewidywaną przyszłością USG jest praktyczne stosowanie przetworników w technologii cMUT i pMUT, co umożliwia miniaturyzację urządzeń np. [http://news.mit.edu/2018/startup-butterfly-network-ultrasound-smartphone-0207]} 
+
+Następnie odbiera z tego kierunku echa, powstające na niejednorodnościach struktur biologicznych. Wypadkowa charakterystyka kierunkowa jest iloczynem charakterystyk przy nadawaniu i odbiorze, co pozwala na formowanie pojedynczego promienia akustycznego. Po odsłuchaniu i zapamiętaniu wszystkich ech z tego promienia
+głowica ultradźwiękowa emituje kolejny promień. Po zapamiętaniu ech ze wszystkich
+promieni, a we współczesnych aparatach USG jest ich od 32 do 512, aparat wyświetla zapamiętany obraz. Obraz I może być tworzony we współrzędnych biegunowych – głowice: mechaniczna sektorowa,
+I(r,$\theta$) wieloelementowa convex, fazowa.
+We współrzędnych prostokątnych – głowice: mechaniczna liniowa,
+I(x,y) wieloelementowa liniowa. Niewielka prędkość propagacji ultradźwięków w tkance powoduje, że obraz w
+prezentacji I jest obrazem stacjonarnym. Jeżeli na obraz I składa się 400 promieni i
+każdy odsłuchiwany jest do głębokości 25cm, to czas gromadzenia danych wynosi
+2x25cm/1500m/sx400 = 0,133s. Daje to około 8obrazów/s. Poprawa stosunku
+31
+sygnał-szum, uzyskiwana metodą uśredniania kilku kolejnych obrazów prowadzi do
+dalszego wydłużenia czasu gromadzenia obrazu – do około 0,5s lub więcej (nawet
+do 2s). 
+
+Do najważniejszych zalet USG należy zaliczyć:
 \begin{itemize}
-	\item obrazowanie w czasie rzeczywistym.
+	\item możliwe obrazowanie w czasie rzeczywistym.
 	\item pomiary morfologiczne i fizjologiczne.
 	\item niskie koszty w porównaniu np. do MR czy TK.
 	\item bezpieczeństwo - promieniowanie jest niejonizujące jak w przypadku promieni Rentgena.

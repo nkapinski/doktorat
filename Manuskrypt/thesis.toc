@@ -4,9 +4,9 @@
 \contentsline {section}{\numberline {3.1}\IeC {\'S}ci\IeC {\k e}gno Achillesa}{3}
 \contentsline {subsection}{\numberline {3.1.1}Anatomia}{4}
 \contentsline {subsection}{\numberline {3.1.2}Biomechanika}{4}
-\contentsline {subsection}{\numberline {3.1.3}Urazy i czynniki im sprzyjaj\IeC {\k a}ce}{5}
-\contentsline {subsection}{\numberline {3.1.4}Leczenie, fazy gojenia i rehabilitacja}{5}
-\contentsline {section}{\numberline {3.2}Zastosowanie rezonansu magnetycznego}{5}
+\contentsline {subsection}{\numberline {3.1.3}Urazy i czynniki im sprzyjaj\IeC {\k a}ce}{4}
+\contentsline {subsection}{\numberline {3.1.4}Leczenie, fazy gojenia i rehabilitacja}{4}
+\contentsline {section}{\numberline {3.2}Zastosowanie rezonansu magnetycznego}{4}
 \contentsline {section}{\numberline {3.3}Zastosowanie ultrasonografii}{5}
 \contentsline {section}{\numberline {3.4}Zastosowanie bada\IeC {\'n} biomechanicznych}{8}
 \contentsline {section}{\numberline {3.5}Inne metody}{8}

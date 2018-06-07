@@ -36,9 +36,33 @@ gdzie $\omega_0$ to prędkość obrotowa protonów (tzw. częstotliwość Larmor
 
 Rezonujące protony mają własności podobne do magnesów prętowych i mogą być ukierunkowane przy pomocy pola magnetycznego. Protony o wysokich poziomach energii odchylają się przeciwnie do kierunku zadanego pola magnetycznego tzw. \textit{protony antyrównoległe}, a o niskich poziomach energii odchylają się zgodnie z kierunkiem pola tzw. \textit{protony równoległe}. W przeciętnym wycinku ciała ludzkiego jest więcej protonów równoległych niż antyrównoległych. Przykładowo w objętości 1 $\times$ 1 $\times$ 5 mm jest to liczba około 2 $\times$ $10^15$ cząstek.
 
-Znajomość reakcji protonów na zadane pole magnetyczne doprowadziła do powstania różnych sekwencji MR, które charakteryzują się różnymi mierzonymi parametrami i mają często odmienne własności aplikacyjne. W tej pracy zostało użytych 10 różnych sekwencji MR: T1, T2, T2 mapping, T2 $^\ast$ GRE Gradient Echo i T2 $^\ast$ GRE TE\_MIN [Minimal Time Echo], PD [Proton Density], oraz cztery protokoły z sekwencji 3D FSPGR Ideal [Fast Spoiled Gradient Echo] tj. (In Phase, Out Phase, Fat, Water). Zostaną one pokrótce scharakteryzowane w kolejnych punktach:
+Z uwagi na różne parametry mierzone w reakcji protonów na zadane pole magnetyczne powstało wiele różnych sekwencji MR, które mają często odmienne własności aplikacyjne. W tej pracy zostało użytych 10 różnych sekwencji MR. Zostaną one pokrótce scharakteryzowane w kolejnych punktach:
 \begin{itemize}
-	\item Sekwencja T1 -- 
+	\item \textit{T1} -- mierzona jest \textit{relaksacja T1}, a zatem czas potrzebny protonom na powrót do stanu początkowego po odchyleniu o 90$^\circ$. Sygnał rezonansu magnetycznego $MR_s$ można obliczyć z zależności:
+	\begin{equation}
+		MR_s \sim \gamma_{pd} \ast [1-e^{-TR/T1}],
+	\end{equation}
+	gdzie $\gamma_{pd}$ to gęstość protonowa tkanki, $TR$ to \textit{czas repetycji} określany przez użytkownika.
+	\item \textit{T2} -- mierzona jest \textit{relaksacja T2}, tj. czas potrzebny do utraty spoistości pomiędzy między spinami. Dokładniej mówiąc różnice w częstotliwości Larmora powstające w czasie, wynikające z umiejscowienia protonów w różnych ośrodkach i niejednorodności w pobudzeniach polem magnetycznym. $MR_s$ przyjmuje wówczas następującą zależność:
+	\begin{equation}
+	MR_s \sim \gamma_{pd} \ast [1-e^{-TE/T2}],
+	\end{equation}
+	gdzie $TE$ to \textit{czas echa} zdefiniowany przez użytkownika.
+	\item \textit{PD} (od ang. \textit{Proton Density}) -- mierzona jest gęstość spinowa tkanki wprost proporcjonalna do liczby protonów. Wówczas:
+	\begin{equation}
+	MR_s \sim \gamma_{pd}.
+	\end{equation}
+	\item \textit{T2 mapping} -- dla wielu TE
+	\item \textit{T2 $^\ast$ GRE} (od ang. \textit{Gradient Echo}) -- w sekwencjach gradientowych protony odchylane są o kąt mniejszy od $90^\circ$ (zazwyczaj 10$^\circ$ -- 80$^\circ$). $MR_s$ jest wówczas zależne od obu czynników $T1$ i $T2$:
+	\begin{equation}
+	MR_s \sim \gamma_{pd} \ast [1-e^{-TE/T2}][1-e^{-TR/T1}],
+	\end{equation}
+	przy czym dla mniejszych kątów wkład $T2$ rośnie w stosunku do wkładu $T1$.
+	\item \textit{T2 $^\ast$ GRE TE\_MIN} (od ang. \textit{Minimal Time Echo}) --
+	\item \textit{3D FSPGR In Phase Ideal} (od ang. \textit{Fast Spoiled Gradient Echo}) -- spoiled to rozfazowanie
+	\item \textit{3D FSPGR Out Phase Ideal} --
+	\item \textit{3D FSPGR Fat Ideal} --
+	\item \textit{3D FSPGR Water Ideal} -- 
 \end{itemize}
 
 /*akapit o tworzeniu obrazu*/

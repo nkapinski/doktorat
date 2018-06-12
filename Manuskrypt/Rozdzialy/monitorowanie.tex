@@ -22,6 +22,9 @@ Zadaniem ścięgien jest transfer siły mięśniowej do układu szkieletowego.
 \subsection{Urazy i czynniki im sprzyjające}
 \subsection{Leczenie, fazy gojenia i rehabilitacja}
 \label{gojenie}
+/* fizjoterapia */
+/* fizykoterapia - fala, amplituda, częstotliwość*/ 
+
 \section{Zastosowanie rezonansu magnetycznego}
 Obrazowanie metodą \textit{Magnetycznego Rezonansu}, w skr. \textit{MR} (ang. \textit{Magnetic Resonance Imaging}, w skr. \textit{MRI}) jest metodą bazującą na odpowiednim odczycie reakcji atomów na silne pole magnetyczne. Zrozumienie tych procesów było efektem prac związanych z mechaniką kwantową takich jak: Einstein, Edwin Shrodinger, Heisenberg czy Pauli /*uzupełnij z licznych książek - krótką historię*/. Wymienione prace z początku XX wieku umożliwiły rozwój technologii MR zainicjowane zrozumieniem w latach 30-tych magnetycznej natury \textit{protonów}, cząstek subatomowych, które wraz z \textit{neutronami} wchodzą w skład jądra atomowego (zob. [1933 - stern gerlach]).
 
@@ -34,17 +37,22 @@ Cząstki o niezerowym spinie pochłaniają fale elektromagnetyczne o specyficzne
 \end{equation}
 gdzie $\omega_0$ to prędkość obrotowa protonów (tzw. częstotliwość Larmora), $\gamma$ to współczynnik żyromagnetyczny właściwy danemu protonowi, a $\beta_0$ to wartość zadanego pola magnetycznego. Dla przykładu częstotliwość Larmora dla protonu wodoru, gdzie $\gamma$=42,57 MHz/T dla pola 1,5T równa jest 63,8 MHz. Wodór jest najczęściej wykorzystywanym pierwiastkiem w metodzie rezonansu magnetycznego, gdyż jest obecny w 99,98\% ludzkich tkanek (za [MR]). Jednak w szczególnych przypadkach stosuje się również obrazowania z wykorzystaniem częstotliwości odpowiednich dla fosforu, sodu czy węgla (zob. []).
 
-Rezonujące protony mają własności podobne do magnesów prętowych i mogą być ukierunkowane przy pomocy pola magnetycznego. Protony o wysokich poziomach energii odchylają się przeciwnie do kierunku zadanego pola magnetycznego tzw. \textit{protony antyrównoległe}, a o niskich poziomach energii odchylają się zgodnie z kierunkiem pola tzw. \textit{protony równoległe}. W przeciętnym wycinku ciała ludzkiego jest więcej protonów równoległych niż antyrównoległych. Przykładowo w objętości 1 $\times$ 1 $\times$ 5 mm jest to liczba około 2 $\times$ $10^15$ cząstek.
+Rezonujące protony mają własności podobne do magnesów prętowych i mogą być ukierunkowane przy pomocy pola magnetycznego. Protony o wysokich poziomach energii odchylają się przeciwnie do kierunku zadanego pola magnetycznego tzw. \textit{protony antyrównoległe}, a o niskich poziomach energii odchylają się zgodnie z kierunkiem pola tzw. \textit{protony równoległe}. W przeciętnym wycinku ciała ludzkiego jest więcej protonów równoległych niż antyrównoległych. Przykładowo w objętości 1 $\times$ 1 $\times$ 5 mm jest to liczba około 2 $\times$ $10^15$ cząstek. Różnica ta tworzy całkowitą magnetyzację $M_0$ danego obszaru.
 
-Z uwagi na różne parametry mierzone w reakcji protonów na zadane pole magnetyczne powstało wiele różnych sekwencji MR, które mają często odmienne własności aplikacyjne. W tej pracy zostało użytych 10 różnych sekwencji MR. Zostaną one pokrótce scharakteryzowane w kolejnych punktach:
+Przy pomocy sterowanych impulsów o częstotliwości fal radiowych (tzw. $impulsy RF$) wykonywana jest zmiana $M_0$ obszaru, tworząca sygnał MR. Impulsy RF zawierają przestrzennie zmieniające się pole magnetyczne różnicujące częstotliwość i fazę precesji protonów, co wykorzystywane jest do kodowania lokalizacji przestrzennej $x$, $y$ sygnału. Kodowanie warstwy $z$ odbywa się na podstawie ustawiania częstotliwości Larmora dla danego obszaru.
+
+Nieprzetworzona informacja z kierunków $x$, $y$, $z$ nazywana jest $przestrzenią K$ i koduje ona składniki częstotliwości sygnału. Do transformacji z przestrzeni częstotliwości na przestrzeń obrazu używana jest operacja matematyczna zwana \textit{odwrotną transformacją Fouriera}. Przykład takiego działania można znalexć w [http://mriquestions.com/fourier-transform-ft.html].
+
+Z uwagi na różne parametry mierzone w reakcji protonów na zadane pole magnetyczne powstało wiele \textit{sekwencji MR} oraz ich składowych nazywanych w tej pracy \textit{protokołami MR}. Do badań opisanych w dalszej części tego manuskryptu zostało użytych 10 często stosowanych wariantów pracy rezonansu magnetycznego. Zostaną one pokrótce scharakteryzowane poniżej:
 \begin{itemize}
 	\item \textit{T1} -- mierzona jest \textit{relaksacja T1}, a zatem czas potrzebny protonom na powrót do stanu początkowego po odchyleniu o 90$^\circ$. Sygnał rezonansu magnetycznego $MR_s$ można obliczyć z zależności:
 	\begin{equation}
 		MR_s \sim \gamma_{pd} \ast [1-e^{-TR/T1}],
 	\end{equation}
 	gdzie $\gamma_{pd}$ to gęstość protonowa tkanki, $TR$ to \textit{czas repetycji} określany przez użytkownika.
-	\item \textit{T2} -- mierzona jest \textit{relaksacja T2}, tj. czas potrzebny do utraty spoistości pomiędzy między spinami. Dokładniej mówiąc różnice w częstotliwości Larmora powstające w czasie, wynikające z umiejscowienia protonów w różnych ośrodkach i niejednorodności w pobudzeniach polem magnetycznym. $MR_s$ przyjmuje wówczas następującą zależność:
+	\item \textit{T2} -- mierzona jest \textit{relaksacja T2}, tj. czas potrzebny do utraty spoistości pomiędzy między spinami. Dokładniej mówiąc mierzone są różnice w częstotliwości Larmora powstające w czasie, wynikające z umiejscowienia protonów w różnych ośrodkach i niejednorodności w pobudzeniach polem magnetycznym. $MR_s$ przyjmuje wówczas następującą zależność:
 	\begin{equation}
+	\label{T2ecquation}
 	MR_s \sim \gamma_{pd} \ast [1-e^{-TE/T2}],
 	\end{equation}
 	gdzie $TE$ to \textit{czas echa} zdefiniowany przez użytkownika.
@@ -52,24 +60,24 @@ Z uwagi na różne parametry mierzone w reakcji protonów na zadane pole magnety
 	\begin{equation}
 	MR_s \sim \gamma_{pd}.
 	\end{equation}
-	\item \textit{T2 mapping} -- dla wielu TE
-	\item \textit{T2 $^\ast$ GRE} (od ang. \textit{Gradient Echo}) -- w sekwencjach gradientowych protony odchylane są o kąt mniejszy od $90^\circ$ (zazwyczaj 10$^\circ$ -- 80$^\circ$). $MR_s$ jest wówczas zależne od obu czynników $T1$ i $T2$:
+	\item \textit{T2 mapping} -- $T2$ z sygnału \ref{T2ecquation} mierzona jest dla wielu $TE$, co pozwala na interpolacje między wynikami z własnym doborem parametrów (zob. [Regulski]).
+	\item \textit{T2 $^\ast$ GRE} (od ang. \textit{Gradient Echo}) -- w sekwencjach gradientowych protony odchylane są o kąt mniejszy od $90^\circ$ (zazwyczaj 10$^\circ$ -- 80$^\circ$). Odchylenia protonów występują w sekwencji prowadząc do cyklicznego przefazowania spinów. Dzięki temu uzyskuje się skupione echo gradientowe w czasie $TE$, w którym sygnał $MR_s$ jest zależny od obu czynników $T1$ i $T2$:
 	\begin{equation}
 	MR_s \sim \gamma_{pd} \ast [1-e^{-TE/T2}][1-e^{-TR/T1}],
 	\end{equation}
 	przy czym dla mniejszych kątów wkład $T2$ rośnie w stosunku do wkładu $T1$.
-	\item \textit{T2 $^\ast$ GRE TE\_MIN} (od ang. \textit{Minimal Time Echo}) --
-	\item \textit{3D FSPGR In Phase Ideal} (od ang. \textit{Fast Spoiled Gradient Echo}) -- spoiled to rozfazowanie
-	\item \textit{3D FSPGR Out Phase Ideal} --
-	\item \textit{3D FSPGR Fat Ideal} --
-	\item \textit{3D FSPGR Water Ideal} -- 
+	\item \textit{T2 $^\ast$ GRE TE\_MIN} (od ang. \textit{Minimal Time Echo}) -- mierzone jest $T2$ z sygnału \ref{T2ecquation} przy minimalnym czasie $TE$ i tylko dla fragmentu przestrzeni K. 
+	\item \textit{3D FSPGR} (od ang. \textit{Fast Spoiled Gradient Echo}) -- jest to szybka sekwencja gradientowa, wykorzystująca echo szczątkowe oraz \textit{spoiler}, tj. metodę do rozbicia wszelkiej pozostałej magnetyzacji na końcu każdego cyklu przefazowania. W tej pracy użyto czterech protokołów tej sekwencji. Wszystkie bazują na różnicy w częstotliwościach rezonansowych protonów wchodzących w skład tłuszczu i wody. Dokładniej:
+	\begin{itemize}
+		\item In Phase Ideal -- sygnał mierzony w czasie, gdy protony należące do tłuszczu i wody są w zgodnej fazie;
+		\item Out Phase Ideal -- sygnał mierzony w czasie, gdy protony należące do tłuszczu i wody są w antyfazie;
+		\item Fat Ideal -- sygnał mierzony przy maksymalnej fazie protonów tłuszczu i minimalnej protonów wody;
+		\item Water Ideal -- sygnał mierzony przy maksymalnej fazie protonów wody i minimalnej protonów tłuszczu.
+	\end{itemize}
 \end{itemize}
 
-/*akapit o tworzeniu obrazu*/
+/*zastosowanie do monitorowania Achillesa*/
 
-
-
-/* chyba jednak do USG - fala, amplituda, częstotliwość*/ 
 \section{Zastosowanie ultrasonografii}
 
 Kolejną z metod obrazowania medycznego jest \textit{Ultrasonografia}, w skr. \textit{USG} (ang. \textit{Ultrasonography}, \textit{US}). Bazuje ona na efektach związanych z propagacją w tkankach \textit{ultradźwięków}, tj. fal akustycznych o częstotliwościach powyżej 20 kHz.

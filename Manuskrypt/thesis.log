@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  13 JUN 2018 14:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  13 JUN 2018 16:04
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -933,20 +933,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[11]) (Rozdzialy/sieci.tex
+[11]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [12]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[13]) (Rozdzialy/sieci.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[14]
 Rozdzia\PlPrIeC {\l } 4.
-[13
+[15
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[14]
-<figures/DLworkflow.png, id=94, 1636.1125pt x 439.6425pt>
+[16]
+<figures/DLworkflow.png, id=101, 1636.1125pt x 439.6425pt>
 File: figures/DLworkflow.png Graphic file (type png)
 <use figures/DLworkflow.png>
 Package pdftex.def Info: figures/DLworkflow.png  used on input line 51.
@@ -955,8 +963,8 @@ Package pdftex.def Info: figures/DLworkflow.png  used on input line 51.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[15]
-<figures/perceptron.png, id=98, 828.09375pt x 460.72125pt>
+[17]
+<figures/perceptron.png, id=105, 828.09375pt x 460.72125pt>
 File: figures/perceptron.png Graphic file (type png)
 <use figures/perceptron.png>
 Package pdftex.def Info: figures/perceptron.png  used on input line 68.
@@ -965,8 +973,8 @@ Package pdftex.def Info: figures/perceptron.png  used on input line 68.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[16 <./figures/DLworkflow.png>]
-<figures/MLperceptron.png, id=104, 853.1875pt x 813.0375pt>
+[18 <./figures/DLworkflow.png>]
+<figures/MLperceptron.png, id=110, 853.1875pt x 813.0375pt>
 File: figures/MLperceptron.png Graphic file (type png)
 <use figures/MLperceptron.png>
 Package pdftex.def Info: figures/MLperceptron.png  used on input line 88.
@@ -975,8 +983,8 @@ Package pdftex.def Info: figures/MLperceptron.png  used on input line 88.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[17 <./figures/perceptron.png>]
-<figures/lenet.png, id=109, 734.745pt x 196.735pt>
+[19 <./figures/perceptron.png>]
+<figures/lenet.png, id=115, 734.745pt x 196.735pt>
 File: figures/lenet.png Graphic file (type png)
 <use figures/lenet.png>
 Package pdftex.def Info: figures/lenet.png  used on input line 104.
@@ -989,7 +997,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[18 <./figures/MLperceptron.png>]
+[20 <./figures/MLperceptron.png>]
 Overfull \hbox (2.63808pt too wide) in paragraph at lines 123--124
 []\OT4/cmr/m/n/12 Szereg me-tod opty-ma-li-za-cyj-nych nie-gra-dien-to-wych zo-
 sta-ªo opra-co-wa-nych (zob. [67]),
@@ -999,15 +1007,7 @@ sta-ªo opra-co-wa-nych (zob. [67]),
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[19 <./figures/lenet.png>]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[20]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[21]
+[21 <./figures/lenet.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1016,7 +1016,15 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [23]
-<figures/cross-validation.png, id=133, 419.166pt x 216.81pt>
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[24]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[25]
+<figures/cross-validation.png, id=139, 419.166pt x 216.81pt>
 File: figures/cross-validation.png Graphic file (type png)
 <use figures/cross-validation.png>
 Package pdftex.def Info: figures/cross-validation.png  used on input line 214.
@@ -1029,23 +1037,23 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[24]
+[26]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[25 <./figures/cross-validation.png>]
+[27 <./figures/cross-validation.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[26]
+[28]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[27]
-<figures/PCA.png, id=146, 432.4155pt x 322.20375pt>
+[29]
+<figures/PCA.png, id=153, 432.4155pt x 322.20375pt>
 File: figures/PCA.png Graphic file (type png)
 <use figures/PCA.png>
 Package pdftex.def Info: figures/PCA.png  used on input line 297.
@@ -1058,16 +1066,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[28]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[29 <./figures/PCA.png>]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [30]
-<figures/ILSVRC.png, id=159, 589.0005pt x 358.33875pt>
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[31 <./figures/PCA.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[32]
+<figures/ILSVRC.png, id=165, 589.0005pt x 358.33875pt>
 File: figures/ILSVRC.png Graphic file (type png)
 <use figures/ILSVRC.png>
 Package pdftex.def Info: figures/ILSVRC.png  used on input line 349.
@@ -1080,8 +1088,8 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[31]
-<figures/AlexNet.png, id=163, 225.84375pt x 147.55125pt>
+[33]
+<figures/AlexNet.png, id=169, 225.84375pt x 147.55125pt>
 File: figures/AlexNet.png Graphic file (type png)
 <use figures/AlexNet.png>
 Package pdftex.def Info: figures/AlexNet.png  used on input line 360.
@@ -1101,18 +1109,18 @@ Overfull \hbox (3.12512pt too wide) in paragraph at lines 367--368
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[32 <./figures/ILSVRC.png>]
+[34 <./figures/ILSVRC.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[33 <./figures/AlexNet.png>]
+[35 <./figures/AlexNet.png>]
 Overfull \hbox (24.95712pt too wide) in paragraph at lines 374--375
 []\OT4/cmr/m/n/12 Rezultat w po-sta-ci ma-cie-rzy $\OML/plm/m/it/12 C$ \OT4/cmr
 /m/n/12 po-now-nie prze-wy-mia-ro-wa-ny jest na po-sta¢ [55$\OMS/plsy/m/n/12 $
 \OT4/cmr/m/n/12 55$\OMS/plsy/m/n/12 $\OT4/cmr/m/n/12 96]. 
  []
 
-<figures/AlexNet-multiGPU.png, id=172, 627.5445pt x 208.98074pt>
+<figures/AlexNet-multiGPU.png, id=179, 627.5445pt x 208.98074pt>
 File: figures/AlexNet-multiGPU.png Graphic file (type png)
 <use figures/AlexNet-multiGPU.png>
 Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 383.
@@ -1121,8 +1129,8 @@ Package pdftex.def Info: figures/AlexNet-multiGPU.png  used on input line 383.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[34 <./figures/AlexNet-multiGPU.png>]
-<figures/InceptionModules.png, id=177, 553.46774pt x 149.358pt>
+[36 <./figures/AlexNet-multiGPU.png>]
+<figures/InceptionModules.png, id=183, 553.46774pt x 149.358pt>
 File: figures/InceptionModules.png Graphic file (type png)
 <use figures/InceptionModules.png>
 Package pdftex.def Info: figures/InceptionModules.png  used on input line 401.
@@ -1131,13 +1139,13 @@ Package pdftex.def Info: figures/InceptionModules.png  used on input line 401.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[35 <./figures/InceptionModules.png>]
-<figures/GoogleNet.png, id=181, 1071.40276pt x 248.72925pt>
+[37 <./figures/InceptionModules.png>]
+<figures/GoogleNet.png, id=187, 1071.40276pt x 248.72925pt>
 File: figures/GoogleNet.png Graphic file (type png)
 <use figures/GoogleNet.png>
 Package pdftex.def Info: figures/GoogleNet.png  used on input line 411.
 (pdftex.def)             Requested size: 441.01773pt x 102.38574pt.
-<figures/GoogleNetparams.png, id=182, 578.76225pt x 310.15875pt>
+<figures/GoogleNetparams.png, id=188, 578.76225pt x 310.15875pt>
 File: figures/GoogleNetparams.png Graphic file (type png)
 <use figures/GoogleNetparams.png>
 Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 420.
@@ -1146,8 +1154,8 @@ Package pdftex.def Info: figures/GoogleNetparams.png  used on input line 420.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[36 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>]
-<figures/ResidualBlock.jpg, id=186, 472.164pt x 186.09525pt>
+[38 <./figures/GoogleNet.png> <./figures/GoogleNetparams.png>]
+<figures/ResidualBlock.jpg, id=192, 472.164pt x 186.09525pt>
 File: figures/ResidualBlock.jpg Graphic file (type jpg)
 <use figures/ResidualBlock.jpg>
 Package pdftex.def Info: figures/ResidualBlock.jpg  used on input line 439.
@@ -1159,7 +1167,7 @@ Underfull \vbox (badness 1845) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[37]
+[39]
 Overfull \hbox (16.15782pt too wide) in paragraph at lines 461--463
 []$ \OT4/cmr/m/n/12 pro-pa-go-wa-n¡ bez wpªy-wu na war-stwy za-wie-ra-j¡-ce wa-
 gi i (2) $\OML/plm/m/it/12 $ \OT4/cmr/m/n/12 = $[][] [][] \OML/plm/m/it/12 F\O
@@ -1170,8 +1178,8 @@ T4/cmr/m/n/12 (\OML/plm/m/it/12 x[]; W[]\OT4/cmr/m/n/12 )$
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[38 <./figures/ResidualBlock.jpg>]
-<figures/ResNet.png, id=193, 676.32675pt x 208.3785pt>
+[40 <./figures/ResidualBlock.jpg>]
+<figures/ResNet.png, id=200, 676.32675pt x 208.3785pt>
 File: figures/ResNet.png Graphic file (type png)
 <use figures/ResNet.png>
 Package pdftex.def Info: figures/ResNet.png  used on input line 481.
@@ -1180,16 +1188,16 @@ Package pdftex.def Info: figures/ResNet.png  used on input line 481.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[39 <./figures/ResNet.png>]
+[41 <./figures/ResNet.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[40]
+[42]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[41]
-<figures/DL_CAD_statystyka.jpg, id=204, 554.07pt x 298.11375pt>
+[43]
+<figures/DL_CAD_statystyka.jpg, id=210, 554.07pt x 298.11375pt>
 File: figures/DL_CAD_statystyka.jpg Graphic file (type jpg)
 <use figures/DL_CAD_statystyka.jpg>
 Package pdftex.def Info: figures/DL_CAD_statystyka.jpg  used on input line 538.
@@ -1199,7 +1207,7 @@ Package pdftex.def Info: figures/DL_CAD_statystyka.jpg  used on input line 538.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/CAD-okulisci.jpg, id=205, 500.62032pt x 237.88875pt>
+<figures/CAD-okulisci.jpg, id=211, 500.62032pt x 237.88875pt>
 File: figures/CAD-okulisci.jpg Graphic file (type jpg)
 <use figures/CAD-okulisci.jpg>
 Package pdftex.def Info: figures/CAD-okulisci.jpg  used on input line 548.
@@ -1214,15 +1222,15 @@ Underfull \vbox (badness 1199) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[42]
+[44]
 Underfull \vbox (badness 7221) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[43 <./figures/DL_CAD_statystyka.jpg> <./figures/CAD-okulisci.jpg>]
-<figures/CAD-dermatolodzy.jpg, id=212, 494.44725pt x 169.23225pt>
+[45 <./figures/DL_CAD_statystyka.jpg> <./figures/CAD-okulisci.jpg>]
+<figures/CAD-dermatolodzy.jpg, id=218, 494.44725pt x 169.23225pt>
 File: figures/CAD-dermatolodzy.jpg Graphic file (type jpg)
 <use figures/CAD-dermatolodzy.jpg>
 Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 559.
@@ -1231,13 +1239,13 @@ Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 559.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[44 <./figures/CAD-dermatolodzy.jpg>]) (Rozdzialy/opis_metody.tex
+[46 <./figures/CAD-dermatolodzy.jpg>]) (Rozdzialy/opis_metody.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[45]
+[47]
 Rozdzia\PlPrIeC {\l } 5.
-) (Rozdzialy/wyniki_podsumowanie.tex [46
+) (Rozdzialy/wyniki_podsumowanie.tex [48
 
 ]
 Rozdzia\PlPrIeC {\l } 6.
@@ -1246,11 +1254,11 @@ Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[47
+[49
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [48
+) (thesis.bbl [50
 
 ]
 ! Undefined control sequence.
@@ -1310,17 +1318,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[49
+[51
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[50]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[51]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1329,6 +1329,14 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [53]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[54]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[55]
 ! Undefined control sequence.
 l.331   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
@@ -1418,17 +1426,17 @@ deleted material, e.g., by typing `I$}'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[54]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[55]) (appendix.tex
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [56]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[57]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[58]
 Dodatek A.
-) [57
+) [59
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
@@ -1467,9 +1475,9 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (66 pages, 2359235 bytes).
+Output written on thesis.pdf (68 pages, 2366886 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
+ 331 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

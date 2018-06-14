@@ -18,7 +18,15 @@ Achil
 -Unaczynienie (krew, nerwy)
 
 \subsection{Biomechanika}
-Zadaniem ścięgien jest transfer siły mięśniowej do układu szkieletowego.
+\label{Biomechanika}
+Zadaniem ścięgien jest transfer siły mięśniowej do układu szkieletowego.'
+
+/*Hill - model mięśnia/nerwy/wapń - prezentacja openSim*/
+
+Biomechanical simulations are driven by data from mathematical models chosen for the specific application. In most of the models within the softwares the skeletal system is defined as a set of rigid bodies representing particular body segment connected together in a hierarchical tree where the connections (joints) are represented by a mathematical function which models particular motion. The muscles are usually represented by the Hill model or some of it’s variations \cite{}
+
+Parameters that can be applied to the skeletal model are called the kinematics parameters e.g.: number of DOF (Degrees Of Freedom), bones and joints geometry. Parameters that are utilized directly for solving the equation of the forces distribution in the system are called the dynamics parameters. Currently the most complex model of the whole human musculoskeletal system is the full body model from AnyBody Technology \cite{}
+
 \subsection{Urazy i czynniki im sprzyjające}
 \subsection{Leczenie, fazy gojenia i rehabilitacja}
 \label{gojenie}
@@ -144,9 +152,10 @@ Badania obrazowe nie są jedynymi, które służą do oceny gojenia się ścięg
 
 \section{Zastosowanie badań biomechanicznych}
 
-W poprzednich sekcjach zostały opisane dwie najczęstsze metody monitorowania procesu gojenia się ścięgna Achillesa z udziałem badań obrazowych. Na podstawie zdjęć trudno jest jednak ocenić funkcje gojącej się tkanki. W tym celu stosuje się ocenę \textit{biomechaniki}, która bada właściwości mechaniczne elementów składowych organizmów żywych takich jak tkanki czy narządy. W szczególności mierzone parametry pozwalają na \textit{ocenę funkcjonalną}, a zatem w jakim stopniu dany element może realizować swoją funkcję.
+W poprzednich sekcjach zostały opisane dwie najczęstsze metody monitorowania procesu gojenia się ścięgna Achillesa z udziałem badań obrazowych. W tym celu stosuje się ocenę \textit{biomechaniki}, która bada właściwości mechaniczne elementów składowych organizmów żywych takich jak tkanki czy narządy. W szczególności mierzone parametry pozwalają na \textit{ocenę funkcjonalną}, a zatem w jakim stopniu dany element może realizować swoją funkcję.
 
-W przypadku ścięgna Achillesa kompleksowa ocena ścięgna Achillesa zawiera:
+Funkcja ścięgna Achillesa została opisana w \ref{Biomechanika}. Do jej oceny stosuje się szereg badań funkcjonalnych do których należą również pomiary wykorzystane w tej pracy opisane w punktach poniżej:
+
 \begin{enumerate}
 	\item ATRS Achilles Tendon Total Rupture Score (ATRS) -- oceniającej poziom ograniczenia, z którymi borykają się w następstwie urazu w skali od 0 do 10 (gdzie 0 oznacza znaczne ograniczenie, a 10 brak ograniczeń/objawów) [Nilsson-Helander i wsp. 2007, Bąkowski i wsp. 2017]. Skala ATRS: skala od 1 do 100 pkt.
 	\item Pomiar stabilograficzny na platformie dynamometrycznej -- platforma HUR. Badania odbywały się boso z oczami otwartymi. Wykonane zostały dwie próby po 30 sekund kolejno na prawej i lewej kończynie dolnej. Następnie pacjent przechodził na kolejną platformę do stabilografii dynamicznej (Biodex Balance System), gdzie miał za zadanie utrzymanie równowagi na niestabilnym podłożu. Wykonano 3 próby po 30 sekund na prawej i potem lewej kończynie dolnej (ustawienie platformy na poziomie 2). Wyniki zostają porównane między kończynami. Stabilografia statyczna: pomiar drogi wychylenia środka masy pacjenta w trakcie stania jednonóż na platformie dynamometrycznej [mm].
@@ -155,13 +164,20 @@ W przypadku ścięgna Achillesa kompleksowa ocena ścięgna Achillesa zawiera:
 	\item Pomiary maksymalnych momentów sił mięśni zginaczy podeszwowych i grzbietowych stawu skokowego. Ze względu na dwustawową funkcję ścięgna Achillesa badanie przeprowadzono w dwóch pozycjach: z wyprostowanym (ryc.1) oraz zgiętym do 50 stopni stawem kolanowym (ryc.2) [Orishimo i wsp. 2008] w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s (5 powtórzeń), 120$^\circ$/s (8 powtórzeń) oraz 180$^\circ$/s (10 powtórzeń) przy wykorzystaniu urządzenia Humac Norm (USA). Przed badaniem osoba odbywała 5 minutową rozgrzewkę na steperze. Do analizy brano wartości maksymalne pomiarów. Wyniki zostały porównane pomiędzy operowaną a zdrową kończyną dolną. Maksymalne wartości momentu siły mięśni zginaczy podeszwowych i grzbietowych stawu skokowego w warunkach izometrii i izokinetyki w dwóch pozycjach: z wyprostowanym oraz zgiętym do 50 stopni stawem kolanowym [Nm] oraz deficyt pomiędzy operowaną i zdrową kończyną dolną [\%]
 \end{enumerate}
 
-Szczątkowe badania biomechaniczne są najczęściej realizowanymi pomiarami w praktyce. Bardziej kompleksowe podejście stanowi modelowanie układu mięśniowo-szkieletowego. Metody te rozwinęły się...
+Powyższy protokół badań został wdrożony w placówce Carolina Medical Center (grupa Luxmed) [CMC] i został przez ortopedów i fizjoterapeutów określony jako wystarczający do oceny przywracania funkcji ścięgna Achillesa po rekonstrukcji. 
 
-Recent advancements in biomechanics combined with mathematical modelling have produced powerful tools for parameterizing of the human musculoskeletal system. The computer based musculoskeletal modelling started in the early 1990s when Delp and Loan introduced musculoskeletal modelling environment, called SIMM. This fact sparked multiple biomechanical researcher including simulations of walking, cycling, running, consequences of surgical procedures etc.. Nowadays, along with other commercial products such as Visual 3D (Cmotion Inc.), Anybody (Anybody Technology) or Adams (MSC Software Corp.), Simm provides tools for musculoskeletal system models formulation and simulation of movement. Noncommercial products such as Human Motion (Riken, Japan) or OpenSim (Stanford University) are also available. 
+Istnieją jednak możliwości rozszerzenia tak zdefiniowanego podejścia, aż do wersji maksimum, która uwzględniałaby pełne modelowanie układu mięśniowo-szkieletowego. Dane wówczas muszą pochodzić z możliwie dokładnych urządzeń pomiarowych takich jak:
+\begin{itemize}
+	\item \textit{Komputerowa analiza ruchu} (ang. \textit{Motion Capture}) -- narzędzie wykorzystujące systemy czujników do zapisu informacji o zmianach położenia obiektu rejestrowanego np. pacjenta. Do wiodących rozwiązań należy zaliczyć systemy firmy Vicon [] lub BTS [].
+	\item \textit{Płyty dynamometryczne} (ang. \textit{Force Plates}) -- narzędzie wykorzystywane do pomiaru sił reakcji podłoża w trzech prostopadłych płaszczyznach. Dzięki temu można określić sumaryczny udział mięśni w generowaniu sił odpowiadających za balans ciała, ruch w danym kierunku oraz przeciwstawianie się sile grawitacji. Do wiodących rozwiązań należą płyty firmy Kistler [].
+	\item \textit{Elektromiografia}, w skr. EMG (ang. \textit{Electromyography}) -- narzędzie do pomiaru pobudzeń poszczególnych grup mięśniowych podczas ruchu. Wykorzystywane jest m.in. do określenia rozkładu sił zmierzonych przez płyty dynamometryczne na poszczególne mięśnie.
+	\item Badania uzupełniające -- do tej kategorii należy uwzględnić informacje pozwalające na uszczegółowienie modelu mięśniowo-szkieletowego np.: wymiary poszczególnych segmentów ciała (np. goleń, udo, tors) tzw. pomiary antropometryczne; Maksymalne siły izometryczne mierzone w systemach takich jak Biodex; geometrie kości mierzone np. z pomocą Tomografii Komputerowej [] ew. MR; lokalizacje przyczepów mięśniowych określaną przy pomocy MR lub USG; środek masy poszczególnych segmentów określany np. przy użyciu badania DXA (od ang. Double X Ray Absorption); kompozycja włókien mięśniowych widoczna w USG.
+\end{itemize}
 
-Biomechanical simulations are driven by data from mathematical models chosen for the specific application. In most of the models within the softwares the skeletal system is defined as a set of rigid bodies representing particular body segment connected together in a hierarchical tree where the connections (joints) are represented by a mathematical function which models particular motion. The muscles are usually represented by the Hill model or some of it’s variations \cite{}
+Przy czym parametry komputerowej analizy ruchu, sił reakcji podłoża i elktromiografii zbierane są synchronicznie podczas ruchu, natomiast badania uzupełniające nie. 
 
-Parameters that can be applied to the skeletal model are called the kinematics parameters e.g.: number of DOF (Degrees Of Freedom), bones and joints geometry. Parameters that are utilized directly for solving the equation of the forces distribution in the system are called the dynamics parameters. Currently the most complex model of the whole human musculoskeletal system is the full body model from AnyBody Technology \cite{}
+Z uwagi na dużą liczbę możliwych do zmierzenia parametrów, ich integracja odbywa się w modelach komputerowych zaimplementowanych w różnego rodzaju oprogramowaniu do symulacji biomechanicznych. Do najczęściej używanych modeli należą Gait22 [], Gait 20 [] oraz obecnie najbardziej złożony AnyBody full body model []. Historia komputerowo wspomaganego, kompleksowego modelowania biomechaniki ruchu zaczęła się we wczesnych latach 1990, kiedy to Delp i Loan przedstawili oprogramowanie SIMM [SIMM]. Obecnie SIMM jak również inne oprogramowania komercyjne takie jak: Visual 3D (Cmotion Inc.) [], Anybody (Anybody Technology) [], czy Adams (MSC Software Corp.) [], dostarczają narzędzi do wartościowych symulacji np. chodu [], biegu [] jak również konsekwencji różnych zabiegów chirurgicznych [] i chorób []. Istnieją również narzędzia otwarte, do których należą szeroko wykorzystywany OpenSim [] rozwijany na Uniwersytecie w Stanford, czy też Human Motion [] wywodzący się z instytutu badawczego RIKEN w Japonii.
+
 
 Most accurate dynamic data of human motion kinematics and dynamics are gathered in a specially equipped Motion Laboratories. Such facilities consists of synchronized instruments for motion capture (e.g. Vicon or BTS systems), external forces measurements (e.g. force plates) and electromyography (EMG) for muscles activity monitoring. Additionally the model can be parameterized with further parameters like: body segments dimensions and weight collected with use of the anthropometry techniques; maximal isometric muscle forces measured with systems like Biodex; geometry of bones derived from the computer tomography; locations of muscle attachments founded in the Magnetic Resonance Imaging (MRI) scans; center of mass of the particular body segment assessed based on the Double X Ray Absorption (DXA) studies; the composition of the particular muscles viewed in ultrasonography etc.
 

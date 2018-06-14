@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  14 JUN 2018 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  14 JUN 2018 14:08
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -940,12 +940,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (10.07967pt too wide) in paragraph at lines 169--170
-\OT4/cmr/m/n/12 sji mak-si-mum, któ-ra uwzgl¦d-nia-ªa-by peª-ne mo-de-lo-wa-nie
- ukªa-du mi¦±niowo-szkieletowego.
- []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1446,11 +1440,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Dodatek A.
 ) [60
 
-] (thesis.aux (header.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
  5487 strings out of 493305
  83689 string characters out of 3128932
@@ -1459,34 +1449,35 @@ Here is how much of TeX's memory you used:
  23088 words of font info for 70 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,40p,1236b,357s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.e
-nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
-enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plme
-.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plm
-s.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
-it.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/p
-lsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Users/norbert
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Users/n
-orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/U
-sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb>
-<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi7
-.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/
-plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/pl/plr6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/pl/plr7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on thesis.pdf (69 pages, 2368703 bytes).
+{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
+.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 
+2.9/fonts/enc/dvips/pl/plme.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Local/Programs/MiKT
+eX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
+/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:
+/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.
+pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
+lex10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/pl/plmi10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/pl/plmi12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/pl/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/pl/plmi7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Users/norbert/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Users/norbert/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norb
+ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
+s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
+/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
+fb>
+Output written on thesis.pdf (69 pages, 2368622 bytes).
 PDF statistics:
  334 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

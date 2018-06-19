@@ -32,17 +32,28 @@ W skład ścięgna wchodzą: włókna, wiązki pierwszo, drugo i trzeciorzędowe
 
 W przeciwieństwie do innych ścięgien, ścięgno Achillesa nie posiada pochewki ścięgnistej, lecz jest otoczone ościęgnem utworzonym z tkanki łącznej włóknistej. Struktura ta jest bogata w naczynia krwionośne i jest bardzo ważnym elementem w procesie gojenia. Oprócz otaczającej tkanki łącznej ścięgno czerpie źródło unaczynienia z brzuśców mięśni brzuchatego i płaszczkowatego oraz z połączenia kostno-ścięgnistego. Najsłabsze unaczynienie występuje poziomie ok. 4-5 cm powyżej górnego brzegu kości piętowej (por. [Bochenek]).
 
-W połowie długości między kostką przyśrodkową, a ścięgnem, pomiędzy blaszką powierzchowną i głęboką rozcięgna zginaczy, biegną nerw piszczelowy. W pobliżu ścięgna przebiega też nerw łydkowy, który krzyżuje się ze ścięgnem w odległości 8,7-12,4 cm proksymalnie od guza piętowego, biegnie w dół i na wysokości guza znajduje się około 11 mm bocznie i 18 mm grzbietowo od niego (por. [Bochenek]). 
+W połowie długości między kostką przyśrodkową, a ścięgnem, pomiędzy blaszką powierzchowną i głęboką rozcięgna zginaczy, biegnie nerw piszczelowy. W pobliżu ścięgna przebiega też nerw łydkowy, który krzyżuje się ze ścięgnem w odległości 8,7-12,4 cm proksymalnie od guza piętowego, biegnie w dół i na wysokości guza znajduje się około 11 mm bocznie i 18 mm grzbietowo od niego (por. [Bochenek]). 
 
 \subsection{Biomechanika}
 \label{Biomechanika}
-Zadaniem ścięgien jest transfer siły mięśniowej do układu szkieletowego.'
+Zadaniem ścięgien jest transfer siły mięśniowej do układu szkieletowego. Cały proces rozpoczyna się od centralnego układu nerwowego skąd wysyłane są impulsy nerwowe. Trafiają one do odpowiednich grup mięśniowych za pośrednictwem \textit{nerwu ruchowego}, który przewodzi impulsy nerwowe wzbudzając proces ruchu mięśni. Na styku nerwu z mięśniem znajduje się \textit{synapsa nerwowo-mięśniowa} (tzw. \textit{płytka motoneuronalna}). Do niej właśnie na skutek impulsu wydzielany jest neuroprzekaźnik, \textit{acetylocholina}, na skutek czego następuje dalsze pobudzenie błony komórki mięśniowej i uwolnienie jonów wapnia Ca$^{2+}$. Jest to kluczowy składnik implikujący skurcz mięśni. Cały proces w czasie przedstawiono na Rys. \ref{muscle-excitements} 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/skurcz_miesni.png}
+	\caption{Schemat generowania skurczu mięśni.}
+	\label{muscle-excitements}
+\end{figure}
 
-/*Hill - model mięśnia/nerwy/wapń - prezentacja openSim*/
+Skurcz generuje siłę, która jak wcześniej opisano, przekazywana jest za pomocą ścięgien do układu szkieletowego. Dobrym przybliżeniem tego procesu jest \textit{model Hill'a} [], którego schemat przedstawiono na Rys. \ref{hill-model}.
 
-Biomechanical simulations are driven by data from mathematical models chosen for the specific application. In most of the models within the softwares the skeletal system is defined as a set of rigid bodies representing particular body segment connected together in a hierarchical tree where the connections (joints) are represented by a mathematical function which models particular motion. The muscles are usually represented by the Hill model or some of it’s variations \cite{}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/Hill.png}
+	\caption{Schemat modelu Hilla.}
+	\label{hill-model}
+\end{figure}
 
-Parameters that can be applied to the skeletal model are called the kinematics parameters e.g.: number of DOF (Degrees Of Freedom), bones and joints geometry. Parameters that are utilized directly for solving the equation of the forces distribution in the system are called the dynamics parameters. Currently the most complex model of the whole human musculoskeletal system is the full body model from AnyBody Technology \cite{}
+$F_A$ oznacza siłę aktywnie wywoływaną skurczem mięśni, $F_P$ to pasywna siła odpowiadająca za bezwładność tkanki miękkiej w mięśniu, a $F^{mt}$ to wynikowa siła przekazywana przez ścięgno, która zależy od długości ścięgna $l_t$ i kąta $\phi$ pomiędzy ścięgnem a mięśniem. To właśnie na skutek przekroczenia wartości granicznej siły $F^{mt}$ dochodzi do urazu ścięgna Achillesa. Rodzaje i czynniki sprzyjające urazom zostały opisane w kolejnej podsekcji.
 
 \subsection{Urazy i czynniki im sprzyjające}
 \subsection{Leczenie, fazy gojenia i rehabilitacja}
@@ -230,5 +241,10 @@ W uzupełnieniu, w zależności od problemu stosuje się dalsze uszczegółowien
 
 Z uwagi na dużą liczbę możliwych do zmierzenia parametrów, ich integracja odbywa się w modelach komputerowych zaimplementowanych w różnego rodzaju oprogramowaniu do symulacji biomechanicznych. Do najczęściej używanych należą Gait22 [], Gait 20 [] oraz obecnie najbardziej złożony AnyBody full body model []. Historia komputerowo wspomaganego, kompleksowego modelowania biomechaniki ruchu sięga wczesnych lat 90-tych ubiegłego wieku, kiedy to Delp i Loan przedstawili oprogramowanie SIMM [SIMM]. Obecnie SIMM jak również inne oprogramowania komercyjne takie jak: Visual 3D (Cmotion Inc.) [], Anybody (Anybody Technology) [], czy Adams (MSC Software Corp.) [], dostarczają narzędzi do wartościowych symulacji np. chodu [], biegu [] jak również konsekwencji różnych zabiegów chirurgicznych [] i chorób []. Istnieją również narzędzia otwarte, do których należą szeroko wykorzystywany OpenSim [] rozwijany na Uniwersytecie w Stanford, czy też Human Motion [] wywodzący się z instytutu badawczego RIKEN w Japonii.
 
+/*Odwróć kolejność - najpierw opisz kompleksową metodę, a potem protokół CMC*/
+
+Biomechanical simulations are driven by data from mathematical models chosen for the specific application. In most of the models within the softwares the skeletal system is defined as a set of rigid bodies representing particular body segment connected together in a hierarchical tree where the connections (joints) are represented by a mathematical function which models particular motion. The muscles are usually represented by the Hill model or some of it’s variations \cite{}
+
+Parameters that can be applied to the skeletal model are called the kinematics parameters e.g.: number of DOF (Degrees Of Freedom), bones and joints geometry. Parameters that are utilized directly for solving the equation of the forces distribution in the system are called the dynamics parameters. Currently the most complex model of the whole human musculoskeletal system is the full body model from AnyBody Technology \cite{}
 
 \section{Inne metody}

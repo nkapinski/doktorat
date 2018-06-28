@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  27 JUN 2018 13:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  28 JUN 2018 15:05
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1373,22 +1373,16 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
 [12]
-Underfull \vbox (badness 1072) has occurred while \output is active []
+Underfull \vbox (badness 2799) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (5.47507pt too wide) in paragraph at lines 161--162
+Overfull \hbox (5.47507pt too wide) in paragraph at lines 162--163
 []\OT4/cmr/m/n/12 Przy po-mo-cy ste-ro-wa-nych im-pul-sów o cz¦-sto-tli-wo-±ci 
 fal ra-dio-wych (tzw. $\OML/plm/m/it/12 impulsyRF$\OT4/cmr/m/n/12 )
- []
-
-
-Overfull \hbox (23.78699pt too wide) in paragraph at lines 163--164
-\OT4/cmr/m/it/12 cj¡ Fo-urie-ra\OT4/cmr/m/n/12 . Przy-kªad ta-kie-go dzia-ªa-ni
-a mo»-na zna-lex¢ w [http://mriquestions.com/fourier-
  []
 
 
@@ -1399,6 +1393,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [14]
+Overfull \hbox (23.78699pt too wide) in paragraph at lines 164--165
+\OT4/cmr/m/it/12 cj¡ Fo-urie-ra\OT4/cmr/m/n/12 . Przy-kªad ta-kie-go dzia-ªa-ni
+a mo»-na zna-lex¢ w [http://mriquestions.com/fourier-
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1407,9 +1407,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [16]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1417,7 +1414,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=104, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 224.
+Package pdftex.def Info: figures/USG-params.png  used on input line 225.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1425,29 +1422,29 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [18 <./figures/USG-params.png>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 245.
+(Font)              <10> on input line 246.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 245.
+(Font)              <7> on input line 246.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 245.
+(Font)              <5> on input line 246.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [19]
-Overfull \hbox (5.60818pt too wide) in paragraph at lines 256--257
+Overfull \hbox (5.60818pt too wide) in paragraph at lines 257--258
 \OT4/cmr/m/n/12 ±ci¦-gnie przy wy-ko-ny-wa-niu od-po-wied-nich ru-chów np. zgi-
 na-nia podeszwowo-grzbietowego
  []
 
 
-Overfull \hbox (7.69705pt too wide) in paragraph at lines 260--261
+Overfull \hbox (7.69705pt too wide) in paragraph at lines 261--262
 \OT4/cmr/m/n/12 [butterfly-http://news.mit.edu/2018/startup-butterfly-network-u
 ltrasound-smartphone-
  []
 
 
-Overfull \hbox (10.6998pt too wide) in paragraph at lines 260--261
+Overfull \hbox (10.6998pt too wide) in paragraph at lines 261--262
 \OT4/cmr/m/n/12 0207]) oraz ukªa-dy po-zwa-la-j¡-ce prze-twa-rza¢ su-ro-wy sy-g
 naª ul-tra-dxwi¦-ko-wy (zob. [us4us]).
  []
@@ -1468,12 +1465,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [22]
-Overfull \hbox (3.41724pt too wide) in paragraph at lines 300--301
-[]\OT4/cmr/m/n/12 /*Odwró¢ ko-lej-no±¢ - naj-pierw opisz kom-plek-so-w¡ me-to-d
-¦, a po-tem pro-to-kóª CMC*/ 
- []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2011,7 +2002,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (78 pages, 2683044 bytes).
+Output written on thesis.pdf (78 pages, 2684058 bytes).
 PDF statistics:
  367 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

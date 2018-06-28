@@ -143,9 +143,10 @@ Podany powyżej przykład postępowania jest wdrożony w placówce Carolina Medi
 Celem oceny nowych technik jak również optymalizacji istniejących metod rehabilitacji i leczenia urazów ścięgna Achillesa potrzebne jest monitorowanie procesu gojenia. Najczęściej stosowane techniki zostaną omówione w kolejnych sekcjach.
 
 \section{Zastosowanie rezonansu magnetycznego}
-/*fala, amplituda, częstotliwość*/ 
+ 
+Obserwację gojącej się struktury ścięgna Achillesa umożliwiają techniki stosujące różnego rodzaju fale elektromagnetyczne przenikające ciało ludzkie. W zależności od wyrażanej w Hercach (w skr. Hz) \textit{częstotliwości fali}, czyli liczby pełnych cykli drgań w ciągu sekundy oraz \textit{amplitudy} tj. maksymalnej wartości sygnału, fala rozchodzi się w ośrodku implikując możliwe do interpretacji zdarzenia wykorzystywane w technikach obrazowania medycznego. 
 
-Obrazowanie metodą \textit{Magnetycznego Rezonansu}, w skr. \textit{MR} (ang. \textit{Magnetic Resonance Imaging}, w skr. \textit{MRI}) jest metodą bazującą na odpowiednim odczycie reakcji atomów na silne pole magnetyczne. Zrozumienie tych procesów było efektem prac związanych z mechaniką kwantową takich jak: Einstein, Edwin Shrodinger, Heisenberg czy Pauli /*uzupełnij z licznych książek - krótką historię*/. 
+Pierwszą opisaną w tej pracy metodą obrazowania stosowaną do monitorowania gojenia się ścięgna Achillesa jest obrazowanie z wykorzystaniem \textit{Magnetycznego Rezonansu}, w skr. \textit{MR} (ang. \textit{Magnetic Resonance Imaging}, w skr. \textit{MRI}). Metoda ta bazujące na odpowiednim odczycie reakcji atomów na silne pole magnetyczne utworzone przez fale o częstotliwościach rzędu dziesiątek MHz. Zrozumienie tych procesów było efektem prac związanych z mechaniką kwantową takich jak: Einstein, Edwin Shrodinger, Heisenberg czy Pauli /*uzupełnij z licznych książek - krótką historię*/. 
 
 Wymienione prace z początku XX wieku umożliwiły rozwój technologii MR zainicjowane zrozumieniem w latach 30-tych magnetycznej natury \textit{protonów}, cząstek subatomowych, które wraz z \textit{neutronami} wchodzą w skład jądra atomowego (zob. [1933 - stern gerlach]). Dokładniej rzecz biorąc, główną własnością jądra atomowego umożliwiającą działanie MR jest \textit{spin}. Można powiedzieć, że jądro posiada spin jeżeli nie ma jednocześnie parzystej liczby protonów i parzystej liczby neutronów (por. [Rezonans magnetyczny]). Jądra o parzystej liczbie atomowej mają w \textit{stanie podstawowym} (charakteryzującym się najniższą energią) spin całkowity, a o nieparzystej połówkowy.
 
@@ -255,25 +256,37 @@ gdzie $f_r$ to zmiana częstotliwości fali nadawanej $f_0$, zależna od kąta $
 
 W kontekście ścięgna Achillesa tryb B jest użyteczny do obrazowania tkanek miękkich. Przydatna jest zwłaszcza możliwość zobrazowania ukierunkowania struktur włókien ścięgnistych na podstawie czego radiolog może wnioskować o fazie gojenia. Składowa czasowa jest interesująca z perspektywy fizjoterapeuty oceniającego m.in. ślizg w ścięgnie przy wykonywaniu odpowiednich ruchów np. zginania podeszwowo-grzbietowego stopy. Tryb D natomiast może służyć do oceny unaczynienia ścięgna w kolejnych etapach gojenia, które jak wiadomo z sekcji \ref{gojenie} zmienia się w czasie.
 
-W porównaniu do rezonansu magnetycznego USG charakteryzuje się niskimi kosztami aparatury. Uzyskiwane obrazy są jednak trudniejsze w interpretacji, co przekłada się na koszty wyszkolenia kadry. W tym kontekście przydatne mogą okazać się nowe rozwiązania w warstwie sprzętowej i oprogramowania. 
+W porównaniu do rezonansu magnetycznego USG charakteryzuje się nawet 10-krotnie niższymi kosztami zakupu aparatury. Uzyskiwane obrazy są jednak trudniejsze w interpretacji, co przekłada się na koszty wyszkolenia kadry. W tym kontekście przydatne mogą okazać się nowe rozwiązania w warstwie sprzętowej i oprogramowania. 
 
-Do pierwszej grupy należy zaliczyć zastąpienie przetworników z piezoelektrykami, przetwornikami budowanymi w technologi MEMS np. cMUT, czy pMUT (zob. [butterfly-http://news.mit.edu/2018/startup-butterfly-network-ultrasound-smartphone-0207]) oraz układy pozwalające przetwarzać surowy sygnał ultradxwiękowy (zob. [us4us]). Do drugiej grupy należą algorytmy sztucznej inteligencji pozwalające wydobyć i zinterpretować interesującą informację z niskiej jakości obrazów (np. zob. [nvidia-keynot-clarisa-project]). 
+Do pierwszej grupy należy zaliczyć zastąpienie przetworników z piezoelektrykami, przetwornikami budowanymi w technologi MEMS np. cMUT, czy pMUT (zob. [butterfly-http://news.mit.edu/2018/startup-butterfly-network-ultrasound-smartphone-0207]) oraz układy pozwalające przetwarzać surowy sygnał ultradxwiękowy (zob. [us4us]). Dzięki przetwornikom MEMS można wytworzyć cały układ generujący drgania w krzemie, w jednym procesie technologicznym razem z dedykowanym układem do zadanej aplikacji (ang. \textit{Application-Specific Integrated Circuit} w skr. \textit{ASIC}). Takie podejście znacząco redukuje koszty oraz immplikuje możliwość miniaturyzacji urządzeń.
 
-/*- Deep Residual Networks for Quantification
+Do drugiej grupy należą algorytmy sztucznej inteligencji pozwalające wydobyć i zinterpretować interesującą informację z niskiej jakości obrazów. Przykładowo w [Deep Residual Networks for Quantification
 of Muscle Fiber Orientation and Curvature
-from Ultrasound Images
+from Ultrasound Images] algorytmy sztucznej inteligencji zostały użyte do określenia orientacji włókien mięśniowych, a w [nvidia-keynot-clarisa-project] do segmentacji komór serca w czasie rzeczywistym. 
 
-- Ultrasonographic tissue characterisation of human
-Achilles tendons: quantifi cation of tendon structure
-through a novel non-invasive approach (ewentualnie dorzuć coś od A CROSS-SECTIONAL STUDY TO EVALUATE THE EFFECT OF STATINS ON ACHILLES TENDON MORPHOLOGY USING ULTRASOUND TISSUE CHARACTERIZATION)*/
+Obiecujący jest też rozwój metod charakterystyki tkanki na podstawie ultrasonografii
+Charakterystyka Tkanki (ang. Ultrasonography Tissue Characterization, w skr. \textit{UTC}). W 2003 r. Bakker et. al. przedstawili pracę pokazującą w jakim stopniu obraz USG jest mieszanką echa związanego z budową tkanki, a w jakim z \textit{interferencji}, czyli nakładania się fal. Jak pokazano w [Achilles UTC] metoda ta może być zaaplikowana do oceny struktury Achillesa. Wymaga jednak badań histologicznych jako referencja do badanego echa, co jest poważnym ograniczeniem. 
 
 Badania obrazowe nie są jedynymi, które służą do oceny gojenia się ścięgna Achillesa. W kolejnej sekcji zostały opisane metody oceny biomechaniki, które samodzielnie jak i w połączeniu z analizą obrazową stanowią wartościową informację diagnostyczną.
 
 \section{Zastosowanie badań biomechanicznych}
 
-W poprzednich sekcjach zostały opisane dwie najczęstsze metody monitorowania procesu gojenia się ścięgna Achillesa z udziałem badań obrazowych. Innym podejściem jest \textit{ocena funkcjonalna} bazująca na sprawdzeniu w jakim stopniu dany element (tkanka, narząd, organizm) może realizować swoje zadania. W tym celu często stosuje się ocenę \textit{biomechaniki}. Bada ona właściwości mechaniczne elementów składowych organizmów żywych. 
+W poprzednich sekcjach zostały opisane dwie najczęstsze metody monitorowania procesu gojenia się ścięgna Achillesa z udziałem badań obrazowych pozwalających na ocenę struktury tkanki. Komplementarnie, podczas rehabilitacji wykonywana jest również \textit{ocena funkcjonalna}, weryfikująca w jakim stopniu dany element (tkanka, narząd, organizm) może realizować swoje zadania. W przypadku monitorowania gojenia się ścięgna Achillesa najczęściej w tym celu stosuje się \textit{ocenę biomechaniki}, czyli badania pozwalające wnioskować na temat właściwości mechanicznych elementów składowych organizmów żywych. 
 
-W przypadku ścięgna Achillesa przykładowe pomiary jego funkcji opisanej w sekcji \ref{Biomechanika} wyglądają następująco:
+Najbardziej zaawansowane i dokładne metody oceny biomechaniki stosowane współcześnie możliwe są do wykonania przy użyciu urządzeń pomiarowych takich jak:
+\begin{itemize}
+	\item \textit{Komputerowa analiza ruchu} (ang. \textit{Motion Capture}) -- narzędzie wykorzystujące systemy czujników do zapisu informacji o zmianach położenia obiektu rejestrowanego np. pacjenta. Do wiodących rozwiązań należy zaliczyć systemy firmy Vicon [] lub BTS [].
+	\item \textit{Płyty dynamometryczne} (ang. \textit{Force Plates}) -- narzędzie wykorzystywane do pomiaru sił reakcji podłoża w trzech prostopadłych płaszczyznach. Dzięki temu można określić sumaryczny udział mięśni w generowaniu sił odpowiadających za balans ciała, ruch w danym kierunku oraz przeciwstawianie się sile grawitacji. Do wiodących rozwiązań należą płyty firmy Kistler [].
+	\item \textit{Elektromiografia}, w skr. EMG (ang. \textit{Electromyography}) -- narzędzie do pomiaru pobudzeń poszczególnych grup mięśniowych podczas ruchu. Wykorzystywane jest m.in. do określenia rozkładu sił zmierzonych przez płyty dynamometryczne na poszczególne mięśnie.
+\end{itemize}
+
+Synchronizacja danych z powyższych urządzeń umożliwia konstrukcję modeli układu mięśniowo-szkieletowego i symulacje funkcji poszczególnych grup mięśniowych lub ścięgien przy zadancyh problemach.
+
+Danymi stosowanymi do uszczegółowienia takich modeli są np.: wymiary poszczególnych segmentów ciała (np. goleń, udo, tors) tzw. pomiary antropometryczne; pomiary maksymalnych sił izometrycznych z użyciem systemów takich jak Biodex; pomiary geometrii kości mierzonych np. z pomocą Tomografii Komputerowej [] ew. MR; znajdowaniy lokalizacji przyczepów mięśniowych określanych przy pomocy MR lub USG; wyliczanie środka masy poszczególnych segmentów określanych np. przy użyciu badania DXA (od ang. Double X Ray Absorption); określanie składu włókien mięśniowych widocznych w USG.
+
+Z uwagi na dużą liczbę możliwych do zmierzenia parametrów, ich integracja odbywa się w modelach komputerowych zaimplementowanych w różnego rodzaju oprogramowaniu do symulacji biomechanicznych. Do najczęściej używanych należą Gait22 [], Gait 20 [] oraz obecnie najbardziej złożony AnyBody full body model []. Historia komputerowo wspomaganego, kompleksowego modelowania biomechaniki ruchu sięga wczesnych lat 90-tych ubiegłego wieku, kiedy to Delp i Loan przedstawili oprogramowanie SIMM [SIMM]. Obecnie SIMM jak również inne oprogramowania komercyjne takie jak: Visual 3D (Cmotion Inc.) [], Anybody (Anybody Technology) [], czy Adams (MSC Software Corp.) [], dostarczają narzędzi do wartościowych symulacji np. chodu [], biegu [] jak również konsekwencji różnych zabiegów chirurgicznych [] i chorób []. Istnieją również narzędzia otwarte, do których należą szeroko wykorzystywany OpenSim [] rozwijany na Uniwersytecie w Stanford, czy też Human Motion [] wywodzący się z instytutu badawczego RIKEN w Japonii.
+
+Powyżej przedstawione badania realizowane są rzadko z uwagi na koszty aparatury. Dla przykładu w Polsce ośrodki wyposarzone w sprzęt pomiarowy takiej klasy to np. Centrum Zdrowia dziecka, WUM, AWF czy komercyjna placówka Fizjofit w Gliwicach. Żeby obniżyć koszty badania stosuje się wybiórcze podejcie i selekcję parametrów pomiarowych. Dla przykładu protokół oceny biomechniki ścięgna Achillesa w placówce Carolina Medical Center (gdzie realizowane były badania wykorzystywane w tej pracy) wygląda następująco (zob. [CMC]):
 
 \begin{enumerate}
 	\item \textit{ATRS} (od ang. \textit{Achilles Tendon Total Rupture Score}) -- poziom ograniczenia, z którymi borykają się w następstwie urazu w skali od 0 do 100 [Nilsson-Helander i wsp. 2007, Bąkowski i wsp. 2017].
@@ -284,24 +297,5 @@ W przypadku ścięgna Achillesa przykładowe pomiary jego funkcji opisanej w sek
 	\item Pomiary maksymalnych momentów sił mięśni zginaczy podeszwowych i grzbietowych stawu skokowego. Ze względu na dwustawową funkcję ścięgna Achillesa badanie przeprowadzono w dwóch pozycjach: z wyprostowanym (ryc.1) oraz zgiętym do 50 stopni stawem kolanowym (ryc.2) [Orishimo i wsp. 2008] w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s (5 powtórzeń), 120$^\circ$/s (8 powtórzeń) oraz 180$^\circ$/s (10 powtórzeń) przy wykorzystaniu urządzenia Humac Norm (USA). Przed badaniem osoba odbywała 5 minutową rozgrzewkę na steperze. Do analizy brano wartości maksymalne pomiarów. Wyniki zostały porównane pomiędzy operowaną a zdrową kończyną dolną. Maksymalne wartości momentu siły mięśni zginaczy podeszwowych i grzbietowych stawu skokowego w warunkach izometrii i izokinetyki w dwóch pozycjach: z wyprostowanym oraz zgiętym do 50 stopni stawem kolanowym [Nm] oraz deficyt pomiędzy operowaną i zdrową kończyną dolną [\%]
 \end{enumerate}
 
-Wymienione wyżej badania zostały wdrożone w formie protokołu w placówce Carolina Medical Center (grupa Luxmed) [CMC] i zostały określone przez ortopedów i fizjoterapeutów jako wystarczające do oceny przywracania funkcji ścięgna Achillesa po rekonstrukcji. 
-
-Istnieją jednak możliwości rozszerzenia tak zdefiniowanego podejścia, aż do wersji maksimum, która uwzględniałaby pełne modelowanie układu mięśniowo-szkieletowego. Dane wówczas muszą pochodzić z możliwie dokładnych zsynchronizowanych urządzeń pomiarowych:
-\begin{itemize}
-	\item \textit{Komputerowa analiza ruchu} (ang. \textit{Motion Capture}) -- narzędzie wykorzystujące systemy czujników do zapisu informacji o zmianach położenia obiektu rejestrowanego np. pacjenta. Do wiodących rozwiązań należy zaliczyć systemy firmy Vicon [] lub BTS [].
-	\item \textit{Płyty dynamometryczne} (ang. \textit{Force Plates}) -- narzędzie wykorzystywane do pomiaru sił reakcji podłoża w trzech prostopadłych płaszczyznach. Dzięki temu można określić sumaryczny udział mięśni w generowaniu sił odpowiadających za balans ciała, ruch w danym kierunku oraz przeciwstawianie się sile grawitacji. Do wiodących rozwiązań należą płyty firmy Kistler [].
-	\item \textit{Elektromiografia}, w skr. EMG (ang. \textit{Electromyography}) -- narzędzie do pomiaru pobudzeń poszczególnych grup mięśniowych podczas ruchu. Wykorzystywane jest m.in. do określenia rozkładu sił zmierzonych przez płyty dynamometryczne na poszczególne mięśnie.
-\end{itemize}
-
-W uzupełnieniu, w zależności od problemu stosuje się dalsze uszczegółowienia modelu mięśniowo-szkieletowego z użyciem np.: wymiarów poszczególnych segmentów ciała (np. goleń, udo, tors) tzw. pomiary antropometryczne; pomiarów maksymalnych sił izometrycznych z użyciem systemów takich jak Biodex; pomiarów geometrii kości mierzonych np. z pomocą Tomografii Komputerowej [] ew. MR; znajdowania lokalizacji przyczepów mięśniowych określanych przy pomocy MR lub USG; wyliczenia środka masy poszczególnych segmentów określanych np. przy użyciu badania DXA (od ang. Double X Ray Absorption); określaniu składu włókien mięśniowych widocznych w USG.
-
-Z uwagi na dużą liczbę możliwych do zmierzenia parametrów, ich integracja odbywa się w modelach komputerowych zaimplementowanych w różnego rodzaju oprogramowaniu do symulacji biomechanicznych. Do najczęściej używanych należą Gait22 [], Gait 20 [] oraz obecnie najbardziej złożony AnyBody full body model []. Historia komputerowo wspomaganego, kompleksowego modelowania biomechaniki ruchu sięga wczesnych lat 90-tych ubiegłego wieku, kiedy to Delp i Loan przedstawili oprogramowanie SIMM [SIMM]. Obecnie SIMM jak również inne oprogramowania komercyjne takie jak: Visual 3D (Cmotion Inc.) [], Anybody (Anybody Technology) [], czy Adams (MSC Software Corp.) [], dostarczają narzędzi do wartościowych symulacji np. chodu [], biegu [] jak również konsekwencji różnych zabiegów chirurgicznych [] i chorób []. Istnieją również narzędzia otwarte, do których należą szeroko wykorzystywany OpenSim [] rozwijany na Uniwersytecie w Stanford, czy też Human Motion [] wywodzący się z instytutu badawczego RIKEN w Japonii.
-
-/*Odwróć kolejność - najpierw opisz kompleksową metodę, a potem protokół CMC*/
-
-Biomechanical simulations are driven by data from mathematical models chosen for the specific application. In most of the models within the softwares the skeletal system is defined as a set of rigid bodies representing particular body segment connected together in a hierarchical tree where the connections (joints) are represented by a mathematical function which models particular motion. The muscles are usually represented by the Hill model or some of it’s variations \cite{}
-
-Parameters that can be applied to the skeletal model are called the kinematics parameters e.g.: number of DOF (Degrees Of Freedom), bones and joints geometry. Parameters that are utilized directly for solving the equation of the forces distribution in the system are called the dynamics parameters. Currently the most complex model of the whole human musculoskeletal system is the full body model from AnyBody Technology \cite{}
-
- 
+Wymienione wyżej badania zostały określone przez ortopedów i fizjoterapeutów jako wystarczające do oceny przywracania funkcji ścięgna Achillesa po rekonstrukcji. 
 

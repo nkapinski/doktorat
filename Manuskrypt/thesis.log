@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  2 JUL 2018 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  3 JUL 2018 17:05
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1396,9 +1396,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [16]
-Underfull \vbox (badness 1072) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1449,13 +1446,13 @@ naª ul-tra-dxwi¦-ko-wy (zob. [us4us]).
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [20]
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1972,7 +1969,7 @@ Here is how much of TeX's memory you used:
  20316 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1236b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1414b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
 9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
@@ -2001,7 +1998,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (78 pages, 2684543 bytes).
+Output written on thesis.pdf (78 pages, 2684949 bytes).
 PDF statistics:
  367 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -13,29 +13,29 @@
 \contentsline {section}{\numberline {4.1}Zarys historyczny}{28}
 \contentsline {section}{\numberline {4.2}Szkolenie g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{31}
 \contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{36}
-\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{38}
+\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{39}
 \contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{42}
-\contentsline {subsection}{\numberline {4.3.1}AlexNet}{44}
+\contentsline {subsection}{\numberline {4.3.1}AlexNet}{45}
 \contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{47}
-\contentsline {subsection}{\numberline {4.3.3}ResNet}{49}
-\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{52}
-\contentsline {subsubsection}{U\IeC {\'s}rednianie}{52}
+\contentsline {subsection}{\numberline {4.3.3}ResNet}{50}
+\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{53}
+\contentsline {subsubsection}{U\IeC {\'s}rednianie}{53}
 \contentsline {subsubsection}{G\IeC {\l }osowanie}{53}
-\contentsline {subsubsection}{Klasyfikacja Bayesa}{53}
-\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{53}
+\contentsline {subsubsection}{Klasyfikacja Bayesa}{54}
+\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{54}
 \contentsline {section}{\numberline {4.4}Zastosowania w medycynie}{54}
-\contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{58}
-\contentsline {section}{\numberline {5.1}Metodyka}{58}
-\contentsline {section}{\numberline {5.2}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{58}
-\contentsline {section}{\numberline {5.3}Obliczanie krzywych gojenia}{58}
-\contentsline {subsection}{\numberline {5.3.1}Topologia sieci}{58}
-\contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowo\IeC {\'s}ci}{58}
-\contentsline {subsection}{\numberline {5.3.3}Miara wygojenia}{58}
-\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{59}
-\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{59}
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{59}
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{59}
-\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{59}
-\contentsline {chapter}{\numberline {7}Podsumowanie}{60}
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{68}
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{69}
+\contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{59}
+\contentsline {section}{\numberline {5.1}Metodyka}{59}
+\contentsline {section}{\numberline {5.2}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{59}
+\contentsline {section}{\numberline {5.3}Obliczanie krzywych gojenia}{59}
+\contentsline {subsection}{\numberline {5.3.1}Topologia sieci}{59}
+\contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowo\IeC {\'s}ci}{59}
+\contentsline {subsection}{\numberline {5.3.3}Miara wygojenia}{59}
+\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{60}
+\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{60}
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{60}
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{60}
+\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{60}
+\contentsline {chapter}{\numberline {7}Podsumowanie}{61}
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{69}
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{70}

@@ -93,6 +93,13 @@ J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, L.~Fei-Fei.
 \newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
 \newblock {\em CVPR09}, 2009.
 
+\bibitem{Doral2010}
+Mahmut~Nedim Doral, Mahbub Alam, Murat Bozkurt, Egemen Turhan, Ozg\"{u}r~Ahmet
+  Atay, G\"{u}rhan D\"{o}nmez, Nicola Maffulli.
+\newblock Functional anatomy of the achilles tendon.
+\newblock {\em Knee Surgery, Sports Traumatology, Arthroscopy}, 18(5):638--643,
+  feb 2010.
+
 \bibitem{LungChalenge}
 Qi~Dou, Hao Chen, Lequan Yu, Jing Qin, Pheng-Ann Heng.
 \newblock Multilevel contextual 3-d {CNNs} for false positive reduction in
@@ -192,6 +199,12 @@ Patrick Koch, Brett Wujek, Oleg Golovidov, Steven Gardner.
 \newblock Automated hyperparameter tuning for effective machine learning.
 \newblock 2017.
 
+\bibitem{KoivunenNiemel1995}
+T~Koivunen-Niemel\"{a},  K~Parkkola.
+\newblock Anatomy of the achilles tendon (tendo calcaneus) with respect to
+  tendon thickness measurements.
+\newblock {\em Surgical and Radiologic Anatomy}, 17(3):263--268, sep 1995.
+
 \bibitem{Kowalik2003}
 Stanisław Kowalik.
 \newblock Zastosowanie teorii zbiorów przybliżonych do podejmowania decyzji.
@@ -255,6 +268,11 @@ Geert Litjens, Thijs Kooi, Babak~Ehteshami Bejnordi, Arnaud Arindra~Adiyoso
 Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 \newblock Towards better analysis of deep convolutional neural networks.
 \newblock {\em CoRR}, abs/1604.07043, 2016.
+
+\bibitem{Maffulli2005}
+Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
+\newblock {\em Tendon Injuries}.
+\newblock Springer-Verlag, 2005.
 
 \bibitem{DBLP:journals/corr/abs-1803-04014}
 Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
@@ -351,6 +369,11 @@ Dipanjan Sengupta, Yida Wang, Narayanan Sundaram, Theodore~L. Willke.
 \newblock Julian~M. Kunkel, Rio Yokota, Pavan Balaji, David Keyes, redaktorzy,
   {\em High Performance Computing}, strony 120--138, Cham, 2017. Springer
   International Publishing.
+
+\bibitem{Sharma2006}
+P.~Sharma,  N.~Maffulli.
+\newblock {{B}iology of tendon injury: healing, modeling and remodeling}.
+\newblock {\em J Musculoskelet Neuronal Interact}, 6(2):181--190, 2006.
 
 \bibitem{DBLP:journals/corr/SimonyanVZ13}
 Karen Simonyan, Andrea Vedaldi, Andrew Zisserman.

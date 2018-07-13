@@ -2,19 +2,18 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: header.aux
 The style file: plplain.bst
 Database file #1: refs.bib
-Repeated entry---line 891 of file refs.bib
+Repeated entry---line 950 of file refs.bib
  : @article{Breiman2001
  :                     ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 914 of file refs.bib
+You're missing a field part---line 973 of file refs.bib
  :  month=
  :        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 989 of file refs.bib
+Repeated entry---line 1048 of file refs.bib
  : @article{Litjens2017
  :                     ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
 Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
 while executing---line 1171 of file plplain.bst
 Warning--to sort, need author or key in TensorRT

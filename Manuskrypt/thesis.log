@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  9 JUL 2018 14:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  13 JUL 2018 15:14
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1832,6 +1832,12 @@ and I'll forget about whatever was undefined.
 [62
 
 ]
+Underfull \hbox (badness 2310) in paragraph at lines 97--102
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1849,7 +1855,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [66]
 ! Undefined control sequence.
-l.331   alzheimer{\textquotesingle
+l.349   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1860,16 +1866,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.349   {\$}{\$}^
+l.367   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 350.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 368.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 352.
+LaTeX Font Warning: Command \em invalid in math mode on input line 370.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1878,7 +1884,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.352   {\em
+l.370   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1886,7 +1892,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.354 
+l.372 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1894,7 +1900,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.354 
+l.372 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1903,19 +1909,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--354
+Underfull \hbox (badness 10000) in paragraph at lines 365--372
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 347--354
+Underfull \hbox (badness 6725) in paragraph at lines 365--372
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (447.03903pt too wide) in paragraph at lines 347--354
+Overfull \hbox (447.03903pt too wide) in paragraph at lines 365--372
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
@@ -1925,7 +1931,7 @@ n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.354 
+l.372 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1949,47 +1955,44 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Dodatek A.
 ) [70
 
-] (thesis.aux (header.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17031 strings out of 493305
- 330941 string characters out of 3128932
- 334284 words of memory out of 3000000
- 20316 multiletter control sequences out of 15000+200000
+ 17035 strings out of 493305
+ 330998 string characters out of 3128932
+ 335300 words of memory out of 3000000
+ 20320 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1417b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.e
-nc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
-enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plme
-.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plm
-s.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
-it.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/p
-lsc.enc}<C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/Norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/Norbert/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/Users/Norbert
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb><C:/Users/N
-orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/U
-sers/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb>
-<C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi7
-.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/
-plmi8.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
-c/pl/plr10.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/pl/plr12.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/pl/plr6.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/pl/plr7.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/pl/plr8.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/Norbert/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/Norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/Norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on thesis.pdf (79 pages, 2686852 bytes).
+{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
+.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
+2.9/fonts/enc/dvips/pl/plme.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTe
+X 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKT
+eX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/Norbert/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users
+/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:
+/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.
+pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
+lex10.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/pl/plmi10.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/pl/plmi12.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/pl/plmi6.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/pl/plmi7.pfb><C:/Users/Norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/Norbert/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/Norbert/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/Norbert/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Users/Norbert/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Users/Norbert/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/Norbert/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/Norb
+ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
+s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
+/Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
+fb>
+Output written on thesis.pdf (79 pages, 2687348 bytes).
 PDF statistics:
  371 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

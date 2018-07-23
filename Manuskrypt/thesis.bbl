@@ -1,4 +1,16 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
+
+\bibitem{Adams}
+Adams msc software corp.
+\newblock Accessed: 2018-07-23.
+
+\bibitem{AnyBody}
+Anybody tech.
+\newblock Accessed: 2018-07-23.
+
+\bibitem{BTS}
+Bts systems.
+\newblock Accessed: 2018-07-23.
 
 \bibitem{MGH}
 Deep learning: The next step in applied healthcare data.
@@ -10,6 +22,10 @@ Deep learning: The next step in applied healthcare data.
 From challenges to impact of machine learning in clinical practice.
 \newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
 \newblock Accessed: 2018-22-05.
+
+\bibitem{KISTLER}
+Kistler systems.
+\newblock Accessed: 2018-07-23.
 
 \bibitem{MedicalImageNet}
 Medical image net.
@@ -27,6 +43,14 @@ An overview of resnet and its variants.
   \url{https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035}.
 \newblock Accessed: 2018-22-05.
 
+\bibitem{Vicon}
+Vicon systems.
+\newblock Accessed: 2018-07-23.
+
+\bibitem{Visual3D}
+Visual 3d - c motion.
+\newblock Accessed: 2018-07-23.
+
 \bibitem{DBLP:journals/corr/abs-1005-4020}
 Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
 \newblock Image segmentation by using threshold techniques.
@@ -36,6 +60,12 @@ Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
 Sanjeev Arora, Aditya Bhaskara, Rong Ge, Tengyu Ma.
 \newblock Provable bounds for learning some deep representations.
 \newblock {\em CoRR}, abs/1310.6343, 2013.
+
+\bibitem{Bassani2017}
+Tito Bassani, Elena Stucovitz, Zhihui Qian, Matteo Briguglio, Fabio Galbusera.
+\newblock Validation of the {AnyBody} full body musculoskeletal model in
+  computing lumbar spine loads at l4l5 level.
+\newblock {\em Journal of Biomechanics}, 58:89--96, jun 2017.
 
 \bibitem{Bell2007}
 Robert~M. Bell,  Yehuda Koren.
@@ -104,6 +134,21 @@ Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
   Covariates}.
 \newblock Raport instytutowy, 2013.
 
+\bibitem{Delp2007}
+Scott~L. Delp, Frank~C. Anderson, Allison~S. Arnold, Peter Loan, Ayman Habib,
+  Chand~T. John, Eran Guendelman, Darryl~G. Thelen.
+\newblock {OpenSim}: Open-source software to create and analyze dynamic
+  simulations of movement.
+\newblock {\em {IEEE} Transactions on Biomedical Engineering},
+  54(11):1940--1950, nov 2007.
+
+\bibitem{Delp1990}
+S.L. Delp, J.P. Loan, M.G. Hoy, F.E. Zajac, E.L. Topp, J.M. Rosen.
+\newblock An interactive graphics-based model of the lower extremity to study
+  orthopaedic surgical procedures.
+\newblock {\em {IEEE} Transactions on Biomedical Engineering}, 37(8):757--767,
+  1990.
+
 \bibitem{imagenet_cvpr09}
 J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, L.~Fei-Fei.
 \newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
@@ -168,6 +213,13 @@ Matthew~F. Glasser, Timothy~S. Coalson, Emma~C. Robinson, Carl~D. Hacker, John
 \newblock A multi-modal parcellation of human cerebral cortex.
 \newblock {\em Nature}, 536(7615):171--178, jul 2016.
 
+\bibitem{Gomes2013}
+G.~T. Gomes, S.~Van~Cauter, M.~De~Beule, L.~Vigneron, C.~Pattyn, E.~A.
+  Audenaert.
+\newblock {\em Patient-Specific Modelling in Orthopedics: From Image to
+  Surgery}, strony 109--129.
+\newblock Springer Netherlands, Dordrecht, 2013.
+
 \bibitem{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, Aaron Courville.
 \newblock {\em Deep Learning}.
@@ -181,6 +233,11 @@ Varun Gulshan, Lily Peng, Marc Coram, Martin~C. Stumpe, Derek Wu, Arunachalam
 \newblock Development and validation of a deep learning algorithm for detection
   of diabetic retinopathy in retinal fundus photographs.
 \newblock {\em {JAMA}}, 316(22):2402, dec 2016.
+
+\bibitem{Hamner2010}
+Samuel~R. Hamner, Ajay Seth, Scott~L. Delp.
+\newblock Muscle contributions to propulsion and support during running.
+\newblock {\em Journal of Biomechanics}, 43(14):2709--2716, oct 2010.
 
 \bibitem{ResNet}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
@@ -216,6 +273,13 @@ Jacques,  Pierre Curie.
   crystals with inclined faces.
 \newblock {\em Bulletin de la Societe de Minerologique de France}, (3):90--93,
   1880.
+
+\bibitem{John2013}
+Chand~T. John, Frank~C. Anderson, Jill~S. Higginson, Scott~L. Delp.
+\newblock Stabilisation of walking by intrinsic muscle properties revealed in a
+  three-dimensional muscle-driven simulation.
+\newblock {\em Computer Methods in Biomechanics and Biomedical Engineering},
+  16(4):451--462, apr 2013.
 
 \bibitem{Ensemble}
 C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
@@ -418,6 +482,12 @@ Dipanjan Sengupta, Yida Wang, Narayanan Sundaram, Theodore~L. Willke.
   {\em High Performance Computing}, strony 120--138, Cham, 2017. Springer
   International Publishing.
 
+\bibitem{Shao2009}
+Qi~Shao, Daniel~N. Bassett, Kurt Manal, Thomas~S. Buchanan.
+\newblock An {EMG}-driven model to estimate muscle forces and joint moments in
+  stroke patients.
+\newblock {\em Computers in Biology and Medicine}, 39(12):1083--1088, dec 2009.
+
 \bibitem{Sharma2006}
 P.~Sharma,  N.~Maffulli.
 \newblock {{B}iology of tendon injury: healing, modeling and remodeling}.
@@ -446,6 +516,13 @@ Fengguang Song,  Jack Dongarra.
 \newblock {\em Proceedings of the 28th ACM International Conference on
   Supercomputing}, ICS '14, strony 333--342, New York, NY, USA, 2014. ACM.
 
+\bibitem{Steele2010}
+Katherine~M. Steele, Ajay Seth, Jennifer~L. Hicks, Michael~S. Schwartz,
+  Scott~L. Delp.
+\newblock Muscle contributions to support and progression during single-limb
+  stance in crouch gait.
+\newblock {\em Journal of Biomechanics}, 43(11):2099--2105, aug 2010.
+
 \bibitem{Etiologia}
 Katarzyna Strojek, Zuzanna Piekorz, Urszula Kaźmierczak, Agnieszka
   Strączyńska, Walery Zukow.
@@ -470,6 +547,12 @@ Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew
   Wojna.
 \newblock Rethinking the inception architecture for computer vision.
 \newblock {\em CoRR}, abs/1512.00567, 2015.
+
+\bibitem{Riken}
+K.~Tahara, Z.~W. Luo, T.~Odashima, M.~Onishi, S.~Hosoe, A.~Kato.
+\newblock Dynamic control and simulation of human musculo-skeletal model.
+\newblock {\em SICE 2004 Annual Conference}, wolumen~3, strony 2395--2398 vol.
+  3, Aug 2004.
 
 \bibitem{Tajbakhsh2016}
 Nima Tajbakhsh, Jae~Y. Shin, Suryakanth~R. Gurudu, R.~Todd Hurst,

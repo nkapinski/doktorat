@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  23 JUL 2018 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  23 JUL 2018 17:45
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1771,8 +1771,8 @@ Rozdzia\PlPrIeC {\l } 7.
 
 ]
 ! Undefined control sequence.
-l.6   \url
-          {https://insights.samsung.com/2016/07/12/deep-learning-the-next-st...
+l.18   \url
+           {https://insights.samsung.com/2016/07/12/deep-learning-the-next-s...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1780,19 +1780,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--8
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
 []\OT4/cmr/m/n/12 Deep le-ar-ning: The next step in ap-plied he-al-th-ca-re da-
 ta.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--8
+Underfull \hbox (badness 10000) in paragraph at lines 16--20
 \OT4/cmr/m/n/12 https://insights.samsung.com/2016/07/12/deep-learning-the-next-
 step-in-
  []
 
 ! Undefined control sequence.
-l.11 \newblock \url
+l.23 \newblock \url
                    {http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1801,7 +1801,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.16 \newblock \url
+l.32 \newblock \url
                    {http://langlotzlab.stanford.edu/projects/medical-image-n...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1810,7 +1810,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.21 \newblock \url
+l.37 \newblock \url
                    {https://developer.nvidia.com/tensorrt}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1819,7 +1819,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.27   \url
+l.43   \url
            {https://towardsdatascience.com/an-overview-of-resnet-and-its-var...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1830,16 +1830,16 @@ and I'll forget about whatever was undefined.
 [62
 
 ]
-Underfull \hbox (badness 2310) in paragraph at lines 119--124
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[63]
+Underfull \hbox (badness 1515) in paragraph at lines 164--169
 []\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
 Tur-han,
  []
 
 
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[63]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1856,8 +1856,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [67]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[68]
 ! Undefined control sequence.
-l.397   alzheimer{\textquotesingle
+l.461   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1868,16 +1872,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.415   {\$}{\$}^
+l.479   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 416.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 480.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 418.
+LaTeX Font Warning: Command \em invalid in math mode on input line 482.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1886,7 +1890,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.418   {\em
+l.482   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1894,7 +1898,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.420 
+l.484 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1902,7 +1906,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.420 
+l.484 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1911,19 +1915,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--420
+Underfull \hbox (badness 10000) in paragraph at lines 477--484
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 413--420
+Underfull \hbox (badness 5331) in paragraph at lines 477--484
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (447.03903pt too wide) in paragraph at lines 413--420
+Overfull \hbox (452.91397pt too wide) in paragraph at lines 477--484
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
@@ -1933,7 +1937,7 @@ n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.420 
+l.484 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1945,24 +1949,24 @@ deleted material, e.g., by typing `I$}'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[68]
+[69]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[69]) (appendix.tex
+[70]) (appendix.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[70]
+[71]
 Dodatek A.
-) [71
+) [72
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17046 strings out of 493305
- 331131 string characters out of 3128932
- 334344 words of memory out of 3000000
- 20331 multiletter control sequences out of 15000+200000
+ 17061 strings out of 493305
+ 331273 string characters out of 3128932
+ 335412 words of memory out of 3000000
+ 20346 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1409b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1994,9 +1998,9 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (80 pages, 2689703 bytes).
+Output written on thesis.pdf (81 pages, 2692501 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
+ 377 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

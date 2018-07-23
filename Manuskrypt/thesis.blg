@@ -23,18 +23,24 @@ I was expecting a `,' or a `}'---line 94 of file refs.bib
  :  urldate = {2018-07-23},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1107 of file refs.bib
+Repeated entry---line 1302 of file refs.bib
  : @article{Breiman2001
  :                     ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 1130 of file refs.bib
+You're missing a field part---line 1325 of file refs.bib
  :  month=
  :        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1205 of file refs.bib
+Repeated entry---line 1400 of file refs.bib
  : @article{Litjens2017
  :                     ,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in Vicon
+Warning--to sort, need author or key in BTS
+Warning--to sort, need author or key in KISTLER
+Warning--to sort, need author or key in Visual3D
+Warning--to sort, need author or key in AnyBody
+Warning--to sort, need author or key in Adams
 Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
 while executing---line 1171 of file plplain.bst
 Warning--to sort, need author or key in TensorRT
@@ -43,6 +49,7 @@ Warning--to sort, need author or key in NVIDIApanel
 Warning--to sort, need author or key in MedicalImageNet
 Warning--to sort, need author or key in MGH
 Warning--empty institution in BPA
+Warning--can't use both author and editor fields in Gomes2013
 Warning--there's a number but no volume in Curie1880
 Warning--empty booktitle in Koch2017AutomatedHT
 Warning--empty institution in CIFAR

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  13 JUL 2018 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  23 JUL 2018 11:43
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1308,6 +1308,11 @@ Package pdftex.def Info: figures/skurcz_miesni.png  used on input line 54.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<figures/Hill.png, id=59, 332.442pt x 216.81pt>
+File: figures/Hill.png Graphic file (type png)
+<use figures/Hill.png>
+Package pdftex.def Info: figures/Hill.png  used on input line 63.
+(pdftex.def)             Requested size: 264.61333pt x 172.57484pt.
 
 Underfull \vbox (badness 1082) has occurred while \output is active []
 
@@ -1316,26 +1321,19 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
 [6]
-<figures/Hill.png, id=63, 332.442pt x 216.81pt>
-File: figures/Hill.png Graphic file (type png)
-<use figures/Hill.png>
-Package pdftex.def Info: figures/Hill.png  used on input line 63.
-(pdftex.def)             Requested size: 264.61333pt x 172.57484pt.
+Underfull \vbox (badness 3049) has occurred while \output is active []
+
 
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
 [7 <./figures/skurcz_miesni.png> <./figures/Hill.png>]
-Overfull \hbox (3.97209pt too wide) in paragraph at lines 83--84
-\OT4/cmr/m/n/12 http://lermagazine.com/article/epidemiology-of-achilles-tendon-
-rupture-in-the-us]). A»
- []
-
 <figures/Achilles_zerwanie.jpg, id=68, 702.625pt x 584.1825pt>
 File: figures/Achilles_zerwanie.jpg Graphic file (type jpg)
 <use figures/Achilles_zerwanie.jpg>
 Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 89.
 (pdftex.def)             Requested size: 352.81552pt x 293.34738pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1832,7 +1830,7 @@ and I'll forget about whatever was undefined.
 [62
 
 ]
-Underfull \hbox (badness 2310) in paragraph at lines 97--102
+Underfull \hbox (badness 2310) in paragraph at lines 119--124
 []\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
 Tur-han,
  []
@@ -1854,8 +1852,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [66]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[67]
 ! Undefined control sequence.
-l.349   alzheimer{\textquotesingle
+l.397   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1866,16 +1868,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.367   {\$}{\$}^
+l.415   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 368.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 416.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 370.
+LaTeX Font Warning: Command \em invalid in math mode on input line 418.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1884,7 +1886,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.370   {\em
+l.418   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1892,7 +1894,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.372 
+l.420 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1900,7 +1902,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.372 
+l.420 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1909,19 +1911,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--372
+Underfull \hbox (badness 10000) in paragraph at lines 413--420
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 6725) in paragraph at lines 365--372
+Underfull \hbox (badness 6725) in paragraph at lines 413--420
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (447.03903pt too wide) in paragraph at lines 365--372
+Overfull \hbox (447.03903pt too wide) in paragraph at lines 413--420
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
@@ -1931,7 +1933,7 @@ n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.372 
+l.420 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1943,27 +1945,27 @@ deleted material, e.g., by typing `I$}'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[67]
+[68]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[68]) (appendix.tex
+[69]) (appendix.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[69]
+[70]
 Dodatek A.
-) [70
+) [71
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17035 strings out of 493305
- 330998 string characters out of 3128932
- 335300 words of memory out of 3000000
- 20320 multiletter control sequences out of 15000+200000
+ 17046 strings out of 493305
+ 331131 string characters out of 3128932
+ 334344 words of memory out of 3000000
+ 20331 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1417b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1409b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
 9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
@@ -1992,9 +1994,9 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (79 pages, 2687348 bytes).
+Output written on thesis.pdf (80 pages, 2689703 bytes).
 PDF statistics:
- 371 PDF objects out of 1000 (max. 8388607)
+ 374 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

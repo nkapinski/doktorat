@@ -47,10 +47,26 @@ Richard~Ernest Bellman.
 \newblock {\em Dynamic Programming}.
 \newblock Princeton University Press, 1957.
 
+\bibitem{Beredjiklian2003}
+P.~K. Beredjiklian.
+\newblock {{B}iologic aspects of flexor tendon laceration and repair}.
+\newblock {\em J Bone Joint Surg Am}, 85-A(3):539--550, Mar 2003.
+
+\bibitem{bochenek2016anatomia}
+A.~Bochenek,  M.~Reicher.
+\newblock {\em Anatomia czlowieka}.
+\newblock Anatomia cz{\l}owieka. PZWL, 2016.
+
 \bibitem{Breiman2001}
 Leo Breiman.
 \newblock Random forests.
 \newblock {\em Machine Learning}, 45(1):5--32, Oct 2001.
+
+\bibitem{START}
+Carolina~Medical Center.
+\newblock Start - wykorzystanie autologicznych mezenchymalnych komórek
+  macierzystych w procesie regeneracji rekonstruowanego ścięgna achillesa,
+  2014.
 
 \bibitem{Chen:2008:HDV:1370965}
 Chun-houh Chen, Wolfgang Hrdle, Antony Unwin, Chun-houh Chen, Wolfgang Hrdle,
@@ -93,6 +109,12 @@ J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, L.~Fei-Fei.
 \newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
 \newblock {\em CVPR09}, 2009.
 
+\bibitem{Docheva2015}
+Denitsa Docheva, Sebastian~A. M\"{u}ller, Martin Majewski, Christopher~H.
+  Evans.
+\newblock Biologics for tendon repair.
+\newblock {\em Advanced Drug Delivery Reviews}, 84:222--239, apr 2015.
+
 \bibitem{Doral2010}
 Mahmut~Nedim Doral, Mahbub Alam, Murat Bozkurt, Egemen Turhan, Ozg\"{u}r~Ahmet
   Atay, G\"{u}rhan D\"{o}nmez, Nicola Maffulli.
@@ -133,6 +155,12 @@ Andre Esteva, Brett Kuprel, Roberto~A. Novoa, Justin Ko, Susan~M. Swetter,
   networks.
 \newblock {\em Nature}, 542(7639):115--118, jan 2017.
 
+\bibitem{Frisch1933}
+R.~Frisch,  O.~Stern.
+\newblock {\"U}ber die magnetische ablenkung von wasserstoffmolek{\"u}len und
+  das magnetische moment des protons. i.
+\newblock {\em Zeitschrift f{\"u}r Physik}, 85(1):4--16, Jan 1933.
+
 \bibitem{Glasser2016}
 Matthew~F. Glasser, Timothy~S. Coalson, Emma~C. Robinson, Carl~D. Hacker, John
   Harwell, Essa Yacoub, Kamil Ugurbil, Jesper Andersson, Christian~F. Beckmann,
@@ -163,6 +191,12 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
 \newblock Identity mappings in deep residual networks.
 \newblock {\em CoRR}, abs/1603.05027, 2016.
+
+\bibitem{Hill1938}
+A.~V. Hill.
+\newblock The heat of shortening and the dynamic constants of muscle.
+\newblock {\em Proceedings of the Royal Society B: Biological Sciences},
+  126(843):136--195, oct 1938.
 
 \bibitem{Hill06}
 F.S. Hill,  Stephen~M. Kelly.
@@ -249,6 +283,11 @@ Yann LeCun, Bernhard~E. Boser, John~S. Denker, Donnie Henderson, R.~E. Howard,
 \newblock D.~S. Touretzky, redaktor, {\em Advances in Neural Information
   Processing Systems 2}, strony 396--404. Morgan-Kaufmann, 1990.
 
+\bibitem{Lin2004}
+Tony~W. Lin, Luis Cardenas, Louis~J. Soslowsky.
+\newblock Biomechanics of tendon injury and repair.
+\newblock {\em Journal of Biomechanics}, 37(6):865--877, jun 2004.
+
 \bibitem{COCO}
 Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
   Ramanan, Piotr Doll{\'a}r, C.~Lawrence Zitnick.
@@ -310,6 +349,10 @@ K.~Pearson.
 \newblock On lines and planes of closest fit to systems of points in space.
 \newblock {\em Philosophical Magazine}, 2:559--572, 1901.
 
+\bibitem{EpidemiologyUS}
+M.~S. Raikin.
+\newblock Epidemiology of achilles tendon rupture in the us, 2014.
+
 \bibitem{2017arXiv170701836R}
 P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
 \newblock {Cardiologist-Level Arrhythmia Detection with Convolutional Neural
@@ -325,6 +368,11 @@ Olaf Ronneberger, Philipp Fischer, Thomas Brox.
 Frank Rosenblatt.
 \newblock The perceptron: A perceiving and recognizing automaton.
 \newblock Raport instytutowy, 1957.
+
+\bibitem{CMC}
+A.~Rosińska,  M.~Syrek.
+\newblock Rehabilitacja ścięgna achillesa - kopletny protokół usprawniania
+  po trójpęczkowej rekonstrukcji ścięgna achillesa., 2017.
 
 \bibitem{Rumelhart1986}
 David~E. Rumelhart, Geoffrey~E. Hinton, Ronald~J. Williams.
@@ -397,6 +445,13 @@ Fengguang Song,  Jack Dongarra.
   1000 cpu cores.
 \newblock {\em Proceedings of the 28th ACM International Conference on
   Supercomputing}, ICS '14, strony 333--342, New York, NY, USA, 2014. ACM.
+
+\bibitem{Etiologia}
+Katarzyna Strojek, Zuzanna Piekorz, Urszula Kaźmierczak, Agnieszka
+  Strączyńska, Walery Zukow.
+\newblock Etiologia i patomechanizm uszkodzenia Ścięgna achillesa = the
+  etiology and patomechanizm damage to the achilles tendon.
+\newblock 2016.
 
 \bibitem{InceptionResNet}
 Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke.
@@ -473,6 +528,13 @@ Robert~H. Wurtz.
 Saining Xie, Ross~B. Girshick, Piotr Doll{\'{a}}r, Zhuowen Tu, Kaiming He.
 \newblock Aggregated residual transformations for deep neural networks.
 \newblock {\em CoRR}, abs/1611.05431, 2016.
+
+\bibitem{Yang2013}
+Guang Yang, Benjamin~B. Rothrauff, Rocky~S. Tuan.
+\newblock Tendon and ligament regeneration and repair: Clinical relevance and
+  developmental paradigm.
+\newblock {\em Birth Defects Research Part C: Embryo Today: Reviews},
+  99(3):203--222, sep 2013.
 
 \bibitem{ZFNet}
 Matthew~D. Zeiler,  Rob Fergus.

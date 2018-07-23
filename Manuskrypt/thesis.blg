@@ -2,15 +2,36 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: header.aux
 The style file: plplain.bst
 Database file #1: refs.bib
-Repeated entry---line 950 of file refs.bib
+Warning--entry type for "EpidemiologyUS" isn't style-file defined
+--line 69 of file refs.bib
+I was expecting a `,' or a `}'---line 74 of file refs.bib
+ :  
+ :  urldate = {2018-07-23},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "START" isn't style-file defined
+--line 79 of file refs.bib
+I was expecting a `,' or a `}'---line 84 of file refs.bib
+ :  
+ :  urldate = {2018-07-23},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "CMC" isn't style-file defined
+--line 89 of file refs.bib
+I was expecting a `,' or a `}'---line 94 of file refs.bib
+ :  
+ :  urldate = {2018-07-23},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1107 of file refs.bib
  : @article{Breiman2001
  :                     ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 973 of file refs.bib
+You're missing a field part---line 1130 of file refs.bib
  :  month=
  :        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1048 of file refs.bib
+Repeated entry---line 1205 of file refs.bib
  : @article{Litjens2017
  :                     ,
 I'm skipping whatever remains of this entry
@@ -28,4 +49,5 @@ Warning--empty institution in CIFAR
 Warning--empty institution in Rosenblatt1957
 Name 1 in "S. Hijazi, R. Kumar, and C. Rowen" has a comma at the end for entry Hijazi2015
 while executing---line 1225 of file plplain.bst
-(There were 5 error messages)
+Warning--empty journal in Etiologia
+(There were 8 error messages)

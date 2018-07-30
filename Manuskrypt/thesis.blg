@@ -23,18 +23,21 @@ I was expecting a `,' or a `}'---line 94 of file refs.bib
  :  urldate = {2018-07-23},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1302 of file refs.bib
+Repeated entry---line 1453 of file refs.bib
  : @article{Breiman2001
  :                     ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 1325 of file refs.bib
+You're missing a field part---line 1476 of file refs.bib
  :  month=
  :        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1400 of file refs.bib
+Repeated entry---line 1551 of file refs.bib
  : @article{Litjens2017
  :                     ,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in Butterfly2018
+Warning--to sort, need author or key in US4US
+Warning--to sort, need author or key in NVIDIA-CLARA
 Warning--to sort, need author or key in Vicon
 Warning--to sort, need author or key in BTS
 Warning--to sort, need author or key in KISTLER

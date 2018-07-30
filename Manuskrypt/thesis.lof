@@ -6,25 +6,25 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Schemat hierarchicznej budowy \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{5}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Schemat generowania skurczu mi\IeC {\k e}\IeC {\'s}ni.\relax }}{7}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Schemat modelu Hilla.\relax }}{7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Schemat modelu Hilla.\relax }}{9}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Parametry o\IeC {\'s}rodk\IeC {\'o}w cz\IeC {\k e}sto mierzonych w badaniach USG.\relax }}{19}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Wykres przedstawiaj\IeC {\k a}cy proporcje wyst\IeC {\k e}powania urazu \IeC {\'s}ci\IeC {\k e}gna Achillesa w r\IeC {\'o}\IeC {\.z}nych dyscyplinach sportowych na przyk\IeC {\l }adzie ameryka\IeC {\'n}skiego spo\IeC {\l }ecze\IeC {\'n}stwa.\relax }}{9}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Parametry o\IeC {\'s}rodk\IeC {\'o}w cz\IeC {\k e}sto mierzonych w badaniach USG.\relax }}{18}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i innych algorytm\IeC {\'o}w.\relax }}{28}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Topologia perceptronu.\relax }}{29}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Topologia perceptronu wielowarstwowego.\relax }}{30}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Topologia sieci LeNet.\relax }}{31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Reprezentacja graficzna oceny krzy\IeC {\.z}owej.\relax }}{37}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Dwuwymiarowa przestrze\IeC {\'n} cech wraz z zaznaczonymi poziomami warianci i sk\IeC {\l }adowymi g\IeC {\l }\IeC {\'o}wnymi.\relax }}{41}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces B\IeC {\l }\IeC {\k a}d top-5 klasyfikacji obiekt\IeC {\'o}w w kolejnych latach uzyskiwany przez zwyci\IeC {\k e}zc\IeC {\'o}w konkursu ILSVRC\relax }}{44}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schemat architektury AlexNet.\relax }}{45}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{47}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{48}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{48}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{50}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{52}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{55}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki z ocen\IeC {\k a} panelu ekspert\IeC {\'o}w.\relax }}{56}
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji 3 chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{56}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i innych algorytm\IeC {\'o}w.\relax }}{29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Topologia perceptronu.\relax }}{30}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Topologia perceptronu wielowarstwowego.\relax }}{31}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Topologia sieci LeNet.\relax }}{32}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Reprezentacja graficzna oceny krzy\IeC {\.z}owej.\relax }}{38}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Dwuwymiarowa przestrze\IeC {\'n} cech wraz z zaznaczonymi poziomami warianci i sk\IeC {\l }adowymi g\IeC {\l }\IeC {\'o}wnymi.\relax }}{42}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces B\IeC {\l }\IeC {\k a}d top-5 klasyfikacji obiekt\IeC {\'o}w w kolejnych latach uzyskiwany przez zwyci\IeC {\k e}zc\IeC {\'o}w konkursu ILSVRC\relax }}{45}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Schemat architektury AlexNet.\relax }}{46}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{48}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{49}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{49}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{51}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{53}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{56}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki z ocen\IeC {\k a} panelu ekspert\IeC {\'o}w.\relax }}{57}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji 3 chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{57}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

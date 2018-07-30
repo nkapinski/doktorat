@@ -32,6 +32,11 @@ Medical image net.
 \newblock \url{http://langlotzlab.stanford.edu/projects/medical-image-net/}.
 \newblock Accessed: 2018-22-05.
 
+\bibitem{Butterfly2018}
+Meet iq. whole body imaging. under $2k.
+\newblock \url{https://www.butterflynetwork.com/}.
+\newblock Accessed: 2018-07-30.
+
 \bibitem{TensorRT}
 Nvidia tensorrt.
 \newblock \url{https://developer.nvidia.com/tensorrt}.
@@ -42,6 +47,16 @@ An overview of resnet and its variants.
 \newblock
   \url{https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035}.
 \newblock Accessed: 2018-22-05.
+
+\bibitem{NVIDIA-CLARA}
+Project clara: Nvidia supercomputing platform redefines medical imaging.
+\newblock \url{https://blogs.nvidia.com/blog/2018/03/28/ai-healthcare-gtc/}.
+\newblock Accessed: 2018-07-30.
+
+\bibitem{US4US}
+Us4us -- ultrasound r&d in medicine, biology and industry.
+\newblock \url{http://us4us.eu/}.
+\newblock Accessed: 2018-07-30.
 
 \bibitem{Vicon}
 Vicon systems.
@@ -60,6 +75,12 @@ Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
 Sanjeev Arora, Aditya Bhaskara, Rong Ge, Tengyu Ma.
 \newblock Provable bounds for learning some deep representations.
 \newblock {\em CoRR}, abs/1310.6343, 2013.
+
+\bibitem{Babcock1996}
+D.~S. Babcock, H.~Patriquin, M.~LaFortune, M.~Dauzat.
+\newblock Power doppler sonography: basic principles and clinical applications
+  in children.
+\newblock {\em Pediatric Radiology}, 26(2):109--115, Feb 1996.
 
 \bibitem{Bassani2017}
 Tito Bassani, Elena Stucovitz, Zhihui Qian, Matteo Briguglio, Fabio Galbusera.
@@ -105,6 +126,13 @@ Chun-houh Chen, Wolfgang Hrdle, Antony Unwin, Chun-houh Chen, Wolfgang Hrdle,
   Computational Statistics)}.
 \newblock Springer-Verlag TELOS, Santa Clara, CA, USA, wydanie 1, 2008.
 
+\bibitem{CHIRALI2014211}
+Ilkay~Zihni Chirali.
+\newblock 14 - sports injuries.
+\newblock Ilkay~Zihni Chirali, redaktor, {\em Traditional Chinese Medicine
+  Cupping Therapy (Third Edition)}, strony 211 -- 230. Churchill Livingstone,
+  wydanie third edition, 2014.
+
 \bibitem{HMS}
 Junghwan Cho, Eunmi Lee, Hyunkwang Lee, Bob Liu, Xinhua Li, Shahein Tajmir,
   Dushyant Sahani, Synho Do.
@@ -127,6 +155,14 @@ Eric~M. Christiansen, Samuel~J. Yang, D.~Michael Ando, Ashkan Javaherian, Gaia
 \newblock In silico labeling: Predicting fluorescent labels in unlabeled
   images.
 \newblock {\em Cell}, 173(3):792--803.e19, apr 2018.
+
+\bibitem{Cunningham2017}
+Ryan Cunningham, Peter Harding, Ian Loram.
+\newblock Deep residual networks for quantification of muscle fiber orientation
+  and curvature from ultrasound images.
+\newblock Mar{\'i}a Vald{\'e}s~Hern{\'a}ndez,  V{\'i}ctor Gonz{\'a}lez-Castro,
+  redaktorzy, {\em Medical Image Understanding and Analysis}, strony 63--73,
+  Cham, 2017. Springer International Publishing.
 
 \bibitem{BPA}
 Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
@@ -248,6 +284,13 @@ Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
 \newblock Identity mappings in deep residual networks.
 \newblock {\em CoRR}, abs/1603.05027, 2016.
+
+\bibitem{Heyward2018}
+Omar~W. Heyward, Lucas~M. Rabello, Lucas van~der Woude, Inge van~den
+  Akker-Scheek, Alli Gokeler, Henk van~der Worp, Johannes Zwerver.
+\newblock The effect of load on achilles tendon structure in novice runners.
+\newblock {\em Journal of Science and Medicine in Sport}, 21(7):661--665, jul
+  2018.
 
 \bibitem{Hill1938}
 A.~V. Hill.
@@ -376,6 +419,12 @@ Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
 \newblock {\em Tendon Injuries}.
 \newblock Springer-Verlag, 2005.
+
+\bibitem{Maquirriain2011}
+J.~Maquirriain.
+\newblock {{A}chilles tendon rupture: avoiding tendon lengthening during
+  surgical repair and rehabilitation}.
+\newblock {\em Yale J Biol Med}, 84(3):289--300, Sep 2011.
 
 \bibitem{DBLP:journals/corr/abs-1803-04014}
 Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
@@ -578,6 +627,27 @@ Joshua~B. Tenenbaum, Vin de~Silva, John~C. Langford.
 Laurens van~der Maaten,  Geoffrey Hinton.
 \newblock Visualizing data using {t-SNE}.
 \newblock {\em Journal of Machine Learning Research}, 9:2579--2605, 2008.
+
+\bibitem{Bakker2000}
+H.~T. van Schie,  E.~M. Bakker.
+\newblock {{S}tructure-related echoes in ultrasonographic images of equine
+  superficial digital flexor tendons}.
+\newblock {\em Am. J. Vet. Res.}, 61(2):202--209, Feb 2000.
+
+\bibitem{Bakker2003}
+H.~T. van Schie, E.~M. Bakker, A.~M. Jonker, P.~R. van Weeren.
+\newblock {{C}omputerized ultrasonographic tissue characterization of equine
+  superficial digital flexor tendons by means of stability quantification of
+  echo patterns in contiguous transverse ultrasonographic images}.
+\newblock {\em Am. J. Vet. Res.}, 64(3):366--375, Mar 2003.
+
+\bibitem{vanSchie2009}
+H.~T.~M. van Schie, R.~J. de~Vos, S.~de~Jonge, E.~M. Bakker, M.~P. Heijboer,
+  J.~A.~N. Verhaar, J.~L. Tol, H.~Weinans.
+\newblock Ultrasonographic tissue characterisation of human achilles tendons:
+  quantification of tendon structure through a novel non-invasive approach.
+\newblock {\em British Journal of Sports Medicine}, 44(16):1153--1159, aug
+  2009.
 
 \bibitem{Vesanto00self-organizingmap}
 Juha Vesanto, Johan Himberg, Esa Alhoniemi, Juha Parhankangas.

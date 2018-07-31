@@ -103,6 +103,11 @@ P.~K. Beredjiklian.
 \newblock {{B}iologic aspects of flexor tendon laceration and repair}.
 \newblock {\em J Bone Joint Surg Am}, 85-A(3):539--550, Mar 2003.
 
+\bibitem{Bloch1946}
+F.~Bloch.
+\newblock Nuclear induction.
+\newblock {\em Physical Review}, 70(7-8):460--474, oct 1946.
+
 \bibitem{bochenek2016anatomia}
 A.~Bochenek,  M.~Reicher.
 \newblock {\em Anatomia czlowieka}.
@@ -112,6 +117,11 @@ A.~Bochenek,  M.~Reicher.
 Leo Breiman.
 \newblock Random forests.
 \newblock {\em Machine Learning}, 45(1):5--32, Oct 2001.
+
+\bibitem{Breit1934}
+G.~Breit,  I.~I. Rabi.
+\newblock On the interpretation of present values of nuclear moments.
+\newblock {\em Physical Review}, 46(3):230--231, aug 1934.
 
 \bibitem{START}
 Carolina~Medical Center.
@@ -372,6 +382,12 @@ Y.~Kwon,  M.~Rhu.
   neural networks.
 \newblock {\em IEEE Computer Architecture Letters}, 17(2):134--138, July 2018.
 
+\bibitem{LAUTERBUR1973}
+P.~C. LAUTERBUR.
+\newblock Image formation by induced local interactions: Examples employing
+  nuclear magnetic resonance.
+\newblock {\em Nature}, 242(5394):190--191, mar 1973.
+
 \bibitem{ICA}
 K.~N. Leach.
 \newblock A survey paper on independent component analysis.
@@ -419,6 +435,11 @@ Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
 \newblock {\em Tendon Injuries}.
 \newblock Springer-Verlag, 2005.
+
+\bibitem{Mansfield1977}
+P~Mansfield.
+\newblock Multi-planar image formation using nmr spin echoes.
+\newblock {\em Journal of Physics C: Solid State Physics}, 10(3):L55, 1977.
 
 \bibitem{Maquirriain2011}
 J.~Maquirriain.

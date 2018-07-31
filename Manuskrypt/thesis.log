@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  30 JUL 2018 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  31 JUL 2018 12:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1368,12 +1368,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [13]
-Overfull \hbox (22.80783pt too wide) in paragraph at lines 175--176
-\OT4/cmr/m/it/12 cj¡ Fo-urie-ra\OT4/cmr/m/n/12 . Przy-kªad ta-kie-go dzia-ªa-ni
-a mo»-na zna-le¹¢ w [http://mriquestions.com/fourier-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1381,6 +1375,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [14]
+Overfull \hbox (22.80783pt too wide) in paragraph at lines 179--180
+\OT4/cmr/m/it/12 cj¡ Fo-urie-ra\OT4/cmr/m/n/12 . Przy-kªad ta-kie-go dzia-ªa-ni
+a mo»-na zna-le¹¢ w [http://mriquestions.com/fourier-
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1396,29 +1396,30 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=104, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 235.
+Package pdftex.def Info: figures/USG-params.png  used on input line 239.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
-Underfull \vbox (badness 2837) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[18 <./figures/USG-params.png>]
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 256.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 256.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 256.
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[18]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[19 <./figures/USG-params.png>]
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <10> on input line 260.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <7> on input line 260.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 260.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1919,7 +1920,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [69]
 ! Undefined control sequence.
-l.510   alzheimer{\textquotesingle
+l.531   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1930,16 +1931,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.528   {\$}{\$}^
+l.549   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 529.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 550.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 531.
+LaTeX Font Warning: Command \em invalid in math mode on input line 552.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1948,7 +1949,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.531   {\em
+l.552   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1956,7 +1957,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.533 
+l.554 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1964,7 +1965,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.533 
+l.554 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1973,29 +1974,34 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--533
+Underfull \hbox (badness 10000) in paragraph at lines 547--554
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--533
+Underfull \hbox (badness 10000) in paragraph at lines 547--554
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (422.8865pt too wide) in paragraph at lines 526--533
+Overfull \hbox (422.8865pt too wide) in paragraph at lines 547--554
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
  []; strony\OT4/cmr/m/n/12 120 \OMS/plsy/m/n/12  
  []
 
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[70]
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.533 
+l.554 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2004,10 +2010,6 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[70]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2025,13 +2027,13 @@ Dodatek A.
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17072 strings out of 493305
- 331422 string characters out of 3128932
- 335467 words of memory out of 3000000
- 20357 multiletter control sequences out of 15000+200000
+ 17076 strings out of 493305
+ 331474 string characters out of 3128932
+ 334487 words of memory out of 3000000
+ 20361 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1409b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1243b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
 9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
@@ -2060,7 +2062,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (83 pages, 2697889 bytes).
+Output written on thesis.pdf (83 pages, 2699210 bytes).
 PDF statistics:
  383 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

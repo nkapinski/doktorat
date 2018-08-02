@@ -18,6 +18,10 @@ Deep learning: The next step in applied healthcare data.
   \url{https://insights.samsung.com/2016/07/12/deep-learning-the-next-step-in-applied-healthcare-data/}.
 \newblock Accessed: 2018-22-05.
 
+\bibitem{ObrazowanieMedyczne}
+Fizyka wobec wyzwań xxi wieku -- obrazowanie medyczne.
+\newblock Accessed: 2018-07-30.
+
 \bibitem{NVIDIApanel}
 From challenges to impact of machine learning in clinical practice.
 \newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
@@ -51,6 +55,10 @@ An overview of resnet and its variants.
 \bibitem{NVIDIA-CLARA}
 Project clara: Nvidia supercomputing platform redefines medical imaging.
 \newblock \url{https://blogs.nvidia.com/blog/2018/03/28/ai-healthcare-gtc/}.
+\newblock Accessed: 2018-07-30.
+
+\bibitem{Q&AinMRI}
+Queastions and answears in mri.
 \newblock Accessed: 2018-07-30.
 
 \bibitem{US4US}
@@ -219,6 +227,12 @@ Qi~Dou, Hao Chen, Lequan Yu, Jing Qin, Pheng-Ann Heng.
   pulmonary nodule detection.
 \newblock {\em {IEEE} Transactions on Biomedical Engineering},
   64(7):1558--1567, jul 2017.
+
+\bibitem{Dria2002}
+K.~J. Dria, J.~R. Sachleben, P.~G. Hatcher.
+\newblock {{S}olid-state carbon-13 nuclear magnetic resonance of humic acids at
+  high magnetic field strengths}.
+\newblock {\em J. Environ. Qual.}, 31(2):393--401, 2002.
 
 \bibitem{Duchi:2011:ASM:1953048.2021068}
 John Duchi, Elad Hazan, Yoram Singer.
@@ -499,6 +513,13 @@ P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
   Networks}.
 \newblock {\em ArXiv e-prints}, Lipiec 2017.
 
+\bibitem{Regulski2017}
+Piotr Regulski, Jakub Zieliński, Bartosz Borucki, Krzysztof Nowiński.
+\newblock Comparison of noise reducing t2map reconstruction methods in mri
+  imaging of achilles tendon.
+\newblock {\em International Journal of Computer Assisted Radiology and
+  Surgery}, 12(Supplement 1):15–16, Jun 2017.
+
 \bibitem{DBLP:journals/corr/RonnebergerFB15}
 Olaf Ronneberger, Philipp Fischer, Thomas Brox.
 \newblock U-net: Convolutional networks for biomedical image segmentation.
@@ -605,6 +626,19 @@ Katarzyna Strojek, Zuzanna Piekorz, Urszula Kaźmierczak, Agnieszka
 \newblock Etiologia i patomechanizm uszkodzenia Ścięgna achillesa = the
   etiology and patomechanizm damage to the achilles tendon.
 \newblock 2016.
+
+\bibitem{Summers1991}
+R.~M. Summers, P.~M. Joseph, H.~L. Kundel.
+\newblock {{S}odium nuclear magnetic resonance imaging of neuroblastoma in the
+  nude mouse}.
+\newblock {\em Invest Radiol}, 26(3):233--241, Mar 1991.
+
+\bibitem{Sun2016}
+Yi~Sun, Ole Brauckmann, Donald~R. Nixdorf, Arno Kentgens, Michael Garwood,
+  Djaudat Idiyatullin, Arend Heerschap.
+\newblock Imaging human teeth by phosphorus magnetic resonance with nuclear
+  overhauser enhancement.
+\newblock {\em Scientific Reports}, 6(1), aug 2016.
 
 \bibitem{InceptionResNet}
 Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke.

@@ -3,35 +3,35 @@ A level-1 auxiliary file: header.aux
 The style file: plplain.bst
 Database file #1: refs.bib
 Warning--entry type for "EpidemiologyUS" isn't style-file defined
---line 69 of file refs.bib
-I was expecting a `,' or a `}'---line 74 of file refs.bib
+--line 85 of file refs.bib
+I was expecting a `,' or a `}'---line 90 of file refs.bib
  :  
  :  urldate = {2018-07-23},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "START" isn't style-file defined
---line 79 of file refs.bib
-I was expecting a `,' or a `}'---line 84 of file refs.bib
+--line 95 of file refs.bib
+I was expecting a `,' or a `}'---line 100 of file refs.bib
  :  
  :  urldate = {2018-07-23},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "CMC" isn't style-file defined
---line 89 of file refs.bib
-I was expecting a `,' or a `}'---line 94 of file refs.bib
+--line 105 of file refs.bib
+I was expecting a `,' or a `}'---line 110 of file refs.bib
  :  
  :  urldate = {2018-07-23},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 1671 of file refs.bib
+Repeated entry---line 1687 of file refs.bib
  : @article{Breiman2001
  :                     ,
 I'm skipping whatever remains of this entry
-You're missing a field part---line 1694 of file refs.bib
+You're missing a field part---line 1710 of file refs.bib
  :  month=
  :        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1769 of file refs.bib
+Repeated entry---line 1785 of file refs.bib
  : @article{Litjens2017
  :                     ,
 I'm skipping whatever remains of this entry

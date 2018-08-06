@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  6 AUG 2018 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  6 AUG 2018 14:15
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1304,15 +1304,15 @@ File: figures/skurcz_miesni.png Graphic file (type png)
 <use figures/skurcz_miesni.png>
 Package pdftex.def Info: figures/skurcz_miesni.png  used on input line 52.
 (pdftex.def)             Requested size: 264.61333pt x 191.82428pt.
+<figures/Hill.png, id=59, 332.442pt x 216.81pt>
+File: figures/Hill.png Graphic file (type png)
+<use figures/Hill.png>
+Package pdftex.def Info: figures/Hill.png  used on input line 59.
+(pdftex.def)             Requested size: 264.61333pt x 172.57484pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<figures/Hill.png, id=59, 332.442pt x 216.81pt>
-File: figures/Hill.png Graphic file (type png)
-<use figures/Hill.png>
-Package pdftex.def Info: figures/Hill.png  used on input line 61.
-(pdftex.def)             Requested size: 264.61333pt x 172.57484pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1328,18 +1328,18 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 <figures/Achilles_zerwanie.jpg, id=68, 702.625pt x 584.1825pt>
 File: figures/Achilles_zerwanie.jpg Graphic file (type jpg)
 <use figures/Achilles_zerwanie.jpg>
-Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 88.
+Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 85.
 (pdftex.def)             Requested size: 264.61333pt x 220.01276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 98.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
 ("C:\Users\Norbert\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
 
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
@@ -1390,14 +1390,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [18]
-Underfull \vbox (badness 1122) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1407,7 +1404,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=110, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 247.
+Package pdftex.def Info: figures/USG-params.png  used on input line 245.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1415,11 +1412,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [20 <./figures/USG-params.png>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 268.
+(Font)              <10> on input line 266.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 268.
+(Font)              <7> on input line 266.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 268.
+(Font)              <5> on input line 266.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1529,24 +1526,14 @@ File: figures/cross-validation.png Graphic file (type png)
 Package pdftex.def Info: figures/cross-validation.png  used on input line 217.
 (pdftex.def)             Requested size: 242.5611pt x 125.46207pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [39 <./figures/cross-validation.png>]
-Underfull \vbox (badness 5817) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1925,7 +1912,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [71]
 ! Undefined control sequence.
-l.592   alzheimer{\textquotesingle
+l.597   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1936,16 +1923,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.615   {\$}{\$}^
+l.620   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 616.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 621.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 618.
+LaTeX Font Warning: Command \em invalid in math mode on input line 623.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1954,7 +1941,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.618   {\em
+l.623   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1962,7 +1949,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.620 
+l.625 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1970,7 +1957,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.620 
+l.625 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1979,19 +1966,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--620
+Underfull \hbox (badness 10000) in paragraph at lines 618--625
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--620
+Underfull \hbox (badness 10000) in paragraph at lines 618--625
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (422.8865pt too wide) in paragraph at lines 613--620
+Overfull \hbox (422.8865pt too wide) in paragraph at lines 618--625
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
@@ -2001,7 +1988,7 @@ n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.620 
+l.625 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2031,13 +2018,13 @@ Dodatek A.
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17091 strings out of 493305
- 331680 string characters out of 3128932
- 335566 words of memory out of 3000000
- 20376 multiletter control sequences out of 15000+200000
+ 17092 strings out of 493305
+ 331692 string characters out of 3128932
+ 334571 words of memory out of 3000000
+ 20377 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1580b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1581b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
 9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
@@ -2066,7 +2053,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (85 pages, 2707753 bytes).
+Output written on thesis.pdf (85 pages, 2707878 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

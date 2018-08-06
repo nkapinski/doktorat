@@ -27,6 +27,10 @@ From challenges to impact of machine learning in clinical practice.
 \newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
 \newblock Accessed: 2018-22-05.
 
+\bibitem{GEVoluson}
+Ge healthcare.
+\newblock Accessed: 2018-06-08.
+
 \bibitem{KISTLER}
 Kistler systems.
 \newblock Accessed: 2018-07-23.
@@ -60,6 +64,10 @@ Project clara: Nvidia supercomputing platform redefines medical imaging.
 \bibitem{Q&AinMRI}
 Queastions and answears in mri.
 \newblock Accessed: 2018-07-30.
+
+\bibitem{GlowiceUSG}
+Typy głowic stosowanych w usg.
+\newblock Accessed: 2018-06-08.
 
 \bibitem{US4US}
 Us4us -- ultrasound r&d in medicine, biology and industry.
@@ -420,6 +428,11 @@ Yann LeCun, Bernhard~E. Boser, John~S. Denker, Donnie Henderson, R.~E. Howard,
 \newblock D.~S. Touretzky, redaktor, {\em Advances in Neural Information
   Processing Systems 2}, strony 396--404. Morgan-Kaufmann, 1990.
 
+\bibitem{lide2006crc}
+D.R. Lide.
+\newblock {\em CRC Handbook of Chemistry and Physics, 87th Edition}.
+\newblock Taylor \& Francis, 2006.
+
 \bibitem{Lin2004}
 Tony~W. Lin, Luis Cardenas, Louis~J. Soslowsky.
 \newblock Biomechanics of tendon injury and repair.
@@ -449,6 +462,13 @@ Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
 \newblock {\em Tendon Injuries}.
 \newblock Springer-Verlag, 2005.
+
+\bibitem{makarewicz1978}
+R.~Makarewicz.
+\newblock {\em Kszta{\l}towanie pola akustycznego z uwzgl{\k{e}}dnieniem
+  aspektu akustyki {\'s}rodowiska}.
+\newblock Akustyka - Uniwersytet im. Adama Mickiewicza w Poznaniu. Wydawnictwo
+  Naukowe Uniwersytetu im. Adama Mickiewicz, 1978.
 
 \bibitem{Mansfield1977}
 P~Mansfield.
@@ -497,6 +517,20 @@ Azim~Celik Muhammed~Elmaoglu.
 \newblock {\em Rezonans Magnetyczny: Podstawy fizyczne, obrazowanie, ułożenie
   pacjenta, protokoły}.
 \newblock Springer, 2015.
+
+\bibitem{NilssonHelander2007}
+Katarina Nilsson-Helander, Roland Thome{\'{e}}, Karin Gr\"{a}vare-Silbernagel,
+  Pia Thome{\'{e}}, Eva Fax{\'{e}}n, Bengt~I. Eriksson, Jon Karlsson.
+\newblock The achilles tendon total rupture score ({ATRS}).
+\newblock {\em The American Journal of Sports Medicine}, 35(3):421--426, mar
+  2007.
+
+\bibitem{Orishimo2008}
+Karl~F. Orishimo, Gideon Burstein, Michael~J. Mullaney, Ian~J. Kremenic, Marcus
+  Nesse, Malachy~P. McHugh, Steven~J. Lee.
+\newblock Effect of knee flexion angle on achilles tendon force and ankle joint
+  plantarflexion moment during passive dorsiflexion.
+\newblock {\em The Journal of Foot and Ankle Surgery}, 47(1):34--39, jan 2008.
 
 \bibitem{PCA}
 K.~Pearson.
@@ -557,6 +591,11 @@ Saman Sarraf,  Ghassem Tofighi.
 \newblock Deep learning-based pipeline to recognize
   alzheimer{\textquotesingle}s disease using {fMRI} data.
 \newblock {\em 2016 Future Technologies Conference ({FTC})}. {IEEE}, dec 2016.
+
+\bibitem{sawicki2008histologia}
+W.~Sawicki.
+\newblock {\em Histologia}.
+\newblock Wydawnictwo Lekarskie PZWL, 2008.
 
 \bibitem{SCHMIDHUBER201585}
 Jürgen Schmidhuber.

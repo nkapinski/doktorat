@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  2 AUG 2018 17:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.29)  6 AUG 2018 11:29
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1390,23 +1390,26 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [17]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[18]
-<figures/USG-params.png, id=107, 217.41225pt x 200.54926pt>
-File: figures/USG-params.png Graphic file (type png)
-<use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 247.
-(pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
+[18]
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
 [19]
+<figures/USG-params.png, id=110, 217.41225pt x 200.54926pt>
+File: figures/USG-params.png Graphic file (type png)
+<use figures/USG-params.png>
+Package pdftex.def Info: figures/USG-params.png  used on input line 247.
+(pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1429,9 +1432,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [22]
-Underfull \vbox (badness 2799) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1787,7 +1787,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \newblock \url
+l.40 \newblock \url
                    {http://langlotzlab.stanford.edu/projects/medical-image-n...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1796,7 +1796,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.41 \newblock \url
+l.45 \newblock \url
                    {https://www.butterflynetwork.com/}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1807,7 +1807,7 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.43 
+l.47 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1815,7 +1815,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.43 
+l.47 
      
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1824,7 +1824,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (44.25243pt too wide) in paragraph at lines 40--43
+Overfull \hbox (44.25243pt too wide) in paragraph at lines 44--47
 []\OT4/cmr/m/n/12 Meet iq. who-le bo-dy ima-ging. un-der $2\OML/plm/m/it/12 k: 
 []: Accessed \OT4/cmr/m/n/12 :
  []
@@ -1832,7 +1832,7 @@ Overfull \hbox (44.25243pt too wide) in paragraph at lines 40--43
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.43 
+l.47 
      
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1841,7 +1841,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
-l.46 \newblock \url
+l.50 \newblock \url
                    {https://developer.nvidia.com/tensorrt}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1850,7 +1850,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.52   \url
+l.56   \url
            {https://towardsdatascience.com/an-overview-of-resnet-and-its-var...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1859,7 +1859,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.57 \newblock \url
+l.61 \newblock \url
                    {https://blogs.nvidia.com/blog/2018/03/28/ai-healthcare-g...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1868,13 +1868,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
+Underfull \hbox (badness 10000) in paragraph at lines 60--63
 []\OT4/cmr/m/n/12 Project cla-ra: Nvi-dia su-per-com-pu-ting plat-form re-de-fi
 -nes me-di-cal ima-ging.
  []
 
+[64
+
+]
 ! Misplaced alignment tab character &.
-l.65 Us4us -- ultrasound r&
+l.73 Us4us -- ultrasound r&
                            d in medicine, biology and industry.
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1884,7 +1887,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.66 \newblock \url
+l.74 \newblock \url
                    {http://us4us.eu/}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1892,9 +1895,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[64
 
-]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1924,7 +1925,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [71]
 ! Undefined control sequence.
-l.558   alzheimer{\textquotesingle
+l.592   alzheimer{\textquotesingle
                                   }s disease using {fMRI} data.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1935,16 +1936,16 @@ and I'll forget about whatever was undefined.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.576   {\$}{\$}^
+l.615   {\$}{\$}^
                  {\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-LaTeX Warning: Command \texttrademark invalid in math mode on input line 577.
+LaTeX Warning: Command \texttrademark invalid in math mode on input line 616.
 
 
-LaTeX Font Warning: Command \em invalid in math mode on input line 579.
+LaTeX Font Warning: Command \em invalid in math mode on input line 618.
 
 
 ! LaTeX Error: Command \itshape invalid in math mode.
@@ -1953,7 +1954,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.579   {\em
+l.618   {\em
              High Performance Computing}, strony 120--138, Cham, 2017. Springer
 
 Please use the math alphabet \mathit instead of the \itshape command. 
@@ -1961,7 +1962,7 @@ Please use the math alphabet \mathit instead of the \itshape command.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.581 
+l.620 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1969,7 +1970,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.581 
+l.620 
       
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1978,19 +1979,19 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 613--620
 []\OT4/cmr/m/n/12 Dipanjan Sen-gup-ta, Yida Wang, Na-ray-anan Sun-da-ram, The-o
 do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 574--581
+Underfull \hbox (badness 10000) in paragraph at lines 613--620
 \OT4/cmr/m/n/12 re L. Wil-l-ke.  High-performance in-cre-men-tal svm le-ar-ning
  on in-tel
  []
 
 
-Overfull \hbox (422.8865pt too wide) in paragraph at lines 574--581
+Overfull \hbox (422.8865pt too wide) in paragraph at lines 613--620
 \OT4/cmr/m/n/12 $$$[]\OMS/plsy/m/n/12 n\OML/plm/m/it/12 tiny[]\OMS/plsy/m/n/12 
 n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ]processors: Julian []M:Kunkel; RioYokota; PavanBalaji; DavidKeyes; redaktorzy;
@@ -2000,7 +2001,7 @@ n\OML/plm/m/it/12 textregistered[][]\OT4/cmr/m/n/12 $$\OML/plm/m/it/12 xeonphi[
 ! Extra }, or forgotten \endgroup.
 \par ...m \@noitemerr {\@@par }\fi \else {\@@par }
                                                   \fi 
-l.581 
+l.620 
       
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2030,13 +2031,13 @@ Dodatek A.
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17083 strings out of 493305
- 331559 string characters out of 3128932
- 335522 words of memory out of 3000000
- 20368 multiletter control sequences out of 15000+200000
+ 17091 strings out of 493305
+ 331680 string characters out of 3128932
+ 335566 words of memory out of 3000000
+ 20376 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1612b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1580b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2.
 9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 2
 .9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/Norbert/AppData/Local/Programs/MiKTeX 
@@ -2065,7 +2066,7 @@ ert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/User
 s/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:
 /Users/Norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.p
 fb>
-Output written on thesis.pdf (85 pages, 2705446 bytes).
+Output written on thesis.pdf (85 pages, 2707753 bytes).
 PDF statistics:
  390 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

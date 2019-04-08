@@ -41,8 +41,7 @@ Medical image net.
 \newblock Accessed: 2018-22-05.
 
 \bibitem{Butterfly2018}
-Meet iq. whole body imaging. under $2k.
-\newblock \url{https://www.butterflynetwork.com/}.
+Meet iq. whole body imaging. under 2k. usd.
 \newblock Accessed: 2018-07-30.
 
 \bibitem{TensorRT}
@@ -70,7 +69,7 @@ Typy głowic stosowanych w usg.
 \newblock Accessed: 2018-06-08.
 
 \bibitem{US4US}
-Us4us -- ultrasound r&d in medicine, biology and industry.
+Us4us -- ultrasound r\&d in medicine, biology and industry.
 \newblock \url{http://us4us.eu/}.
 \newblock Accessed: 2018-07-30.
 
@@ -107,7 +106,7 @@ Tito Bassani, Elena Stucovitz, Zhihui Qian, Matteo Briguglio, Fabio Galbusera.
 \bibitem{Bell2007}
 Robert~M. Bell,  Yehuda Koren.
 \newblock Lessons from the netflix prize challenge.
-\newblock {\em SIGKDD Explor. Newsl.}, 9(2):75--79, Grudzie/n 2007.
+\newblock {\em SIGKDD Explor. Newsl.}, 9(2):75--79, dec 2007.
 
 \bibitem{Bellman:1957}
 Richard~Ernest Bellman.
@@ -194,7 +193,8 @@ Ryan Cunningham, Peter Harding, Ian Loram.
 Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
 \newblock {Bayesian Model Averaging for Generalized Linear Models with Missing
   Covariates}.
-\newblock Raport instytutowy, 2013.
+\newblock EIEF Working Papers Series 1311, Einaudi Institute for Economics and
+  Finance (EIEF), dec 2013.
 
 \bibitem{Delp2007}
 Scott~L. Delp, Frank~C. Anderson, Allison~S. Arnold, Peter Loan, Ayman Habib,
@@ -246,7 +246,7 @@ K.~J. Dria, J.~R. Sachleben, P.~G. Hatcher.
 John Duchi, Elad Hazan, Yoram Singer.
 \newblock Adaptive subgradient methods for online learning and stochastic
   optimization.
-\newblock {\em J. Mach. Learn. Res.}, 12:2121--2159, Lipiec 2011.
+\newblock {\em J. Mach. Learn. Res.}, 12:2121--2159, jul 2011.
 
 \bibitem{Erickson2017}
 Bradley~J. Erickson, Panagiotis Korfiatis, Zeynettin Akkus, Timothy Kline,
@@ -360,7 +360,7 @@ Chand~T. John, Frank~C. Anderson, Jill~S. Higginson, Scott~L. Delp.
 C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
 \newblock {The Relative Performance of Ensemble Methods with Deep Convolutional
   Neural Networks for Image Classification}.
-\newblock {\em ArXiv e-prints}, Kwiecie/n 2017.
+\newblock {\em ArXiv e-prints}, apr 2017.
 
 \bibitem{DBLP:journals/corr/KingmaB14}
 Diederik~P. Kingma,  Jimmy Ba.
@@ -550,7 +550,7 @@ M.~S. Raikin.
 P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
 \newblock {Cardiologist-Level Arrhythmia Detection with Convolutional Neural
   Networks}.
-\newblock {\em ArXiv e-prints}, Lipiec 2017.
+\newblock {\em ArXiv e-prints}, jul 2017.
 
 \bibitem{Regulski2017}
 Piotr Regulski, Jakub Zieliński, Bartosz Borucki, Krzysztof Nowiński.
@@ -583,18 +583,18 @@ David~E. Rumelhart, Geoffrey~E. Hinton, Ronald~J. Williams.
 N.~{Russell}, T.~{Brendan Murphy}, A.~E {Raftery}.
 \newblock {Bayesian model averaging in model-based clustering and density
   estimation}.
-\newblock {\em ArXiv e-prints}, Czerwiec 2015.
+\newblock {\em ArXiv e-prints}, jun 2015.
 
 \bibitem{Hijazi2015}
-R.~Kumar S.~Hijazi,  C.~Rowen.
+Hijazi S., Kumar R., Rowen C.
 \newblock Using convolutional neural networks for image recognition.
 \newblock Raport instytutowy, Cadence, 2015.
 \newblock Accessed: 2018-05-21.
 
 \bibitem{Sarraf2016}
 Saman Sarraf,  Ghassem Tofighi.
-\newblock Deep learning-based pipeline to recognize
-  alzheimer{\textquotesingle}s disease using {fMRI} data.
+\newblock Deep learning-based pipeline to recognize alzheimer disease using
+  {fMRI} data.
 \newblock {\em 2016 Future Technologies Conference ({FTC})}. {IEEE}, dec 2016.
 
 \bibitem{sawicki2008histologia}
@@ -616,9 +616,8 @@ Ramprasaath~R. Selvaraju, Abhishek Das, Ramakrishna Vedantam, Michael Cogswell,
 
 \bibitem{10.1007/978-3-319-58667-0_7}
 Dipanjan Sengupta, Yida Wang, Narayanan Sundaram, Theodore~L. Willke.
-\newblock High-performance incremental svm learning on intel
-  {\$}{\$}^{\{}{\backslash}tiny {\{}{\backslash}textregistered {\}}{\}}{\$}{\$}
-  xeon phi{\texttrademark} processors.
+\newblock High-performance incremental svm learning on intel xeon phi
+  processors.
 \newblock Julian~M. Kunkel, Rio Yokota, Pavan Balaji, David Keyes, redaktorzy,
   {\em High Performance Computing}, strony 120--138, Cham, 2017. Springer
   International Publishing.
@@ -763,7 +762,7 @@ Juha Vesanto, Johan Himberg, Esa Alhoniemi, Juha Parhankangas.
 \bibitem{2016arXiv160605718W}
 D.~{Wang}, A.~{Khosla}, R.~{Gargeya}, H.~{Irshad}, A.~H. {Beck}.
 \newblock {Deep Learning for Identifying Metastatic Breast Cancer}.
-\newblock {\em ArXiv e-prints}, Czerwiec 2016.
+\newblock {\em ArXiv e-prints}, jun 2016.
 
 \bibitem{Wolfe2003}
 Michael B.~W. Wolfe,  Susan~R. Goldman.

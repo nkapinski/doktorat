@@ -5,9 +5,13 @@
 
 %	Medical Imaging - especially Magnetic Resonance Imaging (MRI) and Ultrasonography (US) - is one of the most common technique that nowadays is used to monitor soft tissues. Some papers e.g.  \cite{Khan2003, Ibrahim2013} indicate the advantage of MRI over US showing that MRI appearance can be easier associated with the clinical outcomes. Despite this, US also present in e.g. \cite{vanSchie2009, PradoCosta2018} as a valuable technique for the soft tissues properties investigation, yet technical issues and lack of standardization limits its use.} - dorzuć do USG/MRI
 
-W tym rozdziale zostanie zaprezentowana autorska propozycja metody oceny procesu gojenia się ścięgna Achillesa bazująca na badaniach obrazowych. W szczególności przedstawiony zostanie sposób na ilościowy opis tego procesu widocznego w obrazach Rezonansu Magnetycznego i Ultrasonografii oraz metoda automatycznego wyliczania wskazanych w opisie parametrów. 
+W tym rozdziale zostanie zaprezentowana autorska propozycja metody oceny procesu gojenia się ścięgna Achillesa bazująca na badaniach obrazowych. W szczególności przedstawiony zostanie ilościowy opis, umożliwiający w zobiektywizowany sposób ocenę morfologii tkanek widocznych w obrazach Rezonansu Magnetycznego i Ultrasonografii. Finalnie zostanie również zaproponowane nowatorskie podejście do automatycznego wyliczania wskazanych w opisie procesu parametrów, co jest najważniejszym osiągnięciem całości tej pracy.  
 
-W chwili pisania tej pracy nie istnieje wedle wiedzy autora wystandaryzowany sposób oceny 
+W chwili pisania tej pracy nie istnieje wedle najlepszej wiedzy autora podejście umożliwiające zobiektywizowany i co ważniejsze automatyczny sposób oceny badań obrazowych prezentujących gojące się ścięgno Achillesa. Stąd implikacje dotyczące trudności z integracją subiektywnych interpretacji ze skalami testów funkcjonalnych takich jak ATRS i w rezultacie zmniejszona efektywność całego procesu oceny rehabilitacji. 
+
+Podczas próby rozwiązania wskazanego problemu autor tej pracy w szczególności chce skupić się na dwóch aspektach. Pierwszym z nich jest jakość generowanej automatycznie oceny odniesiony do jakości wzorca tj. oceny doświadczonego radiologa. Drugim natomiast jest czas akwizycji danych, a zatem wybór praktycznego protokołu, który zapewni możliwie krótki udział pacjenta w badaniu. W obu przypadkach celem jest poszukiwanie punktu optimum, w którym maksymalizowana będzie jakość oceny, a minimalizowany czas, zarówno radiologa jak i pacjenta, niezbędny do wykonania koniecznych czynności. Szczegóły podejścia zostały opisane w kolejnej sekcji.
+
+   
 
 %\textcolor{blue}{The perturbations in the healing process of the Achilles tendon may result from the surgery, further rehabilitation and other factors like diet, obedience to treatment guidelines and patient predispositions. Thus, challenges in the assessment process are connected to the proper recognition of the morphological changes of the tendon structure, its functional limitations, and individual features.}
 
@@ -18,8 +22,29 @@ W chwili pisania tej pracy nie istnieje wedle wiedzy autora wystandaryzowany spo
 
 %\textcolor{blue}{Thus we performed a broad study on 60 patients who underwent the open surgical reconstruction. The patients were monitored over a year of rehabilitation with the use of 10 MRI and 2 US protocols, acquired in 10 properly distributed time-steps. We also gathered a homogeneous control group composed of 29 healthy volunteers. To our best knowledge, there is no such study comparable in scale to the one that we introduce in this paper. For example, in\cite{Tam2017} the conclusions are formulated based on two samples, in \cite{Fujikawa2007} the authors evaluate a total of 30 healing tendons repaired with a percutaneous surgical technique and 10 repaired with an open surgical one, finally in \cite{Albano2017} the authors present results for 43 patients to study the significance of growth factors.}
 
-istnieją niszowe metody np. Majometr [], ale nie ma jeszcze nakładki obiektywizującej rezonans i USG
+
 \section{Metodyka}
+
+W tej sekcji zostanie szczegółowo opisana proponowana metoda automatycznej oceny procesu gojenia się ścięgna Achillesa widocznego w badaniach obrazowych Rezonansu Magnetycznego i Ultrasonografii. Dodatkowo scharakteryzowany zostanie zbiór danych, który posłużył do opracowania rozwiązania, jak również ankieta walidacyjna stanowiąca wzorzec odniesienia dla przedstawionej metody. 
+
+Autor tej pracy, w proponowanym podejściu skorzystał z metod widzenia komputowego, a dokładniej z fuzji algorytmów sztucznej inteligencji i przetwarzania obrazów. W kontekście tej pracy, pierwsze znajdują swoje zastosowanie do ekstrakcji wektora cech dla danej reprezentacji obrazowej. Drugie, pozwalają uwzględnić wiedzę dziedzinową w procesie numerycznej oceny.
+
+W przypadku algorytmów sztucznej inteligencji zastosowano  opisane w Rozdziale \ref{CNNs} konwolucyjne sieci neuronowe, a dokładniej AlexNet, GoogLeNet (inceptionV3) i ResNet-18. W pierwszej kolejności wykonane zostało szkolenie podanych sieci dla problemu binarnej klasyfikacji tj. odróżniania obrazów chorego od zdrowego ścięgna. Następnie część klasyfikująca została usunięta z topologii sieci, pozostawiając ekstraktor cech z parametrami zoptymalizowanymi pod kątem wydobycia istotnej informacji opisującej różnice między zdrową i chorą tkanką. Na tak otrzymanym wektorze, przeprowadzono redukcję wymiarowości z wykorzystaniem metody PCA (zob. \ref{DimReduction}). 
+
+W przypadku metod przetwarzania obrazów zastosowano obliczenia cech z wydzielonego przez specjalistę radiologa ROI (od ang. \textit{Region of Interest}) reprezentującego tkanki otoczone ościęgnem. Sumarycznie wyliczono 46 klasycznych cech obrazowych, w tym obsza ROI, 9 cech opisujących statystykę wartości pikseli i 36 cechy Haralick'a opisujące teksturę (zob. \cite{Haralick1973}). W ramach statystyk scharakteryzowano: min, max, średnią, odchylenie standardowe, skośność, kurtozę, 25-percentyl, medianę oraz 75-percentyl. Natomiast w ramach cech Haralick'a: drugi moment kątowy, kontrast, korelacja, wariancja, odwrotny moment różnicowy, suma średnich, suma wariancji, suma entropii, entropia, różnica wariancji i maksimum prawdopodobieństwa. Cechy Haralick'a wyliczono dla 3 dystansów separacji \textit{d}=1,5,10. Dokładna metoda selekcji powyższych cech została przedstawiona w pracy  \cite{Nowosielski17}.  
+
+
+Ostatecznie dla zredukowanej przestrzeni, przez autora tej pracy, została zaproponowana metryka $H$ wyliczana w następujący sposób:
+\begin{equation}
+H = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +
+\sum_{\substack{i, j = 1\\ i < j}}^{3}\lambda_{i,j}X_{i}X_{j}
+\end{equation}
+
+gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$ to kolejne predyktory, $TM$ to średnia trymowana z marginesami 2.5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju osiowego $x_k$, gdzie $k$ jest indeksem przekroju danego protokołu w trójwymiarowym badaniu RM. 
+    
+
+
+
 \section{Rozróżnienie ścięgna zdrowego i po zerwaniu}
 \section{Obliczanie krzywych gojenia}
 \subsection{Topologia sieci}

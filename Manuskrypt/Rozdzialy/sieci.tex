@@ -1,4 +1,5 @@
 \chapter{Konwolucyjne sieci neuronowe}
+\label{CNNs}
 \textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}, CNN) są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Należą do zbioru \textit{głębokich sieci neuronowych} (ang. \textit{Deep Neural Networks}, DNN), które z kolei są podzbiorem \textit{systemów uczących się} (ang. \textit{Machine Learning Systems}) tj. algorytmów nie wymagających explicite programowania do ustalenia swoich parametrów.
 
 Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w latach 40-tych XX wieku, natomiast fundamentalne inspiracje biologiczne dały badania nad korą wzrokową kotów Hubel'a i Wiesel’a z lat 50-tych i 60-tych (zob. \cite{Wurtz2009}). M.in. dzięki pracom tych neurofizjologów ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji z wybranych regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne informacje z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
@@ -261,7 +262,7 @@ Analogiczne równania istnieją dla obrazów trójwymiarowych (zob. \cite{Hill06
 W przypadku danych medycznych należy szczególnie zwrócić uwagę, aby powiększony zbiór zawierał dane przypominające w rzeczywistości występujące przypadki np. nieduże obroty występujące u pacjentów skanowanych rezonansem magnetycznym lub niewielkie skalowania rozmiaru kości widocznych w Tomografii Komputerowej. Szeroką dyskusję prowadzi się również na temat wykorzystania sztucznie generowanych zbiorów danych o czym więcej można przeczytać w \cite{DBLP:journals/corr/SixtWL16, Litjens2017}. 
 
 \subsection{Problem redukcji wymiarowości}
-
+\label{DimReduction}
 Duży rozmiar wektora cech prowadzi do problemu nazwanego \textit{przekleństwem wymiarowości} (ang. \textit{curse of dimensionality}). Określenie zostało po raz pierwszy sformułowane przez Richarda Bellmana w latach 50-tych XX wieku. Naukowiec ten podczas swojej pracy obserwował algorytmy doskonale działające w 3 wymiarach, a prezentujące znacząco gorsze wyniki w hiperprzestrzeni (zob. \cite{Bellman:1957}). 
 
 Problem przekleństwa wymiarowości ma dwie główne przyczyny: (1) nie wszystkie cechy są jednakowo znaczące w kontekście rozróżnienia danych; (2) w miarę wzrostu rozmiaru przestrzeni cech, liczba obserwacji w zbiorze uczącym potrzebnych do wiarygodnego oszacowania funkcji wyjściowej rośnie wykładniczo.  

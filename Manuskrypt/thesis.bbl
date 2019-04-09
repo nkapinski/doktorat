@@ -307,6 +307,11 @@ Samuel~R. Hamner, Ajay Seth, Scott~L. Delp.
 \newblock Muscle contributions to propulsion and support during running.
 \newblock {\em Journal of Biomechanics}, 43(14):2709--2716, oct 2010.
 
+\bibitem{Haralick1973}
+{R.} Haralick, {K.} Shanmugam, {I.} Dinstein.
+\newblock Texture features for image classification.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics}, 3(6), 1973.
+
 \bibitem{ResNet}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
 \newblock Deep residual learning for image recognition.
@@ -529,6 +534,13 @@ Katarina Nilsson-Helander, Roland Thome{\'{e}}, Karin Gr\"{a}vare-Silbernagel,
 \newblock The achilles tendon total rupture score ({ATRS}).
 \newblock {\em The American Journal of Sports Medicine}, 35(3):421--426, mar
   2007.
+
+\bibitem{Nowosielski17}
+Jedrzej Nowosielski, Jakub Zielinski, Bartosz Borucki, Krzysztof Nowinski.
+\newblock Multidimensional haralick’s feature space analysis for assessment
+  of the achilles tendon in mr imaging.
+\newblock {\em International Journal of Computer Assisted Radiology and
+  Surgery}, 12(Supplement 1):218–--220, 2017.
 
 \bibitem{Orishimo2008}
 Karl~F. Orishimo, Gideon Burstein, Michael~J. Mullaney, Ian~J. Kremenic, Marcus

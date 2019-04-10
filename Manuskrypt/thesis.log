@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  9 APR 2019 15:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  10 APR 2019 15:19
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1296,7 +1296,7 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 <figures/Achilles_hist.png, id=54, 561.297pt x 394.47375pt>
 File: figures/Achilles_hist.png Graphic file (type png)
 <use figures/Achilles_hist.png>
-Package pdftex.def Info: figures/Achilles_hist.png  used on input line 30.
+Package pdftex.def Info: figures/Achilles_hist.png  used on input line 31.
 (pdftex.def)             Requested size: 352.81552pt x 247.95999pt.
 
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
@@ -1306,12 +1306,12 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 <figures/skurcz_miesni.png, id=58, 299.9205pt x 217.41225pt>
 File: figures/skurcz_miesni.png Graphic file (type png)
 <use figures/skurcz_miesni.png>
-Package pdftex.def Info: figures/skurcz_miesni.png  used on input line 52.
+Package pdftex.def Info: figures/skurcz_miesni.png  used on input line 53.
 (pdftex.def)             Requested size: 264.61333pt x 191.82428pt.
 <figures/Hill.png, id=59, 332.442pt x 216.81pt>
 File: figures/Hill.png Graphic file (type png)
 <use figures/Hill.png>
-Package pdftex.def Info: figures/Hill.png  used on input line 59.
+Package pdftex.def Info: figures/Hill.png  used on input line 60.
 (pdftex.def)             Requested size: 264.61333pt x 172.57484pt.
 
 
@@ -1332,18 +1332,18 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 <figures/Achilles_zerwanie.jpg, id=68, 702.625pt x 584.1825pt>
 File: figures/Achilles_zerwanie.jpg Graphic file (type jpg)
 <use figures/Achilles_zerwanie.jpg>
-Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 85.
+Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 86.
 (pdftex.def)             Requested size: 264.61333pt x 220.01276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
 
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
@@ -1408,7 +1408,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=110, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 245.
+Package pdftex.def Info: figures/USG-params.png  used on input line 247.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1416,11 +1416,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [20 <./figures/USG-params.png>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 266.
+(Font)              <10> on input line 268.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 266.
+(Font)              <7> on input line 268.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 266.
+(Font)              <5> on input line 268.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1750,22 +1750,51 @@ Package pdftex.def Info: figures/net.jpg  used on input line 48.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[63 <./figures/net.jpg>]) (Rozdzialy/wyniki_podsumowanie.tex
+[63 <./figures/net.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [64]
+<figures/Data_MRI_sample.png, id=285, 1136.44576pt x 541.42274pt>
+File: figures/Data_MRI_sample.png Graphic file (type png)
+<use figures/Data_MRI_sample.png>
+Package pdftex.def Info: figures/Data_MRI_sample.png  used on input line 84.
+(pdftex.def)             Requested size: 441.01773pt x 210.10481pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[65]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[66 <./figures/Data_MRI_sample.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[67]) (Rozdzialy/wyniki_podsumowanie.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[68]
 Rozdzia\PlPrIeC {\l } 6.
 
 Overfull \hbox (2.58003pt too wide) in paragraph at lines 3--3
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[65
+[69
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [66
+) (thesis.bbl [70
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -1796,31 +1825,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[67
+[71
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[68]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[69]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[70]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[71]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1829,6 +1836,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [73]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1848,20 +1861,36 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[78]) (appendix.tex
+[78]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [79]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[80]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[81]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[82]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[83]
 Dodatek A.
-) [80
+) [84
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17098 strings out of 493305
- 331417 string characters out of 3128932
- 334496 words of memory out of 3000000
- 20378 multiletter control sequences out of 15000+200000
+ 17108 strings out of 493305
+ 331612 string characters out of 3128932
+ 334552 words of memory out of 3000000
+ 20387 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1581b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1895,9 +1924,9 @@ rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C
 :/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.
 pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
 ltt12.pfb>
-Output written on thesis.pdf (89 pages, 3268185 bytes).
+Output written on thesis.pdf (93 pages, 4048456 bytes).
 PDF statistics:
- 408 PDF objects out of 1000 (max. 8388607)
+ 422 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 

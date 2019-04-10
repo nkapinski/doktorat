@@ -53,6 +53,55 @@ W ogólnym ujęciu trójwymiarowe badanie RM dzielone jest na pojedyncze przekro
 Równolegle, ROI z każdego z przekrojów stanowi dane wejściowe do części obliczeń klasycznych cech obrazowych. Końcowa fuzja wyselekcjonowanych cech z wykorzystaniem meta-regresji i metryki $H$ zapewnia numeryczny opis składający się z pojedynczej wartości dla całego badania RM w każdym z ocenianych parametrów.
 
 \subsection{zbiór danych}
+
+Dane wykorzystane w tej pracy zostały zebrane w ramach projektu START "Wykorzystanie autologicznych mezenchymalnych komórek macierzystych w procesie regeneracji rekonstruowanego ścięgna Achillesa" finansowanego z konkursu STRATEGMED1 prze Narodowe Centrum Badań i Rozowoju. W ramach projektu do badanej grupy zakwalifikowano 60 pacjentów po całkowitym zerwaniu ścięgna Achillesa i 29 ochotników stanowiących grupę odniesienia. 
+
+Kryteria wykluczające z grupy badanej zostały zdefiniowane tak aby kwalifikowani pacjenci nie posiadali wcześniejszej historii urazów ścięgna Achillesa ani przewlekłych chorób, które mogłyby spowodować degenerację tkanki ścięgnistej. Uwzględniono również warunki odbiegające od normy takie jak: otyłość ciąża, infekcje. Ostatecznie, w ramach grupy pacjentów znalazło się 49 mężczyzn i 11 kobiet w wieku pomiędzy 24 a 49 lat i ze średnią wieku 36 lat. Wszyscy pacjenci podpisali stosowne zgody wymagane do przeprowadzenia badań.   
+
+52 z pośród 60 pacjentów zerwało ścięgna podczas uprawiania sportu. Dokładniej były to: piłka nożna (19), squash/tenis (8), koszykówka (4), bieganie (3), podskoki (2), siatkówka (2) oraz badminton, box, piłka ręczna, fitness, cross-fit, skateboard, rugby i skakanka. Urazy w 31 przypadkach dotyczyły prawego ścięgna, a w 29 lewego. Średnia pozycja zerwania umiejscowiona była 57.11 mm ponad górnym konturem kości piętowej.
+
+W okresie do tygodnia po urazie pacjenci przeszli zabieg rekonstrukcji wykonany metodą szycia na otwartym ścięgnie (zob. \ref{gojenie}). Następnie rozpoczęto rehabilitacje trwającą 12 miesięcy monitorowaną z wykorzystaniem Rezonansu Magnetycznego, Ultrasonografii. Wykonano również badania biomechaniczne na początku i na końcu okresu rehabilitacji zgodnie zgodnie z protokołem opisanym w sekcji \ref{biomechanika}.
+
+Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDxt 1.5T wyposażonym w cewkę Foot \& Ankle dedykowaną do pomiarów w rejonie dolnej kończyny. Każde z badań RM było wykonane z użyciem 7 sekwencji i łącznie 10 modalności opisanych szczegółowo w sekcji \ref{RM} tj.:
+\begin{enumerate}
+	\item T1 zależne
+	\item T2 zależne
+	\item PD
+	\item T2 mapping
+	\item T2 $^\ast$ GRE
+	\item T2 $^\ast$ GRE TE\_MIN
+	\item 3D FSPGR
+	\begin{itemize}
+		\item In Phase Ideal
+		\item Out Phase Ideal
+		\item Fat Ideal
+		\item Water Ideal 
+	\end{itemize}
+\end{enumerate}
+
+Z wykorzystaniem powyższych sekwencji na grupie zdrowych ochotników przeprowadzono pojedyncze badanie, natomiast pacjentów skanowano 10-krotnie w odpowiednio zdefiniowanych odstępach czasowych. Pierwsze badanie odbyło się przed operacją, a następnych 9 po, odpowiednio w: 1, 3, 6, 9, 12, 20, 26, 40 i 52 tygodniu. W procesie zbierania danych wystąpiły problemy wynikające z braku obecności poszczególnych osób na badaniach lub niespójnością danych. Dlatego finalnie skompletowany zbiór składa się z homogenicznych badań 27 zdrowych ochotników (270 trójwymiarowych skanów RM, w skład których wchodzi wspomniane 10 modalności) oraz badań 59 pacjentów (5900 trójwymiarowych skanów RM, w skład których wchodzi 10 modalności i 10 kroków czasowych). Przykładowe wizualizacja danych pacjenta i osoby zdrowej znajduje na Fig. \ref{fig:MRI_sample}. 
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{figures/Data_MRI_sample.png}
+	\caption{Wizualizacja przykładowych danych RM w sekwencji PD dla zdrowego (po lewej) i gojącego się (po prawej) ścięgna Achillesa.}
+	 \label{fig:MRI_sample}
+\end{figure}
+Obszar zajmowany przez tkankę ścięgnistą został oznaczony na czerwono. Należy zwrócić uwagę na różnicę w kształcie, która dla zdrowego przykładu jest zgodna z opisem anatomicznym ujętym w sekcji \ref{anatomia} natomiast dla przykładu chorego zawiera liczne deformacje.
+
+W przypadku danych Ultrasonografii stosowano się do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 3D skanów.
+
+Obrazowania 3D zostały następnie opisane przez eksperta radiologa przy użyciu omówionej w kolejnej sekcji ankiety. W ramach projektu START udało się zgromadzić opisy dla badań RM i USG 48 pacjentów. 4 z nich zostało losowo wydzielonych na początku eksperymentów jako pacjenci testowi. 
+
+Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych zawierających przekroje. W ten sposób udało się zwiększyć liczbę próbek wejściowych potrzebnych do szkolenia sieci neuronowych. Dane RM charakteryzują się wysoką anizotropią i ich rozdzielczość wynosi przykładowo 512$\times$512$\times$Z, gdzie $Z\in(10:50)$ (wyjątkiem jest sekwencja 3D FSPGR charakteryzująca się niższą anizotropią jednak większą ilością artefaktów wynikających z szybkiego czasu akwizycji). Dlatego zbiory oparte o RM zostały stworzone w oparciu o przekroje osiowe 512$\times$512. Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej. W zależności od eksperymentów służących do doboru parametrów i komponentów metody wykorzystano:
+\begin{itemize}
+	\item powiększony zbiór treningowy RM -- zawiera przekroje osiowe ze wszystkich badań (z wyłączeniem pacjentów testowych) realizowanych wszystkimi sekwencjami. Dodatkowo liczba przekroi została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i w przypadku chorych przykładów 10 obrotów w zakresie od -10 do 10 stopni. Finalnie zbiór zawiera 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
+	\item ograniczony zbiór treningowy RM -- zawiera przekroje osiowe ze zbioru oznaczonych 44 pacjentów jedynie w sekwencji T2 $^\ast$ GRE TE\_MIN (18.863 próbek).
+	\item zbiór treningowy USG (strzałkowy) -- zawiera 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
+	\item zbiór treningowy USG (osiowy) -- zawiera 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników.
+\end{itemize}
+
+Do walidacji metody wykorzystano przekroje pochodzące z danych zebranych dla 4 testowych pacjentów.
+
+
 \subsection{wzorzec odniesienia}
 
 \section{Rozróżnienie ścięgna zdrowego i po zerwaniu}

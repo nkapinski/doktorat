@@ -27,17 +27,17 @@
 \contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{61}
 \contentsline {section}{\numberline {5.1}Metodyka}{62}
 \contentsline {subsection}{\numberline {5.1.1}zbi\IeC {\'o}r danych}{64}
-\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{64}
-\contentsline {section}{\numberline {5.2}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{64}
-\contentsline {section}{\numberline {5.3}Obliczanie krzywych gojenia}{64}
-\contentsline {subsection}{\numberline {5.3.1}Topologia sieci}{64}
-\contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowo\IeC {\'s}ci}{64}
-\contentsline {subsection}{\numberline {5.3.3}Miara wygojenia}{64}
-\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{65}
-\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{65}
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{65}
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{65}
-\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{65}
-\contentsline {chapter}{\numberline {7}Podsumowanie}{66}
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{79}
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{80}
+\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{67}
+\contentsline {section}{\numberline {5.2}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{67}
+\contentsline {section}{\numberline {5.3}Obliczanie krzywych gojenia}{67}
+\contentsline {subsection}{\numberline {5.3.1}Topologia sieci}{68}
+\contentsline {subsection}{\numberline {5.3.2}Redukcja wymiarowo\IeC {\'s}ci}{68}
+\contentsline {subsection}{\numberline {5.3.3}Miara wygojenia}{68}
+\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{69}
+\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{69}
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{69}
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{69}
+\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{69}
+\contentsline {chapter}{\numberline {7}Podsumowanie}{70}
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{83}
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{84}

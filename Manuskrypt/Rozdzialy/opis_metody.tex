@@ -62,6 +62,7 @@ Kryteria wykluczające z grupy badanej zostały zdefiniowane tak aby kwalifikowa
 
 W okresie do tygodnia po urazie pacjenci przeszli zabieg rekonstrukcji wykonany metodą szycia na otwartym ścięgnie (zob. \ref{gojenie}). Następnie rozpoczęto rehabilitacje trwającą 12 miesięcy monitorowaną z wykorzystaniem Rezonansu Magnetycznego, Ultrasonografii. Wykonano również badania biomechaniczne na początku i na końcu okresu rehabilitacji zgodnie zgodnie z protokołem opisanym w sekcji \ref{biomechanika}.
 
+\subsubsection{Rezonans magnetyczny:}
 Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDxt 1.5T wyposażonym w cewkę Foot \& Ankle dedykowaną do pomiarów w rejonie dolnej kończyny. Każde z badań RM było wykonane z użyciem 7 sekwencji i łącznie 10 modalności opisanych szczegółowo w sekcji \ref{RM} tj.:
 \begin{enumerate}
 	\item T1 zależne
@@ -87,25 +88,50 @@ Z wykorzystaniem powyższych sekwencji na grupie zdrowych ochotników przeprowad
 \end{figure}
 Obszar zajmowany przez tkankę ścięgnistą został oznaczony na czerwono. Należy zwrócić uwagę na różnicę w kształcie, która dla zdrowego przykładu jest zgodna z opisem anatomicznym ujętym w sekcji \ref{anatomia} natomiast dla przykładu chorego zawiera liczne deformacje.
 
-W przypadku danych Ultrasonografii stosowano się do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 3D skanów.
-
-Obrazowania 3D zostały następnie opisane przez eksperta radiologa przy użyciu omówionej w kolejnej sekcji ankiety. W ramach projektu START udało się zgromadzić opisy dla badań RM i USG 48 pacjentów. 4 z nich zostało losowo wydzielonych na początku eksperymentów jako pacjenci testowi. 
-
-Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych zawierających przekroje. W ten sposób udało się zwiększyć liczbę próbek wejściowych potrzebnych do szkolenia sieci neuronowych. Dane RM charakteryzują się wysoką anizotropią i ich rozdzielczość wynosi przykładowo 512$\times$512$\times$Z, gdzie $Z\in(10:50)$ (wyjątkiem jest sekwencja 3D FSPGR charakteryzująca się niższą anizotropią jednak większą ilością artefaktów wynikających z szybkiego czasu akwizycji). Dlatego zbiory oparte o RM zostały stworzone w oparciu o przekroje osiowe 512$\times$512. Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej. W zależności od eksperymentów służących do doboru parametrów i komponentów metody wykorzystano:
+Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych zawierających przekroje. W ten sposób udało się zwiększyć liczbę próbek wejściowych potrzebnych do szkolenia sieci neuronowych. Dane RM charakteryzują się wysoką anizotropią i ich rozdzielczość wynosi przykładowo 512$\times$512$\times$Z, gdzie $Z\in(10:50)$ (wyjątkiem jest sekwencja 3D FSPGR charakteryzująca się niższą anizotropią, jednak większą ilością artefaktów wynikających z szybkiego czasu akwizycji). Dlatego zbiory oparte o RM zostały stworzone w oparciu o przekroje osiowe 512$\times$512. W zależności od eksperymentów służących do doboru parametrów i komponentów metody wykorzystano:
 \begin{itemize}
 	\item powiększony zbiór treningowy RM -- zawiera przekroje osiowe ze wszystkich badań (z wyłączeniem pacjentów testowych) realizowanych wszystkimi sekwencjami. Dodatkowo liczba przekroi została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i w przypadku chorych przykładów 10 obrotów w zakresie od -10 do 10 stopni. Finalnie zbiór zawiera 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
 	\item ograniczony zbiór treningowy RM -- zawiera przekroje osiowe ze zbioru oznaczonych 44 pacjentów jedynie w sekwencji T2 $^\ast$ GRE TE\_MIN (18.863 próbek).
-	\item zbiór treningowy USG (strzałkowy) -- zawiera 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
-	\item zbiór treningowy USG (osiowy) -- zawiera 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników.
+	\item zbiór testowy - zawiera przekroje pochodzące z danych zebranych dla 4 testowych pacjentów.
 \end{itemize}
 
-Do walidacji metody wykorzystano przekroje pochodzące z danych zebranych dla 4 testowych pacjentów.
+\subsubsection{Ultrasonografia:}
+W przypadku danych Ultrasonografii stosowano się do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 3D skanów. 
 
+Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej:
+ \begin{itemize}
+ 	\item zbiór treningowy USG (strzałkowy) -- zawiera 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
+ 	\item zbiór treningowy USG (osiowy) -- zawiera 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
+ \end{itemize}
+
+Wizualizacja przykładowych danych USG znajduje się na Rys. \ref{fig:US_sample}
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{figures/Data_US_sample.png}
+	\caption{Wizualizacja przykładowych danych USG w kolejnych tygodniach po zszyciu ścięgna w przekrojach osiowych i strzałkowych.}
+	\label{fig:US_sample}
+\end{figure}
+
+Szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa, jednak w ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych.
+ 
 
 \subsection{wzorzec odniesienia}
 
-\section{Rozróżnienie ścięgna zdrowego i po zerwaniu}
-\section{Obliczanie krzywych gojenia}
+Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana specjalna grupa robocza składająca się z eksperta radiologa, specjalistów ortopedów i ekspertów od komputerowo wspomaganej diagnostyki. Celem grupy było opracowanie ilościowego opisu, który odzwierciedla elementy, na podstawie których radiolog podejmuje subiektywną opinię. W wyniku prac stworzono zestaw sześciu parametrów oceniany w skali 0--7 opisujący proces gojenia się ścięgna Achillesa widoczny w obrazach RM i Ultrasonografii:
+
+\begin{enumerate}
+	\item Uszkodzenia śródścięgniste (SCT od ang. \textit{Structural changes within the tendon}) -- informuje o spójności włókien w obszarze ścięgna. Zawiera się w ROI. Ocena wykonywana zarówno w płaszczyznie osiowej jak i strzałkowej. 0 – całkowity brak uszkodzeń, 1 – bardzo małe uszkodzenia. 2 – małe uszkodzenia, 3 – uszkodzenia średniej wielkości , 4 – dość duże uszkodzenia. 5 – duże uszkodzenia, 6 - bardzo duże uszkodzenia, 7 - ekstremalnie duże uszkodzenia.
+	\item Pogróbienie ściegna (TT od ang. \textit{Tendon thickening} -- najgrubsze miejsce w kierunku strzałkowym na widoczne na przekroju osiowym. Zawiera się w ROI. 0 – całkowity brak pogrubienia (3mm-5mm), 1 – bardzo małe pogrubienie - 6mm, 2 – małe pogrubienie - 9mm, 3 – średnie pogrubienie- 12mm, 4 –  dość duże pogrubienie -15mm, 5 duże pogrubienie - 18mm, 6 – bardzo duże pogrubienie - 21mm, 7 – ekstremalnie duże pogrubienie – 24mm.
+	\item Ostrość granic ścięgna/rozgraniczenie (STE od ang. \textit{Sharpness of the tendon edges})-- informuje o jakości granicy między tkankami ścięgnistymi i otoczeniem, w szczególności, czy brzeg jest fraktalny. Oceniane na zewnątrz ścięgna w płaszczyznie osiowej. 0 – bardzo duża (idelana) ostrość, 1 – duża ostrość, 2 – dość duża ostrość, 3 – średnia ostrość, 4 – mała ostrość, 5 – bardzo mała ostrość, 6 – minimalna ostrość, 7 – całkowicie nieostre.
+	\item Obrzęk ścięgna (TE od ang\textit{Tendon edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
+	\item Jednorodność ścięgna (TU od ang. textit{Tendon uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych jak i podobieństwu sąsiednich, mierzonym w płaszyznie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
+	\item Obrzęk tkanek (TisE od ang. \textit{Tissue edema}) -- informuje o powiększonym przedziale powięziowym ścięgna. 0  – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
+\end{enumerate}
+
+Obrazowania 3D zostały opisane przez eksperta radiologa przy użyciu ankiety zawierającej powyższe parametry. W ramach projektu START udało się zgromadzić opisy dla badań RM i USG 48 pacjentów (480 badań). 4 z nich zostało losowo wydzielonych na początku eksperymentów jako pacjenci testowi. Szczegółowy opis eksperymentów znajduje się w kolejnej sekcji.
+
+\section{Eksperymenty}
+\subsection{Rozróżnienie ścięgna zdrowego i po zerwaniu}
+\subsection{Obliczanie krzywych gojenia}
 \begin{equation}
 H = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +
 \sum_{\substack{i, j = 1\\ i < j}}^{3}\lambda_{i,j}X_{i}X_{j}
@@ -113,6 +139,6 @@ H = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +
 
 gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$ to kolejne predyktory, $TM$ to średnia trymowana z marginesami 2.5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju osiowego $x_k$, gdzie $k$ jest indeksem przekroju danego protokołu w trójwymiarowym badaniu RM.
 
-\subsection{Topologia sieci}
-\subsection{Redukcja wymiarowości}
-\subsection{Miara wygojenia}
+%\subsection{Topologia sieci}
+%\subsection{Redukcja wymiarowości}
+%\subsection{Miara wygojenia}

@@ -205,6 +205,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{49}}
 \newlabel{AlexNetTopologyMultiGPU}{{4.9}{49}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{49}}
+\newlabel{googlenet}{{4.3.2}{49}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{50}}
 \newlabel{GoogleNetInceptionModules}{{4.10}{50}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{50}}
@@ -214,6 +215,7 @@
 \newlabel{GoogleNetParams}{{4.1}{51}}
 \citation{ResNet}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}ResNet}{52}}
+\newlabel{resnet}{{4.3.3}{52}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{52}}
 \newlabel{ResNetBlock}{{4.12}{52}}
 \newlabel{gradResBlock}{{4.19}{53}}
@@ -265,6 +267,7 @@
 \citation{Haralick1973}
 \citation{Nowosielski17}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Metodyka}{62}}
+\newlabel{ecq:H}{{5.1}{63}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{63}}
 \newlabel{fig:net}{{5.1}{63}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}zbi\IeC {\'o}r danych}{64}}
@@ -277,17 +280,26 @@
 \newlabel{fig:US_sample}{{5.3}{68}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Eksperymenty}{70}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{70}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Obliczanie krzywych gojenia}{70}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{71}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{70}}
+\newlabel{cross-validation}{{5.1}{70}}
+\citation{Kapinski19}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{71}}
+\newlabel{fig:training_times}{{5.4}{71}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Obliczanie redukcja wymiarowo\IeC {\'s}ci wektora cech z sieci neuronowej}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Optymalna konkatenacja cech}{72}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Fuzja z wykorzystaniem meta-regresji}{72}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{72}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{73}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{71}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{71}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{71}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{71}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{73}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{73}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{73}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{73}}
 \bibstyle{plplain}
 \bibdata{refs}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Podsumowanie}{72}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Podsumowanie}{74}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{Adams}{1}
@@ -381,56 +393,57 @@
 \bibcite{McCulloch1943}{89}
 \bibcite{Umit2010}{90}
 \bibcite{RM2015}{91}
-\bibcite{NilssonHelander2007}{92}
-\bibcite{Nowosielski17}{93}
-\bibcite{Orishimo2008}{94}
-\bibcite{PCA}{95}
-\bibcite{EpidemiologyUS}{96}
-\bibcite{2017arXiv170701836R}{97}
-\bibcite{Regulski2017}{98}
-\bibcite{DBLP:journals/corr/RonnebergerFB15}{99}
-\bibcite{Rosenblatt1957}{100}
-\bibcite{CMC}{101}
-\bibcite{Rumelhart1986}{102}
-\bibcite{BMA}{103}
-\bibcite{Hijazi2015}{104}
-\bibcite{Sarraf2016}{105}
-\bibcite{sawicki2008histologia}{106}
-\bibcite{SCHMIDHUBER201585}{107}
-\bibcite{DBLP:journals/corr/SelvarajuDVCPB16}{108}
-\bibcite{10.1007/978-3-319-58667-0_7}{109}
-\bibcite{Shao2009}{110}
-\bibcite{Sharma2006}{111}
-\bibcite{DBLP:journals/corr/SimonyanVZ13}{112}
-\bibcite{VGGNet}{113}
-\bibcite{DBLP:journals/corr/SixtWL16}{114}
-\bibcite{Song:2014:SUM:2597652.2597670}{115}
-\bibcite{Steele2010}{116}
-\bibcite{Etiologia}{117}
-\bibcite{Summers1991}{118}
-\bibcite{Sun2016}{119}
-\bibcite{InceptionResNet}{120}
-\bibcite{GoogleNet}{121}
-\bibcite{DBLP:journals/corr/SzegedyVISW15}{122}
-\bibcite{Riken}{123}
-\bibcite{Tajbakhsh2016}{124}
-\bibcite{DBLP:journals/corr/TaylorBXSPG16}{125}
-\bibcite{tenenbaum_global_2000}{126}
-\bibcite{vanDerMaaten2008}{127}
-\bibcite{Bakker2000}{128}
-\bibcite{Bakker2003}{129}
-\bibcite{vanSchie2009}{130}
-\bibcite{Vesanto00self-organizingmap}{131}
-\bibcite{2016arXiv160605718W}{132}
-\bibcite{Wolfe2003}{133}
-\bibcite{Wolpert92stackedgeneralization}{134}
-\bibcite{Wurtz2009}{135}
-\bibcite{ResNetX}{136}
-\bibcite{Yang2013}{137}
-\bibcite{ZFNet}{138}
-\bibcite{Zhang1994}{139}
-\@writefile{toc}{\contentsline {chapter}{\numberline {Bibliografia\hspace  {-96pt}}}{85}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{86}}
+\bibcite{Kapinski19}{92}
+\bibcite{NilssonHelander2007}{93}
+\bibcite{Nowosielski17}{94}
+\bibcite{Orishimo2008}{95}
+\bibcite{PCA}{96}
+\bibcite{EpidemiologyUS}{97}
+\bibcite{2017arXiv170701836R}{98}
+\bibcite{Regulski2017}{99}
+\bibcite{DBLP:journals/corr/RonnebergerFB15}{100}
+\bibcite{Rosenblatt1957}{101}
+\bibcite{CMC}{102}
+\bibcite{Rumelhart1986}{103}
+\bibcite{BMA}{104}
+\bibcite{Hijazi2015}{105}
+\bibcite{Sarraf2016}{106}
+\bibcite{sawicki2008histologia}{107}
+\bibcite{SCHMIDHUBER201585}{108}
+\bibcite{DBLP:journals/corr/SelvarajuDVCPB16}{109}
+\bibcite{10.1007/978-3-319-58667-0_7}{110}
+\bibcite{Shao2009}{111}
+\bibcite{Sharma2006}{112}
+\bibcite{DBLP:journals/corr/SimonyanVZ13}{113}
+\bibcite{VGGNet}{114}
+\bibcite{DBLP:journals/corr/SixtWL16}{115}
+\bibcite{Song:2014:SUM:2597652.2597670}{116}
+\bibcite{Steele2010}{117}
+\bibcite{Etiologia}{118}
+\bibcite{Summers1991}{119}
+\bibcite{Sun2016}{120}
+\bibcite{InceptionResNet}{121}
+\bibcite{GoogleNet}{122}
+\bibcite{DBLP:journals/corr/SzegedyVISW15}{123}
+\bibcite{Riken}{124}
+\bibcite{Tajbakhsh2016}{125}
+\bibcite{DBLP:journals/corr/TaylorBXSPG16}{126}
+\bibcite{tenenbaum_global_2000}{127}
+\bibcite{vanDerMaaten2008}{128}
+\bibcite{Bakker2000}{129}
+\bibcite{Bakker2003}{130}
+\bibcite{vanSchie2009}{131}
+\bibcite{Vesanto00self-organizingmap}{132}
+\bibcite{2016arXiv160605718W}{133}
+\bibcite{Wolfe2003}{134}
+\bibcite{Wolpert92stackedgeneralization}{135}
+\bibcite{Wurtz2009}{136}
+\bibcite{ResNetX}{137}
+\bibcite{Yang2013}{138}
+\bibcite{ZFNet}{139}
+\bibcite{Zhang1994}{140}
+\@writefile{toc}{\contentsline {chapter}{\numberline {Bibliografia\hspace  {-96pt}}}{88}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{89}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{app:AchillesDL}{{A}{86}}
+\newlabel{app:AchillesDL}{{A}{89}}

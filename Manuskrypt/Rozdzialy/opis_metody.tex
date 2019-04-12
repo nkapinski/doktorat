@@ -39,6 +39,7 @@ Spośród tak wyliczonych 246 cech dokonano selekcji metodą LASSO (zob. [opis])
 
 Końcowa ocena badania została wykonana następującą metryką $H$ zaproponowaną przez autora tej pracy:
 \begin{equation}
+\label{ecq:H}
 H = TM(R(x_1), R(x_2),..., R(x_n))
 \end{equation}
 gdzie $TM$ jest średnią trymowaną z marginesami 2.5\%, a $R(x_i)$ jest wynikiem regresji obliczonym dla przekroju osiowego $x_i$, gdzie $i$ to indeks przekroju w trójwymiarowym badaniu RM.
@@ -122,16 +123,59 @@ Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana sp
 	\item Uszkodzenia śródścięgniste (SCT od ang. \textit{Structural changes within the tendon}) -- informuje o spójności włókien w obszarze ścięgna. Zawiera się w ROI. Ocena wykonywana zarówno w płaszczyznie osiowej jak i strzałkowej. 0 – całkowity brak uszkodzeń, 1 – bardzo małe uszkodzenia. 2 – małe uszkodzenia, 3 – uszkodzenia średniej wielkości , 4 – dość duże uszkodzenia. 5 – duże uszkodzenia, 6 - bardzo duże uszkodzenia, 7 - ekstremalnie duże uszkodzenia.
 	\item Pogróbienie ściegna (TT od ang. \textit{Tendon thickening} -- najgrubsze miejsce w kierunku strzałkowym na widoczne na przekroju osiowym. Zawiera się w ROI. 0 – całkowity brak pogrubienia (3mm-5mm), 1 – bardzo małe pogrubienie - 6mm, 2 – małe pogrubienie - 9mm, 3 – średnie pogrubienie- 12mm, 4 –  dość duże pogrubienie -15mm, 5 duże pogrubienie - 18mm, 6 – bardzo duże pogrubienie - 21mm, 7 – ekstremalnie duże pogrubienie – 24mm.
 	\item Ostrość granic ścięgna/rozgraniczenie (STE od ang. \textit{Sharpness of the tendon edges})-- informuje o jakości granicy między tkankami ścięgnistymi i otoczeniem, w szczególności, czy brzeg jest fraktalny. Oceniane na zewnątrz ścięgna w płaszczyznie osiowej. 0 – bardzo duża (idelana) ostrość, 1 – duża ostrość, 2 – dość duża ostrość, 3 – średnia ostrość, 4 – mała ostrość, 5 – bardzo mała ostrość, 6 – minimalna ostrość, 7 – całkowicie nieostre.
-	\item Obrzęk ścięgna (TE od ang\textit{Tendon edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
-	\item Jednorodność ścięgna (TU od ang. textit{Tendon uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych jak i podobieństwu sąsiednich, mierzonym w płaszyznie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
+	\item Obrzęk ścięgna (TE od ang. \textit{Tendon edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
+	\item Jednorodność ścięgna (TU od ang. \textit{Tendon uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych jak i podobieństwu sąsiednich, mierzonym w płaszyznie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
 	\item Obrzęk tkanek (TisE od ang. \textit{Tissue edema}) -- informuje o powiększonym przedziale powięziowym ścięgna. 0  – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
 \end{enumerate}
 
 Obrazowania 3D zostały opisane przez eksperta radiologa przy użyciu ankiety zawierającej powyższe parametry. W ramach projektu START udało się zgromadzić opisy dla badań RM i USG 48 pacjentów (480 badań). 4 z nich zostało losowo wydzielonych na początku eksperymentów jako pacjenci testowi. Szczegółowy opis eksperymentów znajduje się w kolejnej sekcji.
 
 \section{Eksperymenty}
+
+W tej sekcji zestawiono eksperymenty mające na celu dobór poszczególnych komponentów i parametrów finalnej metody. W pierwszej kolejności zostało opisane badanie dotyczące szkolenia sieci neuronowych celem rozróżnienia ścięgien zdrowych od tych po zerwaniu (chorych). Następnie zaprezentowano badanie dotyczące obliczania wektora cech na wyjściu sieci neuronowej i redukcji jego wymiarowości. W kolejnej części przedstawiono wybór sekwencji RM, które stanowiły dane wejściowe do proponowanego w tej pracy algorytmu. Finalnie, w dwóch ostatnich podsekcjach opisano dobór optymalnego zestawu mieszanki cech ekstrahowanych z użyciem sieci neuronowej i metod przetwarzania obrazów oraz fuzję cech z wykorzystaniem meta-regresji.  
+
+
 \subsection{Rozróżnienie ścięgna zdrowego i po zerwaniu}
-\subsection{Obliczanie krzywych gojenia}
+
+W tym badaniu porównane zostały współczesne architektury sieci neuronowych w zadaniu klasyfikacji binarnej, rozróżniającej obrazy zdrowego od chorego ścięgna. W porównaniu uwzględniono topologie AlexNet (zob. \ref{AlexNet}), GoogLeNet InceptionV3 (zob. \ref{googlenet}) i ResNet-18 (zob. \ref{resnet}). W celu doboru hiperparametrów i optymalizacji parametrów sieci zastosowano szkolenie z wykorzystaniem kroswalidacji z podziałem na 5 segmentów (zob. \ref{sec-overffiting}). W każdym z 5 cykli, 3 segmenty były wykorzystane do treningu, 1 do walidacji i 1 do finalnych testów. Do celów tego badania wykorzystano powiększony zbiór treningowy RM. Wyniki z testów zebrano w Tab. \ref{cross-validation}.
+%\vspace{-10px}
+\begin{table}[h!]
+	\setlength{\tabcolsep}{14pt}
+	\centering
+	\caption{Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podziałem na 5 segmentów dla problemu klasyfikacji obrazów zdrowego i chorego ścięgna.}
+	\label{cross-validation}
+	\begin{tabular}{l | l | l | l | l }
+		%\hline
+		 & Average   & Min   & Max   & SD   \\ \hline \hline
+		AlexNet   & 99.19 & 99.15 & 99.24 & 0.04 \\ \hline
+		ResNet-18 & 95.98 & 92.78 & 99.04 & 2.5  \\ \hline
+		GoogleNet & 99.83 & 99.68 & 99.91 & 0.1  \\ %\hline
+	\end{tabular}
+\end{table}
+%\vspace{-10px}
+
+Dla wszystkich architektur sieci, wyniki dokładności klasyfikacji najlepszych modeli osiągnęły wartość powyżej 99\%. Niemniej jednak w przypadku architektury ResNet-18 najgorszy model klasyfikował z dokładnością 92.78\%, co przełożyło się równiez na najgorszy średni wynik 95.98\%. Fakt ten może wskazywać na tendencje do nadmiernego dopasowywania się architektury ResNet-18 wynikający z niedoboru liczby danych wejściowych w odniesieniu do liczby optymalizowanych parametrów w warstwach konwolucyjnych.
+
+Dla wszystkich trzech architektur porównano również czasy szkolenia się dla zadanego problemu. Na Rys. \ref{fig:training_times} zestawiono łączny czas 5 iteracji procesu kroswalidacji.
+
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{figures/TrainingtimesChart.png}
+	\caption{Porównanie czasów treningu architektur na dwóch architekturach GPU: Pascal i Volta.}
+	\label{fig:training_times}
+\end{figure}
+
+Porównano dwie architektury GPU tj. starszą Pascal P100 i nowszą Volta V100, zaprezentowaną w 2017 roku, charakteryzującą się udoskonalonym osobnym układem optymalizowanym pod kątem operacji tensorowych realizowanych w warstwach splotu. Do szkolenia wykorzystano framework Caffe. Można zaobserwować, że wykorzystanie nowszej architektury GPU dało rezultaty około dwukrotnego przyspieszenia czasu szkolenia w przypadku AlexNet i ResNet oraz około 30\% w przypadku GoogLeNet. AlexNet zawiera najmniej warstw konwolucyjnych i optymalizowaną implementację klasyfikatora. Szkolenie tej architektury zajęło mniej niż jedną godzinę na GPU Volta. Dla porównania, sieci z bardziej skomplikowaną topologią tj. ResNet-18 i GoogLeNet charakteryzują się odpowiednio czasami szkolenia w okolicach 20 i 48 godzin. 
+
+Biorąc pod uwagę zestawienie wyników dokładności klasyfikacji i czasu szkolenia najlepszą architekturą okazała się sieć AlexNet, dlatego została ona wybrana do realizacji kolejnych eksperymentów. Należy również wspomnieć, że rezultaty wnioskowania mogą wciąż być poprawione. Dla przykładu, uzupełniające badanie dotyczące możliwości fuzji sieci AlexNet i ResNet-18 zostało opublikowane przez autora tej pracy w Acta of Bioengineering and Biomechanics \cite{Kapinski19}. Wyniki mogą być również poprawione w wyniku analizy lokalizacji przekrojów w przestrzeni trójwymiarowej, a w szczególności poprzez uwzględnienie, że częściej przekroje oddalone od miejsca zerwania bardziej przypominają tkanki zdrowe. W tym zakresie można np. zastosować metody logiki rozmytej lub miękkiej klasyfikacji (zob. []). Niemniej jednak, z uwagi na wysokie wyniki dokładności możliwie prostego podejścia w tej pracy autor nie decyduje się na dalsze usprawnienia kosztem komplikacji algorytmu. Ewentualne anomalie i wyniki odosobnione zostaną wyeliminowanie poprzez zastosowanie średniej trymowanej w zaproponowanej metryce $H$ (zob. \ref{ecq:H}).
+
+\subsection{Obliczanie redukcja wymiarowości wektora cech z sieci neuronowej}
+\subsection{Wybór sekwencji rezonansu magnetycznego}
+\subsection{Optymalna konkatenacja cech}
+\subsection{Fuzja z wykorzystaniem meta-regresji}
+
+
+
+\section{Ocena procesu gojenia}
 \begin{equation}
 H = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +
 \sum_{\substack{i, j = 1\\ i < j}}^{3}\lambda_{i,j}X_{i}X_{j}

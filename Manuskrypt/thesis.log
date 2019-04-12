@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  12 APR 2019 13:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  12 APR 2019 16:13
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1270,7 +1270,7 @@ Package pdftex.def Info: ./figures/Logo-IBIB.jpg  used on input line 20.
 
 ] (Rozdzialy/wprowadzenie.tex
 Rozdzia\PlPrIeC {\l } 1.
-<figures/rodzajeSieciNeuronowych.png, id=34, 2706.36093pt x 573.64313pt>
+<figures/rodzajeSieciNeuronowych.png, id=35, 2706.36093pt x 573.64313pt>
 File: figures/rodzajeSieciNeuronowych.png Graphic file (type png)
 <use figures/rodzajeSieciNeuronowych.png>
 Package pdftex.def Info: figures/rodzajeSieciNeuronowych.png  used on input lin
@@ -1285,7 +1285,7 @@ Rozdzia\PlPrIeC {\l } 2.
 
 ]
 Rozdzia\PlPrIeC {\l } 3.
-<figures/muscleStructure.jpg, id=43, 394.47375pt x 335.2525pt>
+<figures/muscleStructure.jpg, id=44, 394.47375pt x 335.2525pt>
 File: figures/muscleStructure.jpg Graphic file (type jpg)
 <use figures/muscleStructure.jpg>
 Package pdftex.def Info: figures/muscleStructure.jpg  used on input line 6.
@@ -1780,11 +1780,14 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/Data_US_sample.png, id=292, 2184.36075pt x 1456.2405pt>
 File: figures/Data_US_sample.png Graphic file (type png)
 <use figures/Data_US_sample.png>
-Package pdftex.def Info: figures/Data_US_sample.png  used on input line 110.
+Package pdftex.def Info: figures/Data_US_sample.png  used on input line 111.
 (pdftex.def)             Requested size: 441.01773pt x 293.99828pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1281) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1806,29 +1809,43 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/TrainingtimesChart.png, id=306, 876.27374pt x 541.02126pt>
 File: figures/TrainingtimesChart.png Graphic file (type png)
 <use figures/TrainingtimesChart.png>
-Package pdftex.def Info: figures/TrainingtimesChart.png  used on input line 162
+Package pdftex.def Info: figures/TrainingtimesChart.png  used on input line 163
 .
 (pdftex.def)             Requested size: 441.01773pt x 272.2931pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[71 <./figures/TrainingtimesChart.png>]) (Rozdzialy/wyniki_podsumowanie.tex
+[71 <./figures/TrainingtimesChart.png>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [72]
+<figures/H_PC1.png, id=314, 578.16pt x 433.62pt>
+File: figures/H_PC1.png Graphic file (type png)
+<use figures/H_PC1.png>
+Package pdftex.def Info: figures/H_PC1.png  used on input line 199.
+(pdftex.def)             Requested size: 352.81552pt x 264.60706pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[73 <./figures/H_PC1.png>]) (Rozdzialy/wyniki_podsumowanie.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[74]
 Rozdzia\PlPrIeC {\l } 6.
 
 Overfull \hbox (2.58003pt too wide) in paragraph at lines 8--8
 []\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
  []
 
-[73
+[75
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [74
+) (thesis.bbl [76
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -1859,23 +1876,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[75
+[77
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[76]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[77]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1884,6 +1887,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [79]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1915,13 +1924,21 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[87]) (appendix.tex
+[87]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [88]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[89]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[90]
 Dodatek A.
-) [89
+) [91
 
 ] (thesis.aux (header.aux))
 
@@ -1929,10 +1946,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17124 strings out of 493305
- 331987 string characters out of 3128932
- 334655 words of memory out of 3000000
- 20401 multiletter control sequences out of 15000+200000
+ 17131 strings out of 493305
+ 332103 string characters out of 3128932
+ 334677 words of memory out of 3000000
+ 20407 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1581b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1965,9 +1982,9 @@ X 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs
 ograms/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (98 pages, 4741871 bytes).
+Output written on thesis.pdf (100 pages, 4798533 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
+ 449 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

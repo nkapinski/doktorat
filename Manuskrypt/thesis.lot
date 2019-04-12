@@ -5,6 +5,7 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{51}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{70}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{72}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

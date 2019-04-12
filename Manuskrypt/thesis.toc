@@ -29,19 +29,19 @@
 \contentsline {subsection}{\numberline {5.1.1}zbi\IeC {\'o}r danych}{64}
 \contentsline {subsubsection}{Rezonans magnetyczny:}{65}
 \contentsline {subsubsection}{Ultrasonografia:}{67}
-\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{67}
+\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{68}
 \contentsline {section}{\numberline {5.2}Eksperymenty}{70}
 \contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{70}
-\contentsline {subsection}{\numberline {5.2.2}Obliczanie redukcja wymiarowo\IeC {\'s}ci wektora cech z sieci neuronowej}{72}
-\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{72}
-\contentsline {subsection}{\numberline {5.2.4}Optymalna konkatenacja cech}{72}
-\contentsline {subsection}{\numberline {5.2.5}Fuzja z wykorzystaniem meta-regresji}{72}
-\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{72}
-\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{73}
-\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{73}
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{73}
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{73}
-\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{73}
-\contentsline {chapter}{\numberline {7}Podsumowanie}{74}
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{88}
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{89}
+\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{72}
+\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{74}
+\contentsline {subsection}{\numberline {5.2.4}Optymalna konkatenacja cech}{74}
+\contentsline {subsection}{\numberline {5.2.5}Fuzja z wykorzystaniem meta-regresji}{74}
+\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{74}
+\contentsline {chapter}{\numberline {6}Wyniki i walidacja}{75}
+\contentsline {section}{\numberline {6.1}Ocena procesu gojenia z u\IeC {\.z}yciem nowej metody}{75}
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z wynikami z rezonansu magnetycznego}{75}
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z wynikami ultrasonografii}{75}
+\contentsline {section}{\numberline {6.4}Por\IeC {\'o}wnanie z wynikami bada\IeC {\'n} biomechanicznych}{75}
+\contentsline {chapter}{\numberline {7}Podsumowanie}{76}
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{90}
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{91}

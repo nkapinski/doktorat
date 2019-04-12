@@ -93,7 +93,8 @@ Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarow
 \begin{itemize}
 	\item powiększony zbiór treningowy RM -- zawiera przekroje osiowe ze wszystkich badań (z wyłączeniem pacjentów testowych) realizowanych wszystkimi sekwencjami. Dodatkowo liczba przekroi została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i w przypadku chorych przykładów 10 obrotów w zakresie od -10 do 10 stopni. Finalnie zbiór zawiera 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
 	\item ograniczony zbiór treningowy RM -- zawiera przekroje osiowe ze zbioru oznaczonych 44 pacjentów jedynie w sekwencji T2 $^\ast$ GRE TE\_MIN (18.863 próbek).
-	\item zbiór testowy - zawiera przekroje pochodzące z danych zebranych dla 4 testowych pacjentów.
+	\item zbiór testowy -- zawiera przekroje pochodzące z danych zebranych dla 4 testowych pacjentów.
+	\item zbiór PCA --
 \end{itemize}
 
 \subsubsection{Ultrasonografia:}
@@ -168,7 +169,42 @@ Porównano dwie architektury GPU tj. starszą Pascal P100 i nowszą Volta V100, 
 
 Biorąc pod uwagę zestawienie wyników dokładności klasyfikacji i czasu szkolenia najlepszą architekturą okazała się sieć AlexNet, dlatego została ona wybrana do realizacji kolejnych eksperymentów. Należy również wspomnieć, że rezultaty wnioskowania mogą wciąż być poprawione. Dla przykładu, uzupełniające badanie dotyczące możliwości fuzji sieci AlexNet i ResNet-18 zostało opublikowane przez autora tej pracy w Acta of Bioengineering and Biomechanics \cite{Kapinski19}. Wyniki mogą być również poprawione w wyniku analizy lokalizacji przekrojów w przestrzeni trójwymiarowej, a w szczególności poprzez uwzględnienie, że częściej przekroje oddalone od miejsca zerwania bardziej przypominają tkanki zdrowe. W tym zakresie można np. zastosować metody logiki rozmytej lub miękkiej klasyfikacji (zob. []). Niemniej jednak, z uwagi na wysokie wyniki dokładności możliwie prostego podejścia w tej pracy autor nie decyduje się na dalsze usprawnienia kosztem komplikacji algorytmu. Ewentualne anomalie i wyniki odosobnione zostaną wyeliminowanie poprzez zastosowanie średniej trymowanej w zaproponowanej metryce $H$ (zob. \ref{ecq:H}).
 
-\subsection{Obliczanie redukcja wymiarowości wektora cech z sieci neuronowej}
+\subsection{Obliczanie i redukcja wymiarowości wektora cech}
+
+Celem tego eksperymentu jest znalezienie zredukowanego wektora cech pochodzących z wyjścia sieci neuronowej (cechy DL), który zawierałby możliwie dużo informacji z oryginalnego zbioru. W tym celu z oryginalnej architektury AlexNet została wydzielona część ekstraktora cech oraz pierwsza warstwa typu fully-connected (zob. Rys. \ref{AlexNetTopology}). Parametry ekstraktora cech zostały zachowane dobrane zgodnie z najlepszym modelem z uprzednio opisanego eksperymentu binarnej klasyfikacji. Warstwa fully-connected umożliwia wstępne pogrupowanie cech obrazowych, a jednocześnie nie dywersyfikuje ich w stopniu jaki robi to pełna sieć. Wykorzystując zbiór danych PCA, została przeprowadzona analiza czynników głównych (zob. \ref{DimReduction}), gdzie pojedyncza obserwację stanowił wektor 4096 cech DL przekrojów 10 pacjentów w poszczególnych tygodniach rehabilitacji. Dzięki temu analiza umożliwiła redukcję wymiarowości i jednocześnie zwiększenie rozróżnienia między obserwacjami w poszczególnych krokach czasowych. Porównanie poziomu wariancji zachowywanej przez różną liczbę czynników głównych zebrano w Tab. \ref{PCA-results}.
+\begin{table}[h!]
+ \setlength{\tabcolsep}{12pt}
+ \centering
+ \caption{Rezultaty PCA dla 1, 10 i 200 pierwszych czynników głównych.}
+ \label{PCA-results}
+ \begin{tabular}{l|l|l|l}
+ \hline
+ & PC1 & PC1-PC10 & PC1-PC200 \\ \hline
+ Zachowany poziom wariancji & 50.2\% & 90.8\%   & 98.8\% \\ \hline 
+ \end{tabular}
+ \end{table}
+
+Rezultaty wskazują, że 4096 cech DL może być zredukowanych do jednego wyjścia zachowując przy tym ponad 50\% poziomu wariancji. Odpowiednio 10 czynników zapewnia poziom powyżej 90\%, a 200 czynników poziom bliski 99\%. 
+
+W celu lepszego zrozumienia informacji zachowywanej przez użytą transformację PCA dla wszystkich użytych w tej pracy sekwencji i modalności RM zostały zwizualizowane trendy PC1 dla uśrednionych wyników z 10 pacjentów. Przy czy wynik dla poszczególnego badania 3D wyliczono modyfikując równanie:  
+
+\begin{equation}
+H = TM(PC1(x_1), PC1(x_2),..., PC1(x_n))
+\end{equation}
+
+Na Rys. \ref{fig:H} przedstawiono otrzymane krzywe.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figures/H_PC1.png}
+	\caption{Porównanie krzywych dla 10 modalności RM reprezentujących średnią $H$ z 10 pacjentów.}\label{fig:H}
+\end{figure}
+
+Oprócz sekwencji T2 mapping wszystkie sekwencje i modalności pokazują malejący trend rozumiany jako ujemna różnica pomiędzy wartością końcową i początkową okresu rehabilitacji. Odmienny trend T2 mapping może być spowodowany faktem, że dla tej sekwencji dane były zbierane we wszystkich 8 różnych poziomach sygnały T2. W związku z czym w obrazach pojawiają się próbki silnie zaszumione i zniekształcone. Dopiero głębsza analiza związana np. z wyliczaniami na podstawie aproksymacji sygnału może skutkować poprawą rezultatów \cite{Regulski2017}. 
+
+W pozostałych przypadkach otrzymane trendy odpowiadają naturze procesu gojenia i kolejnym jego etapom. Na początku procesu zmiany są bardzo wyrazne w badaniach obrazowych, co zmniejsza się na kolejnych etapach. Dynamika i fluktuacje zależą również od indywidualnych cech pacjenta oraz innych czynników jak przestrzeganie zaleceń, co do rehabilitacji, diety i aktywności pacjenta. Wynikiem tego eksperymentu jest zatem metoda redukcji wymiarowości przestrzeni cech DL z jednoczesnym zachowaniem istotnej informacji z punktu widzenia oceny procesu gojenia. 
+
+
 \subsection{Wybór sekwencji rezonansu magnetycznego}
 \subsection{Optymalna konkatenacja cech}
 \subsection{Fuzja z wykorzystaniem meta-regresji}

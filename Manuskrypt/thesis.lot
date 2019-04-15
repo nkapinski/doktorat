@@ -6,6 +6,8 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{70}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{72}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0.01.\relax }}{77}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie r\IeC {\'o}\IeC {\.z}nych modeli regresji.\relax }}{79}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

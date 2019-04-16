@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  15 APR 2019 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  16 APR 2019 13:37
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1877,7 +1877,7 @@ Overfull \hbox (17.55853pt too wide) in paragraph at lines 273--342
  [] 
  []
 
-) (Rozdzialy/wyniki_podsumowanie.tex
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1889,17 +1889,41 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [79]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[80]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/XAI.png, id=351, 218.8175pt x 111.41624pt>
+File: figures/XAI.png Graphic file (type png)
+<use figures/XAI.png>
+Package pdftex.def Info: figures/XAI.png  used on input line 456.
+(pdftex.def)             Requested size: 441.01773pt x 224.5592pt.
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[81]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[82]) (Rozdzialy/wyniki_podsumowanie.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[83 <./figures/XAI.png>]
 Rozdzia\PlPrIeC {\l } 6.
-
-Overfull \hbox (2.58003pt too wide) in paragraph at lines 8--8
-[]\OT4/cmr/bx/n/17.28 Porównanie z wy-ni-ka-mi z re-zo-nan-su ma-gne-tycz-
- []
-
-[80
+[84
 
 ]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [81
+) (thesis.bbl [85
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -1930,31 +1954,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[82
+[86
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[83]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[84]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[85]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[86]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1963,6 +1965,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [88]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1986,13 +1994,29 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[94]) (appendix.tex
+[94]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [95]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[96]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[97]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[98]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[99]
 Dodatek A.
-) [96
+) [100
 
 ] (thesis.aux (header.aux))
 
@@ -2000,10 +2024,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17151 strings out of 493305
- 332558 string characters out of 3128932
- 350732 words of memory out of 3000000
- 20424 multiletter control sequences out of 15000+200000
+ 17159 strings out of 493305
+ 332680 string characters out of 3128932
+ 350766 words of memory out of 3000000
+ 20431 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1581b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2037,9 +2061,9 @@ grams/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (106 pages, 5857707 bytes).
+Output written on thesis.pdf (110 pages, 5919774 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
+ 494 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

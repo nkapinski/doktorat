@@ -345,18 +345,120 @@ W szczególności wyliczono różne modele regresji poczynając od liniowej, gdz
 
 Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2 $^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Zatem dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2 $^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min. podczas gdy wszystkich trzech sekwencji trwa około 12 minut na pacjenta. Podsumowując, na podstawie analizy wizualnej i jakościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2 $^\ast$ GRE TE\_MIN. 
 
-\subsection{Optymalna konkatenacja cech}
-\subsection{Fuzja z wykorzystaniem meta-regresji}
+\subsection{Optymalna selekcja i konkatenacja cech}
+
+W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli liniowej regresji. Można zatem postawić hipotezę, że w ocenie radiologa dominuje zależność liniowa, a nieliniowości mają związek z oceną detali. Stąd motywacja, aby w ramach tego eksperymentu, w pierwszym kroku do selekcji cech zastosować metodę LASSO (zob. ). Następnie wybrane cechy wykorzystać do oceny stopnia gojenia porównując regresję liniową z algorytmami maszynowego uczenia, które są w stanie modelować nieliniowości. 
+
+W tym celu treningowy zbiór pacjentów został podzielony na 4 podzbiory (11 pacjentów i około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO i hiperparametrów procesu uczenia się. Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2 $^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. ).
+
+Kryterium selekcji cech była najlepsza korelacja z wzorcem odniesienia, którą uzyskano dla  $\alpha=0.1$. W rezultacie dla 6 parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
+\begin{itemize}
+	\item SCT: 6 cech DL (PC1, PC2, PC3, PC5, PC7, PC9), 10 klasycznych cech obrazowych, w tym 3 cechy Haralicka (suma wariancji dla $d$ = 1, suma średnich dla $d$ = 5 i suma średnich dla $d$ = 10);
+	\item TT: 5 cech DL (PC1, PC2, PC3, PC4, PC5) i 7 klasycznych cech obrazowych bez udziału cech Haralicka;
+	\item STE: 5 cech DL (PC1, PC4, PC7, PC8, PC9) i 8 klasycznych cech obrazowych bez udziału cech Haralicka;
+	\item TE: 4 cechy DL (PC1, PC2, PC3, PC9) i 8 klasycznych cech obrazowych, w tym jedna cecha Haralicka tj. suma średnich dla $d$ = 10;
+	\item TU: 4 cechy DL (PC1, PC3, PC4, PC9) i 9 klasycznych cech obrazowych, w tym jedna cecha Haralicka tj. suma wariancji dla $d$ = 1;  
+	\item TisE: 6 cech DL (PC1, PC2, PC3, PC5, PC7, PC9) i 7 klasycznych cech obrazowych bez udziału cech Haralicka.
+	
+\end{itemize}
+Maksymalna liczba cech w zredukowanej przestrzeni wyniosła 16 (parametr SCT). Ponadto cech DL i klasyczne cechy obrazowe są obecne w każdym z ocenianych kryteriów z wzorca odniesienia, co wskazuje na możliwość uzyskania polepszonych rezultatów oceny z wykorzystaniem fuzji predyktorów. Należy również zwrócić uwagę, że największa liczba cech Haralicka (tj. 3) występuje w parametrze SCT związanym z oceną struktury włókien widoczną w obrazach jako różne tekstury.
+
+W następnym kroku eksperymentu wykorzystano zawężony zbiór cech do treningu i kroswalidacji następujących algorytmów:  metodę wektorów nośnych (SVR -- od ang. \textit{Support Vector Regression}) opisaną w [X], wielowarstwowy perceptron liniowy z 4 neuronami w warstwie ukrytej (MPR -- od ang. \textit{Multilayer Perceptron Regression}) oraz las losowy składający sieę ze 100 drzew decyzyjnych (RF -- od ang. Random Forest). Wyniki zestawiono w Tab. \ref{tab:trainset} z rezultatami liniowej regresji (LR -- od ang. Linear regression) i regresji nieliniowej drugiego stopnia (Poly -- od ang. Polynomial). 
+
+\begin{table*}[h]
+	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.}
+	\scriptsize
+	\begin{center}
+		\begin{tabular}{lc||c|c|c|c|c|c}
+			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
+			
+			\hline
+			\multirow{3}{*}{Poly}
+			& MAE & $1.00\pm0.03$ & $0.62\pm0.02$ & $0.73\pm0.02$ & $0.76\pm0.02$ & $0.89\pm0.03$ & $0.70\pm0.02$\\
+			& MAX-AE & 3.53 & 2.35 & 3.62 & 2.49 & 2.90 & 2.64 \\
+			& Corr   & 0.87 & 0.82 & 0.46 & 0.80 & 0.65 & 0.87 \\
+			\hline
+			\multirow{3}{*}{SVR}
+			& MAE & $0.88\pm0.01$ & $0.59\pm0.01$ & $0.67\pm0.01$ & $0.69\pm0.01$ & $0.83\pm0.01$ & $0.63\pm0.01$\\
+			& MAX-AE & 3.73 & 2.32 & 3.83 & 2.50 & 2.95 & 2.75 \\
+			& Corr   & 0.89 & 0.85 & 0.59 & 0.83 & 0.72 & 0.88 \\
+			\hline
+			\multirow{3}{*}{LR}
+			& MAE & $1.00\pm0.04$ & $0.62\pm0.02$ & $0.74\pm0.02$ & $0.74\pm0.02$ & $0.90\pm0.03$ & $0.69\pm0.02$\\
+			& MAX-AE & 3.52 & 2.39 & 3.77 & 2.52 & 2.88 & 2.65 \\
+			& Corr   & 0.87 & 0.83 & 0.46 & 0.80 & 0.65 & 0.87 \\
+			\hline
+			\multirow{3}{*}{MPR}
+			& MAE & $1.00\pm0.04$ & $0.63\pm0.02$ & $0.74\pm0.02$ & $0.71\pm0.02$ & $0.88\pm0.03$ & $0.96\pm0.02$\\
+			& MAX-AE & 3.47 & 2.51 & 3.57 & 2.52 & 2.86 & 2.65 \\
+			& Corr   & 0.86 & 0.83 & 0.46 & 0.80 & 0.65 & 0.88 \\
+			\hline
+			 \multirow{3}{*}{RF}
+			 & MAE & $0.32\pm0.04$ & $0.21\pm0.02$ & $0.25\pm0.03$ & $0.25\pm0.02$ & $0.31\pm0.03$ & $0.23\pm0.02$\\
+			 & MAX-AE & 1.24 & 0.82 & 1.33 & 0.89 & 1.03 & 0.92 \\
+			 & Corr   & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+			 \hline
+		\end{tabular}
+	\end{center}
+	\label{tab:trainset}
+\end{table*}
+
+Ponownie w celu porównań wykorzystano metryki średniego błędu absolutnego (MAE od ang.\textit{mean absolute error}), maksymalnego błędu absolutnego (MAX-AE od ang. \textit{max. absolute error}) i średniej korelacji obliczonej z wykorzystaniem trasformacji Z-fishera (Corr od ang. \textit{correlation}). Najlepszy rezultat dla każdego z parametrów uzyskano dla lasu losowego jednak w przypadku tego algorytmu (pomimo wielu prób z różną liczbą drzew decyzyjnych) występuje efekt nadmiernego dopasowania, co wyraznie można zaobserwować analizując wyniki ze zbioru testowego zestawione w Tab. \ref{tab:testset}. 
+
+\begin{table*}[h]
+	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.}
+	\scriptsize
+	\begin{center}
+		\begin{tabular}{lc||c|c|c|c|c|c}
+			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
+			
+			\hline
+			\multirow{3}{*}{Poly}
+			& MAE & $1.15\pm0.13$ & $0.57\pm0.07$ & $0.75\pm0.08$ & $0.94\pm0.10$ & $0.92\pm0.09$ & $0.94\pm0.10$\\
+			& MAX-AE & 2.67 & 1.78 & 1.81 & 2.50 & 2.12 & 2.39 \\
+			& Corr   & 0.82 & 0.83 & 0.25 & 0.71 & 0.63 & 0.78 \\
+			\hline
+			\multirow{3}{*}{SVR}
+			& MAE & $1.05\pm0.12$ & $0.56\pm0.06$ & $0.75\pm0.08$ & $0.91\pm0.10$ & $0.91\pm0.09$ & $0.94\pm0.10$\\
+			& MAX-AE & 2.62 & 1.82 & 1.92 & 2.54 & 2.01 & 2.38 \\
+			& Corr   & 0.85 & 0.85 & 0.31 & 0.72 & 0.65 & 0.80 \\
+			\hline
+			\multirow{3}{*}{LR}
+			& MAE & $1.15\pm0.13$ & $0.55\pm0.06$ & $0.74\pm0.08$ & $0.90\pm0.10$ & $0.93\pm0.09$ & $0.97\pm0.10$\\
+			& MAX-AE & 2.60 & 1.78 & 1.81 & 2.54 & 2.04 & 2.38 \\
+			& Corr   & 0.84 & 0.84 & 0.18 & 0.71 & 0.62 & 0.78 \\
+			\hline
+			\multirow{3}{*}{MPR}
+			& MAE & $1.13\pm0.12$ & $0.57\pm0.06$ & $0.74\pm0.08$ & $0.92\pm0.11$ & $0.91\pm0.09$ & $0.96\pm0.10$\\
+			& MAX-AE & 2.63 & 1.77 & 1.78 & 2.54 & 2.04 & 2.40 \\
+			& Corr   & 0.83 & 0.83 & 0.20 & 0.73 & 0.63 & 0.77 \\			
+			\hline
+			\multirow{3}{*}{RF}
+			& MAE & $1.12\pm0.13$ & $0.55\pm0.06$ & $0.74\pm0.08$ & $0.90\pm0.11$ & $0.93\pm0.09$ & $0.94\pm0.10$\\
+			& MAX-AE & 2.73 & 1.77 & 1.78 & 2.50 & 2.12 & 2.27 \\
+			& Corr   & 0.83 & 0.84 & 0.37 & 0.71 & 0.61 & 0.78 \\
+			\hline
+			\multirow{3}{*}{baseline limited} 
+			& MAE & $1.24\pm{0.16}$ & $0.82\pm{0.09}$ & $0.75\pm{0.08}$ & $1.06\pm{0.10}$ & $0.90\pm{0.09}$ & $0.96\pm{0.10}$ \\
+			&MAX-AE & 3.54 & 2.46 & 1.82 & 2.70 & 2.13 & 2.18\\
+			&Corr   & 0.61 & 0.64 &-0.08 & 0.55 & 0.55 & 0.65\\
+
+		\end{tabular}
+	\end{center}
+	\label{tab:testset}
+\end{table*}
+
+W celu oceny skuteczności fuzji wyniki zestawiono z oceną bazującą tylko na cechach DL realizowaną w poprzednim badaniu i już raz prezentowaną w Tab. \ref{tab:H_testset}. W porównaniu z tak dobranym poziomem odniesienia nawet wyniki uzyskane z modelu liniowej regresji bazującej na fuzji cech pozwalają na znaczącą poprawę rezultatów w każdym z parametrów w przypadku korelacji, w parametrach, SCT, TT, STE i TU dla MAX-AE oraz SCT, TT, i TE dla MAE. 
+
+Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów bardziej odpornych na szum w sygnale gojenia się oraz funkcjonujących w oparciu o analizę tkanek tylko wewnątrz ROI. W szczególności (tak jak wspomniane w sekcji ) parametry oceniane we wzorcu odniesienia zależą od czynników takich jak przestrzeganie zasad rehabilitacji przez pacjenta, diety, aktywności fizycznej, a nawet temperatury zewnętrznej podczas badania RM. W ocenie specjalistów, w największym stopniu zmiany mogą dotyczyć TisE, a zatem opuchlizny wokół tkanek ścięgnistych. Cechy DL są wynikiem interpretacji całego obrazu i uwzględniają zarówno ROI jak i obszary zewnętrzne. Na dowód tego na Rys. \ref{fig:XAI} przedstawiono wizualizację obszaru zainteresowania wynikającego z wnioskowania używanej w eksperymentach sieci neuronowej.       
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/XAI.png}
+	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania}\label{fig:XAI}
+\end{figure}
+
+Optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową i ROI umożliwiła skuteczniejszą ocenę całego procesu. W szczególności cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo metoda LASSO pozwoliła na efektywne uwzględnienie większej liczby cech DL poprawiając ogólną ocenę jak i w szczególności parametr TisE zalezny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje znacząco poniżej 0.5. Ocena krawędzi obszarów na styku ROI i zewnętrza może wymagać kolejnych usprawnień np. z wykorzystaniem cech krawędziowych.
+ 
+W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algorytmem meta-regresji, który uzyskał najwięcej najlepszych wyników tj. 5 okazał się SVR, co może sugerować potwierdzeni hipotezy o nielicznych nieliniowościach występujących w ocenie radiologa. Z uwagi na ten fakt, finalnie do końcowych porównań i analiz opisanych w kolejnym rozdziale, zostanie wykorzystany właśnie ten algorytm.
 
 
-
-\section{Ocena procesu gojenia}
-
--- porównanie z end-to-end
-
-
-
-
-%\subsection{Topologia sieci}
-%\subsection{Redukcja wymiarowości}
-%\subsection{Miara wygojenia}

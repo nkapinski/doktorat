@@ -4,14 +4,17 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{51}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{70}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{72}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0.01.\relax }}{77}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie r\IeC {\'o}\IeC {\.z}nych modeli regresji.\relax }}{79}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{81}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.\relax }}{82}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{69}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{71}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0.01.\relax }}{76}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie r\IeC {\'o}\IeC {\.z}nych modeli regresji.\relax }}{78}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{80}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.\relax }}{81}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{85}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{86}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{84}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{85}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci na zbiorze treningowym dla danych z USG.\relax }}{87}
+\contentsline {table}{\numberline {6.4}{\ignorespaces 5CV results for the tendon healing progress using end-to-end approach\relax }}{89}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Results for the tendon healing progress using end-to-end approach on the test dataset\relax }}{90}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

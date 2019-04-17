@@ -347,6 +347,13 @@ Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, Ruslan
   detectors.
 \newblock {\em CoRR}, abs/1207.0580, 2012.
 
+\bibitem{Ibrahim2013}
+Noha Mohamed~AbdelMaboud Ibrahim,  Hytham~Haroun Elsaeed.
+\newblock Lesions of the achilles tendon: Evaluation with ultrasonography and
+  magnetic resonance imaging.
+\newblock {\em The Egyptian Journal of Radiology and Nuclear Medicine},
+  44(3):581--587, sep 2013.
+
 \bibitem{Curie1880}
 Jacques,  Pierre Curie.
 \newblock Development, via compression, of electric polarization in hemihedral
@@ -366,6 +373,12 @@ C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
 \newblock {The Relative Performance of Ensemble Methods with Deep Convolutional
   Neural Networks for Image Classification}.
 \newblock {\em ArXiv e-prints}, apr 2017.
+
+\bibitem{Khan2003}
+K~M Khan.
+\newblock Are ultrasound and magnetic resonance imaging of value in assessment
+  of achilles tendon disorders? a two year prospective study.
+\newblock {\em British Journal of Sports Medicine}, 37(2):149--153, apr 2003.
 
 \bibitem{DBLP:journals/corr/KingmaB14}
 Diederik~P. Kingma,  Jimmy Ba.

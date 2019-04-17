@@ -27,21 +27,19 @@
 \contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{61}
 \contentsline {section}{\numberline {5.1}Metodyka}{62}
 \contentsline {subsection}{\numberline {5.1.1}zbi\IeC {\'o}r danych}{64}
-\contentsline {subsubsection}{Rezonans magnetyczny:}{65}
-\contentsline {subsubsection}{Ultrasonografia:}{67}
-\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{68}
-\contentsline {section}{\numberline {5.2}Eksperymenty}{70}
-\contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{70}
-\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{72}
-\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{74}
-\contentsline {subsubsection}{Analiza wizualna:}{74}
+\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{67}
+\contentsline {section}{\numberline {5.2}Eksperymenty}{68}
+\contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{69}
+\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{71}
+\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{72}
+\contentsline {subsubsection}{Analiza wizualna:}{73}
 \contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa:}{76}
-\contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{79}
-\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{83}
-\contentsline {chapter}{\numberline {6}Testy nowej metody}{84}
-\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{84}
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z ultrasonografii}{87}
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{87}
-\contentsline {chapter}{\numberline {7}Podsumowanie}{88}
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{102}
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{103}
+\contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{77}
+\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{81}
+\contentsline {chapter}{\numberline {6}Testy nowej metody}{83}
+\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{83}
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z ultrasonografii}{86}
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{90}
+\contentsline {chapter}{\numberline {7}Podsumowanie}{91}
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{105}
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{106}

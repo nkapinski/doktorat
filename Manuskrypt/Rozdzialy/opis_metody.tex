@@ -54,7 +54,6 @@ Kryteria wykluczające z grupy badanej zostały zdefiniowane tak aby kwalifikowa
 
 W okresie do tygodnia po urazie pacjenci przeszli zabieg rekonstrukcji wykonany metodą szycia na otwartym ścięgnie (zob. \ref{gojenie}). Następnie rozpoczęto rehabilitacje trwającą 12 miesięcy monitorowaną z wykorzystaniem Rezonansu Magnetycznego, Ultrasonografii. Wykonano również badania biomechaniczne na początku i na końcu okresu rehabilitacji zgodnie zgodnie z protokołem opisanym w sekcji \ref{biomechanika}.
 
-\subsubsection{Rezonans magnetyczny:}
 Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDxt 1.5T wyposażonym w cewkę Foot \& Ankle dedykowaną do pomiarów w rejonie dolnej kończyny. Każde z badań RM było wykonane z użyciem 7 sekwencji i łącznie 10 modalności opisanych szczegółowo w sekcji \ref{RM} tj.:
 \begin{enumerate}
 	\item T1 zależne
@@ -88,23 +87,7 @@ Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarow
 	\item zbiór PCA --
 \end{itemize}
 
-\subsubsection{Ultrasonografia:}
-W przypadku danych Ultrasonografii stosowano się do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 3D skanów. 
 
-Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej:
- \begin{itemize}
- 	\item zbiór treningowy USG (strzałkowy) -- zawiera 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
- 	\item zbiór treningowy USG (osiowy) -- zawiera 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
- \end{itemize}
-
-Wizualizacja przykładowych danych USG znajduje się na Rys. \ref{fig:US_sample}
-\begin{figure}[h!]
-	\includegraphics[width=\textwidth]{figures/Data_US_sample.png}
-	\caption{Wizualizacja przykładowych danych USG w kolejnych tygodniach po zszyciu ścięgna w przekrojach osiowych i strzałkowych.}
-	\label{fig:US_sample}
-\end{figure}
-
-Szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa, jednak w ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych.
  
 
 \subsection{wzorzec odniesienia}
@@ -128,7 +111,7 @@ W tej sekcji zestawiono eksperymenty mające na celu dobór poszczególnych komp
 
 
 \subsection{Rozróżnienie ścięgna zdrowego i po zerwaniu}
-
+\label{binaryMRI}
 W tym badaniu porównane zostały współczesne architektury sieci neuronowych w zadaniu klasyfikacji binarnej, rozróżniającej obrazy zdrowego od chorego ścięgna. W porównaniu uwzględniono topologie AlexNet (zob. \ref{AlexNet}), GoogLeNet InceptionV3 (zob. \ref{googlenet}) i ResNet-18 (zob. \ref{resnet}). W celu doboru hiperparametrów i optymalizacji parametrów sieci zastosowano szkolenie z wykorzystaniem kroswalidacji z podziałem na 5 segmentów (zob. \ref{sec-overffiting}). W każdym z 5 cykli, 3 segmenty były wykorzystane do treningu, 1 do walidacji i 1 do finalnych testów. Do celów tego badania wykorzystano powiększony zbiór treningowy RM. Wyniki z testów zebrano w Tab. \ref{cross-validation}.
 %\vspace{-10px}
 \begin{table}[h!]

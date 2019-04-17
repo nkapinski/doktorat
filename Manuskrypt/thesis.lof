@@ -28,14 +28,14 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{63}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych RM w sekwencji PD dla zdrowego (po lewej) i goj\IeC {\k a}cego si\IeC {\k e} (po prawej) \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{66}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{68}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{71}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H$ z 10 pacjent\IeC {\'o}w.\relax }}{73}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Znormalizowane histogramy dla 10 sekwencji RM.\relax }}{75}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12 tygodniu po rekonstrukcji.\relax }}{76}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast $ GRE TE\_MIN\relax }}{77}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania\relax }}{83}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{70}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H$ z 10 pacjent\IeC {\'o}w.\relax }}{72}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10 sekwencji RM.\relax }}{73}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12 tygodniu po rekonstrukcji.\relax }}{74}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast $ GRE TE\_MIN\relax }}{75}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania\relax }}{82}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{87}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{86}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

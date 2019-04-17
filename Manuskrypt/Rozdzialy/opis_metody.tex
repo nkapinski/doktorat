@@ -197,7 +197,7 @@ W pozostałych przypadkach otrzymane trendy odpowiadają naturze procesu gojenia
 
 
 \subsection{Wybór sekwencji rezonansu magnetycznego}
-
+\label{seq:protocol_selection}
 Z uwagi na opisany w Sekcji \ref{RM} tor akwizycji danych RM zwiększanie liczby sekwencji odbywa się kosztem wydłużenia czasu badania pacjenta. W skrajnym przypadku, takim jak pozyskanie wszystkich 10 omawianych sekwencji, czas ten wynosi około 1 godziny, co stanowi praktyczne ograniczenie opracowywanej metody. Dlatego celem tego eksperymentu jest wybór protokołu zawierającego minimalną liczbę sekwencji umożliwiających przy użyciu opracowywanej metody skuteczną ocenę procesu gojenia. Prace podzielono na dwa zakresy tj. analizę wizualną i ilościową.
 
 \subsubsection{Analiza wizualna:} W ramach wstępnej analizy, wartości danych ze wszystkich sekwencji i modalności zebranych od pacjentów zostały zakumulowane w postaci znormalizowanych histogramów i przedstawione na Rys. \ref{fig:Hists}.
@@ -459,6 +459,11 @@ Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech 
 
 Optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową i ROI umożliwiła skuteczniejszą ocenę całego procesu. W szczególności cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo metoda LASSO pozwoliła na efektywne uwzględnienie większej liczby cech DL poprawiając ogólną ocenę jak i w szczególności parametr TisE zalezny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje znacząco poniżej 0.5. Ocena krawędzi obszarów na styku ROI i zewnętrza może wymagać kolejnych usprawnień np. z wykorzystaniem cech krawędziowych.
  
-W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algorytmem meta-regresji, który uzyskał najwięcej najlepszych wyników tj. 5 okazał się SVR, co może sugerować potwierdzeni hipotezy o nielicznych nieliniowościach występujących w ocenie radiologa. Z uwagi na ten fakt, finalnie do końcowych porównań i analiz opisanych w kolejnym rozdziale, zostanie wykorzystany właśnie ten algorytm.
+W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algorytmem meta-regresji, który uzyskał najwięcej najlepszych wyników tj. 5 okazał się SVR, co może sugerować potwierdzeni hipotezy o nielicznych nieliniowościach występujących w ocenie radiologa. Z uwagi na ten fakt, finalnie do końcowej automatycznej metody oceny przedstawionej w kolejnej sekcji zostanie wykorzystany właśnie ten algorytm.
 
+\section{Ocena procesu gojenia}
 
+-- wykresy
+-- macierz błędu (confusion matrix)
+
+oraz do porównań i analiz opisanych w kolejnym rozdziale,

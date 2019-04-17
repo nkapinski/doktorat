@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  16 APR 2019 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  17 APR 2019 12:52
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1919,11 +1919,41 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [83 <./figures/XAI.png>]
 Rozdzia\PlPrIeC {\l } 6.
+
+Overfull \hbox (3.12201pt too wide) in paragraph at lines 7--7
+[]\OT4/cmr/bx/n/17.28 Porównanie z me-to-d¡ opar-t¡ o pa-ra-dyg-mat end-
+ []
+
 [84
 
 ]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[85]
+<figures/Segmentacja.png, id=369, 847.36575pt x 333.6465pt>
+File: figures/Segmentacja.png Graphic file (type png)
+<use figures/Segmentacja.png>
+Package pdftex.def Info: figures/Segmentacja.png  used on input line 76.
+(pdftex.def)             Requested size: 441.01773pt x 173.6499pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[86]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[87 <./figures/Segmentacja.png>]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [85
+) (thesis.bbl [88
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -1954,27 +1984,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[86
+[89
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[87]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[88]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[89]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1983,6 +1995,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [91]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2010,13 +2028,25 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[98]) (appendix.tex
+[98]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [99]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[100]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[101]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[102]
 Dodatek A.
-) [100
+) [103
 
 ] (thesis.aux (header.aux))
 
@@ -2024,13 +2054,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17159 strings out of 493305
- 332680 string characters out of 3128932
- 350766 words of memory out of 3000000
- 20431 multiletter control sequences out of 15000+200000
+ 17168 strings out of 493305
+ 332892 string characters out of 3128932
+ 350812 words of memory out of 3000000
+ 20439 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,1581b,539s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,1581b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.e
 nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
 enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi
@@ -2061,9 +2091,9 @@ grams/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Loc
 al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (110 pages, 5919774 bytes).
+Output written on thesis.pdf (113 pages, 6548649 bytes).
 PDF statistics:
- 494 PDF objects out of 1000 (max. 8388607)
+ 504 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  17 APR 2019 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  18 APR 2019 11:24
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1906,7 +1906,57 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[80]) (Rozdzialy/wyniki_podsumowanie.tex
+[80]
+<figures/SCT.png, id=351, 1517.67pt x 855.195pt>
+File: figures/SCT.png Graphic file (type png)
+<use figures/SCT.png>
+Package pdftex.def Info: figures/SCT.png  used on input line 453.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/TT.png, id=352, 1517.67pt x 855.195pt>
+File: figures/TT.png Graphic file (type png)
+<use figures/TT.png>
+Package pdftex.def Info: figures/TT.png  used on input line 459.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/STE.png, id=353, 1517.67pt x 855.195pt>
+File: figures/STE.png Graphic file (type png)
+<use figures/STE.png>
+Package pdftex.def Info: figures/STE.png  used on input line 465.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/TE.png, id=354, 1517.67pt x 855.195pt>
+File: figures/TE.png Graphic file (type png)
+<use figures/TE.png>
+Package pdftex.def Info: figures/TE.png  used on input line 471.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/TU.png, id=355, 1517.67pt x 855.195pt>
+File: figures/TU.png Graphic file (type png)
+<use figures/TU.png>
+Package pdftex.def Info: figures/TU.png  used on input line 477.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/TisE.png, id=356, 1517.67pt x 855.195pt>
+File: figures/TisE.png Graphic file (type png)
+<use figures/TisE.png>
+Package pdftex.def Info: figures/TisE.png  used on input line 483.
+(pdftex.def)             Requested size: 441.01773pt x 248.50912pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (Rozdzialy/wyniki_podsumowanie.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1914,21 +1964,33 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[82 <./figures/XAI.png>]
+[82 <./figures/XAI.png> <./figures/SCT.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[83 <./figures/TT.png> <./figures/STE.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[84 <./figures/TE.png> <./figures/TU.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[85 <./figures/TisE.png>]
 Rozdzia\PlPrIeC {\l } 6.
 
 Overfull \hbox (3.12201pt too wide) in paragraph at lines 7--7
 []\OT4/cmr/bx/n/17.28 Porównanie z me-to-d¡ opar-t¡ o pa-ra-dyg-mat end-
  []
 
-[83
+[86
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[84]
-<figures/Segmentacja.png, id=365, 847.36575pt x 333.6465pt>
+[87]
+<figures/Segmentacja.png, id=387, 847.36575pt x 333.6465pt>
 File: figures/Segmentacja.png Graphic file (type png)
 <use figures/Segmentacja.png>
 Package pdftex.def Info: figures/Segmentacja.png  used on input line 76.
@@ -1944,12 +2006,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[85]
+[88]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[86 <./figures/Segmentacja.png>]
-<figures/Data_US_sample.png, id=372, 2184.36075pt x 1456.2405pt>
+[89 <./figures/Segmentacja.png>]
+<figures/Data_US_sample.png, id=394, 2184.36075pt x 1456.2405pt>
 File: figures/Data_US_sample.png Graphic file (type png)
 <use figures/Data_US_sample.png>
 Package pdftex.def Info: figures/Data_US_sample.png  used on input line 98.
@@ -1962,35 +2024,35 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[87]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[88 <./figures/Data_US_sample.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[89]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [90]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[91 <./figures/Data_US_sample.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[92]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[93]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [91
+) (thesis.bbl [94
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -2021,27 +2083,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[92
+[95
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[93]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[94]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[95]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2050,6 +2094,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [97]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2077,13 +2127,25 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[104]) (appendix.tex
+[104]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [105]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[106]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[107]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[108]
 Dodatek A.
-) [106
+) [109
 
 ] (thesis.aux (header.aux))
 
@@ -2091,10 +2153,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17173 strings out of 493305
- 332974 string characters out of 3128932
- 350857 words of memory out of 3000000
- 20444 multiletter control sequences out of 15000+200000
+ 17209 strings out of 493305
+ 333532 string characters out of 3128932
+ 350916 words of memory out of 3000000
+ 20474 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,1581b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2129,9 +2191,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/no
 rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (116 pages, 6573314 bytes).
+Output written on thesis.pdf (119 pages, 6723601 bytes).
 PDF statistics:
- 518 PDF objects out of 1000 (max. 8388607)
+ 539 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 176 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 206 words of extra memory for PDF output out of 10000 (max. 10000000)
 

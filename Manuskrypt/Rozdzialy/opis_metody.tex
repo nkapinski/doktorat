@@ -437,7 +437,7 @@ Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/XAI.png}
-	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania}\label{fig:XAI}
+	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.}\label{fig:XAI}
 \end{figure}
 
 Optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową i ROI umożliwiła skuteczniejszą ocenę całego procesu. W szczególności cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo metoda LASSO pozwoliła na efektywne uwzględnienie większej liczby cech DL poprawiając ogólną ocenę jak i w szczególności parametr TisE zalezny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje znacząco poniżej 0.5. Ocena krawędzi obszarów na styku ROI i zewnętrza może wymagać kolejnych usprawnień np. z wykorzystaniem cech krawędziowych.
@@ -447,6 +447,43 @@ W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algoryt
 \section{Ocena procesu gojenia}
 
 -- wykresy
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/SCT.png}
+	\caption{Ocena parametru SCT.}\label{fig:SCT}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/TT.png}
+	\caption{Ocena parametru TT.}\label{fig:TT}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/STE.png}
+	\caption{Ocena parametru STE.}\label{fig:STE}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/TE.png}
+	\caption{Ocena parametru TE.}\label{fig:TE}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/TU.png}
+	\caption{Ocena parametru TU.}\label{fig:TU}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/TisE.png}
+	\caption{Ocena parametru TisE.}\label{fig:TisE}
+\end{figure}
+
 -- macierz błędu (confusion matrix)
 
 oraz do porównań i analiz opisanych w kolejnym rozdziale,

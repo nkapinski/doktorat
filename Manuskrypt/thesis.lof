@@ -33,9 +33,15 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10 sekwencji RM.\relax }}{73}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12 tygodniu po rekonstrukcji.\relax }}{74}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast $ GRE TE\_MIN\relax }}{75}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania\relax }}{82}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{82}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Ocena parametru SCT.\relax }}{82}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Ocena parametru TT.\relax }}{83}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Ocena parametru STE.\relax }}{83}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Ocena parametru TE.\relax }}{84}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Ocena parametru TU.\relax }}{84}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru TisE.\relax }}{85}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{86}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{88}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{89}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{91}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

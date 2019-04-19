@@ -484,6 +484,18 @@ W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algoryt
 	\caption{Ocena parametru TisE.}\label{fig:TisE}
 \end{figure}
 
--- macierz błędu (confusion matrix)
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cm.png}
+	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:TisE}
+\end{figure}
+sens tych macierzy jest taki że moglibyśmy zaobserwować dryf - optymalną ścieżką wyniku jest krzywa idąca przez minima i najmniejsze wartości powinny być na diagonali, a nie zawsze są
 
+drugi sens - diagonala to to co napisałem na początku, czyli rozkład błędu po tygodniach
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cmScores.png}
+	\caption{Macierz błędu dla wartości oceny jako klasy.}\label{fig:cmscores}
+\end{figure}
 oraz do porównań i analiz opisanych w kolejnym rozdziale,

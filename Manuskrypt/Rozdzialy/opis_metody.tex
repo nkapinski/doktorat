@@ -329,7 +329,7 @@ W szczególności wyliczono różne modele regresji poczynając od liniowej, gdz
 Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2 $^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Zatem dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2 $^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min. podczas gdy wszystkich trzech sekwencji trwa około 12 minut na pacjenta. Podsumowując, na podstawie analizy wizualnej i jakościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2 $^\ast$ GRE TE\_MIN. 
 
 \subsection{Optymalna selekcja i konkatenacja cech}
-
+\label{seq:fusion}
 W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli liniowej regresji. Można zatem postawić hipotezę, że w ocenie radiologa dominuje zależność liniowa, a nieliniowości mają związek z oceną detali. Stąd motywacja, aby w ramach tego eksperymentu, w pierwszym kroku do selekcji cech zastosować metodę LASSO (zob. ). Następnie wybrane cechy wykorzystać do oceny stopnia gojenia porównując regresję liniową z algorytmami maszynowego uczenia, które są w stanie modelować nieliniowości. 
 
 W tym celu treningowy zbiór pacjentów został podzielony na 4 podzbiory (11 pacjentów i około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO i hiperparametrów procesu uczenia się. Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2 $^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. ).
@@ -450,8 +450,7 @@ W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników
 
 \begin{enumerate}
 
-	\item Obrzęk ścięgna (TE od ang. \textit{Tendon edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
-	\item Jednorodność ścięgna (TU od ang. \textit{Tendon uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych jak i podobieństwu sąsiednich, mierzonym w płaszyznie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
+
 	\item Obrzęk tkanek (TisE od ang. \textit{Tissue edema}) -- informuje o powiększonym przedziale powięziowym ścięgna. 0  – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
 \end{enumerate}
 
@@ -500,26 +499,43 @@ Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zapre
 	\caption{Ocena parametru TU.}\label{fig:TU}
 \end{figure}
 
+Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12 i 20 tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9 i 12 tyg. Dla automatycznaje oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów osiowych, stąd uzyskane wyniki mogą być zatem jedynie efektem agregowanych w mierze $H$ wartości. Polepszenie w zakresie oceny tego parametru może być uzyskane w przypadku zastosowania bardziej jednorodnych danych RM lub USG.
+
+Jako ostatni został przeanalizowany parametr TisE. Krzywe gojenia widoczne są na Rys. \ref{fig:TisE}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/TisE.png}
 	\caption{Ocena parametru TisE.}\label{fig:TisE}
 \end{figure}
 
+Jest to jedyny parametr oceniany w całości na zewnątrz ROI i charakteryzuje obrzęk w przestrzeni powięziowej. Na przełomie fazy poliferacji i remodelingu (6--9 tydz.) następuje charakterystyczny wzrost płynów w tym obszarze wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26 tyg. W krzywych wygenerowanych w ocenie automatycznej również widoczne są maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (3--6 tydz.), co wymaga dalszej analizy.
+
+Zbiorze podsumowanie powyższych wyników zostało przedstawione w formie omówienia macierzy błędów zaprezentowanych w kolejnej podsekcji.
+
 \subsection{Macierze błędu}
 
+W pierwszej kolejności zestawiono macierze błędu dla wszystkich 6 parametrów podsumowujące średni błąd absolutny dla oceny pacjentów testowych (zob. Rys. \ref{fig:CM_MAE}). 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cm.png}
-	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:TisE}
+	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:CM_MAE}
 \end{figure}
-sens tych macierzy jest taki że moglibyśmy zaobserwować dryf - optymalną ścieżką wyniku jest krzywa idąca przez minima i najmniejsze wartości powinny być na diagonali, a nie zawsze są (wykresl jeszcze znormalizowane po wierszach wyniki, to da Tobie ściezke/ dobrze podpisz wiersze i kolumny)
+Na wykresach zaznaczono ścieżkę przebiegającą wzdłuż minimalnych wartości. W optymalnym przypadku ścieżka powinna pokrywać się z diagonalą. Dla poszczególnych parametrów można zaobserwować dryf. 
+2 najgorsze:
+--W przypadku parametru STE zakres zmian jest na tyle niewielki, że ocena dla stanu przed operają przypomina stan z 20 tyg. 
+--Dla TU w końcówce procesu ocena przpomina środek
+Pozostałe:
+--SCT i TE i TisE- środek oceny jest podobny
+-- TT najlepiej, tylko początek do 9 tyg. podobny
 
-drugi sens - diagonala to to co napisałem na początku, czyli rozkład błędu po tygodniach
+Na kolejnym wykresie (zob. Rys. \ref{fig:cmscores}) pokazano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów.
 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cmScores.png}
 	\caption{Macierz błędu dla wartości oceny jako klasy.}\label{fig:cmscores}
 \end{figure}
-oraz do porównań i analiz opisanych w kolejnym rozdziale,
+
+Największą zgodność otrzymano dla 2, 3 i 4. Dla 5 najczęściej oceniano jako 4 podobnie jak dla 6. Dla 7 oceniono albo 5 albo 6. Dla 1 najczęściej 2 lub 3, a 0 to 2.
+
+Podsumowując prezentowane w Podsekcji \ref{seq:fusion} wyniki numeryczne i omówione w tej Sekcji krzywe gojenia oraz macierze błędu można wnioskować, że automatyczna metoda oceny procesu gojenia zachowuje trendy oceny radiologa, dla 4 parametrów osiągając Corr powyżej 0.7, a dla trzech powyżej lub równą 0.8. Niemniej jednak zastosowanie w algorytmie meta-regresji z wykorzystaniem maszyny wektorów nośnych spowodowało zmniejszeni zakresu oceny, która nigdy nie osiąga wartości skrajnych bliskich 7 lub 0--1. Minima i maksima lokalne również nie są tak charakterystyczna jak w przypadku oceny radiologa. Ponadto poprawa oceny parametru TU wymaga podejścia z uwzględnieniem przekrojów strzałkowych, a wartość parametru STE ponownej dyskusji w gronie ekspertów. W kolejnym Rozdziale zostaną zaprezentowane porównania opracowanej metody z innymi podejściami i przedyskutowane możliwości ich synergii.

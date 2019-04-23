@@ -91,7 +91,7 @@ Powyższe zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarow
  
 
 \subsection{wzorzec odniesienia}
-
+\label{seq:ground-truth}
 Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana specjalna grupa robocza składająca się z eksperta radiologa, specjalistów ortopedów i ekspertów od komputerowo wspomaganej diagnostyki. Celem grupy było opracowanie ilościowego opisu, który odzwierciedla elementy, na podstawie których radiolog podejmuje subiektywną opinię. W wyniku prac stworzono zestaw sześciu parametrów oceniany w skali 0--7 opisujący proces gojenia się ścięgna Achillesa widoczny w obrazach RM i Ultrasonografii:
 
 \begin{enumerate}
@@ -446,31 +446,53 @@ W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algoryt
 
 \section{Ocena procesu gojenia}
 
--- wykresy
+W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności zostały przedstawione \textit{krzywe gojenia} tj. ocena w czasie poszczególnych parametrów ankiety. Porównane zostały wyniki metody automatycznej z wzorcem odniesienia ocenianym przez eksperta radiologa. Następnie przeanalizowano macierze błędu dla każdego z parametrów, jak również dla klas stanowiących zakres oceny: 0--7. Powyższe zestawienia znajdują się w kolejnych podsekcjach.
 
+\begin{enumerate}
+
+	\item Obrzęk ścięgna (TE od ang. \textit{Tendon edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
+	\item Jednorodność ścięgna (TU od ang. \textit{Tendon uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych jak i podobieństwu sąsiednich, mierzonym w płaszyznie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
+	\item Obrzęk tkanek (TisE od ang. \textit{Tissue edema}) -- informuje o powiększonym przedziale powięziowym ścięgna. 0  – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk. 6 – bardzo duży obrzęk, 7 - ekstremalnie duży obrzęk.
+\end{enumerate}
+
+
+\subsection{Krzywe gojenia}
+ Dla wszystkich 4 pacjentów testowych, dla każdego z 10 kroków czasowych zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/SCT.png}
 	\caption{Ocena parametru SCT.}\label{fig:SCT}
 \end{figure}
+Zgodnie z opisem zamieszczonym w Podsekcji \ref{seq:ground-truth} dotyczy on stanu uszkodzeń śródścięgnistych wewnątrz obszaru ROI. Przed interwencją chirurgiczną ścięgno jest całkowicie zerwane, stąd w tygodniu 0, reprezentującym czas na kilka dni przed operacją, ocena radiologa wynosi 7, dla każdego z pacjentów. Po zszyciu w 3 z 4 przypadków proces postępuje z malejącym trendem do osiągnięcia małych bądź braku uszkodzeń (jedyna anomalia, mogąca wynikać z omawianych wcześniej czynników zaburzających proces gojenia się, widoczna jest w 20 tyg. dla pacjenta 140283). W przypadku pacjenta 127108 przebieg gojenia się jest odmienny, przebiega ze zmiennym trendem, jak również kończy się oceną 4, interpretowaną jako dość duże uszkodzenia. Ocena automatyczna proponowana w tej pracy przybliża trendy oceny radiologa, sugerując duże lub bardzo duże uszkodzenia na początku procesu i małe uszkodzenia w 3 z 4 przypadkach na końcu. Jedynie dla pacjenta, dla którego proces jest odmienny od pozostałych tj. 127108 sugerowana nota końcowa oznacza uszkodzenia średniej wielkości. Poza pojedynczym maksymalnym błędem (MAX-AE) występującym w 20 tyg. w ocenie pacjenta 115805, największe obserwowalne różnice w ocenie występują w 0 tyg. oceny. We wszystkich czterech przypadkach ocena automatyczna stanu ekstremalnie dużych uszkodzeń związanych z całkowitym zerwaniem nie jest możliwa. Wydzielenie stanu przed operacją i oznaczenie osobną etykietą w procesie treningu mogłoby doprowadzić do polepszenia rezultatu, co jest sugestią dla przyszłych prac związanych z rozwojem metody.
 
+Kolejnym analizowanym parametrem jest TT. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:TT}.    
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/TT.png}
 	\caption{Ocena parametru TT.}\label{fig:TT}
 \end{figure}
 
+Parametr ten zgodnie z przedstawioną interpretacją związany jest z oceną pogrubienia ścięgna. Na początku procesu pogrubienie jest małe lub średnie (9--12 mm.), następnie w fazie poliferacji rośnie, co związane jest z przyrostem włókien ścięgnistych, by finalnie, w większości przypadków, ponownie zmaleć w wyniku przebudowy struktury i pozostawienia jedynie dobrze ukierunkowanych, wytrzymałych struktur. Dla pacjentów 115805 i 127752, zgodnie z oceną radiologa, proces przebiega z wyżej przedstawionym opisem. W przypadku pacjenta 140283 widoczna jest anomalia w 3 tyg. co może mieć związek z fluktuacjami np. nadmiernym obciążeniem ścięgna. Ponownie, jedynie w przypadku pacjenta 127108, gojenie przebiega odmiennie i po operacji pogrubienie rośnie, aż do 52 tyg. Średni błąd (MAE) osiągnięty dla oceny tego parametru jest najniższy spośród wszystkich sześciu, co widoczne jest w przebiegach krzywych gojenia, które przybliżają ocenę radiologa z MAE równym $0.56$. Anomalia z 3 tyg. występująca u pacjenta 140283 nie została dobrze wykryta i w rezultacie błąd maksymalny (MAX-AE) wyniósł $1.82$. W celu detekcji przyczyny konieczna jest dalsza analiza i w pierwszej kolejności weryfikacja, czy błąd popełniony został przez ocenę radiologa, czy metodę.
+
+Następnym analizowanym parametrem jest STE. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:STE}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/STE.png}
 	\caption{Ocena parametru STE.}\label{fig:STE}
 \end{figure}
 
+Parametr ten związany jest z oceną granic pomiędzy ROI, a zewnętrznymi tkankami. Ścięgno po zerwaniu nigdy nie odzyskuje fraktalnych, zdrowych granic, stąd ocena radiologa oscylująca w zakresie 4--6. Zakres oceny automatycznej jest jeszcze mniejszy i wynosi po zaokrągleniu 4--5. Wynikiem tak niskich zakresów jest najgorszy wynik miary Corr spośród wszystkich sześciu parametrów, co oznacza, że drobne zmiany we fraktalności krawędzi nie są dobrze oceniane przez proponowaną metodę automatyczną. Również z uwagi na mały zakres zmian, MAE i MAX-AE osiągnęły drugi najlepszy wynik. Na tym etapie informatywność wynikająca z oceny tego parametru pozostaje wątpliwa i konieczna jest dalsza weryfikacja.
+
+Jako czwarty parametr przedstawiono TE. Uzyskane krzywe gojenia zaprezentowano na Rys. \ref{fig:TE}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/TE.png}
 	\caption{Ocena parametru TE.}\label{fig:TE}
 \end{figure}
+
+W tym przypadku ocena radiologa skupiona jest na analizie płynów gromadzących się w obszarze ROI, powodując jego obrzęk. W większości przypadków, zszycie ścięgna powoduje redukcję płynów w ROI, która następnie w wyniku intensywnych procesów zapalnych i budowy nowych włókien ulega ponownej akumulacji. W ostatniej fazie remodelingu, z uwagi na zmniejszenie intensywności procesów, objętość płynów ponownie jest redukowana. Dla wszystkich czterech pacjentów ocena radiologa oddaje powyższy opis. W przypadku pacjenta 127108 można zaobserwować dłuższe fazy redukcji i akumulacji płynu, co ponownie potwierdza odmienność procesu gojenia dla tego przypadku. Interesujący jest przypadek pacjenta 140283, gdzie w 1 tygodniu po operacji minimum lokalne widoczne jest tylko w przypadku oceny automatycznej. W tym przypadku rozdzielczość skali radiologa okazała się być zbyt mała. Ponownie dynamika zmian oceny automatycznej jest mniejsza niż w przypadku oceny radiologa. Dla przykładu w 12 tyg. oceny pacjenta 115805 występuje silna redukcja obrzęku. W ocenie automatycznej widoczne jest lokalne minimum, ale jego wartość odbiega od wzorca o $2.48$, a w następnym kroku o $2.52$ osiągając MAX-AE.
+
+Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zaprezentowane na Rys. \ref{fig:TU}.  
 
 \begin{figure}[h]
 	\centering
@@ -484,12 +506,14 @@ W podsumowaniu tego eksperymentu należy również zwrócić uwagę, że algoryt
 	\caption{Ocena parametru TisE.}\label{fig:TisE}
 \end{figure}
 
+\subsection{Macierze błędu}
+
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cm.png}
 	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:TisE}
 \end{figure}
-sens tych macierzy jest taki że moglibyśmy zaobserwować dryf - optymalną ścieżką wyniku jest krzywa idąca przez minima i najmniejsze wartości powinny być na diagonali, a nie zawsze są
+sens tych macierzy jest taki że moglibyśmy zaobserwować dryf - optymalną ścieżką wyniku jest krzywa idąca przez minima i najmniejsze wartości powinny być na diagonali, a nie zawsze są (wykresl jeszcze znormalizowane po wierszach wyniki, to da Tobie ściezke/ dobrze podpisz wiersze i kolumny)
 
 drugi sens - diagonala to to co napisałem na początku, czyli rozkład błędu po tygodniach
 

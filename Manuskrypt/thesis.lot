@@ -11,10 +11,10 @@
 \contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{81}
 \contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.\relax }}{82}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{90}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{91}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci na zbiorze treningowym dla danych z USG.\relax }}{93}
-\contentsline {table}{\numberline {6.4}{\ignorespaces 5CV results for the tendon healing progress using end-to-end approach\relax }}{95}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Results for the tendon healing progress using end-to-end approach on the test dataset\relax }}{96}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{93}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{94}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci na zbiorze treningowym dla danych z USG.\relax }}{96}
+\contentsline {table}{\numberline {6.4}{\ignorespaces 5CV results for the tendon healing progress using end-to-end approach\relax }}{98}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Results for the tendon healing progress using end-to-end approach on the test dataset\relax }}{99}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

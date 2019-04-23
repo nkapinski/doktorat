@@ -35,15 +35,15 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast $ GRE TE\_MIN\relax }}{76}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{83}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Ocena parametru SCT.\relax }}{84}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Ocena parametru TT.\relax }}{84}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Ocena parametru STE.\relax }}{85}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Ocena parametru TE.\relax }}{85}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Ocena parametru TU.\relax }}{86}
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru TisE.\relax }}{86}
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{87}
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla warto\IeC {\'s}ci oceny jako klasy.\relax }}{88}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Ocena parametru TT.\relax }}{85}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Ocena parametru STE.\relax }}{86}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Ocena parametru TE.\relax }}{87}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Ocena parametru TU.\relax }}{88}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru TisE.\relax }}{89}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{90}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla warto\IeC {\'s}ci oceny jako klasy.\relax }}{91}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{92}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{94}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{95}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{97}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

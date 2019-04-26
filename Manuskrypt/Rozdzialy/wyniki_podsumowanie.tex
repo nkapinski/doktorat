@@ -1,14 +1,16 @@
 \chapter{Testy nowej metody}
 
-W tym rozdziale zostaną przedstawione testy i walidacja opracowanej metody, przedstawionej w Rozdziale \ref{NewMethod}. W pierwszej kolejności zaprezentowane zostanie porównanie z metodą wytrenowaną z wykorzystaniem paradygmatu end-to-end, a zatem explicite modelującą ocenę radiologa. Następnie metoda przedstawiona przez autora tej pracy zostanie porównana z wynikami prac algorytmu oceniającego proces gojenia się ścięgna Achillesa z wykorzystaniem danych z Ultrasonografii. Finalnie, ostateczny test dotyczyć będzie zestawienia wyników z oceny biomechanicznej z zaproponowanym w poprzednim rozdziale podejściem.
+W tym rozdziale zostaną przedstawione porównania opracowanej metody. W pierwszej kolejności zaprezentowane zostanie zestawienie z metodą wytrenowaną z wykorzystaniem paradygmatu end-to-end, a zatem explicite modelującą ocenę radiologa. Następnie przedstawione zostanie porównanie z wynikami prac algorytmu oceniającego proces gojenia się ścięgna Achillesa z wykorzystaniem danych z Ultrasonografii. Finalnie, ostatecznie prezentowane zestawieni dotyczyć będzie porównania wyników z oceny biomechanicznej.
 
-Zarówno metoda oparta o paradygmat end-to-end jak i o dane Ultrasonograficzne są wynikiem prac, w których autor tej rozprawy był współautorem i nadzorował grupę studentów opracowujących finalne rozwiązania oraz tworzył plan badań. W przypadku oceny biomechanicznej prace nad metodą zrealizowane zostały w całości przez mgr Magdalenę Syrek z Carolina Medical Center w Warszawie, zatem wartością dodaną tej rozprawy jest przedstawione w dalszej części porównanie.   
+Zarówno metoda oparta o paradygmat end-to-end jak i o dane Ultrasonograficzne są wynikiem prac, w których autor tej rozprawy był współautorem i nadzorował grupę studentów opracowujących finalne rozwiązania oraz tworzył plan badań. W przypadku oceny biomechanicznej prace nad metodą zrealizowane zostały w całości przez mgr Magdalenę Syrek z Carolina Medical Center w Warszawie, zatem wartością dodaną tej rozprawy jest przedstawione porównanie.   
 
 \section{Porównanie z metodą opartą o paradygmat end-to-end}
 
 W tej sekcji opracowana metoda zostanie porównana z metodą opartą o paradygmat end-to-end, modelującą explicite ocenę radiologa. Do tego zadania zostały wykorzystane trzy architektury sieci konwolucyjnych opisane w Rozdziale \ref{CNNs} tj. AlexNet, GoogLeNet (Inceptionv3) i ResNet z 50 warstwami konwolucyjnymi (ResNet-50). Wszystkie trzy architektury zostały zmodyfikowane poprzez zastąpienie końcowej warstwy klasyfikacyjnej warstwą regresji z pojedynczym wyjściem i funkcją kosztu zdefiniowaną jako średni błąd kwadratowy. W skutek tego podejścia algorytm szkolony jest, aby minimalizować błąd pomiędzy predykcją sieci neuronowej, a wartościami parametrów z wzorca odniesienia. 
 
-Do szkolenia się sieci wykorzystano pełny zestaw treningowy tj. 44 pacjentów ograniczony do trzech protokołów wybranych w toku eksperymentów przedstawionych w podsekcji \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM z uwagi na próbę maksymalizację liczebności zbioru. Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono matryki MAE, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
+Do szkolenia się sieci wykorzystano powiększony zestaw treningowy, ograniczony jednak do danych z 44 pacjentów treningowych i trzech sekwencji wybranych w toku eksperymentów przedstawionych w podsekcji \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM z uwagi na potrzebę maksymalizację liczebności zbioru. Nie zdecydowano się również na pełny zbiór wszystkich sekwencji, z uwagi na różnice w danych, które mogłyby zaburzać proces szkolenia się end-to-end. 
+
+Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono metryki MAE, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
 %\vspace{-8px}
 \begin{table}[ht]
 %\vspace{-px}
@@ -35,9 +37,9 @@ Do szkolenia się sieci wykorzystano pełny zestaw treningowy tj. 44 pacjentów 
 %\vspace{-0.5cm}
 \end{table}
 
-Otrzymane wartości MAE znajdują się w zakresie 0.64 to 1.10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inceptionv3, średni dystans między predykcją i wzorcem wyniósł $<0.92$. Najlepiej estymowanymi parametrami były TisE -- 0.67, TT -- 0.75 i TE -- 0.78. Najgorsze rezultaty natomiast otrzymano dla TU -- 0.91, który to parametr silnie zależy od informacji widocznej w płaszczyxnie strzałkowej.
+Otrzymane wartości MAE znajdują się w zakresie 0.64 do 1.10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inceptionv3, średni dystans między predykcją i wzorcem wyniósł $<0.92$. Najlepiej estymowanymi parametrami były TisE -- 0.67, TT -- 0.75 i TE -- 0.78. Najgorsze rezultaty natomiast otrzymano dla TU -- 0.91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej.
 
-W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanego przed najlepszy model szkolony w paradygmacie end-to-end (IncepionV3) i proponowaną przez autora tej pracy metodą (SVR).  
+W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (IncepionV3) i proponowaną przez autora tej pracy metodą (SVR).  
 
 \begin{table*}[t]
 	\caption{Test set results for the tendon healing progression.}
@@ -69,7 +71,7 @@ Metoda SVR osiąga wyższe rezultaty Corr w każdym z parametrów i niższe MAE 
 
 Można zatem wnioskować, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end. 2 z 6 parametrów, w których pod względem MAE sieć InceptionV3 okazała się lepsza tj. TE i TisE dotyczą obrzęków, zatem elementów ocenianych pod kątem pola powierzchni i kształtu. Fakt ten należy interpretować, iż tego rodzaju informacja dominuje w ekstrahowanych przez jądra splotu obrazach, co z kolei implikuje gorsze wyniki w pozostałych parametrach ocenianych na podstawie wzorców tworzonych przez struktury ścięgniste. Wynik MAX-AE nie jest zaskakujący, ponieważ z uwagi na naturę treningu (explicite modelowanie wzorca odniesienia) maksymalne błędy będą minimalizowane. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje zaburzające percepcję, popełnił błąd w ocenie.  
 
-W tym kontekście należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6 parametrów w kolejnych krokach czasowych. Średnio jest to około 1 godziny na pacjenta. Proponowana przez autora metoda może być dalej rozwijana przy wykorzystaniu danych oznaczonych jako chory, zdrowy oraz znacząco mniejszego zbioru pacjentów z oznaczonym pełnym wzorcem odniesienia, który posłużyłby do sporadycznych ulepszeń etapu meta-regresji. Co prawda metoda wymaga również informacji o ROI, jednakże jest to czas około 10 minut na pacjenta, dla radiologa wykorzystującego odpowiednie oprogramowanie np. Osirix [X] lub VisNow [X]. Ponadto segmentację ROI można stosunkowo łatwo zautomatyzować. Wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutiona neural networks}. Przykład działania takiej architektury (tj. U-Net [X]) można zaobserwować na Rys. \ref{fig:segmentacja}. 
+W tym kontekście należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6 parametrów w kolejnych krokach czasowych. Średnio jest to około 1 godziny pracy na pacjenta. Proponowana przez autora metoda może być dalej rozwijana przy wykorzystaniu danych oznaczonych jako chory, zdrowy oraz znacząco mniejszego zbioru pacjentów z oznaczonym pełnym wzorcem odniesienia, który posłużyłby do sporadycznych ulepszeń etapu meta-regresji. Co prawda metoda wymaga również informacji o ROI, jednakże jest to czas około 10 minut na pacjenta, dla radiologa wykorzystującego odpowiednie oprogramowanie np. Osirix [X] lub VisNow [X]. Ponadto segmentację ROI można stosunkowo łatwo zautomatyzować. Wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutiona neural networks}. Przykład działania takiej architektury (tj. U-Net [X]) można zaobserwować na Rys. \ref{fig:segmentacja}. 
 
 \begin{figure}[h]
 	\centering
@@ -77,7 +79,7 @@ W tym kontekście należy również podkreślić zasadnicze różnice między dw
 	\caption{Automatyczna segmantacja ROI z wykorzystaniem głębokich sieci neuronowych.}\label{fig:segmentacja}
 \end{figure}
 
-Kolorem czerwonym oznaczono obszar segmentacji manulanej, wykonanej przez eksperta radiologa. Kolorem zielonym efekt segmentacji automatycznej. Miara DICE dla otrzymanych obrazów wynosi około 0.75 i świadczy o wysokiej jakości segmentacji oraz o obiecującym kierunku tego rodzaju prac.
+Kolorem czerwonym oznaczono obszar segmentacji manulanej, wykonanej przez eksperta radiologa. Kolorem zielonym efekt segmentacji automatycznej. Miara DICE [X] dla otrzymanych obrazów wynosi około 0.75 i świadczy o wysokiej jakości segmentacji oraz o obiecującym kierunku tego rodzaju prac.
 
 Ciekawym elementem rozwoju automatycznej oceny byłaby również fuzja obu metod tj. podmiana ekstraktora cech DL trenowana na binarnie oznaczonym zbiorze na ekstraktor uzyskanego modelu InceptionV3. Jednak z uwagi na omawiane problemy praktyczne z dalszym rozwojem tak utworzonej metody oraz brak obiecujących rezultatów w przeprowadzonych przez autora tej pracy badaniach wstępnych, taka propozycja nie została uwzględniona w prezentowanej rozprawie. 
 
@@ -100,9 +102,9 @@ Wizualizacja przykładowych danych USG znajduje się na Rys. \ref{fig:US_sample}
 	\label{fig:US_sample}
 \end{figure}
 
-Zgodnie z opisem zamieszczonym we wstępie te sekcji, szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa. W ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych.
+W ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych. Jednak szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa. 
 
-Z uwagi na zaobserwowaną utrudnioną interpretację na początku zdecydowano się przeprowadzić test polegający na prostym zadaniu klasyfikacji binarnej chory/zdrowy (podobnie jak dla badań RM zamieszczonych w Sekcji \ref{binaryMRI}). Wyniki dla szkolenia z wykorzystaniem kroswalidacji z 4 segmentami zamieszczono w Tab. \ref{tab:usg-binary}.
+Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi artefaktami w USG i z szumem ziarnistym tworzącym losowe wzorce. Jakość obrazu obniża również jego wartość kliniczną, co wskazują analizy zamieszczone w tej pracy jak i w wielu pracach innych autorów (zob. np. \cite{Khan2003, Ibrahim2013}). Dlatego na początku zdecydowano się przeprowadzić test polegający na prostym zadaniu klasyfikacji binarnej chory/zdrowy (podobnie jak dla badań RM zamieszczonych w Sekcji \ref{binaryMRI}). Ma to na celu porównanie możliwości interpretacji wnioskowania na podstawie obrazów RM i USG. Wyniki dla szkolenia z wykorzystaniem kroswalidacji z 4 segmentami zamieszczono w Tab. \ref{tab:usg-binary}.
 
 \begin{table}[t!]
 	\scriptsize
@@ -123,7 +125,7 @@ Z uwagi na zaobserwowaną utrudnioną interpretację na początku zdecydowano si
 
 Wszystkie modele wyszkolono oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91.6\%, a w przekroju strzałkowym 91.2\%. Dla porównania dokładność binarnej klasyfikacji na danych z RM wyniosła 99.83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia powyższych rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednakże działania te przyniosły odwrotny skutek.  
 
-W badaniu nad automatyczną oceną procesu gojenia się ścięgna wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech, jednak w przypadku USG otrzymane wyniki nie były na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Prawdopodobnie miało to związek z obecnymi artefaktami w USG i z szumem ziarnistym tworzącym losowe wzorce. elementy te stwarzają ogólną trudnością w interpretacji informacji zawartej w USG, która w porównaniu do RM jest ograniczona. Wskazują na to zarówno analizy zamieszczone w tej pracy jak i w wielu pracach innych autorów (zob. np. \cite{Khan2003, Ibrahim2013}). Ostatecznie wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tab. \ref{tab:usg_train_cross-validation}.
+Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech, jednak w przypadku USG otrzymane wyniki nie były na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tab. \ref{tab:usg_train_cross-validation}.
 
 \begin{table}[h]
 	\scriptsize
@@ -159,15 +161,15 @@ W badaniu nad automatyczną oceną procesu gojenia się ścięgna wykorzystano p
 	\vspace{-0.5cm}
 \end{table}
 
-We observe a good correspondence between the estimated healing scores and the experts' assessment, with MAE ranging from $0.67$ to $1.08$, on a 7 point scale. For all the networks we notice a positive mean correlation of our method's output and healing parameters. Although the results are consistent between different networks, Inception-v3 usually achieves the best fit and the simplest network architecture, AlexNet, performs noticeably worse. Two healing parameters, SCT and TT are more accurately estimated on sagittal rather than axial US images and one parameter, TisE, vice versa. Najlepsze rezultaty otrzymano dla sieci Inception-V3 i ResNet-50 dlatego te modele zostaną porównane z prezentowaną w tej pracy metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tabeli 
+Najlepsze rezultaty otrzymano dla sieci Inception-V3 i ResNet-50 dlatego te modele zostały dalej porównane z prezentowaną w tej pracy metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tab. \ref{tab:USGvsRM-cross-validation}.
 
 
 \begin{table}[h]
 	\footnotesize
 	\setlength{\tabcolsep}{1pt}
 	\centering
-	\caption{Results for the tendon healing progress using end-to-end approach on the test dataset}
-	\label{cross-validation}
+	\caption{Porównanie wyników oceny automatycznej bazującej na danych USG i RM na zbiorze testowym.}
+	\label{tab:USGvsRM-cross-validation}
 	\vspace{-0.5cm}
 	\begin{tabular}{lc||c|c|c|c|c|c}
 		%\hline
@@ -197,7 +199,10 @@ We observe a good correspondence between the estimated healing scores and the ex
 	\end{tabular}
 \end{table}
 
-Dla zbioru testowego dla danych USG dla sieci prezentującej najwięcej najlepszych rezultatów w ocenianych metrykach tj. można odnotować MAE w zakresie $0.53$ do $0.87$ i uśrednioną korelację Z-Fisher od $0.31$ to $0.80$. Proponowana metoda oparta o RM uzyskała lepsze rezultaty dla korelacji w przypadku 4 z 6 parametrów i MAE w przypadku TT. Metoda oparta o dane z USG uzyskiwała lepsze trendy dla STE i TU, czyli dla parametrów ocenianych przez wzgląd na krawędzie i na oś w płaszczyznie strzałkowej. Rezultaty potwierdzają lepszą stosowalność metody dla tych parametrów... [TBD - wnioski lepsze.]
+Sieć, uzyskująca najlepsze rezultaty, wytrenowana na USG tj. Inception-v3, uzyskała wartości MAE w zakresie $0.53$ do $0.87$ i uśrednioną korelację Z-Fisher od $0.31$ to $0.80$.
+Metoda oparta o USG charakteryzuje się lepszymi rezultatami Corr tylko dla parametrów STE i TU, czyli dla parametrów ocenianych przez wzgląd na krawędzie i na oś w płaszczyźnie strzałkowej. W przypadku miary MAE, metoda RM uzyskuje lepszy rezultat w parametrze TT, gdzie znaczący wpływ na ocenę maja cechy z ROI.
+
+Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane USG może być komplementarna z proponowaną oceną bazującą na danych z RM. Zwłaszcza w kontekście oceny parametru TU jak i zmniejszenia błędu MAE w poszczególnych parametrach. Do tego celu potrzebna jest jednak dokładna analiza i zrozumienie podstaw wnioskowania sieci opartej o USG, a następnie wybór oraz realizacja odpowiedniej metody fuzji.
 
 \section{Porównanie z metodą opartą o badania biomechaniczne}
 
@@ -207,3 +212,8 @@ Dla zbioru testowego dla danych USG dla sieci prezentującej najwięcej najlepsz
 %- AlexNet uczy się bardziej generycznych cech niż ResNet, który zwraca uwagę na szczególy: https://www.researchgate.net/post/Can_AlexNet_be_a_better_feature_extractor_than_ResNet
 
 %https://icmlviz.github.io/icmlviz2016/assets/papers/4.pdf
+
+%Wydzielenie stanu przed operacją i oznaczenie osobną etykietą w procesie treningu mogłoby doprowadzić do polepszenia rezultatu, co jest sugestią dla przyszłych prac związanych z rozwojem metody.
+
+%TU - Polepszenie w zakresie oceny tego parametru może być uzyskane w przypadku zastosowania bardziej jednorodnych danych RM lub USG.
+

@@ -1,47 +1,40 @@
 \chapter{Wstęp}
 
-- komputerowo wspomagana diagnostyka - dane z siemensa dot. problemu, przewidywania, gdzie fundusze z artykułu GANs, odpowiedx rynku z TeamNeta. Najczesciej uzywane AI:
-
-Logistic regression — 1958 
-
-Hidden Markov Model — 1960 
-
-Stochastic gradient descent — 1960 
-
-Support Vector Machine — 1963 
-
-k-nearest neighbors — 1967 
-
-Artificial Neural Networks — 1975 
-
-Expectation Maximization — 1977 
-
-Decision tree — 1986 
-
-Q-learning — 1989 
-
-Random forest — 1995 
-
-Deep learning - 2012 boom
+Radiologia zajmuje się obrazowaniem ciała człowieka z wykorzystaniem zjawisk fizycznych umożliwiających nieinwazyjny wgląd wewnątrz organizmu. Z uwagi na szerokie możliwości diagnozowania chorób z wykorzystaniem radiologi, dziedzina ta ma coraz większe znaczenie w medycynie. Z danych przedstawionych przez Siemens Healthineers w 2018 roku wynika, że w ciągu ostatniej dekady liczba skanów z wykorzystaniem Tomografii Komputerowej i Rezonansu Magnetycznego, co roku zwiększa się o 10-12\%. Jak wynika z katalogu ambulatoryjnych świadczeń diagnostycznych Narodowego Funduszu Zdrowia, w Polsce w roku 2018 było to około 1 mln skanów Rezonansu Magnetycznego i około 4 mln Tomografii Komputerowych. Do tego należy doliczyć inne modalności jak Rentgen czy Pozytonowa Tomografia Emisyjna. Różne firmy badawcze np. PMR wskazują również, że w Europie, w tym w szczególności w Polsce dokonuje się dużych inwestycji infrastrukturalnych, które dalej implikować będą wzrost liczby obrazowań.
+  
+Z drugiej strony, ponownie z danych przedstawionych przez Siemens Healthineers wynika, że wzrost liczby radiologów nie przekracza 3\% rocznie. W zestawieniu z dynamiką liczby obrazowań, rezultatem jest zmniejszenie o połowę dostępnego czasu na opis pacjenta i wzrost błędu interpretacji badań nawet o 16,6 punktu procentowego. Z czego 74\% wynika ze skutków przemęczenia radiologów i zaburzeń percepcji.  
 
 
+Powyższe fakty indukują potrzebę rozwoju narzędzi wspomagających radiologów, w szczególności pozwalających na automatyzację żmudnych, powtarzalnych zadań. Przewidywania wielu firm m.in. prestiżowej agencji PricewaterhouseCoopers (PwC) przewidują, że radiologia zostanie zrewolucjonizowana w najbliższych latach przez rozwiązania do komputerowego wspomagania z emfazą na aplikacje wykorzystujące metody sztucznej inteligencji. Przewidywania te wyrażone w udziale w produkcie krajowym brutto zastosowań metod Sztucznej Inteligencji (SI) można zaobserwować na Rys. \ref{MedTechGrowth}. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\textwidth]{figures/AI_w_radiologii.jpeg}
+	\caption{Globalny udział w PKB rozwiązań opartych o SI aplikowanych na rynku Med-Tech.}
+	\label{MedTechGrowth}
+\end{figure}
+
+W pierwszej kolejności motorem zmian mają być zastosowania usprawniające generowanie raportów, następnie personalizacja diagnostyki i narzędzia poprawiające jej jakość np. służące do uzyskania drugiej lub nawet pierwszej opinii. W rezultacie czas spędzony przez radiologa na pisanie raportu ma obniżyć się nawet o 90\% nie zmieniając lub polepszając współczynniki błędów diagnostycznych.
+
+Mówiąc współcześnie o sztucznej inteligencji, a zatem metodach, które według przewidywań mają najbardziej przyczynić się do rewolucji w radiologii, należy rozróżnić dwa jej rodzaje. Pierwsza to tzw. szeroka sztuczna inteligencja (ang. \textit{general Artificial Intelligence}), która docelowo ma odzwierciedlać złożony sposób zachowania się człowieka. Drugi rodzaj nazwany jest wąską Sztuczną Inteligencją (ang. \textit{narrow Artificial Intelligence}), którego metody mają zapewnić możliwie dobry efekt w wykonaniu konkretnego zadania np. klasyfikacji różnego rodzaju nowotworów. Przewidywane zmiany w radiologii w najbliższych latach mają być efektem rozwoju metod wąskiej SI. Należy jednak podkreślić, że sam rozwój algorytmów ma już miejsce od ponad pół wieku. Dla przykładu, krótki rys historyczny zawierający lata opracowania wybranych metod można przedstawić nastepująco: metoda regresji logistycznej -- rok 1958, ukryte modele Markova -- rok 1960, stochastyczny spadek wzdłuż gradientu -- rok 1960, Maszyna Wektorów Nośnych -- rok 1963, algorytm k-najbliższych sąsiadów -- rok 1967, wielowarstwowe sieci neuronowe -- lata 70-te ubiegłego wieku, algorytm EM -- rok 1977, drzewa decyzyjne -- rok 1986, Q-learning -- rok 1989, lasy losowe -- rok 1995 oraz architektury głebokich sieci neuronowych powstające od lat 90-tych. 
+
+W szczególności rozwój tych ostatnich został silnie przyspieszony z wykorzystaniem nowych architektur obliczeniowych takich jak akceleratory GPGPU (od ang. \textit{General-Purpose Computing on Graphics Processing Units}), czy TPU (od ang. \textit{Tensor Processing Unit}). Przede wszystkim uzyskano możliwość szybkiego testowania i optymalizacji architektur zawierających miliony parametrów. W rezultacie dokładność realizacji wybranych praktycznych zadań przez współczesne metody bazujące na głębokich sieciach neuronowych osiągnęła możliwości ludzkiej percepcji. 
+
+Wśród głębokich sieci neuronowych wyróżnić można konwolucyjne sieci neuronowe stosowane najczęściej do przetwarzania obrazów, generatywne sieci kontradyktoryjne stosowane najczęściej do generowania danych, rekurencyjne sieci neuronowe stosowane najczęściej do rozpoznawania sekwencji, sieci wykorzystujące uczenie ze wzmocnieniem do modelowania procesów decyzyjnych i szereg nowych klas jak sieci kapsułowe. Mnogość nowych architektur (zob. Rys. \ref{DLcambrianExplosion}), powoduje, że na licznych konferencjach czy w publikacjach popularnonaukowych obecny stan nazywany jest \textit{eksplozją kambryjską} sieci neuronowych. 
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1.0\textwidth]{figures/rodzajeSieciNeuronowych.png}
-	\caption{Podział przedstawiający różne rodzaje współczesnych głębokich sieci neuronowych.}
+	\caption{Podział przedstawiający różne rodzaje współczesnych architektur głębokich sieci neuronowych.}
 	\label{DLcambrianExplosion}
 \end{figure}
 
-4\% badań dotyczy oceny postępu w leczeniu i monitoringu pacjentow [NVIDIA]
+Z uwagi na fakt wykorzystania w radiologii w głównej mierze danych obrazowych, to właśnie konwolucyjne sieci neuronowe znajdują tu najczęstsze zastosowanie. Sieci te mają unikalną cechę umożliwiającą przekształcenia informacji obrazowej w numerycznie opisaną klasę przynależności. W szczególności, jak wskazują statystyki przedstawione na konferencji NVIDIA GTC w 2018 roku przez naukowców z niemieckiego centrum badań nad rakiem (DKFZ od niem. \textit{Deutsches Krebsforschungszentrum}), w około 71\% przypadków prace dotyczą automatycznego wydzielania struktur anatomicznych, w 12\% ich klasyfikacji, w 6\% samej detekcji czy poszukiwane zjawisko znajduje się w danych, a w 3\% oceny postępu w leczeniu i monitoringu pacjentów. Pozostałe zadania jak np. lokalizacja struktur, czy strukturyzacja danych przyjmują wartości poniżej 2\%.
 
-W tej pracy:
-- problemy miesniowo-szkieletowe
-- problem Achillesa 
+W tej pracy, sieci konwolucyjne zostaną wykorzystane do realizacji metody komputerowego wspomagania radiologa w zadaniu monitorowania pacjentów w trakcie rehabilitacji po przebytym urazie całkowitego zerwania ścięgna Achillesa. Zgodnie z przedstawionymi powyżej statystykami, prace te zawierają się w 3\% obecnie realizowanych badań i stanowią nowatorskie podejście do przedmiotowego problemu.
 
 
 \chapter{Cel i przebieg pracy}
 
-
-
-
+- Wyniki pracy zostały wykorzystane w realizacji projektu START
+- Cel: Opracowanie metody 
+- Hipoteza: sprawdx otwarcie przewodu doktorskiego 

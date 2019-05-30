@@ -1,47 +1,47 @@
 \contentsline {chapter}{\numberline {1}Wst\IeC {\k e}p}{1}% 
 \contentsline {chapter}{\numberline {2}Cel i przebieg pracy}{5}% 
-\contentsline {chapter}{\numberline {3}Monitorowanie procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{6}% 
-\contentsline {section}{\numberline {3.1}\IeC {\'S}ci\IeC {\k e}gno Achillesa}{6}% 
-\contentsline {subsection}{\numberline {3.1.1}Anatomia}{7}% 
-\contentsline {subsection}{\numberline {3.1.2}Biomechanika}{9}% 
-\contentsline {subsection}{\numberline {3.1.3}Urazy i czynniki im sprzyjaj\IeC {\k a}ce}{10}% 
-\contentsline {subsection}{\numberline {3.1.4}Fazy gojenia, leczenie i rehabilitacja}{13}% 
-\contentsline {section}{\numberline {3.2}Zastosowanie rezonansu magnetycznego}{16}% 
-\contentsline {section}{\numberline {3.3}Zastosowanie ultrasonografii}{21}% 
-\contentsline {section}{\numberline {3.4}Zastosowanie bada\IeC {\'n} biomechanicznych}{26}% 
-\contentsline {chapter}{\numberline {4}Konwolucyjne sieci neuronowe}{30}% 
-\contentsline {section}{\numberline {4.1}Zarys historyczny}{33}% 
-\contentsline {section}{\numberline {4.2}Szkolenie g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{36}% 
-\contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{41}% 
-\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{44}% 
-\contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{47}% 
-\contentsline {subsection}{\numberline {4.3.1}AlexNet}{50}% 
-\contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{52}% 
-\contentsline {subsection}{\numberline {4.3.3}ResNet}{55}% 
-\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{58}% 
-\contentsline {subsubsection}{U\IeC {\'s}rednianie}{58}% 
-\contentsline {subsubsection}{G\IeC {\l }osowanie}{58}% 
-\contentsline {subsubsection}{Klasyfikacja Bayesa}{59}% 
-\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{59}% 
-\contentsline {section}{\numberline {4.4}Zastosowania w medycynie}{59}% 
-\contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{64}% 
-\contentsline {section}{\numberline {5.1}Metodyka}{65}% 
-\contentsline {subsection}{\numberline {5.1.1}Zbi\IeC {\'o}r danych}{67}% 
-\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{70}% 
-\contentsline {section}{\numberline {5.2}Eksperymenty}{71}% 
-\contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{72}% 
-\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{74}% 
-\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{76}% 
-\contentsline {subsubsection}{Analiza wizualna:}{76}% 
-\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa:}{79}% 
-\contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{81}% 
-\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{85}% 
-\contentsline {subsection}{\numberline {5.3.1}Krzywe gojenia}{85}% 
-\contentsline {subsection}{\numberline {5.3.2}Macierze b\IeC {\l }\IeC {\k e}du}{91}% 
-\contentsline {chapter}{\numberline {6}Testy nowej metody}{94}% 
-\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{94}% 
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z ultrasonografii}{97}% 
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{101}% 
-\contentsline {chapter}{\numberline {7}Podsumowanie}{102}% 
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{116}% 
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{117}% 
+\contentsline {chapter}{\numberline {3}Monitorowanie procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{7}% 
+\contentsline {section}{\numberline {3.1}\IeC {\'S}ci\IeC {\k e}gno Achillesa}{7}% 
+\contentsline {subsection}{\numberline {3.1.1}Anatomia}{8}% 
+\contentsline {subsection}{\numberline {3.1.2}Biomechanika}{10}% 
+\contentsline {subsection}{\numberline {3.1.3}Urazy i czynniki im sprzyjaj\IeC {\k a}ce}{11}% 
+\contentsline {subsection}{\numberline {3.1.4}Fazy gojenia, leczenie i rehabilitacja}{14}% 
+\contentsline {section}{\numberline {3.2}Zastosowanie rezonansu magnetycznego}{17}% 
+\contentsline {section}{\numberline {3.3}Zastosowanie ultrasonografii}{22}% 
+\contentsline {section}{\numberline {3.4}Zastosowanie bada\IeC {\'n} biomechanicznych}{27}% 
+\contentsline {chapter}{\numberline {4}Konwolucyjne sieci neuronowe}{31}% 
+\contentsline {section}{\numberline {4.1}Zarys historyczny}{34}% 
+\contentsline {section}{\numberline {4.2}Szkolenie g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{37}% 
+\contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{42}% 
+\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{45}% 
+\contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{48}% 
+\contentsline {subsection}{\numberline {4.3.1}AlexNet}{51}% 
+\contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{53}% 
+\contentsline {subsection}{\numberline {4.3.3}ResNet}{56}% 
+\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{59}% 
+\contentsline {subsubsection}{U\IeC {\'s}rednianie}{59}% 
+\contentsline {subsubsection}{G\IeC {\l }osowanie}{59}% 
+\contentsline {subsubsection}{Klasyfikacja Bayesa}{60}% 
+\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{60}% 
+\contentsline {section}{\numberline {4.4}Zastosowania w medycynie}{60}% 
+\contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{65}% 
+\contentsline {section}{\numberline {5.1}Metodyka}{66}% 
+\contentsline {subsection}{\numberline {5.1.1}Zbi\IeC {\'o}r danych}{68}% 
+\contentsline {subsection}{\numberline {5.1.2}wzorzec odniesienia}{71}% 
+\contentsline {section}{\numberline {5.2}Eksperymenty}{72}% 
+\contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{73}% 
+\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{75}% 
+\contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{77}% 
+\contentsline {subsubsection}{Analiza wizualna:}{77}% 
+\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa:}{80}% 
+\contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{82}% 
+\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{86}% 
+\contentsline {subsection}{\numberline {5.3.1}Krzywe gojenia}{86}% 
+\contentsline {subsection}{\numberline {5.3.2}Macierze b\IeC {\l }\IeC {\k e}du}{92}% 
+\contentsline {chapter}{\numberline {6}Testy nowej metody}{95}% 
+\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{95}% 
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z ultrasonografii}{98}% 
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{102}% 
+\contentsline {chapter}{\numberline {7}Podsumowanie}{103}% 
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{117}% 
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{118}% 

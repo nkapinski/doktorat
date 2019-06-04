@@ -205,6 +205,71 @@ Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane
 
 \section{Porównanie z metodą opartą o badania biomechaniczne}
 
+W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych. Dokładniej, z wynikami protokołu realizowanego w klinice Carolina Medical Center, który został opisany w sekcji \ref{biomechanika}. Dla 30 spośród pacjentów zostało bowiem zrealizowany pomiar skali ATRS oraz badania deficytów mięśniowych.
+
+-ATRS dokładniej - wszystkie
+-deficyty mięśniowe dokładniej - wszystkie
+
+Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikacji nowych zmiennych wyjaśniających w największym stopniu wariancję. 
+
+
+- Tabelka
+
+
+Jak widać, z 4 czynników 2 mają wyraźnie większy udział w wyjaśnianej wariancji. Udziały te są zbliżone 26 i 28%.
+Widać również, że pierwszy zawiera znaczące ładunki czynnikowe dla zmiennych o niewielkich numerach, a drugi dla dużych. Zmienne d1-d8 to różne badania przy prostym kolanie. 
+Zmienne d9-d16 – przy kolanie zgiętym Widać więc, że pozycja w stawie kolanowym wpływa silnie na wynik badań biomechanicznych. 
+
+Przeprowadzono więc oddzielną analizę czynnikową dla zgiętego i wyprostowanego kolana ustalając liczbę czynników na 2)
+
+- Tabelka
+
+Jak widać jeden z czynników posiada znaczące ładunki o nieparzystych numerach, a drugi o parzystych. 
+
+- Tabelka
+
+Sytuacja analogiczna. 
+Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami W ZGIĘCIU (jako rozumiem chodzi o staw skokowy), a o parzystych w WYPROŚCIE. 
+Ostatecznie więc powstają 4 czynniki: 
+1. Kolano zgięcie, staw skokowy zgięcie  (ZZ)
+2. Kolano zgięcie, staw skokowy wyprost (ZW)
+3. Kolano wyprost, staw skokowy zgięcie (WZ)
+4. Kolano wyprost, staw skokowy wyprost (WW).
+[kazy jest złożony z 4 pomiarów: izometria i 3 izokinetyki]
+Wynik może wydawać się oczywisty ale świadczy o poprawnie wykonanych badaniach i spójności danych. 
+
+- Tabelka ZZ, ZW, WZ, WW
+
+Ponadto, po stronie danych „fizjoterapeutycznych” jest badanie ATRS .
+Badania biomechaniczne i ATRS były wykonane po pół roku i po roku (26 i 52 tydzień) od urazu. 
+
+Na podstawie danych obrazowych oceniono 6 parametrów: 
+SCT, STE, TE, TisE, TT, TU
+Oceny dokonywano na 2 sposoby: GT (ground truth; doświadczony radiolog) oraz PRED (predykcja za pomocą sieci neuronowych). 
+Wykonano analizę czynnikową dla 6 parametrów: osobno dla GT i PRED. 
+Wybrano maksymalną liczbę czynników na 2, mimo to program statystyczny zwraca w obu przypadkach 1 czynnik – oznacza to minimalny udział w wyjaśnianej wariancji drugiego czynnika. 
+
+- Tabelka PCA GT
+- Tabelka PCA Pred
+
+Jak widać, udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla PRED niż GT – nie jest to zaskakujące, gdyż czynnik ludzki w GT wprowadza nieuniknioną niepewność – wyniki generowane przez człowieka są w pewnym stopniu losowe. 
+
+W następnej części zbadamy korelacje pomiędzy wyżej wymienionymi czynnikami.
+
+-tabelka GTvsPRed
+
+Jak widać wyniki predykcji za pomocą sieci sa silnie skorelowane z ocenami radiologa. To oczywiście bardzo dobrze. 
+
+- Tabelka ATRS vs biomechanika
+
+Widać  korelację  pomiarów wykananych przy takim samym ustawieniu kolana. Co ciekawe, jest to istotniejsze od ustawienia  stawu skokowego (nie wiem czy sformułowanie „ustawienie stawu” jest poprawne). Jak widać ATR słabo koreluje z wynikami pomiarów biomechznicznych . 
+Znaki nie są tu istotne, gdyż każda z 4 zmiennyc WW, WZ, ZW, ZZ jest wynikiem analizy czynnikowej. 
+
+- tabelka GT, Pred vs biomechanika i ATRS
+
+Jak widać wskazania radiologa słabo korelują z wynikami badań biomechniacznych oraz ATRS co jest zgodne z praktyką kliniczną – dlatego celowe je1st wykonywanie obu rodzajów badań (radiologicznych i biomechanicznych), gdyż dostarczają innych informacji. 
+
+Jak widać wyniki predykcji za pomocą sieci korelują istotnie z ATRS. Wynik ten jest zapewne spowodowany tym, że wskazania człowieka są obarczone pewną losowością (niemożliwą w zasadzie do uniknięcia). 
 
 \chapter{Podsumowanie}
 %- jeden radiolog więc ankieta ok

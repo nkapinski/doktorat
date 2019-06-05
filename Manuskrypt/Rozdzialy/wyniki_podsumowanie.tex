@@ -85,7 +85,7 @@ Ciekawym elementem rozwoju automatycznej oceny byłaby również fuzja obu metod
 
 \section{Porównanie z metodą opartą o dane z ultrasonografii}
 
-W tej sekcji opracowana metoda zostanie porównana z automatyczną oceną bazującą na danych z Ultrasonografii. Ponownie, do utworzenia metody opartej o USG wykorzystano konwolucyjne sieci neuronowe, a dokładniej AlexNet, InceptionV3 i ResNet50 oraz wykorzystano omówiony w poprzedniej sekcji paradygmat end-to-end. 
+W tej sekcji opracowana metoda została porównana z automatyczną oceną bazującą na danych z Ultrasonografii. Ponownie, do utworzenia metody opartej o USG wykorzystano konwolucyjne sieci neuronowe, a dokładniej AlexNet, InceptionV3 i ResNet50 oraz wykorzystano omówiony w poprzedniej sekcji paradygmat end-to-end. 
 
 Dane dla metody opartej o Ultrasonografię pochodziły również z projektu START. Stosowano się zatem do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 3D skanów. 
 
@@ -205,15 +205,60 @@ Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane
 
 \section{Porównanie z metodą opartą o badania biomechaniczne}
 
-W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych. Dokładniej, z wynikami protokołu realizowanego w klinice Carolina Medical Center, który został opisany w sekcji \ref{biomechanika}. Dla 30 spośród pacjentów zostało bowiem zrealizowany pomiar skali ATRS oraz badania deficytów mięśniowych.
+W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych i funkcjonalnego testu ATRS. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center (zob. Sekcja \ref{biomechanika}). 
 
--ATRS dokładniej - wszystkie
--deficyty mięśniowe dokładniej - wszystkie
+W ramach projektu START możliwe było zebranie danych dla 30 spośród 60 pacjentów. Dane zawierały wyniki pomiaru zrealizowanego w dwóch krokach czasowych tj. w 26 i 52 tygodniu. Zostały zebrane wyniki ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Dokładniej, określono 16 takich deficytów (oznaczonych dalej w tej pracy $d1$--$d16$): w czterech pozycjach tj. kolano zgięte i wyprostowane oraz staw skokowy zgięty wyprostowany zrealizowano pomiary w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s, 120$^\circ$/s oraz 180$^\circ$/s  
 
-Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikacji nowych zmiennych wyjaśniających w największym stopniu wariancję. 
+Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikacji nowych zmiennych wyjaśniających w największym stopniu wariancję. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
 
+\begin{table}[t!]
+	\scriptsize
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:pca-muscles}
+	\begin{tabular}{c|c|c|c|c}
+		%\hline
 
-- Tabelka
+		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4 \\
+		\hline
+		d1&\textbf{-0,767313}&0,156945&-0,043085&-0,248586 \\
+		\hline
+		d2&0,325448&\textbf{-0,736158}&0,037614&-0,043829 \\
+		\hline
+		d3&\textbf{-0,813894}&0,261659&-0,166349&-0,236470 \\
+		\hline
+		d4&0,088095&-0,621124&-0,498845&-0,383494 \\
+		\hline
+		d5&\textbf{-0,818157}&0,126203&-0,034003&0,214511 \\
+		\hline
+		d6&0,306141&-0,532927&-0,531613&0,416319 \\
+		\hline
+		d7&-0,671064&-0,204034&-0,343342&-0,114425 \\
+		\hline
+		d8&-0,115678&-0,345011&-0,685906&0,431104 \\
+		\hline
+		d9&-0,611733&-0,004891&-0,281700&-0,358207 \\
+		\hline
+		d10&0,071745&\textbf{-0,844493}&0,257374&0,025400 \\
+		\hline
+		d11&\textbf{-0,812828}&-0,141770&0,002799&0,077965 \\
+		\hline
+		d12&-0,113998&\textbf{-0,930526}&-0,007919&-0,010584 \\
+		\hline
+		d13&\textbf{-0,715182}&-0,234898&0,276706&0,360832 \\
+		\hline
+		d14&-0,116436&\textbf{-0,813296}&0,334725&-0,247595 \\
+		\hline
+		d15&-0,576898&-0,322318&0,389215&0,528060 \\
+		\hline
+		d16&-0,168694&-0,621897&0,234610&-0,361969 \\
+		\hline\hline
+		Udział&0,283190&0,267991&0,105795&0,088844 \\
+
+	\end{tabular}
+\end{table}
 
 
 Jak widać, z 4 czynników 2 mają wyraźnie większy udział w wyjaśnianej wariancji. Udziały te są zbliżone 26 i 28%.

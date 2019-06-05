@@ -223,65 +223,89 @@ Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejn
 
 		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4 \\
 		\hline
-		d1&\textbf{-0,767313}&0,156945&-0,043085&-0,248586 \\
+		d1&\textbf{-0,77}&0,16&-0,04&-0,25 \\
 		\hline
-		d2&0,325448&\textbf{-0,736158}&0,037614&-0,043829 \\
+		d2&0,32&\textbf{-0,74}&0,038&-0,044 \\
 		\hline
-		d3&\textbf{-0,813894}&0,261659&-0,166349&-0,236470 \\
+		d3&\textbf{-0,81}&0,26&-0,17&-0,24 \\
 		\hline
-		d4&0,088095&-0,621124&-0,498845&-0,383494 \\
+		d4&0,09&-0,62&-0,50&-0,38 \\
 		\hline
-		d5&\textbf{-0,818157}&0,126203&-0,034003&0,214511 \\
+		d5&\textbf{-0,82}&0,13&-0,03&0,21 \\
 		\hline
-		d6&0,306141&-0,532927&-0,531613&0,416319 \\
+		d6&0,31&-0,53&-0,53&0,42 \\
 		\hline
-		d7&-0,671064&-0,204034&-0,343342&-0,114425 \\
+		d7&-0,67&-0,20&-0,34&-0,11 \\
 		\hline
-		d8&-0,115678&-0,345011&-0,685906&0,431104 \\
+		d8&-0,12&-0,34&-0,67&0,43 \\
 		\hline
-		d9&-0,611733&-0,004891&-0,281700&-0,358207 \\
+		d9&-0,61&-0,01&-0,28&-0,36 \\
 		\hline
-		d10&0,071745&\textbf{-0,844493}&0,257374&0,025400 \\
+		d10&0,07&\textbf{-0,84}&0,26&0,02 \\
 		\hline
-		d11&\textbf{-0,812828}&-0,141770&0,002799&0,077965 \\
+		d11&\textbf{-0,81}&-0,14&0,01&0,08 \\
 		\hline
-		d12&-0,113998&\textbf{-0,930526}&-0,007919&-0,010584 \\
+		d12&-0,11&\textbf{-0,93}&-0,01&-0,01 \\
 		\hline
-		d13&\textbf{-0,715182}&-0,234898&0,276706&0,360832 \\
+		d13&\textbf{-0,72}&-0,24&0,28&0,36 \\
 		\hline
-		d14&-0,116436&\textbf{-0,813296}&0,334725&-0,247595 \\
+		d14&-0,12&\textbf{-0,81}&0,33&-0,25 \\
 		\hline
-		d15&-0,576898&-0,322318&0,389215&0,528060 \\
+		d15&-0,58&-0,32&0,39&0,53 \\
 		\hline
-		d16&-0,168694&-0,621897&0,234610&-0,361969 \\
+		d16&-0,17&-0,62&0,23&-0,36 \\
 		\hline\hline
-		Udział&0,283190&0,267991&0,105795&0,088844 \\
+		Udział&0,28&0,27&0,10&0,09 \\
 
 	\end{tabular}
 \end{table}
 
+Z czterech czynników, 2 mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że 3 z pięciu znaczących ładunków czynnikowych ($d1$, $d3$, $d5$) dla pierwszego czynnika znajdują się w przedziale $d1$--$d8$, które skojarzone są z pozycją kolana prostego. Dla drugiego czynnika głównego sytuacja jest odwrotna i 3 z czterech ładunków czynnikowych ($d10$, $d12$, $d14$) znajdują się w przedziale $d9$--$d16$, czyli badań przy kolanie zgiętym. Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego. Odzwierciedlają to również rezultaty powyższej analizy. Dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
 
-Jak widać, z 4 czynników 2 mają wyraźnie większy udział w wyjaśnianej wariancji. Udziały te są zbliżone 26 i 28%.
-Widać również, że pierwszy zawiera znaczące ładunki czynnikowe dla zmiennych o niewielkich numerach, a drugi dla dużych. Zmienne d1-d8 to różne badania przy prostym kolanie. 
-Zmienne d9-d16 – przy kolanie zgiętym Widać więc, że pozycja w stawie kolanowym wpływa silnie na wynik badań biomechanicznych. 
+\begin{table}[t!]
+	\scriptsize
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:pca-muscles-knee-strait-bended}
+	\begin{tabular}{c|c|c||c|c|c}
+		%\hline
+		
+		Zmienna&Czynnik1&Czynnik2&Zmienna&Czynnik1&Czynnik2 \\
+		\hline
+		d1&\textbf{-0,82}&-0,14&d9&-0,26&0,64 \\
+		\hline
+		d2&-0,60&-0,37&d10&\textbf{-0,72}&-0,47 \\
+		\hline
+		d3&\textbf{0,88}&-0,20&d11&-0,52&\textbf{0,73} \\
+		\hline
+		d4&-0,36&-0,65&d12&\textbf{-0,83}&-0,34 \\
+		\hline
+		d5&\textbf{0,83}&-0,26&d13&-0,65&0,64 \\
+		\hline
+		d6&-0,57&-0,64&d14&\textbf{-0,81}&-0,43 \\
+		\hline
+		d7&0,55&-0,60&d15&-0,67&0,40 \\
+		\hline
+		d8&-0,03&\textbf{-0,80}&d16&-0,65&-0,38 \\
+		\hline\hline
+		Udział&0,41&0,26&&0,44&0,27 \\
+		
+	\end{tabular}
+\end{table}
 
-Przeprowadzono więc oddzielną analizę czynnikową dla zgiętego i wyprostowanego kolana ustalając liczbę czynników na 2)
+Ponownie można zaobserwować charakterystyczne rozróżnienie, gdzie pierwszy czynnik główny dla badania w pozycji kolana wyprostowanego zawiera ładunki znaczące o nieparzystych numerach, a drugi czynnik posiada znaczące ładunki o parzystych numerach. W przypadku badania w pozycji kolana zgiętego sytuacja jest odwrotna i analogicznie można zaobserwować rozróżnienie. W tym przypadku podział wynika z pozycji stawu skokowego. Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami w zgięciu stawu skokowego, a o parzystych w wyproście. Z uwagi na ten fakt do kolejnych porównań zostały zdefiniowane następujące 4 zmienne:
+\begin{enumerate}
+	\item $ZZ$ -- wyniki dla pozycji kolano zgięte i staw skokowy zgięty.
+	\item $ZW$ -- wyniki dla pozycji kolano zgięte i staw skokowy wyprost.
+	\item $WZ$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy zgięty.
+	\item $WW$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy wyprostowany.
+\end{enumerate} 
 
-- Tabelka
+Taki podział wydaje się być intuicyjny, ale fakt otrzymania powyższych wyników w analizie numerycznej jest wartością dodaną potwierdzającą spójność danych i jakość przeprowadzonych badań przez fizjoterapeutów z Carolina Medical Center. 
 
-Jak widać jeden z czynników posiada znaczące ładunki o nieparzystych numerach, a drugi o parzystych. 
-
-- Tabelka
-
-Sytuacja analogiczna. 
-Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami W ZGIĘCIU (jako rozumiem chodzi o staw skokowy), a o parzystych w WYPROŚCIE. 
-Ostatecznie więc powstają 4 czynniki: 
-1. Kolano zgięcie, staw skokowy zgięcie  (ZZ)
-2. Kolano zgięcie, staw skokowy wyprost (ZW)
-3. Kolano wyprost, staw skokowy zgięcie (WZ)
-4. Kolano wyprost, staw skokowy wyprost (WW).
-[kazy jest złożony z 4 pomiarów: izometria i 3 izokinetyki]
-Wynik może wydawać się oczywisty ale świadczy o poprawnie wykonanych badaniach i spójności danych. 
+Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometria i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli [TBD...]
 
 - Tabelka ZZ, ZW, WZ, WW
 

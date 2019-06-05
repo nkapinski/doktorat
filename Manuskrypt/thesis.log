@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  5 JUN 2019 13:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  5 JUN 2019 15:36
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1689,7 +1689,13 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [102]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (1.91795pt too wide) in paragraph at lines 298--299
+[]\OT4/cmr/m/n/12 Ponownie mo»-na za-ob-ser-wo-wa¢ cha-rak-te-ry-stycz-ne roz-r
+ó»-nie-nie, gdzie pierw-szy czyn-
+ []
+
+
+Underfull \vbox (badness 1320) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1700,8 +1706,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [104]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[105]
 Rozdzia\PlPrIeC {\l } 7.
-) (thesis.bbl [105
+) (thesis.bbl [106
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
@@ -1732,27 +1742,23 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[106
+[107
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[107]
+[108]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[108]
+[109]
 Underfull \hbox (badness 1515) in paragraph at lines 226--231
 []\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
 Tur-han,
  []
 
 
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[109]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1788,20 +1794,24 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[118]) (appendix.tex
+[118]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[119]
+[119]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[120]
 Dodatek A.
-) [120
+) [121
 
 ] (thesis.aux (header.aux)) ) 
 Here is how much of TeX's memory you used:
- 17565 strings out of 492895
- 344553 string characters out of 3122801
- 361231 words of memory out of 3000000
- 21202 multiletter control sequences out of 15000+200000
+ 17566 strings out of 492895
+ 344589 string characters out of 3122801
+ 361243 words of memory out of 3000000
+ 21203 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,2116b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1837,9 +1847,9 @@ pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
 lsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /pl/plti12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/pl/pltt12.pfb>
-Output written on thesis.pdf (131 pages, 6970571 bytes).
+Output written on thesis.pdf (132 pages, 6972742 bytes).
 PDF statistics:
- 582 PDF objects out of 1000 (max. 8388607)
+ 585 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

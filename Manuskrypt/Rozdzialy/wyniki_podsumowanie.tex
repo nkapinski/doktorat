@@ -205,17 +205,17 @@ Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane
 
 \section{Porównanie z metodą opartą o badania biomechaniczne}
 
-W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych i funkcjonalnego testu ATRS. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center (zob. Sekcja \ref{biomechanika}). 
+W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych i wynikami funkcjonalnego testu ATRS. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center (zob. Sekcja \ref{biomechanika}). 
 
-W ramach projektu START możliwe było zebranie danych dla 30 spośród 60 pacjentów. Dane zawierały wyniki pomiaru zrealizowanego w dwóch krokach czasowych tj. w 26 i 52 tygodniu. Zostały zebrane wyniki ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Dokładniej, określono 16 takich deficytów (oznaczonych dalej w tej pracy $d1$--$d16$): w czterech pozycjach tj. kolano zgięte i wyprostowane oraz staw skokowy zgięty wyprostowany zrealizowano pomiary w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s, 120$^\circ$/s oraz 180$^\circ$/s  
+W ramach projektu START możliwe było zebranie danych dla 30 spośród 60 pacjentów. Dane zawierały wyniki pomiaru zrealizowanego w dwóch krokach czasowych tj. w 26 i 52 tygodniu. Zostały zebrane wyniki ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Dokładniej, określono 16 takich deficytów oznaczonych dalej w tej pracy $d1$--$d16$. W czterech pozycjach tj. kolano zgięte i wyprostowane oraz staw skokowy zgięty wyprostowany zrealizowano pomiary w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s, 120$^\circ$/s oraz 180$^\circ$/s  
 
-Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikacji nowych zmiennych wyjaśniających w największym stopniu wariancję. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
+Z uwagi na dużą liczbę pomiarów, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikację nowych zmiennych wyjaśniających w największym stopniu wariancję w zebranym zbiorze danych. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
 
-\begin{table}[t!]
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych w warunkach izometrii i izokinetyki. Oznaczono ładunki większe niż 0,7.}
 	\label{tab:pca-muscles}
 	\begin{tabular}{c|c|c|c|c}
 		%\hline
@@ -259,13 +259,15 @@ Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejn
 	\end{tabular}
 \end{table}
 
-Z czterech czynników, 2 mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że 3 z pięciu znaczących ładunków czynnikowych ($d1$, $d3$, $d5$) dla pierwszego czynnika znajdują się w przedziale $d1$--$d8$, które skojarzone są z pozycją kolana prostego. Dla drugiego czynnika głównego sytuacja jest odwrotna i 3 z czterech ładunków czynnikowych ($d10$, $d12$, $d14$) znajdują się w przedziale $d9$--$d16$, czyli badań przy kolanie zgiętym. Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego. Odzwierciedlają to również rezultaty powyższej analizy. Dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
+Z czterech czynników, 2 mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że 3 z pięciu znaczących ładunków czynnikowych ($d1$, $d3$, $d5$) dla pierwszego czynnika znajdują się w przedziale $d1$--$d8$, które skojarzone są z pozycją kolana prostego. Dla drugiego czynnika głównego sytuacja jest odwrotna i 3 z czterech ładunków czynnikowych ($d10$, $d12$, $d14$) znajdują się w przedziale $d9$--$d16$, czyli badania przy kolanie zgiętym. 
 
-\begin{table}[t!]
+Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
+
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych, oddzielnie dla pozycji kolana zgiętego i wyprostowanego. Oznaczono ładunki większe niż 0,7.}
 	\label{tab:pca-muscles-knee-strait-bended}
 	\begin{tabular}{c|c|c||c|c|c}
 		%\hline
@@ -305,11 +307,11 @@ Taki podział wydaje się być intuicyjny, ale fakt otrzymania powyższych wynik
 
 Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometrii i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli \ref{tab:bio-new-factors}.
 
-\begin{table}[t!]
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Komponenty i ich udział, wchodzące w skład nowych zmiennych opisujących biomechanikę.}
 	\label{tab:bio-new-factors}
 	\begin{tabular}{c|c|c|c|c|c}
 		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4&Udział \\
@@ -326,13 +328,13 @@ Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego d
 	\end{tabular}
 \end{table}
 
-W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna oraz wyniku ATRS z predykcjami nowo opracowanej automatycznej metody oraz oceną radiologa zdecydowano się również w dwóch ostatnich przypadkach przeprowadzić analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. czynnika1 zamiast 6 parametrów: $SCT$, $STE$, $TE$, $TisE$, $TT$, $TU$. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
+W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna oraz wyniku ATRS z predykcjami automatycznej metody oraz oceną radiologa, zdecydowano się dla badań radiologicznych przeprowadzić również analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. czynnika1 zamiast 6 parametrów: $SCT$, $STE$, $TE$, $TisE$, $TT$, $TU$. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
 
-\begin{table}[t!]
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki większe niż 0,7.}
 	\label{tab:pca-gt-pred}
 	\begin{tabular}{c|c|c}
 		Zmienna&Czynnik1 - ocena radiologa&Czynnik1 - ocena automatyczna \\
@@ -354,16 +356,16 @@ W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ści�
 	\end{tabular}
 \end{table}
 
-Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywną ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
+Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywna ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
 
 W kolejnych badaniach zestawione zostaną interkorelacje nowych zmiennych. Na początku, w Tabeli \ref{tab:gtVSpred}, przedstawiono korelację oceny automatycznej z oceną radiologa.
 
 
-\begin{table}[t!]
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Korelacja między oceną radiologa, a ocena automatyczną. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
 	\label{tab:gtVSpred}
 	\begin{tabular}{c|c|c}
 		&Ocena automatyczna &Ocena radiologa \\
@@ -379,11 +381,11 @@ Naturalnie, nowa zmienna opisująca ocenę radiologa korelują z nową zmienną 
 
 W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
 
-\begin{table}[t!]
+\begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Korelacja badań biomechanicznych z testem ATRS. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
 	\label{tab:bioVSatrs}
 	\begin{tabular}{c|c|c|c|c|c}
 		&WW&WZ&ZW&ZZ&ATRS \\
@@ -402,15 +404,15 @@ W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacj
 	\end{tabular}
 \end{table}
 
-Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Uzasadnione jest zatem realizowanie w praktyce obydwu tych badań w celu monitorowania rehabilitacji pacjentów.
+Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Uzasadnione jest zatem realizowanie w praktyce obydwu tych badań w celu skutecznego monitorowania rehabilitacji pacjentów.
 
-W finalnym badaniu w tej sekcji zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
+W finalnym badaniu, w tej sekcji zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną, z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
 
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\caption{Korelacja badań biomechanicznych i testu ATRS z badaniami radiologicznymi ocenionymi automatycznie i przez radiologa. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
 	\label{tab:bioATRSvspredGT}
 	\begin{tabular}{c|c|c}
 		&ocena automatyczna&ocena radiologa \\
@@ -429,7 +431,7 @@ W finalnym badaniu w tej sekcji zestawiono nowe zmienne opisujące ocenę radiol
 	\end{tabular}
 \end{table}
 
-Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechniacznych oraz ATRS, co jest zgodne z praktyką kliniczną – dlatego zalecane jest wykonywanie badań radiologicznych jako uzupełnienie, gdyż dostarczają innych informacji.
+Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS, co jest zgodne z praktyką kliniczną -- dlatego zalecane jest wykonywanie badań radiologicznych, które dostarczając inne informacje.
 
 Interesującym rezultatem jest wynik istotnej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej z czynnika ludzkiego, spowodowała usystematyzowanie oceny, a jednocześnie uwspulnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, celem odnalezienia informacji wspólnych i stworzenia komplementarnego testu maksymalizującego informację dla lekarza prowadzącego przy jednoczesnej minimalizacji objętości protokołu monitorowania pacjentów.
 

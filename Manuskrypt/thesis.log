@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  7 JUN 2019 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  7 JUN 2019 13:40
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -839,7 +839,13 @@ Package pdftex.def Info: ./figures/Logo-IBIB.jpg  used on input line 20.
 
  [5] (thesis.lot [6
 
-])
+]
+Overfull \hbox (2.54022pt too wide) in paragraph at lines 20--20
+ \OT4/cmr/m/n/12 ±nio-wych, od-dziel-nie dla po-zy-cji ko-la-na zgi¦-te-go i wy
+-pro-sto-wa-ne-go. Ozna- 
+ []
+
+)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
@@ -1682,6 +1688,10 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [101]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1689,16 +1699,30 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [102]
-Overfull \hbox (1.91795pt too wide) in paragraph at lines 296--297
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.91795pt too wide) in paragraph at lines 298--299
 []\OT4/cmr/m/n/12 Ponownie mo»-na za-ob-ser-wo-wa¢ cha-rak-te-ry-stycz-ne roz-r
 ó»-nie-nie, gdzie pierw-szy czyn-
  []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [103]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1707,7 +1731,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [105]
-Overfull \hbox (0.2777pt too wide) in paragraph at lines 434--435
+Overfull \hbox (0.2777pt too wide) in paragraph at lines 436--437
 []\OT4/cmr/m/n/12 Interesuj¡cym re-zul-ta-tem jest wy-nik istot-nej ko-re-la-cj
 i oce-ny au-to-ma-tycz-nej z ATRS.
  []
@@ -1858,7 +1882,7 @@ pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
 lsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
 /pl/plti12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/pl/pltt12.pfb>
-Output written on thesis.pdf (134 pages, 6976313 bytes).
+Output written on thesis.pdf (134 pages, 6976964 bytes).
 PDF statistics:
  592 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

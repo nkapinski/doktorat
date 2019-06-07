@@ -212,7 +212,6 @@ W ramach projektu START możliwe było zebranie danych dla 30 spośród 60 pacje
 Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikacji nowych zmiennych wyjaśniających w największym stopniu wariancję. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
 
 \begin{table}[t!]
-	\scriptsize
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
@@ -263,7 +262,6 @@ Z uwagi na dużą liczbę pomiarów deficytów mięśniowych, w pierwszej kolejn
 Z czterech czynników, 2 mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że 3 z pięciu znaczących ładunków czynnikowych ($d1$, $d3$, $d5$) dla pierwszego czynnika znajdują się w przedziale $d1$--$d8$, które skojarzone są z pozycją kolana prostego. Dla drugiego czynnika głównego sytuacja jest odwrotna i 3 z czterech ładunków czynnikowych ($d10$, $d12$, $d14$) znajdują się w przedziale $d9$--$d16$, czyli badań przy kolanie zgiętym. Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego. Odzwierciedlają to również rezultaty powyższej analizy. Dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
 
 \begin{table}[t!]
-	\scriptsize
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
@@ -305,40 +303,135 @@ Ponownie można zaobserwować charakterystyczne rozróżnienie, gdzie pierwszy c
 
 Taki podział wydaje się być intuicyjny, ale fakt otrzymania powyższych wyników w analizie numerycznej jest wartością dodaną potwierdzającą spójność danych i jakość przeprowadzonych badań przez fizjoterapeutów z Carolina Medical Center. 
 
-Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometria i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli [TBD...]
+Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometrii i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli \ref{tab:bio-new-factors}.
 
-- Tabelka ZZ, ZW, WZ, WW
+\begin{table}[t!]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:bio-new-factors}
+	\begin{tabular}{c|c|c|c|c|c}
+		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4&Udział \\
+		\hline
+		ZZ&d9 (-0,61)&d11 (-0,88)&d13 (-0,92)&d15 (-0,77)&0,65\\
+		\hline
+		ZW&d10 (-0,86)&d12 (-0,91)&d14 (-0,92)&d16 (-0,77)&0,75\\
+		\hline
+		WZ&d1 (-0,85)&d3 (-0,90)&d5 (-0,87)&d7 (-0,72)&0,70\\
+		\hline
+		WW&d2 (-0,64)&d4 (-0,76)&d6 (-0,88)&d8 (-0,66)&0,55\\
+		\hline
+			
+	\end{tabular}
+\end{table}
 
-Ponadto, po stronie danych „fizjoterapeutycznych” jest badanie ATRS .
-Badania biomechaniczne i ATRS były wykonane po pół roku i po roku (26 i 52 tydzień) od urazu. 
+W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna oraz wyniku ATRS z predykcjami nowo opracowanej automatycznej metody oraz oceną radiologa zdecydowano się również w dwóch ostatnich przypadkach przeprowadzić analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. czynnika1 zamiast 6 parametrów: $SCT$, $STE$, $TE$, $TisE$, $TT$, $TU$. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
 
-Na podstawie danych obrazowych oceniono 6 parametrów: 
-SCT, STE, TE, TisE, TT, TU
-Oceny dokonywano na 2 sposoby: GT (ground truth; doświadczony radiolog) oraz PRED (predykcja za pomocą sieci neuronowych). 
-Wykonano analizę czynnikową dla 6 parametrów: osobno dla GT i PRED. 
-Wybrano maksymalną liczbę czynników na 2, mimo to program statystyczny zwraca w obu przypadkach 1 czynnik – oznacza to minimalny udział w wyjaśnianej wariancji drugiego czynnika. 
+\begin{table}[t!]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:pca-gt-pred}
+	\begin{tabular}{c|c|c}
+		Zmienna&Czynnik1 - ocena radiologa&Czynnik1 - ocena automatyczna \\
+		\hline
+		SCT&\textbf{-0,79}&\textbf{-0,95}\\
+		\hline
+		STE&0,57&\textbf{0,86}\\
+		\hline
+		TE&\textbf{-0,85}&\textbf{-0,94}\\
+		\hline
+		TisE&\textbf{-0,71}&\textbf{-0,89}\\
+		\hline
+		TT&\textbf{-0,76}&\textbf{-0,72}\\
+		\hline
+		TU&\textbf{-0,88}&\textbf{-0,94}\\
+		\hline	
+		Udział&0,57&0,78\\
+		\hline	
+	\end{tabular}
+\end{table}
 
-- Tabelka PCA GT
-- Tabelka PCA Pred
+Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywną ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
 
-Jak widać, udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla PRED niż GT – nie jest to zaskakujące, gdyż czynnik ludzki w GT wprowadza nieuniknioną niepewność – wyniki generowane przez człowieka są w pewnym stopniu losowe. 
+W kolejnych badaniach zestawione zostaną interkorelacje nowych zmiennych. Na początku, w Tabeli \ref{tab:gtVSpred}, przedstawiono korelację oceny automatycznej z oceną radiologa.
 
-W następnej części zbadamy korelacje pomiędzy wyżej wymienionymi czynnikami.
 
--tabelka GTvsPRed
+\begin{table}[t!]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:gtVSpred}
+	\begin{tabular}{c|c|c}
+		&Ocena automatyczna &Ocena radiologa \\
+		\hline
+		Ocena automatyczna&1,0000&\textbf{0,8070}\\
+		\hline
+		Ocena radiologa&\textbf{0,8070}&1,0000\\
+		\hline	
+	\end{tabular}
+\end{table}
 
-Jak widać wyniki predykcji za pomocą sieci sa silnie skorelowane z ocenami radiologa. To oczywiście bardzo dobrze. 
+Naturalnie, nowa zmienna opisująca ocenę radiologa korelują z nową zmienną opisującą ocenę automatyczną. Fakt tej jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami. 
 
-- Tabelka ATRS vs biomechanika
+W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
 
-Widać  korelację  pomiarów wykananych przy takim samym ustawieniu kolana. Co ciekawe, jest to istotniejsze od ustawienia  stawu skokowego (nie wiem czy sformułowanie „ustawienie stawu” jest poprawne). Jak widać ATR słabo koreluje z wynikami pomiarów biomechznicznych . 
-Znaki nie są tu istotne, gdyż każda z 4 zmiennyc WW, WZ, ZW, ZZ jest wynikiem analizy czynnikowej. 
+\begin{table}[t!]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:bioVSatrs}
+	\begin{tabular}{c|c|c|c|c|c}
+		&WW&WZ&ZW&ZZ&ATRS \\
+		\hline
+		WW&1,0000&-0,2037&\textbf{0,4948}&-0,0436&-0,2190\\
+		\hline
+		WZ&-0,2037&1,0000&-0,0143&\textbf{0,5815}&0,1070\\
+		\hline
+		ZW&\textbf{0,4948}&-0,0143&1,0000&0,2324&-0,2620\\
+		\hline
+		ZZ&-0,0436&\textbf{0,5815}&0,2324&1,0000&0,1437\\
+		\hline
+		ATRS&-0,2190&0,1070&-0,2620&0,1437&1,0000\\
+		\hline
+		
+	\end{tabular}
+\end{table}
 
-- tabelka GT, Pred vs biomechanika i ATRS
+Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Uzasadnione jest zatem realizowanie w praktyce obydwu tych badań w celu monitorowania rehabilitacji pacjentów.
 
-Jak widać wskazania radiologa słabo korelują z wynikami badań biomechniacznych oraz ATRS co jest zgodne z praktyką kliniczną – dlatego celowe je1st wykonywanie obu rodzajów badań (radiologicznych i biomechanicznych), gdyż dostarczają innych informacji. 
+W finalnym badaniu w tej sekcji zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
 
-Jak widać wyniki predykcji za pomocą sieci korelują istotnie z ATRS. Wynik ten jest zapewne spowodowany tym, że wskazania człowieka są obarczone pewną losowością (niemożliwą w zasadzie do uniknięcia). 
+\begin{table}[h]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Ładunki czynnik.(Brak ) (Input do rownan struktuyralnychNOWE) Wyodrębn. : Składowe główne (Oznaczone ładunki są >,700000).}
+	\label{tab:bioATRSvspredGT}
+	\begin{tabular}{c|c|c}
+		&ocena automatyczna&ocena radiologa \\
+		\hline
+		WW&0,1197&0,0706\\
+		\hline
+		WZ&0,1576&0,1931\\
+		\hline
+		ZW&0,3429&0,3092\\
+		\hline
+		ZZ&0,3100&0,2996\\
+		\hline
+		ATRS&\textbf{0,3854}&0,2088\\
+		\hline
+	
+	\end{tabular}
+\end{table}
+
+Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechniacznych oraz ATRS, co jest zgodne z praktyką kliniczną – dlatego zalecane jest wykonywanie badań radiologicznych jako uzupełnienie, gdyż dostarczają innych informacji.
+
+Interesującym rezultatem jest wynik istotnej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej z czynnika ludzkiego, spowodowała usystematyzowanie oceny, a jednocześnie uwspulnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, celem odnalezienia informacji wspólnych i stworzenia komplementarnego testu maksymalizującego informację dla lekarza prowadzącego przy jednoczesnej minimalizacji objętości protokołu monitorowania pacjentów.
 
 \chapter{Podsumowanie}
 %- jeden radiolog więc ankieta ok

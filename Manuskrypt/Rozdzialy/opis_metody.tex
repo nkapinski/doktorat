@@ -453,7 +453,60 @@ W podsumowaniu, należy również zwrócić uwagę, że algorytmem meta-regresji
 
 \section{Ocena procesu gojenia}
 
-W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały wyniki metody automatycznej z wzorcem odniesienia ocenianym przez eksperta radiologa. Następnie przeanalizowano macierze błędu dla rożnych klas: (1) zakres oceny (0--7), gdzie wartością jest liczba występowań; (2) tygodnie oceny, gdzie wartością jest średni błąd absolutny (MAE).
+W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności dokonano zgrubnej analizy. Przeanalizowano macierze błędu dla rożnych klas: (1) zakres oceny (0--7), gdzie wartością jest liczba występowań; (2) tygodnie oceny, gdzie wartością jest średni błąd absolutny (MAE). Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia tj. oceną eksperta radiologa.
+
+\subsection{Macierze błędu}
+
+Celem zdefiniowania różnic między oceną radiologa i propozycją automatycznej metody, zestawiono dwa rodzaje macierzy błędu. W pierwszej kolejności jako klasę wybrano tydzień gojenia się ścięgna. Wyniki uzyskane z użyciem metody automatycznej porównano z oceną radiologa wykorzystując miarę średniego błędu absolutnego. Do obliczeń wykorzystano pacjentów testowych. Oddzielnie dla wszystkich 6 parametrów wyznaczono macierze błędu i przedstawiono je na Rys. \ref{fig:CM_MAE}. 
+\begin{figure}[]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cm.png}
+	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:CM_MAE}
+\end{figure}
+
+Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim stopniu wyniki ocen w poszczególnych tygodniach są do siebie zbliżone. W przypadku idealnego odwzorowania oceny radiologa przez nową metodę, minimalne błędy znajdowałyby się na diagonali przedstawionych wykresów. Dla poszczególnych parametrów można jednak zaobserwować dryf wartości minimalnych błędów. W szczególności pole powierzchni ($PP_d$) pomiędzy krzywą określającą wartości minimalne MAE a diagonalą zostały zebrane w Tabeli \ref{tab:dryf_meas}. 
+
+\begin{table*}[]
+	\caption{Ocena dryfu krzywej łączącej minima lokalne wartości MAE w macierzach błędów z klasą przyjętą jako tydzień rehabilitacji.}
+	\begin{center}
+		\begin{tabular}{l||c|c|c|c|c|c|}
+			\hline
+			& \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
+			\hline
+			$PP_d$ &18&10&42&13&30&17\\	
+			\hline		
+		\end{tabular}
+	\end{center}
+	\label{tab:dryf_meas}
+\end{table*}
+
+Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorszy dla $STE$, co oznacza, że w tych przypadkach ocena automatyczna najlepiej i najgorzej przypomina ocenę radiologa. Kolejne, najlepsze rezultaty otrzymano dla parametrów opisujących obrzęki tj. $TE$ i $TisE$ oraz spójność ścięgna ($SCT$). Drugi najgorszy wynik został uzyskany dla parametru $TU$ oceniającego jednorodność ścięgna w płaszczyźnie strzałkowej. Powyższe rezultaty są spójne z wnioskami do wyników zamieszczonych w Tab. \ref{tab:testset}, jednak szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cm_summary.png}
+	\caption{$PP_d$.}\label{fig:CM_MAE_SUMMARY}
+\end{figure}
+
+Najmniejsze różnice w ocenie występują w trzecim tygodniu, zatem w pierwszym pomiarze po fazie zapalnej. Największe odchylenia natomiast są obecne w pierwszym oraz 39-tym tygodniu monitoringu, zatem w szczycie fazy zapalnej i w momencie zaawansowania fazy przebudowy. 
+
+Analizując poszczególne parametry od najlepszego pod względem $PP_d$ -- w przypadku parametru TT największe różnice w ocenie widoczne są między 3--12 tyg., a zatem na przełomie fazy poliferacji i przebudowy, gdzie włókna ścięgniste zaczynają się ukierunkowywać i zmienia się grubość ścięgna. Dla TE największe odchylenia zaobserwowano dla przełomu fazy zapalnej i poliferacji -- 1 tydz. oraz zaawansowanej przebudowy w 26 tyg. Podobny schemat zachowany jest dla TisE, z tą różnicą, że oprócz przełomu fazy zapalnej, odchylenia są widoczne w całym okresie przebudowy. Może to świadczyć o różnicy w ocenie płynów nagromadzonych w obrzękach. W przypadku SCT, różnice w ocenie spójności włókien uwidaczniają się fazie przebudowy, kiedy to automatyczna metoda nie wskazuje na znaczący postęp w stosunku do wyniku z 26-tego tygodnia. W przypadku dwóch parametrów uzyskujących najgorszy wynik $PP_d$ tj. $TU$ i $STE$ rozbieżności są widoczne w cały okresie monitoringu, w szczególności w fazie zapalnej i przebudowy. Faza zapalna jest najbardziej dynamiczna, natomiast faza przebudowy była monitorowana w najdłuższych interwałach, stąd różnice w obrazach tkanek w obu przypadkach są największe. 
+
+Na kolejnym wykresie (zob. Rys. \ref{fig:cmscores}) pokazano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (0--7).
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.5\textwidth]{figures/cmScores.png}
+	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
+\end{figure}
+Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej oceniano jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniono jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej oceniono notą 2 (7 razy) lub 3 (8 razy). Natomiast notę 0 oceniono na wartość 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores}.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.6\textwidth]{figures/cmScores_summary.png}
+	\caption{MAE w obrębie klas.}\label{fig:cmscores}
+\end{figure}
+
+Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie not 2--4. Dla noty 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. W pozostałych notach skrajnych błąd wynosi $>$ 1,5. Wyniki są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. 
 
 \subsection{Krzywe gojenia}
  Dla wszystkich 4 pacjentów testowych, dla każdego z 10 kroków czasowych zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
@@ -506,46 +559,4 @@ Jako ostatni został przeanalizowany parametr TisE. Krzywe gojenia widoczne są 
 \end{figure}
 Jest to z kolei jedyny parametr oceniany w całości na zewnątrz ROI i charakteryzuje obrzęk w przestrzeni powięziowej. Na przełomie fazy poliferacji i remodelingu (6--9 tydz.) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26 tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (3--6 tydz.), co wymaga dalszej analizy.
 
-\subsection{Macierze błędu}
 
-W pierwszej kolejności zestawiono macierze błędu dla klas będących poszczególnymi tygodniami, w których prowadzony był monitoring rehabilitacji. Dla pacjentów testowych zestawiono wszystkie 6 parametrów i wyliczono średni błąd absolutny (zob. Rys. \ref{fig:CM_MAE}). 
-\begin{figure}[t!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/cm.png}
-	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:CM_MAE}
-\end{figure}
-Na wykresach zaznaczono ścieżkę przebiegającą wzdłuż minimalnych wartości MAE. W optymalnym przypadku ścieżka powinna pokrywać się z diagonalą. Dla poszczególnych parametrów można zaobserwować dryf. 
-
-Calka z pola pod min i diagonali: 
-SCT (18)	TT (10)	STE (42)	TE (13)	TU (30)	TisE (17)
-
-Podsumowanie wizualne:
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/cm_summary.png}
-	\caption{Odległość minimum od diagonali.}\label{fig:CM_MAE_SUMMARY}
-\end{figure}
-
-
-2 najgorsze:
---W przypadku parametru STE zakres zmian jest na tyle niewielki, że ocena dla stanu przed operają przypomina stan z 20 tyg. 
---Dla TU w końcówce procesu ocena przpomina środek
-Pozostałe:
---SCT i TE i TisE- środek oceny jest podobny
--- TT najlepiej, tylko początek do 9 tyg. podobny
-
-Na kolejnym wykresie (zob. Rys. \ref{fig:cmscores}) pokazano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (0--7).
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/cmScores.png}
-	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
-\end{figure}
-Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej oceniano jako 4, podobnie jak notę 6. Note 7, dwukrotnie oceniono jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej oceniono notą 2 (7 razy) lub 3 (8 razy). Natomiast notę 0 oceniono na wartość 2.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/cmScores_summary.png}
-	\caption{MAE w obrębie klas.}\label{fig:cmscores}
-\end{figure}
-
-Powyższe wyniki potwierdzają obserwacje z oceny krzywych gojenia. W szczególności, metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co prawdopodobnie wynika z faktu zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. Wyniki prezentujące MAE w macierzach błędu wskazują również, że ocena parametrów STE i TU nie zachowuje trendu oceny w stopniu jakim realizowane jest to w innych parametrach.

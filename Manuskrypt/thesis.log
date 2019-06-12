@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  10 JUN 2019 16:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  12 JUN 2019 12:43
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -567,7 +567,11 @@ Version 1.0, Aug 13, 1994
 \@Bottommargin=\dimen190
 ) (fancyhdr.sty
 \headwidth=\dimen191
-) (thesis.aux (header.aux))
+) (thesis.aux (header.aux)
+
+LaTeX Warning: Label `fig:cmscores' multiply defined.
+
+)
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -1611,11 +1615,30 @@ Package pdftex.def Info: figures/cm.png  used on input line 514.
 
 LaTeX Warning: Float too large for page by 61.46608pt on input line 516.
 
-<figures/cmScores.png, id=404, 554.07pt x 580.1675pt>
+<figures/cm_summary.png, id=404, 455.45157pt x 255.95625pt>
+File: figures/cm_summary.png Graphic file (type png)
+<use figures/cm_summary.png>
+Package pdftex.def Info: figures/cm_summary.png  used on input line 525.
+(pdftex.def)             Requested size: 441.01773pt x 247.85155pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/cmScores.png, id=405, 554.07pt x 580.1675pt>
 File: figures/cmScores.png Graphic file (type png)
 <use figures/cmScores.png>
-Package pdftex.def Info: figures/cmScores.png  used on input line 530.
+Package pdftex.def Info: figures/cmScores.png  used on input line 540.
 (pdftex.def)             Requested size: 441.01773pt x 461.78867pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/cmScores_summary.png, id=406, 455.45157pt x 255.95625pt>
+File: figures/cmScores_summary.png Graphic file (type png)
+<use figures/cmScores_summary.png>
+Package pdftex.def Info: figures/cmScores_summary.png  used on input line 547.
+(pdftex.def)             Requested size: 441.01773pt x 247.85155pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ) (Rozdzialy/wyniki_podsumowanie.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1624,25 +1647,37 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[93 <./figures/cm.png>]
+[93]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[94 <./figures/cmScores.png>]
+[94 <./figures/cm.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[95 <./figures/cm_summary.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[96 <./figures/cmScores.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[97 <./figures/cmScores_summary.png>]
 Rozdzia\PlPrIeC {\l } 6.
 
 Overfull \hbox (3.12201pt too wide) in paragraph at lines 7--7
 []\OT4/cmr/bx/n/17.28 Porównanie z me-to-d¡ opar-t¡ o pa-ra-dyg-mat end-
  []
 
-[95
+[98
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[96]
-<figures/Segmentacja.png, id=423, 847.36575pt x 333.6465pt>
+[99]
+<figures/Segmentacja.png, id=437, 847.36575pt x 333.6465pt>
 File: figures/Segmentacja.png Graphic file (type png)
 <use figures/Segmentacja.png>
 Package pdftex.def Info: figures/Segmentacja.png  used on input line 78.
@@ -1654,12 +1689,12 @@ Underfull \vbox (badness 5908) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[97]
+[100]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[98 <./figures/Segmentacja.png>]
-<figures/Data_US_sample.png, id=431, 2184.36075pt x 1456.2405pt>
+[101 <./figures/Segmentacja.png>]
+<figures/Data_US_sample.png, id=444, 2184.36075pt x 1456.2405pt>
 File: figures/Data_US_sample.png Graphic file (type png)
 <use figures/Data_US_sample.png>
 Package pdftex.def Info: figures/Data_US_sample.png  used on input line 100.
@@ -1672,33 +1707,33 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[99]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[100 <./figures/Data_US_sample.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[101]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [102]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[103 <./figures/Data_US_sample.png>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[104]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[105]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1715,7 +1750,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[103]
+[106]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1726,11 +1761,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[104]
+[107]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[105]
+[108]
 Overfull \hbox (0.2777pt too wide) in paragraph at lines 436--437
 []\OT4/cmr/m/n/12 Interesuj¡cym re-zul-ta-tem jest wy-nik istot-nej ko-re-la-cj
 i oce-ny au-to-ma-tycz-nej z ATRS.
@@ -1740,23 +1775,23 @@ i oce-ny au-to-ma-tycz-nej z ATRS.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[106]
+[109]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[107]
+[110]
 Rozdzia\PlPrIeC {\l } 7.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108
+ [111
 
 ])
 (thesis.bbl
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[109]
+[112]
 Underfull \hbox (badness 10000) in paragraph at lines 16--20
 []\OT4/cmr/m/n/12 Deep le-ar-ning: The next step in ap-plied he-al-th-ca-
  []
@@ -1785,27 +1820,9 @@ Underfull \hbox (badness 1097) in paragraph at lines 59--62
 -nes me-di-cal ima-ging.
  []
 
-[110
+[113
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[111]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[112]
-Underfull \hbox (badness 1515) in paragraph at lines 226--231
-[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
-Tur-han,
- []
-
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[113]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1814,6 +1831,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [115]
+Underfull \hbox (badness 1515) in paragraph at lines 226--231
+[]\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
+Tur-han,
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1841,58 +1864,73 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[122]) (appendix.tex
+[122]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [123]
-Dodatek A.
-) [124
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
-] (thesis.aux (header.aux)) ) 
+
+[124]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[125]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[126]
+Dodatek A.
+) [127
+
+] (thesis.aux (header.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 17574 strings out of 492895
- 344730 string characters out of 3122801
- 361340 words of memory out of 3000000
- 21211 multiletter control sequences out of 15000+200000
+ 17585 strings out of 492895
+ 345022 string characters out of 3122801
+ 361394 words of memory out of 3000000
+ 21220 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,2116b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.
-9/fonts/enc/dvips/pl/pltt.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2
-.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/enc/dvips/pl/plme.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTe
-X 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKT
-eX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Local/Programs/MiK
-TeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/norbert/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/User
-s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C
-:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.
-pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
-lbx8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/pl/plex10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/pl/plmi10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/pl/plmi12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/pl/plmi7.pfb><C:/Users/norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/norbert/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr6.pfb><C:/Users/norber
-t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Users/no
-rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/User
-s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C
-:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.
-pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/p
-lsy8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/pl/plti12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/pl/pltt12.pfb>
-Output written on thesis.pdf (135 pages, 6981660 bytes).
+{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.e
+nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
+enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi
+.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plm
+e.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
+ms.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/p
+lit.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/
+plsc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/norbert/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx8.pfb><C:/Users/norbert/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/n
+orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plex10.pfb><C:/U
+sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb
+><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi
+12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/p
+l/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/pl/plmi7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/pl/plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/pl/plr6.pfb><C:/Users/norbert/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/pl/plr7.pfb><C:/Users/norbert/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/no
+rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
+Output written on thesis.pdf (138 pages, 6994397 bytes).
 PDF statistics:
- 595 PDF objects out of 1000 (max. 8388607)
+ 608 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

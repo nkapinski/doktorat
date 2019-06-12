@@ -516,7 +516,17 @@ W pierwszej kolejności zestawiono macierze błędu dla klas będących poszczeg
 \end{figure}
 Na wykresach zaznaczono ścieżkę przebiegającą wzdłuż minimalnych wartości MAE. W optymalnym przypadku ścieżka powinna pokrywać się z diagonalą. Dla poszczególnych parametrów można zaobserwować dryf. 
 
-[Pytanie, jak to najlepiej podsumować? srednia odległość od diagonali?]
+Calka z pola pod min i diagonali: 
+SCT (18)	TT (10)	STE (42)	TE (13)	TU (30)	TisE (17)
+
+Podsumowanie wizualne:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cm_summary.png}
+	\caption{Odległość minimum od diagonali.}\label{fig:CM_MAE_SUMMARY}
+\end{figure}
+
+
 2 najgorsze:
 --W przypadku parametru STE zakres zmian jest na tyle niewielki, że ocena dla stanu przed operają przypomina stan z 20 tyg. 
 --Dla TU w końcówce procesu ocena przpomina środek
@@ -525,12 +535,17 @@ Pozostałe:
 -- TT najlepiej, tylko początek do 9 tyg. podobny
 
 Na kolejnym wykresie (zob. Rys. \ref{fig:cmscores}) pokazano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (0--7).
-\begin{figure}[t!]
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cmScores.png}
 	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
 \end{figure}
 Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej oceniano jako 4, podobnie jak notę 6. Note 7, dwukrotnie oceniono jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej oceniono notą 2 (7 razy) lub 3 (8 razy). Natomiast notę 0 oceniono na wartość 2.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cmScores_summary.png}
+	\caption{MAE w obrębie klas.}\label{fig:cmscores}
+\end{figure}
 
 Powyższe wyniki potwierdzają obserwacje z oceny krzywych gojenia. W szczególności, metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co prawdopodobnie wynika z faktu zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. Wyniki prezentujące MAE w macierzach błędu wskazują również, że ocena parametrów STE i TU nie zachowuje trendu oceny w stopniu jakim realizowane jest to w innych parametrach.

@@ -41,10 +41,12 @@
 \contentsline {figure}{\numberline {5.12}{\ignorespaces Ocena parametru TE.\relax }}{90}% 
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Ocena parametru TU.\relax }}{91}% 
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru TisE.\relax }}{91}% 
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{93}% 
-\contentsline {figure}{\numberline {5.16}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{94}% 
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{94}% 
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Odleg\IeC {\l }o\IeC {\'s}\IeC {\'c} minimum od diagonali.\relax }}{95}% 
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{96}% 
+\contentsline {figure}{\numberline {5.18}{\ignorespaces MAE w obr\IeC {\k e}bie klas.\relax }}{97}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{98}% 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{100}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{101}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{103}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }

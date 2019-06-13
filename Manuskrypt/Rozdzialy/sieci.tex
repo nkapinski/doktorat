@@ -291,7 +291,24 @@ W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu min
 \end{itemize}
 Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwość skutecznej redukcji wymiarowości z zachowaniem efektywności algorytmu.
 
-W drugim przypadku, gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą \textit{state-of-the-art} jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
+W celu selekcji cech można również stosować różnego rodzaju regresje, specjalnie zaprojektowane do tego celu. Do najbardziej powszechnie stosowanych należą algorytmy regresji grzbietowej, LASSO (od ang. \textit{Least Absolute Shrinkage and Selection Operator}) oraz Elastic Net. Różnią się one definicją zadania minimalizacji wektora cech $w$:
+
+\begin{equation}
+\textrm{Regresja grzbietowa; } \underset{w}{min} ||X*w-Y||_2^2 + \alpha ||w||_2^2
+\label{equ:ridgeReg}
+\end{equation}
+\begin{equation}
+\textrm{LASSO; } \underset{w}{min} ||X*w-Y||_2^2 + \alpha ||w||_1
+\label{equ:ridgeReg}
+\end{equation}
+\begin{equation}
+\textrm{Elastic Net; } \underset{w}{min} { \frac{1}{2n_{samples}} ||X w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2}
+\label{equ:elasticNet}
+\end{equation}
+
+W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będącym pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek aby norma L2 wektora $w$ była minimalizowana, dzięki czemu wymuszane jest aby poszczególne współczynniki nie były za duże. W regresji LASSO stosowana jest norma L1, dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regrsji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
+
+W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą \textit{state-of-the-art} jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
 
 Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych, w taki sposób aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to \textit{wartości skalarne} (pojedyncze liczby) opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. gdzie iloczyn skalarny równy jest 0, co w przestrzeni Euklidesowej oznacza, że kąt pomiędzy wektorami równy jest 90$^\circ$.
 

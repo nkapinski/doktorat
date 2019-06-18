@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  17 JUN 2019 11:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.5.24)  18 JUN 2019 08:51
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -953,18 +953,18 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 <figures/Achilles_zerwanie.jpg, id=89, 702.625pt x 584.1825pt>
 File: figures/Achilles_zerwanie.jpg Graphic file (type jpg)
 <use figures/Achilles_zerwanie.jpg>
-Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 86.
+Package pdftex.def Info: figures/Achilles_zerwanie.jpg  used on input line 85.
 (pdftex.def)             Requested size: 264.61333pt x 220.01276pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 96.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 95.
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 96.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 95.
 
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
@@ -1029,7 +1029,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=130, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 247.
+Package pdftex.def Info: figures/USG-params.png  used on input line 246.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1037,11 +1037,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [24 <./figures/USG-params.png>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 268.
+(Font)              <10> on input line 267.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 268.
+(Font)              <7> on input line 267.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 268.
+(Font)              <5> on input line 267.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1950,7 +1950,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/no
 rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (138 pages, 7001217 bytes).
+Output written on thesis.pdf (138 pages, 7001248 bytes).
 PDF statistics:
  608 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -43,5 +43,5 @@
 \contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z ultrasonografii}{101}% 
 \contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{105}% 
 \contentsline {chapter}{\numberline {7}Podsumowanie}{111}% 
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{127}% 
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{128}% 
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{128}% 
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{129}% 

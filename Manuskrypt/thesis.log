@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.18)  19 JUN 2019 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.18)  19 JUN 2019 15:57
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1910,13 +1910,17 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[126]) (appendix.tex
+[126]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[127]
+[127]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[128]
 Dodatek A.
-) [128
+) [129
 
 ] (thesis.aux (header.aux))
 
@@ -1924,10 +1928,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17590 strings out of 492895
- 345096 string characters out of 3122801
- 362439 words of memory out of 3000000
- 21225 multiletter control sequences out of 15000+200000
+ 17596 strings out of 492895
+ 345179 string characters out of 3122801
+ 362469 words of memory out of 3000000
+ 21231 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,2118b,549s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1962,9 +1966,9 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/no
 rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (139 pages, 7004408 bytes).
+Output written on thesis.pdf (140 pages, 7006203 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
+ 615 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

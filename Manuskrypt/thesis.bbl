@@ -242,6 +242,13 @@ K.~J. Dria, J.~R. Sachleben, P.~G. Hatcher.
   high magnetic field strengths}.
 \newblock {\em J. Environ. Qual.}, 31(2):393--401, 2002.
 
+\bibitem{SVR_drucker}
+Harris Drucker, Christopher J.~C. Burges, Linda Kaufman, Alex~J. Smola,
+  Vladimir Vapnik.
+\newblock Support vector regression machines.
+\newblock M.~C. Mozer, M.~I. Jordan, T.~Petsche, redaktorzy, {\em Advances in
+  Neural Information Processing Systems 9}, strony 155--161. MIT Press, 1997.
+
 \bibitem{Duchi:2011:ASM:1953048.2021068}
 John Duchi, Elad Hazan, Yoram Singer.
 \newblock Adaptive subgradient methods for online learning and stochastic
@@ -485,6 +492,12 @@ Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
 \newblock Towards better analysis of deep convolutional neural networks.
 \newblock {\em CoRR}, abs/1604.07043, 2016.
 
+\bibitem{Liu2011}
+Yufeng Liu, Hao~Helen Zhang, Yichao Wu.
+\newblock Hard or soft classification? large-margin unified machines.
+\newblock {\em Journal of the American Statistical Association},
+  106(493):166--177, Marzec 2011.
+
 \bibitem{Maffulli2005}
 Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
 \newblock {\em Tendon Injuries}.
@@ -564,6 +577,12 @@ Katarina Nilsson-Helander, Roland Thome{\'{e}}, Karin Gr\"{a}vare-Silbernagel,
 \newblock {\em The American Journal of Sports Medicine}, 35(3):421--426, mar
   2007.
 
+\bibitem{Nowinski_Borucki_2014}
+Krzysztof Nowiński,  Bartosz Borucki.
+\newblock {\em VisNow – a Modular, Extensible Visual Analysis Platform},
+  strona 73–76.
+\newblock Vaclav Skala – Union Agency, 2014.
+
 \bibitem{Nowosielski17}
 Jedrzej Nowosielski, Jakub Zielinski, Bartosz Borucki, Krzysztof Nowinski.
 \newblock Multidimensional haralick’s feature space analysis for assessment
@@ -611,6 +630,12 @@ Olaf Ronneberger, Philipp Fischer, Thomas Brox.
 \newblock U-net: Convolutional networks for biomedical image segmentation.
 \newblock {\em CoRR}, abs/1505.04597, 2015.
 
+\bibitem{Ronneberger2015}
+Olaf Ronneberger, Philipp Fischer, Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock {\em Lecture Notes in Computer Science}, strony 234--241. Springer
+  International Publishing, 2015.
+
 \bibitem{Rosenblatt1957}
 Frank Rosenblatt.
 \newblock The perceptron: A perceiving and recognizing automaton.
@@ -620,6 +645,12 @@ Frank Rosenblatt.
 A.~Rosińska,  M.~Syrek.
 \newblock Rehabilitacja ścięgna achillesa - kopletny protokół usprawniania
   po trójpęczkowej rekonstrukcji ścięgna achillesa., 2017.
+
+\bibitem{Rosset2004}
+Antoine Rosset, Luca Spadola, Osman Ratib.
+\newblock {OsiriX}: An open-source software for navigating in multidimensional
+  {DICOM} images.
+\newblock {\em Journal of Digital Imaging}, 17(3):205--216, Czerwiec 2004.
 
 \bibitem{Rumelhart1986}
 David~E. Rumelhart, Geoffrey~E. Hinton, Ronald~J. Williams.
@@ -851,5 +882,13 @@ Wei Zhang, Kunio Doi, Maryellen~L. Giger, Yuzheng Wu, Robert~M. Nishikawa,
 \newblock Computerized detection of clustered microcalcifications in digital
   mammograms using a shift-invariant artificial neural network.
 \newblock {\em Medical Physics}, 21(4):517--524, apr 1994.
+
+\bibitem{Zou2004}
+Kelly~H. Zou, Simon~K. Warfield, Aditya Bharatha, Clare~M.C. Tempany,
+  Michael~R. Kaus, Steven~J. Haker, William~M. Wells, Ferenc~A. Jolesz, Ron
+  Kikinis.
+\newblock Statistical validation of image segmentation quality based on a
+  spatial overlap index1.
+\newblock {\em Academic Radiology}, 11(2):178--189, Luty 2004.
 
 \end{thebibliography}

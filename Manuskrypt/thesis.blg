@@ -30,6 +30,7 @@ Warning--can't use both author and editor fields in Gomes2013
 Warning--there's a number but no volume in Curie1880
 Warning--empty booktitle in Koch2017AutomatedHT
 Warning--empty institution in CIFAR
+Warning--can't use both author and editor fields in Nowinski_Borucki_2014
 Warning--empty institution in Rosenblatt1957
 Warning--empty journal in Etiologia
-(There were 27 warnings)
+(There were 28 warnings)

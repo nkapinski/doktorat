@@ -4,7 +4,7 @@
 
 Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w latach 40-tych XX wieku, natomiast fundamentalne inspiracje biologiczne dały badania nad korą wzrokową kotów Hubel'a i Wiesel’a z lat 50-tych i 60-tych (zob. \cite{Wurtz2009}). M.in. dzięki pracom tych neurofizjologów ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji z wybranych regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane, tak aby wydobyć istotne informacje z naturalnych obrazów. Dla przykładu reagują na orientację linii, kształty i kolory.
 
-W odróżnieniu od naturalnych struktur biologicznych, sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$,$y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze składowa $z$, a zamiast macierzy użyty jest wówczas \textit{tensor}, czyli uogólniona reprezentacja.
+W odróżnieniu od naturalnych struktur biologicznych, sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$,$y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze składowa $z$, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
 
 W obrazach cyfrowych dla każdego punktu ($x$,$y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$,$y$). Na tej podstawie dzielimy obrazy na:
 \begin{itemize}
@@ -14,7 +14,7 @@ W obrazach cyfrowych dla każdego punktu ($x$,$y$), tzw. \textit{piksela}, kodow
 \end{itemize}
 Do zakodowania informacji o wartości funkcji $I$ w obrazie binarnym potrzebny jest jeden bit na punkt. Odcienie obrazu monochromatycznego lub pojedyncze składowe punktu obrazu kolorowego kodowane są przy pomocy 8--16 bitów, co uzależnione jest od zakresu wartości występujących w danych lub precyzji wymaganej do obliczeń. Przykładowo, obrazy medyczne przetwarzane w tej pracy należą do grupy obrazów monochromatycznych i są zapisywane w reprezentacji 16 bitowej z uwagi na zakres wartości występujących w sygnale RM.
 
-W sieciach konwolucyjnych procesy zachodzące w korze wzrokowej są modelowane przy użyciu odpowiednio dobranych parametrów i funkcji służących do ekstrakcji istotnych informacji obrazowych i ich przetwarzania.  Parametry wykorzystywane do wstępnej ekstrakcji informacji grupowane są w \textit{filtry}, które realizują funkcję \textit{splotu} maski $K$ z kolejnymi fragmentami funkcji $I$. $K$ jest najczęściej macierzą kwadratową o wymiarze $N$, gdzie zazwyczaj $N$ = {1, 3, 5, 7, 9, 11} z uwagi na rosnącą wraz z $N$ złożonością obliczeniową. Równanie splotu dyskretnego można zapisać następująco:
+W sieciach konwolucyjnych procesy zachodzące w korze wzrokowej są modelowane przy użyciu odpowiednio dobranych parametrów i funkcji służących do ekstrakcji istotnych informacji obrazowych i ich przetwarzania.  Parametry wykorzystywane do wstępnej ekstrakcji informacji grupowane są w \textit{filtry}, które realizują funkcję \textit{splotu} maski $K$ z kolejnymi fragmentami funkcji $I$. $K$ jest najczęściej macierzą kwadratową o wymiarze $N$, gdzie zazwyczaj $N$ = {1, 3, 5, 7, 9, 11}. Większe wymiary $K$ nie są często stosowane z uwagi na rosnącą wraz z $N$ złożonością obliczeniową. Równanie splotu dyskretnego można zapisać następująco:
 \begin{equation}
 	I'\left(x, y\right) = \sum_{j=-n}^{n} \sum_{i=-k}^{k} I\left(x - j, y - i \right)K\left(j, i\right),
 \end{equation}
@@ -140,16 +140,16 @@ gdzie $\epsilon$ to \textit{szybkość uczenia się}, parametr określający wie
 
 Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacjom wykonywanym przez kilka lub więcej funkcji po kolei. W takich sytuacjach do obliczeń spadku gradientu wykorzystywane są funkcje, których pochodne są znane.
 
-Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v$ = $g$($p$) i $u$ = $f$($g$($v$)) = $f$($q$), gdzie $p$ i $q$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
+Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v$ = $g$($p$) i $u$ = $f$($g$($p$)) = $f$($v$), gdzie $p$ i $v$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
 \begin{equation}
-\frac{\delta u}{\delta p_i} = \sum_{j} \frac{\delta u}{\delta q_j} \frac{\delta q_j}{\delta p_i}, 
+\frac{\delta u}{\delta p_i} = \sum_{j} \frac{\delta u}{\delta v_j} \frac{\delta v_j}{\delta p_i}, 
 \end{equation}
 co w zapisie wektorowym równoważne jest z równaniem:
 \begin{equation}
 \label{regLancuch}
-\bigtriangledown_x z = (\frac{\delta q}{\delta p})^T \bigtriangledown_q u, 
+\bigtriangledown_x u = (\frac{\delta v}{\delta p})^T \bigtriangledown_q u, 
 \end{equation}
-gdzie $\frac{\delta q}{\delta p}$ to macierz Jacobiego. 
+gdzie $\frac{\delta v}{\delta p}$ to macierz Jacobiego. 
 
 Regułę łańcuchową zapisaną w \ref{regLancuch} prosto uogólnia się do zmiennych tensorowych (zob. \cite{Goodfellow-et-al-2016}, str. 205) i stosuje się w różnych meta-algorytmach służących do szkolenia sieci. Przykładem jest \textit{algorytm propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie takim jak topologia perceptronu wielowarstwowego (zob. \cite{Goodfellow-et-al-2016}).
 
@@ -180,7 +180,7 @@ W momencie pisania tej pracy algorytm Adam jest najczęściej rekomendowanym jak
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
 	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1
 	\item aktualizuj estymację pierwszego momentu. $s$ $\mapsto$ $\beta_1$$s$ + (1-$\beta_1$)$g$
-	\item aktualizuj estymację drugiego momentu. $r$ $\mapsto$ $\beta_2$$r$ + (1-$\beta_2$)$g\bigodot g$
+	\item aktualizuj estymację drugiego momentu. $r$ $\mapsto$ $\beta_2$$r$ + (1-$\beta_2$)$g\bigodot g$, gdzie $\bigodot$ to iloczyn skalarny dwóch gradientów.
 	\item skoryguj obciążenie momentu pierwszego rzędu $s$ = $\frac{s}{1-\beta_1^t}$
 	\item skoryguj obciążenie momentu drugiego rzędu $r$ = $\frac{r}{1-\beta_2^t}$
 	\item Zastosuj aktualizację wartości funkcji celu równą -$\epsilon$$\frac{s}{\sqrt{r}+\sigma}$.
@@ -189,8 +189,8 @@ W momencie pisania tej pracy algorytm Adam jest najczęściej rekomendowanym jak
 
 Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ albo $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji binarnej, występującym również w tej pracy, w kontekście oceny efektywności algorytmów można wyszczególnić następujące parametry:
 \begin{itemize}
-	\item \textit{Fałszywie pozytywna klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
-	\item \textit{Fałszywie negatywna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklasyfikowanych jako fałszywie negatywne, a należących do klasy obserwacji pozytywnych. 
+	\item \textit{Fałszywie dodatnia klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
+	\item \textit{Fałszywie ujemna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklasyfikowanych jako negatywne, a należących do klasy obserwacji pozytywnych. 
 	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
 	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne,
 \end{itemize}
@@ -199,11 +199,11 @@ oraz miary:
 	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy}) -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
 	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity}) -- $TPR = \frac{TP}{TP + FN}$.
 	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity}) -- $TNR = \frac{TN}{TN + FP}$.
-	\item \textit{Precyzja klasyfikacji} (ang. \textit{Precision}) -- $PPV = \frac{TP}{TP + FP}$.
-	\item \textit{Nieprecyzyjność klasyfikacji} (ang. \textit{Negative precision}) -- $NPV = \frac{TN}{TN + FN}$.
+	\item \textit{Wartość predykcyjna dodatnia} (ang. \textit{Precision}) -- $PPV = \frac{TP}{TP + FP}$.
+	\item \textit{Wartość predykcyjna ujemna} (ang. \textit{Negative precision}) -- $NPV = \frac{TN}{TN + FN}$.
 \end{itemize}
 
-W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR i PPV oraz minimalizowania FP, FN i NPV. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
+W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR, PPV i NPV oraz minimalizowania FP i FN. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
@@ -306,7 +306,7 @@ W celu selekcji cech można również stosować różnego rodzaju regresje, spec
 \label{equ:elasticNet}
 \end{equation}
 
-W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będącym pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek aby norma L2 wektora $w$ była minimalizowana, dzięki czemu wymuszane jest aby poszczególne współczynniki nie były za duże. W regresji LASSO stosowana jest norma L1, dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regrsji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
+W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będącym pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek aby \textit{norma L2} ($\left \| w \right \|_2 =\sqrt{ \sum_{k=1}^{n}\left |w_k  \right |^2}$) wektora $w$ była minimalizowana, dzięki czemu wymuszane jest aby poszczególne współczynniki nie były za duże. W regresji LASSO stosowana jest \textit{norma L1} ($\left \| w \right \|_1 = \sum_{k=1}^{n}\left |w_k  \right |$), dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regresji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
 
 W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą \textit{state-of-the-art} jest algorytm \textit{analizy składowych głównych} ) (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
 

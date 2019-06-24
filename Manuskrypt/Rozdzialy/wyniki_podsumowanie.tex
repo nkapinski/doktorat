@@ -39,7 +39,7 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 
 Otrzymane wartości MAE znajdują się w zakresie 0.64 do 1.10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inceptionv3, średni dystans między predykcją i wzorcem wyniósł $<0.92$. Najlepiej estymowanymi parametrami były TisE -- 0.67, TT -- 0.75 i TE -- 0.78. Najgorsze rezultaty natomiast otrzymano dla TU -- 0.91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej.
 
-W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (IncepionV3) i proponowaną przez autora tej pracy metodą (SVR).  
+W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (IncepionV3) i proponowaną przez autora tej pracy metodą z meta-regresją opartą o algorytm SVR (SVR).  
 
 \begin{table*}[t]
 	\caption{Test set results for the tendon healing progression.}
@@ -115,7 +115,7 @@ Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi ar
 	\begin{tabular}{l||c|c|c||c|c|c}
 		%\hline
 		& \multicolumn{3}{c}{\footnotesize{\textbf{sagittal}}} & \multicolumn{3}{c}{\footnotesize{\textbf{axial}}} \\
-		Architecture & \textbf{Accuracy} & Precision & Recall & \textbf{Accuracy} & Precision & Recall \\ \hline
+		Architecture & \textbf{Accuracy} & PPV & TPR & \textbf{Accuracy} & PPV & TPR \\ \hline
 		AlexNet & 0.846$\pm$00.087 & 0.92$\pm$00.08 & 0.78$\pm$00.11 & 0.843$\pm$00.075 & 0.93$\pm$00.06 & 0.73$\pm$00.11  \\ \hline
 		Inception-v3 & \textbf{0.916}$\pm$00.049 & 0.97$\pm$00.04 & 0.90$\pm$00.06 & 0.901$\pm$00.052 & 0.95$\pm$00.3 & 0.87$\pm$00.07 \\ \hline
 		ResNet-50 & 0.907$\pm$00.039 & 0.96$\pm$00.05 & 0.89$\pm$00.08 & \textbf{0.912}$\pm$00.046 & 0.95$\pm$00.04 & 0.88$\pm$00.06 \\ \hline
@@ -130,7 +130,7 @@ Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. 
 	\scriptsize
 	\setlength{\tabcolsep}{3pt}
 	\centering
-	\caption{5CV results for the tendon healing progress using end-to-end approach}
+	\caption{Wyniki predykcji wzorca odniesienia dla pacjentów testowych, dla danych z USG.}
 	\label{tab:usg_train_cross-validation}
 	\begin{tabular}{lc||c|c|c|c|c|c}
 		%\hline
@@ -377,7 +377,7 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. Na po
 	\end{tabular}
 \end{table}
 
-Naturalnie, nowa zmienna opisująca ocenę radiologa korelują z nową zmienną opisującą ocenę automatyczną. Fakt tej jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami. 
+Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną. Fakt ten jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami. 
 
 W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
 
@@ -443,13 +443,13 @@ W toku prac, zrealizowano również wszystkie cztery cele szczegółowe. Pierwsz
 
 Drugi cel, tj. "przetestowanie różnego rodzaju podejść związanych ze szkoleniem głębokich sieci neuronowych" zrealizowano poprzez zestawienie wyników działania nowej metody z wynikami alternatywnego podejścia tj. szkolenia sieci w oparciu o paradygmat end-to-end (zob. p. \ref{seq:end-to-end}). W zestawieniu z alternatywną metodą analizy obrazów RM, wykazano przewagę zaproponowanego podejścia, a dokładniej uzyskano lepsze rezultaty korelacji w każdym z sześciu ocenianych parametrów oraz dla czterech z nich, niższy absolutny błąd średni.
 
-Kolejny cel, tj. "Porównanie wyników oceny nowej metody z wynikami klasyfikacji bazującej na danych z Ultrasonografii" zrealizowano dołączając do pracy wyniki automatycznej interpretacji obrazów USG (zob. p. \ref{seq:comp-usg}). W szczególności wykazano możliwość synergii obu podejść, bazując na większej izotropowości danych USG i dobrych wyników oceny parametrów widocznych w płaszczyźnie strzałkowej.
+Kolejny cel, tj. "Porównanie wyników oceny nowej metody z wynikami klasyfikacji bazującej na danych z ultrasonografii" zrealizowano dołączając do pracy wyniki automatycznej interpretacji obrazów USG (zob. p. \ref{seq:comp-usg}). W szczególności wykazano możliwość synergii obu podejść, bazując na większej izotropowości danych USG i dobrych wyników oceny parametrów widocznych w płaszczyźnie strzałkowej.
 
 Finalnie, ostatni cel, tj. "porównanie wyników oceny nowej metody z oceną funkcjonalną, rutynowo stosowana do wspomagania rehabilitacji po urazie ścięgna" osiągnięto uzyskując unikalne dane pomiarów biomechanicznych i testu ATRS, a następnie zestawiając je z wynikami nowo-opracowanej metody (zob. \ref{seq:comp-biomechanics}). Pokazano przydatność wykonywania badań radiologicznych, przez wzgląd na odmienność niesionej informacji, jednocześnie określono potencjalny obszar optymalizacji w zakresie niewielkiej, ale istotnej korelacji z wynikami testu ATRS.  
 
 W ramach powyższych prac nad nowym podejściem do oceny procesu gojenia się ścięgna Achillesa w badaniach RM, całość zadań dotyczących głębokich sieci neuronowych została zrealizowana przez autora tej pracy. Pełnił on również rolę głównego badacza, projektując i współrealizując prace nad fuzją cech (w szczególności w ramach testów perceptronu wielowarstwowego i SVR jako typów meta-regresji). Autor tej pracy nadzorował również i planował eksperymenty grupy tworzącej metody bazujące na paradygmacie end-to-end oraz wykorzystywane do interpretacji obrazów USG, a następnie samodzielnie dokonał ich porównania z proponowanym w tej pracy podejściem. 
 
-Wszystkie wyniki mają charakter innowacyjny. Nie istnieje obecnie wedle najlepszej wiedzy autora tej pracy alternatywne podejście do usystematyzowanej i wyliczanej automatycznie oceny stanu gojenia się ścięgna Achillesa widocznego w badaniach RM. Rozprawa ta stanowi zatem kompleksowy opis obecnego \textit{state-of-the-art} dla przedmiotowego problemu. Biorąc pod uwagę, że w przedstawionym stanie wyniki oceny automatycznej korelują z oceną radiologa nawet na poziomie 0,85, a minimalny uzyskany absolutny błąd średni równy jest 0,56, krytyczne w opinii autora tej pracy staje się polepszenie wzorca odniesienia. W dalszym toku prac planowana jest zatem stała współpraca m.in. z radiologami celem realizacji ocen przez kolejnych specjalistów oraz wielo-ośrodkowe zbieranie nowych wolumenów danych. Planowane jest również przeprowadzenie badań w zakresie usprawnienia przetwarzania danych, w szczególności w kwestii automatycznej segmentacji ROI. Finalnie, praca ta stanowi również fundament pod rozpoczęcie nowych testów dotyczących pokrewnych zadań jak ocena gojenia się podobnych struktur typu więzadła stawu kolanowego, skokowego, barkowego, czy łokciowego. Polepszenie skuteczności wspomagania rehabilitacji w obszarze układu mięśniowo-szkieletowego stanowi według autora tej pracy ciekawe wyzwanie badawcze jak również ma wymiar praktyczny. Już teraz bowiem, według danych Krajowej Izby Fizjoterapeutów, po zwolnieniach z pracy dotyczących ciąży, zwolnienia na skutek dolegliwości mięśniowo-szkieletowych stanowią drugi powód absencji w pracy w Polsce.
+Wszystkie wyniki mają charakter innowacyjny. Nie istnieje obecnie wedle najlepszej wiedzy autora tej pracy alternatywne podejście do usystematyzowanej i wyliczanej automatycznie oceny stanu gojenia się ścięgna Achillesa widocznego w badaniach RM. Rozprawa ta stanowi zatem kompleksowy opis obecnego \textit{state-of-the-art} dla przedmiotowego problemu. Biorąc pod uwagę, że w przedstawionym stanie wyniki oceny automatycznej korelują z oceną radiologa nawet na poziomie 0,85, a minimalny uzyskany absolutny błąd średni równy jest 0,56, krytyczne w opinii autora tej pracy staje się polepszenie wzorca odniesienia. W dalszym toku prac planowana jest zatem stała współpraca m.in. z radiologami celem realizacji ocen przez kolejnych specjalistów oraz wielo-ośrodkowe zbieranie nowych wolumenów danych. Planowane jest również przeprowadzenie badań w zakresie usprawnienia przetwarzania danych, w szczególności w kwestii automatycznej segmentacji ROI. Finalnie, praca ta stanowi również fundament pod rozpoczęcie nowych testów dotyczących pokrewnych zadań jak ocena gojenia się podobnych struktur typu więzadeł stawu kolanowego, skokowego, barkowego, czy łokciowego. Polepszenie skuteczności wspomagania rehabilitacji w obszarze układu mięśniowo-szkieletowego stanowi według autora tej pracy ciekawe wyzwanie badawcze, jak również ma wymiar praktyczny. Już teraz bowiem, według danych Krajowej Izby Fizjoterapeutów, po zwolnieniach z pracy dotyczących ciąży, zwolnienia na skutek dolegliwości mięśniowo-szkieletowych stanowią drugi powód absencji w pracy w Polsce.
 %- jeden radiolog więc ankieta ok
 %- AlexNet uczy się bardziej generycznych cech niż ResNet, który zwraca uwagę na szczególy: https://www.researchgate.net/post/Can_AlexNet_be_a_better_feature_extractor_than_ResNet
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.18)  24 JUN 2019 11:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.6.18)  25 JUN 2019 10:25
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1009,9 +1009,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1031,7 +1028,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/USG-params.png, id=130, 217.41225pt x 200.54926pt>
 File: figures/USG-params.png Graphic file (type png)
 <use figures/USG-params.png>
-Package pdftex.def Info: figures/USG-params.png  used on input line 250.
+Package pdftex.def Info: figures/USG-params.png  used on input line 249.
 (pdftex.def)             Requested size: 242.5611pt x 223.75066pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1042,11 +1039,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [24 <./figures/USG-params.png>]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 271.
+(Font)              <10> on input line 270.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 271.
+(Font)              <7> on input line 270.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 271.
+(Font)              <5> on input line 270.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1980,7 +1977,7 @@ al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/no
 rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (141 pages, 7505574 bytes).
+Output written on thesis.pdf (141 pages, 7505373 bytes).
 PDF statistics:
  620 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

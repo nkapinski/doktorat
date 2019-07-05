@@ -1,28 +1,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces Parametry o\IeC {\'s}rodk\IeC {\'o}w cz\IeC {\k e}sto mierzonych w badaniach USG.\relax }}{24}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{56}% 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{56}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{75}% 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{77}% 
-\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0.01.\relax }}{82}% 
-\contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie wnioskowania dla r\IeC {\'o}\IeC {\.z}nych modeli regresji wytrenowanych w oparciu o dane z 3 sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedn\IeC {\k a} sekwencj\IeC {\k e} RM.\relax }}{84}% 
-\contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{87}% 
-\contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.\relax }}{88}% 
-\contentsline {table}{\numberline {5.7}{\ignorespaces Ocena dryfu krzywej \IeC {\l }\IeC {\k a}cz\IeC {\k a}cej minima lokalne warto\IeC {\'s}ci MAE w macierzach b\IeC {\l }\IeC {\k e}d\IeC {\'o}w z klas\IeC {\k a} przyj\IeC {\k e}t\IeC {\k a} jako tydzie\IeC {\'n} rehabilitacji.\relax }}{89}% 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{75}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{77}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0.01.\relax }}{82}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie wnioskowania dla r\IeC {\'o}\IeC {\.z}nych modeli regresji wytrenowanych w oparciu o dane z 3 sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedn\IeC {\k a} sekwencj\IeC {\k e} RM.\relax }}{84}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{87}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.\relax }}{88}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Ocena dryfu krzywej \IeC {\l }\IeC {\k a}cz\IeC {\k a}cej minima lokalne warto\IeC {\'s}ci MAE w macierzach b\IeC {\l }\IeC {\k e}d\IeC {\'o}w z klas\IeC {\k a} przyj\IeC {\k e}t\IeC {\k a} jako tydzie\IeC {\'n} rehabilitacji.\relax }}{89}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{100}% 
-\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{101}% 
-\contentsline {table}{\numberline {6.3}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci na zbiorze treningowym dla danych z USG.\relax }}{104}% 
-\contentsline {table}{\numberline {6.4}{\ignorespaces Wyniki predykcji wzorca odniesienia dla pacjent\IeC {\'o}w testowych, dla danych z USG.\relax }}{105}% 
-\contentsline {table}{\numberline {6.5}{\ignorespaces Por\IeC {\'o}wnanie wynik\IeC {\'o}w oceny automatycznej bazuj\IeC {\k a}cej na danych USG i RM na zbiorze testowym.\relax }}{106}% 
-\contentsline {table}{\numberline {6.6}{\ignorespaces Wyniki analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla 16-tu pomiar\IeC {\'o}w deficyt\IeC {\'o}w mi\IeC {\k e}\IeC {\'s}niowych w warunkach izometrii i izokinetyki. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{107}% 
-\contentsline {table}{\numberline {6.7}{\ignorespaces Wyniki analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla 16-tu pomiar\IeC {\'o}w deficyt\IeC {\'o}w mi\IeC {\k e}\IeC {\'s}niowych, oddzielnie dla pozycji kolana zgi\IeC {\k e}tego i wyprostowanego. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{108}% 
-\contentsline {table}{\numberline {6.8}{\ignorespaces Komponenty i ich udzia\IeC {\l }, wchodz\IeC {\k a}ce w sk\IeC {\l }ad nowych zmiennych opisuj\IeC {\k a}cych biomechanik\IeC {\k e}.\relax }}{109}% 
-\contentsline {table}{\numberline {6.9}{\ignorespaces Rezultaty analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-\IeC {\'s}cio parametrycznej ankiety. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{109}% 
-\contentsline {table}{\numberline {6.10}{\ignorespaces Korelacja mi\IeC {\k e}dzy ocen\IeC {\k a} radiologa, a ocena automatyczn\IeC {\k a}. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{110}% 
-\contentsline {table}{\numberline {6.11}{\ignorespaces Korelacja bada\IeC {\'n} biomechanicznych z testem ATRS. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{110}% 
-\contentsline {table}{\numberline {6.12}{\ignorespaces Korelacja bada\IeC {\'n} biomechanicznych i testu ATRS z badaniami radiologicznymi ocenionymi automatycznie i przez radiologa. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{111}% 
+\contentsline {table}{\numberline {6.1}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego.\relax }}{100}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Test set results for the tendon healing progression.\relax }}{101}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Wyniki szkolenia si\IeC {\k e} sieci na zbiorze treningowym dla danych z USG.\relax }}{104}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Wyniki predykcji wzorca odniesienia dla pacjent\IeC {\'o}w testowych, dla danych z USG.\relax }}{105}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Por\IeC {\'o}wnanie wynik\IeC {\'o}w oceny automatycznej bazuj\IeC {\k a}cej na danych USG i RM na zbiorze testowym.\relax }}{106}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Wyniki analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla 16-tu pomiar\IeC {\'o}w deficyt\IeC {\'o}w mi\IeC {\k e}\IeC {\'s}niowych w warunkach izometrii i izokinetyki. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{107}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Wyniki analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla 16-tu pomiar\IeC {\'o}w deficyt\IeC {\'o}w mi\IeC {\k e}\IeC {\'s}niowych, oddzielnie dla pozycji kolana zgi\IeC {\k e}tego i wyprostowanego. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{108}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Komponenty i ich udzia\IeC {\l }, wchodz\IeC {\k a}ce w sk\IeC {\l }ad nowych zmiennych opisuj\IeC {\k a}cych biomechanik\IeC {\k e}.\relax }}{109}
+\contentsline {table}{\numberline {6.9}{\ignorespaces Rezultaty analizy czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-\IeC {\'s}cio parametrycznej ankiety. Oznaczono \IeC {\l }adunki wi\IeC {\k e}ksze ni\IeC {\.z} 0,7.\relax }}{109}
+\contentsline {table}{\numberline {6.10}{\ignorespaces Korelacja mi\IeC {\k e}dzy ocen\IeC {\k a} radiologa, a ocena automatyczn\IeC {\k a}. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{110}
+\contentsline {table}{\numberline {6.11}{\ignorespaces Korelacja bada\IeC {\'n} biomechanicznych z testem ATRS. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{110}
+\contentsline {table}{\numberline {6.12}{\ignorespaces Korelacja bada\IeC {\'n} biomechanicznych i testu ATRS z badaniami radiologicznymi ocenionymi automatycznie i przez radiologa. Oznaczone wsp. korelacji s\IeC {\k a} istotne z $p$ $<$ 0,05 dla $N$=30.\relax }}{111}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

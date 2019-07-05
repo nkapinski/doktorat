@@ -243,13 +243,32 @@ Zjawiska te zależą od częstotliwości fali, która propaguje się w ośrodku 
 \begin{equation}
 Z = \rho c = \sqrt{\epsilon \rho},
 \end{equation}
-gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka, a $\epsilon$ to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{USG-params}. 
-\begin{figure}[h!]
+gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka, a $\epsilon$ to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{tab:USG-params}. 
+
+\begin{table}[h!]
+	\setlength{\tabcolsep}{14pt}
 	\centering
-	\includegraphics[width=0.55\textwidth]{figures/USG-params.png}
 	\caption{Parametry ośrodków często mierzonych w badaniach USG.}
-	\label{USG-params}
-\end{figure}
+	\scriptsize
+	\label{tab:USG-params}
+	\begin{tabular}{l | l | l | l | l }
+		%\hline
+		Ośrodek  & Moduł sprężystości  & Gęstość  & Prędkość  & Impedancja akustyczna  \\  
+		& [kg/m/s$^2\times10^{-8}$] & [kg/m$^3$] & [m/s] & [kg/m$^2$/s$^2\times10^{-8}$] \\ \hline \hline
+		Powietrze   & 0,0000134 & 1,2 & 330 & 0,0004 \\ \hline
+		Woda (20$^\circ$ C) & 2,19 & 1000 & 1480 & 1,48  \\ \hline
+		Tkanki miękkie & 2,51 & 1060 & 1540 & 1,63  \\ \hline
+		Tkanka tłuszczowa & 2,0 & 952 & 1450 & 1,38  \\ \hline
+		Wątroba & 2,54 & 1060 & 1550 & 1,64  \\ \hline
+		Mięśnie wzdłużne & 2,74 & 1080 & 1592 & 1,70  \\ \hline
+		Mięśnie poprzecz. & 2,80 & 1080 & 1610 & 1,74  \\ \hline
+		Mózg & 2,40 & 994 & 1550 & 1,55  \\ \hline
+		Śledziona & 2,59 & 1045 & 1578 & 1,64  \\ \hline
+		Krew & 2,47 & 1057 & 1057 & 1,62  \\ \hline
+		Kość & 32,0 & 1912 & 4080 & 7,8  \\ \hline
+		Płuca & 0,169 & 400 & 650 & 0,26  \\ \hline
+	\end{tabular}
+\end{table}
 
 Dla przykładu, do zjawiska załamania lub odbicia dochodzi kiedy fala pada na granice dwóch ośrodków o różnych impedancjach akustycznych $Z_1$ i $Z_2$. Dla fali prostopadłej zależność ta opisana jest następująco:
 \begin{equation}

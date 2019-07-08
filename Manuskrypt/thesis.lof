@@ -18,7 +18,7 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces B\IeC {\l }\IeC {\k a}d top-5 klasyfikacji obiekt\IeC {\'o}w w kolejnych latach uzyskiwany przez zwyci\IeC {\k e}zc\IeC {\'o}w konkursu ILSVRC\relax }}{52}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Schemat architektury AlexNet.\relax }}{53}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{54}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU.\relax }}{55}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Modu\IeC {\l }y incepcji o g\IeC {\l }\IeC {\k e}boko\IeC {\'s}ci jednego (po lewej) i dw\IeC {\'o}ch stopni (po prawej).\relax }}{56}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{56}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{58}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{59}

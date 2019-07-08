@@ -345,13 +345,13 @@ Zarówno przekleństwo wymiarowości, jak i wcześniej opisany problem nadmierne
 Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie jak u protoplasty tj. architektury LeNet, składają się z dwóch głównych części: ekstraktora cech i klasyfikatora. W porównaniu jednak do pierwszych topologii, różnorodność warstw uległa zwiększeniu. Do najczęściej stosowanych komponentów można zaliczyć:
 \begin{itemize}
 	\item \textit{warstwy konwolucyjne} -- grupują filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, skupiska, obiekty);
-	\item \textit{warstwy max-pool} -- stosowane do nieliniowej redukcji wymiarowości. Z obszaru $n\times$$n$ w obrazie wyliczana jest największa wartość \footnote{W uzasadnionych przypadkach stosuje się również obliczanie średniej, normy $L2$ = $\left \| x \right \| = \sqrt{\sum_{k=1}^{n}\left |x_k  \right |^2}$ i innych współczynników.} $I$($x$, $y$). W praktyce zazwyczaj $n$=2, podobnie jak wartość \textit{kroku} tj. odstępu pomiędzy kolejnymi próbkowaniami funkcji $I$.
+	\item \textit{warstwy max-pool} -- stosowane do nieliniowej redukcji wymiarowości. Z obszaru $n\times$$n$ w obrazie wyliczana jest największa wartość \footnote{W uzasadnionych przypadkach stosuje się również obliczanie średniej (\textit{Avg-pool}), normy $L2$ = $\left \| x \right \| = \sqrt{\sum_{k=1}^{n}\left |x_k  \right |^2}$ i innych współczynników.} $I$($x$, $y$). W praktyce zazwyczaj $n$=2, podobnie jak wartość \textit{kroku} tj. odstępu pomiędzy kolejnymi próbkowaniami funkcji $I$.
 	\item \textit{warstwy aktywacji} -- zawierające funkcje aktywacji neuronów. We współczesnych architekturach zamiast funkcji sigmoidalnych, czy progowych stosuje się najczęściej funkcję ReLU:
 	\begin{equation}
 		f(x) = \max(0, x).
 	\end{equation}
 	Jest ona mniej wymagająca obliczeniowo niż funkcja sigmoid, a dla współczesnych topologii o dużej liczbie parametrów testy empiryczne wykazały, że równie dobrze wpływa na uzyskiwane wyniki dokładności (zob. \cite{Krizhevsky2012}). 
-	\item \textit{warstwy fully connected}, FC -- składające się z neuronów, z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze.
+	\item \textit{warstwy gęsta lub z ang. fully connected}, FC -- składające się z neuronów, z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze.
 	\item \textit{warstwy normalizacji}\footnote{Coraz rzadziej stosowane w praktyce z uwagi na znikomy wpływ na rezultaty.} -- normalizujące wyjście poprzedzającej warstwy do pewnego określonego przedziału, zazwyczaj (-1,1). Przykładem jest operacja \textit{Local Response Normalization} dana wzorem:
 	\begin{equation}
 	\label{DLnormEquation}
@@ -420,26 +420,51 @@ Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymac
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.8\textwidth]{figures/InceptionModules.png}
-	\caption{Topologia architektury AlexNet z podziałem na dwa akceleratory GPU.}
+	\caption{Moduły incepcji o głębokości jednego (po lewej) i dwóch stopni (po prawej).}
 	\label{GoogleNetInceptionModules}
 \end{figure}
 
 (a) przedstawia naiwną formę modułu incepcji, gdzie grupowane są operacje filtrów z maską o wymiarach 5$\times$5, 3$\times$3, 1$\times$1 oraz operacja max-pool. (b) prezentuje koncepcję zoptymalizowaną obliczeniowo gdzie filtry z maską 1$\times$1 służą do redukcji wymiarowości i używane są bezpośrednio przed splotami z bardziej wymagającymi obliczeniowo splotami 5$\times$5 i 3$\times$3. 
 
-Przy pomocy złożenia różnego rodzaju modułów incepcji otrzymano topologię zaprezentowaną na Rys. \ref{GoogleNetTopo}
+Przy pomocy złożenia różnego rodzaju modułów incepcji otrzymano topologię zaprezentowaną na Rys. \ref{GoogleNetTopo}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/GoogleNet.png}
 	\caption{Topologia architektury GoogleNet}
 	\label{GoogleNetTopo}
 \end{figure}
-
-Dokładne zestawienie parametrów znajduje się w Tabeli \ref{GoogleNetParams}
+Zestawienie jej parametrów znajduje się w Tabeli \ref{GoogleNetParams}.
 
 \begin{table}[h!]
+	\setlength{\tabcolsep}{14pt}
 	\centering
-	\includegraphics[width=1\textwidth]{figures/GoogleNetparams.png}
 	\caption{Parametry architektury GoogleNet}
+	\scriptsize
+	\label{tab:USG-params}
+	\begin{tabular}{l | c | c | c | c }
+		%\hline
+		Typ warstwy  & Wymiar  & Wymiar & Głębokość & Liczba   \\  
+		& maski/krok & wyjściowy &&parametrów\\
+	    \hline \hline
+		Konwolucyjna   & 7$\times$7/2 & 112$\times$112$\times$64 & 1 & 2,7K \\ \hline
+		Max-pool & 3$\times$3/2 & 56$\times$56$\times$64 & 0 & --  \\ \hline
+		Konwolucyjna & 3$\times$3/2 & 56$\times$56$\times$192 & 2 & 112K  \\ \hline
+		Max-pool & 3$\times$3/2 & 28$\times$28$\times$192 & 0 & --  \\ \hline
+		M. incepcji & -- & 28$\times$28$\times$256 & 2 & 159K  \\ \hline
+		M. incepcji & -- & 28$\times$28$\times$480 & 2 & 380K  \\ \hline
+		Max-pool & 3$\times$3/2 & 14$\times$14$\times$480 & 0 & --  \\ \hline
+		M. incepcji & -- & 14$\times$14$\times$512 & 2 & 364K  \\ \hline
+		M. incepcji & -- & 14$\times$14$\times$512 & 2 & 437K  \\ \hline
+		M. incepcji & -- & 14$\times$14$\times$512 & 2 & 463K  \\ \hline
+		M. incepcji & -- & 14$\times$14$\times$528 & 2 & 580K  \\ \hline
+		M. incepcji & -- & 14$\times$14$\times$832 & 2 & 840K  \\ \hline
+		Max-pool & 3$\times$3/2 & 7$\times$7$\times$832 & 0 & --  \\ \hline
+		M. incepcji & -- & 7$\times$7$\times$832 & 2 & 1072K  \\ \hline
+		M. incepcji & -- & 7$\times$7$\times$1024 & 2 & 1388K  \\ \hline
+		Avg-pool & 7$\times$7/2 & 1$\times$1$\times$1024 & 0 & --  \\ \hline
+		Dropout (40\%) & -- & 1$\times$1$\times$1024 & 0 & --  \\ \hline
+		Warstwa aktywacji & -- & 1$\times$1$\times$1000 & 1 & 1000K  \\ \hline
+	\end{tabular}
 	\label{GoogleNetParams}
 \end{table}
 

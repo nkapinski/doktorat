@@ -320,7 +320,7 @@ W szczególności, wyliczono różne modele regresji poczynając od liniowej, gd
 			&Corr &0,53&0,45&0,12&0,58&0,15&0,57\\
 			\hline 
 			
-			\textbf{baseline}& MAE & \textbf{1,24}$\pm$0,16 & 0,82$\pm$0,09 & 0,75$\pm$0,08 & 1,06$\pm$0,10 & \textbf{0,90}$\pm$0,09 & \textbf{0,96}$\pm$0,10 \\
+			Baseline& MAE & \textbf{1,24}$\pm$0,16 & 0,82$\pm$0,09 & 0,75$\pm$0,08 & 1,06$\pm$0,10 & \textbf{0,90}$\pm$0,09 & \textbf{0,96}$\pm$0,10 \\
 			&MAX-AE & 3,54 & 2,46 & \textbf{1,82} & 2,70 & \textbf{2,13} & \textbf{2,18}\\
 			&Corr   & \textbf{0,61} & \textbf{0,64} &-0,08 & 0,55 & 0,55 & 0,65\\
 			\hline
@@ -353,38 +353,38 @@ Wyselekcjonowane podzbiory wykorzystano w kolejnym kroku eksperymentu mającym n
 
 Dlatego porównano różne metody (liniowe i nieliniowe) finalnej meta-regresji cech tj.: metodę wektorów nośnych (SVR -- od ang. \textit{Support Vector Regression}) opisaną w \cite{SVR_drucker}, wielowarstwowy perceptron liniowy z 4 neuronami w warstwie ukrytej (MPR -- od ang. \textit{Multilayer Perceptron Regression}) oraz las losowy składający się ze 100 drzew decyzyjnych (RF -- od ang. Random Forest). Wyniki zestawiono w Tab. \ref{tab:trainset} z rezultatami liniowej regresji (LR -- od ang. Linear regression) i regresji nieliniowej drugiego stopnia (Poly -- od ang. Polynomial). Trening metod i dobór hiperparametrów wykonano z wykorzystaniem kroswalidacji z podziałem na 4 segmenty i zbioru treningowych pacjentów. Wyniki oceny zestawiono w Tab. \ref{tab:trainset}.
 
-\begin{table*}[h]
+\begin{table*}[]
 	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
 			
-			\hline
+			\hline \hline
 			\multirow{3}{*}{Poly}
-			& MAE & $1.00\pm0.03$ & $0.62\pm0.02$ & $0.73\pm0.02$ & $0.76\pm0.02$ & $0.89\pm0.03$ & $0.70\pm0.02$\\
-			& MAX-AE & 3.53 & 2.35 & 3.62 & 2.49 & 2.90 & 2.64 \\
-			& Corr   & 0.87 & 0.82 & 0.46 & 0.80 & 0.65 & 0.87 \\
+			& MAE & $1,00\pm0,03$ & $0,62\pm0,02$ & $0,73\pm0,02$ & $0,76\pm0,02$ & $0,89\pm0,03$ & $0,70\pm0,02$\\
+			& MAX-AE & 3,53 & 2,35 & 3,62 & 2,49 & 2,90 & 2,64 \\
+			& Corr   & 0,87 & 0,82 & 0,46 & 0,80 & 0,65 & 0,87 \\
 			\hline
 			\multirow{3}{*}{SVR}
-			& MAE & $0.88\pm0.01$ & $0.59\pm0.01$ & $0.67\pm0.01$ & $0.69\pm0.01$ & $0.83\pm0.01$ & $0.63\pm0.01$\\
-			& MAX-AE & 3.73 & 2.32 & 3.83 & 2.50 & 2.95 & 2.75 \\
-			& Corr   & 0.89 & 0.85 & 0.59 & 0.83 & 0.72 & 0.88 \\
+			& MAE & $0,88\pm0,01$ & $0,59\pm0,01$ & $0,67\pm0,01$ & $0,69\pm0,01$ & $0,83\pm0,01$ & $0,63\pm0,01$\\
+			& MAX-AE & 3,73 & 2,32 & 3,83 & 2,50 & 2,95 & 2,75 \\
+			& Corr   & 0,89 & 0,85 & 0,59 & 0,83 & 0,72 & 0,88 \\
 			\hline
 			\multirow{3}{*}{LR}
-			& MAE & $1.00\pm0.04$ & $0.62\pm0.02$ & $0.74\pm0.02$ & $0.74\pm0.02$ & $0.90\pm0.03$ & $0.69\pm0.02$\\
-			& MAX-AE & 3.52 & 2.39 & 3.77 & 2.52 & 2.88 & 2.65 \\
-			& Corr   & 0.87 & 0.83 & 0.46 & 0.80 & 0.65 & 0.87 \\
+			& MAE & $1,00\pm0,04$ & $0,62\pm0,02$ & $0,74\pm0,02$ & $0,74\pm0,02$ & $0,90\pm0,03$ & $0,69\pm0,02$\\
+			& MAX-AE & 3,52 & 2,39 & 3,77 & 2,52 & 2,88 & 2,65 \\
+			& Corr   & 0,87 & 0,83 & 0,46 & 0,80 & 0,65 & 0,87 \\
 			\hline
 			\multirow{3}{*}{MPR}
-			& MAE & $1.00\pm0.04$ & $0.63\pm0.02$ & $0.74\pm0.02$ & $0.71\pm0.02$ & $0.88\pm0.03$ & $0.96\pm0.02$\\
-			& MAX-AE & 3.47 & 2.51 & 3.57 & 2.52 & 2.86 & 2.65 \\
-			& Corr   & 0.86 & 0.83 & 0.46 & 0.80 & 0.65 & 0.88 \\
+			& MAE & $1,00\pm0,04$ & $0,63\pm0,02$ & $0,74\pm0,02$ & $0,71\pm0,02$ & $0,88\pm0,03$ & $0,96\pm0,02$\\
+			& MAX-AE & 3,47 & 2,51 & 3,57 & 2,52 & 2,86 & 2,65 \\
+			& Corr   & 0,86 & 0,83 & 0,46 & 0,80 & 0,65 & 0,88 \\
 			\hline
 			 \multirow{3}{*}{RF}
-			 & MAE & $0.32\pm0.04$ & $0.21\pm0.02$ & $0.25\pm0.03$ & $0.25\pm0.02$ & $0.31\pm0.03$ & $0.23\pm0.02$\\
-			 & MAX-AE & 1.24 & 0.82 & 1.33 & 0.89 & 1.03 & 0.92 \\
-			 & Corr   & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 & 0.99 \\
+			 & MAE & $0,32\pm0,04$ & $0,21\pm0,02$ & $0,25\pm0,03$ & $0,25\pm0,02$ & $0,31\pm0,03$ & $0,23\pm0,02$\\
+			 & MAX-AE & 1,24 & 0,82 & 1,33 & 0,89 & 1,03 & 0,92 \\
+			 & Corr   & 0,99 & 0,99 & 0,99 & 0,99 & 0,99 & 0,99 \\
 			 \hline
 		\end{tabular}
 	\end{center}
@@ -393,55 +393,55 @@ Dlatego porównano różne metody (liniowe i nieliniowe) finalnej meta-regresji 
 
 Ponownie wykorzystano metryki średniego błędu absolutnego (MAE), maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-fishera (Corr). Najlepszy rezultat dla każdego z parametrów uzyskano dla lasu losowego, jednak w przypadku tego algorytmu (pomimo wielu prób z różną liczbą drzew decyzyjnych) występuje efekt nadmiernego dopasowania, co można zaobserwować analizując wyniki ze zbioru testowego zestawione w Tab. \ref{tab:testset}. 
 
-\begin{table*}[h]
-	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego.}
+\begin{table*}[]
+	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki uzyskane przez algorytmy meta-regresji z wyłączeniem RF, dla którego występuje efekt przeuczenia.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
 			
-			\hline
+			\hline \hline
 			\multirow{3}{*}{Poly}
-			& MAE & $1.15\pm0.13$ & $0.57\pm0.07$ & $0.75\pm0.08$ & $0.94\pm0.10$ & $0.92\pm0.09$ & $0.94\pm0.10$\\
-			& MAX-AE & 2.67 & 1.78 & 1.81 & 2.50 & 2.12 & 2.39 \\
-			& Corr   & 0.82 & 0.83 & 0.25 & 0.71 & 0.63 & 0.78 \\
+			& MAE & $1,15\pm0,13$ & $0,57\pm0,07$ & $0,75\pm0,08$ & $0,94\pm0,10$ & $0,92\pm0,09$ & \textbf{0,94}$\pm0,10$\\
+			& MAX-AE & 2,67 & 1,78 & 1,81 & \textbf{2,50} & 2,12 & 2,39 \\
+			& Corr   & 0,82 & 0,83 & 0,25 & 0,71 & 0,63 & 0,78 \\
 			\hline
 			\multirow{3}{*}{SVR}
-			& MAE & $1.05\pm0.12$ & $0.56\pm0.06$ & $0.75\pm0.08$ & $0.91\pm0.10$ & $0.91\pm0.09$ & $0.94\pm0.10$\\
-			& MAX-AE & 2.62 & 1.82 & 1.92 & 2.54 & 2.01 & 2.38 \\
-			& Corr   & 0.85 & 0.85 & 0.31 & 0.72 & 0.65 & 0.80 \\
+			& MAE & \textbf{1,05}$\pm0,12$ & $0,56\pm0,06$ & $0,75\pm0,08$ & $0,91\pm0,10$ & $0,91\pm0,09$ & \textbf{0,94}$\pm0,10$\\
+			& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & \textbf{2,01} & 2,38 \\
+			& Corr   & \textbf{0,85} & \textbf{0,85} & \textbf{0,31} & 0,72 & \textbf{0,65} & \textbf{0,80} \\
 			\hline
 			\multirow{3}{*}{LR}
-			& MAE & $1.15\pm0.13$ & $0.55\pm0.06$ & $0.74\pm0.08$ & $0.90\pm0.10$ & $0.93\pm0.09$ & $0.97\pm0.10$\\
-			& MAX-AE & 2.60 & 1.78 & 1.81 & 2.54 & 2.04 & 2.38 \\
-			& Corr   & 0.84 & 0.84 & 0.18 & 0.71 & 0.62 & 0.78 \\
+			& MAE & $1,15\pm0,13$ & \textbf{0,55}$\pm0,06$ & \textbf{0,74}$\pm0,08$ & \textbf{0,90}$\pm0,10$ & $0,93\pm0,09$ & $0,97\pm0,10$\\
+			& MAX-AE & \textbf{2,60} & 1,78 & 1,81 & 2,54 & 2,04 & 2,38 \\
+			& Corr   & 0,84 & 0,84 & 0,18 & 0,71 & 0,62 & 0,78 \\
 			\hline
 			\multirow{3}{*}{MPR}
-			& MAE & $1.13\pm0.12$ & $0.57\pm0.06$ & $0.74\pm0.08$ & $0.92\pm0.11$ & $0.91\pm0.09$ & $0.96\pm0.10$\\
-			& MAX-AE & 2.63 & 1.77 & 1.78 & 2.54 & 2.04 & 2.40 \\
-			& Corr   & 0.83 & 0.83 & 0.20 & 0.73 & 0.63 & 0.77 \\			
+			& MAE & $1,13\pm0,12$ & $0,57\pm0,06$ & \textbf{0,74}$\pm0,08$ & $0,92\pm0,11$ & $0,91\pm0,09$ & $0,96\pm0,10$\\
+			& MAX-AE & 2,63 & \textbf{1,77} & \textbf{1,78} & 2,54 & 2,04 & 2,40 \\
+			& Corr   & 0,83 & 0,83 & 0,20 & \textbf{0,73} & 0,63 & 0,77 \\			
 			\hline
 			\multirow{3}{*}{RF}
-			& MAE & $1.12\pm0.13$ & $0.55\pm0.06$ & $0.74\pm0.08$ & $0.90\pm0.11$ & $0.93\pm0.09$ & $0.94\pm0.10$\\
-			& MAX-AE & 2.73 & 1.77 & 1.78 & 2.50 & 2.12 & 2.27 \\
-			& Corr   & 0.83 & 0.84 & 0.37 & 0.71 & 0.61 & 0.78 \\
+			& MAE & $1,12\pm0,13$ & $0,55\pm0,06$ & \textbf{0,74}$\pm0,08$ & $0,90\pm0,11$ & $0,93\pm0,09$ & $0,94\pm0,10$\\
+			& MAX-AE & 2,73 & 1,77 & 1,78 & 2,50 & 2,12 & 2,27 \\
+			& Corr   & 0,83 & 0,84 & 0,37 & 0,71 & 0,61 & 0,78 \\
 			\hline
-			\multirow{3}{*}{baseline limited} 
-			& MAE & $1.24\pm{0.16}$ & $0.82\pm{0.09}$ & $0.75\pm{0.08}$ & $1.06\pm{0.10}$ & $0.90\pm{0.09}$ & $0.96\pm{0.10}$ \\
-			&MAX-AE & 3.54 & 2.46 & 1.82 & 2.70 & 2.13 & 2.18\\
-			&Corr   & 0.61 & 0.64 &-0.08 & 0.55 & 0.55 & 0.65\\
+			\multirow{3}{*}{Baseline} 
+			& MAE & $1,24\pm{0,16}$ & $0,82\pm{0,09}$ & $0,75\pm{0,08}$ & $1,06\pm{0,10}$ & \textbf{0,90}$\pm{0,09}$ & $0,96\pm{0,10}$ \\
+			&MAX-AE & 3,54 & 2,46 & 1,82 & 2,70 & 2,13 & \textbf{2,18}\\
+			&Corr   & 0,61 & 0,64 &-0,08 & 0,55 & 0,55 & 0,65\\
 
 		\end{tabular}
 	\end{center}
 	\label{tab:testset}
 \end{table*}
 
-W zestawieniu z oceną bazującą tylko na cechach DL (baseline limited). W tym porównaniu nawet wyniki uzyskane z modelu liniowej regresji bazującej na fuzji cech pozwalają na znaczącą poprawę rezultatów w każdym z parametrów w przypadku korelacji, w parametrach, SCT, TT, STE i TU dla MAX-AE oraz SCT, TT, i TE dla MAE. Wśród wszystkich oprócz RF algorytmów, należy zwrócić uwagę, że metodą meta-regresji, która uzyskała sumarycznie najwięcej najlepszych wyników Corr, MAE i MAX-AE okazała się SVR, co może sugerować potwierdzenie występowania niewielkich nieliniowych zależności w ocenie radiologa. 
+W tym porównaniu nawet wyniki uzyskane z modelu liniowej regresji bazującej na fuzji cech pozwalają na znaczącą poprawę rezultatów, w stosunku do poziomu odniesienia (baseline - zob. Tab. \ref{tab:H_testset}), w każdym z parametrów w przypadku korelacji, w parametrach, SCT, TT, STE i TU dla MAX-AE oraz SCT, TT, i TE dla MAE. Różnice w wynikach oceny na zbiorze testowym i treningowym wskazują na przeuczenie algorytmu RF, dlatego został on wyeliminowany z dalszych porównań. Wśród pozostałych, rezultaty są porównywalne, jednak metodą meta-regresji, która uzyskała sumarycznie najwięcej najlepszych wyników Corr, MAE i MAX-AE okazała się SVR, co może sugerować potwierdzenie występowania niewielkich nieliniowych zależności w ocenie radiologa. 
 
-Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów opisujących tkanki wewnątrz ROI. Są to cechy bardziej odporne na wspomniane wcześniej zaburzenia procesu gojenia, które można ogólnie nazwać szumem w sygnale gojenia (np. znaczące zwiększenie się obrzęku na skutek temperatury lub wysiłku fizycznego). W szczególności cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo, zwiększona liczba cech DL zwiększa poziom zachowywanej informacji, co ma wpływ na ogólną ocenę jak i w szczególności na parametr TisE zależny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje znacząco poniżej 0.5. Wynik ten będzie dyskutowany w dalszej części tej rozprawy.
+Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów opisujących tkanki wewnątrz ROI. Są to cechy bardziej odporne na wspomniane wcześniej zaburzenia procesu gojenia, które można ogólnie nazwać szumem w sygnale gojenia (np. znaczące zwiększenie się obrzęku na skutek temperatury lub wysiłku fizycznego). W szczególności cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo, zwiększona liczba cech DL podnosi poziom zachowywanej informacji, co ma wpływ na ogólną ocenę jak i w szczególności na parametr TisE zależny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje poniżej 0,5. Wynik ten będzie dyskutowany w dalszej części tej rozprawy.
 
-Dodatkowo, dla lepszego zrozumienia różnic między obszarami objętymi cechami DL i z ROI wykonano szereg eksperymentów i analiz w celu wizualizacji obszaru zainteresowania sieci neuronowych. Przykład znajduje się na Rys. \ref{fig:XAI}.  
-\begin{figure}[h]
+Dla lepszego zrozumienia różnic między obszarami objętymi cechami DL i z ROI wykonano szereg eksperymentów i analiz w celu wizualizacji obszaru zainteresowania sieci neuronowych. Przykład znajduje się na Rys. \ref{fig:XAI}.  
+\begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/XAI.png}
 	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.}\label{fig:XAI}
@@ -466,12 +466,12 @@ Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim 
 \begin{table*}[]
 	\caption{Ocena dryfu krzywej łączącej minima lokalne wartości MAE w macierzach błędów z klasą przyjętą jako tydzień rehabilitacji.}
 	\begin{center}
-		\begin{tabular}{l||c|c|c|c|c|c|}
-			\hline
+		\begin{tabular}{l||c|c|c|c|c|c}
+		
 			& \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
-			\hline
+			\hline \hline
 			$PP_d$ &18&10&42&13&30&17\\	
-			\hline		
+					
 		\end{tabular}
 	\end{center}
 	\label{tab:dryf_meas}

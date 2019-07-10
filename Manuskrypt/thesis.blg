@@ -8,24 +8,8 @@ Warning--entry type for "START" isn't style-file defined
 --line 95 of file refs.bib
 Warning--entry type for "CMC" isn't style-file defined
 --line 105 of file refs.bib
-Warning--to sort, need author or key in ObrazowanieMedyczne
-Warning--to sort, need author or key in Q&AinMRI
 Warning--to sort, need author or key in GEVoluson
-Warning--to sort, need author or key in GlowiceUSG
-Warning--to sort, need author or key in Butterfly2018
-Warning--to sort, need author or key in US4US
-Warning--to sort, need author or key in NVIDIA-CLARA
-Warning--to sort, need author or key in Vicon
-Warning--to sort, need author or key in BTS
-Warning--to sort, need author or key in KISTLER
-Warning--to sort, need author or key in Visual3D
-Warning--to sort, need author or key in AnyBody
-Warning--to sort, need author or key in Adams
-Warning--to sort, need author or key in TensorRT
-Warning--to sort, need author or key in ResNetXoverview
-Warning--to sort, need author or key in NVIDIApanel
 Warning--to sort, need author or key in MedicalImageNet
-Warning--to sort, need author or key in MGH
 Warning--can't use both author and editor fields in Gomes2013
 Warning--there's a number but no volume in Curie1880
 Warning--empty booktitle in Koch2017AutomatedHT
@@ -33,4 +17,4 @@ Warning--empty institution in CIFAR
 Warning--can't use both author and editor fields in Nowinski_Borucki_2014
 Warning--empty institution in Rosenblatt1957
 Warning--empty journal in Etiologia
-(There were 28 warnings)
+(There were 12 warnings)

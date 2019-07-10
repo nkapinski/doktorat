@@ -1,116 +1,46 @@
 \begin{thebibliography}{100}
 
-\bibitem{Adams}
-Adams msc software corp.
-\newblock Accessed: 2018-07-23.
-
-\bibitem{AnyBody}
-Anybody tech.
-\newblock Accessed: 2018-07-23.
-
-\bibitem{BTS}
-Bts systems.
-\newblock Accessed: 2018-07-23.
-
-\bibitem{MGH}
-Deep learning: The next step in applied healthcare data.
-\newblock
-  \url{https://insights.samsung.com/2016/07/12/deep-learning-the-next-step-in-applied-healthcare-data/}.
-\newblock Accessed: 2018-22-05.
-
-\bibitem{ObrazowanieMedyczne}
-Fizyka wobec wyzwań xxi wieku -- obrazowanie medyczne.
-\newblock Accessed: 2018-07-30.
-
-\bibitem{NVIDIApanel}
-From challenges to impact of machine learning in clinical practice.
-\newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
-\newblock Accessed: 2018-22-05.
-
 \bibitem{GEVoluson}
-Ge healthcare.
-\newblock Accessed: 2018-06-08.
-
-\bibitem{KISTLER}
-Kistler systems.
-\newblock Accessed: 2018-07-23.
+G{E} {H}ealthcare.
+\newblock
+  \url{http://www3.gehealthcare.com/en/products/categories/ultrasound/voluson}.
+\newblock Accessed: 2019-06-08.
 
 \bibitem{MedicalImageNet}
-Medical image net.
+Medical {I}mage {N}et {P}roject.
 \newblock \url{http://langlotzlab.stanford.edu/projects/medical-image-net/}.
-\newblock Accessed: 2018-22-05.
-
-\bibitem{Butterfly2018}
-Meet iq. whole body imaging. under 2k. usd.
-\newblock Accessed: 2018-07-30.
-
-\bibitem{TensorRT}
-Nvidia tensorrt.
-\newblock \url{https://developer.nvidia.com/tensorrt}.
-\newblock Accessed: 2018-22-05.
-
-\bibitem{ResNetXoverview}
-An overview of resnet and its variants.
-\newblock
-  \url{https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035}.
-\newblock Accessed: 2018-22-05.
-
-\bibitem{NVIDIA-CLARA}
-Project clara: Nvidia supercomputing platform redefines medical imaging.
-\newblock \url{https://blogs.nvidia.com/blog/2018/03/28/ai-healthcare-gtc/}.
-\newblock Accessed: 2018-07-30.
-
-\bibitem{Q&AinMRI}
-Queastions and answears in mri.
-\newblock Accessed: 2018-07-30.
-
-\bibitem{GlowiceUSG}
-Typy głowic stosowanych w usg.
-\newblock Accessed: 2018-06-08.
-
-\bibitem{US4US}
-Us4us -- ultrasound r\&d in medicine, biology and industry.
-\newblock \url{http://us4us.eu/}.
-\newblock Accessed: 2018-07-30.
-
-\bibitem{Vicon}
-Vicon systems.
-\newblock Accessed: 2018-07-23.
-
-\bibitem{Visual3D}
-Visual 3d - c motion.
-\newblock Accessed: 2018-07-23.
+\newblock Accessed: 2019-22-05.
 
 \bibitem{DBLP:journals/corr/abs-1005-4020}
 Salem~Saleh Al{-}amri, Namdeo~V. Kalyankar, Khamitkar~S. D.
-\newblock Image segmentation by using threshold techniques.
+\newblock Image {S}egmentation by {U}sing {T}hreshold {T}echniques.
 \newblock {\em CoRR}, abs/1005.4020, 2010.
 
 \bibitem{DBLP:journals/corr/AroraBGM13}
 Sanjeev Arora, Aditya Bhaskara, Rong Ge, Tengyu Ma.
-\newblock Provable bounds for learning some deep representations.
+\newblock Provable {B}ounds for {L}earning {S}ome {D}eep {R}epresentations.
 \newblock {\em CoRR}, abs/1310.6343, 2013.
 
 \bibitem{Babcock1996}
 D.~S. Babcock, H.~Patriquin, M.~LaFortune, M.~Dauzat.
-\newblock Power doppler sonography: basic principles and clinical applications
-  in children.
+\newblock Power {D}oppler sonography: basic principles and clinical
+  applications in children.
 \newblock {\em Pediatric Radiology}, 26(2):109--115, Feb 1996.
 
 \bibitem{Bassani2017}
 Tito Bassani, Elena Stucovitz, Zhihui Qian, Matteo Briguglio, Fabio Galbusera.
 \newblock Validation of the {AnyBody} full body musculoskeletal model in
-  computing lumbar spine loads at l4l5 level.
+  computing lumbar spine loads at {L4L5} level.
 \newblock {\em Journal of Biomechanics}, 58:89--96, jun 2017.
 
 \bibitem{Bell2007}
 Robert~M. Bell,  Yehuda Koren.
-\newblock Lessons from the netflix prize challenge.
+\newblock Lessons from the {N}etflix {P}rize {C}hallenge.
 \newblock {\em SIGKDD Explor. Newsl.}, 9(2):75--79, dec 2007.
 
 \bibitem{Bellman:1957}
 Richard~Ernest Bellman.
-\newblock {\em Dynamic Programming}.
+\newblock {\em Dynamic {P}rogramming}.
 \newblock Princeton University Press, 1957.
 
 \bibitem{Beredjiklian2003}
@@ -120,40 +50,42 @@ P.~K. Beredjiklian.
 
 \bibitem{Bloch1946}
 F.~Bloch.
-\newblock Nuclear induction.
+\newblock Nuclear {I}nduction.
 \newblock {\em Physical Review}, 70(7-8):460--474, oct 1946.
 
 \bibitem{bochenek2016anatomia}
 A.~Bochenek,  M.~Reicher.
-\newblock {\em Anatomia czlowieka}.
+\newblock {\em Anatomia człowieka}.
 \newblock Anatomia cz{\l}owieka. PZWL, 2016.
 
 \bibitem{Breiman2001}
 Leo Breiman.
-\newblock Random forests.
+\newblock Random {F}orests.
 \newblock {\em Machine Learning}, 45(1):5--32, Oct 2001.
 
 \bibitem{Breit1934}
 G.~Breit,  I.~I. Rabi.
-\newblock On the interpretation of present values of nuclear moments.
+\newblock On the {I}nterpretation of {P}resent {V}alues of {N}uclear {M}oments.
 \newblock {\em Physical Review}, 46(3):230--231, aug 1934.
 
 \bibitem{START}
 Carolina~Medical Center.
-\newblock Start - wykorzystanie autologicznych mezenchymalnych komórek
-  macierzystych w procesie regeneracji rekonstruowanego ścięgna achillesa,
-  2014.
+\newblock {START} - {W}ykorzystanie autologicznych mezenchymalnych komórek
+  macierzystych w procesie regeneracji rekonstruowanego ścięgna {A}chillesa.
+\newblock
+  \url{https://carolina.pl/dla-personelu-medycznego/projekty-badawcze/}, 2014.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{Chen:2008:HDV:1370965}
 Chun-houh Chen, Wolfgang Hrdle, Antony Unwin, Chun-houh Chen, Wolfgang Hrdle,
   Antony Unwin.
-\newblock {\em Handbook of Data Visualization (Springer Handbooks of
-  Computational Statistics)}.
+\newblock {\em Handbook of {D}ata {V}isualization ({S}pringer {H}andbooks of
+  {C}omputational {S}tatistics)}.
 \newblock Springer-Verlag TELOS, Santa Clara, CA, USA, wydanie 1, 2008.
 
 \bibitem{CHIRALI2014211}
 Ilkay~Zihni Chirali.
-\newblock 14 - sports injuries.
+\newblock 14 - {S}ports {I}njuries.
 \newblock Ilkay~Zihni Chirali, redaktor, {\em Traditional Chinese Medicine
   Cupping Therapy (Third Edition)}, strony 211 -- 230. Churchill Livingstone,
   wydanie third edition, 2014.
@@ -161,15 +93,15 @@ Ilkay~Zihni Chirali.
 \bibitem{HMS}
 Junghwan Cho, Eunmi Lee, Hyunkwang Lee, Bob Liu, Xinhua Li, Shahein Tajmir,
   Dushyant Sahani, Synho Do.
-\newblock Machine learning powered automatic organ classification for patient
-  specific organ dose estimation.
-\newblock {\em Society for Imaging Informatics in Medicine}, wolumen 2017,
-  2017.
+\newblock Machine {L}earning {P}owered {A}utomatic {O}rgan {C}lassification for
+  {P}atient {S}pecific {O}rgan {D}ose {E}stimation.
+\newblock {\em Society for {I}maging {I}nformatics in {M}edicine}, wolumen
+  2017, 2017.
 
 \bibitem{DBLP:journals/corr/ChoromanskaHMAL14}
 Anna Choromanska, Mikael Henaff, Micha{\"{e}}l Mathieu, G{\'{e}}rard~Ben Arous,
   Yann LeCun.
-\newblock The loss surface of multilayer networks.
+\newblock The {L}oss {S}urface of {M}ultilayer {N}etworks.
 \newblock {\em CoRR}, abs/1412.0233, 2014.
 
 \bibitem{Christiansen2018}
@@ -177,30 +109,30 @@ Eric~M. Christiansen, Samuel~J. Yang, D.~Michael Ando, Ashkan Javaherian, Gaia
   Skibinski, Scott Lipnick, Elliot Mount, Alison O'Neil, Kevan Shah, Alicia~K.
   Lee, Piyush Goyal, William Fedus, Ryan Poplin, Andre Esteva, Marc Berndl,
   Lee~L. Rubin, Philip Nelson, Steven Finkbeiner.
-\newblock In silico labeling: Predicting fluorescent labels in unlabeled
-  images.
+\newblock In {S}ilico {L}abeling: {P}redicting {F}luorescent {L}abels in
+  {U}nlabeled {I}mages.
 \newblock {\em Cell}, 173(3):792--803.e19, apr 2018.
 
 \bibitem{Cunningham2017}
 Ryan Cunningham, Peter Harding, Ian Loram.
-\newblock Deep residual networks for quantification of muscle fiber orientation
-  and curvature from ultrasound images.
+\newblock Deep {R}esidual {N}etworks for {Q}uantification of {M}uscle {F}iber
+  {O}rientation and {C}urvature from {U}ltrasound {I}mages.
 \newblock Mar{\'i}a Vald{\'e}s~Hern{\'a}ndez,  V{\'i}ctor Gonz{\'a}lez-Castro,
   redaktorzy, {\em Medical Image Understanding and Analysis}, strony 63--73,
   Cham, 2017. Springer International Publishing.
 
 \bibitem{BPA}
 Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
-\newblock {Bayesian Model Averaging for Generalized Linear Models with Missing
-  Covariates}.
+\newblock {Bayesian {M}odel {A}veraging for {G}eneralized {L}inear {M}odels
+  with {M}issing {C}ovariates}.
 \newblock EIEF Working Papers Series 1311, Einaudi Institute for Economics and
   Finance (EIEF), dec 2013.
 
 \bibitem{Delp2007}
 Scott~L. Delp, Frank~C. Anderson, Allison~S. Arnold, Peter Loan, Ayman Habib,
   Chand~T. John, Eran Guendelman, Darryl~G. Thelen.
-\newblock {OpenSim}: Open-source software to create and analyze dynamic
-  simulations of movement.
+\newblock {OpenSim}: {O}pen-{S}ource {S}oftware to {C}reate and {A}nalyze
+  {D}ynamic {S}imulations of {M}ovement.
 \newblock {\em {IEEE} Transactions on Biomedical Engineering},
   54(11):1940--1950, nov 2007.
 
@@ -213,7 +145,7 @@ S.L. Delp, J.P. Loan, M.G. Hoy, F.E. Zajac, E.L. Topp, J.M. Rosen.
 
 \bibitem{imagenet_cvpr09}
 J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, L.~Fei-Fei.
-\newblock {ImageNet: A Large-Scale Hierarchical Image Database}.
+\newblock {Image{N}et: {A} {L}arge-{S}cale {H}ierarchical {I}mage {D}atabase}.
 \newblock {\em CVPR09}, 2009.
 
 \bibitem{Docheva2015}
@@ -225,14 +157,14 @@ Denitsa Docheva, Sebastian~A. M\"{u}ller, Martin Majewski, Christopher~H.
 \bibitem{Doral2010}
 Mahmut~Nedim Doral, Mahbub Alam, Murat Bozkurt, Egemen Turhan, Ozg\"{u}r~Ahmet
   Atay, G\"{u}rhan D\"{o}nmez, Nicola Maffulli.
-\newblock Functional anatomy of the achilles tendon.
+\newblock Functional anatomy of the {A}chilles tendon.
 \newblock {\em Knee Surgery, Sports Traumatology, Arthroscopy}, 18(5):638--643,
   feb 2010.
 
 \bibitem{LungChalenge}
 Qi~Dou, Hao Chen, Lequan Yu, Jing Qin, Pheng-Ann Heng.
-\newblock Multilevel contextual 3-d {CNNs} for false positive reduction in
-  pulmonary nodule detection.
+\newblock Multilevel {C}ontextual {3D} {CNNs} for {F}alse {P}ositive
+  {R}eduction in {P}ulmonary {N}odule {D}etection.
 \newblock {\em {IEEE} Transactions on Biomedical Engineering},
   64(7):1558--1567, jul 2017.
 
@@ -245,26 +177,32 @@ K.~J. Dria, J.~R. Sachleben, P.~G. Hatcher.
 \bibitem{SVR_drucker}
 Harris Drucker, Christopher J.~C. Burges, Linda Kaufman, Alex~J. Smola,
   Vladimir Vapnik.
-\newblock Support vector regression machines.
+\newblock Support {V}ector {R}egression {M}achines.
 \newblock M.~C. Mozer, M.~I. Jordan, T.~Petsche, redaktorzy, {\em Advances in
   Neural Information Processing Systems 9}, strony 155--161. MIT Press, 1997.
 
 \bibitem{Duchi:2011:ASM:1953048.2021068}
 John Duchi, Elad Hazan, Yoram Singer.
-\newblock Adaptive subgradient methods for online learning and stochastic
-  optimization.
+\newblock Adaptive {S}ubgradient {M}ethods for {O}nline {L}earning and
+  {S}tochastic {O}ptimization.
 \newblock {\em J. Mach. Learn. Res.}, 12:2121--2159, jul 2011.
+
+\bibitem{Q&AinMRI}
+A.~Elster.
+\newblock Questions and answears in {MRI}.
+\newblock \url{http://mriquestions.com/fourier-transform-ft.html}.
+\newblock Accessed: 2019-07-30.
 
 \bibitem{Erickson2017}
 Bradley~J. Erickson, Panagiotis Korfiatis, Zeynettin Akkus, Timothy Kline,
   Kenneth Philbrick.
-\newblock Toolkits and libraries for deep learning.
+\newblock Toolkits and {L}ibraries for {D}eep {L}earning.
 \newblock {\em Journal of Digital Imaging}, 30(4):400--405, Aug 2017.
 
 \bibitem{Erickson2018}
 Bradley~J. Erickson, Panagiotis Korfiatis, Timothy~L. Kline, Zeynettin Akkus,
   Kenneth Philbrick, Alexander~D. Weston.
-\newblock Deep learning in radiology: Does one size~fit all?
+\newblock Deep {L}earning in {R}adiology: {D}oes {O}ne {S}ize {F}it {A}ll?
 \newblock {\em Journal of the American College of Radiology}, 15(3):521--526,
   mar 2018.
 
@@ -275,16 +213,29 @@ Andre Esteva, Brett Kuprel, Roberto~A. Novoa, Justin Ko, Susan~M. Swetter,
   networks.
 \newblock {\em Nature}, 542(7639):115--118, jan 2017.
 
+\bibitem{ObrazowanieMedyczne}
+Wydział {F}izyki {UW}.
+\newblock Fizyka wobec wyzwań {XXI} wieku -- obrazowanie medyczne.
+\newblock \url{https://brain.fuw.edu.pl/edu/index.php/}.
+\newblock Accessed: 2019-07-30.
+
 \bibitem{Frisch1933}
 R.~Frisch,  O.~Stern.
-\newblock {\"U}ber die magnetische ablenkung von wasserstoffmolek{\"u}len und
-  das magnetische moment des protons. i.
+\newblock {\"U}ber die magnetische {A}blenkung von {W}asserstoffmolek{\"u}len
+  und das magnetische {M}oment des {P}rotons. {I}.
 \newblock {\em Zeitschrift f{\"u}r Physik}, 85(1):4--16, Jan 1933.
+
+\bibitem{ResNetXoverview}
+V.~Fung.
+\newblock An {O}verview of {R}es{N}et and its {V}ariants.
+\newblock
+  \url{https://towardsdatascience.com/an-overview-of-resnet-and-its-variants-5281e2f56035}.
+\newblock Accessed: 2019-22-05.
 
 \bibitem{Ganestam2015}
 Ann Ganestam, Thomas Kallemose, Anders Troelsen, Kristoffer~Weisskirchner
   Barfod.
-\newblock Increasing incidence of acute achilles tendon rupture and a
+\newblock Increasing incidence of acute {A}chilles tendon rupture and a
   noticeable decline in surgical treatment from 1994 to 2013. a nationwide
   registry study of 33, 160 patients.
 \newblock {\em Knee Surgery, Sports Traumatology, Arthroscopy},
@@ -300,13 +251,13 @@ Matthew~F. Glasser, Timothy~S. Coalson, Emma~C. Robinson, Carl~D. Hacker, John
 \bibitem{Gomes2013}
 G.~T. Gomes, S.~Van~Cauter, M.~De~Beule, L.~Vigneron, C.~Pattyn, E.~A.
   Audenaert.
-\newblock {\em Patient-Specific Modelling in Orthopedics: From Image to
-  Surgery}, strony 109--129.
+\newblock {\em Patient-{S}pecific {M}odelling in {O}rthopedics: {F}rom {I}mage
+  to {S}urgery}, strony 109--129.
 \newblock Springer Netherlands, Dordrecht, 2013.
 
 \bibitem{Goodfellow-et-al-2016}
 Ian Goodfellow, Yoshua Bengio, Aaron Courville.
-\newblock {\em Deep Learning}.
+\newblock {\em Deep {L}earning}.
 \newblock MIT Press, 2016.
 
 \bibitem{Gulshan2016}
@@ -314,9 +265,16 @@ Varun Gulshan, Lily Peng, Marc Coram, Martin~C. Stumpe, Derek Wu, Arunachalam
   Narayanaswamy, Subhashini Venugopalan, Kasumi Widner, Tom Madams, Jorge
   Cuadros, Ramasamy Kim, Rajiv Raman, Philip~C. Nelson, Jessica~L. Mega,
   Dale~R. Webster.
-\newblock Development and validation of a deep learning algorithm for detection
-  of diabetic retinopathy in retinal fundus photographs.
+\newblock Development and {V}alidation of a {D}eep {L}earning {A}lgorithm for
+  {D}etection of {D}iabetic {R}etinopathy in {R}etinal {F}undus {P}hotographs.
 \newblock {\em {JAMA}}, 316(22):2402, dec 2016.
+
+\bibitem{NVIDIApanel}
+A.~{Halabi}, K.~{Dreyer}, A.~{Frangi}, W.~{Niessen}, M.~{Tilkin}.
+\newblock From {C}hallenges to {I}mpact of {M}achine {L}earning in {C}linical
+  {P}ractice.
+\newblock \url{http://on-demand.gputechconf.com/gtc/2018/video/S8897/}.
+\newblock Accessed: 2019-22-05.
 
 \bibitem{Hamner2010}
 Samuel~R. Hamner, Ajay Seth, Scott~L. Delp.
@@ -325,35 +283,35 @@ Samuel~R. Hamner, Ajay Seth, Scott~L. Delp.
 
 \bibitem{Haralick1973}
 {R.} Haralick, {K.} Shanmugam, {I.} Dinstein.
-\newblock Texture features for image classification.
+\newblock Texture {F}eatures for {I}mage {C}lassification.
 \newblock {\em IEEE Transactions on Systems, Man, and Cybernetics}, 3(6), 1973.
 
 \bibitem{ResNet}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
-\newblock Deep residual learning for image recognition.
+\newblock Deep {R}esidual {L}earning for {I}mage {R}ecognition.
 \newblock {\em CoRR}, abs/1512.03385, 2015.
 
 \bibitem{DBLP:journals/corr/HeZR016}
 Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
-\newblock Identity mappings in deep residual networks.
+\newblock Identity {M}appings in {D}eep {R}esidual {N}etworks.
 \newblock {\em CoRR}, abs/1603.05027, 2016.
 
 \bibitem{Heyward2018}
 Omar~W. Heyward, Lucas~M. Rabello, Lucas van~der Woude, Inge van~den
   Akker-Scheek, Alli Gokeler, Henk van~der Worp, Johannes Zwerver.
-\newblock The effect of load on achilles tendon structure in novice runners.
+\newblock The effect of load on {A}chilles tendon structure in novice runners.
 \newblock {\em Journal of Science and Medicine in Sport}, 21(7):661--665, jul
   2018.
 
 \bibitem{Hill1938}
 A.~V. Hill.
-\newblock The heat of shortening and the dynamic constants of muscle.
+\newblock The {H}eat of {S}hortening and the {D}ynamic {C}onstants of {M}uscle.
 \newblock {\em Proceedings of the Royal Society B: Biological Sciences},
   126(843):136--195, oct 1938.
 
 \bibitem{Hill06}
 F.S. Hill,  Stephen~M. Kelly.
-\newblock {\em Computer Graphics using OpenGL}.
+\newblock {\em Computer {G}raphics using {OpenGL}}.
 \newblock Prentice Hall, 2006.
 
 \bibitem{DBLP:journals/corr/abs-1207-0580}
@@ -365,10 +323,49 @@ Geoffrey~E. Hinton, Nitish Srivastava, Alex Krizhevsky, Ilya Sutskever, Ruslan
 
 \bibitem{Ibrahim2013}
 Noha Mohamed~AbdelMaboud Ibrahim,  Hytham~Haroun Elsaeed.
-\newblock Lesions of the achilles tendon: Evaluation with ultrasonography and
-  magnetic resonance imaging.
+\newblock Lesions of the {A}chilles tendon: {E}valuation with ultrasonography
+  and magnetic resonance imaging.
 \newblock {\em The Egyptian Journal of Radiology and Nuclear Medicine},
   44(3):581--587, sep 2013.
+
+\bibitem{Butterfly2018}
+Butterfly {I}nc.
+\newblock Meet {iQ}. {W}hole body imaging under 2{K}. {USD}.
+\newblock \url{https://www.butterflynetwork.com/}.
+\newblock Accessed: 2019-07-30.
+
+\bibitem{TensorRT}
+{NVIDIA} {I}nc.
+\newblock {NVIDIA} {T}ensor{RT}.
+\newblock \url{https://developer.nvidia.com/tensorrt}.
+\newblock Accessed: 2019-22-05.
+
+\bibitem{NVIDIA-CLARA}
+{NVIDIA} {I}nc.
+\newblock Project {C}lara: {NVIDIA} {S}upercomputing {P}latform {R}edefines
+  {M}edical {I}maging.
+\newblock \url{https://blogs.nvidia.com/blog/2018/03/28/ai-healthcare-gtc/}.
+\newblock Accessed: 2019-07-30.
+
+\bibitem{MGH}
+Samsung {I}nc.
+\newblock Deep {L}earning: {T}he {N}ext {S}tep in {A}pplied {H}ealthcare
+  {D}ata.
+\newblock
+  \url{https://insights.samsung.com/2016/07/12/deep-learning-the-next-step-in-applied-healthcare-data/}.
+\newblock Accessed: 2019-22-05.
+
+\bibitem{US4US}
+{US4US} {I}nc.
+\newblock {US4US} -- {U}ltrasound {R}\&{D} in medicine, biology and industry.
+\newblock \url{http://us4us.eu/}.
+\newblock Accessed: 2019-07-30.
+
+\bibitem{Visual3D}
+Visual~{3D} {I}nc.
+\newblock Visual {3D} - {C} motion.
+\newblock \url{http://www2.c-motion.com/products/visual3d}.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{Curie1880}
 Jacques,  Pierre Curie.
@@ -386,29 +383,30 @@ Chand~T. John, Frank~C. Anderson, Jill~S. Higginson, Scott~L. Delp.
 
 \bibitem{Ensemble}
 C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
-\newblock {The Relative Performance of Ensemble Methods with Deep Convolutional
-  Neural Networks for Image Classification}.
+\newblock {The {R}elative {P}erformance of {E}nsemble {M}ethods with {D}eep
+  {C}onvolutional {N}eural {N}etworks for {I}mage {C}lassification}.
 \newblock {\em ArXiv e-prints}, apr 2017.
 
 \bibitem{Khan2003}
 K~M Khan.
 \newblock Are ultrasound and magnetic resonance imaging of value in assessment
-  of achilles tendon disorders? a two year prospective study.
+  of {A}chilles tendon disorders? {A} two year prospective study.
 \newblock {\em British Journal of Sports Medicine}, 37(2):149--153, apr 2003.
 
 \bibitem{DBLP:journals/corr/KingmaB14}
 Diederik~P. Kingma,  Jimmy Ba.
-\newblock Adam: {A} method for stochastic optimization.
+\newblock Adam: {A} {M}ethod for {S}tochastic {O}ptimization.
 \newblock {\em CoRR}, abs/1412.6980, 2014.
 
 \bibitem{Koch2017AutomatedHT}
 Patrick Koch, Brett Wujek, Oleg Golovidov, Steven Gardner.
-\newblock Automated hyperparameter tuning for effective machine learning.
+\newblock Automated {H}yperparameter {T}uning for {E}ffective {M}achine
+  {L}earning.
 \newblock 2017.
 
 \bibitem{KoivunenNiemel1995}
 T~Koivunen-Niemel\"{a},  K~Parkkola.
-\newblock Anatomy of the achilles tendon (tendo calcaneus) with respect to
+\newblock Anatomy of the {A}chilles tendon (tendo calcaneus) with respect to
   tendon thickness measurements.
 \newblock {\em Surgical and Radiologic Anatomy}, 17(3):263--268, sep 1995.
 
@@ -421,34 +419,35 @@ Stanisław Kowalik.
 
 \bibitem{CIFAR}
 Alex Krizhevsky.
-\newblock Learning multiple layers of features from tiny images.
+\newblock Learning {M}ultiple {L}ayers of {F}eatures from {T}iny {I}mages.
 \newblock Raport instytutowy, 2009.
-\newblock Accessed: 2018-05-21.
+\newblock Accessed: 2019-05-21.
 
 \bibitem{Krizhevsky2012}
 Alex Krizhevsky, Ilya Sutskever, Geoffrey~E. Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
+\newblock Image{N}et {C}lassification with {D}eep {C}onvolutional {N}eural
+  {N}etworks.
 \newblock {\em Proceedings of the 25th International Conference on Neural
   Information Processing Systems - Volume 1}, NIPS'12, strony 1097--1105, USA,
   2012. Curran Associates Inc.
 
 \bibitem{Intel}
 Y.~Kwon,  M.~Rhu.
-\newblock A case for memory-centric hpc system architecture for training deep
-  neural networks.
+\newblock A {C}ase for {M}emory-{C}entric {HPC} {S}ystem {A}rchitecture for
+  {T}raining {D}eep {N}eural {N}etworks.
 \newblock {\em IEEE Computer Architecture Letters}, 17(2):134--138, July 2018.
 
 \bibitem{LAUTERBUR1973}
 P.~C. LAUTERBUR.
-\newblock Image formation by induced local interactions: Examples employing
-  nuclear magnetic resonance.
+\newblock Image {F}ormation by {I}nduced {L}ocal {I}nteractions: {E}xamples
+  {E}mploying {N}uclear {M}agnetic {R}esonance.
 \newblock {\em Nature}, 242(5394):190--191, mar 1973.
 
 \bibitem{ICA}
 K.~N. Leach.
 \newblock A survey paper on independent component analysis.
-\newblock {\em Proceedings of the Thirty-Fourth Southeastern Symposium on
-  System Theory (Cat. No.02EX540)}, strony 239--242, 2002.
+\newblock {\em Proceedings of the {T}hirty-{F}ourth {S}outheastern {S}ymposium
+  on {S}ystem {T}heory ({C}at. {No.02EX540})}, strony 239--242, 2002.
 
 \bibitem{Lecun1998}
 Y.~Lecun, L.~Bottou, Y.~Bengio, P.~Haffner.
@@ -458,13 +457,14 @@ Y.~Lecun, L.~Bottou, Y.~Bengio, P.~Haffner.
 \bibitem{NIPS1989_293}
 Yann LeCun, Bernhard~E. Boser, John~S. Denker, Donnie Henderson, R.~E. Howard,
   Wayne~E. Hubbard, Lawrence~D. Jackel.
-\newblock Handwritten digit recognition with a back-propagation network.
+\newblock Handwritten {D}igit {R}ecognition with a {B}ack-{P}ropagation
+  {N}etwork.
 \newblock D.~S. Touretzky, redaktor, {\em Advances in Neural Information
   Processing Systems 2}, strony 396--404. Morgan-Kaufmann, 1990.
 
 \bibitem{lide2006crc}
 D.R. Lide.
-\newblock {\em CRC Handbook of Chemistry and Physics, 87th Edition}.
+\newblock {\em {CRC} {H}andbook of {C}hemistry and {P}hysics, 87th {E}dition}.
 \newblock Taylor \& Francis, 2006.
 
 \bibitem{Lin2004}
@@ -475,7 +475,7 @@ Tony~W. Lin, Luis Cardenas, Louis~J. Soslowsky.
 \bibitem{COCO}
 Tsung-Yi Lin, Michael Maire, Serge Belongie, James Hays, Pietro Perona, Deva
   Ramanan, Piotr Doll{\'a}r, C.~Lawrence Zitnick.
-\newblock Microsoft coco: Common objects in context.
+\newblock Microsoft {COCO}: {C}ommon {O}bjects in {C}ontext.
 \newblock David Fleet, Tomas Pajdla, Bernt Schiele, Tinne Tuytelaars,
   redaktorzy, {\em Computer Vision -- ECCV 2014}, strony 740--755, Cham, 2014.
   Springer International Publishing.
@@ -489,30 +489,32 @@ Geert Litjens, Thijs Kooi, Babak~Ehteshami Bejnordi, Arnaud Arindra~Adiyoso
 
 \bibitem{DBLP:journals/corr/LiuSLLZL16}
 Mengchen Liu, Jiaxin Shi, Zhen Li, Chongxuan Li, Jun Zhu, Shixia Liu.
-\newblock Towards better analysis of deep convolutional neural networks.
+\newblock Towards {B}etter {A}nalysis of {D}eep {C}onvolutional {N}eural
+  {N}etworks.
 \newblock {\em CoRR}, abs/1604.07043, 2016.
 
 \bibitem{Liu2011}
 Yufeng Liu, Hao~Helen Zhang, Yichao Wu.
-\newblock Hard or soft classification? large-margin unified machines.
+\newblock Hard or {S}oft {C}lassification? {L}arge-{M}argin {U}nified
+  {M}achines.
 \newblock {\em Journal of the American Statistical Association},
   106(493):166--177, Marzec 2011.
 
 \bibitem{Maffulli2005}
 Nicola Maffulli, Per Renstr\"{o}m, Wayne~B. Leadbetter, redaktorzy.
-\newblock {\em Tendon Injuries}.
+\newblock {\em Tendon {I}njuries}.
 \newblock Springer-Verlag, 2005.
 
 \bibitem{makarewicz1978}
 R.~Makarewicz.
-\newblock {\em Kszta{\l}towanie pola akustycznego z uwzgl{\k{e}}dnieniem
-  aspektu akustyki {\'s}rodowiska}.
+\newblock {\em Kształtowanie pola akustycznego z uwzględnieniem aspektu
+  akustyki środowiska}.
 \newblock Akustyka - Uniwersytet im. Adama Mickiewicza w Poznaniu. Wydawnictwo
   Naukowe Uniwersytetu im. Adama Mickiewicz, 1978.
 
 \bibitem{Mansfield1977}
 P~Mansfield.
-\newblock Multi-planar image formation using nmr spin echoes.
+\newblock Multi-planar image formation using {NMR} spin echoes.
 \newblock {\em Journal of Physics C: Solid State Physics}, 10(3):L55, 1977.
 
 \bibitem{Maquirriain2011}
@@ -523,26 +525,27 @@ J.~Maquirriain.
 
 \bibitem{Marcus2018}
 Gary Marcus.
-\newblock Deep learning: {A} critical appraisal.
+\newblock Deep {L}earning: {A} {C}ritical {A}ppraisal.
 \newblock {\em CoRR}, abs/1801.00631, 2018.
 
 \bibitem{DBLP:journals/corr/abs-1803-04014}
 Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
   Vetter.
-\newblock {NVIDIA} tensor core programmability, performance {\&} precision.
+\newblock {NVIDIA} {T}ensor {C}ore {P}rogrammability, {P}erformance {\&}
+  {P}recision.
 \newblock {\em CoRR}, abs/1803.04014, 2018.
 
 \bibitem{BMC}
 Miriam Mart{\'i}nez, Luis~Enrique Sucar, Hector~Gabriel Acosta, Nicandro Cruz.
-\newblock Bayesian model combination and its application to cervical cancer
-  detection.
+\newblock Bayesian {M}odel {C}ombination and {I}ts {A}pplication to {C}ervical
+  {C}ancer {D}etection.
 \newblock Jaime~Sim{\~a}o Sichman, Helder Coelho, Solange~Oliveira Rezende,
   redaktorzy, {\em Advances in Artificial Intelligence - IBERAMIA-SBIA 2006},
   strony 622--631, Berlin, Heidelberg, 2006. Springer Berlin Heidelberg.
 
 \bibitem{Minsky1969}
 Seymour~Papert Marvin Lee~Minsky.
-\newblock {\em Perceptrons: An Introduction to Computational Geometry}.
+\newblock {\em Perceptrons: {A}n {I}ntroduction to {C}omputational {G}eometry}.
 \newblock Mit Press, 1969.
 
 \bibitem{McCulloch1943}
@@ -553,53 +556,54 @@ Warren~S. McCulloch,  Walter Pitts.
 
 \bibitem{Umit2010}
 Ümit V.~Çatalyürek, Cevdet Aykanat, Bora Uçar.
-\newblock On two-dimensional sparse matrix partitioning: Models, methods, and a
-  recipe.
+\newblock On {T}wo-{D}imensional {S}parse {M}atrix {P}artitioning: {M}odels,
+  {M}ethods, and a {R}ecipe.
 \newblock {\em SIAM Journal on Scientific Computing}, 32(2):656--683, 2010.
 
 \bibitem{RM2015}
 Azim~Celik Muhammed~Elmaoglu.
-\newblock {\em Rezonans Magnetyczny: Podstawy fizyczne, obrazowanie, ułożenie
-  pacjenta, protokoły}.
+\newblock {\em Rezonans {M}agnetyczny: {P}odstawy fizyczne, obrazowanie,
+  ułożenie pacjenta, protokoły}.
 \newblock Springer, 2015.
 
 \bibitem{Kapinski19}
 Kapinski N., Zielinski J., Borucki B., Trzcinski T., Ciszkowska Łyson B.,
   Zdanowicz U., Smigielski R., Nowinski K.
-\newblock Monitoring of the achilles tendon healing process: can artificial
-  intelligence be helpful?
+\newblock Monitoring of the {A}chilles tendon healing process: can {A}rtificial
+  {I}ntelligence be helpful?
 \newblock {\em ACTA OF BIOENGINEERING AND BIOMECHANICS}, 21(1), 2019.
 
 \bibitem{NilssonHelander2007}
 Katarina Nilsson-Helander, Roland Thome{\'{e}}, Karin Gr\"{a}vare-Silbernagel,
   Pia Thome{\'{e}}, Eva Fax{\'{e}}n, Bengt~I. Eriksson, Jon Karlsson.
-\newblock The achilles tendon total rupture score ({ATRS}).
+\newblock The {A}chilles {T}endon {T}otal {R}upture {S}core ({ATRS}).
 \newblock {\em The American Journal of Sports Medicine}, 35(3):421--426, mar
   2007.
 
 \bibitem{Nowinski_Borucki_2014}
 Krzysztof Nowiński,  Bartosz Borucki.
-\newblock {\em VisNow – a Modular, Extensible Visual Analysis Platform},
-  strona 73–76.
+\newblock {\em Vis{N}ow – a {M}odular, {E}xtensible {V}isual {A}nalysis
+  {P}latform}, strona 73–76.
 \newblock Vaclav Skala – Union Agency, 2014.
 
 \bibitem{Nowosielski17}
 Jedrzej Nowosielski, Jakub Zielinski, Bartosz Borucki, Krzysztof Nowinski.
-\newblock Multidimensional haralick’s feature space analysis for assessment
-  of the achilles tendon in mr imaging.
+\newblock Multidimensional {H}aralick’s feature space analysis for assessment
+  of the {A}chilles tendon in {MR} imaging.
 \newblock {\em International Journal of Computer Assisted Radiology and
   Surgery}, 12(Supplement 1):218–--220, 2017.
 
 \bibitem{Orishimo2008}
 Karl~F. Orishimo, Gideon Burstein, Michael~J. Mullaney, Ian~J. Kremenic, Marcus
   Nesse, Malachy~P. McHugh, Steven~J. Lee.
-\newblock Effect of knee flexion angle on achilles tendon force and ankle joint
-  plantarflexion moment during passive dorsiflexion.
+\newblock Effect of {K}nee {F}lexion {A}ngle on {A}chilles {T}endon {F}orce and
+  {A}nkle {J}oint {P}lantarflexion {M}oment {D}uring {P}assive {D}orsiflexion.
 \newblock {\em The Journal of Foot and Ankle Surgery}, 47(1):34--39, jan 2008.
 
 \bibitem{PCA}
 K.~Pearson.
-\newblock On lines and planes of closest fit to systems of points in space.
+\newblock On {L}ines and {P}lanes of {C}losest {F}it to {S}ystems of {P}oints
+  in {S}pace.
 \newblock {\em Philosophical Magazine}, 2:559--572, 1901.
 
 \bibitem{Perreault2003}
@@ -610,46 +614,52 @@ Eric~J. Perreault, Charles~J. Heckman, Thomas~G. Sandercock.
 
 \bibitem{EpidemiologyUS}
 M.~S. Raikin.
-\newblock Epidemiology of achilles tendon rupture in the us, 2014.
+\newblock Epidemiology of {A}chilles tendon rupture in the {US}, 2014.
 
 \bibitem{2017arXiv170701836R}
 P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
-\newblock {Cardiologist-Level Arrhythmia Detection with Convolutional Neural
-  Networks}.
+\newblock {Cardiologist-{L}evel {A}rrhythmia {D}etection with {C}onvolutional
+  {N}eural {N}etworks}.
 \newblock {\em ArXiv e-prints}, jul 2017.
 
 \bibitem{Regulski2017}
 Piotr Regulski, Jakub Zieliński, Bartosz Borucki, Krzysztof Nowiński.
-\newblock Comparison of noise reducing t2map reconstruction methods in mri
-  imaging of achilles tendon.
+\newblock Comparison of noise reducing {T2}map reconstruction methods in {MRI}
+  imaging of {A}chilles tendon.
 \newblock {\em International Journal of Computer Assisted Radiology and
   Surgery}, 12(Supplement 1):15–16, Jun 2017.
 
 \bibitem{DBLP:journals/corr/RonnebergerFB15}
 Olaf Ronneberger, Philipp Fischer, Thomas Brox.
-\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock {U-Net}: {C}onvolutional {N}etworks for {B}iomedical {I}mage
+  {S}egmentation.
 \newblock {\em CoRR}, abs/1505.04597, 2015.
 
 \bibitem{Ronneberger2015}
 Olaf Ronneberger, Philipp Fischer, Thomas Brox.
-\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock U-{N}et: {C}onvolutional {N}etworks for {B}iomedical {I}mage
+  {S}egmentation.
 \newblock {\em Lecture Notes in Computer Science}, strony 234--241. Springer
   International Publishing, 2015.
 
 \bibitem{Rosenblatt1957}
 Frank Rosenblatt.
-\newblock The perceptron: A perceiving and recognizing automaton.
+\newblock The {P}erceptron: A {P}erceiving and {R}ecognizing {A}utomaton.
 \newblock Raport instytutowy, 1957.
 
 \bibitem{CMC}
 A.~Rosińska,  M.~Syrek.
-\newblock Rehabilitacja ścięgna achillesa - kopletny protokół usprawniania
-  po trójpęczkowej rekonstrukcji ścięgna achillesa., 2017.
+\newblock Rehabilitacja ścięgna {A}chillesa - kopletny protokół
+  usprawniania po trójpęczkowej rekonstrukcji ścięgna {A}chillesa.
+\newblock
+  \url{https://carolina.pl/wp-content/uploads/2016/09/Start_Rehabilitacja-Sciegna-Achillesa_publikacja.pdf},
+  2017.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{Rosset2004}
 Antoine Rosset, Luca Spadola, Osman Ratib.
-\newblock {OsiriX}: An open-source software for navigating in multidimensional
-  {DICOM} images.
+\newblock {OsiriX}: {A}n {O}pen-{S}ource {S}oftware for {N}avigating in
+  {M}ultidimensional {DICOM} {I}mages.
 \newblock {\em Journal of Digital Imaging}, 17(3):205--216, Czerwiec 2004.
 
 \bibitem{Rumelhart1986}
@@ -667,11 +677,11 @@ N.~{Russell}, T.~{Brendan Murphy}, A.~E {Raftery}.
 Hijazi S., Kumar R., Rowen C.
 \newblock Using convolutional neural networks for image recognition.
 \newblock Raport instytutowy, Cadence, 2015.
-\newblock Accessed: 2018-05-21.
+\newblock Accessed: 2019-05-21.
 
 \bibitem{Sarraf2016}
 Saman Sarraf,  Ghassem Tofighi.
-\newblock Deep learning-based pipeline to recognize alzheimer disease using
+\newblock Deep learning-based pipeline to recognize {A}lzheimer disease using
   {fMRI} data.
 \newblock {\em 2016 Future Technologies Conference ({FTC})}. {IEEE}, dec 2016.
 
@@ -682,20 +692,20 @@ W.~Sawicki.
 
 \bibitem{SCHMIDHUBER201585}
 Jürgen Schmidhuber.
-\newblock Deep learning in neural networks: An overview.
+\newblock Deep learning in neural networks: {A}n overview.
 \newblock {\em Neural Networks}, 61:85 -- 117, 2015.
 
 \bibitem{DBLP:journals/corr/SelvarajuDVCPB16}
 Ramprasaath~R. Selvaraju, Abhishek Das, Ramakrishna Vedantam, Michael Cogswell,
   Devi Parikh, Dhruv Batra.
-\newblock Grad-cam: Why did you say that? visual explanations from deep
-  networks via gradient-based localization.
+\newblock Grad-{CAM}: {W}hy did you say that? {V}isual {E}xplanations from
+  {D}eep {N}etworks via {G}radient-based {L}ocalization.
 \newblock {\em CoRR}, abs/1610.02391, 2016.
 
 \bibitem{10.1007/978-3-319-58667-0_7}
 Dipanjan Sengupta, Yida Wang, Narayanan Sundaram, Theodore~L. Willke.
-\newblock High-performance incremental svm learning on intel xeon phi
-  processors.
+\newblock High-{P}erformance {I}ncremental {SVM} {L}earning on {I}ntel {X}eon
+  {P}hi {P}rocessors.
 \newblock Julian~M. Kunkel, Rio Yokota, Pavan Balaji, David Keyes, redaktorzy,
   {\em High Performance Computing}, strony 120--138, Cham, 2017. Springer
   International Publishing.
@@ -713,24 +723,31 @@ P.~Sharma,  N.~Maffulli.
 
 \bibitem{DBLP:journals/corr/SimonyanVZ13}
 Karen Simonyan, Andrea Vedaldi, Andrew Zisserman.
-\newblock Deep inside convolutional networks: Visualising image classification
-  models and saliency maps.
+\newblock Deep {I}nside {C}onvolutional {N}etworks: {V}isualising {I}mage
+  {C}lassification {M}odels and {S}aliency {M}aps.
 \newblock {\em CoRR}, abs/1312.6034, 2013.
 
 \bibitem{VGGNet}
 Karen Simonyan,  Andrew Zisserman.
-\newblock Very deep convolutional networks for large-scale image recognition.
+\newblock Very {D}eep {C}onvolutional {N}etworks for {L}arge-{S}cale {I}mage
+  {R}ecognition.
 \newblock {\em CoRR}, abs/1409.1556, 2014.
 
 \bibitem{DBLP:journals/corr/SixtWL16}
 Leon Sixt, Benjamin Wild, Tim Landgraf.
-\newblock Rendergan: Generating realistic labeled data.
+\newblock Render{GAN}: {G}enerating {R}ealistic {L}abeled {D}ata.
 \newblock {\em CoRR}, abs/1611.01331, 2016.
+
+\bibitem{Adams}
+Adams~{MSC} {S}oftware~{C}orp. {I}nc.
+\newblock Adams {MSC} {S}oftware.
+\newblock \url{http://www.mscsoftware.com/product/adams}.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{Song:2014:SUM:2597652.2597670}
 Fengguang Song,  Jack Dongarra.
-\newblock Scaling up matrix computations on shared-memory manycore systems with
-  1000 cpu cores.
+\newblock Scaling up {M}atrix {C}omputations on {S}hared-memory {M}anycore
+  {S}ystems with 1000 {CPU} {C}ores.
 \newblock {\em Proceedings of the 28th ACM International Conference on
   Supercomputing}, ICS '14, strony 333--342, New York, NY, USA, 2014. ACM.
 
@@ -744,8 +761,7 @@ Katherine~M. Steele, Ajay Seth, Jennifer~L. Hicks, Michael~S. Schwartz,
 \bibitem{Etiologia}
 Katarzyna Strojek, Zuzanna Piekorz, Urszula Kaźmierczak, Agnieszka
   Strączyńska, Walery Zukow.
-\newblock Etiologia i patomechanizm uszkodzenia Ścięgna achillesa = the
-  etiology and patomechanizm damage to the achilles tendon.
+\newblock Etiologia i {P}atomechanizm {U}szkodzenia {Ś}cięgna {A}chillesa.
 \newblock 2016.
 
 \bibitem{Summers1991}
@@ -758,25 +774,43 @@ R.~M. Summers, P.~M. Joseph, H.~L. Kundel.
 Yi~Sun, Ole Brauckmann, Donald~R. Nixdorf, Arno Kentgens, Michael Garwood,
   Djaudat Idiyatullin, Arend Heerschap.
 \newblock Imaging human teeth by phosphorus magnetic resonance with nuclear
-  overhauser enhancement.
+  {O}verhauser enhancement.
 \newblock {\em Scientific Reports}, 6(1), aug 2016.
+
+\bibitem{BTS}
+B{TS} {S}ystems {I}nc.
+\newblock B{TS} {S}ystems.
+\newblock \url{http://www.btsbioengineering.com/}.
+\newblock Accessed: 2019-07-23.
+
+\bibitem{KISTLER}
+Kistler {S}ystems {I}nc.
+\newblock Kistler {Forceplates}.
+\newblock \url{https://www.kistler.com/}.
+\newblock Accessed: 2019-07-23.
+
+\bibitem{Vicon}
+Vicon {S}ystems {I}nc.
+\newblock Vicon {S}ystems.
+\newblock \url{https://www.vicon.com/}.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{InceptionResNet}
 Christian Szegedy, Sergey Ioffe, Vincent Vanhoucke.
-\newblock Inception-v4, inception-resnet and the impact of residual connections
-  on learning.
+\newblock Inception-v4, {I}nception-{R}es{N}et and the {I}mpact of {R}esidual
+  {C}onnections on {L}earning.
 \newblock {\em CoRR}, abs/1602.07261, 2016.
 
 \bibitem{GoogleNet}
 Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott~E. Reed,
   Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich.
-\newblock Going deeper with convolutions.
+\newblock Going {D}eeper with {C}onvolutions.
 \newblock {\em CoRR}, abs/1409.4842, 2014.
 
 \bibitem{DBLP:journals/corr/SzegedyVISW15}
 Christian Szegedy, Vincent Vanhoucke, Sergey Ioffe, Jonathon Shlens, Zbigniew
   Wojna.
-\newblock Rethinking the inception architecture for computer vision.
+\newblock Rethinking the {I}nception {A}rchitecture for {C}omputer {V}ision.
 \newblock {\em CoRR}, abs/1512.00567, 2015.
 
 \bibitem{Riken}
@@ -788,26 +822,33 @@ K.~Tahara, Z.~W. Luo, T.~Odashima, M.~Onishi, S.~Hosoe, A.~Kato.
 \bibitem{Tajbakhsh2016}
 Nima Tajbakhsh, Jae~Y. Shin, Suryakanth~R. Gurudu, R.~Todd Hurst,
   Christopher~B. Kendall, Michael~B. Gotway, Jianming Liang.
-\newblock Convolutional neural networks for medical image analysis: Full
-  training or fine tuning?
+\newblock Convolutional {N}eural {N}etworks for {M}edical {I}mage {A}nalysis:
+  {F}ull {T}raining or {F}ine {T}uning?
 \newblock {\em {IEEE} Transactions on Medical Imaging}, 35(5):1299--1312, may
   2016.
 
 \bibitem{DBLP:journals/corr/TaylorBXSPG16}
 Gavin Taylor, Ryan Burmeister, Zheng Xu, Bharat Singh, Ankit Patel, Tom
   Goldstein.
-\newblock Training neural networks without gradients: {A} scalable {ADMM}
-  approach.
+\newblock Training {N}eural {N}etworks {W}ithout {G}radients: {A} {S}calable
+  {ADMM} {A}pproach.
 \newblock {\em CoRR}, abs/1605.02026, 2016.
+
+\bibitem{AnyBody}
+Any{B}ody {T}ech. {I}nc.
+\newblock Any{B}ody {S}oftware.
+\newblock \url{https://www.anybodytech.com/}.
+\newblock Accessed: 2019-07-23.
 
 \bibitem{tenenbaum_global_2000}
 Joshua~B. Tenenbaum, Vin de~Silva, John~C. Langford.
-\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock A {G}lobal {G}eometric {F}ramework for {N}onlinear {D}imensionality
+  {R}eduction.
 \newblock {\em Science}, 290(5500):2319, 2000.
 
 \bibitem{vanDerMaaten2008}
 Laurens van~der Maaten,  Geoffrey Hinton.
-\newblock Visualizing data using {t-SNE}.
+\newblock Visualizing {D}ata using {t-SNE}.
 \newblock {\em Journal of Machine Learning Research}, 9:2579--2605, 2008.
 
 \bibitem{Bakker2000}
@@ -826,54 +867,55 @@ H.~T. van Schie, E.~M. Bakker, A.~M. Jonker, P.~R. van Weeren.
 \bibitem{vanSchie2009}
 H.~T.~M. van Schie, R.~J. de~Vos, S.~de~Jonge, E.~M. Bakker, M.~P. Heijboer,
   J.~A.~N. Verhaar, J.~L. Tol, H.~Weinans.
-\newblock Ultrasonographic tissue characterisation of human achilles tendons:
+\newblock Ultrasonographic tissue characterisation of human {A}chilles tendons:
   quantification of tendon structure through a novel non-invasive approach.
 \newblock {\em British Journal of Sports Medicine}, 44(16):1153--1159, aug
   2009.
 
 \bibitem{Vesanto00self-organizingmap}
 Juha Vesanto, Johan Himberg, Esa Alhoniemi, Juha Parhankangas.
-\newblock Self-organizing map in matlab: the som toolbox.
+\newblock Self-{O}rganizing {M}ap in {M}atlab: the {SOM} {T}oolbox.
 \newblock {\em In Proceedings of the Matlab DSP Conference}, strony 35--40,
   2000.
 
 \bibitem{2016arXiv160605718W}
 D.~{Wang}, A.~{Khosla}, R.~{Gargeya}, H.~{Irshad}, A.~H. {Beck}.
-\newblock {Deep Learning for Identifying Metastatic Breast Cancer}.
+\newblock {Deep {L}earning for {I}dentifying {M}etastatic {B}reast {C}ancer}.
 \newblock {\em ArXiv e-prints}, jun 2016.
 
 \bibitem{Wolfe2003}
 Michael B.~W. Wolfe,  Susan~R. Goldman.
 \newblock Use of latent semantic analysis for predicting psychological
-  phenomena: Two issues and proposed solutions.
+  phenomena: {T}wo issues and proposed solutions.
 \newblock {\em Behavior Research Methods, Instruments, {\&} Computers},
   35(1):22--31, Feb 2003.
 
 \bibitem{Wolpert92stackedgeneralization}
 David~H. Wolpert.
-\newblock Stacked generalization.
+\newblock Stacked {G}eneralization.
 \newblock {\em Neural Networks}, 5:241--259, 1992.
 
 \bibitem{Wurtz2009}
 Robert~H. Wurtz.
-\newblock Recounting the impact of hubel and wiesel.
+\newblock Recounting the impact of {H}ubel and {W}iesel.
 \newblock {\em The Journal of Physiology}, 587(12):2817--2823, jun 2009.
 
 \bibitem{ResNetX}
 Saining Xie, Ross~B. Girshick, Piotr Doll{\'{a}}r, Zhuowen Tu, Kaiming He.
-\newblock Aggregated residual transformations for deep neural networks.
+\newblock Aggregated {R}esidual {T}ransformations for {D}eep {N}eural
+  {N}etworks.
 \newblock {\em CoRR}, abs/1611.05431, 2016.
 
 \bibitem{Yang2013}
 Guang Yang, Benjamin~B. Rothrauff, Rocky~S. Tuan.
-\newblock Tendon and ligament regeneration and repair: Clinical relevance and
+\newblock Tendon and ligament regeneration and repair: {C}linical relevance and
   developmental paradigm.
 \newblock {\em Birth Defects Research Part C: Embryo Today: Reviews},
   99(3):203--222, sep 2013.
 
 \bibitem{ZFNet}
 Matthew~D. Zeiler,  Rob Fergus.
-\newblock Visualizing and understanding convolutional networks.
+\newblock Visualizing and {U}nderstanding {C}onvolutional {N}etworks.
 \newblock {\em CoRR}, abs/1311.2901, 2013.
 
 \bibitem{Zhang1994}

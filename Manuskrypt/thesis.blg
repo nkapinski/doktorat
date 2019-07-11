@@ -3,18 +3,16 @@ A level-1 auxiliary file: header.aux
 The style file: plplain.bst
 Database file #1: refs.bib
 Warning--entry type for "EpidemiologyUS" isn't style-file defined
---line 85 of file refs.bib
+--line 84 of file refs.bib
 Warning--entry type for "START" isn't style-file defined
---line 95 of file refs.bib
+--line 94 of file refs.bib
 Warning--entry type for "CMC" isn't style-file defined
---line 105 of file refs.bib
+--line 104 of file refs.bib
 Warning--to sort, need author or key in GEVoluson
-Warning--to sort, need author or key in MedicalImageNet
 Warning--can't use both author and editor fields in Gomes2013
 Warning--there's a number but no volume in Curie1880
 Warning--empty booktitle in Koch2017AutomatedHT
 Warning--empty institution in CIFAR
 Warning--can't use both author and editor fields in Nowinski_Borucki_2014
 Warning--empty institution in Rosenblatt1957
-Warning--empty journal in Etiologia
-(There were 12 warnings)
+(There were 10 warnings)

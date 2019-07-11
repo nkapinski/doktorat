@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  10 JUL 2019 12:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  11 JUL 2019 11:27
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2253,7 +2253,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 [114] [115
 
 ]
-Underfull \hbox (badness 1097) in paragraph at lines 72--78
+Underfull \hbox (badness 1097) in paragraph at lines 69--75
 \OT4/cmr/m/n/12 go ±ci¦-gna Achil-le-sa.  $\OT4/cmtt/m/n/12 https : / / carolin
 a . pl / dla-[]personelu-[]medycznego /
  []
@@ -2263,7 +2263,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [116]
-Underfull \hbox (badness 1515) in paragraph at lines 158--163
+Underfull \hbox (badness 1515) in paragraph at lines 155--160
 []\OT4/cmr/m/n/12 Mahmut Ne-dim Do-ral, Mah-bub Alam, Mu-rat Boz-kurt, Ege-men 
 Tur-han,
  []
@@ -2273,20 +2273,20 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [117]
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
-[]\OT4/cmr/m/n/12 V. Fung.  An Ove-rview of Re-sNet and its
+Underfull \hbox (badness 10000) in paragraph at lines 227--232
+[]\OT4/cmr/m/n/12 Vincent Fung.  An Ove-rview of Re-sNet and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
-\OT4/cmr/m/n/12 Va-riants.  $\OT4/cmtt/m/n/12 https : / / towardsdatascience . 
-com /
+Underfull \hbox (badness 10000) in paragraph at lines 227--232
+\OT4/cmr/m/n/12 its Va-riants.  $\OT4/cmtt/m/n/12 https : / / towardsdatascienc
+e . com /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--234
+Underfull \hbox (badness 2302) in paragraph at lines 227--232
 \OT4/cmtt/m/n/12 an-[]overview-[]of-[]resnet-[]and-[]its-[]variants-[]5281e2f56
-035$\OT4/cmr/m/n/12 .  Ac-ces-sed:
+035$\OT4/cmr/m/n/12 .  Dost.: 2019-
  []
 
 
@@ -2298,33 +2298,33 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [119]
-Underfull \hbox (badness 3780) in paragraph at lines 344--349
+Underfull \hbox (badness 3780) in paragraph at lines 343--348
 []\OT4/cmr/m/n/12 NVIDIA Inc.  Pro-ject Cla-ra: NVI-DIA Su-per-com-pu-ting Plat
 -form Re-
  []
 
 
-Underfull \hbox (badness 1735) in paragraph at lines 344--349
+Underfull \hbox (badness 1735) in paragraph at lines 343--348
 \OT4/cmr/m/n/12 de-fi-nes Me-di-cal Ima-ging.  $\OT4/cmtt/m/n/12 https : / / bl
 ogs . nvidia . com / blog / 2018 / 03 / 28 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--357
+Underfull \hbox (badness 10000) in paragraph at lines 350--356
 []\OT4/cmr/m/n/12 Samsung Inc.  De-ep Le-ar-ning: The Next Step in Ap-plied He-
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--357
+Underfull \hbox (badness 10000) in paragraph at lines 350--356
 \OT4/cmr/m/n/12 al-th-ca-re Da-ta.  $\OT4/cmtt/m/n/12 https : / / insights . sa
 msung . com / 2016 / 07 / 12 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--357
+Underfull \hbox (badness 10000) in paragraph at lines 350--356
 \OT4/cmtt/m/n/12 deep-[]learning-[]the-[]next-[]step-[]in-[]applied-[]healthcar
-e-[]data/$\OT4/cmr/m/n/12 .  Ac-ces-
+e-[]data/$\OT4/cmr/m/n/12 .  Dost.:
  []
 
 
@@ -2344,31 +2344,36 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [123]
+Underfull \hbox (badness 10000) in paragraph at lines 619--625
+[]\OT4/cmr/m/n/12 M. S. Ra-ikin.  Epi-de-mio-lo-gy of Achil-les ten-don rup-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--625
+\OT4/cmr/m/n/12 tu-re in the US.  $\OT4/cmtt/m/n/12 http : / / lermagazine . co
+m / article /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--625
+\OT4/cmtt/m/n/12 epidemiology-[]of-[]achilles-[]tendon-[]rupture-[]in-[]the-[]u
+s$\OT4/cmr/m/n/12 , 2014.  Dost.:
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [124]
-Underfull \hbox (badness 5475) in paragraph at lines 651--658
-[]\OT4/cmr/m/n/12 A. Ro-si«-ska, M. Sy-rek.  Re-ha-bi-li-ta-cja ±ci¦-gna Achil-
-le-sa - ko-plet-ny
+Underfull \hbox (badness 4505) in paragraph at lines 658--665
+[]\OT4/cmr/m/n/12 Agnieszka Ro-si«-ska, Mag-da-le-na Sy-rek.  Re-ha-bi-li-ta-cj
+a ±ci¦-gna Achil-le-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 651--658
-\OT4/cmr/m/n/12 pro-to-kóª uspraw-nia-nia po trój-p¦cz-ko-wej re-kon-struk-cji 
-±ci¦-gna Achil-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--658
-\OT4/cmr/m/n/12 le-sa.  $\OT4/cmtt/m/n/12 https : / / carolina . pl / wp-[]cont
-ent / uploads / 2016 / 09 / Start _
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--658
-\OT4/cmtt/m/n/12 Rehabilitacja-[]Sciegna-[]Achillesa _ publikacja . pdf$\OT4/cm
-r/m/n/12 , 2017.  Ac-ces-sed:
+Underfull \hbox (badness 1571) in paragraph at lines 658--665
+\OT4/cmr/m/n/12 sa - ko-plet-ny pro-to-kóª uspraw-nia-nia po trój-p¦cz-ko-wej r
+e-kon-struk-cji ±ci¦-
  []
 
 
@@ -2380,12 +2385,6 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [126]
-Underfull \hbox (badness 1584) in paragraph at lines 799--803
-\OT4/cmr/m/n/12 ResNet and the Im-pact of Re-si-du-al Con-nec-tions on Le-ar-ni
-ng.  \OT4/cmr/m/it/12 CoRR\OT4/cmr/m/n/12 ,
- []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2393,13 +2392,17 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[128]) (appendix.tex
+[128]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[129]
+[129]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[130]
 Dodatek A.
-) [130
+) [131
 
 ] (thesis.aux (header.aux))
 
@@ -2446,9 +2449,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (142 pages, 7419704 bytes).
+Output written on thesis.pdf (143 pages, 7421120 bytes).
 PDF statistics:
- 625 PDF objects out of 1000 (max. 8388607)
+ 628 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

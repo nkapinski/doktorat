@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  11 JUL 2019 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.10)  16 JUL 2019 14:32
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1999,13 +1999,13 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 458.
 
-<figures/cm.png, id=383, 710.655pt x 1084.05pt>
+<figures/cm.png, id=383, 1156.32pt x 1806.75pt>
 File: figures/cm.png Graphic file (type png)
 <use figures/cm.png>
 Package pdftex.def Info: figures/cm.png  used on input line 460.
-(pdftex.def)             Requested size: 441.01773pt x 672.74918pt.
+(pdftex.def)             Requested size: 441.01773pt x 689.0809pt.
 
-LaTeX Warning: Float too large for page by 61.46608pt on input line 462.
+LaTeX Warning: Float too large for page by 77.7978pt on input line 462.
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -2449,7 +2449,7 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti10.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (143 pages, 7421120 bytes).
+Output written on thesis.pdf (143 pages, 7693453 bytes).
 PDF statistics:
  628 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

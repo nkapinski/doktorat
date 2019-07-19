@@ -66,7 +66,7 @@ y=f\left(x_1, x_2,..., x_n\right)
 W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie istniała natomiast możliwość uczenia się takiej architektury. Problem ten rozwiązano w 1957 proponując sztuczną sieć neuronową zawierającą wiele neuronów z ważonymi połączeniami między sobą (zob. \cite{Rosenblatt1957}). Sieć nazwano perceptronem, co było implikacją zamiłowania jego twórcy Franka Rosenblatta do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. Schemat sieci pokazano na Rys. \ref{Perceptron}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.55\textwidth]{figures/perceptron.png}
+	\includegraphics[width=1\textwidth]{figures/perceptron.png}
 	\caption{Topologia perceptronu.}
 	\label{Perceptron}
 \end{figure}
@@ -86,7 +86,7 @@ Dla przykładu, w dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2
 Po latach intensywnych prac, część z opisanych przez Minsky-Papert problemów udało się rozwiązać za sprawą pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williams, którzy opublikowali w 1986 roku pracę \cite{Rumelhart1986}, traktującą o perceptronach wielowarstwowych. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.55\textwidth]{figures/MLperceptron.png}
+	\includegraphics[width=1\textwidth]{figures/MLperceptron.png}
 	\caption{Topologia perceptronu wielowarstwowego.}
 	\label{MLperceptron}
 \end{figure}
@@ -215,7 +215,7 @@ Zatem ogólnym dążeniem w procesie uczenia się sieci jest osiągnięcie \text
 W tym celu można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru uczącego na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.55\textwidth]{figures/cross-validation.png}
+	\includegraphics[width=1\textwidth]{figures/cross-validation.png}
 	\caption{Reprezentacja graficzna oceny krzyżowej.}
 	\label{cross-validation}
 \end{figure}
@@ -315,7 +315,7 @@ Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbió
 Dla przykładu pierwsza składowa główna redukuje największą część zróżnicowania, druga kolejną, której nie redukowała poprzednia itd. Składowych głównych jest zawsze tyle ile wymiarów danych. Przykład dwuwymiarowy został przedstawiony na Rys. \ref{PCA-2dim}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/PCA.png}
+	\includegraphics[width=1\textwidth]{figures/PCA.png}
 	\caption{Dwuwymiarowa przestrzeń cech wraz z zaznaczonymi poziomami warianci i składowymi głównymi.}
 	\label{PCA-2dim}
 \end{figure}
@@ -367,7 +367,7 @@ W warstwie oprogramowania należy wspomnieć o rozwiązaniach takich jak TensorR
 Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla progres w rezultatach konkursu ImageNet Large Scale Visual Recognition Competition (w skr. ILSVRC) przedstawiony na Rys. \ref{ILSVRC}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/ILSVRC.png}
+	\includegraphics[width=1\textwidth]{figures/ILSVRC.jpg}
 	\caption{Błąd top-5 klasyfikacji obiektów w kolejnych latach uzyskiwany przez zwycięzców konkursu ILSVRC}
 	\label{ILSVRC}
 \end{figure}
@@ -378,7 +378,7 @@ Prezentowane wyniki dotyczą wartości błędu klasyfikacji na zbiorze danych \c
 Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architektury Alexa Krizhevsky, zawiera blisko 60 milionów parametrów i 650 tysięcy neuronów. Architekturę zaprezentowano na Rys. \ref{AlexNetTopology}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.55\textwidth]{figures/AlexNet.png}
+	\includegraphics[width=1\textwidth]{figures/AlexNet.png}
 	\caption{Schemat architektury AlexNet.}
 	\label{AlexNetTopology}
 \end{figure}
@@ -401,7 +401,7 @@ W kontekście zwiększenia efektywności treningu zastosowano również powięks
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/AlexNet-multiGPU.png}
+	\includegraphics[width=1\textwidth]{figures/AlexNet-multiGPU.png}
 	\caption{Topologia architektury AlexNet z podziałem na dwa akceleratory GPU.}
 	\label{AlexNetTopologyMultiGPU}
 \end{figure}
@@ -419,7 +419,7 @@ Redukcję liczby parametrów przy jednoczesnym podwyższeniu dokładności klasy
 Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymacja rzadkich macierzy z użyciem komponentów o gęstej strukturze. Takie komponenty nazwano \textit{modułami incepcji} (ang. \textit{inception modules}), a ich przykłady pokazano na Rys. \ref{GoogleNetInceptionModules}. 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/InceptionModules.png}
+	\includegraphics[width=1\textwidth]{figures/InceptionModules.png}
 	\caption{Moduły incepcji o głębokości jednego (po lewej) i dwóch stopni (po prawej).}
 	\label{GoogleNetInceptionModules}
 \end{figure}
@@ -482,7 +482,7 @@ Jednym z najbardziej oczywistych pomysłów na polepszenie dokładności działa
 W momencie znalezienia takiego minimum dodanie kolejnych warstw i parametrów sieci jest redundantne, a nawet prowadzi do pogorszenia wyników treningu sieci. Zjawisko to nosi nazwę \textit{degradacji treningu} (ang. \textit{degradation problem}). Twórcy architektury ResNet, przedstawionej w \cite{ResNet}, zaproponowali rozwiązanie tego problemu poprzez implementację bloków rezydualnych (ang. \textit{Residuum Units}) zawierających dodatkowe, skrótowe połączenia (ang. \textit{skip conections}) pomiędzy wejściem a wyjściem bloków. Porównanie schematów funkcjonalnych nowych bloków i wcześniej istniejącego rozwiązania stosowanego np. w AlexNet zostało przedstawione na Rys. \ref{ResNetBlock}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/ResidualBlock.jpg}
+	\includegraphics[width=1\textwidth]{figures/ResidualBlock.png}
 	\caption{Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.}
 	\label{ResNetBlock}
 \end{figure} 

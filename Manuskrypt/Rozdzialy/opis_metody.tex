@@ -62,7 +62,7 @@ Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDx
 
 W grupie zdrowych ochotników przeprowadzono pojedyncze badanie, natomiast pacjentów skanowano 10-krotnie w odpowiednio zdefiniowanych odstępach czasowych. Pierwsze badanie odbyło się przed operacją, a następnych 9 po, odpowiednio w: 1, 3, 6, 9, 12, 20, 26, 40 i 52 tygodniu. W procesie zbierania danych wystąpiły problemy wynikające z braku obecności poszczególnych osób na badaniach lub niespójnością danych. Dlatego finalnie skompletowany zbiór składa się z homogenicznych badań 27 zdrowych ochotników (270 trójwymiarowych skanów RM, w skład których wchodzi wspomniane 10 modalności) oraz 59 badań pacjentów (5900 trójwymiarowych skanów RM z 10-oma modalnościami i 10-oma krokami czasowymi). Przykładowa wizualizacja danych pacjenta i osoby zdrowej znajduje się na Fig. \ref{fig:MRI_sample}. 
 \begin{figure}[h!]
-	\includegraphics[width=\textwidth]{figures/Data_MRI_sample.png}
+	\includegraphics[width=\textwidth]{figures/Data_MRI_sample.jpg}
 	\caption{Wizualizacja danych RM w sekwencji PD dla zdrowego (po lewej) i gojącego się (po prawej) ścięgna Achillesa.}
 	 \label{fig:MRI_sample}
 \end{figure}
@@ -123,7 +123,7 @@ Dla wszystkich architektur, wyniki dokładności klasyfikacji najlepszych modeli
 
 W kolejnym kroku, dla wszystkich trzech architektur porównano również czasy szkolenia się dla zadanego problemu. Na Rys. \ref{fig:training_times} zestawiono łączny czas 5 iteracji procesu kroswalidacji.
 \begin{figure}[h!]
-	\includegraphics[width=\textwidth]{figures/TrainingtimesChart.png}
+	\includegraphics[width=\textwidth]{figures/TrainingtimesChart.jpg}
 	\caption{Porównanie czasów treningu architektur na dwóch architekturach GPU: Pascal i Volta.}
 	\label{fig:training_times}
 \end{figure}
@@ -158,7 +158,7 @@ W kolejnym kroku zwizualizowano uśrednione wartości PC1 dla wyników wszystkic
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/H_PC1.png}
+	\includegraphics[width=0.8\textwidth]{figures/H_PC1.jpg}
 	\caption{Porównanie krzywych dla 10 modalności RM reprezentujących średnią $H_{PC}$ z 10 pacjentów.}\label{fig:H}
 \end{figure}
 Oddzielnie przedstawiono wykresy uzyskanych krzywych dla wszystkich użytych w tej pracy sekwencji i modalności RM. W celu uzyskania pojedynczej wartości opisującej badanie RM wykorzystano ponownie średnią trymowaną:
@@ -182,7 +182,7 @@ Z uwagi na opisany w Sekcji \ref{RM} tor akwizycji danych RM, zwiększanie liczb
 \subsubsection{Analiza wizualna:} W ramach wstępnej analizy, wartości danych ze wszystkich sekwencji i modalności zebranych od pacjentów zostały zakumulowane w postaci  histogramów i przedstawione na Rys. \ref{fig:Hists}.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/Hists.png}
+	\includegraphics[width=0.6\textwidth]{figures/Hists.jpg}
 	\caption{Znormalizowane histogramy dla 10 sekwencji RM.}\label{fig:Hists}
 \end{figure}
 Dane zostały przeskalowane do zakresu $<$0; 255$>$ i zmodyfikowane do porównań tak, aby wartość całki Riemanna była równa 1.
@@ -200,7 +200,7 @@ Na podstawie powyższej, zgrubnej analizy można wyłączyć z dalszych badań p
 
  \begin{figure}[h]
  	\centering
- 	\includegraphics[width=0.95\textwidth]{figures/Protocol_comparison.png}
+ 	\includegraphics[width=0.95\textwidth]{figures/Protocol_comparison.jpg}
  	\caption{Porównanie sekwencji RM ilustrujących proces gojenia się ścięgna Achillesa w 12 tygodniu po rekonstrukcji.}\label{fig:protocol_comp}
  \end{figure}
 
@@ -210,7 +210,7 @@ Na Rys. \ref{fig:T2comp} przedstawiono próbki T2 $^\ast$ GRE TE\_MIN zrekonstru
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/T2gremin.png}
+	\includegraphics[width=0.95\textwidth]{figures/T2gremin.jpg}
 	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast$ GRE TE\_MIN}\label{fig:T2comp}
 \end{figure}
 
@@ -443,7 +443,7 @@ Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech 
 Dla lepszego zrozumienia różnic między obszarami objętymi cechami DL i z ROI wykonano szereg eksperymentów i analiz w celu wizualizacji obszaru zainteresowania sieci neuronowych. Przykład znajduje się na Rys. \ref{fig:XAI}.  
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/XAI.png}
+	\includegraphics[width=1\textwidth]{figures/XAI.jpg}
 	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.}\label{fig:XAI}
 \end{figure}
 Obszar zainteresowania wykorzystanej w eksperymentach sieci neuronowej obejmuje ROI jak i tkanki okalające. Optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową oraz ROI umożliwia bardziej skuteczną ocenę całego procesu poprzez zapewnienie zgrubnej oceny z użyciem sieci i szczegółowej z dołączenia predyktorów z ROI, bardziej odpornych na szum. 
@@ -481,7 +481,7 @@ Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorsz
 
 \begin{figure}[]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/cm_summary.png}
+	\includegraphics[width=1\textwidth]{figures/cm_summary.jpg}
 	\caption{Wartości $PP_d$ dla parametrów z wzorca odniesienia.}\label{fig:CM_MAE_SUMMARY}
 \end{figure}
 
@@ -492,14 +492,14 @@ Analizując poszczególne parametry od najlepszego pod względem $PP_d$ -- w prz
 Do dalszej analizy różnic między ocenami wykorzystano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (zob. Rys. \ref{fig:cmscores}).
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/cmScores.png}
+	\includegraphics[width=0.5\textwidth]{figures/cmScores.jpg}
 	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
 \end{figure}
 Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej oceniano jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniono jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej oceniono notą 2 (7 razy) lub 3 (8 razy). Natomiast notę 0 oceniono na wartość 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores}.
 
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/cmScores_summary.png}
+	\includegraphics[width=0.6\textwidth]{figures/cmScores_summary.jpg}
 	\caption{MAE w obrębie klas.}\label{fig:cmscores}
 \end{figure}
 

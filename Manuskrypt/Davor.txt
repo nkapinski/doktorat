@@ -1,0 +1,14 @@
+- Davor by³ w Polsce przez 3 lata (Kraków)
+- EEG based survice, acquire EEG signal and benchmark against existing dataset and compare emotions
+- standardize Software for many hardware
+- BCI printed headset
+- PoC required
+
+- cost and timelines for projects
+- platform for different EEG
+
+MVP
+- benchmark new data against existing dataset ()
+- neurolodzy moga siê przydaæ - np. Sobieskiego (walidacja/dane/wiedza) 
+
+Davor teraz zacznie kombinowaæ nad PoC/MVP i za kilka tygodni;

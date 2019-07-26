@@ -22,10 +22,10 @@
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{55}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{57}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{59}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{62}
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki z ocen\IeC {\k a} panelu ekspert\IeC {\'o}w.\relax }}{63}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{63}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki z ocen\IeC {\k a} panelu ekspert\IeC {\'o}w.\relax }}{64}
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji 3 chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{64}
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Firmy stosuj\IeC {\k a}ce w swoich produktach g\IeC {\l }\IeC {\k e}bokie sieci neuronowe, uzyskuj\IeC {\k a}ce certyfikacj\IeC {\k e} FDA.\relax }}{65}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Firmy stosuj\IeC {\k a}ce w swoich produktach g\IeC {\l }\IeC {\k e}bokie sieci neuronowe, uzyskuj\IeC {\k a}ce certyfikacj\IeC {\k e} FDA.\relax }}{66}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{69}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Wizualizacja danych RM w sekwencji PD dla zdrowego (po lewej) i goj\IeC {\k a}cego si\IeC {\k e} (po prawej) \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{72}
@@ -37,14 +37,14 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{89}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{90}
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Warto\IeC {\'s}ci $PP_d$ dla parametr\IeC {\'o}w z wzorca odniesienia.\relax }}{91}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{93}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{92}
 \contentsline {figure}{\numberline {5.12}{\ignorespaces MAE w obr\IeC {\k e}bie klas.\relax }}{93}
 \contentsline {figure}{\numberline {5.13}{\ignorespaces Ocena parametru SCT.\relax }}{94}
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru TT.\relax }}{95}
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Ocena parametru STE.\relax }}{96}
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Ocena parametru TE.\relax }}{97}
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TU.\relax }}{98}
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TisE.\relax }}{99}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TU.\relax }}{97}
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TisE.\relax }}{98}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{103}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna w przekrojach osiowych i strza\IeC {\l }kowych.\relax }}{105}

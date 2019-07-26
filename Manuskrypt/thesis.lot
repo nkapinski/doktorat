@@ -7,7 +7,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{75}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{77}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0,01.\relax }}{82}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Korelacja sekwencji PD, T1, T2 and T2$^\ast $ GRE MRI. Wyniki oznaczone pogrubieniem s\IeC {\k a} istotne statystycznie z p $<$ 0,01.\relax }}{83}
 \contentsline {table}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie wnioskowania dla r\IeC {\'o}\IeC {\.z}nych modeli regresji wytrenowanych w oparciu o dane z 3 sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedn\IeC {\k a} sekwencj\IeC {\k e} RM.\relax }}{84}
 \contentsline {table}{\numberline {5.5}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru treningowego.\relax }}{87}
 \contentsline {table}{\numberline {5.6}{\ignorespaces Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki uzyskane przez algorytmy meta-regresji z wy\IeC {\l }\IeC {\k a}czeniem RF, dla kt\IeC {\'o}rego wyst\IeC {\k e}puje efekt przeuczenia.\relax }}{87}

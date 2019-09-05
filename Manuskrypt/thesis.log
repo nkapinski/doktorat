@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  4 SEP 2019 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  5 SEP 2019 09:25
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1358,7 +1358,7 @@ Package pdftex.def Info: figures/CAD-okulisci.jpg  used on input line 596.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 3049) has occurred while \output is active []
+Underfull \vbox (badness 2103) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1378,7 +1378,7 @@ File: figures/CAD-dermatolodzy.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 607.
 (pdftex.def)             Requested size: 396.91325pt x 160.68979pt.
 
-Underfull \vbox (badness 2158) has occurred while \output is active []
+Underfull \vbox (badness 3199) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -2062,7 +2062,7 @@ X 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs
 grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (145 pages, 12199774 bytes).
+Output written on thesis.pdf (145 pages, 12200054 bytes).
 PDF statistics:
  609 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

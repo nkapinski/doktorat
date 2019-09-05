@@ -118,7 +118,7 @@ Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu e
 
 \section{Szkolenie głębokich sieci neuronowych}
 
-Większość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat} lub \textit{funkcja błędów} (por. \cite{Goodfellow-et-al-2016}). 
+Proces szkolenia się sieci nazywany jest również uczeniem się lub treningiem. Większość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat} lub \textit{funkcja błędów} (por. \cite{Goodfellow-et-al-2016}). 
 
 Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$). W praktyce wykorzystywane są również: macierz pochodnych cząstkowych tzw. \textit{macierz Jacobiego} oznaczana jako $J$ oraz macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) tzw. \textit{macierz Hessego} oznaczana jako $H$.
 
@@ -538,7 +538,7 @@ Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze prz
 Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR czy COCO \cite{COCO} osiągnęły dokładność klasyfikacji porównywalną z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
 
 \subsection{Złożenia}
-Uczenie złożeń sieci (ang. \textit{esemble learning}) polega na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii. W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych (zob. \cite{Ensemble}). Jako często stosowane przykłady można podać: uśrednianie, głosowanie, klasyfikacja Bayesa, generalizację stosów. Zostaną one kolejno omówione:
+Szkolenie złożeń sieci (ang. \textit{esemble learning}) polega na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii. W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych (zob. \cite{Ensemble}). Jako często stosowane przykłady można podać: uśrednianie, głosowanie, klasyfikację Bayesa, generalizację stosów.
 
 \subsubsection{Uśrednianie}
 Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednienie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez ich liczbę. Uśredniać można bezpośrednio wyniki ostatecznej klasyfikacji jak również prawdopodobieństwa przynależności do odpowiednich klas, które są np. wynikiem \textit{funkcji softmax}:
@@ -549,31 +549,31 @@ używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $
 
 Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty, tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (zob. \cite{Breiman2001}).
 
-Zastosowanie uśredniania przy silnie odstających od średniej najgorszych predykcjach znacząco obniża dokładność całego złożenia. Dlatego przy tak nieheterogenicznych modelach bazowych dających bardzo różne wyniki poszukiwane są inne metody.
+Zastosowanie uśredniania przy silnie odstających od średniej najgorszych predykcjach znacząco obniża dokładność całego złożenia. Dlatego przy tak nieheterogenicznych modelach bazowych, dających bardzo różne wyniki, poszukiwane są inne metody.
 
 \subsubsection{Głosowanie}
 
 W głosowaniu stosuje się mechanizm zliczania przewidzianych przez modele bazowe etykiet. Etykieta, która została wybrana przez największą liczbę modeli bazowych jest obierana jako wynik ostatecznej predykcji. Jest to tzw. \textit{głosowanie większościowe}.
 
-W porównaniu do uśredniania, głosowanie jest mniej czułe na predykcje pojedynczych modeli. Wykorzystuje jednak jedynie informacje o przewidzianych etykietach, co utrudnia konstrukcje bardziej wyszukanych rozwiązań.
+W porównaniu do uśredniania, głosowanie jest mniej czułe na predykcje pojedynczych modeli. Wykorzystuje jedynie informacje o przewidzianych etykietach, co z kolei utrudnia konstrukcje bardziej wyszukanych rozwiązań.
 
 \subsubsection{Klasyfikacja Bayesa}
 
-W przypadku tej metody, każdy model bazowy $j$ postrzegany jest jako hipoteza $h_j$. Każda z hipotez posiada wagę proporcjonalną do prawdopodobieństwa zdarzenia, w którym dany zbiór trenujący zostałby wybrany z ogółu danych gdyby dana hipoteza była prawdziwa. Jest to tzw. optymalna klasyfikacja Bayesa, którą można zapisać następującym równaniem:
+W przypadku tej metody, każdy model bazowy $j$ postrzegany jest jako hipoteza $h_j$. Każda z hipotez posiada wagę proporcjonalną do prawdopodobieństwa zdarzenia, w którym dany zbiór trenujący zostałby wybrany z ogółu danych, gdyby dana hipoteza była prawdziwa. Jest to tzw. optymalna klasyfikacja Bayesa, którą można zapisać następującym równaniem:
 \begin{equation}
-y = arg max_{c_j \in C} \sum_{h_i \in H} P(c_j \mid h_i)P(T \mid h_i)P(h_i)
+y_e = arg max_{c_j \in C_e} \sum_{h_i \in H_e} P(c_j \mid h_i)P(T_e \mid h_i)P(h_i)
 \end{equation}
-gdzie $y$ to przewidziana etykieta, $C$ jest zbiorem wszystkich możliwych klas, $H$ to przestrzeń hipotez, a $T$ to zbiór danych trenujących.
+gdzie $y_e$ to przewidziana etykieta, $C_e$ jest zbiorem wszystkich możliwych klas, $H_e$ to przestrzeń hipotez, a $T_e$ to zbiór danych trenujących.
 
-W praktyce z uwagi na dużą złożoność obliczeniową nie stosuje się optymalnej klasyfikację Bayesa, a jedynie aproksymacje tej metody np.: BPA (od ang. \textit{Bayesian parameter averaging}) \cite{BPA}, BMA (od ang. \textit{Bayesian model averaging}) \cite{BMA}, czy też BMC (od ang. \textit{Bayesian model combination}) \cite{BMC}.
+W praktyce z uwagi na dużą złożoność obliczeniową nie stosuje się optymalnej klasyfikacji Bayesa, a jedynie aproksymacje tej metody np.: BPA (od ang. \textit{Bayesian Parameter Averaging}) \cite{BPA}, BMA (od ang. \textit{Bayesian Model Averaging}) \cite{BMA}, czy też BMC (od ang. \textit{Bayesian Model Combination}) \cite{BMC}.
 
 \subsubsection{Generalizacja stosów}
-Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadaniem jest wybór optymalnego wektora wag $a$ dla stosu $s$ predykcji dla danych $x$:
+Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadaniem jest wybór optymalnego wektora wag $w$ dla stosu $S$ predykcji dla danych $x_s$:
 \begin{equation}
-s(x) = \sum_{i=1}^{m}a_i s_i(x)
+S(x_s) = \sum_{i=1}^{m}w_i S_i(x_s)
 \end{equation}
 
-W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do treningu poprawnych wartości $a$ wykorzystując jako odniesienie znane, poprawne etykiety.
+W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do treningu poprawnych wartości $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
  
 
 \section{Zastosowania w medycynie}
@@ -588,34 +588,34 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
 	\label{DL_CAD_stats}
 \end{figure}
 
- Widoczny wzrost liczby publikacji nastąpił począwszy od 2015, co związane było z kilkuletnią adaptacją nowych metod w dziedzinie przetwarzania obrazów medycznych i gromadzeniem odpowiednich zbiorów danych. Lata 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się coraz więcej prac naukowych, w których przedstawiano rezultaty dokładności klasyfikacji na poziomie dorównującym ekspertom dziedzinowym.
+ Widoczny wzrost liczby publikacji nastąpił począwszy od 2015 roku, co związane było z kilkuletnią adaptacją nowych metod w dziedzinie przetwarzania obrazów medycznych i gromadzeniem odpowiednich zbiorów danych. Lata 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się coraz więcej prac naukowych, w których przedstawiano rezultaty dokładności klasyfikacji na poziomie dorównującym ekspertom dziedzinowym.
  
- Dla przykładu, w Listopadzie 2016 ukazała się praca \cite{Gulshan2016} grupy Google Research z Mountain View w Kalifornii, gdzie zastosowano sieć GoogLeNet w wersji inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem składającym się z 7 ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
+ Dla przykładu, w listopadzie 2016 r. ukazała się praca \cite{Gulshan2016} grupy Google Research z Mountain View w Kalifornii, gdzie zastosowano sieć GoogLeNet w wersji Inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem składającym się z 7 ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
  \begin{figure}[h!]
  	\centering
  	\includegraphics[width=0.7\textwidth]{figures/CAD-okulisci.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji retinopatii cukrzycowej i cukrzycowego obrzęku plamki z oceną panelu ekspertów.}
+ 	\caption{Porównanie automatycznej klasyfikacji z oceną ekspertów dla problemu retinopatii cukrzycowej i cukrzycowego obrzęku plamki.}
  	\label{CAD_opto}
  \end{figure}
  
- Na wykresach dla dwóch zadań klasyfikacyjnych umieszczono krzywe reprezentujące zależność swoistości od czułości dla algorytmu automatycznego oraz 7 punktów oznaczających wynik oceny każdego z okulistów. Ogółem mniej niż połowa ekspertów uzyskała lepszy wynik niż algorytm sztucznej inteligencji.
+ Na wykresach, dla dwóch zadań klasyfikacyjnych, umieszczono krzywe reprezentujące zależność swoistości od czułości dla algorytmu automatycznego oraz 7 punktów oznaczających wynik oceny każdego z okulistów. Ogółem, mniej niż połowa ekspertów uzyskała lepszy wynik niż algorytm sztucznej inteligencji.
  
- Kolejna ciekawa praca tj. \cite{Esteva2017}, pojawiła się w czasopiśmie Nature w styczniu 2017 roku i traktowała o automatycznej detekcji nowotworów skóry na podstawie zdjęć. Autorzy wykorzystali dane składające się z 129.450 obrazów klinicznych, na których zobrazowano 2.032 różne schorzenia skóry. Ponownie do klasyfikacji wykorzystano sieć GoogleNet w wersji inception-v3. Wyniki klasyfikacji automatycznej porównano z oceną przeprowadzoną przez 21 certyfikowanych dermatologów. Przykład porównania zaprezentowano na Rys. \ref{CAD_derma}. 
+ Kolejna ciekawa praca tj. \cite{Esteva2017}, pojawiła się w czasopiśmie Nature w styczniu 2017 roku i traktowała o automatycznej detekcji nowotworów skóry na podstawie zdjęć. Autorzy wykorzystali dane składające się z 129.450 obrazów klinicznych, na których zobrazowano 2.032 różne schorzenia skóry. Ponownie do klasyfikacji wykorzystano sieć Inception-v3. Wyniki klasyfikacji automatycznej porównano z oceną przeprowadzoną przez 21 certyfikowanych dermatologów. Przykład porównania zaprezentowano na Rys. \ref{CAD_derma}. 
  
  \begin{figure}[h!]
  	\centering
  	\includegraphics[width=0.9\textwidth]{figures/CAD-dermatolodzy.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji 3 chorób skóry z oceną ekspertów dermatologów.}
+ 	\caption{Porównanie automatycznej klasyfikacji trzech chorób skóry z oceną ekspertów dermatologów.}
  	\label{CAD_derma}
  \end{figure}
 
-Wykres przedstawia zależność czułości od swoistości. Czerwonymi punktami oznaczono wynik oceny poszczególnych ekspertów, a zielonym krzyżykiem wynik uśredniony. W każdym przypadku średnia ocena była gorsza od automatycznej klasyfikacji.
+Wykres przedstawia zależność czułości od swoistości. Czerwonymi punktami oznaczono wynik oceny poszczególnych ekspertów, zielonym krzyżykiem wynik uśredniony. W każdym przypadku średnia ocena była gorsza od automatycznej klasyfikacji.
 
-Obrazy medyczne nie są jedynymi danymi, które z powodzeniem są przetwarzane za pomocą metod głębokiego uczenia się. W lipcu 2017, przez grupę ze Stanford University została opublikowana praca \cite{2017arXiv170701836R} dotycząca klasyfikacji arytmii na podstawie szeregów czasowych zapisanych na elektrokardiogramach. Autorzy wykorzystali dane z 64.121 elektrokardiogramów, próbkowanych z częstotliwością 200 Hz, pochodzących od 29.163 pacjentów. Zaprojektowano dedykowaną, 34-warstwową sieć konwolucyjną do detekcji 12 różnych dysfunkcji pracy serca, pracy prawidłowej i szumów (łącznie 14 klas). Wyniki klasyfikacji porównano z oceną prowadzoną przez 3 kardiologów. Średnia dokładność z oceny automatycznej wyniosła 80\%, natomiast manualnej 72\%.
+Obrazy nie są jedynymi danymi medycznymi, które z powodzeniem są przetwarzane za pomocą metod głębokiego uczenia się. W lipcu 2017, przez grupę naukowców z Uniwersytetu Stanforda została opublikowana praca \cite{2017arXiv170701836R} dotycząca klasyfikacji arytmii na podstawie szeregów czasowych zapisanych na elektrokardiogramach. Autorzy wykorzystali dane z 64.121 elektrokardiogramów próbkowanych z częstotliwością 200 Hz, pochodzących od 29.163 pacjentów. Zaprojektowano dedykowaną, 34-warstwową sieć konwolucyjną do detekcji 12 różnych dysfunkcji pracy serca, pracy prawidłowej i szumów (łącznie 14 klas). Wyniki klasyfikacji porównano z oceną prowadzoną przez 3 kardiologów. Średnia dokładność oceny automatycznej wyniosła 80\%, natomiast manualnej 72\%.
 
 Podobnych przykładów zostało opublikowanych dużo więcej. Architektura AlexNet z sukcesem była użyta do detekcji polipów w kolonoskopii w \cite{Tajbakhsh2016}. Sieć ResNet sprawdziła się w badaniach zrealizowanych w \cite{Erickson2018} w Mayo Clinic Rotschester. Dotyczyły one radio-genomiki i rozróżnienia zmian w mózgu bez konieczności biopsji. Złożenia natomiast z sukcesem zaaplikowano w pracach dotyczących detekcji nowotworów płuc, gdzie modele bazowe analizowały różne skale problemu (zob. \cite{LungChalenge}). W wielu pracach dotyczących radiologii raportuje się dokładność klasyfikacji automatycznej znacząco przewyższające możliwości dziedzinowych ekspertów np. \cite{Christiansen2018, Sarraf2016, Glasser2016, 2016arXiv160605718W}.
 
-Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany (lub nawet zastąpiony) przez algorytmy głębokiego uczenia się. Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm stosujących głębokie sieci neuronowe do wspomagania medycyny i uzyskujących certyfikację medyczną. Infografikę przedstawiającą dynamikę tych zmian zaprezentowano na Rys. \ref{fda_cert}.
+Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany (lub nawet zastąpiony) przez algorytmy głębokiego uczenia się. Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm uzyskujących certyfikację medyczną na produkty wykorzystujące głębokie sieci neuronowe. Infografikę przedstawiającą dynamikę tych zmian zaprezentowano na Rys. \ref{fda_cert}.
 
 \begin{figure}[h!]
 	\centering
@@ -624,7 +624,7 @@ Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element
 	\label{fda_cert}
 \end{figure}
 
-Należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju sztucznej inteligencji w medycynie. Do najważniejszych należą:
+Z drugiej strony, należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju metod w medycynie. Do najważniejszych należą:
 \begin{enumerate}
 	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
 	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.
@@ -632,11 +632,11 @@ Należy jednak podkreślić, że jest również szereg problemów wiążących s
 	\item Unifikacja modeli wykonujących podobne zadania.
 	\item Minimalizacja liczby parametrów modelu przy zachowaniu satysfakcjonującego poziomu dokładności.
 \end{enumerate}
-Więcej na temat ograniczeń metod głębokiego uczenia się można przeczytać również w \cite{Marcus2018}.
+Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). 
 
-Dyskusja dotycząca tych problemów wciąż jest tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). Najbardziej zaawansowane prace dotyczą problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych ze współpracą przy pozyskiwaniu danych i wykorzystania algorytmów uczenia maszynowego.
+Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych ze współpracą przy pozyskiwaniu danych i wykorzystaniu algorytmów uczenia maszynowego.
 
-Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowią silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem.
+Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowią silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem. Prace te zostały przedstawione w kolejnym rozdziale.
 
 
     

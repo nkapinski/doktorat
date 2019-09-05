@@ -445,18 +445,18 @@ W tym porównaniu nawet wyniki uzyskane z modelu liniowej regresji bazującej na
 Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów opisujących tkanki wewnątrz ROI. Są to cechy bardziej odporne na wspomniane wcześniej zaburzenia procesu gojenia, które można ogólnie nazwać szumem w sygnale gojenia (np. znaczące zwiększenie się obrzęku na skutek temperatury lub wysiłku fizycznego). W szczególności, cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo, zwiększona liczba cech DL podniosła poziom informacji wpływając na ogólną ocenę, jak i w szczególności na parametr TisE zależny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje poniżej 0,5. Wynik ten będzie dyskutowany w dalszej części tej rozprawy.
 
 Dla lepszego zrozumienia różnic między obszarami objętymi cechami DL i z ROI wykonano szereg eksperymentów i analiz w celu wizualizacji obszaru zainteresowania sieci neuronowych. Przykład dla pojedynczych przekrojów znajduje się na Rys. \ref{fig:XAI}.  
-\begin{figure}[h!]
+\begin{figure}[]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/XAI.jpg}
 	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.}\label{fig:XAI}
 \end{figure}
-Można zaobserwować, że obszar zainteresowania wykorzystanej w eksperymentach sieci neuronowej obejmuje ROI jak i tkanki okalające. W celu zilustrowania zmian w czasie, na Rys. \ref{fig:3DXAI} pokazano izopowierzchnie przechodzące przez granicę obszaru zainteresowania w trójwymiarowych badaniach w kolejnych tygodniach gojenia.
-\begin{figure}[h!]
+Można zaobserwować, że obszar zainteresowania wykorzystanej w eksperymentach sieci neuronowej obejmuje ROI jak i tkanki okalające. W celu zilustrowania zmian w czasie, na Rys. \ref{fig:3DXAI} pokazano izopowierzchnie przechodzące przez granicę obszaru zainteresowania w trójwymiarowych badaniach.
+\begin{figure}[]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/3DXAI.png}
+	\includegraphics[width=1\textwidth]{figures/3DXAI.jpg}
 	\caption{Trójwymiarowa wizualizacja zmian obszaru zainteresowania w kolejnych etapach gojenia się ścięgna.}\label{fig:3DXAI}
 \end{figure}
-Początkowo cechy na podstawie, których wnioskuje sieć znajdują się w większym rozrzucie niż na końcu gojenia się ścięgna.
+Początkowo cechy w kolejnych przekrojach na podstawie, których wnioskuje sieć znajdują się w większym rozrzuceniu niż na końcu monitorowanego etapu gojenia się ścięgna.
 
 Podsumowując, optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową oraz ROI umożliwia bardziej skuteczną ocenę całego procesu poprzez zapewnienie zgrubnej oceny z użyciem sieci i szczegółowej, z dołączenia predyktorów z ROI, bardziej odpornej na szum. 
 
@@ -474,7 +474,6 @@ Celem zdefiniowania ogólnych różnic między oceną radiologa i propozycją au
 \end{figure}
 
 Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim stopniu wyniki ocen w poszczególnych tygodniach są do siebie zbliżone. W przypadku możliwie najlepszego odwzorowania oceny radiologa przez nową metodę, minimalne błędy znajdowałyby się na diagonali przedstawionych wykresów. Dla poszczególnych parametrów można jednak zaobserwować dryf wartości minimalnych błędów. Pole powierzchni ($PP_d$) pomiędzy krzywą określającą wartości minimalne MAE a diagonalą zostały zebrane w Tabeli \ref{tab:dryf_meas}. 
-
 \begin{table*}[]
 	\caption{Ocena dryfu krzywej łączącej minima lokalne wartości MAE w macierzach błędów z klasą przyjętą jako tydzień rehabilitacji.}
 	\begin{center}
@@ -489,7 +488,7 @@ Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim 
 	\label{tab:dryf_meas}
 \end{table*}
 
-Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorszy dla $STE$, co oznacza, że w tych przypadkach ocena automatyczna najlepiej i najgorzej przypomina ocenę radiologa. Kolejne, najlepsze rezultaty otrzymano dla parametrów opisujących obrzęki tj. $TE$ i $TisE$ oraz spójność ścięgna ($SCT$). Drugi najgorszy wynik został uzyskany dla parametru $TU$ oceniającego jednorodność ścięgna w płaszczyźnie strzałkowej. Powyższe rezultaty są spójne z wnioskami do wyników zamieszczonych w Tab. \ref{tab:testset}, jednak szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
+Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorszy dla $STE$, co oznacza, że w tych przypadkach ocena automatyczna najlepiej i najgorzej przypomina ocenę radiologa. Kolejne, najlepsze rezultaty otrzymano dla parametrów opisujących obrzęki tj. $TE$ i $TisE$ oraz spójność ścięgna ($SCT$). Drugi najgorszy wynik został uzyskany dla parametru $TU$ oceniającego jednorodność ścięgna w płaszczyźnie strzałkowej. Powyższe rezultaty są spójne z wnioskami do wyników zamieszczonych w Tabeli \ref{tab:testset}, jednak szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
 
 \begin{figure}[]
 	\centering
@@ -497,34 +496,34 @@ Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorsz
 	\caption{Wartości $PP_d$ dla parametrów z wzorca odniesienia.}\label{fig:CM_MAE_SUMMARY}
 \end{figure}
 
-Najmniejsze różnice w ocenie występują w trzecim tygodniu, zatem w pierwszym pomiarze po fazie zapalnej. Największe natomiast są obecne w pierwszym oraz 39-tym tygodniu monitoringu, zatem w szczycie fazy zapalnej i w momencie zaawansowania fazy przebudowy. 
+Najmniejsze różnice w ocenie występują w trzecim tygodniu, czyli w pierwszym pomiarze po fazie zapalnej. Natomiast, wyróżniające dwa największe są obecne w pierwszym oraz 39-tym tygodniu monitoringu, zatem w szczycie fazy zapalnej i w momencie zaawansowania fazy przebudowy. 
 
-Analizując poszczególne parametry od najlepszego pod względem $PP_d$ -- w przypadku parametru TT, największe różnice w ocenie widoczne są między 3--12 tyg., a zatem na przełomie fazy poliferacji i przebudowy, gdzie włókna ścięgniste zaczynają się ukierunkowywać i zmienia się grubość ścięgna. Dla TE największe odchylenia zaobserwowano dla przełomu fazy zapalnej i poliferacji -- 1 tydz. oraz zaawansowanej przebudowy w 26 tyg. Podobny schemat zachowany jest dla TisE, z tą różnicą, że oprócz przełomu fazy zapalnej, odchylenia są widoczne w całym okresie przebudowy. Może to świadczyć o różnicy w ocenie płynów nagromadzonych w obrzękach. W przypadku SCT, różnice w ocenie spójności włókien uwidaczniają się w fazie przebudowy, kiedy to automatyczna metoda nie wskazuje na znaczący postęp w stosunku do wyniku z 26-tego tygodnia. W przypadku dwóch parametrów uzyskujących najgorszy wynik $PP_d$ tj. $TU$ i $STE$ rozbieżności są widoczne w cały okresie monitoringu, w szczególności w fazie zapalnej i przebudowy. Faza zapalna jest najbardziej dynamiczna, natomiast faza przebudowy była monitorowana w najdłuższych interwałach, stąd różnice w obrazach tkanek w obu przypadkach są największe. 
+Analizując poszczególne parametry od najlepszego pod względem $PP_d$: w przypadku parametru TT, największe różnice w ocenie widoczne są między 3--12 tyg., a zatem na przełomie fazy poliferacji i przebudowy, gdzie włókna ścięgniste zaczynają się ukierunkowywać i zmienia się grubość ścięgna. Dla TE największe odchylenia zaobserwowano dla przełomu fazy zapalnej i poliferacji -- tydz. 1 oraz zaawansowanej przebudowy w 26-tym tyg. Podobny schemat zachowany jest dla TisE, z tą różnicą, że oprócz przełomu fazy zapalnej, odchylenia są widoczne w całym okresie przebudowy. Może to świadczyć o różnicy w ocenie płynów nagromadzonych w obrzękach. W przypadku SCT, różnice w ocenie spójności włókien uwidaczniają się w fazie przebudowy, kiedy to automatyczna metoda nie wskazuje na znaczący postęp w stosunku do wyniku z 26-tego tygodnia. W przypadku dwóch parametrów uzyskujących najgorszy wynik $PP_d$ tj. $TU$ i $STE$ rozbieżności są widoczne w cały okresie monitoringu, w szczególności w fazie zapalnej i przebudowy. Faza zapalna jest najbardziej dynamiczna, natomiast faza przebudowy była monitorowana w najdłuższych interwałach, stąd różnice w obrazach tkanek w obu przypadkach są największe. 
 
 Do dalszej analizy różnic między ocenami wykorzystano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (zob. Rys. \ref{fig:cmscores}).
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.5\textwidth]{figures/cmScores.jpg}
+	\includegraphics[width=0.9\textwidth]{figures/cmScores.jpg}
 	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
 \end{figure}
-Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej oceniano jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniono jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej oceniono notą 2 (7 razy) lub 3 (8 razy). Natomiast notę 0 oceniono na wartość 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores}.
+Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej automatyczna metoda oceniła jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniona została jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej wystąpiła jako nota 2 (7 razy) lub 3 (8 razy). Natomiast nota 0 wystąpiła jako 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores}.
 
 \begin{figure}[]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/cmScores_summary.jpg}
+	\includegraphics[width=0.9\textwidth]{figures/cmScores_summary.jpg}
 	\caption{MAE w obrębie klas.}\label{fig:cmscores}
 \end{figure}
 
 Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie not 2--4. Dla noty 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. W pozostałych notach skrajnych błąd wynosi $>$ 1,5. Wyniki są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. 
 
 \subsection{Krzywe gojenia}
- \textit{Krzywe gojenia} należy w tej pracy rozumieć jako krzywą powstającą z połączenia punktów oceny automatycznej w kolejnych krokach czasowych monitorowania. W szczególności, dla wszystkich czterech pacjentów testowych, dla każdego z dziesięciu kroków czasowych zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
+ \textit{Krzywe gojenia} należy w tej pracy rozumieć jako krzywe powstającą z połączenia punktów oceny w kolejnych krokach czasowych monitorowania. Dla czterech pacjentów testowych, dla każdego z dziesięciu kroków czasowych, zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/SCT.png}
 	\caption{Ocena parametru SCT.}\label{fig:SCT}
 \end{figure}
-Zgodnie z opisem zamieszczonym w Podsekcji \ref{seq:ground-truth} dotyczy on stanu uszkodzeń śródścięgnistych wewnątrz obszaru ROI. Przed interwencją chirurgiczną ścięgno jest całkowicie zerwane, stąd w tygodniu 0, reprezentującym czas na kilka dni przed operacją, ocena radiologa wynosi 7, dla każdego z pacjentów. Po zszyciu w 3 z 4 przypadków proces postępuje z malejącym trendem do osiągnięcia małych, bądź braku uszkodzeń (jedyna anomalia, mogąca wynikać z omawianych wcześniej czynników zaburzających proces gojenia się, widoczna jest w 20 tyg. dla pacjenta 140283). W przypadku pacjenta 127108 przebieg gojenia się jest odmienny, przebiega ze zmiennym trendem, jak również kończy się oceną 4, interpretowaną jako dość duże uszkodzenia. Ocena automatyczna proponowana w tej pracy przybliża trendy oceny radiologa, sugerując duże lub bardzo duże uszkodzenia na początku procesu i małe uszkodzenia w 3 z 4 przypadkach na końcu. Jedynie dla pacjenta 127108 sugerowana nota końcowa oznacza uszkodzenia średniej wielkości. Poza pojedynczym maksymalnym błędem (MAX-AE) występującym w 20 tyg. w ocenie pacjenta 115805, największe obserwowalne różnice w ocenie występują przed operacją. We wszystkich czterech przypadkach ocena automatyczna stanu ekstremalnie dużych uszkodzeń związanych z całkowitym zerwaniem nie występuje, co wynika z ogólnie mniejszego zakresu punktacji metody automatycznej. 
+Zgodnie z opisem zamieszczonym w p. \ref{seq:ground-truth} dotyczy on stanu uszkodzeń śródścięgnistych wewnątrz obszaru ROI. Przed interwencją chirurgiczną ścięgno jest całkowicie zerwane, stąd w tygodniu 0, reprezentującym czas na kilka dni przed operacją, ocena radiologa wynosi 7, dla każdego z pacjentów. Po zszyciu w 3 z 4 przypadków proces postępuje z malejącym trendem, do osiągnięcia małych, bądź braku uszkodzeń (jedyna anomalia, mogąca wynikać z omawianych wcześniej czynników zaburzających proces gojenia się, widoczna jest w 20-tym tyg. dla pacjenta 140283). W przypadku pacjenta 127108 przebieg gojenia się jest odmienny, przebiega z wyraźnie zmiennym trendem, jak również kończy się oceną 4, interpretowaną jako dość duże uszkodzenia. Ocena automatyczna proponowana w tej pracy przybliża trendy oceny radiologa, sugerując duże lub bardzo duże uszkodzenia na początku procesu i małe uszkodzenia w 3 z 4 przypadkach na końcu. Jedynie dla pacjenta 127108 sugerowana nota końcowa oznacza uszkodzenia średniej wielkości. Poza pojedynczym maksymalnym błędem (MAX-AE) występującym w 20 tyg. w ocenie pacjenta 115805, największe obserwowalne różnice w ocenie występują przed operacją. We wszystkich czterech przypadkach ocena automatyczna stanu ekstremalnie dużych uszkodzeń związanych z całkowitym zerwaniem nie występuje, co wynika z ogólnie mniejszego zakresu punktacji metody automatycznej. 
 
 Kolejnym analizowanym parametrem jest TT. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:TT}.    
 \begin{figure}[h!]
@@ -532,9 +531,9 @@ Kolejnym analizowanym parametrem jest TT. Wykresy krzywych gojenia przedstawiono
 	\includegraphics[width=1\textwidth]{figures/TT.png}
 	\caption{Ocena parametru TT.}\label{fig:TT}
 \end{figure}
-Parametr ten zgodnie z przedstawioną interpretacją związany jest z oceną pogrubienia ścięgna. Na początku procesu pogrubienie jest małe lub średnie (9--12 mm.), następnie w fazie poliferacji i początkach przebudowy rośnie, co związane jest z przyrostem włókien ścięgnistych, by finalnie, w większości przypadków, ponownie zmaleć w wyniku przebudowy struktury i pozostawienia jedynie dobrze ukierunkowanych, wytrzymałych struktur. Dla pacjentów 115805 i 127752, w ocenie radiologa, proces przebiega zgodnie z wyżej przedstawionym opisem. W przypadku pacjenta 140283 widoczna jest anomalia w 3 tyg., co może mieć związek z fluktuacjami np. nadmiernym obciążeniem ścięgna. Ponownie, jedynie w przypadku pacjenta 127108, gojenie przebiega odmiennie i po operacji pogrubienie rośnie, aż do 52 tyg. 
+Parametr ten zgodnie z przedstawioną interpretacją związany jest z oceną pogrubienia ścięgna. Na początku procesu pogrubienie jest małe lub średnie (9--12 mm.), następnie w fazie poliferacji i początkach przebudowy rośnie, co związane jest z przyrostem włókien ścięgnistych, by finalnie, w większości przypadków, ponownie zmaleć w wyniku przebudowy struktury i pozostawienia jedynie dobrze ukierunkowanych, wytrzymałych struktur. Dla pacjentów 115805 i 127752, w ocenie radiologa proces przebiega zgodnie z wyżej przedstawionym opisem. W przypadku pacjenta 140283 widoczna jest anomalia w 3-ecim tyg., co może mieć związek z fluktuacjami np. nadmiernym obciążeniem ścięgna. Ponownie, jedynie w przypadku pacjenta 127108, gojenie przebiega odmiennie i po operacji pogrubienie rośnie, aż do 52-ego tyg. 
 
-Błąd (MAE) osiągnięty dla oceny tego parametru jest najniższy spośród wszystkich sześciu, co widoczne jest w przebiegach krzywych gojenia, które przybliżają ocenę radiologa z MAE równym $0.56$. Anomalia z 3 tyg. występująca u pacjenta 140283 nie została dobrze wykryta i w rezultacie błąd maksymalny (MAX-AE) wyniósł $1.82$. W celu detekcji przyczyny konieczna jest dalsza analiza i w pierwszej kolejności weryfikacja, czy błąd popełniony został przez ocenę radiologa, czy metodę.
+Błąd (MAE), równy 0,56, osiągnięty dla oceny tego parametru jest najniższy spośród wszystkich sześciu, co widoczne jest w przebiegach krzywych gojenia, które dobrze przybliżają ocenę radiologa. Anomalia w 3-ecim tyg. występująca u pacjenta 140283 nie została dobrze wykryta i w rezultacie błąd maksymalny (MAX-AE) wyniósł 1,82. W celu detekcji przyczyny konieczna jest dalsza analiza i w pierwszej kolejności weryfikacja, czy błąd popełniony został przez ocenę radiologa, czy metodę.
 
 Następnym analizowanym parametrem jest STE. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:STE}.
 \begin{figure}[h!]
@@ -542,7 +541,7 @@ Następnym analizowanym parametrem jest STE. Wykresy krzywych gojenia przedstawi
 	\includegraphics[width=1\textwidth]{figures/STE.png}
 	\caption{Ocena parametru STE.}\label{fig:STE}
 \end{figure}
-Parametr ten związany jest z oceną granic pomiędzy ROI, a zewnętrznymi tkankami. Ścięgno po zerwaniu nigdy nie odzyskuje zdrowych granic, stąd ocena radiologa oscylująca w zakresie 4--6. Zakres oceny automatycznej jest jeszcze mniejszy i wynosi po zaokrągleniu 4--5. Skutkiem tak niskich zakresów jest najgorszy wynik miary Corr spośród wszystkich sześciu parametrów, co oznacza, że drobne zmiany krawędziowe nie są dobrze oceniane przez proponowaną metodę automatyczną. Z uwagi na mały zakres zmian, MAE i MAX-AE osiągnęły drugi najlepszy wynik. Na tym etapie informatywność tego parametru pozostaje zatem wątpliwa i konieczna jest dalsza weryfikacja.
+Parametr ten związany jest z oceną granic pomiędzy ROI, a zewnętrznymi tkankami. Ścięgno po zerwaniu nigdy nie odzyskuje zdrowych granic, stąd ocena radiologa oscylująca w zakresie 4--6. Zakres oceny automatycznej jest jeszcze mniejszy i wynosi po zaokrągleniu 4--5. Skutkiem tak niskich zakresów jest najgorszy wynik miary Corr spośród wszystkich sześciu parametrów, co oznacza, że drobne zmiany krawędziowe nie są dobrze oceniane przez proponowaną metodę automatyczną. Z uwagi na mały zakres zmian, MAE i MAX-AE osiągnęły drugi najlepszy wynik. Na tym etapie informatywność tego parametru pozostaje wątpliwa i konieczna jest dalsza weryfikacja.
 
 Jako czwarty parametr przedstawiono TE. Uzyskane krzywe gojenia zaprezentowano na Rys. \ref{fig:TE}.
 \begin{figure}[h!]
@@ -550,7 +549,7 @@ Jako czwarty parametr przedstawiono TE. Uzyskane krzywe gojenia zaprezentowano n
 	\includegraphics[width=1\textwidth]{figures/TE.png}
 	\caption{Ocena parametru TE.}\label{fig:TE}
 \end{figure}
-W tym przypadku ocena radiologa skupiona jest na analizie płynów gromadzących się w obszarze ROI, powodujących jego obrzęk. W większości przypadków, zszycie ścięgna powoduje redukcję płynów w ROI, która następnie w wyniku intensywnych procesów zapalnych i budowy nowych włókien ulega ponownej akumulacji. W ostatniej fazie przebudowy, z uwagi na zmniejszenie intensywności procesów, objętość płynów ponownie jest redukowana. Dla wszystkich czterech pacjentów ocena radiologa oddaje powyższy opis. W przypadku pacjenta 127108 można zaobserwować dłuższe fazy redukcji i akumulacji płynu, co ponownie potwierdza odmienność procesu gojenia dla tego przypadku. Interesujący jest przypadek pacjenta 140283, gdzie w 1 tygodniu po operacji minimum lokalne widoczne jest tylko w wyniku oceny automatycznej. W tym przypadku rozdzielczość skali radiologa okazała się być zbyt mała. Szukając powodów błędów maksymalnych, ponownie można wskazać za powód mniejszy zakres zmian oceny automatycznej. W 12 tyg. oceny pacjenta 115805 występuje silna redukcja obrzęku. W ocenie automatycznej widoczne jest lokalne minimum, ale jego wartość odbiega od wzorca o $2.48$, a w następnym kroku o $2.52$ osiągając MAX-AE. 
+W tym przypadku ocena radiologa skupiona jest na analizie płynów gromadzących się w obszarze ROI, powodujących jego obrzęk. W większości przypadków, zszycie ścięgna powoduje redukcję płynów w ROI, które następnie w wyniku intensywnych procesów zapalnych i budowy nowych włókien ulegają ponownej akumulacji. W ostatniej fazie przebudowy, z uwagi na zmniejszenie intensywności procesów, objętość płynów ponownie jest redukowana. Dla wszystkich czterech pacjentów ocena radiologa oddaje powyższy opis. W przypadku pacjenta 127108 można zaobserwować dłuższe fazy redukcji i akumulacji płynu, co ponownie potwierdza odmienność procesu gojenia dla tego przypadku. Interesujący jest przypadek pacjenta 140283, gdzie w tygodniu 1 po operacji minimum lokalne widoczne jest tylko w wyniku oceny automatycznej. W tym przypadku rozdzielczość skali radiologa okazała się być zbyt mała. Szukając powodów błędów maksymalnych, ponownie można wskazać jako podstawowy powód mniejszy zakres zmian oceny automatycznej. W 12 tyg. oceny pacjenta 115805 występuje silna redukcja obrzęku. W ocenie automatycznej widoczne jest lokalne minimum, ale jego wartość odbiega od wzorca o 2,48, a w następnym kroku o 2,52 osiągając MAX-AE. 
 
 Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zaprezentowane na Rys. \ref{fig:TU}.  
 \begin{figure}[h!]
@@ -558,7 +557,7 @@ Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zapre
 	\includegraphics[width=1\textwidth]{figures/TU.png}
 	\caption{Ocena parametru TU.}\label{fig:TU}
 \end{figure}
-Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12 i 20 tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9 i 12 tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów osiowych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji z innymi parametrami, co utrudnia skuteczną charakterystykę zmian. 
+Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12-tego i 20-tego tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9-tego i 12-tego tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim, najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów osiowych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji z innymi parametrami. 
 
 Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk w przestrzeni międzypowięziowej ścięgna Achillesa. Krzywe gojenia widoczne są na Rys. \ref{fig:TisE}.
 \begin{figure}[h!]
@@ -566,6 +565,6 @@ Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk w 
 	\includegraphics[width=1\textwidth]{figures/TisE.png}
 	\caption{Ocena parametru TisE.}\label{fig:TisE}
 \end{figure}
-Jest to jedyny parametr oceniany w całości na zewnątrz ROI tylko z wykorzystaniem cech DL. Na przełomie fazy poliferacji i remodelingu (6--9 tydz.) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26 tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (3--6 tydz.), co wymaga dalszej analizy.
+Jest to jedyny parametr oceniany w całości na zewnątrz ROI, tylko z wykorzystaniem cech DL. Na przełomie fazy poliferacji i remodelingu (6--9-ty tydz.) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze, wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26-tego tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (3--6-ty tydz.), co wymaga dalszej analizy.
 
 

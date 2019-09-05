@@ -32,8 +32,8 @@
 \contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{76}% 
 \contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{78}% 
 \contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{80}% 
-\contentsline {subsubsection}{Analiza wizualna:}{80}% 
-\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa:}{83}% 
+\contentsline {subsubsection}{Analiza wizualna}{80}% 
+\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{83}% 
 \contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{86}% 
 \contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{89}% 
 \contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{90}% 

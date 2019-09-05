@@ -97,17 +97,17 @@ Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana sp
 
 \section{Eksperymenty}
 
-W tej sekcji zaprezentowano eksperymenty mające na celu dobór poszczególnych komponentów i parametrów finalnej metody. W pierwszej kolejności zostało opisane badanie dotyczące szkolenia sieci neuronowych, celem wyboru ekstraktora cech, dającego możliwość rozróżnienia ścięgien zdrowych od tych po zerwaniu (chorych). Następnie zaprezentowano badanie dotyczące obliczenia wektora cech na wyjściu sieci neuronowej i redukcji jego wymiarowości. W kolejnej części przedstawiono wybór sekwencji RM, stanowiących dane wejściowe do proponowanego w tej pracy algorytmu. Finalnie, w dwóch ostatnich podsekcjach opisano dobór optymalnego zestawu cech ekstrahowanych z użyciem sieci neuronowej i klasycznych metod przetwarzania obrazów oraz fuzję z wykorzystaniem meta-regresji.  
+W tej sekcji zaprezentowano eksperymenty mające na celu dobór poszczególnych komponentów i parametrów finalnej metody. W pierwszej kolejności zostało opisane badanie dotyczące szkolenia sieci neuronowych, celem wyboru ekstraktora cech dającego możliwość rozróżnienia ścięgien zdrowych od tych po zerwaniu (chorych). Następnie zaprezentowano badanie dotyczące obliczenia wektora cech na wyjściu sieci neuronowej i redukcji jego wymiarowości. W kolejnej części przedstawiono wybór sekwencji RM, stanowiących dane wejściowe do proponowanego w tej pracy algorytmu. Finalnie, w dwóch ostatnich podsekcjach, opisano dobór optymalnego zestawu cech ekstrahowanych z użyciem sieci neuronowej i klasycznych metod przetwarzania obrazów oraz fuzję z wykorzystaniem meta-regresji.  
 
 
 \subsection{Rozróżnienie ścięgna zdrowego i po zerwaniu}
 \label{binaryMRI}
-W tym badaniu porównane zostały współczesne architektury sieci neuronowych w zadaniu klasyfikacji binarnej, rozróżniającej obrazy zdrowego od chorego ścięgna. W porównaniu uwzględniono topologie AlexNet (zob. \ref{AlexNet}), GoogLeNet Inception-v3 (zob. \ref{googlenet}) i ResNet-18 (zob. \ref{resnet}). W celu doboru hiperparametrów i optymalizacji parametrów sieci zastosowano szkolenie z wykorzystaniem kroswalidacji z podziałem na 5 segmentów (zob. \ref{sec-overffiting}). W każdym z 5 cykli, 3 segmenty były wykorzystane do treningu, 1 do walidacji i 1 do finalnych testów. Do celów tego badania wykorzystano powiększony zbiór treningowy RM. Wyniki zebrano w Tab. \ref{tab:binary-cross-validation}.
+W tym badaniu porównane zostały współczesne architektury sieci neuronowych w zadaniu klasyfikacji binarnej, rozróżniającej obrazy zdrowego od chorego ścięgna. W porównaniu uwzględniono topologie AlexNet (zob. p. \ref{AlexNet}), GoogLeNet Inception-v3 (zob. p. \ref{googlenet}) i ResNet-18 (zob. p. \ref{resnet}). W celu doboru hiperparametrów i optymalizacji parametrów sieci, zastosowano szkolenie z wykorzystaniem kroswalidacji z podziałem na 5 segmentów (zob. \ref{sec-overffiting}). W każdym z 5 cykli, 3 segmenty były wykorzystane do treningu, 1 do walidacji i 1 do finalnych testów. Do celów tego badania wykorzystano powiększony zbiór treningowy RM. Wyniki zebrano w Tab. \ref{tab:binary-cross-validation}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
 	\setlength{\tabcolsep}{14pt}
 	\centering
-	\caption{Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podziałem na 5 segmentów dla problemu klasyfikacji obrazów zdrowego i chorego ścięgna.}
+	\caption{Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podziałem na 5 segmentów, dla problemu klasyfikacji obrazów zdrowego i chorego ścięgna.}
 	\label{tab:binary-cross-validation}
 	\begin{tabular}{l | l | l | l | l }
 		%\hline
@@ -119,25 +119,25 @@ W tym badaniu porównane zostały współczesne architektury sieci neuronowych w
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Dla wszystkich architektur, wyniki dokładności klasyfikacji najlepszych modeli osiągnęły wartość powyżej 99\%. Niemniej jednak, w przypadku architektury ResNet-18 najgorszy model klasyfikował z dokładnością 92,78\%, co przełożyło się również na najgorszy średni wynik 95,98\%. Fakt ten może wskazywać na tendencje do nadmiernego dopasowywania się architektury ResNet-18. Niższa generalizacja modelu może wynikać z faktu tendencji tej architektury do dużej wagi dla ekstrakcji cech szczegółowych przez jądra splotu o wymiarze 3$\times$3 lub niedoboru liczby danych wejściowych w odniesieniu do liczby optymalizowanych parametrów.
+Dla wszystkich architektur, wyniki dokładności klasyfikacji najlepszych modeli osiągnęły wartość powyżej 99\%. Niemniej jednak, w przypadku architektury ResNet-18, najgorszy model klasyfikował z dokładnością 92,78\%, co przełożyło się również na najgorszy średni wynik równy 95,98\%. Fakt ten może wskazywać na tendencje do nadmiernego dopasowywania się architektury ResNet-18. Niższa generalizacja modelu może wynikać z faktu tendencji tej architektury do ekstrakcji cech szczegółowych przez jądra splotu o wymiarze 3$\times$3 lub też niedoboru liczby danych wejściowych w odniesieniu do efektywnej optymalizacji wag splotu.
 
-W kolejnym kroku, dla wszystkich trzech architektur porównano również czasy szkolenia się dla zadanego problemu. Na Rys. \ref{fig:training_times} zestawiono łączny czas 5 iteracji procesu kroswalidacji.
+W kolejnym kroku, dla wszystkich trzech architektur, porównano czasy szkolenia przy zadanym problemie. Na Rys. \ref{fig:training_times} zestawiono łączny czas 5-iu iteracji procesu kroswalidacji.
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{figures/TrainingtimesChart.jpg}
 	\caption{Porównanie czasów treningu architektur na dwóch architekturach GPU: Pascal i Volta.}
 	\label{fig:training_times}
 \end{figure}
-Porównano dwie architektury GPU, starszą Pascal P100 i nowszą Volta V100, zaprezentowaną w 2017 roku, charakteryzującą się udoskonalonym, osobnym układem optymalizowanym pod kątem operacji tensorowych realizowanych w warstwach splotu. Do szkolenia wykorzystano framework Caffe. Można zaobserwować, że wykorzystanie nowszej architektury GPU dało rezultaty około dwukrotnego przyspieszenia czasu szkolenia w przypadku AlexNet i ResNet oraz około 30\% w przypadku GoogLeNet. AlexNet zawiera najmniej warstw konwolucyjnych i optymalizowaną implementację klasyfikatora. Szkolenie tej architektury zajęło mniej niż jedną godzinę na GPU Volta. Dla porównania, sieci z bardziej skomplikowaną topologią tj. ResNet-18 i GoogLeNet, charakteryzują się odpowiednio czasami szkolenia w okolicach 20 i 48 godzin. 
+Porównano dwie architektury GPU, starszą Pascal P100 i nowszą Volta V100, zaprezentowaną w 2017 roku, charakteryzującą się udoskonalonym, osobnym układem optymalizowanym pod kątem operacji tensorowych realizowanych w warstwach konwolucyjnych. Do szkolenia wykorzystano framework Caffe. Można zaobserwować, że wykorzystanie nowszej architektury GPU dało rezultaty około dwukrotnego przyspieszenia czasu szkolenia w przypadku AlexNet i ResNet oraz około 30\% w przypadku GoogLeNet. AlexNet zawiera najmniej warstw konwolucyjnych i optymalizowaną implementację klasyfikatora. Szkolenie tej architektury zajęło mniej niż jedną godzinę na GPU Volta. Dla porównania, sieci z bardziej skomplikowaną topologią tj. ResNet-18 i GoogLeNet, charakteryzują się odpowiednio czasami szkolenia w okolicach 20 i 48 godzin. 
 
-Biorąc pod uwagę zestawienie wyników dokładności klasyfikacji, AlexNet i GoogleNet charakteryzują się tendencją do większej generalizacji. Z tych dwóch modeli, czas szkolenia jest o blisko 47 godzin krótszy dla AlexNet, dlatego to właśnie ekstraktor cech tej architektury został wybrany do realizacji kolejnych eksperymentów. 
+Na podstawie zestawienia wyników dokładności klasyfikacji i czasu treningu można stwierdzić, że AlexNet i GoogleNet charakteryzują się większą generalizacji, a z tych dwóch modeli, czas szkolenia jest o blisko 47 godzin krótszy dla AlexNet. Dlatego właśnie ekstraktor cech tej architektury został wybrany do realizacji kolejnych eksperymentów. 
 
-Ostatecznie, należy również podkreślić, że istnieją sposoby na dalsze poprawienie wyników dokładności wnioskowania. Dla przykładu, uzupełniające badanie dotyczące możliwości fuzji sieci AlexNet i ResNet-18 zostało opublikowane przez autora tej pracy w czasopiśmie Acta of Bioengineering and Biomechanics \cite{Kapinski19}. Wyniki mogą być również poprawione poprzez analizę lokalizacji przekrojów w przestrzeni trójwymiarowej. W szczególności poprzez uwzględnienie, że przekroje oddalone od miejsca zerwania bardziej przypominają tkanki zdrowe. Można zatem np. zastosować metody logiki rozmytej lub miękkiej klasyfikacji (zob. \cite{Liu2011}) w celu lepszego określenia przynależności próbek do klas. Niemniej jednak, z uwagi na wysokie wyniki dokładności zaprezentowanego podejścia, na tym etapie autor nie decyduje się na dalsze usprawnienia kosztem komplikacji algorytmu. Ewentualne wykryte anomalie i wyniki odosobnione eliminowane są w tej pracy poprzez zastosowanie średniej trymowanej w zaproponowanej metryce $H$ (zob. rów. \ref{ecq:H}).
+Należy również podkreślić, że istnieją sposoby na dalsze poprawienie wyników dokładności wnioskowania. Uzupełniające badanie dotyczące możliwości fuzji sieci AlexNet i ResNet-18 zostało opublikowane przez autora tej pracy w czasopiśmie Acta of Bioengineering and Biomechanics \cite{Kapinski19}. Wyniki mogą być również poprawione poprzez analizę lokalizacji przekrojów w przestrzeni trójwymiarowej, w szczególności poprzez uwzględnienie, że przekroje oddalone od miejsca zerwania bardziej przypominają tkanki zdrowe. Można zatem zastosować np. metody logiki rozmytej lub miękkiej klasyfikacji (zob. \cite{Liu2011}) w celu lepszego określenia przynależności próbek do klas. Niemniej jednak, z uwagi na wysokie wyniki dokładności zaprezentowanego podejścia, na tym etapie badań autor nie zdecydował się na dalsze usprawnienia kosztem komplikacji algorytmu. Eliminacja wykrytych anomalii i wyników odosobnionych realizowana jest w tej pracy poprzez zastosowanie średniej trymowanej w zaproponowanej metryce $H$ (zob. rów. \ref{ecq:H}).
 
 \subsection{Obliczanie i redukcja wymiarowości wektora cech}
 
-Celem tego eksperymentu jest znalezienie zredukowanego wektora cech $w$ pochodzącego z wyjścia sieci neuronowej. W założeniu ma on zawierać możliwie dużo informacji z oryginalnego zbioru i minimalny wymiar. W tym celu, z oryginalnej architektury AlexNet została wydzielona część ekstraktora cech oraz pierwsza warstwa gęsta (zob. Rys. \ref{AlexNetTopology}), co umożliwiło wstępne pogrupowanie cech obrazowych, a jednocześnie brak ich dywersyfikacji w stopniu jaki robi to pełna sieć. Parametry ekstraktora cech przeniesiono z modelu wybranego w eksperymencie binarnej klasyfikacji. 
+Celem tego eksperymentu jest znalezienie zredukowanego wektora cech $w$ pochodzącego z wyjścia sieci neuronowej. W założeniu ma on zawierać możliwie dużo informacji z oryginalnego zbioru i minimalny wymiar. W tym celu, z oryginalnej architektury AlexNet została wydzielona część ekstraktora cech oraz pierwsza warstwa gęsta (zob. Rys. \ref{AlexNetTopology}). Zabieg ten umożliwił wstępne pogrupowanie cech obrazowych przy jednoczesnym braku ich dywersyfikacji w stopniu jaki robi to pełna sieć. Parametry ekstraktora cech przeniesiono z modelu wybranego w eksperymencie binarnej klasyfikacji. 
 
-Wykorzystując zbiór danych PCA, została przeprowadzona analiza czynników głównych (zob. \ref{DimReduction}), gdzie pojedynczą obserwację stanowił wektor 4096 aktywacji na wyjściu zmodyfikowanej architektury AlexNet. Analiza umożliwiła redukcję wymiarowości i rozróżnienie między obserwacjami w poszczególnych krokach czasowych. Porównanie poziomu wariancji zachowywanej przez różną liczbę czynników głównych zebrano w Tab. \ref{PCA-results}.
+Wykorzystując zbiór danych PCA została przeprowadzona analiza czynników głównych (zob. \ref{DimReduction}), gdzie pojedynczą obserwację stanowił wektor 4096 aktywacji na wyjściu zmodyfikowanej architektury AlexNet. Porównanie poziomu wariancji zachowywanej przez różną liczbę czynników głównych zebrano w Tab. \ref{PCA-results}.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
@@ -152,7 +152,8 @@ Wykorzystując zbiór danych PCA, została przeprowadzona analiza czynników gł
  \end{tabular}
  \end{table}
 \renewcommand{\arraystretch}{1}
-Wyjścia po transformacji PCA nazywane są dalej w pracy \textit{cechami DL}. Można zaobserwować, że 4096 wartości może być zredukowanych do jednej cechy DL zachowując przy tym ponad 50\% poziomu wariancji. Odpowiednio 10 cech DL zapewnia poziom powyżej 90\%, a 200 poziom bliski 99\%. 
+
+Analiza umożliwiła redukcję wymiarowości i rozróżnienie między obserwacjami w poszczególnych krokach czasowych. Wyjścia po transformacji PCA nazywane są dalej w pracy \textit{cechami DL}. Można zaobserwować, że 4096 wartości zredukowanych do jednej cechy DL zachowuje ponad 50\% poziomu wariancji. Odpowiednio 10 cech DL zapewnia poziom powyżej 90\%, a 200 poziom bliski 99\%. 
 
 W kolejnym kroku zwizualizowano uśrednione wartości PC1 dla wyników wszystkich pacjentów ze zbioru PCA w kolejnych tygodniach rehabilitacji (zob. Rys. \ref{fig:H}).
 
@@ -165,21 +166,21 @@ Oddzielnie przedstawiono wykresy uzyskanych krzywych dla wszystkich użytych w t
 
 \begin{equation}
 \label{ecq:HPC}
-H_{PC} = TM(PC1(x_1), PC1(x_2),..., PC1(x_n))
+H_{PC} = TM(PC1(x_1), PC1(x_2),..., PC1(x_n)).
 \end{equation}
 
-Wizualizacja umożliwia lepsze zrozumienie informacji zachowywanej przez użytą transformację PCA. Oprócz sekwencji T2 mapping, wszystkie pozostałe pokazują malejący trend rozumiany jako ujemna różnica pomiędzy wartością końcową i początkową okresu rehabilitacji. Odmienny trend T2 mapping może być spowodowany faktem, że dla tej sekwencji dane były zbierane we wszystkich 8 różnych poziomach sygnału T2. W związku z czym, w obrazach pojawiają się próbki silnie zaszumione i zniekształcone. Dopiero głębsza analiza związana np. z wyliczeniami na podstawie aproksymacji wartości tych poziomów może skutkować efektywnym wykorzystaniem T2 mapping do oceny zadanego w tej pracy problemu (zob. \cite{Regulski2017}). 
+Wizualizacja umożliwia lepsze zrozumienie informacji zachowywanej przez użytą transformację PCA. Oprócz sekwencji T2 mapping, wszystkie pozostałe pokazują malejący trend rozumiany jako ujemna różnica pomiędzy wartością końcową i początkową okresu rehabilitacji. Odmienny trend T2 mapping może być spowodowany faktem, że dla tej sekwencji dane były zbierane we wszystkich 8-miu poziomach sygnału T2. W związku z tym, w obrazach pojawiają się próbki silnie zaszumione i zniekształcone. Dopiero głębsza analiza związana np. z wyliczeniami na podstawie aproksymacji wartości poziomów T2 może skutkować efektywnym wykorzystaniem T2 mapping do oceny zadanego w tej pracy problemu (zob. \cite{Regulski2017}). 
 
-W pozostałych przypadkach otrzymane trendy odpowiadają naturze procesu gojenia i poszczególnym jego etapom. Na początku procesu zmiany są bardzo wyraźne w badaniach obrazowych, co zmniejsza się na kolejnych etapach. Dynamika i fluktuacje zależą również od indywidualnych cech pacjenta oraz innych czynników jak przestrzeganie zaleceń rehabilitacji, diety i aktywności pacjenta. 
+W pozostałych przypadkach otrzymane trendy odpowiadają naturze procesu gojenia i poszczególnym jego etapom. Na początku procesu zmiany są bardzo wyraźne w badaniach obrazowych, co zmniejsza się na kolejnych etapach. Dynamika i fluktuacje zależą również od indywidualnych cech pacjenta oraz innych czynników takich jak przestrzeganie zaleceń rehabilitacji, diety i aktywności pacjenta. 
 
-Podsumowując, użyta transformacja pozwala na uzyskanie zredukowanego wektora cech DL zawierającego od 1 do 200 wartości i zachowującego od 50.2--98.8\% informacji. Średnie trendy tak otrzymywanych wartości wskazują również na możliwość wnioskowania, co do procesu gojenia się ścięgna.  
+Podsumowując, użyta transformacja pozwala na uzyskanie zredukowanego wektora cech DL, zawierającego od 1 do 200 wartości i zachowującego od 50,2--98,8\% informacji. Średnie trendy tak otrzymywanych wartości wskazują również na możliwość wnioskowania co do procesu gojenia się ścięgna.  
 
 
 \subsection{Wybór sekwencji rezonansu magnetycznego}
 \label{seq:protocol_selection}
-Z uwagi na opisany w Sekcji \ref{RM} tor akwizycji danych RM, zwiększanie liczby sekwencji odbywa się kosztem wydłużenia czasu badania pacjenta. W skrajnym przypadku, takim jak pozyskanie wszystkich 10 omawianych sekwencji, czas ten wynosi około 1 godziny, co stanowi praktyczne ograniczenie opracowywanej metody. Dlatego celem tego eksperymentu jest wybór protokołu zawierającego minimalną liczbę sekwencji umożliwiających przy użyciu opracowywanej metody skuteczną ocenę procesu gojenia. Prace podzielono na dwa etapy tj. analizę wizualną i ilościową.
+Z uwagi na opisany w Sekcji \ref{RM} tor akwizycji danych RM, zwiększanie liczby sekwencji odbywa się kosztem wydłużenia czasu badania pacjenta. W skrajnym przypadku, takim jak pozyskanie wszystkich 10-iu omawianych sekwencji, czas ten wynosi około 1 godziny, co stanowi praktyczne ograniczenie opracowywanej metody. Dlatego celem tego eksperymentu jest wybór protokołu zawierającego minimalną liczbę sekwencji, umożliwiających przy użyciu opracowywanej metody skuteczną ocenę procesu gojenia. Prace podzielono na dwa etapy: analizę wizualną i ilościową.
 
-\subsubsection{Analiza wizualna:} W ramach wstępnej analizy, wartości danych ze wszystkich sekwencji i modalności zebranych od pacjentów zostały zakumulowane w postaci  histogramów i przedstawione na Rys. \ref{fig:Hists}.
+\subsubsection{Analiza wizualna} W ramach wstępnej analizy, wartości danych ze wszystkich sekwencji i modalności zebranych od pacjentów zostały zakumulowane w postaci  histogramów i przedstawione na Rys. \ref{fig:Hists}.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.6\textwidth]{figures/Hists.jpg}
@@ -190,13 +191,15 @@ Dane zostały przeskalowane do zakresu $<$0; 255$>$ i zmodyfikowane do porówna�
 Widoczne we wszystkich przypadkach maksima globalne w zerze są naturalnie wynikiem tła, które stanowi powietrze. Analizując pozostałe wartości można wyróżnić następujące 3 grupy:
 
 \begin{enumerate}
-	\item Bez maksimum lokalnego -- sekwencja T2 mapping i modalność Out Phase Ideal. W pierwszym przypadku jest to konsekwencja wspomnianej już w poprzednim eksperymencie występowania danych ze wszystkich 8 próbek sekwencji, czyli również tych mierzonych przy prawie zerowym sygnale T2, silnie zaszumionych z licznymi wartościami bliskimi zeru. W drugim przypadku na granicach wody i tłuszczu występuje często silne rozmycie (tzw. \textit{artefakt czarnego atramentu}), co również zwiększa liczbę wartości bliskich zeru.
+	\item Bez maksimum lokalnego -- sekwencja T2 mapping i modalność Out Phase Ideal. W pierwszym przypadku jest to konsekwencja wspomnianej już w poprzednim eksperymencie występowania danych ze wszystkich 8 próbek sekwencji, czyli również tych mierzonych przy prawie zerowym sygnale T2, silnie zaszumionych z licznymi wartościami bliskimi zeru. W drugim przypadku, na granicach wody i tłuszczu, występuje często silne rozmycie (tzw. \textit{artefakt czarnego atramentu}), co również zwiększa liczbę wartości bliskich zeru.
 	\item Z jednym maksimum lokalnym -- pozostałe modalności 3D FSPGR oraz sekwencje: PD, T1 zależne, T2 zależne, T2 $^\ast$ GRE. Przypadek najczęściej występujący. Wartości sygnału zależą od tkanek dominujących w obrazowanym elemencie.
 	\item Z dwoma maksimami lokalnymi -- sekwencja T2 $^\ast$ GRE TE\_MIN. Jako jedyna posiada drugie maksimum lokalne, co może wskazywać na zwiększoną czułość na wzorce zawarte w danych.  
 	
 \end{enumerate}
 %dlaczego wyrzucamy 3DFSPGR?
-Na podstawie powyższej, zgrubnej analizy można wyłączyć z dalszych badań pierwszą grupę sekwencji, z uwagi na możliwość występowania wysokiego szumu w sygnale oraz artefaktów. Zdecydowanie wyróżniająca się sekwencją jest T2 $^\ast$ GRE TE\_MIN. Żeby lepiej zrozumieć istotność występowania drugiego maksimum na Rys. \ref{fig:protocol_comp} zestawiono przykład rekonstrukcji danych z wykorzystaniem sekwencji z obu analizowanych dalej grup (wyłączono sekwencję 3DFSPGR, której modalności podzieliły się pomiędzy 1 i 2 grupę oraz, która we wstępnych badaniach charakteryzowała się dużym zaszumieniem). 
+Na podstawie powyższej analizy, z uwagi na możliwość występowania wysokiego szumu w sygnale oraz artefaktów, można wyłączyć z dalszych badań pierwszą grupę sekwencji. 
+
+Zdecydowanie wyróżniająca się sekwencją jest T2 $^\ast$ GRE TE\_MIN. W celu lepszego zrozumienia istotności występowania drugiego maksimum na Rys. \ref{fig:protocol_comp} zestawiono przykład rekonstrukcji danych z wykorzystaniem sekwencji z obu analizowanych dalej grup (wyłączono sekwencję 3DFSPGR, której modalności podzieliły się pomiędzy grupy 1 i 2 i która we wstępnych badaniach charakteryzowała się dużym zaszumieniem). 
 
  \begin{figure}[h]
  	\centering
@@ -204,20 +207,19 @@ Na podstawie powyższej, zgrubnej analizy można wyłączyć z dalszych badań p
  	\caption{Porównanie sekwencji RM ilustrujących proces gojenia się ścięgna Achillesa w 12 tygodniu po rekonstrukcji.}\label{fig:protocol_comp}
  \end{figure}
 
-Główna różnica w rekonstruowanych przy pomocy powyższych danych obrazów pochodzi z poziomów odcieni szarości w obszarze ścięgna. Obrazy w dwunastym tygodniu procesu gojenia się, rekonstruowane przy pomocy sekwencji z grupy (2), charakteryzują się wartościami w obszarze ścięgna bliskimi zeru. Jedynie na obrazach rekonstruowanych z wykorzystaniem danych z T2 $^\ast$ GRE TE\_MIN obszar ścięgna jest jaśniejszy. 
+Istotna różnica w rekonstruowanych przy pomocy powyższych danych obrazów pochodzi z poziomów odcieni szarości w obszarze ścięgna. Obrazy w dwunastym tygodniu procesu gojenia się, rekonstruowane przy pomocy sekwencji z grupy 2, charakteryzują się wartościami w obszarze ścięgna bliskimi zeru. Jedynie na obrazach rekonstruowanych z wykorzystaniem danych z T2 $^\ast$ GRE TE\_MIN obszar ścięgna jest jaśniejszy. 
 
 Na Rys. \ref{fig:T2comp} przedstawiono próbki T2 $^\ast$ GRE TE\_MIN zrekonstruowane w kolejnych krokach czasowych.
-
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/T2gremin.jpg}
-	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast$ GRE TE\_MIN}\label{fig:T2comp}
+	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
 \end{figure}
-
 Analiza wizualna wskazuje, że różnice w odcieniach szarości mogą wspomóc radiologów w skutecznej interpretacji stopnia wygojenia się tkanek ścięgnistych. Wartości w obszarze ścięgna są jasne na początku i ciemnieją z czasem. 
+
 W sekwencji T2 $^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych sekwencjach wykorzystanych w tej pracy TE $>>$ T2 $^\ast$. Z uwagi na cechy mierzonej tkanki, generowany sygnał ma tendencję do szybkiego zaniku. W T2 $^\ast$ GRE TE\_MIN jest on zatem mierzony przed tym faktem, a nie przy wartościach bliskich zeru. Na przestrzeni całego procesu gojenia się ścięgna, zmiany uwidaczniają się w postaci silnie rozróżnialnych odcieni szarości w obszarze ścięgna, co z kolei jest również wartościową informacją z uwagi na zastosowane w tej pracy metody sztucznej inteligencji i przetwarzania obrazów. Powyższe obserwacje i wnioski zostały dalej wykorzystane w analizie ilościowej.
 
-\subsubsection{Analiza ilościowa:} W ramach tego badania, ilościowo porównano wyniki automatycznej oceny procesu gojenia się ścięgna Achillesa przy użyciu danych (1) tylko z sekwencji T2 $^\ast$ GRE TE\_MIN; (2) danych z sekwencji T2 $^\ast$ GRE TE\_MIN oraz PD i T2 $^\ast$ GRE. Wybierając sekwencję T2 $^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór pozostałych dwóch sekwencji, poza analizą wizualną i wiedzą dziedzinową, był umotywowany oceną stopnia korelacji zaprezentowaną w Tab. \ref{tab:inter-protocol-corr}, gdzie zestawiono sekwencje z grupy (2) bez 3DFSPGR.
+\subsubsection{Analiza ilościowa} W ramach tego badania porównano ilościowo wyniki automatycznej oceny procesu gojenia się ścięgna Achillesa przy użyciu danych: (1) tylko z sekwencji T2 $^\ast$ GRE TE\_MIN; (2) danych z sekwencji T2 $^\ast$ GRE TE\_MIN oraz PD i T2 $^\ast$ GRE. Wybierając sekwencję T2 $^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór pozostałych dwóch sekwencji, poza analizą wizualną i wiedzą dziedzinową, był umotywowany oceną stopnia korelacji zaprezentowaną w Tab. \ref{tab:inter-protocol-corr}, gdzie zestawiono sekwencje z grupy (2) bez 3DFSPGR.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\centering
@@ -235,25 +237,26 @@ W sekwencji T2 $^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych 
 	%\vspace{-0.5cm}
 \end{table} 
 \renewcommand{\arraystretch}{1}
-Do obliczeń korelacji wybrano wektor cech DL zredukowany do pojedynczej wartości niosącej ponad 50\% informacji, zagregowany dla badania z wykorzystaniem metryki $H_{PC}$ (zob. Row. \ref{ecq:HPC}). 
 
-Uwzględniając wyniki istotne statystycznie, wśród najbardziej skorelowanych sekwencji znalazły się T1 i PD. PD najmniej koreluje z T2$^\ast$GRE, natomiast T1 z sekwencją T2. 
+Do obliczeń korelacji wybrano wektor cech DL zredukowany do pojedynczej wartości niosącej ponad 50\% informacji, zagregowany dla badania z wykorzystaniem metryki $H_{PC}$ (zob. Row. \ref{ecq:HPC}). Uwzględniając wyniki istotne statystycznie, wśród najbardziej skorelowanych sekwencji znalazły się T1 i PD. PD najmniej koreluje z T2$^\ast$GRE, natomiast T1 z sekwencją T2. 
 
-W kolejnym kroku wykorzystano te informację sprawdzając, w odniesieniu do wybranej w analizie wizualnej sekwencji T2 $^\ast$ GRE TE\_MIN, czy wnioskowanie, co do procesu gojenia, na podstawie cech DL ulega polepszeniu z wykorzystaniem większej liczby różnorodnych sekwencji. 
+W kolejnym kroku wykorzystano tę informację sprawdzając, w odniesieniu do wybranej w analizie wizualnej sekwencji T2 $^\ast$ GRE TE\_MIN, czy wnioskowanie co do procesu gojenia, na podstawie cech DL ulega polepszeniu z wykorzystaniem większej liczby różnorodnych sekwencji. 
 
-W celach porównań, wykorzystano ponownie zredukowaną przestrzeń cech DL (tym razem od 1--10 czynników głównych) i wykonano szereg obliczeń stopnia gojenia się ścięgna stosując do obliczenia pojedynczej wartości per badanie poniższą metrykę: 
+Wykorzystano ponownie zredukowaną przestrzeń cech DL (tym razem 1--10 czynników głównych) i wykonano szereg obliczeń stopnia gojenia się ścięgna stosując poniższą metrykę: 
 
 \begin{equation}
 H_{reg} = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +
 \sum_{\substack{i, j = 1\\ i < j}}^{3}\lambda_{i,j}X_{i}X_{j}
 \end{equation}
 
-gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$ to kolejne predyktory, $TM$ to średnia trymowana z marginesami 2.5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju osiowego $x_k$, gdzie $k$ jest indeksem przekroju danej sekwencji w trójwymiarowym badaniu RM.
+gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$ to kolejne predyktory, $TM$ to średnia trymowana z marginesami 2,5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju osiowego $x_k$, a $k$ jest indeksem przekroju danej sekwencji w trójwymiarowym badaniu RM.
 
-W szczególności, wyliczono różne modele regresji poczynając od liniowej, gdzie ($\gamma_{i}=0, \lambda_{i}=0$), przez nieliniową stopnia drugiego ($\lambda_{i}=0$) oraz z kombinacją czynników. W przypadku liniowym wykorzystano od 1 do 10 czynników głównych. Natomiast w przypadku nieliniowym wykorzystano tylko dwa pierwsze czynniki, ograniczając tym samym efekt nadmiernego dopasowaniu się modelu. Powyższe modele funkcjonujące w oparciu o trzy sekwencje (tj. T2 $^\ast$ GRE TE\_MIN, PD i T2 $^\ast$ GRE) zestawiono z modelem liniowej regresji wytrenowanym jedynie na danych z T2 $^\ast$ GRE TE\_MIN. Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningowych. Natomiast w celach porównań zestawiono wyniki dla pacjentów testowych. W szczególności, wyliczono metryki średniego błędu absolutnego (MAE od ang. \textit{Mean Absolute Error}), maksymalnego błędu absolutnego (MAX-AE od ang. \textit{Max. Absolute Error}) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-fishera (Corr od ang. \textit{Correlation}). Rezultaty znajdują się w Tab. \ref{tab:H_testset}.
+W szczególności, wyliczono różne modele regresji poczynając od liniowej, gdzie ($\gamma_{i}=0, \lambda_{i}=0$), przez nieliniową stopnia drugiego ($\lambda_{i}=0$) oraz z kombinacją czynników. W przypadku liniowym wykorzystano od 1 do 10 czynników głównych. Natomiast w przypadku nieliniowym wykorzystano tylko dwa pierwsze czynniki, ograniczając tym samym efekt nadmiernego dopasowaniu się modelu. Powyższe modele funkcjonujące w oparciu o trzy sekwencje (tj. T2 $^\ast$ GRE TE\_MIN, PD i T2 $^\ast$ GRE) zestawiono z modelem liniowej regresji wytrenowanym jedynie na danych z T2 $^\ast$ GRE TE\_MIN. 
+
+Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningowych. Natomiast w celach porównań, zestawiono wyniki dla pacjentów testowych. W szczególności, wyliczono metryki średniego błędu absolutnego (MAE od ang. \textit{Mean Absolute Error}), maksymalnego błędu absolutnego (MAX-AE od ang. \textit{Max. Absolute Error}) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr od ang. \textit{Correlation}). Rezultaty znajdują się w Tab. \ref{tab:H_testset}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
-	\caption{Porównanie wnioskowania dla różnych modeli regresji wytrenowanych w oparciu o dane z 3 sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedną sekwencję RM.}
+	\caption{Porównanie wnioskowania dla różnych modeli regresji wytrenowanych w oparciu o dane z 3-ech sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedną sekwencję RM.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
@@ -329,7 +332,8 @@ W szczególności, wyliczono różne modele regresji poczynając od liniowej, gd
 	\label{tab:H_testset}
 \end{table}
 \renewcommand{\arraystretch}{1}
-Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2 $^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Zatem dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2 $^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min., podczas gdy wszystkich trzech sekwencji trwa około 12 minut na pacjenta. Podsumowując, na podstawie analizy wizualnej i jakościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2 $^\ast$ GRE TE\_MIN. 
+
+Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2 $^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18-tu. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują zatem nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2 $^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min. na pacjenta, podczas gdy wszystkich trzech sekwencji trwa około 12 minut. Podsumowując, na podstawie analizy wizualnej i ilościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2 $^\ast$ GRE TE\_MIN. 
 
 \subsection{Optymalna selekcja i konkatenacja cech}
 \label{seq:fusion}

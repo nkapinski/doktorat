@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  5 SEP 2019 09:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  5 SEP 2019 10:12
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1480,22 +1480,15 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [77 <./figures/TrainingtimesChart.jpg>]
-<figures/H_PC1.jpg, id=330, 1901.1025pt x 1504.62125pt>
-File: figures/H_PC1.jpg Graphic file (type jpg)
-<use figures/H_PC1.jpg>
-Package pdftex.def Info: figures/H_PC1.jpg  used on input line 161.
-(pdftex.def)             Requested size: 352.81552pt x 279.223pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [78]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+<figures/H_PC1.jpg, id=333, 1901.1025pt x 1504.62125pt>
+File: figures/H_PC1.jpg Graphic file (type jpg)
+<use figures/H_PC1.jpg>
+Package pdftex.def Info: figures/H_PC1.jpg  used on input line 161.
+(pdftex.def)             Requested size: 352.81552pt x 279.223pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -2062,7 +2055,7 @@ X 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs
 grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (145 pages, 12200054 bytes).
+Output written on thesis.pdf (145 pages, 12199980 bytes).
 PDF statistics:
  609 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

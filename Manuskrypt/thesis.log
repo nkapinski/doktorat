@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  6 SEP 2019 09:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  6 SEP 2019 12:06
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2024,18 +2024,31 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [133]
 Dodatek A.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 20.
+
+<figures/achillesDL.jpg, id=536, 1181.16281pt x 631.60968pt>
+File: figures/achillesDL.jpg Graphic file (type jpg)
+<use figures/achillesDL.jpg>
+Package pdftex.def Info: figures/achillesDL.jpg  used on input line 22.
+(pdftex.def)             Requested size: 441.01773pt x 235.82182pt.
 ) [134
 
-] (thesis.aux (header.aux))
+]
+Overfull \vbox (15.1167pt too high) has occurred while \output is active []
+
+
+[135 <./figures/achillesDL.jpg>] (thesis.aux (header.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18076 strings out of 492895
- 355448 string characters out of 3122802
- 374025 words of memory out of 3000000
- 21711 multiletter control sequences out of 15000+200000
+ 18082 strings out of 492895
+ 355585 string characters out of 3122802
+ 374037 words of memory out of 3000000
+ 21716 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,2108b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2068,9 +2081,9 @@ X 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs
 grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (146 pages, 12435940 bytes).
+Output written on thesis.pdf (147 pages, 12569544 bytes).
 PDF statistics:
- 613 PDF objects out of 1000 (max. 8388607)
+ 617 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

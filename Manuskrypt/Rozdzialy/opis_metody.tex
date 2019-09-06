@@ -96,7 +96,7 @@ Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana sp
 \end{enumerate}
 
 \section{Eksperymenty}
-
+\label{seq:experiments}
 W tej sekcji zaprezentowano eksperymenty mające na celu dobór poszczególnych komponentów i parametrów finalnej metody. W pierwszej kolejności zostało opisane badanie dotyczące szkolenia sieci neuronowych, celem wyboru ekstraktora cech dającego możliwość rozróżnienia ścięgien zdrowych od tych po zerwaniu (chorych). Następnie zaprezentowano badanie dotyczące obliczenia wektora cech na wyjściu sieci neuronowej i redukcji jego wymiarowości. W kolejnej części przedstawiono wybór sekwencji RM, stanowiących dane wejściowe do proponowanego w tej pracy algorytmu. Finalnie, w dwóch ostatnich podsekcjach, opisano dobór optymalnego zestawu cech ekstrahowanych z użyciem sieci neuronowej i klasycznych metod przetwarzania obrazów oraz fuzję z wykorzystaniem meta-regresji.  
 
 
@@ -461,7 +461,7 @@ Początkowo cechy w kolejnych przekrojach na podstawie, których wnioskuje sieć
 Podsumowując, optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową oraz ROI umożliwia bardziej skuteczną ocenę całego procesu poprzez zapewnienie zgrubnej oceny z użyciem sieci i szczegółowej, z dołączenia predyktorów z ROI, bardziej odpornej na szum. 
 
 \section{Ocena procesu gojenia}
-
+\label{seq:valuation}
 W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności dokonano zgrubnej analizy. Przeanalizowano macierze błędu dla rożnych klas: (1) tygodnie oceny, gdzie wartością jest średni błąd absolutny (MAE); (2) zakres oceny (0--7), gdzie wartością jest liczba występowań. Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia tj. oceną eksperta radiologa.
 
 \subsection{Macierze błędu}

@@ -2,13 +2,13 @@
 
 W tym rozdziale zostaną przedstawione porównania opracowanej metody. W pierwszej kolejności zaprezentowane zostanie zestawienie z metodą wytrenowaną z wykorzystaniem paradygmatu end-to-end, a zatem explicite modelującą ocenę radiologa. Następnie przedstawione zostanie porównanie z wynikami prac algorytmu oceniającego proces gojenia się ścięgna Achillesa z wykorzystaniem danych z Ultrasonografii. Ostatnie zestawienie dotyczy porównania wyników z oceną biomechaniczną.
 
-Zarówno metoda oparta o paradygmat end-to-end jak i o dane Ultrasonograficzne są wynikiem prac, w których autor tej rozprawy był współautorem, nadzorował grupę studentów opracowujących finalne rozwiązania oraz tworzył plan badań. W przypadku oceny biomechanicznej prace nad metodą zrealizowane zostały w całości przez mgr Magdalenę Syrek z Carolina Medical Center w Warszawie, zatem wartością dodaną tej rozprawy jest przedstawione porównanie.   
+Zarówno metoda oparta o paradygmat end-to-end jak i o dane ultrasonograficzne są wynikiem prac, w których autor tej rozprawy był współautorem, nadzorował grupę studentów opracowujących finalne rozwiązania oraz tworzył plan badań. W przypadku oceny biomechanicznej prace nad metodą zrealizowane zostały w całości przez mgr Magdalenę Syrek z Carolina Medical Center w Warszawie, zatem wartością dodaną tej rozprawy jest przedstawione porównanie.   
 
 \section{Porównanie z metodą opartą o paradygmat end-to-end}
 \label{seq:end-to-end}
-W tej sekcji opracowana metoda zostanie porównana z metodą opartą o paradygmat end-to-end, modelującą explicite ocenę radiologa. Do tego zadania zostały wykorzystane trzy architektury sieci konwolucyjnych opisane w Rozdziale \ref{CNNs} tj. AlexNet, GoogLeNet (Inception-v3) i ResNet z 50 warstwami konwolucyjnymi (ResNet-50). Wszystkie trzy architektury zostały zmodyfikowane poprzez zastąpienie końcowej warstwy klasyfikacyjnej warstwą regresji z pojedynczym wyjściem i funkcją kosztu zdefiniowaną jako średni błąd kwadratowy. W skutek tego podejścia algorytm szkolony jest, aby minimalizować błąd pomiędzy predykcją sieci neuronowej, a wartościami parametrów z wzorca odniesienia. 
+W tej sekcji opracowana metoda zostanie porównana z metodą opartą o paradygmat end-to-end, modelującą explicite ocenę radiologa. Do tego zadania zostały wykorzystane trzy architektury sieci konwolucyjnych opisane w Rozdziale \ref{CNNs} tj. AlexNet, GoogLeNet (Inception-v3) i ResNet z 50-ęcioma warstwami konwolucyjnymi (ResNet-50). Wszystkie trzy architektury zostały zmodyfikowane poprzez zastąpienie końcowej warstwy klasyfikacyjnej warstwą regresji z pojedynczym wyjściem i funkcją kosztu zdefiniowaną jako średni błąd kwadratowy. W skutek tego podejścia algorytm szkolony jest w celu minimalizacji błędu pomiędzy predykcją sieci neuronowej, a wartościami parametrów z wzorca odniesienia. 
 
-Do szkolenia się sieci wykorzystano powiększony zestaw treningowy, ograniczony jednak do danych z 44 pacjentów treningowych i trzech sekwencji wybranych w toku eksperymentów przedstawionych w podsekcji \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM z uwagi na potrzebę maksymalizację liczebności zbioru. Nie zdecydowano się również na pełny zbiór wszystkich sekwencji, z uwagi na różnice w danych, które mogłyby zaburzać proces szkolenia się. 
+Do szkolenia się sieci wykorzystano powiększony zestaw treningowy, ograniczony jednak do danych 44-ech pacjentów treningowych, zawierających sekwencje wybrane w toku eksperymentów przedstawionych w p. \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM, z uwagi na potrzebę maksymalizacji liczby próbek. Nie zdecydowano się również na pełny zbiór wszystkich sekwencji, z uwagi na różnice w danych, które mogłyby zaburzyć proces szkolenia się. 
 
 Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono metryki MAE, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
 \renewcommand{\arraystretch}{1.2}
@@ -17,7 +17,7 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 \scriptsize
 \setlength{\tabcolsep}{1pt}
 \centering
-\caption{Wyniki szkolenia się sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego. Pogrubieniem oznaczono najlepsze wyniki.}
+\caption{Wyniki szkolenia się sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego. Pogrubieniem oznaczono najlepsze rezultaty.}
 \label{tab:end-to-endTrain}
 \begin{tabular}{lc||c|c|c|c|c|c}
 	%\hline
@@ -38,12 +38,14 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Otrzymane wartości MAE znajdują się w zakresie 0,64 do 1,10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inception-v3, średni dystans między predykcją i wzorcem wyniósł $<0,92$. Najlepiej estymowanymi parametrami były TisE -- 0,67, TT -- 0,75 i TE -- 0,78. Najgorsze rezultaty natomiast otrzymano dla TU -- 0,91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej.
+Otrzymane wartości MAE znajdują się w zakresie 0,64 do 1,10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inception-v3$_{e}$, średni dystans między predykcją i wzorcem wyniósł $<0,92$. Najlepiej estymowanymi parametrami były TisE -- 0,67, TT -- 0,75 i TE -- 0,78. Najgorszy rezultat natomiast otrzymano dla TU -- 0,91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej.
 
-W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (IncepionV3) i proponowaną przez autora tej pracy metodą z meta-regresją opartą o algorytm SVR (SVR).  
+Wyniki Corr dla wszystkich parametrów oprócz STE, dla sieci Inception-v3$_{e}$, są powyżej 0,5. Niskie Corr dla STE wynika z niewielkich zmian trendu wartości tego parametru (często występuje stała wartość w dużym przedziale danych). W skrajnym przypadku, dla modelu ResNet-50$_{e}$, korelacja równa 0,00 wynika z predykcji stałych wartości dla całego okresu gojenia się.
+
+W kolejnym kroku, w Tab. \ref{tab:end-to-end_testset}, przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (Inception-v3$_e$) i proponowaną przez autora tej pracy metodą meta-regresji opartej o algorytm SVR (SVR).  
 \renewcommand{\arraystretch}{1.2}
 \begin{table*}[t]
-	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze wyniki.}
+	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze rezultaty.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
@@ -60,44 +62,44 @@ W kolejnej tabeli (Tab. \ref{tab:end-to-end_testset}) przedstawiono zestawienie 
 \end{table*}
 \renewcommand{\arraystretch}{1}
 
-Metoda SVR osiąga wyższe rezultaty Corr w każdym z parametrów i niższe MAE dla 4 z 6 parametrów. Natomiast tylko w jednym z parametrów (tj. STE) charakteryzuje się niższym MAX-AE. 
+Metoda SVR osiąga wyższe wartości Corr w każdym z parametrów i niższe wartości MAE dla 4-ech z 6-iu parametrów. Natomiast tylko w jednym z parametrów (tj. STE) charakteryzuje się niższym błędem MAX-AE. 
 
-Można zatem wnioskować, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end. 2 z 6 parametrów, w których pod względem MAE sieć Inception-v3$_e$ okazała się lepsza tj. TE i TisE dotyczą obrzęków, zatem elementów ocenianych pod kątem pola powierzchni i kształtu. Fakt ten należy interpretować, iż tego rodzaju informacja dominuje w ekstrahowanych przez jądra splotu obrazach, co z kolei implikuje gorsze wyniki w pozostałych parametrach ocenianych na podstawie wzorców tworzonych przez struktury ścięgniste. Wynik MAX-AE nie jest zaskakujący, ponieważ z uwagi na naturę treningu (explicite modelowanie wzorca odniesienia) maksymalne błędy będą minimalizowane. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu, jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje zaburzające percepcję, popełnił błąd w ocenie.  
+Można zatem wnioskować, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end. 2 z 6 parametrów, w których pod względem MAE sieć Inception-v3$_e$ okazała się lepsza tj. TE i TisE dotyczą obrzęków, zatem elementów ocenianych pod kątem pola powierzchni i kształtu. Fakt ten wynika z tego, iż taka informacja dominuje w ekstrahowanych przez jądra splotu obrazach, co z kolei implikuje gorsze wyniki w pozostałych parametrach ocenianych na podstawie wzorców tworzonych przez struktury ścięgniste. Wynik MAX-AE jest skutkiem sposobu treningu (tj. explicite modelowanie wzorca odniesienia) powodującego minimalizowanie maksymalnych błędów. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu, jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje zaburzające percepcję, popełnił błąd w ocenie.  
 
-W tym kontekście należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6 parametrów w kolejnych krokach czasowych. Średnio jest to około 1 godziny pracy na pacjenta. Proponowana przez autora metoda wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane słabo-nadzorowanym (w odróżnieniu od pełni-nadzorowanego w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory, zdrowy oraz znacząco mniejszego zbioru pacjentów z oznaczonym pełnym wzorcem odniesienia, który posłużyłby do sporadycznych ulepszeń etapu meta-regresji. 
+W tym kontekście należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6-ciu parametrów w kolejnych krokach czasowych. Średnio jest to około jedna godzina pracy na pacjenta. Proponowana przez autora metoda wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane słabo-nadzorowanym (w odróżnieniu od w pełni-nadzorowanego, w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory lub zdrowy oraz znacząco mniejszego zbioru pacjentów z oznaczonym pełnym wzorcem odniesienia, który służyłby do sporadycznych ulepszeń etapu meta-regresji. 
 
-Pewnym minusem proponowanego podejścia jest wymóg informacji o ROI, jednakże jego oznaczenie to czas około 10 minut na pacjenta, dla radiologa wykorzystującego odpowiednie oprogramowanie np. Osirix \cite{Rosset2004} lub VisNow \cite{Nowinski_Borucki_2014}. Ponadto segmentację ROI można stosunkowo łatwo zautomatyzować. Wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutional neural networks}. Przykład działania takiej architektury (tj. U-Net zaproponowanej w \cite{Ronneberger2015}) można zaobserwować na Rys. \ref{fig:segmentacja}. 
+Pewnym minusem proponowanego podejścia jest wymóg informacji o ROI, jednakże jego oznaczenie to czas około 10 minut na pacjenta, dla radiologa wykorzystującego odpowiednie oprogramowanie np. Osirix \cite{Rosset2004} lub VisNow \cite{Nowinski_Borucki_2014}. Ponadto, segmentację ROI można stosunkowo łatwo zautomatyzować. Wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutional neural networks}. Przykład działania takiej architektury, a dokładniej U-Net zaproponowanej w \cite{Ronneberger2015}, można zaobserwować na Rys. \ref{fig:segmentacja}. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/Segmentacja.jpg}
 	\caption{Automatyczna segmantacja ROI z wykorzystaniem głębokich sieci neuronowych.}\label{fig:segmentacja}
 \end{figure}
-Kolorem czerwonym oznaczono obszar segmentacji manulanej, wykonanej przez eksperta radiologa. Kolorem zielonym efekt segmentacji automatycznej. Miara DICE (zob. \cite{Zou2004}) dla otrzymanych obrazów wynosi około 0.75 i świadczy o wysokiej jakości segmentacji oraz o obiecującym kierunku tego rodzaju prac.
+Kolorem czerwonym oznaczono obszar segmentacji manulanej wykonanej przez eksperta radiologa. Kolorem zielonym efekt segmentacji automatycznej. Miara DICE (zob. \cite{Zou2004}) dla otrzymanych obrazów wynosi około 0,75 i świadczy o wysokiej jakości segmentacji oraz o obiecującym kierunku tego rodzaju prac.
 
-Ciekawym elementem rozwoju automatycznej oceny byłaby również fuzja obu metod tj. podmiana ekstraktora cech DL trenowana na binarnie oznaczonym zbiorze na ekstraktor uzyskanego modelu Inception-v3. Jednak z uwagi na omawiane problemy praktyczne z dalszym rozwojem tak utworzonej metody oraz brak obiecujących rezultatów w przeprowadzonych przez autora tej pracy badaniach wstępnych, taka propozycja nie została uwzględniona w prezentowanej rozprawie. 
+Ciekawym elementem rozwoju automatycznej oceny byłaby również fuzja obu metod tj. podmiana ekstraktora cech DL trenowanego na binarnie oznaczonym zbiorze na ekstraktor uzyskany w modelu Inception-v3$_e$. Jednak z uwagi na omawiane problemy praktyczne z dalszym rozwojem tak utworzonej metody oraz brak obiecujących rezultatów w przeprowadzonych przez autora tej pracy badaniach wstępnych, taka propozycja nie została uwzględniona w prezentowanej rozprawie. 
 
-\section{Porównanie z metodą opartą o dane z ultrasonografii}
+\section{Porównanie z metodą opartą o dane z USG}
 \label{seq:comp-usg}
-W tej sekcji opracowana metoda została porównana z automatyczną oceną bazującą na danych z Ultrasonografii. Ponownie, do utworzenia metody opartej o USG wykorzystano konwolucyjne sieci neuronowe, a dokładniej AlexNet, Inception-v3 i ResNet-50 oraz wykorzystano omówiony w poprzedniej sekcji paradygmat end-to-end. 
+W tej sekcji opracowana metoda została porównana z automatyczną oceną bazującą na danych z Ultrasonografii. Ponownie, do utworzenia metody opartej o USG, wykorzystano konwolucyjne sieci neuronowe, a dokładniej AlexNet, Inception-v3 i ResNet-50 oraz wykorzystano omówiony w poprzedniej sekcji paradygmat end-to-end. 
 
-Dane dla metody opartej o Ultrasonografię pochodziły również z projektu START. Stosowano się zatem do identycznych odstępów czasowych, co w przypadku badań RM, a akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. \ref{USG}), których ostateczna liczba wyniosła 565 skanów 3D. 
+Dane dla metody opartej o Ultrasonografię pochodziły również z projektu START. Stosowano się zatem do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. p. \ref{USG}), których ostateczna liczba wyniosła 565 skanów 3D. 
 
-Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej (tylko tam, gdzie widoczne jest ścięgno):
+Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej (wykorzystując obrazy, gdzie widoczne jest ścięgno):
 \begin{itemize}
-	\item zbiór treningowy USG (strzałkowy) -- zawiera 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
-	\item zbiór treningowy USG (osiowy) -- zawiera 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44 pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
+	\item zbiór treningowy USG (strzałkowy) -- zawierał 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
+	\item zbiór treningowy USG (osiowy) -- zawierał 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
 \end{itemize}
 
 Wizualizacja przykładowych danych USG znajduje się na Rys. \ref{fig:US_sample}.
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{figures/Data_US_sample.jpg}
-	\caption{Wizualizacja przykładowych danych USG w kolejnych tygodniach po zszyciu ścięgna w przekrojach osiowych i strzałkowych.}
+	\caption{Wizualizacja przykładowych danych USG w przekrojach osiowych i strzałkowych, w kolejnych tygodniach po zszyciu ścięgna.}
 	\label{fig:US_sample}
 \end{figure}
 W ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych. Jednak szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa. 
 
-Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi artefaktami w USG i z szumem ziarnistym tworzącym losowe wzorce. Jakość obrazu obniża również jego wartość kliniczną, co wskazują analizy zamieszczone w tej pracy jak i w wielu pracach innych autorów (zob. np. \cite{Khan2003, Ibrahim2013}). Dlatego na początku zdecydowano się przeprowadzić test polegający na prostym zadaniu klasyfikacji binarnej chory/zdrowy (podobnie jak dla badań RM zamieszczonych w Sekcji \ref{binaryMRI}). Ma to na celu porównanie możliwości interpretacji wnioskowania na podstawie obrazów RM i USG. Wyniki dla szkolenia z wykorzystaniem kroswalidacji z 4 segmentami zamieszczono w Tab. \ref{tab:usg-binary}.
+Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi artefaktami w USG i z szumem ziarnistym tworzącym losowe wzorce. Jakość obrazu obniża również jego wartość kliniczną, co wskazują analizy zamieszczone w tej pracy jak i w wielu pracach innych autorów (zob. np. \cite{Khan2003, Ibrahim2013}). Dlatego na początku zdecydowano się przeprowadzić test polegający na prostym zadaniu klasyfikacji binarnej chory/zdrowy (podobnie jak dla badań RM zamieszczonych w Sekcji \ref{binaryMRI}). Ma to na celu porównanie możliwości interpretacji wnioskowania na podstawie obrazów RM i USG. Wyniki dla szkolenia z wykorzystaniem kroswalidacji z 4-ema segmentami zamieszczono w Tabeli \ref{tab:usg-binary}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[]
 	\centering
@@ -110,78 +112,78 @@ Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi ar
 		%\hline
 		& \multicolumn{3}{c}{\textbf{p. strzałkowy}} & \multicolumn{3}{c}{\textbf{p. osiowy}} \\
 		\textbf{Model} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} \\ \hline \hline
-		AlexNet & 0,846$\pm$0,087 & 0,92$\pm$0,08 & 0,78$\pm$0,11 & 0,843$\pm$0,075 & 0,93$\pm$0,06 & 0,73$\pm$0,11  \\ \hline
-		Inception-v3 & \textbf{0,916}$\pm$0,049 & 0,97$\pm$0,04 & 0,90$\pm$0,06 & 0,901$\pm$0,052 & 0,95$\pm$0,3 & 0,87$\pm$00,07 \\ \hline
-		ResNet-50 & 0,907$\pm$0,039 & 0,96$\pm$0,05 & 0,89$\pm$0,08 & \textbf{0,912}$\pm$0,046 & 0,95$\pm$0,04 & 0,88$\pm$0,06 \\ 
+		AlexNet$_{bu}$ & 0,846$\pm$0,087 & 0,92$\pm$0,08 & 0,78$\pm$0,11 & 0,843$\pm$0,075 & 0,93$\pm$0,06 & 0,73$\pm$0,11  \\ \hline
+		Inception-v3$_{bu}$ & \textbf{0,916}$\pm$0,049 & 0,97$\pm$0,04 & 0,90$\pm$0,06 & 0,901$\pm$0,052 & 0,95$\pm$0,3 & 0,87$\pm$00,07 \\ \hline
+		ResNet-50$_{bu}$ & 0,907$\pm$0,039 & 0,96$\pm$0,05 & 0,89$\pm$0,08 & \textbf{0,912}$\pm$0,046 & 0,95$\pm$0,04 & 0,88$\pm$0,06 \\ 
 	\end{tabular}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Wszystkie modele wyszkolono oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia powyższych rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednakże działania te przyniosły odwrotny skutek.  
+Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia powyższych rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednakże działania te przyniosły odwrotny skutek.  
 
-Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech, jednak w przypadku USG otrzymane wyniki nie były na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tab. \ref{tab:usg_train_cross-validation}.
+Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech. W przypadku USG otrzymane wyniki nie były jednak na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie, wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tabeli \ref{tab:usg_train_cross-validation}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
 	\setlength{\tabcolsep}{3pt}
 	\centering
-	\caption{Wyniki predykcji wzorca odniesienia dla pacjentów testowych, dla danych z USG. Pogrubieniem oznaczono najlepsze wyniki, osobno dla przekrojów osiowych i strzałkowych}
+	\caption{Wyniki predykcji oceny gojenia, dla danych z USG, dla pacjentów testowych. Pogrubieniem oznaczono najlepsze rezultaty, osobno dla przekrojów osiowych i strzałkowych}
 	\label{tab:usg_train_cross-validation}
 	\begin{tabular}{lc||c|c|c|c|c|c}
 		%\hline
 		& & \multicolumn{6}{c}{\textbf{p. strzałkowy}} \\
 		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
-		AlexNet & MAE & 0,96$\pm$0,41 & 0,80$\pm$0,27 & 0,82$\pm$0,29 & 0,95$\pm$0,41 & 0,87$\pm$0,39 & 1,08$\pm$0,47  \\
+		AlexNet$_{eus}$ & MAE & 0,96$\pm$0,41 & 0,80$\pm$0,27 & 0,82$\pm$0,29 & 0,95$\pm$0,41 & 0,87$\pm$0,39 & 1,08$\pm$0,47  \\
 		& MAX-AE & 1,75 & 1,32 & 1,87 & 1,35 & 1,61 & 2,03 \\ 
 		& Corr & 0,53 & 0,69 & 0,11 & \textbf{0,68} & 0,31 & 0,22 \\ \hline
-		Inception-v3 & MAE & \textbf{0,88}$\pm$0,35 & \textbf{0,67}$\pm$0,23 & \textbf{0,80}$\pm$0,31 & 0,82$\pm$0,23 & \textbf{0,84}$\pm$0,32 & \textbf{0,93}$\pm$0,29  \\
+		Inception-v3$_{eus}$ & MAE & \textbf{0,88}$\pm$0,35 & \textbf{0,67}$\pm$0,23 & \textbf{0,80}$\pm$0,31 & 0,82$\pm$0,23 & \textbf{0,84}$\pm$0,32 & \textbf{0,93}$\pm$0,29  \\
 		& MAX-AE & 1,69 & 1,32 & 1,69 & \textbf{1,31} & \textbf{1,58} & \textbf{1,64} \\ 
 		& Corr & \textbf{0,83} & \textbf{0,71} & 0,19 & 0,64 & \textbf{0,56} & \textbf{0,71} \\ \hline
-		ResNet-50 & MAE & 0,89$\pm$0,12 & 0,74$\pm$0,15 & 0,83$\pm$0,22 & \textbf{0,81}$\pm$0,31 & 0,92$\pm$0,31 & 0,99$\pm$0,32 \\
+		ResNet-50$_{eus}$ & MAE & 0,89$\pm$0,12 & 0,74$\pm$0,15 & 0,83$\pm$0,22 & \textbf{0,81}$\pm$0,31 & 0,92$\pm$0,31 & 0,99$\pm$0,32 \\
 		& MAX-AE & \textbf{1,53} & \textbf{1,22} & \textbf{1,64} & 1,43 & 1,67 & 1,71 \\
 		& Corr & 0,62 & 0,38 & \textbf{0,23} & 0,62 & 0,12 & 0,43 \\ \hline \hline
 		& & \multicolumn{6}{c}{\textbf{p. osiowy}} \\
 		
-		AlexNet & MAE & \textbf{0,98}$\pm$0,39 & 0,83$\pm$0,33 & 0,82$\pm$0,35 & 0,94$\pm$0,52 & 0,95$\pm$0,50 & 0,86$\pm$0,28  \\
+		AlexNet$_{euo}$ & MAE & \textbf{0,98}$\pm$0,39 & 0,83$\pm$0,33 & 0,82$\pm$0,35 & 0,94$\pm$0,52 & 0,95$\pm$0,50 & 0,86$\pm$0,28  \\
 		& MAX-AE & \textbf{1,79} & \textbf{1,36} & 1,86 & 1,41 & 1,61 & 1,59 \\ 
 		& Corr & 0,45 & 0,62 & 0,20 & 0,60 & 0,03 & 0,59 \\ \hline
-		Inception-v3 & MAE & 1,03$\pm$0,46 & \textbf{0,70}$\pm$0,24 & \textbf{0,76}$\pm$0,26 & \textbf{0,86}$\pm$0,19 & 0,87$\pm$0,32 & \textbf{0,85}$\pm$0,25  \\
+		Inception-v3$_{euo}$ & MAE & 1,03$\pm$0,46 & \textbf{0,70}$\pm$0,24 & \textbf{0,76}$\pm$0,26 & \textbf{0,86}$\pm$0,19 & 0,87$\pm$0,32 & \textbf{0,85}$\pm$0,25  \\
 		& MAX-AE & 2,52 & \textbf{1,45} & \textbf{1,45} & \textbf{1,24} & 1,67 & \textbf{1,56} \\ 
 		& Corr & \textbf{0,77} & \textbf{0,69} & \textbf{0,22} & \textbf{0,65} & \textbf{0,55} & \textbf{0,72} \\ \hline
-		ResNet-50 & MAE & 1,05$\pm$0,31 & 0,78$\pm$0,33 & 0,80$\pm$0,24 & 1,02$\pm$0,25 & \textbf{0,87}$\pm$0,15 & 0,91$\pm$0,28 \\
+		ResNet-50$_{euo}$ & MAE & 1,05$\pm$0,31 & 0,78$\pm$0,33 & 0,80$\pm$0,24 & 1,02$\pm$0,25 & \textbf{0,87}$\pm$0,15 & 0,91$\pm$0,28 \\
 		& MAX-AE & 1,98 & 1,51 & 1,59 & 1,63 & \textbf{1,45} & 1,57 \\
 		& Corr & 0,52 & 0,47 & 0,21 & 0,64 & 0,18 & 0,57 \\ 
 	\end{tabular}
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla sieci Inception-v3 i ResNet-50 dlatego te modele zostały dalej porównane z proponowaną metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tab. \ref{tab:USGvsRM-cross-validation}.
+Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla modeli na bazie sieci Inception-v3 i ResNet-50 dlatego te modele zostały dalej porównane z proponowaną metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tabeli \ref{tab:USGvsRM-cross-validation}.
 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
 	\setlength{\tabcolsep}{1pt}
 	\centering
-	\caption{Porównanie wyników oceny automatycznej bazującej na danych USG i RM na zbiorze testowym. Pogrubieniem oznaczono najlepsze wyniki.}
+	\caption{Porównanie wyników oceny automatycznej, bazującej na danych USG i RM, dla pacjentów ze zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki.}
 	\label{tab:USGvsRM-cross-validation}
 	\vspace{-0.5cm}
 	\begin{tabular}{lc||c|c|c|c|c|c}
 		%\hline
-		& & \multicolumn{6}{c}{\textbf{p. strzałkowy}} \\
+		& & \multicolumn{6}{c}{\textbf{USG -- p. strzałkowy}} \\
 		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
-		Inception-v3 & MAE & \textbf{0,81}$\pm$0,38 & 0,63$\pm$0,06 & \textbf{0,56}$\pm$0,18 & 0,85$\pm$0,20 & 0,54$\pm$0,04 & 0,87$\pm$0,29 \\
+		Inception-v3$_{eus}$ & MAE & \textbf{0,81}$\pm$0,38 & 0,63$\pm$0,06 & \textbf{0,56}$\pm$0,18 & 0,85$\pm$0,20 & 0,54$\pm$0,04 & 0,87$\pm$0,29 \\
 		& MAX-AE & 1,59 & 1,79 & 1,7 & \textbf{1,25} & \textbf{1,38} & 1,69 \\
 		& Corr & 0,80 & 0,77 & 0,31 & 0,52 & \textbf{0,69} & 0,62 \\ \hline
-		ResNet-50 & MAE & 0,88$\pm$0,33 & 0,65$\pm$0,15 & 0,66$\pm$0,09 & 0,83$\pm$0,25 & 0,75$\pm$0,12 & 0,93$\pm$0,22 \\
+		ResNet-50$_{eus}$ & MAE & 0,88$\pm$0,33 & 0,65$\pm$0,15 & 0,66$\pm$0,09 & 0,83$\pm$0,25 & 0,75$\pm$0,12 & 0,93$\pm$0,22 \\
 		& MAX-AE & \textbf{1,49} & \textbf{1,26} & 1,74 & 1,48 & 1,78 & 1,71 \\
 		& Corr & 0,60 & 0,55 & 0,25 & 0,55 & 0,34 & 0,56 \\
 		\hline \hline
-		& & \multicolumn{6}{c}{\textbf{p. osiowy}} \\
+		& & \multicolumn{6}{c}{\textbf{USG -- p. osiowy}} \\
 		
-		Inception-v3 & MAE & 0,84$\pm$0,54 & 0,75$\pm$1,45 & 0,58$\pm$0,10 & 0,83$\pm$0,10 & \textbf{0,53}$\pm$0,16 & \textbf{0,83}$\pm$0,30 \\
+		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,54 & 0,75$\pm$1,45 & 0,58$\pm$0,10 & 0,83$\pm$0,10 & \textbf{0,53}$\pm$0,16 & \textbf{0,83}$\pm$0,30 \\
 		& MAX-AE & 2,8 & 1,46 & \textbf{1,51} & 1,27 & 1,63 & 1,65 \\
 		& Corr & 0,69 & 0,68 & 0,45 & 0,51 & 0,66 & 0,68 \\ \hline
-		ResNet-50 & MAE & 0,92$\pm$0,37 & 0,76$\pm$0,32 & 0,68$\pm$0,08 & \textbf{0,81}$\pm$0,17 & 0,65$\pm$0,20 & 0,94$\pm$0,11 \\
+		ResNet-50$_{euo}$ & MAE & 0,92$\pm$0,37 & 0,76$\pm$0,32 & 0,68$\pm$0,08 & \textbf{0,81}$\pm$0,17 & 0,65$\pm$0,20 & 0,94$\pm$0,11 \\
 		& MAX-AE & 2,01 & 1,56 & 1,61 & 1,69& 1,43 & \textbf{1,58}\\
 		& Corr & 0,55 & 0,57 & \textbf{0,35} & 0,44 & 0,39 & 0,61 \\ \hline \hline
 		& & \multicolumn{6}{c}{\textbf{Rezonans magnetyczny}} \\
@@ -194,68 +196,69 @@ Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla sieci Inc
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Sieć, uzyskująca najlepsze rezultaty, wytrenowana na USG tj. Inception-v3, uzyskała wartości MAE w zakresie $0,53$ do $0,87$ i uśrednioną korelację Z-Fisher od $0,31$ do $0,8$.
+Sieć, uzyskująca najlepsze rezultaty, wytrenowana na USG tj. Inception-v3, uzyskała wartości MAE w zakresie $0,53$ do $0,87$ i uśrednioną korelację Z-Fishera od $0,31$ do $0,8$.
+
 Metoda oparta o USG charakteryzuje się lepszymi rezultatami Corr tylko dla parametrów STE i TU, czyli dla parametrów ocenianych przez wzgląd na krawędzie i na oś w płaszczyźnie strzałkowej. W przypadku miary MAE, metoda RM uzyskuje lepszy rezultat w parametrze TT, gdzie znaczący wpływ na ocenę maja cechy z ROI.
 
-Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane USG może być komplementarna z proponowaną oceną bazującą na danych z RM. Zwłaszcza w kontekście oceny parametru TU jak i zmniejszenia błędu MAE w poszczególnych parametrach. Do tego celu potrzebna jest jednak dokładna analiza i zrozumienie podstaw wnioskowania sieci opartej o USG, a następnie wybór oraz realizacja odpowiedniej metody fuzji.
+Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane USG może być komplementarna z proponowaną oceną bazującą na danych z RM, zwłaszcza w kontekście oceny parametru TU jak i zmniejszenia błędu MAE w poszczególnych parametrach. Do tego celu potrzebna jest jednak dokładna analiza i zrozumienie podstaw wnioskowania sieci opartej o USG, a następnie wybór oraz realizacja odpowiedniej metody fuzji.
 
 \section{Porównanie z metodą opartą o badania biomechaniczne}
 \label{seq:comp-biomechanics}
-W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych i wynikami funkcjonalnego testu ATRS. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center (zob. Sekcja \ref{biomechanika}). 
+W tej sekcji opracowana metoda została porównana z wynikami badań biomechanicznych i wynikami funkcjonalnego testu ATRS. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center (zob. p. \ref{biomechanika}). 
 
-W ramach projektu START możliwe było zebranie danych dla 30 spośród 60 pacjentów. Dane zawierały wyniki pomiaru zrealizowanego w dwóch krokach czasowych tj. w 26 i 52 tygodniu. Po wstępnych analizach, do porównań w tej pracy wykorzystano zebrane wyniki ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Dokładniej, określono 16 takich deficytów oznaczonych dalej w tej pracy $d1$--$d16$. W czterech pozycjach tj. kolano zgięte i wyprostowane oraz staw skokowy zgięty wyprostowany zrealizowano pomiary w warunkach izometrii i izokinetyki w trzech prędkościach kątowych 60$^\circ$/s, 120$^\circ$/s oraz 180$^\circ$/s  
+W ramach projektu START możliwe było zebranie danych dla 30-tu spośród 60-ciu pacjentów. Dane zawierały wyniki pomiaru zrealizowanego w dwóch krokach czasowych tj. w 26-tym i 52-rugim tygodniu po operacji. Po wstępnych analizach, do porównań w tej pracy wykorzystano zebrane wyniki ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Dokładniej, określono 16-cie takich deficytów oznaczonych dalej w tej pracy \textit{d1}--\textit{d16}. W czterech pozycjach tj. kolano zgięte i wyprostowane oraz staw skokowy zgięty wyprostowany zrealizowano pomiary w warunkach izometrii i izokinetyki dla trzech prędkości kątowych 60$^\circ$/s, 120$^\circ$/s oraz 180$^\circ$/s  
 
-Z uwagi na dużą liczbę pomiarów, w pierwszej kolejność zdecydowano się na przeprowadzenie analizy czynników głównych i identyfikację nowych zmiennych wyjaśniających w największym stopniu wariancję w zebranym zbiorze danych. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
+Z uwagi na dużą liczbę pomiarów, zdecydowano się w pierwszej kolejność na przeprowadzenie analizy czynników głównych i identyfikację nowych zmiennych wyjaśniających w największym stopniu wariancję w zebranym zbiorze danych. Wyniki podsumowano w Tabeli \ref{tab:pca-muscles}.
 
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych w warunkach izometrii i izokinetyki. Oznaczono ładunki większe niż 0,7.}
+	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych w warunkach izometrii i izokinetyki. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
 	\label{tab:pca-muscles}
 	\begin{tabular}{c|c|c|c|c}
 		%\hline
 
 		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4 \\
 		\hline \hline
-		d1&\textbf{-0,77}&0,16&-0,04&-0,25 \\
+		\textit{d1}&\textbf{-0,77}&0,16&-0,04&-0,25 \\
 		\hline
-		d2&0,32&\textbf{-0,74}&0,038&-0,044 \\
+		\textit{d2}&0,32&\textbf{-0,74}&0,038&-0,044 \\
 		\hline
-		d3&\textbf{-0,81}&0,26&-0,17&-0,24 \\
+		\textit{d3}&\textbf{-0,81}&0,26&-0,17&-0,24 \\
 		\hline
-		d4&0,09&-0,62&-0,50&-0,38 \\
+		\textit{d4}&0,09&-0,62&-0,50&-0,38 \\
 		\hline
-		d5&\textbf{-0,82}&0,13&-0,03&0,21 \\
+		\textit{d5}&\textbf{-0,82}&0,13&-0,03&0,21 \\
 		\hline
-		d6&0,31&-0,53&-0,53&0,42 \\
+		\textit{d6}&0,31&-0,53&-0,53&0,42 \\
 		\hline
-		d7&-0,67&-0,20&-0,34&-0,11 \\
+		\textit{d7}&-0,67&-0,20&-0,34&-0,11 \\
 		\hline
-		d8&-0,12&-0,34&-0,67&0,43 \\
+		\textit{d8}&-0,12&-0,34&-0,67&0,43 \\
 		\hline
-		d9&-0,61&-0,01&-0,28&-0,36 \\
+		\textit{d9}&-0,61&-0,01&-0,28&-0,36 \\
 		\hline
-		d10&0,07&\textbf{-0,84}&0,26&0,02 \\
+		\textit{d10}&0,07&\textbf{-0,84}&0,26&0,02 \\
 		\hline
-		d11&\textbf{-0,81}&-0,14&0,01&0,08 \\
+		\textit{d11}&\textbf{-0,81}&-0,14&0,01&0,08 \\
 		\hline
-		d12&-0,11&\textbf{-0,93}&-0,01&-0,01 \\
+		\textit{d12}&-0,11&\textbf{-0,93}&-0,01&-0,01 \\
 		\hline
-		d13&\textbf{-0,72}&-0,24&0,28&0,36 \\
+		\textit{d13}&\textbf{-0,72}&-0,24&0,28&0,36 \\
 		\hline
-		d14&-0,12&\textbf{-0,81}&0,33&-0,25 \\
+		\textit{d14}&-0,12&\textbf{-0,81}&0,33&-0,25 \\
 		\hline
-		d15&-0,58&-0,32&0,39&0,53 \\
+		\textit{d15}&-0,58&-0,32&0,39&0,53 \\
 		\hline
-		d16&-0,17&-0,62&0,23&-0,36 \\
+		\textit{d16}&-0,17&-0,62&0,23&-0,36 \\
 		\hline\hline
 		Udział&0,28&0,27&0,10&0,09 \\
 
 	\end{tabular}
 \end{table}
 
-Z czterech czynników, 2 mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że 3 z pięciu znaczących ładunków czynnikowych ($d1$, $d3$, $d5$) dla pierwszego czynnika znajdują się w przedziale $d1$--$d8$, które skojarzone są z pozycją kolana prostego oraz, że dla drugiego czynnika głównego sytuacja jest odwrotna i 3 z czterech ładunków czynnikowych ($d10$, $d12$, $d14$) znajdują się w przedziale $d9$--$d16$, czyli badania przy kolanie zgiętym. 
+Z czterech czynników dwa mają wyraźnie większy udział w wyjaśnianej wariancji, osiągając odpowiednio poziomy 28 i 27\%. Istotne jest również, że trzy z pięciu znaczących ładunków czynnikowych (\textit{d1}, \textit{d3}, \textit{d5}) dla pierwszego czynnika znajdują się w przedziale \textit{d1}--\textit{d8}, które skojarzone są z pozycją kolana prostego oraz, że dla drugiego czynnika głównego sytuacja jest odwrotna i trzy z czterech ładunków czynnikowych (\textit{d10}, \textit{d12}, \textit{d14}) znajdują się w przedziale \textit{d9}--\textit{d16}, czyli badania przy kolanie zgiętym. 
 
 Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego, dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
 
@@ -263,38 +266,38 @@ Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych, oddzielnie dla pozycji kolana zgiętego i wyprostowanego. Oznaczono ładunki większe niż 0,7.}
+	\caption{Wyniki analizy czynników głównych dla 16-tu pomiarów deficytów mięśniowych, oddzielnie dla pozycji kolana zgiętego i wyprostowanego. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
 	\label{tab:pca-muscles-knee-strait-bended}
 	\begin{tabular}{c|c|c||c|c|c}
 		%\hline
 		
 		Zmienna&Czynnik1&Czynnik2&Zmienna&Czynnik1&Czynnik2 \\
 		\hline \hline
-		d1&\textbf{-0,82}&-0,14&d9&-0,26&0,64 \\
+		\textit{d1}&\textbf{-0,82}&-0,14&d9&-0,26&0,64 \\
 		\hline
-		d2&-0,60&-0,37&d10&\textbf{-0,72}&-0,47 \\
+		\textit{d2}&-0,60&-0,37&d10&\textbf{-0,72}&-0,47 \\
 		\hline
-		d3&\textbf{0,88}&-0,20&d11&-0,52&\textbf{0,73} \\
+		\textit{d3}&\textbf{0,88}&-0,20&d11&-0,52&\textbf{0,73} \\
 		\hline
-		d4&-0,36&-0,65&d12&\textbf{-0,83}&-0,34 \\
+		\textit{d4}&-0,36&-0,65&d12&\textbf{-0,83}&-0,34 \\
 		\hline
-		d5&\textbf{0,83}&-0,26&d13&-0,65&0,64 \\
+		\textit{d5}&\textbf{0,83}&-0,26&d13&-0,65&0,64 \\
 		\hline
-		d6&-0,57&-0,64&d14&\textbf{-0,81}&-0,43 \\
+		\textit{d6}&-0,57&-0,64&d14&\textbf{-0,81}&-0,43 \\
 		\hline
-		d7&0,55&-0,60&d15&-0,67&0,40 \\
+		\textit{d7}&0,55&-0,60&d15&-0,67&0,40 \\
 		\hline
-		d8&-0,03&\textbf{-0,80}&d16&-0,65&-0,38 \\
+		\textit{d8}&-0,03&\textbf{-0,80}&d16&-0,65&-0,38 \\
 		\hline\hline
 		Udział&0,41&0,26&&0,44&0,27 \\
 		
 	\end{tabular}
 \end{table}
 
-Ponownie można zaobserwować charakterystyczne rozróżnienie, kiedy to pierwszy czynnik główny dla badania w pozycji kolana wyprostowanego zawiera ładunki znaczące o nieparzystych numerach, a drugi czynnik posiada znaczące ładunki o parzystych numerach. W przypadku badania w pozycji kolana zgiętego sytuacja jest odwrotna i analogicznie można zaobserwować rozróżnienie. W tym przypadku podział wynika z pozycji stawu skokowego. Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami w zgięciu stawu skokowego, a o parzystych w wyproście. Z uwagi na ten fakt do kolejnych porównań zostały zdefiniowane następujące 4 zmienne:
+Ponownie można zaobserwować charakterystyczne rozróżnienie. Pierwszy czynnik główny dla badania w pozycji kolana wyprostowanego zawiera ładunki znaczące o nieparzystych numerach, a drugi czynnik posiada znaczące ładunki o parzystych numerach. W przypadku badania w pozycji kolana zgiętego sytuacja jest odwrotna i analogicznie można zaobserwować rozróżnienie. W tym przypadku podział wynika z pozycji stawu skokowego. Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami w zgięciu stawu skokowego, a o parzystych w wyproście. Z uwagi na ten fakt do kolejnych porównań zostały zdefiniowane następujące 4 zmienne:
 \begin{enumerate}
 	\item $ZZ$ -- wyniki dla pozycji kolano zgięte i staw skokowy zgięty.
-	\item $ZW$ -- wyniki dla pozycji kolano zgięte i staw skokowy wyprost.
+	\item $ZW$ -- wyniki dla pozycji kolano zgięte i staw skokowy wyprostowany.
 	\item $WZ$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy zgięty.
 	\item $WW$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy wyprostowany.
 \end{enumerate} 
@@ -310,13 +313,13 @@ Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego d
 	\begin{tabular}{c|c|c|c|c||c}
 		Zmienna&Czynnik1&Czynnik2&Czynnik3&Czynnik4&Udział \\
 		\hline \hline
-		ZZ&d9 (-0,61)&d11 (-0,88)&d13 (-0,92)&d15 (-0,77)&0,65\\
+		$ZZ$&\textit{d9} (-0,61)&\textit{d11} (-0,88)&\textit{d13} (-0,92)&\textit{d15} (-0,77)&0,65\\
 		\hline
-		ZW&d10 (-0,86)&d12 (-0,91)&d14 (-0,92)&d16 (-0,77)&0,75\\
+		$ZW$&\textit{d10} (-0,86)&\textit{d12} (-0,91)&\textit{d14} (-0,92)&\textit{d16} (-0,77)&0,75\\
 		\hline
-		WZ&d1 (-0,85)&d3 (-0,90)&d5 (-0,87)&d7 (-0,72)&0,70\\
+		$WZ$&\textit{d1} (-0,85)&\textit{d3} (-0,90)&\textit{d5} (-0,87)&\textit{d7} (-0,72)&0,70\\
 		\hline
-		WW&d2 (-0,64)&d4 (-0,76)&d6 (-0,88)&d8 (-0,66)&0,55\\
+		$WW$&\textit{d2} (-0,64)&\textit{d4} (-0,76)&\textit{d6} (-0,88)&\textit{d8} (-0,66)&0,55\\
 		
 			
 	\end{tabular}
@@ -324,13 +327,13 @@ Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego d
 
 Taki podział wydaje się być intuicyjny, ale fakt otrzymania powyższych wyników w analizie numerycznej jest wartością dodaną potwierdzającą spójność danych i jakość przeprowadzonych badań przez fizjoterapeutów z Carolina Medical Center. 
 
-W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna i wyniku ATRS z predykcjami automatycznej metody oraz oceną radiologa, zdecydowano się dla badań radiologicznych przeprowadzić również analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. czynnika1 zamiast 6 parametrów: $SCT$, $STE$, $TE$, $TisE$, $TT$, $TU$. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
+W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna i wyniku ATRS z predykcjami automatycznej metody oraz oceną radiologa, zdecydowano się również dla badań radiologicznych przeprowadzić analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. Czynnik1 zamiast 6-ciu parametrów: $SCT$, $STE$, $TE$, $TisE$, $TT$, $TU$. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
 
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki większe niż 0,7.}
+	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
 	\label{tab:pca-gt-pred}
 	\begin{tabular}{c|c|c}
 		Zmienna&Czynnik1 - ocena radiologa&Czynnik1 - ocena automatyczna \\
@@ -354,7 +357,7 @@ W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ści�
 
 Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywna ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
 
-W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. Na początku, w Tabeli \ref{tab:gtVSpred}, przedstawiono korelację oceny automatycznej z oceną radiologa.
+W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. W Tabeli \ref{tab:gtVSpred}, przedstawiono korelację oceny automatycznej z oceną radiologa.
 
 
 \begin{table}[h]
@@ -375,7 +378,7 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. Na po
 
 Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną. Fakt ten jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami. 
 
-W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
+W kolejnej tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
 
 \begin{table}[h]
 	\centering
@@ -400,9 +403,9 @@ W kolejnej Tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacj
 	\end{tabular}
 \end{table}
 
-Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Uzasadnione jest zatem realizowanie w praktyce obydwu tych badań w celu skutecznego monitorowania rehabilitacji pacjentów.
+Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Wynik wskazuje, że uzasadnione jest realizowanie w praktyce obydwu tych badań w celu skuteczniejszego monitorowania rehabilitacji pacjentów.
 
-W finalnym badaniu, w tej sekcji zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną, z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
+Finalnie, zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną, z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
 
 \begin{table}[h]
 	\centering
@@ -429,7 +432,7 @@ W finalnym badaniu, w tej sekcji zestawiono nowe zmienne opisujące ocenę radio
 
 Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS, co jest zgodne z praktyką kliniczną -- dlatego zalecane jest wykonywanie badań radiologicznych, które dostarczając komplementarnych informacji.
 
-Interesującym rezultatem jest wynik istotnej, niewielkiej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej z czynnika ludzkiego, spowodowała usystematyzowanie oceny, a jednocześnie uwspulnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, celem odnalezienia informacji wspólnych i stworzenia komplementarnego testu maksymalizującego informację dla lekarza prowadzącego przy jednoczesnej minimalizacji objętości protokołu monitorowania pacjentów.
+Interesującym rezultatem jest wynik istotnej, niewielkiej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej z czynnika ludzkiego, spowodowała usystematyzowanie oceny i uwspólnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, mających na celu stworzenie komplementarnego testu maksymalizującego informację dla lekarza prowadzącego, przy jednoczesnym minimalizowaniu objętości protokołu monitorowania pacjentów.
 
 \chapter{Podsumowanie}
 

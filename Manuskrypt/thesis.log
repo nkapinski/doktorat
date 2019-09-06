@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  5 SEP 2019 15:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  6 SEP 2019 09:01
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -842,7 +842,13 @@ Package pdftex.def Info: ./figures/Logo-IBIB.jpg  used on input line 18.
 
  [2] (thesis.lof [3
 
-] [4])
+] [4]
+Overfull \hbox (6.91945pt too wide) in paragraph at lines 51--51
+ [][] []\OT4/cmr/m/n/12 Wizualizacja przy-kªa-do-wych da-nych USG w prze-kro-ja
+ch osio-wych i strzaª- 
+ []
+
+)
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
@@ -855,7 +861,7 @@ Overfull \hbox (2.54022pt too wide) in paragraph at lines 22--22
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1072) has occurred while \output is active []
 
  [7])
 \tf@lot=\write5
@@ -1758,7 +1764,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [103]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3826) has occurred while \output is active []
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1768,7 +1774,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/Segmentacja.jpg, id=441, 1901.1025pt x 827.09pt>
 File: figures/Segmentacja.jpg Graphic file (type jpg)
 <use figures/Segmentacja.jpg>
-Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 73.
+Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 75.
 (pdftex.def)             Requested size: 441.01773pt x 191.86734pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1778,7 +1784,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/Data_US_sample.jpg, id=445, 1901.1025pt x 1280.785pt>
 File: figures/Data_US_sample.jpg Graphic file (type jpg)
 <use figures/Data_US_sample.jpg>
-Package pdftex.def Info: figures/Data_US_sample.jpg  used on input line 94.
+Package pdftex.def Info: figures/Data_US_sample.jpg  used on input line 96.
 (pdftex.def)             Requested size: 441.01773pt x 297.11496pt.
 
 
@@ -1786,50 +1792,61 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 102.
+               Default added (so using `tbp') on input line 104.
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [106]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [107 <./figures/Data_US_sample.jpg>]
-Overfull \hbox (5.33875pt too wide) in paragraph at lines 158--159
-[]\OT4/cmr/m/n/12 Najwi¦ksz¡ licz-b¦ naj-lep-szych re-zul-ta-tów otrzy-ma-no od
--po-wied-nio dla sie-ci Inception-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [108]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [109]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[110]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[111]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[112]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[110]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[111]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[112]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2017,7 +2034,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  18074 strings out of 492895
  355416 string characters out of 3122802
- 374002 words of memory out of 3000000
+ 374003 words of memory out of 3000000
  21709 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2051,7 +2068,7 @@ X 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs
 grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (146 pages, 12433756 bytes).
+Output written on thesis.pdf (146 pages, 12435445 bytes).
 PDF statistics:
  613 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

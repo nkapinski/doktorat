@@ -1,6 +1,6 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Globalny udzia\IeC {\l } w PKB rozwi\IeC {\k a}za\IeC {\'n} opartych o SI aplikowanych na rynku Med-Tech.\relax }}{2}% 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Podzia\IeC {\l } przedstawiaj\IeC {\k a}cy r\IeC {\'o}\IeC {\.z}ne rodzaje wsp\IeC {\'o}\IeC {\l }czesnych architektur g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{4}% 
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Podzia\IeC {\l } przedstawiaj\IeC {\k a}cy r\IeC {\'o}\IeC {\.z}ne rodzaje wsp\IeC {\'o}\IeC {\l }czesnych architektur g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{3}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Lokalizacja mi\IeC {\k e}\IeC {\'s}nia tr\IeC {\'o}jg\IeC {\l }owego \IeC {\l }ydki wraz ze \IeC {\'s}ci\IeC {\k e}gnem Achillesa.\relax }}{7}% 
@@ -21,9 +21,9 @@
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Modu\IeC {\l }y incepcji o g\IeC {\l }\IeC {\k e}boko\IeC {\'s}ci jednego (po lewej) i dw\IeC {\'o}ch stopni (po prawej).\relax }}{55}% 
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury GoogleNet\relax }}{56}% 
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.\relax }}{58}% 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{59}% 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{63}% 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji z ocen\IeC {\k a} ekspert\IeC {\'o}w dla problemu retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki.\relax }}{64}% 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{60}% 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{64}% 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji z ocen\IeC {\k a} ekspert\IeC {\'o}w dla problemu retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki.\relax }}{65}% 
 \contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji trzech chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{65}% 
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Firmy stosuj\IeC {\k a}ce w swoich produktach g\IeC {\l }\IeC {\k e}bokie sieci neuronowe, uzyskuj\IeC {\k a}ce certyfikacj\IeC {\k e} FDA.\relax }}{66}% 
 \addvspace {10\p@ }

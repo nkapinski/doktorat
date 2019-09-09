@@ -46,9 +46,10 @@
 %arabic. Also defines how chapters and sections are made
 \pagenumbering{arabic}
 \setcounter{page}{1} \pagestyle{fancy}
-\renewcommand{\chaptermark}[1]{\markboth{\chaptername%
-\ \thechapter:\,\ #1}{}}
-\renewcommand{\sectionmark}[1]{\markright{\thesection\,\ #1}}
+%%% To ponizej do zmiany zeby wyswietlac naglowki dobrze%%%
+\renewcommand{\chaptermark}[1]{\markboth{\scriptsize{\chaptername%
+\ \thechapter:\,\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\scriptsize{\thesection\,\ #1}}}
 
 %DEFINES TITLE PAGE, and contains abstract, acknowledgements, etc.
 

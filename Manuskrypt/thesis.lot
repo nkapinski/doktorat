@@ -3,7 +3,7 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {3.1}{\ignorespaces Parametry o\IeC {\'s}rodk\IeC {\'o}w cz\IeC {\k e}sto mierzonych w badaniach USG.\relax }}{24}% 
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{56}% 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Parametry architektury GoogleNet\relax }}{57}% 
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Wyniki szkolenia sieci neuronowych z wykorzystaniem kroswalidacji z podzia\IeC {\l }em na 5 segment\IeC {\'o}w, dla problemu klasyfikacji obraz\IeC {\'o}w zdrowego i chorego \IeC {\'s}ci\IeC {\k e}gna.\relax }}{76}% 
 \contentsline {table}{\numberline {5.2}{\ignorespaces Rezultaty PCA dla 1, 10 i 200 pierwszych czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych.\relax }}{78}% 

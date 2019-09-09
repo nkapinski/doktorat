@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{55}% 
 \contentsline {subsection}{\numberline {4.3.3}ResNet}{57}% 
 \contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{60}% 
-\contentsline {subsubsection}{U\IeC {\'s}rednianie}{60}% 
+\contentsline {subsubsection}{U\IeC {\'s}rednianie}{61}% 
 \contentsline {subsubsection}{G\IeC {\l }osowanie}{61}% 
 \contentsline {subsubsection}{Klasyfikacja Bayesa}{61}% 
 \contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{62}% 

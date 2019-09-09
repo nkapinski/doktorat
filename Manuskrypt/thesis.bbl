@@ -386,6 +386,12 @@ C.~{Ju}, A.~{Bibaut}, M.~J. {van der Laan}.
   {C}onvolutional {N}eural {N}etworks for {I}mage {C}lassification}.
 \newblock {\em ArXiv e-prints}, Kwiecień 2017.
 
+\bibitem{KapinskiGTC2018}
+Norbert Kapinski, Jakub Zieliński, Bartosz Borucki.
+\newblock Achillesdl: Convolutional neural nets help to evaluate tendons
+  regeneration process in sport medicine.
+\newblock {\em Nvidia GPU Technology Conference}, 2018.
+
 \bibitem{Kapinski19}
 Norbert Kapiński, Jakub Zieliński, Bartosz Borucki, Tomasz Trzciński,
   Barbara Ciszkowska-Łysoń, Urszula Zdanowicz, Robert Śmigielski, Krzysztof

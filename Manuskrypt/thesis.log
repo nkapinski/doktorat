@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.2)  6 SEP 2019 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  9 SEP 2019 10:07
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -277,11 +277,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 )
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.
 sty"
-Package: caption 2019/08/29 v3.3b Customizing captions (AR)
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3
 .sty"
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen133
 \captionmargin@=\dimen134
@@ -556,6 +556,14 @@ Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count288
+\float@exts=\toks25
+\float@box=\box58
+\@float@everytoks=\toks26
+\@floatcapt=\box59
+)
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/anysize\anysize.
 sty"
 Package: anysize 1994/08/13 setting margin sizes
@@ -579,29 +587,29 @@ LaTeX Warning: Label `fig:cmscores' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 41.
-LaTeX Font Info:    ... okay on input line 41.
-LaTeX Info: Redefining \celsius on input line 41.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 41.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Info: Redefining \celsius on input line 42.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 42.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 41.
-Package gensymb Info: Using \Omega for \ohm on input line 41.
+LaTeX Info: Redefining \ohm on input line 42.
+Package gensymb Info: Using \Omega for \ohm on input line 42.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -609,17 +617,17 @@ Package gensymb Warning: Not defining \micro.
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp
 -pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
+\scratchcounter=\count289
 \scratchdimen=\dimen192
-\scratchbox=\box58
-\nofMPsegments=\count289
-\nofMParguments=\count290
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count291
+\scratchbox=\box60
+\nofMPsegments=\count290
+\nofMParguments=\count291
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count292
 \MPscratchDim=\dimen193
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
+\everyMPtoPDFconversion=\toks28
 )
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopd
 f-base.sty"
@@ -680,6 +688,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Now handling font encoding TS1 ...
@@ -766,20 +775,20 @@ Dictionary: translator-basic-dictionary, Language: English
 abbreviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-LaTeX Font Info:    Try loading font information for OML+plm on input line 41.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 42.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omlplm.fd
 "
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 41.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 42.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omsplsy.f
 d"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 41.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 42.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omxplex.f
@@ -787,35 +796,35 @@ d"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <12> on input line 42.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 41.
+(Font)              <8> on input line 42.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 41.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 41.
+(Font)              <6> on input line 42.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 42.
  ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 41.
+LaTeX Font Info:    Try loading font information for U+msa on input line 42.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 41.
+LaTeX Font Info:    Try loading font information for U+msb on input line 42.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT4+cmss on input line 41.
+LaTeX Font Info:    Try loading font information for OT4+cmss on input line 42.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\ot4cmss.f
 d"
 File: ot4cmss.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 41.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 42.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\ot4cmtt.f
@@ -834,7 +843,22 @@ Package pdftex.def Info: ./figures/Logo-IBIB.jpg  used on input line 18.
 
 
 {C:/Users/norbert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures
-/Logo-IBIB.jpg>] [2] [1] [0] (thesis.toc [1
+/Logo-IBIB.jpg>] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--67
+
+ []
+
+[1] [0] (thesis.toc [1
 
 ])
 \tf@toc=\write3
@@ -1327,20 +1351,23 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [58 <./figures/ResidualBlock.png (PNG copy)>]
-<figures/ResNet.png, id=261, 676.32675pt x 208.3785pt>
-File: figures/ResNet.png Graphic file (type png)
-<use figures/ResNet.png>
-Package pdftex.def Info: figures/ResNet.png  used on input line 529.
-(pdftex.def)             Requested size: 441.01773pt x 135.88pt.
+<figures/ResNet.jpg, id=261, 1900.09875pt x 733.74126pt>
+File: figures/ResNet.jpg Graphic file (type jpg)
+<use figures/ResNet.jpg>
+Package pdftex.def Info: figures/ResNet.jpg  used on input line 529.
+(pdftex.def)             Requested size: 441.01773pt x 170.30199pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[59 <./figures/ResNet.png>]
+[59 <./figures/ResNet.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [60]
+Underfull \vbox (badness 7869) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1361,12 +1388,6 @@ File: figures/CAD-okulisci.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/CAD-okulisci.jpg  used on input line 596.
 (pdftex.def)             Requested size: 308.71106pt x 182.911pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \vbox (badness 2103) has occurred while \output is active []
-
-
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1384,18 +1405,19 @@ File: figures/CAD-dermatolodzy.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/CAD-dermatolodzy.jpg  used on input line 607.
 (pdftex.def)             Requested size: 396.91325pt x 160.68979pt.
 
-Underfull \vbox (badness 3199) has occurred while \output is active []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[64 <./figures/CAD-okulisci.jpg> <./figures/CAD-dermatolodzy.jpg>]
-<figures/fda_for_ai.png, id=284, 3513.125pt x 2582.64874pt>
-File: figures/fda_for_ai.png Graphic file (type png)
-<use figures/fda_for_ai.png>
-Package pdftex.def Info: figures/fda_for_ai.png  used on input line 622.
-(pdftex.def)             Requested size: 396.91325pt x 291.7768pt.
+[64 <./figures/CAD-okulisci.jpg>]
+<figures/fda_for_ai.jpg, id=284, 1901.1025pt x 1695.33376pt>
+File: figures/fda_for_ai.jpg Graphic file (type jpg)
+<use figures/fda_for_ai.jpg>
+Package pdftex.def Info: figures/fda_for_ai.jpg  used on input line 622.
+(pdftex.def)             Requested size: 396.91325pt x 353.93524pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1404,11 +1426,11 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[65]
+[65 <./figures/CAD-dermatolodzy.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[66 <./figures/fda_for_ai.png>]) (Rozdzialy/opis_metody.tex
+[66 <./figures/fda_for_ai.jpg>]) (Rozdzialy/opis_metody.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1424,7 +1446,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [69]
-<figures/net.jpg, id=302, 1904.11375pt x 967.615pt>
+<figures/net.jpg, id=301, 1904.11375pt x 967.615pt>
 File: figures/net.jpg Graphic file (type jpg)
 <use figures/net.jpg>
 Package pdftex.def Info: figures/net.jpg  used on input line 29.
@@ -1438,7 +1460,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [71]
-<figures/Data_MRI_sample.jpg, id=309, 1904.11375pt x 764.8575pt>
+<figures/Data_MRI_sample.jpg, id=308, 1904.11375pt x 764.8575pt>
 File: figures/Data_MRI_sample.jpg Graphic file (type jpg)
 <use figures/Data_MRI_sample.jpg>
 Package pdftex.def Info: figures/Data_MRI_sample.jpg  used on input line 65.
@@ -1464,7 +1486,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [75]
-<figures/TrainingtimesChart.jpg, id=323, 1904.11375pt x 1074.0125pt>
+<figures/TrainingtimesChart.jpg, id=322, 1904.11375pt x 1074.0125pt>
 File: figures/TrainingtimesChart.jpg Graphic file (type jpg)
 <use figures/TrainingtimesChart.jpg>
 Package pdftex.def Info: figures/TrainingtimesChart.jpg  used on input line 126
@@ -1483,7 +1505,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [78]
-<figures/H_PC1.jpg, id=333, 1901.1025pt x 1504.62125pt>
+<figures/H_PC1.jpg, id=332, 1901.1025pt x 1504.62125pt>
 File: figures/H_PC1.jpg Graphic file (type jpg)
 <use figures/H_PC1.jpg>
 Package pdftex.def Info: figures/H_PC1.jpg  used on input line 162.
@@ -1493,7 +1515,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [79 <./figures/H_PC1.jpg>]
-<figures/Hists.jpg, id=338, 1901.1025pt x 2710.125pt>
+<figures/Hists.jpg, id=337, 1901.1025pt x 2710.125pt>
 File: figures/Hists.jpg Graphic file (type jpg)
 <use figures/Hists.jpg>
 Package pdftex.def Info: figures/Hists.jpg  used on input line 186.
@@ -1511,13 +1533,13 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [81 <./figures/Hists.jpg>]
-<figures/Protocol_comparison.jpg, id=345, 1901.1025pt x 630.355pt>
+<figures/Protocol_comparison.jpg, id=344, 1901.1025pt x 630.355pt>
 File: figures/Protocol_comparison.jpg Graphic file (type jpg)
 <use figures/Protocol_comparison.jpg>
 Package pdftex.def Info: figures/Protocol_comparison.jpg  used on input line 20
 6.
 (pdftex.def)             Requested size: 418.96548pt x 138.90936pt.
-<figures/T2gremin.jpg, id=346, 1901.1025pt x 1276.77pt>
+<figures/T2gremin.jpg, id=345, 1901.1025pt x 1276.77pt>
 File: figures/T2gremin.jpg Graphic file (type jpg)
 <use figures/T2gremin.jpg>
 Package pdftex.def Info: figures/T2gremin.jpg  used on input line 215.
@@ -1581,7 +1603,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 448.
 
-<figures/XAI.jpg, id=370, 1901.1025pt x 824.07875pt>
+<figures/XAI.jpg, id=369, 1901.1025pt x 824.07875pt>
 File: figures/XAI.jpg Graphic file (type jpg)
 <use figures/XAI.jpg>
 Package pdftex.def Info: figures/XAI.jpg  used on input line 450.
@@ -1590,7 +1612,7 @@ Package pdftex.def Info: figures/XAI.jpg  used on input line 450.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 454.
 
-<figures/3DXAI.jpg, id=371, 1900.09875pt x 792.9625pt>
+<figures/3DXAI.jpg, id=370, 1900.09875pt x 792.9625pt>
 File: figures/3DXAI.jpg Graphic file (type jpg)
 <use figures/3DXAI.jpg>
 Package pdftex.def Info: figures/3DXAI.jpg  used on input line 456.
@@ -1611,7 +1633,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 470.
 
-<figures/cm.png, id=378, 1156.32pt x 1806.75pt>
+<figures/cm.png, id=377, 1156.32pt x 1806.75pt>
 File: figures/cm.png Graphic file (type png)
 <use figures/cm.png>
 Package pdftex.def Info: figures/cm.png  used on input line 472.
@@ -1636,7 +1658,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 493.
 
-<figures/cm_summary.jpg, id=388, 1901.1025pt x 1219.55624pt>
+<figures/cm_summary.jpg, id=387, 1901.1025pt x 1219.55624pt>
 File: figures/cm_summary.jpg Graphic file (type jpg)
 <use figures/cm_summary.jpg>
 Package pdftex.def Info: figures/cm_summary.jpg  used on input line 495.
@@ -1653,7 +1675,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 504.
 
-<figures/cmScores.jpg, id=392, 1901.1025pt x 1830.84pt>
+<figures/cmScores.jpg, id=391, 1901.1025pt x 1830.84pt>
 File: figures/cmScores.jpg Graphic file (type jpg)
 <use figures/cmScores.jpg>
 Package pdftex.def Info: figures/cmScores.jpg  used on input line 506.
@@ -1670,12 +1692,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 511.
 
-<figures/cmScores_summary.jpg, id=396, 1901.1025pt x 1231.60126pt>
+<figures/cmScores_summary.jpg, id=395, 1901.1025pt x 1231.60126pt>
 File: figures/cmScores_summary.jpg Graphic file (type jpg)
 <use figures/cmScores_summary.jpg>
 Package pdftex.def Info: figures/cmScores_summary.jpg  used on input line 513.
 (pdftex.def)             Requested size: 396.91325pt x 257.12169pt.
-<figures/SCT.png, id=397, 1517.67pt x 855.195pt>
+<figures/SCT.png, id=396, 1517.67pt x 855.195pt>
 File: figures/SCT.png Graphic file (type png)
 <use figures/SCT.png>
 Package pdftex.def Info: figures/SCT.png  used on input line 523.
@@ -1685,7 +1707,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [95 <./figures/cmScores_summary.jpg>]
-<figures/TT.png, id=401, 1517.67pt x 855.195pt>
+<figures/TT.png, id=400, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
 Package pdftex.def Info: figures/TT.png  used on input line 531.
@@ -1695,7 +1717,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [96 <./figures/SCT.png>]
-<figures/STE.png, id=406, 1517.67pt x 855.195pt>
+<figures/STE.png, id=405, 1517.67pt x 855.195pt>
 File: figures/STE.png Graphic file (type png)
 <use figures/STE.png>
 Package pdftex.def Info: figures/STE.png  used on input line 541.
@@ -1705,7 +1727,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [97 <./figures/TT.png>]
-<figures/TE.png, id=412, 1517.67pt x 855.195pt>
+<figures/TE.png, id=411, 1517.67pt x 855.195pt>
 File: figures/TE.png Graphic file (type png)
 <use figures/TE.png>
 Package pdftex.def Info: figures/TE.png  used on input line 549.
@@ -1719,7 +1741,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [98 <./figures/STE.png>]
-<figures/TU.png, id=417, 1517.67pt x 855.195pt>
+<figures/TU.png, id=416, 1517.67pt x 855.195pt>
 File: figures/TU.png Graphic file (type png)
 <use figures/TU.png>
 Package pdftex.def Info: figures/TU.png  used on input line 557.
@@ -1733,7 +1755,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [99 <./figures/TE.png>]
-<figures/TisE.png, id=422, 1517.67pt x 855.195pt>
+<figures/TisE.png, id=421, 1517.67pt x 855.195pt>
 File: figures/TisE.png Graphic file (type png)
 <use figures/TisE.png>
 Package pdftex.def Info: figures/TisE.png  used on input line 565.
@@ -1771,7 +1793,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [104]
-<figures/Segmentacja.jpg, id=441, 1901.1025pt x 827.09pt>
+<figures/Segmentacja.jpg, id=440, 1901.1025pt x 827.09pt>
 File: figures/Segmentacja.jpg Graphic file (type jpg)
 <use figures/Segmentacja.jpg>
 Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 75.
@@ -1781,7 +1803,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [105 <./figures/Segmentacja.jpg>]
-<figures/Data_US_sample.jpg, id=445, 1901.1025pt x 1280.785pt>
+<figures/Data_US_sample.jpg, id=444, 1901.1025pt x 1280.785pt>
 File: figures/Data_US_sample.jpg Graphic file (type jpg)
 <use figures/Data_US_sample.jpg>
 Package pdftex.def Info: figures/Data_US_sample.jpg  used on input line 96.
@@ -1966,18 +1988,18 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [126]
-Underfull \hbox (badness 10000) in paragraph at lines 619--625
+Underfull \hbox (badness 10000) in paragraph at lines 625--631
 []\OT4/cmr/m/n/12 M. S. Ra-ikin.  Epi-de-mio-lo-gy of Achil-les ten-don rup-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--625
+Underfull \hbox (badness 10000) in paragraph at lines 625--631
 \OT4/cmr/m/n/12 tu-re in the US.  $\OT4/cmtt/m/n/12 http : / / lermagazine . co
 m / article /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--625
+Underfull \hbox (badness 10000) in paragraph at lines 625--631
 \OT4/cmtt/m/n/12 epidemiology-[]of-[]achilles-[]tendon-[]rupture-[]in-[]the-[]u
 s$\OT4/cmr/m/n/12 , 2014.  Dost.:
  []
@@ -1987,13 +2009,13 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [127]
-Underfull \hbox (badness 4505) in paragraph at lines 658--665
+Underfull \hbox (badness 4505) in paragraph at lines 664--671
 []\OT4/cmr/m/n/12 Agnieszka Ro-si«-ska, Mag-da-le-na Sy-rek.  Re-ha-bi-li-ta-cj
 a ±ci¦-gna Achil-le-
  []
 
 
-Underfull \hbox (badness 1571) in paragraph at lines 658--665
+Underfull \hbox (badness 1571) in paragraph at lines 664--671
 \OT4/cmr/m/n/12 sa - ko-plet-ny pro-to-kóª uspraw-nia-nia po trój-p¦cz-ko-wej r
 e-kon-struk-cji ±ci¦-
  []
@@ -2024,34 +2046,30 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [133]
 Dodatek A.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 20.
-
-<figures/achillesDL.jpg, id=536, 1181.16281pt x 631.60968pt>
+<figures/achillesDL.jpg, id=535, 1181.16281pt x 631.60968pt>
 File: figures/achillesDL.jpg Graphic file (type jpg)
 <use figures/achillesDL.jpg>
-Package pdftex.def Info: figures/achillesDL.jpg  used on input line 22.
+Package pdftex.def Info: figures/achillesDL.jpg  used on input line 21.
 (pdftex.def)             Requested size: 441.01773pt x 235.82182pt.
-) [134
+[134
 
-]
+ <./figures/achillesDL.jpg>])
 Overfull \vbox (15.1167pt too high) has occurred while \output is active []
 
 
-[135 <./figures/achillesDL.jpg>] (thesis.aux (header.aux))
+[135] (thesis.aux (header.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18082 strings out of 492895
- 355585 string characters out of 3122802
- 374037 words of memory out of 3000000
- 21716 multiletter control sequences out of 15000+200000
+ 18134 strings out of 492895
+ 356346 string characters out of 3122802
+ 375459 words of memory out of 3000000
+ 21764 multiletter control sequences out of 15000+200000
  556473 words of font info for 92 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,2108b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,2108b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.e
 nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.
 enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi
@@ -2081,9 +2099,9 @@ X 2.9/fonts/type1/public/pl/plsy10.pfb><C:/Users/norbert/AppData/Local/Programs
 grams/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppDat
 a/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (147 pages, 12569544 bytes).
+Output written on thesis.pdf (147 pages, 13069025 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
+ 616 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{U\IeC {\'s}rednianie}{60}% 
 \contentsline {subsubsection}{G\IeC {\l }osowanie}{61}% 
 \contentsline {subsubsection}{Klasyfikacja Bayesa}{61}% 
-\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{61}% 
+\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{62}% 
 \contentsline {section}{\numberline {4.4}Zastosowania w medycynie}{62}% 
 \contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{68}% 
 \contentsline {section}{\numberline {5.1}Metodyka}{69}% 

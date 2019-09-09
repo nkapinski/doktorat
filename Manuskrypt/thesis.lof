@@ -24,7 +24,7 @@
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury ResNet-18.\relax }}{59}% 
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e}.\relax }}{63}% 
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji z ocen\IeC {\k a} ekspert\IeC {\'o}w dla problemu retinopatii cukrzycowej i cukrzycowego obrz\IeC {\k e}ku plamki.\relax }}{64}% 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji trzech chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{64}% 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Por\IeC {\'o}wnanie automatycznej klasyfikacji trzech chor\IeC {\'o}b sk\IeC {\'o}ry z ocen\IeC {\k a} ekspert\IeC {\'o}w dermatolog\IeC {\'o}w.\relax }}{65}% 
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Firmy stosuj\IeC {\k a}ce w swoich produktach g\IeC {\l }\IeC {\k e}bokie sieci neuronowe, uzyskuj\IeC {\k a}ce certyfikacj\IeC {\k e} FDA.\relax }}{66}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{70}% 
@@ -51,4 +51,4 @@
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w przekrojach osiowych i strza\IeC {\l }kowych, w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna.\relax }}{107}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji internetowej AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{135}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{134}% 

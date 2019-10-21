@@ -49,8 +49,8 @@ Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDx
 	\item T2 zależne
 	\item PD
 	\item T2 mapping
-	\item T2 $^\ast$ GRE
-	\item T2 $^\ast$ GRE TE\_MIN
+	\item T2$^\ast$ GRE
+	\item T2$^\ast$ GRE TE\_MIN
 	\item 3D FSPGR
 	\begin{itemize}
 		\item In Phase Ideal
@@ -75,7 +75,7 @@ Zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych skład
 Sumaryczna liczba tak uzyskanych próbek dwuwymiarowych wyniosła 11.725 (oznaczonych jako obrazy zdrowego ścięgna) i 138.604 (oznaczonych jako obrazy chorego ścięgna). W zależności od eksperymentów służących do optymalizacji parametrów metody wykorzystano:
 \begin{itemize}
 	\item Powiększony zbiór treningowy RM -- zawierający przekroje osiowe ze wszystkich badań pacjentów treningowych, realizowanych wszystkimi sekwencjami. Liczba przekrojów w tym zbiorze została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i, w przypadku chorych przykładów, 10-ciu obrotów w zakresie od -10 do 10 stopni. Finalnie zbiór zawierał 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
-	\item Ograniczony zbiór treningowy RM -- zawierający przekroje osiowe ze zbioru 44 pacjentów treningowych jedynie w sekwencji T2 $^\ast$ GRE TE\_MIN (18.863 próbek).
+	\item Ograniczony zbiór treningowy RM -- zawierający przekroje osiowe ze zbioru 44 pacjentów treningowych jedynie w sekwencji T2$^\ast$ GRE TE\_MIN (18.863 próbek).
 	\item Zbiór PCA -- zawierający próbki z powiększonego zbioru treningowego ze wszystkich sekwencji RM dla 10-iu losowo wybranych pacjentów (44.813).
 \end{itemize}
 
@@ -88,7 +88,7 @@ Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana sp
 
 \begin{enumerate}
 	\item Uszkodzenia śródścięgniste (SCT od ang. \textit{Structural Changes within the Tendon}) -- informuje o spójności włókien w obszarze ścięgna. Zawiera się w ROI. Ocena wykonywana zarówno w płaszczyźnie osiowej jak i strzałkowej. 0 – całkowity brak uszkodzeń, 1 – bardzo małe uszkodzenia. 2 – małe uszkodzenia, 3 – uszkodzenia średniej wielkości , 4 – dość duże uszkodzenia. 5 – duże uszkodzenia, 6 - bardzo duże uszkodzenia, 7 - ekstremalnie duże uszkodzenia.
-	\item Pogróbienie ściegna (TT od ang. \textit{Tendon Thickening} -- najgrubsze miejsce w kierunku strzałkowym widoczne na przekroju osiowym. Zawiera się w ROI. 0 – całkowity brak pogrubienia (3 mm--5 mm), 1 – bardzo małe pogrubienie (6 mm), 2 – małe pogrubienie (9 mm), 3 – średnie pogrubienie (12 mm), 4 –  dość duże pogrubienie (15 mm), 5 duże pogrubienie (18 mm), 6 – bardzo duże pogrubienie (21 mm), 7 – ekstremalnie duże pogrubienie (24 mm).
+	\item Pogrubienie ścięgna (TT od ang. \textit{Tendon Thickening} -- najgrubsze miejsce w kierunku strzałkowym widoczne na przekroju osiowym. Zawiera się w ROI. 0 – całkowity brak pogrubienia (3 mm--5 mm), 1 – bardzo małe pogrubienie (6 mm), 2 – małe pogrubienie (9 mm), 3 – średnie pogrubienie (12 mm), 4 –  dość duże pogrubienie (15 mm), 5 duże pogrubienie (18 mm), 6 – bardzo duże pogrubienie (21 mm), 7 – ekstremalnie duże pogrubienie (24 mm).
 	\item Ostrość granic ścięgna/rozgraniczenie (STE od ang. \textit{Sharpness of the Tendon Edges}) -- informuje o jakości granicy między tkankami ścięgnistymi i otoczeniem, w szczególności czy brzeg jest fraktalny. Oceniane jest na zewnątrz ścięgna w płaszczyźnie osiowej. 0 – bardzo duża (idealna) ostrość, 1 – duża ostrość, 2 – dość duża ostrość, 3 – średnia ostrość, 4 – mała ostrość, 5 – bardzo mała ostrość, 6 – minimalna ostrość, 7 – całkowicie nieostre.
 	\item Obrzęk ścięgna (TE od ang. \textit{Tendon Edema}) -- informuje o anomaliach w gromadzeniu się płynów w obszarze ścięgna. Zawiera się w ROI i jest oceniany na przekrojach osiowych. 0 – całkowity brak obrzęku, 1 – bardzo mały obrzęk, 2 – mały obrzęk, 3 – obrzęk średniej wielkości, 4 – dość duży obrzęk, 5 – duży obrzęk, 6 – bardzo duży obrzęk, 7 -- ekstremalnie duży obrzęk.
 	\item Jednorodność ścięgna (TU od ang. \textit{Tendon Uniformity}) -- informuje o prawidłowej teksturze poszczególnych przekrojów osiowych i podobieństwie sąsiednich przekrojów mierzonym w płaszczyźnie strzałkowej. Zawiera się w ROI. 0 – całkowity brak niejednorodności (jednorodne), 1 – bardzo małe niejednorodności, 2 – małe niejednorodności, 3 – niejednorodności średniej wielkości, 4 – dość duże niejednorodności, 5 – duże niejednorodności, 6 – bardzo duże niejednorodności, 7 –  ekstremalnie duże niejednorodności. 
@@ -129,7 +129,7 @@ W kolejnym kroku, dla wszystkich trzech architektur, porównano czasy szkolenia 
 \end{figure}
 Porównano dwie architektury GPU, starszą Pascal P100 i nowszą Volta V100, zaprezentowaną w 2017 roku, charakteryzującą się udoskonalonym, osobnym układem optymalizowanym pod kątem operacji tensorowych realizowanych w warstwach konwolucyjnych. Do szkolenia wykorzystano framework Caffe. Można zaobserwować, że wykorzystanie nowszej architektury GPU dało rezultaty około dwukrotnego przyspieszenia czasu szkolenia w przypadku AlexNet i ResNet oraz około 30\% w przypadku GoogLeNet. AlexNet zawiera najmniej warstw konwolucyjnych i optymalizowaną implementację klasyfikatora. Szkolenie tej architektury zajęło mniej niż jedną godzinę na GPU Volta. Dla porównania, sieci z bardziej skomplikowaną topologią tj. ResNet-18 i GoogLeNet, charakteryzują się odpowiednio czasami szkolenia w okolicach 20 i 48 godzin. 
 
-Na podstawie zestawienia wyników dokładności klasyfikacji i czasu treningu można stwierdzić, że AlexNet i GoogleNet charakteryzują się większą generalizacji, a z tych dwóch modeli, czas szkolenia jest o blisko 47 godzin krótszy dla AlexNet. Dlatego właśnie ekstraktor cech tej architektury został wybrany do realizacji kolejnych eksperymentów. 
+Na podstawie zestawienia wyników dokładności klasyfikacji z czasami treningu można stwierdzić, że AlexNet i GoogleNet charakteryzują się większą generalizacją, a z tych dwóch modeli, czas szkolenia jest o blisko 47 godzin krótszy dla AlexNet. Dlatego właśnie ekstraktor cech tej architektury został wybrany do realizacji kolejnych eksperymentów. 
 
 Należy również podkreślić, że istnieją sposoby na dalsze poprawienie wyników dokładności wnioskowania. Uzupełniające badanie dotyczące możliwości fuzji sieci AlexNet i ResNet-18 zostało opublikowane przez autora tej pracy w czasopiśmie Acta of Bioengineering and Biomechanics \cite{Kapinski19}. Wyniki mogą być również poprawione poprzez analizę lokalizacji przekrojów w przestrzeni trójwymiarowej, w szczególności poprzez uwzględnienie, że przekroje oddalone od miejsca zerwania bardziej przypominają tkanki zdrowe. Można zatem zastosować np. metody logiki rozmytej lub miękkiej klasyfikacji (zob. \cite{Liu2011}) w celu lepszego określenia przynależności próbek do klas. Niemniej jednak, z uwagi na wysokie wyniki dokładności zaprezentowanego podejścia, na tym etapie badań autor nie zdecydował się na dalsze usprawnienia kosztem komplikacji algorytmu. Eliminacja wykrytych anomalii i wyników odosobnionych realizowana jest w tej pracy poprzez zastosowanie średniej trymowanej w zaproponowanej metryce $H$ (zob. rów. \ref{ecq:H}).
 
@@ -192,14 +192,14 @@ Widoczne we wszystkich przypadkach maksima globalne w zerze są naturalnie wynik
 
 \begin{enumerate}
 	\item Bez maksimum lokalnego -- sekwencja T2 mapping i modalność Out Phase Ideal. W pierwszym przypadku jest to konsekwencja wspomnianej już w poprzednim eksperymencie występowania danych ze wszystkich 8 próbek sekwencji, czyli również tych mierzonych przy prawie zerowym sygnale T2, silnie zaszumionych z licznymi wartościami bliskimi zeru. W drugim przypadku, na granicach wody i tłuszczu, występuje często silne rozmycie (tzw. \textit{artefakt czarnego atramentu}), co również zwiększa liczbę wartości bliskich zeru.
-	\item Z jednym maksimum lokalnym -- pozostałe modalności 3D FSPGR oraz sekwencje: PD, T1 zależne, T2 zależne, T2 $^\ast$ GRE. Przypadek najczęściej występujący. Wartości sygnału zależą od tkanek dominujących w obrazowanym elemencie.
-	\item Z dwoma maksimami lokalnymi -- sekwencja T2 $^\ast$ GRE TE\_MIN. Jako jedyna posiada drugie maksimum lokalne, co może wskazywać na zwiększoną czułość na wzorce zawarte w danych.  
+	\item Z jednym maksimum lokalnym -- pozostałe modalności 3D FSPGR oraz sekwencje: PD, T1 zależne, T2 zależne, T2$^\ast$ GRE. Przypadek najczęściej występujący. Wartości sygnału zależą od tkanek dominujących w obrazowanym elemencie.
+	\item Z dwoma maksimami lokalnymi -- sekwencja T2$^\ast$ GRE TE\_MIN. Jako jedyna posiada drugie maksimum lokalne, co może wskazywać na zwiększoną czułość na wzorce zawarte w danych.  
 	
 \end{enumerate}
 %dlaczego wyrzucamy 3DFSPGR?
 Na podstawie powyższej analizy, z uwagi na możliwość występowania wysokiego szumu w sygnale oraz artefaktów, można wyłączyć z dalszych badań pierwszą grupę sekwencji. 
 
-Zdecydowanie wyróżniająca się sekwencją jest T2 $^\ast$ GRE TE\_MIN. W celu lepszego zrozumienia istotności występowania drugiego maksimum na Rys. \ref{fig:protocol_comp} zestawiono przykład rekonstrukcji danych z wykorzystaniem sekwencji z obu analizowanych dalej grup (wyłączono sekwencję 3DFSPGR, której modalności podzieliły się pomiędzy grupy 1 i 2 i która we wstępnych badaniach charakteryzowała się dużym zaszumieniem). 
+Zdecydowanie wyróżniająca się sekwencją jest T2$^\ast$ GRE TE\_MIN. W celu lepszego zrozumienia istotności występowania drugiego maksimum na Rys. \ref{fig:protocol_comp} zestawiono przykład rekonstrukcji danych z wykorzystaniem sekwencji z obu analizowanych dalej grup (wyłączono sekwencję 3DFSPGR, której modalności podzieliły się pomiędzy grupy 1 i 2 i która we wstępnych badaniach charakteryzowała się dużym zaszumieniem). 
 
  \begin{figure}[h]
  	\centering
@@ -207,24 +207,24 @@ Zdecydowanie wyróżniająca się sekwencją jest T2 $^\ast$ GRE TE\_MIN. W celu
  	\caption{Porównanie sekwencji RM ilustrujących proces gojenia się ścięgna Achillesa w 12 tygodniu po rekonstrukcji.}\label{fig:protocol_comp}
  \end{figure}
 
-Istotna różnica w rekonstruowanych przy pomocy powyższych danych obrazów pochodzi z poziomów odcieni szarości w obszarze ścięgna. Obrazy w dwunastym tygodniu procesu gojenia się, rekonstruowane przy pomocy sekwencji z grupy 2, charakteryzują się wartościami w obszarze ścięgna bliskimi zeru. Jedynie na obrazach rekonstruowanych z wykorzystaniem danych z T2 $^\ast$ GRE TE\_MIN obszar ścięgna jest jaśniejszy. 
+Istotna różnica w rekonstruowanych przy pomocy powyższych danych obrazów pochodzi z poziomów odcieni szarości w obszarze ścięgna. Obrazy w dwunastym tygodniu procesu gojenia się, rekonstruowane przy pomocy sekwencji z grupy 2, charakteryzują się wartościami w obszarze ścięgna bliskimi zeru. Jedynie na obrazach rekonstruowanych z wykorzystaniem danych z T2$^\ast$ GRE TE\_MIN obszar ścięgna jest jaśniejszy. 
 
-Na Rys. \ref{fig:T2comp} przedstawiono próbki T2 $^\ast$ GRE TE\_MIN zrekonstruowane w kolejnych krokach czasowych.
+Na Rys. \ref{fig:T2comp} przedstawiono próbki T2$^\ast$ GRE TE\_MIN zrekonstruowane w kolejnych krokach czasowych.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.95\textwidth]{figures/T2gremin.jpg}
-	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2 $^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
+	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
 \end{figure}
 Analiza wizualna wskazuje, że różnice w odcieniach szarości mogą wspomóc radiologów w skutecznej interpretacji stopnia wygojenia się tkanek ścięgnistych. Wartości w obszarze ścięgna są jasne na początku i ciemnieją z czasem. 
 
-W sekwencji T2 $^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych sekwencjach wykorzystanych w tej pracy TE $>>$ T2 $^\ast$. Z uwagi na cechy mierzonej tkanki, generowany sygnał ma tendencję do szybkiego zaniku. W T2 $^\ast$ GRE TE\_MIN jest on zatem mierzony przed tym faktem, a nie przy wartościach bliskich zeru. Na przestrzeni całego procesu gojenia się ścięgna, zmiany uwidaczniają się w postaci silnie rozróżnialnych odcieni szarości w obszarze ścięgna, co z kolei jest również wartościową informacją z uwagi na zastosowane w tej pracy metody sztucznej inteligencji i przetwarzania obrazów. Powyższe obserwacje i wnioski zostały dalej wykorzystane w analizie ilościowej.
+W sekwencji T2$^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych sekwencjach wykorzystanych w tej pracy TE $\gg$ T2$^\ast$. Z uwagi na cechy mierzonej tkanki, generowany sygnał ma tendencję do szybkiego zaniku. W T2$^\ast$ GRE TE\_MIN jest on zatem mierzony przed tym faktem, a nie przy wartościach bliskich zeru. Na przestrzeni całego procesu gojenia się ścięgna, zmiany uwidaczniają się w postaci silnie rozróżnialnych odcieni szarości w obszarze ścięgna, co z kolei jest również wartościową informacją z uwagi na zastosowane w tej pracy metody sztucznej inteligencji i przetwarzania obrazów. Powyższe obserwacje i wnioski zostały dalej wykorzystane w analizie ilościowej.
 
-\subsubsection{Analiza ilościowa} W ramach tego badania porównano ilościowo wyniki automatycznej oceny procesu gojenia się ścięgna Achillesa przy użyciu danych: (1) tylko z sekwencji T2 $^\ast$ GRE TE\_MIN; (2) danych z sekwencji T2 $^\ast$ GRE TE\_MIN oraz PD i T2 $^\ast$ GRE. Wybierając sekwencję T2 $^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór pozostałych dwóch sekwencji, poza analizą wizualną i wiedzą dziedzinową, był umotywowany oceną stopnia korelacji zaprezentowaną w Tab. \ref{tab:inter-protocol-corr}, gdzie zestawiono sekwencje z grupy (2) bez 3DFSPGR.
+\subsubsection{Analiza ilościowa} W ramach tego badania porównano ilościowo wyniki automatycznej oceny procesu gojenia się ścięgna Achillesa przy użyciu danych: (1) tylko z sekwencji T2$^\ast$ GRE TE\_MIN; (2) danych z sekwencji T2$^\ast$ GRE TE\_MIN oraz PD i T2$^\ast$ GRE. Wybierając sekwencję T2$^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór pozostałych dwóch sekwencji, poza analizą wizualną i wiedzą dziedzinową, był umotywowany oceną stopnia korelacji zaprezentowaną w Tab. \ref{tab:inter-protocol-corr}, gdzie zestawiono sekwencje z grupy (2) bez 3DFSPGR.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{12pt}
-	\caption{Korelacja sekwencji PD, T1, T2 and T2$^\ast$ GRE MRI. Wyniki oznaczone pogrubieniem są istotne statystycznie z p $<$ 0,01.}
+	\caption{Korelacja sekwencji PD, T1, T2 i T2$^\ast$ GRE MRI. Wyniki oznaczone pogrubieniem są istotne statystycznie z p $<$ 0,01.}
 	\label{tab:inter-protocol-corr}
 	\begin{tabular}{l||c|c|c|c}
 		%\hline
@@ -240,7 +240,7 @@ W sekwencji T2 $^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych 
 
 Do obliczeń korelacji wybrano wektor cech DL zredukowany do pojedynczej wartości niosącej ponad 50\% informacji, zagregowany dla badania z wykorzystaniem metryki $H_{PC}$ (zob. Row. \ref{ecq:HPC}). Uwzględniając wyniki istotne statystycznie, wśród najbardziej skorelowanych sekwencji znalazły się T1 i PD. PD najmniej koreluje z T2$^\ast$GRE, natomiast T1 z sekwencją T2. 
 
-W kolejnym kroku wykorzystano tę informację sprawdzając, w odniesieniu do wybranej w analizie wizualnej sekwencji T2 $^\ast$ GRE TE\_MIN, czy wnioskowanie co do procesu gojenia, na podstawie cech DL ulega polepszeniu z wykorzystaniem większej liczby różnorodnych sekwencji. 
+W kolejnym kroku wykorzystano tę informację sprawdzając, w odniesieniu do wybranej w analizie wizualnej sekwencji T2$^\ast$ GRE TE\_MIN, czy wnioskowanie co do procesu gojenia, na podstawie cech DL ulega polepszeniu z wykorzystaniem większej liczby różnorodnych sekwencji. 
 
 Wykorzystano ponownie zredukowaną przestrzeń cech DL (tym razem 1--10 czynników głównych) i wykonano szereg obliczeń stopnia gojenia się ścięgna stosując poniższą metrykę: 
 
@@ -251,7 +251,7 @@ H_{reg} = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^
 
 gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$ to kolejne predyktory, $TM$ to średnia trymowana z marginesami 2,5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju osiowego $x_k$, a $k$ jest indeksem przekroju danej sekwencji w trójwymiarowym badaniu RM.
 
-W szczególności, wyliczono różne modele regresji poczynając od liniowej, gdzie ($\gamma_{i}=0, \lambda_{i}=0$), przez nieliniową stopnia drugiego ($\lambda_{i}=0$) oraz z kombinacją czynników. W przypadku liniowym wykorzystano od 1 do 10 czynników głównych. Natomiast w przypadku nieliniowym wykorzystano tylko dwa pierwsze czynniki, ograniczając tym samym efekt nadmiernego dopasowaniu się modelu. Powyższe modele funkcjonujące w oparciu o trzy sekwencje (tj. T2 $^\ast$ GRE TE\_MIN, PD i T2 $^\ast$ GRE) zestawiono z modelem liniowej regresji wytrenowanym jedynie na danych z T2 $^\ast$ GRE TE\_MIN. 
+W szczególności, wyliczono różne modele regresji poczynając od liniowej, gdzie ($\gamma_{i}=0, \lambda_{i}=0$), przez nieliniową stopnia drugiego ($\lambda_{i}=0$) oraz z kombinacją czynników. W przypadku liniowym wykorzystano od 1 do 10 czynników głównych. Natomiast w przypadku nieliniowym wykorzystano tylko dwa pierwsze czynniki, ograniczając tym samym efekt nadmiernego dopasowaniu się modelu. Powyższe modele funkcjonujące w oparciu o trzy sekwencje (tj. T2$^\ast$ GRE TE\_MIN, PD i T2$^\ast$ GRE) zestawiono z modelem liniowej regresji wytrenowanym jedynie na danych z T2$^\ast$ GRE TE\_MIN. 
 
 Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningowych. Natomiast w celach porównań, zestawiono wyniki dla pacjentów testowych. W szczególności, wyliczono metryki średniego błędu absolutnego (MAE od ang. \textit{Mean Absolute Error}), maksymalnego błędu absolutnego (MAX-AE od ang. \textit{Max. Absolute Error}) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr od ang. \textit{Correlation}). Rezultaty znajdują się w Tab. \ref{tab:H_testset}.
 \renewcommand{\arraystretch}{1.2}
@@ -333,13 +333,13 @@ Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningow
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2 $^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18-tu. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują zatem nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2 $^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min. na pacjenta, podczas gdy wszystkich trzech sekwencji trwa około 12 minut. Podsumowując, na podstawie analizy wizualnej i ilościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2 $^\ast$ GRE TE\_MIN. 
+Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2$^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18-tu. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują zatem nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2$^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje około 5 min. na pacjenta, podczas gdy wszystkich trzech sekwencji trwa około 12 minut. Podsumowując, na podstawie analizy wizualnej i ilościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2$^\ast$ GRE TE\_MIN. 
 
 \subsection{Optymalna selekcja i konkatenacja cech}
 \label{seq:fusion}
 W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli regresji liniowej. Można zatem postawić hipotezę, że w ocenie radiologa dominuje zależność liniowa. Dodatkowo, cechy obrazowe opisujące jeden problem diagnostyczny są ze sobą zazwyczaj silnie skorelowane. Stąd motywacja, aby w ramach tego eksperymentu do selekcji cech zastosować metodę LASSO (zob. pkt \ref{DimReduction}), bazującą właśnie na liniowych własnościach i znajdującą swe zastosowanie przy silnie skorelowanych predyktorach.  
 
-W tym celu, treningowy zbiór pacjentów został podzielony na 4 podzbiory (11-tu pacjentów, około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO (zob. wzór \ref{equ:lassoReg}). Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2 $^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. p. \ref{seq:method}).
+W tym celu, treningowy zbiór pacjentów został podzielony na 4 podzbiory (11-tu pacjentów, około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO (zob. wzór \ref{equ:lassoReg}). Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2$^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. p. \ref{seq:method}).
 
 Kryterium selekcji cech była najlepsza korelacja z wzorcem odniesienia, którą uzyskano dla $\alpha=0,1$. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
 \begin{itemize}

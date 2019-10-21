@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  21 OCT 2019 10:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  21 OCT 2019 11:51
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1565,6 +1565,9 @@ Overfull \hbox (19.02544pt too wide) in paragraph at lines 262--331
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1582,15 +1585,14 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 360.
 
 
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[87]
-
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 400.
 
 
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[87]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2068,7 +2070,7 @@ Here is how much of TeX's memory you used:
  21765 multiletter control sequences out of 15000+200000
  557022 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,15n,63p,2108b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,15n,63p,2107b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.e
 nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.
 enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi
@@ -2099,7 +2101,7 @@ grams/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (147 pages, 13271365 bytes).
+Output written on thesis.pdf (147 pages, 13271669 bytes).
 PDF statistics:
  620 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

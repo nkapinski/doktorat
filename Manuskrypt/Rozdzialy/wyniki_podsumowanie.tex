@@ -22,13 +22,13 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 \begin{tabular}{lc||c|c|c|c|c|c}
 	%\hline
 	&& \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ \hline \hline
-	AlexNet$_{e}$ & MAE & 1,04$\pm$0,33 & 0,82$\pm$0,27 & 0,95$\pm$0,48 & 0,88$\pm$0,38 & 1,03$\pm$0,36 & 0,78$\pm$0,26  \\
+	AlexNet$_{e}$ & MAE & 1,04$\pm$0,05 & 0,82$\pm$0,04 & 0,95$\pm$0,07 & 0,88$\pm$0,06 & 1,03$\pm$0,06 & 0,78$\pm$0,04  \\
 	&MAX-AE & 1,91 & 1,67 & 2,39 & 2,20 & 1,90 & 1,35\\ 
 	&Corr & 0,82 & \textbf{0,72} & \textbf{0,13} & 0,70 & 0,50 & 0,83 \\ \hline
-	Inception-v3$_{e}$ & MAE & 0,88$\pm$0,32 & \textbf{0,75}$\pm$0,22 & \textbf{0,82}$\pm$0,33 & \textbf{0,78}$\pm$0,20 & \textbf{0,91}$\pm$0,34 & \textbf{0,67}$\pm$0,23 \\
+	Inception-v3$_{e}$ & MAE & 0,88$\pm$0,05 & \textbf{0,75}$\pm$0,04 & \textbf{0,82}$\pm$0,05 & \textbf{0,78}$\pm$0,03 & \textbf{0,91}$\pm$0,05 & \textbf{0,67}$\pm$0,04 \\
 	&MAX-AE & 1,57 & \textbf{1,44} & \textbf{1,93} & \textbf{1,17} & \textbf{1,85} & \textbf{1,11} \\ 
 	&Corr & \textbf{0,85} & \textbf{0,72} & 0,05 & \textbf{0,72} & \textbf{0,52} & \textbf{0,84} \\ \hline
-	ResNet-50$_{e}$ & MAE & \textbf{0,64}$\pm$0,21 & 0,98$\pm$0,28 & 0,83$\pm$0,37 & 0,89$\pm$0,22 & 1,06$\pm$0,41 & 1,10$\pm$0,34  \\
+	ResNet-50$_{e}$ & MAE & \textbf{0,64}$\pm$0,03 & 0,98$\pm$0,04 & 0,83$\pm$0,06 & 0,89$\pm$0,03 & 1,06$\pm$0,06 & 1,10$\pm$0,05  \\
 	&MAX-AE & \textbf{1,21} & 1,79 & 1,94 & 1,43 & 2,42 & 2,36\\
 	&Corr & 0,06 & 0,21 & 0,00 & 0,11 & 0,14 & 0,11\\
 	
@@ -50,10 +50,10 @@ W kolejnym kroku, w Tab. \ref{tab:end-to-end_testset}, przedstawiono zestawienie
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ \hline \hline
-			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,74}$ & 0,80$\pm{0,24}$ & 1,40$\pm{0,52}$ & \textbf{0,89}$\pm{0,31}$ & 1,08$\pm{0,26}$ & \textbf{0,69}$\pm{0,07}$ \\
+			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,08}$ & 0,80$\pm{0,04}$ & 1,40$\pm{0,07}$ & \textbf{0,89}$\pm{0,05}$ & 1,08$\pm{0,04}$ & \textbf{0,69}$\pm{0,07}$ \\
 			& MAX-AE & \textbf{2,14} & \textbf{1,01} & 2,13 & \textbf{1,18} & \textbf{1,44} & \textbf{0,78} \\
 			& Corr & 0,82 & 0,77 & 0,05 & 0,59 & 0,02 & 0,77 \\ \hline
-			SVR & MAE & \textbf{1,05}$\pm0,12$ & \textbf{0,56}$\pm0,06$ & \textbf{0,75}$\pm0,08$ & 0,91$\pm0,10$ & \textbf{0,91}$\pm0,09$ & $0,94\pm0,10$\\
+			SVR & MAE & \textbf{1,05}$\pm0,06$ & \textbf{0,56}$\pm0,03$ & \textbf{0,75}$\pm0,04$ & 0,91$\pm0,05$ & \textbf{0,91}$\pm0,04$ & $0,94\pm0,05$\\
 			& MAX-AE & 2,62 & 1,82 & \textbf{1,92} & 2,54 & 2,01 & 2,38 \\
 			& Corr & \textbf{0,85} & \textbf{0,85} & \textbf{0,31} & \textbf{0,72} & \textbf{0,65} & \textbf{0,80} 
 		\end{tabular}
@@ -112,9 +112,9 @@ Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi ar
 		%\hline
 		& \multicolumn{3}{c}{\textbf{p. strzałkowy}} & \multicolumn{3}{c}{\textbf{p. osiowy}} \\
 		\textbf{Model} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} \\ \hline \hline
-		AlexNet$_{bu}$ & 0,846$\pm$0,087 & 0,92$\pm$0,08 & 0,78$\pm$0,11 & 0,843$\pm$0,075 & 0,93$\pm$0,06 & 0,73$\pm$0,11  \\ \hline
-		Inception-v3$_{bu}$ & \textbf{0,916}$\pm$0,049 & 0,97$\pm$0,04 & 0,90$\pm$0,06 & 0,901$\pm$0,052 & 0,95$\pm$0,3 & 0,87$\pm$00,07 \\ \hline
-		ResNet-50$_{bu}$ & 0,907$\pm$0,039 & 0,96$\pm$0,05 & 0,89$\pm$0,08 & \textbf{0,912}$\pm$0,046 & 0,95$\pm$0,04 & 0,88$\pm$0,06 \\ 
+		AlexNet$_{bu}$ & 0,85$\pm$0,09 & 0,92$\pm$0,08 & 0,78$\pm$0,11 & 0,843$\pm$0,07 & 0,93$\pm$0,06 & 0,73$\pm$0,11  \\ \hline
+		Inception-v3$_{bu}$ & \textbf{0,92}$\pm$0,05 & 0,97$\pm$0,04 & 0,90$\pm$0,06 & 0,90$\pm$0,05 & 0,95$\pm$0,03 & 0,87$\pm$0,07 \\ \hline
+		ResNet-50$_{bu}$ & 0,91$\pm$0,04 & 0,96$\pm$0,05 & 0,89$\pm$0,08 & \textbf{0,91}$\pm$0,05 & 0,95$\pm$0,04 & 0,88$\pm$0,06 \\ 
 	\end{tabular}
 \end{table}
 \renewcommand{\arraystretch}{1}
@@ -133,24 +133,24 @@ Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. 
 		%\hline
 		& & \multicolumn{6}{c}{\textbf{p. strzałkowy}} \\
 		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
-		AlexNet$_{eus}$ & MAE & 0,96$\pm$0,41 & 0,80$\pm$0,27 & 0,82$\pm$0,29 & 0,95$\pm$0,41 & 0,87$\pm$0,39 & 1,08$\pm$0,47  \\
+		AlexNet$_{eus}$ & MAE & 0,96$\pm$0,20 & 0,80$\pm$0,13 & 0,82$\pm$0,14 & 0,95$\pm$0,20 & 0,87$\pm$0,20 & 1,08$\pm$0,23  \\
 		& MAX-AE & 1,75 & 1,32 & 1,87 & 1,35 & 1,61 & 2,03 \\ 
 		& Corr & 0,53 & 0,69 & 0,11 & \textbf{0,68} & 0,31 & 0,22 \\ \hline
-		Inception-v3$_{eus}$ & MAE & \textbf{0,88}$\pm$0,35 & \textbf{0,67}$\pm$0,23 & \textbf{0,80}$\pm$0,31 & 0,82$\pm$0,23 & \textbf{0,84}$\pm$0,32 & \textbf{0,93}$\pm$0,29  \\
+		Inception-v3$_{eus}$ & MAE & \textbf{0,88}$\pm$0,16 & \textbf{0,67}$\pm$0,11 & \textbf{0,80}$\pm$0,15 & 0,82$\pm$0,11 & \textbf{0,84}$\pm$0,11 & \textbf{0,93}$\pm$0,15  \\
 		& MAX-AE & 1,69 & 1,32 & 1,69 & \textbf{1,31} & \textbf{1,58} & \textbf{1,64} \\ 
 		& Corr & \textbf{0,83} & \textbf{0,71} & 0,19 & 0,64 & \textbf{0,56} & \textbf{0,71} \\ \hline
-		ResNet-50$_{eus}$ & MAE & 0,89$\pm$0,12 & 0,74$\pm$0,15 & 0,83$\pm$0,22 & \textbf{0,81}$\pm$0,31 & 0,92$\pm$0,31 & 0,99$\pm$0,32 \\
+		ResNet-50$_{eus}$ & MAE & 0,89$\pm$0,06 & 0,74$\pm$0,07 & 0,83$\pm$0,11 & \textbf{0,81}$\pm$0,15 & 0,92$\pm$0,15 & 0,99$\pm$0,15 \\
 		& MAX-AE & \textbf{1,53} & \textbf{1,22} & \textbf{1,64} & 1,43 & 1,67 & 1,71 \\
 		& Corr & 0,62 & 0,38 & \textbf{0,23} & 0,62 & 0,12 & 0,43 \\ \hline \hline
 		& & \multicolumn{6}{c}{\textbf{p. osiowy}} \\
 		
-		AlexNet$_{euo}$ & MAE & \textbf{0,98}$\pm$0,39 & 0,83$\pm$0,33 & 0,82$\pm$0,35 & 0,94$\pm$0,52 & 0,95$\pm$0,50 & 0,86$\pm$0,28  \\
+		AlexNet$_{euo}$ & MAE & \textbf{0,98}$\pm$0,20 & 0,83$\pm$0,16 & 0,82$\pm$0,17 & 0,94$\pm$0,26 & 0,95$\pm$0,25 & 0,86$\pm$0,14  \\
 		& MAX-AE & \textbf{1,79} & \textbf{1,36} & 1,86 & 1,41 & 1,61 & 1,59 \\ 
 		& Corr & 0,45 & 0,62 & 0,20 & 0,60 & 0,03 & 0,59 \\ \hline
-		Inception-v3$_{euo}$ & MAE & 1,03$\pm$0,46 & \textbf{0,70}$\pm$0,24 & \textbf{0,76}$\pm$0,26 & \textbf{0,86}$\pm$0,19 & 0,87$\pm$0,32 & \textbf{0,85}$\pm$0,25  \\
+		Inception-v3$_{euo}$ & MAE & 1,03$\pm$0,23 & \textbf{0,70}$\pm$0,12 & \textbf{0,76}$\pm$0,13 & \textbf{0,86}$\pm$0,09 & 0,87$\pm$0,16 & \textbf{0,85}$\pm$0,12  \\
 		& MAX-AE & 2,52 & \textbf{1,45} & \textbf{1,45} & \textbf{1,24} & 1,67 & \textbf{1,56} \\ 
 		& Corr & \textbf{0,77} & \textbf{0,69} & \textbf{0,22} & \textbf{0,65} & \textbf{0,55} & \textbf{0,72} \\ \hline
-		ResNet-50$_{euo}$ & MAE & 1,05$\pm$0,31 & 0,78$\pm$0,33 & 0,80$\pm$0,24 & 1,02$\pm$0,25 & \textbf{0,87}$\pm$0,15 & 0,91$\pm$0,28 \\
+		ResNet-50$_{euo}$ & MAE & 1,05$\pm$0,15 & 0,78$\pm$0,16 & 0,80$\pm$0,12 & 1,02$\pm$0,12 & \textbf{0,87}$\pm$0,12 & 0,91$\pm$0,14 \\
 		& MAX-AE & 1,98 & 1,51 & 1,59 & 1,63 & \textbf{1,45} & 1,57 \\
 		& Corr & 0,52 & 0,47 & 0,21 & 0,64 & 0,18 & 0,57 \\ 
 	\end{tabular}
@@ -171,24 +171,24 @@ Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla modeli na
 		%\hline
 		& & \multicolumn{6}{c}{\textbf{USG -- p. strzałkowy}} \\
 		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
-		Inception-v3$_{eus}$ & MAE & \textbf{0,81}$\pm$0,38 & 0,63$\pm$0,06 & \textbf{0,56}$\pm$0,18 & 0,85$\pm$0,20 & 0,54$\pm$0,04 & 0,87$\pm$0,29 \\
+		Inception-v3$_{eus}$ & MAE & \textbf{0,81}$\pm$0,19 & 0,63$\pm$0,03 & \textbf{0,56}$\pm$0,09 & 0,85$\pm$0,10 & 0,54$\pm$0,02 & 0,87$\pm$0,14 \\
 		& MAX-AE & 1,59 & 1,79 & 1,7 & \textbf{1,25} & \textbf{1,38} & 1,69 \\
 		& Corr & 0,80 & 0,77 & 0,31 & 0,52 & \textbf{0,69} & 0,62 \\ \hline
-		ResNet-50$_{eus}$ & MAE & 0,88$\pm$0,33 & 0,65$\pm$0,15 & 0,66$\pm$0,09 & 0,83$\pm$0,25 & 0,75$\pm$0,12 & 0,93$\pm$0,22 \\
+		ResNet-50$_{eus}$ & MAE & 0,88$\pm$0,16 & 0,65$\pm$0,07 & 0,66$\pm$0,04 & 0,83$\pm$0,12 & 0,75$\pm$0,06 & 0,93$\pm$0,11 \\
 		& MAX-AE & \textbf{1,49} & \textbf{1,26} & 1,74 & 1,48 & 1,78 & 1,71 \\
 		& Corr & 0,60 & 0,55 & 0,25 & 0,55 & 0,34 & 0,56 \\
 		\hline \hline
 		& & \multicolumn{6}{c}{\textbf{USG -- p. osiowy}} \\
 		
-		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,54 & 0,75$\pm$1,45 & 0,58$\pm$0,10 & 0,83$\pm$0,10 & \textbf{0,53}$\pm$0,16 & \textbf{0,83}$\pm$0,30 \\
+		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,27 & 0,75$\pm$0,7 & 0,58$\pm$0,05 & 0,83$\pm$0,05 & \textbf{0,53}$\pm$0,08 & \textbf{0,83}$\pm$0,15 \\
 		& MAX-AE & 2,8 & 1,46 & \textbf{1,51} & 1,27 & 1,63 & 1,65 \\
 		& Corr & 0,69 & 0,68 & 0,45 & 0,51 & 0,66 & 0,68 \\ \hline
-		ResNet-50$_{euo}$ & MAE & 0,92$\pm$0,37 & 0,76$\pm$0,32 & 0,68$\pm$0,08 & \textbf{0,81}$\pm$0,17 & 0,65$\pm$0,20 & 0,94$\pm$0,11 \\
+		ResNet-50$_{euo}$ & MAE & 0,92$\pm$0,18 & 0,76$\pm$0,16 & 0,68$\pm$0,04 & \textbf{0,81}$\pm$0,08 & 0,65$\pm$0,10 & 0,94$\pm$0,05 \\
 		& MAX-AE & 2,01 & 1,56 & 1,61 & 1,69& 1,43 & \textbf{1,58}\\
 		& Corr & 0,55 & 0,57 & \textbf{0,35} & 0,44 & 0,39 & 0,61 \\ \hline \hline
 		& & \multicolumn{6}{c}{\textbf{Rezonans magnetyczny}} \\
 		
-		SVR & MAE & $1,05\pm0,12$ & \textbf{0,56}$\pm0,06$ & $0,75\pm0,08$ & $0,91\pm0,10$ & $0,91\pm0,09$ & $0,94\pm0,10$\\
+		SVR & MAE & $1,05\pm0,06$ & \textbf{0,56}$\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & $0,94\pm0,05$\\
 		& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & 2,01 & 2,38 \\
 		& Corr   & \textbf{0,85} & \textbf{0,85} & 0,31 & \textbf{0,72} & 0,65 & \textbf{0,80} \\
 		 

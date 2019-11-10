@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  21 OCT 2019 11:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  10 NOV 2019 10:01
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1560,7 +1560,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [83 <./figures/T2gremin.jpg>]
-Overfull \hbox (19.02544pt too wide) in paragraph at lines 262--331
+Overfull \hbox (19.9699pt too wide) in paragraph at lines 262--331
  [] 
  []
 
@@ -2101,7 +2101,7 @@ grams/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/AppData/Loca
 l/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (147 pages, 13271669 bytes).
+Output written on thesis.pdf (147 pages, 13271494 bytes).
 PDF statistics:
  620 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

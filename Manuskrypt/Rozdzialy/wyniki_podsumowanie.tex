@@ -86,7 +86,7 @@ W tej sekcji opracowana metoda została porównana z automatyczną oceną bazuj�
 Dane dla metody opartej o Ultrasonografię pochodziły również z projektu START. Stosowano się zatem do identycznych odstępów czasowych, co w przypadku badań RM i akwizycji poddano tych samych pacjentów. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. p. \ref{USG}), których ostateczna liczba wyniosła 565 skanów 3D. 
 
 Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej (wykorzystując obrazy, gdzie widoczne jest ścięgno):
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item zbiór treningowy USG (strzałkowy) -- zawierał 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
 	\item zbiór treningowy USG (osiowy) -- zawierał 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
 \end{itemize}
@@ -121,7 +121,6 @@ Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi ar
 
 Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia powyższych rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednakże działania te przyniosły odwrotny skutek.  
 
-Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech. W przypadku USG otrzymane wyniki nie były jednak na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie, wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tabeli \ref{tab:usg_train_cross-validation}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
@@ -156,6 +155,8 @@ Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. 
 	\end{tabular}
 \end{table}
 \renewcommand{\arraystretch}{1}
+
+Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech. W przypadku USG otrzymane wyniki nie były jednak na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie, wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tabeli \ref{tab:usg_train_cross-validation}.
 
 Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla modeli na bazie sieci Inception-v3 i ResNet-50 dlatego te modele zostały dalej porównane z proponowaną metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tabeli \ref{tab:USGvsRM-cross-validation}.
 
@@ -262,7 +263,14 @@ Z czterech czynników dwa mają wyraźnie większy udział w wyjaśnianej warian
 
 Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego, dlatego w ramach dalszej pracy zdecydowano się na  analizę czynnikową dla wyprostowanego i zgiętego kolana oddzielnie. Wyniki zostały przedstawione w Tabeli \ref{tab:pca-muscles-knee-strait-bended}. 
 
-\begin{table}[h]
+Ponownie można zaobserwować charakterystyczne rozróżnienie. Pierwszy czynnik główny dla badania w pozycji kolana wyprostowanego zawiera ładunki znaczące o nieparzystych numerach, a drugi czynnik posiada znaczące ładunki o parzystych numerach. W przypadku badania w pozycji kolana zgiętego sytuacja jest odwrotna i analogicznie można zaobserwować rozróżnienie. W tym przypadku podział wynika z pozycji stawu skokowego. Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami w zgięciu stawu skokowego, a o parzystych w wyproście. Z uwagi na ten fakt do kolejnych porównań zostały zdefiniowane następujące 4 zmienne:
+\begin{enumerate}[noitemsep,nolistsep]
+	\item $ZZ$ -- wyniki dla pozycji kolano zgięte i staw skokowy zgięty.
+	\item $ZW$ -- wyniki dla pozycji kolano zgięte i staw skokowy wyprostowany.
+	\item $WZ$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy zgięty.
+	\item $WW$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy wyprostowany.
+\end{enumerate} 
+\begin{table}[h!]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
@@ -294,17 +302,8 @@ Co oczywiste, pozycja kolana wpływa znacząco na wynik badania biomechanicznego
 	\end{tabular}
 \end{table}
 
-Ponownie można zaobserwować charakterystyczne rozróżnienie. Pierwszy czynnik główny dla badania w pozycji kolana wyprostowanego zawiera ładunki znaczące o nieparzystych numerach, a drugi czynnik posiada znaczące ładunki o parzystych numerach. W przypadku badania w pozycji kolana zgiętego sytuacja jest odwrotna i analogicznie można zaobserwować rozróżnienie. W tym przypadku podział wynika z pozycji stawu skokowego. Ładunki o nieparzystych numerach posiadają czynniki związane z badaniami w zgięciu stawu skokowego, a o parzystych w wyproście. Z uwagi na ten fakt do kolejnych porównań zostały zdefiniowane następujące 4 zmienne:
-\begin{enumerate}
-	\item $ZZ$ -- wyniki dla pozycji kolano zgięte i staw skokowy zgięty.
-	\item $ZW$ -- wyniki dla pozycji kolano zgięte i staw skokowy wyprostowany.
-	\item $WZ$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy zgięty.
-	\item $WW$ -- wyniki dla pozycji kolano wyprostowane i staw skokowy wyprostowany.
-\end{enumerate} 
-
 Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometrii i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli \ref{tab:bio-new-factors}.
-
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
@@ -321,7 +320,7 @@ Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego d
 		\hline
 		$WW$&\textit{d2} (-0,64)&\textit{d4} (-0,76)&\textit{d6} (-0,88)&\textit{d8} (-0,66)&0,55\\
 		
-			
+		
 	\end{tabular}
 \end{table}
 

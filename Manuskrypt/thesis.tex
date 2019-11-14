@@ -1,4 +1,4 @@
-\documentclass[twoside,a4paper,12pt]{report} %,draft,openright
+\documentclass[oneside,a4paper,12pt]{report} %,draft,openright
 
 \usepackage{polski}
 \usepackage[utf8]{inputenc} 
@@ -9,17 +9,18 @@
 \usepackage{setspace,cite}
 \usepackage{indentfirst}
 \usepackage{mathtools}
-\usepackage[justification=centering]{caption}
 \usepackage{multirow}
 \usepackage[figuresright]{rotating}
 \usepackage{amsmath}
 \usepackage{siunitx}
 \usepackage{url}
 \usepackage{float}
+\usepackage[font=small, labelfont=bf, justification=justified, singlelinecheck = false, format=plain]{caption}
+\usepackage{enumitem}
 
 % for margins left, right top bottom
 \usepackage{anysize}
-\marginsize{3cm}{2.5cm}{2.5cm}{2.5cm}
+\marginsize{3.5cm}{2.5cm}{2.5cm}{2.5cm}
 \let\origdoublepage\cleardoublepage    %%komenda wstawiająca czyste kartki
 \newcommand{\clearemptydoublepage}{%
   \clearpage
@@ -70,6 +71,10 @@
 
 
 \setlength{\parskip}{1ex} %odstępy między akapitami
+
+\widowpenalty10000
+\clubpenalty10000
+
 %\singlespacing
 %\doublespacing
 \onehalfspacing

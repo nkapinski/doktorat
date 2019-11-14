@@ -7,7 +7,7 @@ Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w la
 W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$, $y$), gdzie $x$ to kolumna macierzy, a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
 
 W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$, $y$). Na tej podstawie dzielimy obrazy na:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item binarne – gdzie kodowane są jedynie dwie możliwe wartości $I$ (0 lub 1);
 	\item monochromatyczne – gdzie kodowana jest informacja o natężeniu jednej barwy (najczęściej są to odcienie szarości lub brązu tzw. \textit{sepia});
 	\item kolorowe – gdzie kodowane są wartości natężenia składowych koloru.
@@ -21,7 +21,7 @@ W sieciach konwolucyjnych, procesy zachodzące w korze wzrokowej są modelowane 
 gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $i$ i $j$ to kolejne współrzędne maski filtru w odniesienia do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu współrzędne poza sygnałem przyjmują z reguły wartość 0. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
 
 W kontekście sieci konwolucyjnych, pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} (zob. \cite{Hijazi2015}). W ostatnich latach powstało wiele algorytmów do wizualizacji cech umożliwiających wydajną analizę wyników działania sieci konwolucyjnych np.: Saliency Maps \cite{DBLP:journals/corr/SimonyanVZ13}, GradCam \cite{DBLP:journals/corr/SelvarajuDVCPB16} czy CNNVIS \cite{DBLP:journals/corr/LiuSLLZL16}. Zasada działania tych algorytmów bazuje na wstecznej propagacji informacji, co skutkuje możliwością selekcji cech, które mają zasadniczy wpływ na wynik końcowy wnioskowania. Grupy cech obliczane na tym samym obszarze obrazu wejściowego nazywane są \textit{mapami cech} (ang. \textit{feature maps}). Zazwyczaj mapy cech zawierają hierarchicznie uporządkowaną strukturę składającą się z cech od najniższego do najwyższego poziomu komplikacji (np. od charakterystycznych skupisk pikseli, przez obiekty składowe do finalnego kształtu). Do cech najniższego rzędu zaliczyć można:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{krawędzie} -- ciągi punktów o gwałtownych zmianach $I$($x$, $y$);
 	\item \textit{rogi} -- przecięcia dwóch krawędzi;
 	\item \textit{grzbiety} lub \textit{doliny} -- odpowiednio lokalne maksimum lub minimum funkcji $I$;
@@ -32,7 +32,7 @@ W kontekście sieci konwolucyjnych, pojedynczy splot filtru z obrazem wejściowy
 Wszystkie cechy wyższego rzędu są kombinacją wyżej wymienionych składowych podstawowych, tworzących bardziej skomplikowane struktury odpowiadające charakterystycznym obiektom znajdującym się w obrazach wejściowych. 
 
 Na podstawie cech, na końcu toru przetwarzania danych z wykorzystaniem sieci neuronowych, realizowane jest wnioskowanie, gdzie w zależności od problemu można wyszczególnić następujące zadania:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{segmentację} -- podział obrazu na spójne fragmenty, najczęściej wiążące się z wyodrębnieniem \textit{obiektu} $A_1$ z \textit{tła} $A_2$ na podstawie ustalonego progu lub miary np.:
 	\begin{equation*}
 	\begin{aligned}
@@ -109,7 +109,7 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, uczeń Geaoffa Hin
 \end{figure}
 
 Sieć składa się z 7-miu warstw i zawiera około 60.000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32. W architekturze LeNet zaobserwować można dwie podstawowe składowe współczesnych sieci konwolucyjnych wykorzystywanych do klasyfikacji obrazów tj.:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{ekstraktor cech} -- część służące do automatycznej ekstrakcji wektora cech $w$, zawierająca m.in. filtry.
 	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego na podstawie $w$.
 \end{itemize}  
@@ -125,7 +125,7 @@ Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną
 Z uwagi na szybkie znajdowanie lokalnych minimów funkcji celu, to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w szkoleniu głębokich sieci neuronowych. Inne metody, niegradientowe (zob. \cite{DBLP:journals/corr/TaylorBXSPG16}), przeważnie nie są w tym kontekście wystarczająco efektywne. 
 
 Znalezienie lokalnego minimum nie jest zwykle równoważne z otrzymaniem najlepszego możliwego rozwiązania, jednak w praktyce uznawane jest za satysfakcjonujące. Dla potwierdzenia można przytoczyć następujące fakty wynikające z wielu badań (por. \cite{DBLP:journals/corr/ChoromanskaHMAL14}):
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Dla sieci neuronowych o dużych rozmiarach większość lokalnych minimów charakteryzuje się podobnymi wartościami, przekładającymi się na porównywalny efekt wnioskowania końcowego.
 	\item Prawdopodobieństwo znalezienia lokalnego minimum, którego implikacją będą niezadowalające rezultaty wnioskowania przy użyciu sieci maleje wraz ze wzrostem rozmiaru sieci.
 	\item Próba znalezienia globalnego minimum bardzo często prowadzi do problemu nadmiernego dopasowania, omówionego dokładniej w sekcji \ref{sec-overffiting}.
@@ -159,7 +159,7 @@ Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowe
 W procesie szkolenia zmniejszana jest wartość funkcji kosztów $f$ w oparciu o $U$, a celem jest poprawa $P$, dająca w praktyce satysfakcjonujące działanie algorytmu dla danych testowych. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetwarzają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. Natomiast w praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby z przedziału 8--256. Takie podejście zapewnia kompromis między szybkością obliczeń a dokładnością estymacji wartości gradientu.
 
 Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{stochastic gradient descent}, SGD). Bazuje on na założeniu, że estymację gradientu można otrzymać wyliczając średnią gradientu z minipakietu $m$ przykładów. Kolejne kroki algorytmu można zapisać następująco:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość parametru szybkości uczenia się $\epsilon_k$.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
 	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$ to funkcja strat dla jednego przykładu o wejściowej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
@@ -170,13 +170,13 @@ Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradient
 Kryterium stopu jest najczęściej określone liczbą iteracji lub satysfakcjonującą wartością funkcji $f$. Kwestia optymalnego wyboru parametru $\epsilon_k$ zależy od zadanego problemu. Najczęściej stosowane są metody empiryczne, przy czym zazwyczaj $\epsilon_k$ maleje wraz ze zbliżaniem się do satysfakcjonującego rozwiązania.
 
 Parametry algorytmów szkoleniowych nazywane są \textit{hiperparametrami}, gdyż nie są wyznaczane bezpośrednio w procedurze uczenia się. Strategia nadawania hiperparametrom wartości początkowych jest silnie dyskutowana w literaturze (zob. \cite{Koch2017AutomatedHT}) i jej kompleksowy opis wykracza poza zakres tej pracy. Warto jednak wspomnieć o algorytmach z adaptacyjną szybkością uczenia się, gdyż jest to jeden z najtrudniejszych do ustawienia, a jednocześnie bardzo istotny hiperparametr. Do tych algorytmów należą m.in.:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
  \item Adaptive Gradient Algorithm (AdaGrad) \cite{Duchi:2011:ASM:1953048.2021068} -- wykorzystywany do indywidualnej adaptacji szybkości uczenia się wszystkich parametrów modelu, skalując je odwrotnie proporcjonalnie do pierwiastka kwadratowego sumy wszystkich historycznych kwadratów gradientów.
  \item Root Mean Square Propagation (RMSProp) \cite{SCHMIDHUBER201585} -- modyfikacja AdaGrad, w której zamiast akumulacji gradientu wykorzystuje się wykładniczo ważoną ruchomą średnią z gradientu.
  \item Adaptive moments algorithm (Adam) \cite{DBLP:journals/corr/KingmaB14} -- W porównaniu z RMSProp, Adam poza momentem pierwszego rzędu (tj. średnią) wykorzystuje również moment drugiego rzędu (tj. \textit{wariancję}). Dokładniej rzecz biorąc, w algorytmie liczona jest wykładnicza ruchoma średnia gradientu i kwadrat z gradientu oraz parametry $\beta_1$ i $\beta_2$, które kontrolują zakres liczenia średnich.
 \end{itemize}
 W momencie pisania tej pracy, algorytm Adam jest najczęściej rekomendowany jako domyślna metoda szkolenia głębokich sieci neuronowych, dlatego poniżej zamieszczono jego dokładny opis:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s$ = 0 i $r$ = 0, wartość kroku czasowego $t$ = 0 i stałą $\sigma$ używaną do stabilizacji numerycznej.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
 	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1.
@@ -191,7 +191,7 @@ W momencie pisania tej pracy, algorytm Adam jest najczęściej rekomendowany jak
 Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i współczynników odzwierciedlających przybliżenie zbioru $T$ albo $W$ przez znalezione rozwiązanie. W powszechnym problemie klasyfikacji binarnej, występującym również w tej pracy, w kontekście oceny efektywności algorytmów można wyszczególnić opisane poniżej parametry i miary.
 
 Parametry:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{Fałszywie dodatnia klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
 	\item \textit{Fałszywie ujemna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklasyfikowanych jako negatywne, a należących do klasy obserwacji pozytywnych. 
 	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
@@ -199,7 +199,7 @@ Parametry:
 \end{itemize}
 
 Miary:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy}) -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
 	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity}) -- $TPR = \frac{TP}{TP + FN}$.
 	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity}) -- $TNR = \frac{TN}{TN + FP}$.
@@ -234,7 +234,7 @@ Dla obrazów stosuje się metody \textit{afinicznych przekształceń} zgodne z d
 	\mathbf o \mapsto \mathbf{Ao} + \mathbf b,
 \end{equation}
 gdzie $A$ jest macierzą przekształcenia liniowego, a $b$ wektorem przesunięcia. Jako przykłady takich przekształceń dla dwuwymiarowych obrazów można wymienić:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{rotację} -- obrót obrazu o kąt $\theta$, gdzie:
 	\begin{equation}
 	A = \begin{bmatrix} 
@@ -273,13 +273,13 @@ Problem (1) jest szczególnie istotny w dość prostych algorytmach takich jak n
 
 Problem (2) ma duże implikacje w praktyce stosowania sieci neuronowych, gdyż uzyskanie odpowiednio dużego, ustrukturyzowanego zbioru danych stanowi przeważnie wyzwanie. W poprzedniej podsekcji omówiono możliwość sztucznego powiększania zbioru danych. Inną opcją jest zmniejszenie rozmiaru wektora cech, co może być wykonane na dwa sposoby:
 
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 \item wybór podzbioru istotnych cech o liczności $n'$ $<<$ $n$,
 \item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
 \end{itemize}
 
 W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. Do tych zagadnień wykorzystywane są metody takie jak:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X1$ i $X2$ zapisywany jest następującym wzorem:
 	\begin{equation}
 	r_{X1X2} = \frac{\sum_{i=1}^n (X1_i - \overline{X1})(X2_i - \overline{X2})}{\sqrt{\sum_{i=1}^n (X1_i - \overline{X1})^2} \sqrt{\sum_{i=1}^n (X2_i - \overline{X2})^2}},
@@ -324,14 +324,14 @@ Dla przykładu, pierwsza składowa główna redukuje największą część zró�
 Można zaobserwować, że nowa przestrzeń charakteryzuje się znacznie większym zróżnicowaniem poziomu wariancji niż przestrzeń oryginalna. Wybierając zatem tylko pierwszą składową uzyskana zostanie reprezentacja \textit{skomprymowana stratnie} (tzn. taka, która nie daje gwarancji odtworzenia oryginalnych wartości), ale za to zachowująca znaczną część wariancji.
 
 Opis szczegółowej procedury PCA wygląda następująco:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 \item Oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$ jest symetryczna i pozwala ocenić: (1) wariancje zmiennych poprzez analizę elementów na głównej przekątnej; (2) zależności pomiędzy zmiennymi poprzez analizę elementów poza główną przekątną. 
 \item Dokonaj diagonalizacji: $S_x$ = $KLK^{-1}$, gdzie $L$ to macierz diagonalna, a $K$ to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
 \item Utwórz macierz nowych zmiennych wykonując operację: $Y$ = $XK$
 \end{enumerate}
 
 Oprócz PCA, w kontekście redukcji wymiarowości, można również wyróżnić następujące algorytmy: 
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item \textit{Multidimensional scaling}, MDS -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości (zob. \cite{Chen:2008:HDV:1370965}).
 	\item \textit{T-distributed stochastic neighbor embedding}, t-SNE -- stosowany do wizualizacji struktur cech w różnych skalach (zob. \cite{vanDerMaaten2008}).
 	\item \textit{Isomap} -- algorytm nieliniowej redukcji wymiarowości pozwalający na gwarantowane znalezienie globalnego minimum (zob. \cite{tenenbaum_global_2000}). 
@@ -345,7 +345,7 @@ Zarówno przekleństwo wymiarowości, jak i wcześniej opisany problem nadmierne
 \section{Przykłady współczesnych topologii}
 
 Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie jak u protoplasty tj. architektury LeNet, składają się z dwóch głównych części: ekstraktora cech i klasyfikatora. W porównaniu jednak do pierwszych topologii, różnorodność warstw uległa zwiększeniu. Do najczęściej stosowanych komponentów można zaliczyć:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item \textit{warstwy konwolucyjne} -- grupują filtry używane do ekstrakcji cech obrazowych różnego poziomu (np. krawędzie, skupiska, obiekty);
 	\item \textit{warstwy max-pool} -- stosowane do nieliniowej redukcji wymiarowości. Z obszaru $n\times$$n$ w obrazie wyliczana jest największa wartość $I$($x$, $y$). W praktyce zazwyczaj $n$=2, podobnie jak wartość \textit{kroku} tj. odstępu pomiędzy kolejnymi próbkowaniami funkcji $I$. W uzasadnionych przypadkach stosuje się również obliczanie średniej tzw. (\textit{Avg-pool}), Normy $L2$ i innych współczynników;
 	\item \textit{warstwy aktywacji} -- zawierające funkcje aktywacji neuronów. We współczesnych architekturach zamiast funkcji sigmoidalnych czy progowych stosuje się najczęściej funkcję ReLU:
@@ -390,7 +390,7 @@ W skład topologii wchodzi pięć warstw konwolucyjnych i trzy gęste. Po pierws
 Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze 227$\times$227$\times$3\footnote{3 jest liczbą kanałów kodujących kolor obrazka.}, na których wykonywana jest operacja splotu z 96 filtrami z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256 filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry z maską o wymiarze 3$\times$3$\times$384, a w piątej znajduje się 256 filtrów również z maską o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale -- w oryginalnej pracy było to 1000 (por. \cite{Krizhevsky2012}).
 
 Poniżej przedstawiono przykład algorytmu wykorzystywanego dla pierwszej warstwy konwolucyjnej opisywanej topologii, umożliwiający zrozumienie sposobu przetwarzania sygnału wejściowego: 
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 \item Z danych wejściowych o wymiarze [227$\times$227$\times$3] wybierany jest co czwarty blok  o wymiarach [11$\times$11$\times$3] (zarówno wzdłuż wysokości jak i szerokości). W rezultacie, nie uwzględniając krawędzi obrazu, otrzymywanych jest 217 punktów w każdym rzędzie i w kolumnie, w których mieści się [55$\times$55] tj. 3025 bloków.
 \item Zarówno 11$\times$11$\times$3 = 363 wagi znajdujące się w 96 filtrach jak i wartości 363 punktów obrazowych znajdujących się 3025 blokach są przedstawiane w postaci macierzy $A$ o wymiarach [96$\times$363] i $B$ o wymiarach [363$\times$3025].
 \item Liczony jest iloczyn skalarny w postaci A$^\intercal$B = $C$, gdzie nowa, wyjściowa macierz $C$ ma wymiar [96$\times$3025].
@@ -516,7 +516,7 @@ Przykład propagacji gradientu w sieci składającej się z trzech bloków wygl�
 \end{equation}
 
 Wartości $w$ są zazwyczaj znormalizowane do przedziału (-1;1) można więc rozważyć 4 istotne przypadki równania \ref{gradRes3Block}:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item $\lambda$ = 0 -- nie ma skrótowych połączeń, co odpowiada płaskiej strukturze sieci. Ponieważ wartości $w$ są z przedziału (-1;1) dodawanie kolejnych warstw wzmacnia wcześniej omówiony efekt zanikającego gradientu.
 	\item $\lambda$ $>$ 1 -- z każdą warstwą, sumaryczna wartość gradientu zwiększa się inkrementalnie, co nazywane jest \textit{problemem eksplozji gradientu} (ang. \textit{exploding gradient problem}).
 	\item $\lambda$ $<$ 1 -- przy założeniu, że $w$ + $\lambda$ $<$ 1, dla sieci składających się z wielu warstw występuje problem zaniku gradientu, jak w przypadku 1. Natomiast, gdy $w$ + $\lambda$ $>$ 1, podobnie jak w przypadku 2, może występować problem eksplozji gradientu.
@@ -593,7 +593,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  Dla przykładu, w listopadzie 2016 r. ukazała się praca \cite{Gulshan2016} grupy Google Research z Mountain View w Kalifornii, gdzie zastosowano sieć GoogLeNet w wersji Inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem składającym się z 7 ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
  \begin{figure}[h!]
  	\centering
- 	\includegraphics[width=0.7\textwidth]{figures/CAD-okulisci.jpg}
+ 	\includegraphics[width=1\textwidth]{figures/CAD-okulisci.jpg}
  	\caption{Porównanie automatycznej klasyfikacji z oceną ekspertów dla problemu retinopatii cukrzycowej i cukrzycowego obrzęku plamki.}
  	\label{CAD_opto}
  \end{figure}
@@ -604,7 +604,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  
  \begin{figure}[h!]
  	\centering
- 	\includegraphics[width=0.9\textwidth]{figures/CAD-dermatolodzy.jpg}
+ 	\includegraphics[width=1\textwidth]{figures/CAD-dermatolodzy.jpg}
  	\caption{Porównanie automatycznej klasyfikacji trzech chorób skóry z oceną ekspertów dermatologów.}
  	\label{CAD_derma}
  \end{figure}
@@ -619,13 +619,13 @@ Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\textwidth]{figures/fda_for_ai.jpg}
+	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
 	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA.}
 	\label{fda_cert}
 \end{figure}
 
 Z drugiej strony, należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju metod w medycynie. Do najważniejszych należą:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
 	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.
 	\item Kalibracja i szacowanie niepewności wyników modeli.

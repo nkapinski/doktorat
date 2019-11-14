@@ -44,7 +44,7 @@ Kryteria wykluczające z grupy badanej zostały zdefiniowane tak, aby kwalifikow
 W okresie do tygodnia po urazie, pacjenci przeszli zabieg rekonstrukcji wykonany metodą szycia na otwartym ścięgnie (zob. \ref{gojenie}). Następnie rozpoczęto rehabilitację trwającą 12 miesięcy, monitorowaną z wykorzystaniem RM i USG. Wykonano również badania biomechaniczne w środkowym i końcowym okresie rehabilitacji, zgodnie z protokołem opisanym w sekcji \ref{biomechanika}.
 
 Przy akwizycji danych z wykorzystaniem RM posłużono się aparatem GE Signa HDxt 1.5T wyposażonym w cewkę Foot \& Ankle dedykowaną do pomiarów w rejonie dolnej kończyny. Każde z badań RM było wykonane z użyciem 7 sekwencji i łącznie 10 modalności opisanych szczegółowo w sekcji \ref{RM}:
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item T1 zależne
 	\item T2 zależne
 	\item PD
@@ -73,7 +73,7 @@ Spośród 59-iu pacjentów zbadanych w ramach projektu START udało się zgromad
 Zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych składających się z przekrojów. W ten sposób udało się m.in. zwiększyć liczbę próbek wejściowych potrzebnych do szkolenia sieci neuronowych. Dane RM charakteryzują się wysoką anizotropią, a ich rozdzielczość wynosi 512$\times$512$\times$Z, gdzie $Z\in(10:50)$. Wyjątkiem jest sekwencja 3D FSPGR charakteryzująca się niższą anizotropią, jednak większą liczbą artefaktów wynikających z szybkiego czasu akwizycji. Zbiory oparte o RM zostały zatem opracowane w oparciu o przekroje osiowe 512$\times$512. Ważne jest również, że na każdym z tych przekrojów widoczne są elementy ścięgna Achillesa, co nie występuje w danych RM w przypadku przekrojów z pozostałych dwóch płaszczyzn.
 
 Sumaryczna liczba tak uzyskanych próbek dwuwymiarowych wyniosła 11.725 (oznaczonych jako obrazy zdrowego ścięgna) i 138.604 (oznaczonych jako obrazy chorego ścięgna). W zależności od eksperymentów służących do optymalizacji parametrów metody wykorzystano:
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item Powiększony zbiór treningowy RM -- zawierający przekroje osiowe ze wszystkich badań pacjentów treningowych, realizowanych wszystkimi sekwencjami. Liczba przekrojów w tym zbiorze została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i, w przypadku chorych przykładów, 10-ciu obrotów w zakresie od -10 do 10 stopni. Finalnie zbiór zawierał 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
 	\item Ograniczony zbiór treningowy RM -- zawierający przekroje osiowe ze zbioru 44 pacjentów treningowych jedynie w sekwencji T2$^\ast$ GRE TE\_MIN (18.863 próbek).
 	\item Zbiór PCA -- zawierający próbki z powiększonego zbioru treningowego ze wszystkich sekwencji RM dla 10-iu losowo wybranych pacjentów (44.813).
@@ -86,7 +86,7 @@ W celu wnioskowania i porównań rezultatów metody posłużono się danymi od 4
 \label{seq:ground-truth}
 Do stworzenia wzorca odniesienia, w ramach projektu START, została powołana specjalna grupa robocza składająca się z eksperta radiologa, specjalistów ortopedów i ekspertów od komputerowo wspomaganej diagnostyki. Celem grupy było opracowanie opisu ilościowego odzwierciedlającego elementy, na podstawie których radiolog podejmuje subiektywną opinię. W wyniku prac stworzono zestaw sześciu parametrów oceniany w skali 0--7, opisujący proces gojenia się ścięgna Achillesa widoczny w obrazach RM:
 
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Uszkodzenia śródścięgniste (SCT od ang. \textit{Structural Changes within the Tendon}) -- informuje o spójności włókien w obszarze ścięgna. Zawiera się w ROI. Ocena wykonywana zarówno w płaszczyźnie osiowej jak i strzałkowej. 0 – całkowity brak uszkodzeń, 1 – bardzo małe uszkodzenia. 2 – małe uszkodzenia, 3 – uszkodzenia średniej wielkości , 4 – dość duże uszkodzenia. 5 – duże uszkodzenia, 6 - bardzo duże uszkodzenia, 7 - ekstremalnie duże uszkodzenia.
 	\item Pogrubienie ścięgna (TT od ang. \textit{Tendon Thickening} -- najgrubsze miejsce w kierunku strzałkowym widoczne na przekroju osiowym. Zawiera się w ROI. 0 – całkowity brak pogrubienia (3 mm--5 mm), 1 – bardzo małe pogrubienie (6 mm), 2 – małe pogrubienie (9 mm), 3 – średnie pogrubienie (12 mm), 4 –  dość duże pogrubienie (15 mm), 5 duże pogrubienie (18 mm), 6 – bardzo duże pogrubienie (21 mm), 7 – ekstremalnie duże pogrubienie (24 mm).
 	\item Ostrość granic ścięgna/rozgraniczenie (STE od ang. \textit{Sharpness of the Tendon Edges}) -- informuje o jakości granicy między tkankami ścięgnistymi i otoczeniem, w szczególności czy brzeg jest fraktalny. Oceniane jest na zewnątrz ścięgna w płaszczyźnie osiowej. 0 – bardzo duża (idealna) ostrość, 1 – duża ostrość, 2 – dość duża ostrość, 3 – średnia ostrość, 4 – mała ostrość, 5 – bardzo mała ostrość, 6 – minimalna ostrość, 7 – całkowicie nieostre.
@@ -159,7 +159,7 @@ W kolejnym kroku zwizualizowano uśrednione wartości PC1 dla wyników wszystkic
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\textwidth]{figures/H_PC1.jpg}
+	\includegraphics[width=1\textwidth]{figures/H_PC1.jpg}
 	\caption{Porównanie krzywych dla 10 modalności RM reprezentujących średnią $H_{PC}$ z 10 pacjentów.}\label{fig:H}
 \end{figure}
 Oddzielnie przedstawiono wykresy uzyskanych krzywych dla wszystkich użytych w tej pracy sekwencji i modalności RM. W celu uzyskania pojedynczej wartości opisującej badanie RM wykorzystano ponownie średnią trymowaną:
@@ -181,16 +181,16 @@ Podsumowując, użyta transformacja pozwala na uzyskanie zredukowanego wektora c
 Z uwagi na opisany w Sekcji \ref{RM} tor akwizycji danych RM, zwiększanie liczby sekwencji odbywa się kosztem wydłużenia czasu badania pacjenta. W skrajnym przypadku, takim jak pozyskanie wszystkich 10-iu omawianych sekwencji, czas ten wynosi około 1 godziny, co stanowi praktyczne ograniczenie opracowywanej metody. Dlatego celem tego eksperymentu jest wybór protokołu zawierającego minimalną liczbę sekwencji, umożliwiających przy użyciu opracowywanej metody skuteczną ocenę procesu gojenia. Prace podzielono na dwa etapy: analizę wizualną i ilościową.
 
 \subsubsection{Analiza wizualna} W ramach wstępnej analizy, wartości danych ze wszystkich sekwencji i modalności zebranych od pacjentów zostały zakumulowane w postaci  histogramów i przedstawione na Rys. \ref{fig:Hists}.
-\begin{figure}[h]
+\begin{figure}[]
 	\centering
-	\includegraphics[width=0.6\textwidth]{figures/Hists.jpg}
+	\includegraphics[width=1\textwidth]{figures/Hists.jpg}
 	\caption{Znormalizowane histogramy dla 10 sekwencji RM.}\label{fig:Hists}
 \end{figure}
 Dane zostały przeskalowane do zakresu $<$0; 255$>$ i zmodyfikowane do porównań tak, aby wartość całki Riemanna była równa 1.
 
 Widoczne we wszystkich przypadkach maksima globalne w zerze są naturalnie wynikiem tła, które stanowi powietrze. Analizując pozostałe wartości można wyróżnić następujące 3 grupy:
 
-\begin{enumerate}
+\begin{enumerate}[noitemsep,nolistsep]
 	\item Bez maksimum lokalnego -- sekwencja T2 mapping i modalność Out Phase Ideal. W pierwszym przypadku jest to konsekwencja wspomnianej już w poprzednim eksperymencie występowania danych ze wszystkich 8 próbek sekwencji, czyli również tych mierzonych przy prawie zerowym sygnale T2, silnie zaszumionych z licznymi wartościami bliskimi zeru. W drugim przypadku, na granicach wody i tłuszczu, występuje często silne rozmycie (tzw. \textit{artefakt czarnego atramentu}), co również zwiększa liczbę wartości bliskich zeru.
 	\item Z jednym maksimum lokalnym -- pozostałe modalności 3D FSPGR oraz sekwencje: PD, T1 zależne, T2 zależne, T2$^\ast$ GRE. Przypadek najczęściej występujący. Wartości sygnału zależą od tkanek dominujących w obrazowanym elemencie.
 	\item Z dwoma maksimami lokalnymi -- sekwencja T2$^\ast$ GRE TE\_MIN. Jako jedyna posiada drugie maksimum lokalne, co może wskazywać na zwiększoną czułość na wzorce zawarte w danych.  
@@ -203,7 +203,7 @@ Zdecydowanie wyróżniająca się sekwencją jest T2$^\ast$ GRE TE\_MIN. W celu 
 
  \begin{figure}[h]
  	\centering
- 	\includegraphics[width=0.95\textwidth]{figures/Protocol_comparison.jpg}
+ 	\includegraphics[width=1\textwidth]{figures/Protocol_comparison.jpg}
  	\caption{Porównanie sekwencji RM ilustrujących proces gojenia się ścięgna Achillesa w 12 tygodniu po rekonstrukcji.}\label{fig:protocol_comp}
  \end{figure}
 
@@ -212,7 +212,7 @@ Istotna różnica w rekonstruowanych przy pomocy powyższych danych obrazów poc
 Na Rys. \ref{fig:T2comp} przedstawiono próbki T2$^\ast$ GRE TE\_MIN zrekonstruowane w kolejnych krokach czasowych.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/T2gremin.jpg}
+	\includegraphics[width=1\textwidth]{figures/T2gremin.jpg}
 	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
 \end{figure}
 Analiza wizualna wskazuje, że różnice w odcieniach szarości mogą wspomóc radiologów w skutecznej interpretacji stopnia wygojenia się tkanek ścięgnistych. Wartości w obszarze ścięgna są jasne na początku i ciemnieją z czasem. 
@@ -342,7 +342,7 @@ W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli reg
 W tym celu, treningowy zbiór pacjentów został podzielony na 4 podzbiory (11-tu pacjentów, około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO (zob. wzór \ref{equ:lassoReg}). Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2$^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. p. \ref{seq:method}).
 
 Kryterium selekcji cech była najlepsza korelacja z wzorcem odniesienia, którą uzyskano dla $\alpha=0,1$. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
-\begin{itemize}
+\begin{itemize}[noitemsep,nolistsep]
 	\item SCT: 6 cech DL (PC1, PC2, PC3, PC5, PC7, PC9), 10 klasycznych cech obrazowych, w tym 3 cechy Haralicka (suma wariancji dla dystansu separacji $d$ = 1, suma średnich dla $d$ = 5 i suma średnich dla $d$ = 10);
 	\item TT: 5 cech DL (PC1, PC2, PC3, PC4, PC5) i 7 klasycznych cech obrazowych bez udziału cech Haralicka;
 	\item STE: 5 cech DL (PC1, PC4, PC7, PC8, PC9) i 8 klasycznych cech obrazowych bez udziału cech Haralicka;
@@ -472,7 +472,6 @@ Celem zdefiniowania ogólnych różnic między oceną radiologa i propozycją au
 	\includegraphics[width=0.9\textwidth]{figures/cm.png}
 	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:CM_MAE}
 \end{figure}
-
 Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim stopniu wyniki ocen w poszczególnych tygodniach są do siebie zbliżone. W przypadku możliwie najlepszego odwzorowania oceny radiologa przez nową metodę, minimalne błędy znajdowałyby się na diagonali przedstawionych wykresów. Dla poszczególnych parametrów można jednak zaobserwować dryf wartości minimalnych błędów. Pole powierzchni ($PP_d$) pomiędzy krzywą określającą wartości minimalne MAE a diagonalą zostały zebrane w Tabeli \ref{tab:dryf_meas}. 
 \begin{table*}[]
 	\caption{Ocena dryfu krzywej łączącej minima lokalne wartości MAE w macierzach błędów z klasą przyjętą jako tydzień rehabilitacji.}
@@ -490,28 +489,29 @@ Z wykorzystaniem macierzy w stosunkowo łatwy sposób można określić w jakim 
 
 Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru $TT$, a najgorszy dla $STE$, co oznacza, że w tych przypadkach ocena automatyczna najlepiej i najgorzej przypomina ocenę radiologa. Kolejne, najlepsze rezultaty otrzymano dla parametrów opisujących obrzęki tj. $TE$ i $TisE$ oraz spójność ścięgna ($SCT$). Drugi najgorszy wynik został uzyskany dla parametru $TU$ oceniającego jednorodność ścięgna w płaszczyźnie strzałkowej. Powyższe rezultaty są spójne z wnioskami do wyników zamieszczonych w Tabeli \ref{tab:testset}, jednak szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
 
-\begin{figure}[]
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cm_summary.jpg}
 	\caption{Wartości $PP_d$ dla parametrów z wzorca odniesienia.}\label{fig:CM_MAE_SUMMARY}
 \end{figure}
 
 Najmniejsze różnice w ocenie występują w trzecim tygodniu, czyli w pierwszym pomiarze po fazie zapalnej. Natomiast, wyróżniające dwa największe są obecne w pierwszym oraz 39-tym tygodniu monitoringu, zatem w szczycie fazy zapalnej i w momencie zaawansowania fazy przebudowy. 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/cmScores.jpg}
+	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
+\end{figure}
 
 Analizując poszczególne parametry od najlepszego pod względem $PP_d$: w przypadku parametru TT, największe różnice w ocenie widoczne są między 3--12 tyg., a zatem na przełomie fazy poliferacji i przebudowy, gdzie włókna ścięgniste zaczynają się ukierunkowywać i zmienia się grubość ścięgna. Dla TE największe odchylenia zaobserwowano dla przełomu fazy zapalnej i poliferacji -- tydz. 1 oraz zaawansowanej przebudowy w 26-tym tyg. Podobny schemat zachowany jest dla TisE, z tą różnicą, że oprócz przełomu fazy zapalnej, odchylenia są widoczne w całym okresie przebudowy. Może to świadczyć o różnicy w ocenie płynów nagromadzonych w obrzękach. W przypadku SCT, różnice w ocenie spójności włókien uwidaczniają się w fazie przebudowy, kiedy to automatyczna metoda nie wskazuje na znaczący postęp w stosunku do wyniku z 26-tego tygodnia. W przypadku dwóch parametrów uzyskujących najgorszy wynik $PP_d$ tj. $TU$ i $STE$ rozbieżności są widoczne w cały okresie monitoringu, w szczególności w fazie zapalnej i przebudowy. Faza zapalna jest najbardziej dynamiczna, natomiast faza przebudowy była monitorowana w najdłuższych interwałach, stąd różnice w obrazach tkanek w obu przypadkach są największe. 
 
 Do dalszej analizy różnic między ocenami wykorzystano macierze błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (zob. Rys. \ref{fig:cmscores}).
-\begin{figure}[]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figures/cmScores.jpg}
-	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
-\end{figure}
-Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej automatyczna metoda oceniła jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniona została jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej wystąpiła jako nota 2 (7 razy) lub 3 (8 razy). Natomiast nota 0 wystąpiła jako 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores}.
 
-\begin{figure}[]
+Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej automatyczna metoda oceniła jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniona została jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej wystąpiła jako nota 2 (7 razy) lub 3 (8 razy). Natomiast nota 0 wystąpiła jako 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores_summary}.
+
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=0.9\textwidth]{figures/cmScores_summary.jpg}
-	\caption{MAE w obrębie klas.}\label{fig:cmscores}
+	\caption{MAE w obrębie klas.}\label{fig:cmscores_summary}
 \end{figure}
 
 Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie not 2--4. Dla noty 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. W pozostałych notach skrajnych błąd wynosi $>$ 1,5. Wyniki są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. 
@@ -557,14 +557,17 @@ Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zapre
 	\includegraphics[width=1\textwidth]{figures/TU.png}
 	\caption{Ocena parametru TU.}\label{fig:TU}
 \end{figure}
-Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12-tego i 20-tego tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9-tego i 12-tego tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim, najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów osiowych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji z innymi parametrami. 
-
-Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk w przestrzeni międzypowięziowej ścięgna Achillesa. Krzywe gojenia widoczne są na Rys. \ref{fig:TisE}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/TisE.png}
 	\caption{Ocena parametru TisE.}\label{fig:TisE}
 \end{figure}
+Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12-tego i 20-tego tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9-tego i 12-tego tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim, najgorszym MAE. 
+
+Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów osiowych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji z innymi parametrami. 
+
+Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk w przestrzeni międzypowięziowej ścięgna Achillesa. Krzywe gojenia widoczne są na Rys. \ref{fig:TisE}.
+
 Jest to jedyny parametr oceniany w całości na zewnątrz ROI, tylko z wykorzystaniem cech DL. Na przełomie fazy poliferacji i remodelingu (6--9-ty tydz.) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze, wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26-tego tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (3--6-ty tydz.), co wymaga dalszej analizy.
 
 

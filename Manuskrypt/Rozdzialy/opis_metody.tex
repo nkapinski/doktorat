@@ -462,7 +462,7 @@ Podsumowując, optymalna fuzja cech z widocznego obszaru ocenianego przez sieć 
 
 \section{Ocena procesu gojenia}
 \label{seq:valuation}
-W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności dokonano zgrubnej analizy. Przeanalizowano macierze błędu dla rożnych klas: (1) tygodnie oceny, gdzie wartością jest średni błąd absolutny (MAE); (2) zakres oceny (0--7), gdzie wartością jest liczba występowań. Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia tj. oceną eksperta radiologa.
+W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. W pierwszej kolejności dokonano zgrubnej analizy. Przeanalizowano macierze błędu dla rożnych klas: (1) tygodnie oceny, gdzie wartością jest średni błąd absolutny (MAE); (2) zakres oceny (0--7), gdzie wartością jest liczba występowań. Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia (ang. \textit{ground-truth}) tj. oceną eksperta radiologa.
 
 \subsection{Macierze błędu}
 
@@ -517,7 +517,7 @@ Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej automatycz
 Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie not 2--4. Dla noty 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. W pozostałych notach skrajnych błąd wynosi $>$ 1,5. Wyniki są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. 
 
 \subsection{Krzywe gojenia}
- \textit{Krzywe gojenia} należy w tej pracy rozumieć jako krzywe powstającą z połączenia punktów oceny w kolejnych krokach czasowych monitorowania. Dla czterech pacjentów testowych, dla każdego z dziesięciu kroków czasowych, zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
+ Dla czterech pacjentów testowych, dla każdego z dziesięciu kroków czasowych, zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/SCT.png}

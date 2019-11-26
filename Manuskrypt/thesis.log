@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  25 NOV 2019 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  26 NOV 2019 15:02
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1642,7 +1642,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [96 <./figures/SCT.png>]
-<figures/TT.png, id=406, 1517.67pt x 855.195pt>
+<figures/TT.png, id=405, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
 Package pdftex.def Info: figures/TT.png  used on input line 531.
@@ -1652,12 +1652,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [97 <./figures/TT.png>]
-<figures/STE.png, id=412, 1517.67pt x 855.195pt>
+<figures/STE.png, id=410, 1517.67pt x 855.195pt>
 File: figures/STE.png Graphic file (type png)
 <use figures/STE.png>
 Package pdftex.def Info: figures/STE.png  used on input line 541.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
-<figures/TE.png, id=413, 1517.67pt x 855.195pt>
+<figures/TE.png, id=411, 1517.67pt x 855.195pt>
 File: figures/TE.png Graphic file (type png)
 <use figures/TE.png>
 Package pdftex.def Info: figures/TE.png  used on input line 549.
@@ -1671,12 +1671,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [98 <./figures/STE.png>]
-<figures/TU.png, id=418, 1517.67pt x 855.195pt>
+<figures/TU.png, id=415, 1517.67pt x 855.195pt>
 File: figures/TU.png Graphic file (type png)
 <use figures/TU.png>
 Package pdftex.def Info: figures/TU.png  used on input line 557.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
-<figures/TisE.png, id=419, 1517.67pt x 855.195pt>
+<figures/TisE.png, id=416, 1517.67pt x 855.195pt>
 File: figures/TisE.png Graphic file (type png)
 <use figures/TisE.png>
 Package pdftex.def Info: figures/TisE.png  used on input line 562.
@@ -1719,7 +1719,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [104]
-<figures/Segmentacja.jpg, id=442, 1901.1025pt x 827.09pt>
+<figures/Segmentacja.jpg, id=436, 1901.1025pt x 827.09pt>
 File: figures/Segmentacja.jpg Graphic file (type jpg)
 <use figures/Segmentacja.jpg>
 Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 75.
@@ -1734,7 +1734,7 @@ Overfull \hbox (3.79655pt too wide) in paragraph at lines 86--87
 ªy rów-nie» z pro-jek-tu START.
  []
 
-<figures/Data_US_sample.jpg, id=446, 1901.1025pt x 1280.785pt>
+<figures/Data_US_sample.jpg, id=440, 1901.1025pt x 1280.785pt>
 File: figures/Data_US_sample.jpg Graphic file (type jpg)
 <use figures/Data_US_sample.jpg>
 Package pdftex.def Info: figures/Data_US_sample.jpg  used on input line 96.
@@ -1962,7 +1962,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [134]
 Dodatek A.
-<figures/achillesDL.jpg, id=541, 1181.16281pt x 631.60968pt>
+<figures/achillesDL.jpg, id=535, 1181.16281pt x 631.60968pt>
 File: figures/achillesDL.jpg Graphic file (type jpg)
 <use figures/achillesDL.jpg>
 Package pdftex.def Info: figures/achillesDL.jpg  used on input line 21.
@@ -2018,9 +2018,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (148 pages, 13229785 bytes).
+Output written on thesis.pdf (148 pages, 13231105 bytes).
 PDF statistics:
- 631 PDF objects out of 1000 (max. 8388607)
+ 625 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  236 words of extra memory for PDF output out of 10000 (max. 10000000)
 

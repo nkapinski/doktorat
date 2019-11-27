@@ -11,6 +11,7 @@ W tej sekcji opracowana metoda zostanie porównana z metodą opartą o paradygma
 Do szkolenia się sieci wykorzystano powiększony zestaw treningowy, ograniczony jednak do danych 44-ech pacjentów treningowych, zawierających sekwencje wybrane w toku eksperymentów przedstawionych w p. \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM, z uwagi na potrzebę maksymalizacji liczby próbek. Nie zdecydowano się również na pełny zbiór wszystkich sekwencji, z uwagi na różnice w danych, które mogłyby zaburzyć proces szkolenia się. 
 
 Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono metryki MAE, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
+\vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[ht]
 %\vspace{-px}
@@ -120,7 +121,7 @@ Utrudniona w stosunku do obrazów RM interpretacja USG ma związek z obecnymi ar
 \renewcommand{\arraystretch}{1}
 
 Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia powyższych rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednakże działania te przyniosły odwrotny skutek.  
-
+\vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
@@ -159,7 +160,7 @@ Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na 
 Kolejnym krokiem eksperymentu było porównanie jakości oceny procesu gojenia. W badaniu wykorzystano ponownie paradygmat end-to-end i zmianę warstwy klasyfikującej na regresję z funkcją kosztu określoną jako średni błąd kwadratowy. Dla tej metody próbowano również odtworzyć schemat sprawdzony dla RM, bazujący na treningu binarnym oraz ekstrakcji i redukcji cech. W przypadku USG otrzymane wyniki nie były jednak na tyle satysfakcjonujące, aby zamieszczać je w tej pracy. Ostatecznie, wyniki szkolenia sieci w paradygmacie end-to-end zamieszczono w Tabeli \ref{tab:usg_train_cross-validation}.
 
 Największą liczbę najlepszych rezultatów otrzymano odpowiednio dla modeli na bazie sieci Inception-v3 i ResNet-50 dlatego te modele zostały dalej porównane z proponowaną metodą. W tym celu wyniki MAE, MAX-AE i Corr zostały wyliczone dla zbioru pacjentów testowych i zebrane w Tabeli \ref{tab:USGvsRM-cross-validation}.
-
+\vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
@@ -303,6 +304,7 @@ Ponownie można zaobserwować charakterystyczne rozróżnienie. Pierwszy czynnik
 \end{table}
 
 Każda z nowo powstałych zmiennych składa się z czterech pomiarów: jednego dla izometrii i trzech dla izokinetyki. Dokładne zestawienie znajduje się w Tabeli \ref{tab:bio-new-factors}.
+\vspace{20px}
 \begin{table}[h!]
 	\centering
 	\setlength{\tabcolsep}{3pt}
@@ -358,7 +360,7 @@ Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku je
 
 W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. W Tabeli \ref{tab:gtVSpred}, przedstawiono korelację oceny automatycznej z oceną radiologa.
 
-
+\vspace{10px}
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
@@ -378,7 +380,7 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. W Tab
 Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną. Fakt ten jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami. 
 
 W kolejnej tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacji nowych zmiennych opisujących biomechanikę z wynikami testu ATRS. 
-
+\vspace{10px}
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}
@@ -405,7 +407,7 @@ W kolejnej tabeli (tj. Tabeli \ref{tab:bioVSatrs}) przedstawiono wyniki korelacj
 Można zaobserwować istotną korelację pomiarów wykonanych przy takim samym ustawieniu kolana. Jest to istotniejsze nawet od ustawienia stawu skokowego. Z kolei analizując rezultaty korelacji z ATRS, można zaobserwować słabą korelację z wynikami pomiarów biomechanicznych. Wynik wskazuje, że uzasadnione jest realizowanie w praktyce obydwu tych badań w celu skuteczniejszego monitorowania rehabilitacji pacjentów.
 
 Finalnie, zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyczną, z wynikami badań biomechanicznych i ATRS. Szczegółowe rezultaty przedstawiono w Tabeli \ref{tab:bioATRSvspredGT}.
-
+\vspace{10px}
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{3pt}

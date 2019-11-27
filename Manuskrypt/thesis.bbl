@@ -1,5 +1,19 @@
 \begin{thebibliography}{100}
 
+\bibitem{PWC}
+{AI} to drive {GDP} gains of 15.7 trillion {USD} with productivity,
+  personalisation improvements.
+\newblock
+  \url{https://www.pwc.com/gx/en/news-room/press-releases/2017/ai-to-drive-gdp-gains-of-15_7-trillion-with-productivity-personalisation-improvements.html}.
+\newblock Dost.: 2019-09-30.
+
+\bibitem{FDA}
+{FDA} {A}pprovals {F}or {S}mart {A}lgorithms {I}n {M}edicine {I}n {O}ne {G}iant
+  {I}nfographic.
+\newblock
+  \url{https://medicalfuturist.com/fda-approvals-for-algorithms-in-medicine/}.
+\newblock Dost.: 2019-09-30.
+
 \bibitem{GEVoluson}
 G{E} {H}ealthcare.
 \newblock
@@ -641,6 +655,12 @@ Piotr Regulski, Jakub Zieliński, Bartosz Borucki, Krzysztof Nowiński.
   imaging of {A}chilles tendon.
 \newblock {\em International Journal of Computer Assisted Radiology and
   Surgery}, 12(Supplement 1):15–16, Czerwiec 2017.
+
+\bibitem{Romero2016}
+F.~Romero,  F.~J. Alonso.
+\newblock A comparison among different hill-type contraction dynamics
+  formulations for muscle force estimation.
+\newblock {\em Mechanical Sciences}, 7(1):19--29, Stycze/n 2016.
 
 \bibitem{DBLP:journals/corr/RonnebergerFB15}
 Olaf Ronneberger, Philipp Fischer, Thomas Brox.

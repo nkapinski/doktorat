@@ -68,7 +68,7 @@ W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie i
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/perceptron.png}
-	\caption{Topologia perceptronu.}
+	\caption{Topologia perceptronu (na podst. \cite{Rosenblatt1957}).}
 	\label{Perceptron}
 \end{figure}
 
@@ -88,7 +88,7 @@ Część z opisanych przez Minsky-Papert problemów udało się rozwiązać dzi�
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/MLperceptron.png}
-	\caption{Topologia perceptronu wielowarstwowego.}
+	\caption{Topologia perceptronu wielowarstwowego (na podst. \cite{Rumelhart1986}).}
 	\label{MLperceptron}
 \end{figure}
 
@@ -104,7 +104,7 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, uczeń Geaoffa Hin
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/lenet.png}
-	\caption{Topologia sieci LeNet.}
+	\caption{Topologia sieci LeNet (na podst. \cite{Lecun1998}).}
 	\label{LeNet}
 \end{figure}
 
@@ -370,7 +370,7 @@ Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla p
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/ILSVRC.jpg}
-	\caption{Błąd top-5 klasyfikacji obiektów w kolejnych latach uzyskiwany przez zwycięzców konkursu ILSVRC}
+	\caption{Błąd top-5 klasyfikacji obiektów w kolejnych latach uzyskiwany przez zwycięzców konkursu ILSVRC (na podst. \cite{imagenet_cvpr09})}
 	\label{ILSVRC}
 \end{figure}
 Prezentowane wyniki dotyczą wartości błędu klasyfikacji, na zbiorze danych \cite{imagenet_cvpr09} o nazwie ImageNet, uzyskiwanego w kolejnych latach przez zwycięskie algorytmy biorące udział w konkursie. \textit{Błąd top-$n$} należy rozumieć jako zdarzenie, w którym dla danego obrazka w $n$ wskazanych przez algorytm najbardziej prawdopodobnych etykietach nie było poprawnej. W zakresie zmniejszenia wartości błędu top-$n$, znaczący progres dokonał się w 2012 roku, gdzie błąd top-5 zmalał o 10,4 punktów procentowych, co było rezultatem działania nowej architektury sieci konwolucyjnej nazwanej AlexNet. W kolejnych latach sieci konwolucyjne deklasowały inne podejścia, doprowadzając w 2015 roku do spadku błędu top-5 do poziomu 3,5\%, co jest uznawane za poziom lepszy niż możliwości ludzkiej klasyfikacji zbioru ImageNet. Lata 2016--2018 to intensywne prace nad synergią i złożeniami różnego rodzaju modeli, które w konsekwencji doprowadziły do obniżenia wartości błędu top-5 do poziomu 2,2\%. W kolejnych podsekcjach zostanie dokładniej omówiona ewolucja zwycięskich architektur z konkursu ILSVRC. 
@@ -381,7 +381,7 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/AlexNet.png}
-	\caption{Schemat architektury AlexNet.}
+	\caption{Schemat architektury AlexNet (na podst. \cite{Krizhevsky2012}).}
 	\label{AlexNetTopology}
 \end{figure}
 
@@ -404,7 +404,7 @@ W kontekście zwiększenia efektywności treningu zastosowano również powięks
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/AlexNet-multiGPU.png}
-	\caption{Topologia architektury AlexNet z podziałem na dwa akceleratory GPU.}
+	\caption{Topologia architektury AlexNet z podziałem na dwa akceleratory GPU (na podst. \cite{Krizhevsky2012}).}
 	\label{AlexNetTopologyMultiGPU}
 \end{figure}
 
@@ -422,7 +422,7 @@ Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymac
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/InceptionModules.png}
-	\caption{Moduły incepcji o głębokości jednego (po lewej) i dwóch stopni (po prawej).}
+	\caption{Moduły incepcji o głębokości jednego (a) i dwóch stopni (b) -- (na podst. \cite{GoogleNet}).}
 	\label{GoogleNetInceptionModules}
 \end{figure}
 
@@ -432,7 +432,7 @@ Przy pomocy złożenia różnego rodzaju modułów incepcji otrzymano topologię
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/GoogleNet.jpg}
-	\caption{Topologia architektury GoogleNet}
+	\caption{Topologia architektury GoogleNet (na podst. \cite{GoogleNet}).}
 	\label{GoogleNetTopo}
 \end{figure}
 Zestawienie jej parametrów znajduje się w Tabeli \ref{GoogleNetParams}.
@@ -485,7 +485,7 @@ W momencie znalezienia takiego minimum dodanie kolejnych warstw i parametrów si
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/ResidualBlock.png}
-	\caption{Schemat funkcjonalny pojedynczego bloku w architekturze ResNet.}
+	\caption{Schemat funkcjonalny pojedynczego bloku w architekturze ResNet (na podst. \cite{ResNet}).}
 	\label{ResNetBlock}
 \end{figure} 
 
@@ -527,7 +527,7 @@ Dokładny opis matematyczny funkcjonowania bloków rezydualnych wraz z dowodami 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/ResNet.jpg}
-	\caption{Topologia architektury ResNet-18.}
+	\caption{Topologia architektury ResNet-18 (na podst. \cite{ResNet}).}
 	\label{ResNetTopo}
 \end{figure} 
 
@@ -584,7 +584,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/DL_CAD_statystyka.jpg}
-	\caption{Statystyki dotyczące publikacji medycznych zawierających słowa kluczowe związane z głębokim uczeniem się.}
+	\caption{Statystyki dotyczące publikacji medycznych zawierających słowa kluczowe związane z głębokim uczeniem się (na podst. \cite{Litjens2017}).}
 	\label{DL_CAD_stats}
 \end{figure}
 
@@ -594,7 +594,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  \begin{figure}[h!]
  	\centering
  	\includegraphics[width=1\textwidth]{figures/CAD-okulisci.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji z oceną ekspertów dla problemu retinopatii cukrzycowej i cukrzycowego obrzęku plamki.}
+ 	\caption{Porównanie automatycznej klasyfikacji z oceną ekspertów dla problemu retinopatii cukrzycowej i cukrzycowego obrzęku plamki (na podst. \cite{Gulshan2016}).}
  	\label{CAD_opto}
  \end{figure}
  
@@ -605,7 +605,7 @@ Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego u
  \begin{figure}[h!]
  	\centering
  	\includegraphics[width=1\textwidth]{figures/CAD-dermatolodzy.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji trzech chorób skóry z oceną ekspertów dermatologów.}
+ 	\caption{Porównanie automatycznej klasyfikacji trzech chorób skóry z oceną ekspertów dermatologów (na podst. \cite{Esteva2017}).}
  	\label{CAD_derma}
  \end{figure}
 
@@ -620,10 +620,10 @@ Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
-	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA.}
+	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).}
 	\label{fda_cert}
 \end{figure}
-
+\newpage
 Z drugiej strony, należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju metod w medycynie. Do najważniejszych należą:
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.

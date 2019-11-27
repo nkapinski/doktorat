@@ -3,10 +3,10 @@
 Ścięgno Achillesa, nazywane również ścięgnem piętowym, jest największym i zarazem wytrzymującym największe obciążenia ścięgnem występującym w ciele ludzkim. Stanowi wspólne zakończenie mięśnia trójgłowego łydki, w którego skład wchodzą dwie głowy mięśnia brzuchatego i mięsień płaszczkowaty. Całość struktury zlokalizowana jest w tylnym, powierzchownym przedziale łydki, co zobrazowano na Rysunku \ref{muscle_structure}.  
 \begin{figure}[h!]
 \includegraphics[width=1\textwidth]{figures/muscleStructure.png}
-\caption{Lokalizacja mięśnia trójgłowego łydki wraz ze ścięgnem Achillesa.}
+\caption{Lokalizacja mięśnia trójgłowego łydki wraz ze ścięgnem Achillesa (na podst. \cite{Doral2010}).}
 \label{muscle_structure}
 \end{figure}
-
+\newpage
 Procesy patofizjologiczne zachodzące po urazie ścięgna są ściśle związane z jego anatomią, biomechaniką, typem urazu i czynnikami jemu sprzyjającymi. Wszystkie te aspekty mają wpływ na możliwość monitorowania procesów gojenia się ścięgna i jego wspomagania, dlatego zostaną szczegółowo omówione w kolejnych punktach. 
 
 \subsection{Anatomia}
@@ -28,7 +28,7 @@ W zdrowym ścięgnie Achillesa widoczne są ściśle upakowane włókna spręży
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/Achilles_hist.png}
-	\caption{Schemat hierarchicznej budowy ścięgna Achillesa.}
+	\caption{Schemat hierarchicznej budowy ścięgna Achillesa (na podst. \cite{Sharma2006}).}
 	\label{Achilles-histology}
 \end{figure}
 
@@ -56,7 +56,7 @@ Skurcz mięśni szkieletowych trwa 100--300 milisekund. Schemat czasów i orient
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/Hill.png}
-	\caption{Schemat modelu typu Hilla stosowany w oprogramowaniu OpenSim.}
+	\caption{Schemat modelu typu Hilla stosowany w oprogramowaniu OpenSim (na podst. \cite{Romero2016}).}
 	\label{hill-model}
 \end{figure}
 
@@ -237,7 +237,8 @@ Zjawiska te zależą od częstotliwości fali, która propaguje się w ośrodku 
 \begin{equation}
 Z = \rho c = \sqrt{\epsilon \rho},
 \end{equation}
-gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka, a $\epsilon$ to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{tab:USG-params}. 
+gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka, a $\epsilon$ to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{tab:USG-params}.
+\vspace{10px} 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
 	\setlength{\tabcolsep}{14pt}
@@ -264,6 +265,7 @@ gdzie $c$, to prędkość rozchodzenia się fali, $\rho$ to gęstość ośrodka,
 	\end{tabular}
 \end{table}
 \renewcommand{\arraystretch}{1}
+
 Dla przykładu, do zjawiska załamania lub odbicia dochodzi kiedy fala pada na granice dwóch ośrodków o różnych impedancjach akustycznych $Z_1$ i $Z_2$. Dla fali prostopadłej zależność ta opisana jest następująco:
 \begin{equation}
 R = \frac{I_r}{I_0} = \left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2,

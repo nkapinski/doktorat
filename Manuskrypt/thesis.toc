@@ -35,7 +35,7 @@
 \contentsline {subsubsection}{Analiza wizualna}{79}% 
 \contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{82}% 
 \contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{84}% 
-\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{89}% 
+\contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{90}% 
 \contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{90}% 
 \contentsline {subsection}{\numberline {5.3.2}Krzywe gojenia}{94}% 
 \contentsline {chapter}{\numberline {6}Testy nowej metody}{101}% 

@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Schemat modelu typu Hilla stosowany w oprogramowaniu OpenSim (na podst. \cite {Romero2016}).\relax }}{11}% 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Wykres przedstawiaj\IeC {\k a}cy proporcje wyst\IeC {\k e}powania urazu \IeC {\'s}ci\IeC {\k e}gna Achillesa w r\IeC {\'o}\IeC {\.z}nych dyscyplinach sportowych na przyk\IeC {\l }adzie ameryka\IeC {\'n}skiego spo\IeC {\l }ecze\IeC {\'n}stwa (na podst. \cite {EpidemiologyUS}).\relax }}{12}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i innych algorytm\IeC {\'o}w.\relax }}{34}% 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i metod klasycznych.\relax }}{34}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Topologia perceptronu (na podst. \cite {Rosenblatt1957}).\relax }}{35}% 
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Topologia perceptronu wielowarstwowego (na podst. \cite {Rumelhart1986}).\relax }}{36}% 
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Topologia sieci LeNet (na podst. \cite {Lecun1998}).\relax }}{37}% 
@@ -31,8 +31,8 @@
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Wizualizacja danych RM w sekwencji PD dla zdrowego (po lewej) i goj\IeC {\k a}cego si\IeC {\k e} (po prawej) \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{72}% 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{76}% 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H_{PC}$ z 10 pacjent\IeC {\'o}w.\relax }}{78}% 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10 sekwencji RM.\relax }}{80}% 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12 tygodniu po rekonstrukcji.\relax }}{81}% 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10-ciu sekwencji RM.\relax }}{80}% 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12-tym tygodniu po rekonstrukcji.\relax }}{81}% 
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast $ GRE TE\_MIN.\relax }}{82}% 
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{89}% 
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Tr\IeC {\'o}jwymiarowa wizualizacja zmian obszaru zainteresowania w kolejnych etapach gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna.\relax }}{89}% 
@@ -43,8 +43,8 @@
 \contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru SCT.\relax }}{95}% 
 \contentsline {figure}{\numberline {5.15}{\ignorespaces Ocena parametru TT.\relax }}{96}% 
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Ocena parametru STE.\relax }}{97}% 
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TE.\relax }}{97}% 
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TU.\relax }}{98}% 
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TE.\relax }}{98}% 
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TU.\relax }}{99}% 
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Ocena parametru TisE.\relax }}{99}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{104}% 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  18 DEC 2019 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  18 DEC 2019 11:07
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -851,17 +851,17 @@ Package pdftex.def Info: ./figures/Logo-UW.jpg  used on input line 18.
 
 {C:/Users/norbert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures
 /Logo-UW.jpg>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
@@ -1276,11 +1276,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [53 <./figures/AlexNet-multiGPU.png (PNG copy)>]
-<figures/InceptionModules.png, id=248, 1903.11pt x 633.36626pt>
-File: figures/InceptionModules.png Graphic file (type png)
-<use figures/InceptionModules.png>
-Package pdftex.def Info: figures/InceptionModules.png  used on input line 424.
-(pdftex.def)             Requested size: 426.79135pt x 142.03737pt.
+<figures/InceptionModules.jpg, id=248, 1899.095pt x 619.31375pt>
+File: figures/InceptionModules.jpg Graphic file (type jpg)
+<use figures/InceptionModules.jpg>
+Package pdftex.def Info: figures/InceptionModules.jpg  used on input line 424.
+(pdftex.def)             Requested size: 426.79135pt x 139.17892pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1304,7 +1304,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[55 <./figures/InceptionModules.png (PNG copy)> <./figures/GoogleNet.jpg>]
+[55 <./figures/InceptionModules.jpg> <./figures/GoogleNet.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2109,7 +2109,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (148 pages, 14198433 bytes).
+Output written on thesis.pdf (148 pages, 14265657 bytes).
 PDF statistics:
  626 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

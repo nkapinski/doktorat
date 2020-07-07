@@ -18,7 +18,7 @@ W sieciach konwolucyjnych, procesy zachodzące w korze wzrokowej są modelowane 
 \begin{equation}
 	I'\left(x, y\right) = \sum_{j=-n}^{n} \sum_{i=-k}^{k} I\left(x - j, y - i \right)K_m\left(j, i\right),
 \end{equation}
-gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $i$ i $j$ to kolejne współrzędne maski filtru w odniesienia do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
+gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $i$ i $j$ to kolejne współrzędne maski filtru w odniesieniu do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
 
 W kontekście sieci konwolucyjnych, pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} (zob. \cite{Hijazi2015}). W ostatnich latach powstało wiele algorytmów do wizualizacji cech umożliwiających wydajną analizę wyników działania sieci konwolucyjnych np.: Saliency Maps \cite{DBLP:journals/corr/SimonyanVZ13}, GradCam \cite{DBLP:journals/corr/SelvarajuDVCPB16} czy CNNVIS \cite{DBLP:journals/corr/LiuSLLZL16}. Zasada działania tych algorytmów bazuje na wstecznej propagacji informacji, co skutkuje możliwością selekcji cech, które mają zasadniczy wpływ na wynik końcowy wnioskowania. Grupy cech obliczane na tym samym obszarze obrazu wejściowego nazywane są \textit{mapami cech} (ang. \textit{feature maps}). Zazwyczaj mapy cech zawierają hierarchicznie uporządkowaną strukturę składającą się z cech od najniższego do najwyższego poziomu komplikacji (np. od charakterystycznych skupisk pikseli, przez obiekty składowe do finalnego kształtu). Do cech najniższego rzędu zaliczyć można:
 \begin{itemize}[noitemsep,nolistsep]
@@ -54,9 +54,9 @@ Jeszcze do niedawna tor przetwarzania danych w większości badań wykorzystują
 	\label{DLworkflow}
 \end{figure}
 
-W nowym podejściu zarówno ekstrakcja cech jak i ostateczne wnioskowanie \linebreak na ich podstawie realizowane jest w jednym kroku, co nazywane jest paradygmatem \textit{end-to-end learning}. W kolejnej sekcji omówiono dokładniej zarys historyczny przedstawiający ewolucję tego podejścia. 
+W nowym podejściu zarówno ekstrakcja cech jak i ostateczne wnioskowanie \linebreak na ich podstawie realizowane jest w jednym kroku, co nazywane jest paradygmatem \textit{end-to-end learning}. W kolejnej sekcji omówiono dokładniej  ewolucję tego podejścia. 
 
-\section{Rys historyczny}
+\section{Wprowadzenie}
 
 Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch'a i Waltera Pitts'a w roku 1943 (zob. \cite{McCulloch1943}). Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y$ od sygnałów wejściowych $x_1$,...,$x_n$ została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
 \begin{equation}
@@ -110,11 +110,47 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, uczeń Geaoffa Hin
 
 Sieć składała się z 7-miu warstw i zawierała około 60.000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32. W architekturze LeNet zaobserwować można dwie podstawowe składowe współczesnych sieci konwolucyjnych wykorzystywanych do klasyfikacji obrazów tj.:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{ekstraktor cech} -- część służące do automatycznej ekstrakcji wektora cech \linebreak $w$, zawierająca m.in. filtry.
+	\item \textit{ekstraktor cech} -- część służąca do automatycznej ekstrakcji wektora cech \linebreak $w$, zawierająca m.in. filtry.
 	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego \linebreak na podstawie $w$.
 \end{itemize}  
 
-Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu end-to-end learning, w szczególności znalezienie w jednym procesie szkolenia transformacji, która obrazy przekształca bezpośrednio w ostateczną klasyfikację. Dokładny opis szkolenia się sieci konwolucyjnych i problemów z tym związanych został przedstawiony w kolejnej sekcji.  
+Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu end-to-end learning, w szczególności znalezienie w jednym procesie szkolenia transformacji, która obrazy przekształca bezpośrednio w ostateczną klasyfikację.  
+
+Potencjał nowych rozwiązań został dostrzeżony w dziedzinie obrazowania medycznego. W 1994 roku ukazała się pierwsza praca, która w praktyce wykorzystywała mechanizmy związane z głębokim uczeniem się do przetwarzania obrazów medycznych (zob. \cite{Zhang1994}). Użyte wówczas sieci nazywano sieciami typu \textit{shift-invariant} i wykorzystano do detekcji skupisk mikro-zwapnień w mammografach.
+
+W ostatnich latach liczba nowych rozwiązań i zastosowań głębokich sieci neuronowych w medycynie dynamicznie wzrasta, co obrazuje praca \cite{Litjens2017} z 2017 roku. Wybrane statystyki z tej publikacji przedstawiono na Rys. \ref{DL_CAD_stats}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\textwidth]{figures/DL_CAD_statystyka.jpg}
+	\caption{Statystyki dotyczące publikacji medycznych zawierających słowa kluczowe związane z głębokim uczeniem się (na podst. \cite{Litjens2017}).}
+	\label{DL_CAD_stats}
+\end{figure}
+
+Lata 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się coraz więcej prac naukowych, w których przedstawiano rezultaty dokładności klasyfikacji na poziomie dorównującym ekspertom dziedzinowym (np. \cite{Gulshan2016}, \cite{Esteva2017}, \cite{Tajbakhsh2016} \cite{Erickson2018}, \cite{LungChalenge}, \cite{Christiansen2018, Sarraf2016, Glasser2016, 2016arXiv160605718W}).
+
+Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm uzyskujących certyfikację medyczną na produkty wykorzystujące głębokie sieci neuronowe. Infografikę przedstawiającą dziedziny, w których najczęściej uzyskiwana jest certyfikacja zaprezentowano na Rys. \ref{fda_cert}.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
+	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).}
+	\label{fda_cert}
+\end{figure}
+\newpage
+Z drugiej strony, należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju metod w medycynie. Do najważniejszych należą:
+\begin{enumerate}[noitemsep,nolistsep]
+	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
+	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.
+	\item Kalibracja i szacowanie niepewności wyników modeli.
+	\item Unifikacja modeli wykonujących podobne zadania.
+	\item Minimalizacja liczby parametrów modelu przy zachowaniu satysfakcjonującego poziomu dokładności.
+\end{enumerate}
+Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). 
+
+Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych z pozyskiwaniem danych i wykorzystaniem algorytmów uczenia maszynowego.
+
+Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowiły silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem. Szczegółowy opis wykorzystanych architektur jak i problemów związanych z ich wykorzystaniem został przedstawiony w kolejnych sekcjach tego rozdziału.
+ 
 
 \section{Szkolenie głębokich sieci neuronowych}
 
@@ -207,14 +243,35 @@ Miary:
 	\item \textit{Wartość predykcyjna ujemna} (ang. \textit{Negative precision}) -- $NPV = \frac{TN}{TN + FN}$.
 \end{itemize}
 
-W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR, PPV i NPV oraz minimalizowania FP i FN. Prawidłowe podejście polega również na wybraniu możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
+W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR, PPV i NPV oraz minimalizowania FP i FN. 
+
+W kontekście problemu regresji powszechnie stosowane, minimalizowane błędy średnie to:
+
+\begin{itemize}[noitemsep,nolistsep]
+\item \textit{Średni błąd obciążenia} (ang. ) -- $MBE=\frac1N\sum_{i=1}^N{(x_{f,i}-x_{o,i})}$;
+\item \textit{Średni błąd absolutny} (ang. ) --  $MAE=\frac1N\sum_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
+\item \textit{Średni błąd kwadratowy} (ang. ) -- $RMSE=\sqrt{\frac1N\sum_{i=1}^N\left(x_{f,i}-x_{o,i}\right)^2}$;
+\end{itemize}
+oraz błędy maksymalne:
+\begin{itemize}[noitemsep,nolistsep]
+	\item \textit{Maksymalny błąd obciążenia} (ang. ) -- $MAX_{BE}=max_{i=1}^N{(x_{f,i}-x_{o,i})}$;
+	\item \textit{Maksymalny błąd absolutny} (ang. ) --  $MAX_{AE}=max_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
+	\item \textit{Maksymalny błąd kwadratowy} (ang. ) -- $MAX_{RSE}=max_{i=1}^N\sqrt{\left(x_{f,i}-x_{o,i}\right)^2}$;
+\end{itemize}
+z których błędy obciążenia i absolutny charakteryzują się liniową skalą, a kwadratowy wnosi dodatkową karę za większe błędy.   
+
+Dla problemu śledzenia zmian np. w czasie gojenia się tkanek, dodatkowo stosować można miary korelacji, w szczególności średniej korelacji z wykorzystaniem transformacji Z-Fishera (zob. \cite{Corey1998}):
+$Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}$  
+uzyskując średnią zgodność estymacji i wzorca odniesienia. Przy czym $r_f$ to zapisany wzorem \ref{PearsorR} współczynnik korelacji Pearsona. 
+
+Oprócz prawidłowego wyboru metryki istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
 
 Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż wnioskowanie na nowych danych charakteryzuje się niską dokładnością.
 
-Zatem ogólnym dążeniem w procesie szkolenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wektorów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$. Właściwym działaniem jest ustalenie maksymalnie ogólnych, dostatecznych warunków poprawnej klasyfikacji, dzięki którym wzrasta prawdopodobieństwo, że przykład spoza zbioru $U$ będzie poprawnie klasyfikowany. W tym celu można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru uczącego na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, \linebreak a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
+Zatem ogólnym dążeniem w procesie szkolenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wektorów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$. Właściwym działaniem jest ustalenie maksymalnie ogólnych, dostatecznych warunków poprawnej klasyfikacji, dzięki którym wzrasta prawdopodobieństwo, że przykład spoza zbioru $U$ będzie poprawnie klasyfikowany. W tym celu można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru danych na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, \linebreak a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cross-validation.png}
@@ -282,6 +339,7 @@ W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu min
 \begin{itemize}[noitemsep,nolistsep]
 	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X1$ i $X2$ zapisywany jest następującym wzorem:
 	\begin{equation}
+	\label{PearsorR}
 	r_{X1X2} = \frac{\sum_{i=1}^n (X1_i - \overline{X1})(X2_i - \overline{X2})}{\sqrt{\sum_{i=1}^n (X1_i - \overline{X1})^2} \sqrt{\sum_{i=1}^n (X2_i - \overline{X2})^2}},
 	\end{equation}
 	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji, a $\overline{X1}$ i $\overline{X2}$ to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
@@ -310,7 +368,7 @@ W celu selekcji cech można również stosować różnego rodzaju, specjalnie za
 
 W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będący pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek minimalizacji \textit{Normy L2} z wektora $w$ ($\left \| w \right \|_2 =\sqrt{ \sum_{k=1}^{n}\left |w_k  \right |^2}$), dzięki czemu wymuszane jest, aby poszczególne współczynniki miały niewielkie wartości. W regresji LASSO stosowana jest \textit{Norma L1}, ($\left \| w \right \|_1 = \sum_{k=1}^{n}\left |w_k  \right |$), dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regresji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
 
-W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, metodą \textit{state-of-the-art} jest algorytm \textit{analizy składowych głównych} (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
+W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, bardzo często stosowaną metodą jest algorytm \textit{analizy składowych głównych} (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
 
 Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne} lub \textit{czynniki główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych w taki sposób, aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to \textit{wartości skalarne} (pojedyncze liczby) opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. takich, dla których iloczyn skalarny równy jest 0, co \linebreak w przestrzeni Euklidesowej oznacza, że kąt pomiędzy wektorami równy jest 90$^\circ$.
 
@@ -574,69 +632,5 @@ S^g(x_s) = \sum_{i=1}^{m}w_i {S^g}_i(x_s)
 \end{equation}
 
 W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do treningu poprawnych wartości $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
- 
-
-\section{Zastosowania w medycynie}
-
-W 1994 roku ukazała się pierwsza praca, która w praktyce wykorzystywała mechanizmy związane z głębokim uczeniem się do przetwarzania obrazów medycznych (zob. \cite{Zhang1994}). Użyte wówczas sieci nazywano sieciami typu \textit{shift-invariant}. Zastosowanie ich pozwoliło na eliminacje 55\% FP otrzymywanych przy wcześniejszych metodach stosowanych do detekcji skupisk mikro-zwapnień w mammografach. \textit{Shift-invariant} oznaczało, że przesunięcie obrazu wejściowego nie powodowało zmian \linebreak w klasyfikacji, co jest istotną wartością dodaną, z uwagi na specyfikę implementacji toru akwizycji danych w praktyce radiologicznej.
-
-Po roku 2012 nastąpił znaczący wzrost zainteresowania metodami głębokiego uczenia się w medycynie. Obrazuje to praca \cite{Litjens2017} z 2017 roku, w której przytoczono statystyki medycznych publikacji zawierających słowa kluczowe związane z deep learning. Wybrane dane przedstawiono na Rys. \ref{DL_CAD_stats}.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=0.9\textwidth]{figures/DL_CAD_statystyka.jpg}
-	\caption{Statystyki dotyczące publikacji medycznych zawierających słowa kluczowe związane z głębokim uczeniem się (na podst. \cite{Litjens2017}).}
-	\label{DL_CAD_stats}
-\end{figure}
-
- Widoczny wzrost liczby publikacji nastąpił począwszy od 2015 roku, co związane było z kilkuletnią adaptacją nowych metod w dziedzinie przetwarzania obrazów medycznych i gromadzeniem odpowiednich zbiorów danych. Lata 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się coraz więcej prac naukowych, \linebreak w których przedstawiano rezultaty dokładności klasyfikacji na poziomie dorównującym ekspertom dziedzinowym.
- 
- Dla przykładu, w listopadzie 2016 r. ukazała się praca \cite{Gulshan2016} grupy Google Research z Mountain View w Kalifornii, gdzie zastosowano sieć GoogLeNet w wersji Inception-v3 do zautomatyzowanej detekcji retinopatii cukrzycowej i cukrzycowego obrzęku plamki w obrazach dna oka. Wyniki porównano z panelem składającym się z 7-miu ekspertów, okulistów. Porównanie przedstawiono na Rys. \ref{CAD_opto}.
- \begin{figure}[h!]
- 	\centering
- 	\includegraphics[width=1\textwidth]{figures/CAD-okulisci.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji z oceną ekspertów dla problemu retinopatii cukrzycowej i cukrzycowego obrzęku plamki (na podst. \cite{Gulshan2016}).}
- 	\label{CAD_opto}
- \end{figure}
- 
- Na wykresach, dla dwóch zadań klasyfikacyjnych, umieszczono krzywe reprezentujące zależność swoistości od czułości dla algorytmu automatycznego oraz 7 punktów oznaczających wynik oceny każdego z okulistów. Ogółem, mniej niż połowa ekspertów uzyskała lepszy wynik niż algorytm sztucznej inteligencji.
- 
- Kolejna ciekawa praca tj. \cite{Esteva2017}, pojawiła się w czasopiśmie Nature w styczniu 2017 roku i traktowała o automatycznej detekcji nowotworów skóry na podstawie zdjęć. Autorzy wykorzystali dane składające się z 129.450 obrazów klinicznych, \linebreak na których zobrazowano 2.032 różne schorzenia skóry. Ponownie do klasyfikacji wykorzystano sieć Inception-v3. Wyniki klasyfikacji automatycznej porównano z oceną przeprowadzoną przez 21 certyfikowanych dermatologów. Przykład porównania zaprezentowano na Rys. \ref{CAD_derma}. 
- 
- \begin{figure}[h!]
- 	\centering
- 	\includegraphics[width=1\textwidth]{figures/CAD-dermatolodzy.jpg}
- 	\caption{Porównanie automatycznej klasyfikacji trzech chorób skóry z oceną ekspertów dermatologów (na podst. \cite{Esteva2017}).}
- 	\label{CAD_derma}
- \end{figure}
-
-Wykres przedstawia zależność czułości od swoistości. Czerwonymi punktami oznaczono wynik oceny poszczególnych ekspertów, zielonym krzyżykiem wynik uśredniony. W każdym przypadku średnia ocena była gorsza od automatycznej klasyfikacji.
-
-Obrazy nie są jedynymi danymi medycznymi, które z powodzeniem są przetwarzane za pomocą metod głębokiego uczenia się. W lipcu 2017, przez grupę naukowców z Uniwersytetu Stanforda została opublikowana praca \cite{2017arXiv170701836R} dotycząca klasyfikacji arytmii na podstawie szeregów czasowych zapisanych na elektrokardiogramach. Autorzy wykorzystali dane z 64.121 elektrokardiogramów próbkowanych z częstotliwością 200 Hz, pochodzących od 29.163 pacjentów. Zaprojektowano dedykowaną, 34-warstwową sieć konwolucyjną do detekcji 12-stu różnych dysfunkcji pracy serca, pracy prawidłowej i szumów (łącznie 14 klas). Wyniki klasyfikacji porównano z oceną prowadzoną przez 3-ech kardiologów. Średnia dokładność oceny automatycznej wyniosła 80\%, natomiast manualnej 72\%.
-
-Podobnych przykładów zostało opublikowanych dużo więcej. Architektura AlexNet z sukcesem była użyta do detekcji polipów w kolonoskopii w \cite{Tajbakhsh2016}. Sieć ResNet sprawdziła się w badaniach zrealizowanych w \cite{Erickson2018} w Mayo Clinic Rotschester. Dotyczyły one radio-genomiki i rozróżnienia zmian w mózgu bez konieczności biopsji. Złożenia natomiast z sukcesem zaaplikowano w pracach dotyczących detekcji nowotworów płuc, gdzie modele bazowe analizowały różne skale problemu (zob. \cite{LungChalenge}). W wielu pracach dotyczących radiologii raportuje się dokładność klasyfikacji automatycznej znacząco przewyższające możliwości dziedzinowych ekspertów np. \cite{Christiansen2018, Sarraf2016, Glasser2016, 2016arXiv160605718W}.
-
-Powyższe przykłady pokazują, że dla szczególnych przypadków pewien element pracy eksperta zajmującego się danymi medycznymi (np. radiologa) może być z sukcesem wspomagany (lub nawet zastąpiony) przez algorytmy głębokiego uczenia się. Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm uzyskujących certyfikację medyczną na produkty wykorzystujące głębokie sieci neuronowe. Infografikę przedstawiającą dziedziny, w których najczęściej uzyskiwana jest certyfikacja zaprezentowano na Rys. \ref{fda_cert}.
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
-	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).}
-	\label{fda_cert}
-\end{figure}
-\newpage
-Z drugiej strony, należy jednak podkreślić, że jest również szereg problemów wiążących się z wykorzystaniem tego rodzaju metod w medycynie. Do najważniejszych należą:
-\begin{enumerate}[noitemsep,nolistsep]
-	\item Gromadzenie dużych zbiorów danych z odpowiednimi etykietami.
-	\item Wykorzystanie heterogenicznych danych pochodzących np. z wielu urządzeń lub modalności.
-	\item Kalibracja i szacowanie niepewności wyników modeli.
-	\item Unifikacja modeli wykonujących podobne zadania.
-	\item Minimalizacja liczby parametrów modelu przy zachowaniu satysfakcjonującego poziomu dokładności.
-\end{enumerate}
-Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). 
-
-Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych ze współpracą przy pozyskiwaniu danych i wykorzystaniu algorytmów uczenia maszynowego.
-
-Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowiły silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem.
-
 
     

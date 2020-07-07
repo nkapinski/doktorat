@@ -124,6 +124,13 @@ Eric~M. Christiansen, Samuel~J. Yang, D.~Michael Ando, Ashkan Javaherian, Gaia
   {U}nlabeled {I}mages.
 \newblock {\em Cell}, 173(3):792--803, Kwiecień 2018.
 
+\bibitem{Corey1998}
+David~M. Corey, William~P. Dunlap, Michael~J. Burke.
+\newblock {A}veraging {C}orrelations: {E}xpected {V}alues and {B}ias in
+  {C}ombined {P}earsonrs and {F}isher {T}ransformations.
+\newblock {\em The Journal of General Psychology}, 125(3):245--261, Lipiec
+  1998.
+
 \bibitem{Cunningham2017}
 Ryan Cunningham, Peter Harding, Ian Loram.
 \newblock Deep {R}esidual {N}etworks for {Q}uantification of {M}uscle {F}iber
@@ -642,12 +649,6 @@ M.~S. Raikin.
   \url{http://lermagazine.com/article/epidemiology-of-achilles-tendon-rupture-in-the-us},
   2014.
 \newblock Dost.: 2018-07-23.
-
-\bibitem{2017arXiv170701836R}
-P.~{Rajpurkar}, A.~Y. {Hannun}, M.~{Haghpanahi}, C.~{Bourn}, A.~Y. {Ng}.
-\newblock {Cardiologist-{L}evel {A}rrhythmia {D}etection with {C}onvolutional
-  {N}eural {N}etworks}.
-\newblock {\em ArXiv e-prints}, Lipiec 2017.
 
 \bibitem{Regulski2017}
 Piotr Regulski, Jakub Zieliński, Bartosz Borucki, Krzysztof Nowiński.

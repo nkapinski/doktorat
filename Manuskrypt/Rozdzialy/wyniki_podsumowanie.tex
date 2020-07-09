@@ -18,7 +18,7 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 \scriptsize
 \setlength{\tabcolsep}{1pt}
 \centering
-\caption{Wyniki szkolenia się sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego. Pogrubieniem oznaczono najlepsze rezultaty.}
+\caption{Wyniki szkolenia się sieci w paradygmacie end-to-end z wykorzystaniem zbioru treningowego. Pogrubieniem oznaczono najlepsze rezultaty, dodatkowo posługując się kolorem czerwonym w przypadku obserwacji średnich istotnych statystycznie z $p$ $<$ 0,05, w porównaniu z drugim najlepszym wynikiem.}
 \label{tab:end-to-endTrain}
 \begin{tabular}{lc||c|c|c|c|c|c}
 	%\hline
@@ -26,10 +26,10 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 	AlexNet$_{e}$ & MAE & 1,04$\pm$0,05 & 0,82$\pm$0,04 & 0,95$\pm$0,07 & 0,88$\pm$0,06 & 1,03$\pm$0,06 & 0,78$\pm$0,04  \\
 	&MAX-AE & 1,91 & 1,67 & 2,39 & 2,20 & 1,90 & 1,35\\ 
 	&Corr & 0,82 & \textbf{0,72} & \textbf{0,13} & 0,70 & 0,50 & 0,83 \\ \hline
-	Inception-v3$_{e}$ & MAE & 0,88$\pm$0,05 & \textbf{0,75}$\pm$0,04 & \textbf{0,82}$\pm$0,05 & \textbf{0,78}$\pm$0,03 & \textbf{0,91}$\pm$0,05 & \textbf{0,67}$\pm$0,04 \\
+	Inception-v3$_{e}$ & MAE & 0,88$\pm$0,05 & \textbf{0,75}$\pm$0,04 & \textbf{0,82}$\pm$0,05 & \textbf{0,78}$\pm$0,03 & \textbf{0,91}$\pm$0,05 & \textcolor{red}{\textbf{0,67}}$\pm$0,04 \\
 	&MAX-AE & 1,57 & \textbf{1,44} & \textbf{1,93} & \textbf{1,17} & \textbf{1,85} & \textbf{1,11} \\ 
 	&Corr & \textbf{0,85} & \textbf{0,72} & 0,05 & \textbf{0,72} & \textbf{0,52} & \textbf{0,84} \\ \hline
-	ResNet-50$_{e}$ & MAE & \textbf{0,64}$\pm$0,03 & 0,98$\pm$0,04 & 0,83$\pm$0,06 & 0,89$\pm$0,03 & 1,06$\pm$0,06 & 1,10$\pm$0,05  \\
+	ResNet-50$_{e}$ & MAE & \textcolor{red}{\textbf{0,64}}$\pm$0,03 & 0,98$\pm$0,04 & 0,83$\pm$0,06 & 0,89$\pm$0,03 & 1,06$\pm$0,06 & 1,10$\pm$0,05  \\
 	&MAX-AE & \textbf{1,21} & 1,79 & 1,94 & 1,43 & 2,42 & 2,36\\
 	&Corr & 0,06 & 0,21 & 0,00 & 0,11 & 0,14 & 0,11\\
 	
@@ -39,38 +39,44 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Otrzymane wartości MAE znajdują się w zakresie 0,64 do 1,10 (w skali wzorca odniesienia 0--7). Dla najlepszego modelu pod względem średniej MAE tj. Inception-v3$_{e}$, średni dystans między predykcją i wzorcem wyniósł $<0,92$. Najlepiej estymowanymi parametrami były TisE -- 0,67, TT -- 0,75 i TE -- 0,78. Najgorszy rezultat natomiast otrzymano dla TU -- 0,91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej.
+Zdecydowanie najlepsze wyniki MAX-AE (5 z 6-ciu) uzyskano dla modelu Inception-v3$_{e}$. Wyjątkiem jest parametr SCT.
 
-Wyniki Corr dla wszystkich parametrów oprócz STE, dla sieci Inception-v3$_{e}$, przyjmują wartość powyżej 0,5. Niskie Corr dla STE wynika z niewielkich zmian trendu wartości tego parametru (często występuje stała wartość w dużym przedziale danych). W skrajnym przypadku, dla modelu ResNet-50$_{e}$, korelacja równa 0,00 wynika z predykcji stałych wartości dla całego okresu gojenia się i błędów numerycznych związanych z tym faktem.
+Otrzymane wartości MAE znajdują się w zakresie 0,64 do 1,10 (w skali wzorca odniesienia 0--7).  Najlepiej estymowanymi parametrami były TisE -- 0,67, TT -- 0,75 i TE -- 0,78. Najgorszy rezultat natomiast otrzymano dla TU -- 0,91, który to parametr silnie zależy od informacji widocznej w płaszczyźnie strzałkowej. Istotne statystycznie różnice uzyskano dla modelu Inception-v3$_{e}$ (TisE) i modelu ResNet-50$_{e}$ (SCT).
 
-W kolejnym kroku, w Tab. \ref{tab:end-to-end_testset}, przedstawiono zestawienie automatycznej oceny dla zbioru pacjentów testowych, realizowanej przez najlepszy model szkolony w paradygmacie end-to-end (Inception-v3$_e$) i proponowaną przez autora tej pracy metodą meta-regresji opartą o algorytm SVR (SVR).  
+Najlepsze wyniki Corr dla wszystkich parametrów oprócz STE, dla sieci Inception-v3$_{e}$, przyjmują wartość powyżej 0,5. Niskie Corr dla STE wynika z niewielkich zmian trendu wartości tego parametru (często występuje stała wartość w dużym przedziale danych). W skrajnym przypadku, dla modelu ResNet-50$_{e}$, korelacja równa 0,00 wynika z predykcji stałych wartości dla całego okresu gojenia się i błędów numerycznych związanych z tym faktem. Dla tego modelu uzyskano również znacząco gorsze wyniki Corr w pozostałych przypadkach.
+
+Podsumowując, kierując się powyższymi wynikami, do dalszych porównań wykorzystano model Inception-v3$_{e}$, który w Tab. \ref{tab:end-to-end_testset} zestawiono z proponowaną przez autora tej pracy metodą meta-regresji opartą o algorytm SVR (SVR), porównując wyniki na zbiorze testowych 4-ech pacjentów.  
 \vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table*}[h]
-	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze rezultaty.}
+	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze rezultaty, a kolorem czerwonym istotne statystycznie różnice w liczonych średnich ($p$ $<$ 0,05).}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ \hline \hline
-			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,08}$ & 0,80$\pm{0,04}$ & 1,40$\pm{0,07}$ & \textbf{0,89}$\pm{0,05}$ & 1,08$\pm{0,04}$ & \textbf{0,69}$\pm{0,07}$ \\
+			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,08}$ & 0,80$\pm{0,04}$ & 1,40$\pm{0,07}$ & \textbf{0,89}$\pm{0,05}$ & 1,08$\pm{0,04}$ & \textcolor{red}{\textbf{0,69}}$\pm{0,07}$ \\
 			& MAX-AE & \textbf{2,14} & \textbf{1,01} & 2,13 & \textbf{1,18} & \textbf{1,44} & \textbf{0,78} \\
-			& Corr & 0,82 & 0,77 & 0,05 & 0,59 & 0,02 & 0,77 \\ \hline
-			SVR & MAE & \textbf{1,05}$\pm0,06$ & \textbf{0,56}$\pm0,03$ & \textbf{0,75}$\pm0,04$ & 0,91$\pm0,05$ & \textbf{0,91}$\pm0,04$ & $0,94\pm0,05$\\
+			& Corr & 0,82 & 0,77 & 0,05 & 0,59 & 0,52 & 0,77 \\ \hline
+			SVR & MAE & \textbf{1,05}$\pm0,06$ & \textcolor{red}{\textbf{0,56}}$\pm0,03$ & \textcolor{red}{\textbf{0,75}}$\pm0,04$ & 0,91$\pm0,05$ & \textcolor{red}{\textbf{0,91}}$\pm0,04$ & $0,94\pm0,05$\\
 			& MAX-AE & 2,62 & 1,82 & \textbf{1,92} & 2,54 & 2,01 & 2,38 \\
-			& Corr & \textbf{0,85} & \textbf{0,85} & \textbf{0,31} & \textbf{0,72} & \textbf{0,65} & \textbf{0,80} 
+			& Corr & \textbf{0,85} & \textbf{0,85} & \textcolor{red}{\textbf{0,31}} & \textcolor{red}{\textbf{0,72}} & \textcolor{red}{\textbf{0,65}} & \textbf{0,80} 
 		\end{tabular}
 	\end{center}
 	\label{tab:end-to-end_testset}
 \end{table*}
 \renewcommand{\arraystretch}{1}
 
-Metoda SVR osiąga wyższe wartości Corr w każdym z parametrów i niższe wartości MAE dla 4-ech z 6-ciu parametrów. Natomiast tylko w jednym z parametrów (tj. STE) charakteryzuje się niższym błędem MAX-AE. 
+Metoda SVR osiąga istotne statystycznie wyższe wartości Corr dla parametrów STE, TE i TU i MAE dla parametrów TT, STE i TU. Natomiast tylko w jednym z parametrów (tj. STE) charakteryzuje się niższym błędem MAX-AE. 
 
-Można zatem wnioskować, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają \linebreak na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end. 2 z 6-ciu parametrów, w których pod względem MAE sieć Inception-v3$_e$ okazała się lepsza tj. TE i TisE dotyczą obrzęków, zatem elementów ocenianych pod kątem pola powierzchni i kształtu. Taka informacja dominuje w ekstrahowanych przez jądra splotu obrazach, co z kolei implikuje gorsze wyniki w pozostałych parametrach ocenianych na podstawie wzorców tworzonych przez struktury ścięgniste. Wynik MAX-AE jest skutkiem sposobu treningu (tj. \textit{explicite} modelowanie wzorca odniesienia) powodującego minimalizowanie maksymalnych błędów. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu, jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje percepcji popełnił błąd w ocenie.  
+Dobre wyniki MAX-AE modelu Inception-v3$_{e}$ są skutkiem sposobu treningu polegającego na \textit{explicite} modelowaniu wzorca odniesienia, co przekłada się na zadanie minimalizowania maksymalnych błędów. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu, jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje percepcji popełnił błąd w ocenie.
 
-W tym kontekście należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6-ciu parametrów w kolejnych krokach czasowych. Średnio jest to około jedna godzina pracy na pacjenta. Proponowana przez autora metoda wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane \textit{słabo-nadzorowanym} (w odróżnieniu od w \textit{pełni-nadzorowanego}, w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory lub zdrowy oraz znacząco mniejszego zbioru pacjentów z segmentacją ścięgna, który służyłby do sporadycznych ulepszeń etapu meta-regresji. 
+Jeden istotnie lepszy wynik sieci Inception-v3$_e$ w MAE dla TisE jest intuicyjny.  Jest to jedyny parametr oceniany na zewnątrz ścięgna, gdzie fuzja cech nie powinna mieć bezpośredniego wpływu na polepszenie rezultatu. 
 
-Pewnym minusem proponowanego podejścia jest wymóg informacji o ROI. Jego oznaczenie to czas około 10 minut na pacjenta, dla radiologa wykorzystującego odpowiednie oprogramowanie np. Osirix \cite{Rosset2004} lub VisNow \cite{Nowinski_Borucki_2014}. Nowoczesne metody pokazują również możliwość zautomatyzowania tego procesu. Dla przykładu, wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutional neural networks}. Przykład działania takiej architektury, a dokładniej U-Net zaproponowanej w \cite{Ronneberger2015}, można zaobserwować na Rys. \ref{fig:segmentacja}. 
+Wyniki Corr świadczą, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają \linebreak na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end.   
+
+W podsumowaniu należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6-ciu parametrów w kolejnych krokach czasowych. Średnio jest to około jedna godzina pracy na pacjenta. Proponowana przez autora metoda wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane \textit{słabo-nadzorowanym} (w odróżnieniu od w \textit{pełni-nadzorowanego}, w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory lub zdrowy oraz znacząco mniejszego zbioru pacjentów z segmentacją ścięgna, który służyłby do sporadycznych ulepszeń etapu meta-regresji. 
+
+Minusem podejścia meta-regresji jest natomiast wymóg informacji o ROI. W kontekście badań na danych z projektu START problem oznaczenia nie istniał, gdyż obszar ścięgna był rutynowo etykietowany do celów innych badań. W przypadku bardziej generycznym, gdzie nie istniałyby oznaczenia obszaru ścięgna, zaistniałaby konieczność dodatkowej pracy radiologa w wymiarze około 10 minut na pacjenta (przy założeniu wykorzystania odpowiedniego oprogramowanie np. Osirix \cite{Rosset2004} lub VisNow \cite{Nowinski_Borucki_2014}). Nowoczesne metody pokazują możliwość zautomatyzowania tego procesu. Dla przykładu, wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutional neural networks}. Przykład działania takiej architektury, a dokładniej U-Net zaproponowanej w \cite{Ronneberger2015}, można zaobserwować na Rys. \ref{fig:segmentacja}. 
 
 \begin{figure}[h]
 	\centering

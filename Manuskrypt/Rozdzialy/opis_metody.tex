@@ -229,7 +229,7 @@ Wybierając sekwencję T2$^\ast$ GRE TE\_MIN kierowano się wynikami analizy wiz
 \begin{table}[h]
 	\centering
 	\setlength{\tabcolsep}{12pt}
-	\caption{Korelacja sekwencji PD, T1, T2 i T2$^\ast$ GRE MRI. Wyniki oznaczone pogrubieniem są istotne statystycznie z p $<$ 0,01.}
+	\caption{Korelacja sekwencji PD, T1, T2 i T2$^\ast$ GRE MRI. Wyniki oznaczone pogrubieniem są istotne statystycznie z $p$ $<$ 0,01.}
 	\label{tab:inter-protocol-corr}
 	\begin{tabular}{l||c|c|c|c}
 		%\hline
@@ -261,14 +261,14 @@ W szczególności, wyliczono różne modele regresji poczynając odpowiednio \li
 Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningowych. Natomiast w celach porównań, zestawiono wyniki dla pacjentów testowych. \linebreak W szczególności, wyliczono metryki średniego błędu absolutnego (MAE), maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Wybór metryk związanych z błędami absolutnymi był podyktowany faktem, iż skala liniowa okazała się w toku eksperymentów bardziej intuicyjna dla lekarzy i radiologów, a zatem bardziej utylitarna w procesie komunikowania wyników. Rezultaty znajdują się w Tab. \ref{tab:H_testset}.
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
-	\caption{Porównanie wnioskowania dla różnych modeli regresji wytrenowanych w oparciu o dane z 3-ech sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedną sekwencję RM.}
+	\caption{Porównanie wnioskowania dla różnych modeli regresji wytrenowanych w oparciu o dane z 3-ech sekwencji RM, z modelem liniowej regresji wytrenowanym w oparciu o jedną sekwencję RM. Najlepsze wyniki oznaczono pogrubieniem i dodatkowo, w przypadku istotnej statystycznie poprawy z $p$ $<$ 0,05 liczonych średnich, oznaczono kolorem czerwonym.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
 			
 			\hline \hline
-			model\_PC1 & MAE & 1,26 $\pm$ 0,07 & \textbf{0,71} $\pm$ 0,02 & \textbf{0,7} $\pm$ 0,02 & 0,97 $\pm$ 0,04 & 0,92 $\pm$ 0,04 & 0,99 $\pm$ 0,04\\
+			model\_PC1 & MAE & 1,26 $\pm$ 0,07 & \textcolor{red}{\textbf{0,71}} $\pm$ 0,02 & \textbf{0,7} $\pm$ 0,02 & 0,97 $\pm$ 0,04 & 0,92 $\pm$ 0,04 & 0,99 $\pm$ 0,04\\
 			&MAX-AE &3,53&2,49&1,91&\textbf{2,34}&2,2&2,47\\
 			&Corr &0,58&0,47&-0,07&0,60&\textbf{0,56}&0,58\\
 			
@@ -318,19 +318,19 @@ Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningow
 			&Corr &0,50&0,38&0,24&0,54&0,29&0,59\\
 			
 			\hline
-			model\_poly&MAE & 1,27$\pm$ 0,07 & 0,74$\pm$0,01 & 0,71$\pm$0,03 & \textbf{0,93}$\pm$0,04 & 0,95$\pm$0,05 & 1,03$\pm$0,04\\
+			model\_poly&MAE & 1,27$\pm$ 0,07 & 0,74$\pm$0,01 & 0,71$\pm$0,03 & \textcolor{red}{\textbf{0,93}}$\pm$0,04 & 0,95$\pm$0,05 & 1,03$\pm$0,04\\
 			&MAX-AE &3,62&2,6&1,96&2,83&2,29&2,87\\
 			&Corr &0,53&0,34&0,11&\textbf{0,61}&0,37&0,58\\
 			
 			\hline
-			model\_c\_poly&MAE & 1,3$\pm$0,07 & 0,75$\pm$0,01 & 0,78$\pm$0,04 & \textbf{0,93}$\pm$0,04 & 1,01$\pm$0,06 & 1,06$\pm$0,05 \\
+			model\_c\_poly&MAE & 1,3$\pm$0,07 & 0,75$\pm$0,01 & 0,78$\pm$0,04 & \textcolor{red}{\textbf{0,93}}$\pm$0,04 & 1,01$\pm$0,06 & 1,06$\pm$0,05 \\
 			&MAX-AE &3,64&2,7&2,01&2,83&3,36&2,86\\
 			&Corr &0,53&0,45&0,12&0,58&0,15&0,57\\
 			\hline 
 			
-			Baseline& MAE & \textbf{1,24}$\pm$0,02 & 0,82$\pm$0,01 & 0,75$\pm$0,01 & 1,06$\pm$0,01 & \textbf{0,90}$\pm$0,01 & \textbf{0,96}$\pm$0,01 \\
+			Baseline& MAE & \textbf{1,24}$\pm$0,08 & 0,82$\pm$0,04 & 0,75$\pm$0,04 & 1,06$\pm$0,05 & \textbf{0,90}$\pm$0,04 & \textbf{0,96}$\pm$0,05 \\
 			&MAX-AE & 3,54 & 2,46 & \textbf{1,82} & 2,70 & \textbf{2,13} & \textbf{2,18}\\
-			&Corr   & \textbf{0,61} & \textbf{0,64} &-0,08 & 0,55 & 0,55 & 0,65\\
+			&Corr   & \textbf{0,61} & \textcolor{red}{\textbf{0,64}} &-0,08 & 0,55 & 0,55 & 0,65\\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -338,12 +338,12 @@ Do obliczenia współczynników regresji zastosowano zbiór pacjentów treningow
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji \linebreak T2$^\ast$ GRE TE\_MIN był najskuteczniejszy w największej liczbie mierzonych parametrów tj. 8 z 18-tu. 3 razy osiągnął najlepszy wynik w MAE i MAX-AE oraz dwukrotnie w Corr. Dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują zatem nadmiernym dopasowaniem oraz pogorszeniem jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2$^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje przy obecnym stanie techniki około 5 min. na pacjenta, podczas gdy wszystkich trzech sekwencji trwa około 12 minut. Podsumowując, na podstawie analizy wizualnej i ilościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2$^\ast$ GRE TE\_MIN. 
+Z wykorzystaniem dodatkowych sekwencji udało się uzyskać poprawę istotną statystycznie z $p$ $<$ 0,05 w przypadku MAE dla parametrów TT i TE. W przypadku TT dodanie sekwencji skutkowało natomiast istotnie statystycznym pogorszeniem Corr. Model prostej liniowej regresji wykorzystujący jedynie informacje z sekwencji T2$^\ast$ GRE TE\_MIN ponadto osiągnął najlepsze rezultaty w największej liczbie błędów MAX-AE tj. 3. Można zatem wnioskować, że dodawanie sekwencji jako danych wejściowych i komplikacje modelu skutkują nadmiernym dopasowaniem oraz po za opisanymi wyjątkami nie polepszają jakości automatycznej oceny. Należy również podkreślić, że akwizycja samej sekwencji T2$^\ast$ GRE TE\_MIN dla omawianego problemu zajmuje przy obecnym stanie techniki około 5 min. na pacjenta, podczas gdy wszystkich trzech sekwencji trwa około 12 minut. Podsumowując, na podstawie analizy wizualnej i ilościowej, jako dane wejściowe do kolejnych eksperymentów została wybrana sekwencja T2$^\ast$ GRE TE\_MIN. 
 
 \subsection{Optymalna selekcja i konkatenacja cech}
 \label{seq:fusion}
 W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli regresji liniowej. Można zatem postawić hipotezę, że w ocenie radiologa dominuje zależność liniowa. Dodatkowo, cechy obrazowe opisujące jeden problem diagnostyczny są ze sobą zazwyczaj silnie skorelowane. Stąd motywacja, aby w ramach tego eksperymentu do selekcji cech zastosować metodę LASSO (zob. pkt \ref{DimReduction}), bazującą właśnie na liniowych własnościach i znajdującą swe zastosowanie przy silnie skorelowanych predyktorach.  
-\newpage
+
 W tym celu, treningowy zbiór pacjentów został podzielony na 4 podzbiory (11-tu pacjentów, około 4300 przekrojów osiowych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$ dla metody LASSO (zob. wzór \ref{equ:lassoReg}). Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2$^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. p. \ref{seq:method}).
 
 Kryterium selekcji cech była najlepsza korelacja z wzorcem odniesienia, którą uzyskano dla $\alpha=0,1$. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
@@ -403,7 +403,7 @@ Dlatego w porównaniu metod meta-regresji cech uwzględniono: metodę wektorów 
 Do oceny ponownie wykorzystano metryki średniego błędu absolutnego (MAE), maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Najlepszy rezultat dla każdego z parametrów uzyskano dla lasu losowego, jednak w przypadku tego algorytmu (pomimo wielu prób z różną liczbą drzew decyzyjnych) występuje efekt nadmiernego dopasowania, co można zaobserwować analizując wyniki ze zbioru testowego zestawione \linebreak w Tab. \ref{tab:testset}. 
 
 \begin{table*}[]
-	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki uzyskane przez algorytmy meta-regresji z wyłączeniem RF, dla którego występuje efekt przeuczenia.}
+	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki uzyskane przez algorytmy meta-regresji z wyłączeniem RF, dla którego występuje efekt przeuczenia. Dodatkowo, w przypadku istotnej statystycznie poprawy z $p$ $<$ 0,05 liczonych średnich, wyniki najlepsze oznaczono kolorem czerwonym.}
 	\scriptsize
 	\begin{center}
 		\begin{tabular}{lc||c|c|c|c|c|c}
@@ -416,19 +416,19 @@ Do oceny ponownie wykorzystano metryki średniego błędu absolutnego (MAE), mak
 			& Corr   & 0,82 & 0,83 & 0,25 & 0,71 & 0,63 & 0,78 \\
 			\hline
 			\multirow{3}{*}{SVR}
-			& MAE & \textbf{1,05}$\pm0,06$ & $0,56\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & \textbf{0,94}$\pm0,05$\\
+			& MAE & \textcolor{red}{\textbf{1,05}}$\pm0,06$ & $0,56\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & \textbf{0,94}$\pm0,05$\\
 			& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & \textbf{2,01} & 2,38 \\
-			& Corr   & \textbf{0,85} & \textbf{0,85} & \textbf{0,31} & 0,72 & \textbf{0,65} & \textbf{0,80} \\
+			& Corr   & \textcolor{red}{\textbf{0,85}} & \textcolor{red}{\textbf{0,85}} & \textcolor{red}{\textbf{0,31}} & 0,72 & \textbf{0,65} & \textbf{0,80} \\
 			\hline
 			\multirow{3}{*}{LR}
-			& MAE & $1,15\pm0,06$ & \textbf{0,55}$\pm0,03$ & \textbf{0,74}$\pm0,04$ & \textbf{0,90}$\pm0,05$ & $0,93\pm0,04$ & $0,97\pm0,05$\\
+			& MAE & $1,15\pm0,06$ & \textcolor{red}{\textbf{0,55}}$\pm0,03$ & \textbf{0,74}$\pm0,04$ & \textcolor{red}{\textbf{0,90}}$\pm0,05$ & $0,93\pm0,04$ & $0,97\pm0,05$\\
 			& MAX-AE & \textbf{2,60} & 1,78 & 1,81 & 2,54 & 2,04 & 2,38 \\
 			& Corr   & 0,84 & 0,84 & 0,18 & 0,71 & 0,62 & 0,78 \\
 			\hline
 			\multirow{3}{*}{MPR}
 			& MAE & $1,13\pm0,06$ & $0,57\pm0,03$ & \textbf{0,74}$\pm0,04$ & $0,92\pm0,05$ & $0,91\pm0,04$ & $0,96\pm0,05$\\
 			& MAX-AE & 2,63 & \textbf{1,77} & \textbf{1,78} & 2,54 & 2,04 & 2,40 \\
-			& Corr   & 0,83 & 0,83 & 0,20 & \textbf{0,73} & 0,63 & 0,77 \\			
+			& Corr   & 0,83 & 0,83 & 0,20 & \textcolor{red}{\textbf{0,73}} & 0,63 & 0,77 \\			
 			\hline
 			\multirow{3}{*}{RF}
 			& MAE & $1,12\pm0,06$ & $0,55\pm0,03$ & \textbf{0,74}$\pm0,04$ & $0,90\pm0,05$ & $0,93\pm0,04$ & $0,94\pm0,05$\\
@@ -445,9 +445,9 @@ Do oceny ponownie wykorzystano metryki średniego błędu absolutnego (MAE), mak
 	\label{tab:testset}
 \end{table*}
 
-W tym porównaniu nawet wyniki uzyskane z modelu liniowej regresji bazującej na fuzji cech pozwalają na znaczącą poprawę rezultatów, w stosunku do poziomu odniesienia (Baseline), w każdym z parametrów w przypadku Corr, w parametrach: SCT, TT, STE i TU dla MAX-AE; oraz: SCT, TT, i TE dla MAE. Różnice w wynikach oceny na zbiorze testowym i treningowym wskazują na przeuczenie algorytmu RF, dlatego został on wyeliminowany z dalszych porównań. Wśród pozostałych, rezultaty są porównywalne, jednak metodą meta-regresji, która uzyskała sumarycznie najwięcej najlepszych wyników Corr, MAE i MAX-AE okazała się SVR, co może sugerować potwierdzenie występowania niewielkich, nieliniowych zależności w ocenie radiologa. 
+W tym porównaniu 5 z 6-ciu wyników MAX-AE wykazuje poprawę w wyniku fuzji cech. Wyjątkiem jest obrzęk tkanek -- TisE. Uzyskano również 3 wyniki istotne statystycznie ($p$ $<$ 0,05) poprawy parametru MAE i czterokrotnie Corr. Po za wyjątkiem dla parametru STE uzyskanego przez algorytm SVR, nie ma istotnie statystycznych różnic między algorytmami użytymi do meta-regresji. Biorąc pod uwagę ten fakt, jak również ogólnie największą liczbę istotnie statystycznych najlepszych wyników, algorytm SVR został wybrany do dalszych eksperymentów. Dodatkową obserwacją są ogólne, dobre wyniki algorytmów nieliniowej fuzji, co może sugerować potwierdzenie występowania niewielkich tego rodzaju zależności w ocenie radiologa. 
 
-Fakt poprawy wyników z wykorzystaniem fuzji klasycznych cech obrazowych \linebreak i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów opisujących tkanki wewnątrz ROI. Są to cechy bardziej odporne na wspomniane wcześniej zaburzenia procesu gojenia, które można ogólnie nazwać szumem w sygnale gojenia (np. znaczące zwiększenie się obrzęku na skutek temperatury lub wysiłku fizycznego). W szczególności, cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo, zwiększona liczba cech DL podniosła poziom informacji wpływając na ogólną ocenę, jak i w szczególności na parametr TisE zależny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje poniżej 0,5. Wynik ten będzie dyskutowany w dalszej części tej rozprawy.
+Poprawa wyników z wykorzystaniem fuzji klasycznych cech obrazowych \linebreak i cech DL wynika z explicite wkomponowania w proces automatycznej oceny predyktorów opisujących tkanki wewnątrz ROI. Są to cechy bardziej odporne na wspomniane wcześniej zaburzenia procesu gojenia, które można ogólnie nazwać szumem w sygnale gojenia (np. znaczące zwiększenie się obrzęku na skutek temperatury lub wysiłku fizycznego). W szczególności, cechy Haralicka zostały uwzględnione przy analizie SCT, TE i TU. Statystyki z ROI w znaczący sposób polepszyły analizę TT, który to parametr uzyskał najlepsze wyniki metryk spośród wszystkich. Dodatkowo, zwiększona liczba cech DL podniosła poziom informacji wpływając na ogólną ocenę, jak i w szczególności na parametr TisE zależny od zewnętrznych obszarów. Jedynie parametr STE (choć wciąż znacząco poprawiony w stosunku do przyjętego poziomu odniesienia) uzyskał korelacje poniżej 0,5. Wynik ten będzie dyskutowany w dalszej części tej rozprawy.
 
 Dla lepszego zrozumienia różnic między obszarami objętymi cechami DL oraz ROI wykonano szereg eksperymentów i analiz w celu wizualizacji obszaru zainteresowania sieci neuronowych. Przykład dla pojedynczych przekrojów znajduje się \linebreak na Rys. \ref{fig:XAI}.  
 \begin{figure}[h!]

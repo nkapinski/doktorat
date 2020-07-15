@@ -169,11 +169,11 @@ Znalezienie lokalnego minimum nie jest zwykle równoważne z otrzymaniem najleps
 
 Podsumowując, metody gradientowe są wydajne obliczeniowo i prowadzą do znalezienia wielu satysfakcjonujących rozwiązań, które mogą być wykorzystane do rozwiązania praktycznych problemów. 
 
-Zasada działania metod gradientowych bazuje na obieraniu w kolejnych krokach iteracji następujących wartości funkcji $f$, przesuwając się w kierunku spadku gradientu:
+Zasada działania metod gradientowych bazuje na obieraniu w kolejnych krokach iteracji wartości zmiennej optymalizującej $x$ w kierunku spadku gradientu:
 \begin{equation}
 x' = x - \epsilon \bigtriangledown f(x),
 \end{equation} 
-gdzie $\epsilon$ to \textit{szybkość uczenia się} -- parametr określający wielkość kroku. 
+gdzie $\epsilon$ to \textit{szybkość uczenia się} -- parametr określający wielkość kroku. Działanie to prowadzi do spadku wartości funkcji celu w kolejnych krokach. 
 
 Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacjom wykonywanym przez kilka lub więcej funkcji po kolei. \linebreak W takich sytuacjach do obliczeń spadku gradientu wykorzystywane są funkcje, których pochodne są znane.
 
@@ -337,13 +337,13 @@ Problem (2) ma duże implikacje w praktyce stosowania sieci neuronowych, gdyż u
 
 W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. Do tych zagadnień wykorzystywane są metody takie jak:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X1$ i $X2$ zapisywany jest następującym wzorem:
+	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X1$ i $X2$, będących dwoma równolicznymi zbiorami sparowanych, obserwowanych wartości, zapisywany jest następującym wzorem:
 	\begin{equation}
 	\label{PearsorR}
 	r_{X1X2} = \frac{\sum_{i=1}^n (X1_i - \overline{X1})(X2_i - \overline{X2})}{\sqrt{\sum_{i=1}^n (X1_i - \overline{X1})^2} \sqrt{\sum_{i=1}^n (X2_i - \overline{X2})^2}},
 	\end{equation}
 	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji, a $\overline{X1}$ i $\overline{X2}$ to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
-	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$ dla dwóch rozkładów prawdopodobieństwa $p_k$ i $q_k$ zapisany jest wzorem: 
+	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$ dla dwóch porównywanych dyskretnych rozkładów prawdopodobieństwa $p_k$ i $q_k$ zapisany jest wzorem: 
 	\begin{equation}
 	d_{KL}(p_k, q_k) = \sum_{i} p_k(i) \log_2 \frac{p_k(i)}{q_k(i)}
 	\end{equation}
@@ -351,18 +351,18 @@ W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu min
 \end{itemize}
 Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwość skutecznej redukcji wymiarowości z zachowaniem efektywności algorytmu.
 
-W celu selekcji cech można również stosować różnego rodzaju, specjalnie zaprojektowane regresje. Do najbardziej powszechnie stosowanych należą algorytmy regresji grzbietowej, LASSO (od ang. \textit{Least Absolute Shrinkage and Selection Operator}) oraz Elastic Net. Różnią się one definicją zadania minimalizacji wektora cech $w$:
+W celu selekcji cech można również stosować różnego rodzaju, specjalnie zaprojektowane regresje. Do najbardziej powszechnie stosowanych należą algorytmy regresji grzbietowej, LASSO (od ang. \textit{Least Absolute Shrinkage and Selection Operator}) oraz Elastic Net. Różnią się one definicją zadania minimalizacji funkcji kosztu poprzez optymalizację wektora współczynników regresji pełniącego jednocześnie funkcję wektora cech $w$:  
 
 \begin{equation}
-\textrm{Regresja grzbietowa-- } \underset{w}{min} ||X*w-Y||_2^2 + \alpha ||w||_2^2;
+\textrm{Regresja grzbietowa-- } \underset{w}{min} (||X*w-Y||_2^2 + \alpha ||w||_2^2);
 \label{equ:ridgeReg}
 \end{equation}
 \begin{equation}
-\textrm{LASSO-- } \underset{w}{min} ||X*w-Y||_2^2 + \alpha ||w||_1;
+\textrm{LASSO-- } \underset{w}{min} (||X*w-Y||_2^2 + \alpha ||w||_1);
 \label{equ:lassoReg}
 \end{equation}
 \begin{equation}
-\textrm{Elastic Net-- } \underset{w}{min} { \frac{1}{2n_{samples}} ||X*w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2}.
+\textrm{Elastic Net-- } \underset{w}{min} ({ \frac{1}{2n_{samples}} ||X*w - y||_2 ^ 2 + \alpha \rho ||w||_1 + \frac{\alpha(1-\rho)}{2} ||w||_2 ^ 2}).
 \label{equ:elasticNet}
 \end{equation}
 
@@ -596,14 +596,14 @@ Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze prz
 Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR czy COCO \cite{COCO} osiągnęły dokładność klasyfikacji porównywalną \linebreak z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
 
 \subsection{Złożenia}
-Szkolenie złożeń sieci (ang. \textit{esemble learning}) polega na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii. W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych (zob. \cite{Ensemble}). Jako często stosowane przykłady można podać: uśrednianie, głosowanie, klasyfikację Bayesa, generalizację stosów.
+Szkolenie złożeń sieci (ang. \textit{esemble learning}) bazuje na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii, która w danym zadaniu dokonuje integracji lokalnych wyników. W zależności od zadania, nadrzędna metoda nazywana jest np. \textit{meta-klasyfikatorem} (w przypadku klasyfikacji) bądź np. \textit{meta-regresorem} (w przypadku regresji). W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych (zob. \cite{Ensemble}). Jako często stosowane przykłady można podać: uśrednianie, głosowanie lub generalizację stosów.
 
 \subsubsection{Uśrednianie}
-Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednienie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez ich liczbę. Uśredniać można bezpośrednio wyniki ostatecznej klasyfikacji jak również prawdopodobieństwa przynależności do odpowiednich klas, które są np. wynikiem \textit{funkcji softmax}:
+Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednienie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez ich liczbę. Przykład stanowić może uśrednianie wyników \textit{funkcji softmax}:
 \begin{equation}
 \sigma (z)_j= \frac{e^{z_j}}{\sum_{k=1}^{K} e^{z_k}},
 \end{equation} 
-używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z$ sygnałów wejściowych i $j$ wyjściowych.
+używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z$ sygnałów wejściowych i $j$ wyjściowych. Co istotne, rezultaty funkcji softmax przy przyjęcia odpowiedniego modelu probabilistycznego mogą stanowić prawdopodobieństwa przynależności do odpowiednich klas.
 
 Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa \linebreak im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty, tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (zob. \cite{Breiman2001}).
 
@@ -615,22 +615,12 @@ W głosowaniu stosuje się mechanizm zliczania przewidzianych przez modele bazow
 
 W porównaniu do uśredniania, głosowanie jest mniej czułe na predykcje pojedynczych modeli. Wykorzystuje jedynie informacje o przewidzianych etykietach, \linebreak co z kolei utrudnia konstrukcje bardziej wyszukanych rozwiązań.
 
-\subsubsection{Klasyfikacja Bayesa}
-
-W przypadku tej metody, każdy model bazowy $j$ postrzegany jest jako hipoteza $h_j$. Każda z hipotez posiada wagę proporcjonalną do prawdopodobieństwa zdarzenia, w którym dany zbiór trenujący zostałby wybrany z ogółu danych, gdyby dana hipoteza była prawdziwa. Jest to tzw. optymalna klasyfikacja Bayesa, którą można zapisać następującym równaniem:
-\begin{equation}
-y_e = arg max_{c_j \in C_e} \sum_{h_i \in H_e} P(c_j \mid h_i)P(T_e \mid h_i)P(h_i)
-\end{equation}
-gdzie $y_e$ to przewidziana etykieta, $C_e$ jest zbiorem wszystkich możliwych klas, $H_e$ \linebreak to przestrzeń hipotez, a $T_e$ to zbiór danych trenujących.
-
-W praktyce z uwagi na dużą złożoność obliczeniową nie stosuje się optymalnej klasyfikacji Bayesa, a jedynie aproksymacje tej metody np.: BPA (od ang. \textit{Bayesian Parameter Averaging}) \cite{BPA}, BMA (od ang. \textit{Bayesian Model Averaging}) \cite{BMA}, czy też BMC (od ang. \textit{Bayesian Model Combination}) \cite{BMC}.
-
 \subsubsection{Generalizacja stosów}
-Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnego klasyfikatora, którego zadaniem jest wybór optymalnego wektora wag $w$ dla stosu $S^g$ predykcji dla danych $x_s$:
+Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnej metody, której zadaniem jest wybór optymalnego wektora wag $w$ dla stosu $S^g$ predykcji dla danych $x_s$:
 \begin{equation}
 S^g(x_s) = \sum_{i=1}^{m}w_i {S^g}_i(x_s)
 \end{equation}
 
-W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie klasyfikator nadrzędny wykorzystuje je jako dane do treningu poprawnych wartości $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
+W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie nadrzędna metoda wykorzystuje je jako dane do treningu poprawnych wartości $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
 
     

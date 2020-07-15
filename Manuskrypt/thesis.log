@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  10 JUL 2020 14:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  15 JUL 2020 17:20
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -609,9 +609,6 @@ Version 1.0, Aug 13, 1994
 ) (fancyhdr.sty
 \headwidth=\dimen192
 ) (thesis.aux (header.aux)
-
-LaTeX Warning: Label `sagittalAchillesComp' multiply defined.
-
 
 LaTeX Warning: Label `tab:USG-params' multiply defined.
 
@@ -1414,11 +1411,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[66 <./figures/ResNet.jpg>]
+[66 <./figures/ResNet.jpg>]) (Rozdzialy/opis_metody.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[67]) (Rozdzialy/opis_metody.tex
+[67]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2090,10 +2087,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18934 strings out of 492895
- 367348 string characters out of 3122802
- 398619 words of memory out of 3000000
- 22553 multiletter control sequences out of 15000+200000
+ 18935 strings out of 492895
+ 367365 string characters out of 3122802
+ 398630 words of memory out of 3000000
+ 22554 multiletter control sequences out of 15000+200000
  559480 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,2372b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2129,7 +2126,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (152 pages, 16090842 bytes).
+Output written on thesis.pdf (152 pages, 16089138 bytes).
 PDF statistics:
  640 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

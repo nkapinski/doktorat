@@ -31,15 +31,16 @@
 \contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{79}% 
 \contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{81}% 
 \contentsline {subsubsection}{Analiza wizualna}{81}% 
-\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{85}% 
+\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{84}% 
 \contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{88}% 
 \contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{92}% 
-\contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{92}% 
+\contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{93}% 
 \contentsline {subsection}{\numberline {5.3.2}Krzywe gojenia}{97}% 
 \contentsline {chapter}{\numberline {6}Testy nowej metody}{104}% 
 \contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{104}% 
 \contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z USG}{108}% 
 \contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{112}% 
+\contentsline {section}{\numberline {6.4}Propozycje zastosowa\IeC {\'n} klinicznych}{117}% 
 \contentsline {chapter}{\numberline {7}Podsumowanie}{118}% 
 \contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{137}% 
 \contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{138}% 

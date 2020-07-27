@@ -41,7 +41,7 @@ Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla k
 
 Z uwagi na wyniki korelacji sieci ResNet-50$_{e}$, model ten został odrzucony z dalszej analizy. Niskie Corr jest prawdopodobnie efektem nadmiernego dopasowania. W skrajnym przypadku uśredniona korelacja równa jest 0,00 (parametr STE), co wynika z predykcji stałych wartości dla całego okresu gojenia się i błędów numerycznych związanych z tym faktem. 
 
-W przypadku modeli AlexNet$_{e}$ i Inception-v3$_{e}$ nie ma istotnych statystycznie różnic dotyczących liczonych średnich. Sieć Inception-v3$_{e}$ charakteryzują natomiast mniejsze błędy maksymalne tj. MAX-AE, co w efekcie skutkowało wyborem tej architektury do dalszych porównań.
+W przypadku modeli AlexNet$_{e}$ i Inception-v3$_{e}$ nie ma istotnych statystycznie różnic dotyczących liczonych średnich. Sieć Inception-v3$_{e}$ charakteryzują natomiast mniejsze błędy maksymalne tj. MAX-AE. Na zbiorze testowym sprawdzono również, że nie ma efektu nadmiernego dopasowania modelu Inception-v3$_{e}$, co w podsumowaniu skutkowało wyborem tej architektury do dalszych porównań.
 
 Model Inception-v3$_{e}$ zestawiono w Tab. \ref{tab:end-to-end_testset} z proponowaną przez autora tej pracy metodą meta-regresji opartą o algorytm SVR (SVR), porównując wyniki na zbiorze testowych 4-ech pacjentów.  
 \vspace{10px}
@@ -68,11 +68,9 @@ Metoda SVR osiąga istotne statystycznie wyższe wartości Corr dla parametrów 
 
 Dobre wyniki MAX-AE modelu Inception-v3$_{e}$ są skutkiem sposobu treningu polegającego na \textit{explicite} modelowaniu wzorca odniesienia, co przekłada się na zadanie minimalizowania maksymalnych błędów. Trudność w interpretacji polega na fakcie, że maksymalne błędy mogą być wynikiem błędu algorytmu, jak również pojedynczymi omyłkami doświadczonego radiologa, który z uwagi np. na zmęczenie bądź inne dystrakcje percepcji popełnił błąd w ocenie.
 
-Jeden istotnie lepszy wynik sieci Inception-v3$_e$ w MAE dla TisE jest intuicyjny.  Jest to jedyny parametr oceniany na zewnątrz ścięgna, gdzie fuzja cech nie powinna mieć bezpośredniego wpływu na polepszenie rezultatu. 
+Jeden istotnie lepszy wynik sieci Inception-v3$_e$ w MAE dla TisE jest intuicyjny. Jest to jedyny parametr oceniany na zewnątrz ścięgna, gdzie fuzja cech nie powinna mieć bezpośredniego wpływu na polepszenie rezultatu. 
 
-Wyniki Corr świadczą, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się skuteczniej dywersyfikują kolejne fazy procesu i pozwalają \linebreak na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end.   
-
-W podsumowaniu należy również podkreślić zasadnicze różnice między dwoma przedstawionymi metodami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6-ciu parametrów w kolejnych krokach czasowych. Średnio jest to około jedna godzina pracy na pacjenta. Proponowana przez autora metoda wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane \textit{słabo-nadzorowanym} (w odróżnieniu od w \textit{pełni-nadzorowanego}, w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory lub zdrowy oraz znacząco mniejszego zbioru pacjentów z segmentacją ścięgna, który służyłby do sporadycznych ulepszeń etapu meta-regresji. 
+Wyniki Corr świadczą, że cechy wykorzystywane w metodzie SVR do oceny procesu gojenia się pozwalają na ocenę trendu z lepszą dokładnością niż metoda oparta o paradygmat end-to-end. W podsumowaniu należy jednak również podkreślić zasadnicze praktyczne różnice między oboma podejściami. Do rozwoju metody end-to-end niezbędna jest pełna informacja od radiologa tj. ocena 6-ciu parametrów w kolejnych krokach czasowych. Średnio jest to około jedna godzina pracy na pacjenta. Proponowana przez autora metoda w części wykorzystuje sieć wyszkoloną na bazie etykiet wyższego poziomu tj. rozróżniających jedynie oznaczenia zdrowych i chorych tkanek. Takie szkolenie jest nazywane \textit{słabo-nadzorowanym} (w odróżnieniu od w \textit{pełni-nadzorowanego}, w paradygmacie end-to-end). Dalszy rozwój proponowanej metody można zatem uzyskać przy wykorzystaniu danych oznaczonych jako chory lub zdrowy (ulepszanie ekstraktora cech) oraz znacząco mniejszego zbioru pacjentów z segmentacją ścięgna, który służyłby do sporadycznych ulepszeń etapu meta-regresji. 
 
 Minusem podejścia meta-regresji jest natomiast wymóg informacji o ROI. W kontekście badań na danych z projektu START problem oznaczenia nie istniał, gdyż obszar ścięgna był rutynowo etykietowany do celów innych badań. W przypadku bardziej generycznym, gdzie nie istniałyby oznaczenia obszaru ścięgna, zaistniałaby konieczność dodatkowej pracy radiologa w wymiarze około 10 minut na pacjenta (przy założeniu wykorzystania odpowiedniego oprogramowanie np. Osirix \cite{Rosset2004} lub VisNow \cite{Nowinski_Borucki_2014}). Nowoczesne metody pokazują możliwość zautomatyzowania tego procesu. Dla przykładu, wstępne prace dr. Jędrzeja Nowosielskiego i dr. Piotra Regulskiego oraz autora tej pracy pokazują, że skuteczne w tym zakresie mogą być sieci typu \textit{fully convolutional neural networks}. Przykład działania takiej architektury, a dokładniej U-Net zaproponowanej w \cite{Ronneberger2015}, można zaobserwować na Rys. \ref{fig:segmentacja}. 
 
@@ -439,6 +437,10 @@ Finalnie, zestawiono nowe zmienne opisujące ocenę radiologa i ocenę automatyc
 Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS, co jest zgodne z praktyką kliniczną -- dlatego zalecane jest wykonywanie badań radiologicznych, które dostarczają komplementarnych informacji.
 
 Interesującym rezultatem jest wynik istotnej, niewielkiej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej z czynnika ludzkiego, spowodowała usystematyzowanie oceny i uwspólnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, mających na celu stworzenie komplementarnego testu maksymalizującego informację dla lekarza prowadzącego, przy jednoczesnym minimalizowaniu objętości protokołu monitorowania pacjentów.
+
+\section{Propozycje zastosowań klinicznych}
+
+Wnioski natury praktycznej
 
 \chapter{Podsumowanie}
 

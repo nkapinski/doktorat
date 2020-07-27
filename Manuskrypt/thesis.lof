@@ -32,8 +32,8 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{78}% 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H_{PC}$ z 10 pacjent\IeC {\'o}w.\relax }}{80}% 
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10-ciu sekwencji RM.\relax }}{82}% 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12-tym tygodniu po rekonstrukcji.\relax }}{83}% 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast $ GRE TE\_MIN.\relax }}{84}% 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12-tym tygodniu po rekonstrukcji.\relax }}{84}% 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast $ GRE TE\_MIN.\relax }}{85}% 
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{91}% 
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Tr\IeC {\'o}jwymiarowa wizualizacja zmian obszaru zainteresowania w kolejnych etapach gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna.\relax }}{92}% 
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{94}% 

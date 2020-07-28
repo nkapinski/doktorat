@@ -40,7 +40,7 @@
 \contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{104}% 
 \contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z USG}{108}% 
 \contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{112}% 
-\contentsline {section}{\numberline {6.4}Propozycje zastosowa\IeC {\'n} klinicznych}{117}% 
-\contentsline {chapter}{\numberline {7}Podsumowanie}{118}% 
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{137}% 
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{138}% 
+\contentsline {chapter}{\numberline {7}Wnioski}{118}% 
+\contentsline {chapter}{\numberline {8}Podsumowanie}{120}% 
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{139}% 
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{140}% 

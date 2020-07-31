@@ -577,4 +577,55 @@ Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk \l
 \end{figure}
 Jest to jedyny parametr oceniany w całości na zewnątrz ROI, tylko z wykorzystaniem cech DL. Na przełomie fazy poliferacji i remodelingu (tydz. 6--9) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze, wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, \linebreak a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26-tego tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (tydz. 3--6), co wymaga dalszej analizy.
 
+\subsection{Ocena holistyczna}
 
+W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna i wyniku ATRS z predykcjami automatycznej metody oraz oceną radiologa, zdecydowano się również dla badań radiologicznych przeprowadzić analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. Czynnik1 zamiast 6-ciu parametrów: SCT, STE, TE, TisE, TT, TU. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
+
+\begin{table}[h]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
+	\label{tab:pca-gt-pred}
+	\begin{tabular}{c|c|c}
+		Zmienna&Czynnik1 - ocena radiologa&Czynnik1 - ocena automatyczna \\
+		\hline \hline
+		SCT&\textbf{-0,79}&\textbf{-0,95}\\
+		\hline
+		STE&0,57&\textbf{0,86}\\
+		\hline
+		TE&\textbf{-0,85}&\textbf{-0,94}\\
+		\hline
+		TisE&\textbf{-0,71}&\textbf{-0,89}\\
+		\hline
+		TT&\textbf{-0,76}&\textbf{-0,72}\\
+		\hline
+		TU&\textbf{-0,88}&\textbf{-0,94}\\
+		\hline \hline	
+		Udział&0,57&0,78\\
+		
+	\end{tabular}
+\end{table}
+
+Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywna ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
+
+W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. \linebreak W Tabeli \ref{tab:gtVSpred} przedstawiono korelacje oceny automatycznej z oceną radiologa.
+
+\vspace{10px}
+\begin{table}[h]
+	\centering
+	\setlength{\tabcolsep}{3pt}
+	\setlength\extrarowheight{2pt}
+	\caption{Korelacja między oceną radiologa, a ocena automatyczną. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
+	\label{tab:gtVSpred}
+	\begin{tabular}{c|c|c}
+		&Ocena automatyczna &Ocena radiologa \\
+		\hline \hline
+		Ocena automatyczna&1,0000&\textbf{0,8070}\\
+		\hline
+		Ocena radiologa&\textbf{0,8070}&1,0000\\
+		
+	\end{tabular}
+\end{table}
+
+Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną. Fakt ten jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami.

@@ -46,11 +46,12 @@
 \contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TE.\relax }}{101}% 
 \contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TU.\relax }}{102}% 
 \contentsline {figure}{\numberline {5.19}{\ignorespaces Ocena parametru TisE.\relax }}{102}% 
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Przyk\IeC {\l }adowy raport zawieraj\IeC {\k a}cy ocen\IeC {\k e} holistyczn\IeC {\k a} i szczeg\IeC {\'o}\IeC {\l }ow\IeC {\k a} stanu \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{105}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{108}% 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w przekrojach osiowych i strza\IeC {\l }kowych, w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna.\relax }}{110}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{109}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w przekrojach osiowych i strza\IeC {\l }kowych, w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna.\relax }}{111}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Przewidywania rozwoju mo\IeC {\.z}liwo\IeC {\'s}ci system\IeC {\'o}w opartych o metody AI w radiologii wed\IeC {\l }ug firmy IBM.\relax }}{121}% 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Przewidywania rozwoju mo\IeC {\.z}liwo\IeC {\'s}ci system\IeC {\'o}w opartych o metody AI w radiologii wed\IeC {\l }ug firmy IBM.\relax }}{122}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{142}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{143}% 

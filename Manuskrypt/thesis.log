@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  31 JUL 2020 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  31 JUL 2020 12:16
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1773,15 +1773,32 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (Rozdzialy/wyniki_podsumowanie.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [103]
+<figures/raport.png, id=441, 448.67625pt x 579.96675pt>
+File: figures/raport.png Graphic file (type png)
+<use figures/raport.png>
+Package pdftex.def Info: figures/raport.png  used on input line 638.
+(pdftex.def)             Requested size: 426.79135pt x 551.6998pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (Rozdzialy/wyniki_podsumowanie.tex
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [104]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[105 <./figures/raport.png>]
 Rozdzia\PlPrIeC {\l } 6.
 
 Underfull \hbox (badness 1092) in paragraph at lines 3--4
@@ -1789,7 +1806,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 3--4
 ra-co-wa-nej me-to-dy.
  []
 
-[105
+[106
 
 ]
 Overfull \hbox (6.0636pt too wide) in paragraph at lines 53--62
@@ -1800,12 +1817,12 @@ Overfull \hbox (6.0636pt too wide) in paragraph at lines 53--62
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[106]
+[107]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[107]
-<figures/Segmentacja.jpg, id=454, 1901.1025pt x 827.09pt>
+[108]
+<figures/Segmentacja.jpg, id=458, 1901.1025pt x 827.09pt>
 File: figures/Segmentacja.jpg Graphic file (type jpg)
 <use figures/Segmentacja.jpg>
 Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 79.
@@ -1814,8 +1831,8 @@ Package pdftex.def Info: figures/Segmentacja.jpg  used on input line 79.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[108 <./figures/Segmentacja.jpg>]
-<figures/Data_US_sample.jpg, id=458, 1901.1025pt x 1280.785pt>
+[109 <./figures/Segmentacja.jpg>]
+<figures/Data_US_sample.jpg, id=462, 1901.1025pt x 1280.785pt>
 File: figures/Data_US_sample.jpg Graphic file (type jpg)
 <use figures/Data_US_sample.jpg>
 Package pdftex.def Info: figures/Data_US_sample.jpg  used on input line 101.
@@ -1828,7 +1845,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[109]
+[110]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 109.
@@ -1837,15 +1854,15 @@ LaTeX Warning: No positions in optional float specifier.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[110 <./figures/Data_US_sample.jpg>]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[111]
+[111 <./figures/Data_US_sample.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [112]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[113]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1853,11 +1870,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[113]
+[114]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[114]
+[115]
 Overfull \hbox (13.33022pt too wide) in paragraph at lines 317--330
  [][] 
  []
@@ -1866,7 +1883,7 @@ Overfull \hbox (13.33022pt too wide) in paragraph at lines 317--330
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[115]
+[116]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1874,20 +1891,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[116]
+[117]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[117]
+[118]
 Rozdzia\PlPrIeC {\l } 7.
-[118
+[119
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[119]
-<figures/Pred_AI.jpg, id=494, 695.59875pt x 304.7385pt>
+[120]
+<figures/Pred_AI.jpg, id=498, 695.59875pt x 304.7385pt>
 File: figures/Pred_AI.jpg Graphic file (type jpg)
 <use figures/Pred_AI.jpg>
 Package pdftex.def Info: figures/Pred_AI.jpg  used on input line 402.
@@ -1900,19 +1917,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[120]
+[121]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[121 <./figures/Pred_AI.jpg>]
+[122 <./figures/Pred_AI.jpg>]
 Rozdzia\PlPrIeC {\l } 8.
-[122
+[123
 
 ]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[123]
+[124]
 Overfull \hbox (4.29654pt too wide) in paragraph at lines 426--427
 []\OT4/cmr/m/n/12 Polepszenie sku-tecz-no-±ci wspo-ma-ga-nia re-ha-bi-li-ta-cji
  w ob-sza-rze ukªa-du mi¦±niowo-
@@ -1922,7 +1939,7 @@ Overfull \hbox (4.29654pt too wide) in paragraph at lines 426--427
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[124]
+[125]
 Underfull \hbox (badness 10000) in paragraph at lines 4--9
 []\OT4/cmr/m/n/12 AI to dri-ve GDP ga-ins of 15.7 tril-lion USD with pro-duc-ti
 -vi-
@@ -1963,13 +1980,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--22
 lthcare . com / en / products /
  []
 
-[125
+[126
 
 ]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[126]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1978,6 +1991,10 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [128]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[129]
 Underfull \hbox (badness 10000) in paragraph at lines 248--253
 []\OT4/cmr/m/n/12 Vincent Fung.  An Ove-rview of Re-sNet and
  []
@@ -1998,11 +2015,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 248--253
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[129]
+[130]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[130]
+[131]
 Underfull \hbox (badness 1527) in paragraph at lines 358--362
 []\OT4/cmr/m/n/12 NVIDIA Inc.  NVI-DIA Ten-sorRT.  $\OT4/cmtt/m/n/12 https : / 
 / developer . nvidia . com /
@@ -2036,10 +2053,6 @@ e-[]data/$\OT4/cmr/m/n/12 .  Dost.:
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[131]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [132]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -2049,6 +2062,10 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [134]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[135]
 Underfull \hbox (badness 10000) in paragraph at lines 646--652
 []\OT4/cmr/m/n/12 M. S. Ra-ikin.  Epi-de-mio-lo-gy of Achil-les ten-don rup-
  []
@@ -2069,7 +2086,7 @@ s$\OT4/cmr/m/n/12 , 2014.  Dost.:
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[135]
+[136]
 Underfull \hbox (badness 1102) in paragraph at lines 685--692
 []\OT4/cmr/m/n/12 Agnieszka Ro-si«-ska, Mag-da-le-na Sy-rek.  Re-ha-bi-li-ta-cj
 a ±ci¦-gna Achil-le-sa
@@ -2085,10 +2102,6 @@ Underfull \hbox (badness 1616) in paragraph at lines 685--692
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[136]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
 [137]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -2101,33 +2114,37 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[140]) (appendix.tex
+[140]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[141]
+[141]) (appendix.tex
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[142]
 Dodatek A.
-<figures/achillesDL.jpg, id=566, 1181.16281pt x 631.60968pt>
+<figures/achillesDL.jpg, id=570, 1181.16281pt x 631.60968pt>
 File: figures/achillesDL.jpg Graphic file (type jpg)
 <use figures/achillesDL.jpg>
 Package pdftex.def Info: figures/achillesDL.jpg  used on input line 21.
 (pdftex.def)             Requested size: 426.79135pt x 228.21777pt.
-[142
+[143
 
  <./figures/achillesDL.jpg>])
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[143] (thesis.aux (header.aux))
+[144] (thesis.aux (header.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18944 strings out of 492895
- 367530 string characters out of 3122802
- 399674 words of memory out of 3000000
- 22562 multiletter control sequences out of 15000+200000
+ 18951 strings out of 492895
+ 367663 string characters out of 3122802
+ 399701 words of memory out of 3000000
+ 22568 multiletter control sequences out of 15000+200000
  559480 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,15n,63p,3407b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2163,9 +2180,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (157 pages, 16193603 bytes).
+Output written on thesis.pdf (158 pages, 16394074 bytes).
 PDF statistics:
- 657 PDF objects out of 1000 (max. 8388607)
+ 661 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 241 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

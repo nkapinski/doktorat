@@ -37,11 +37,11 @@
 \contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{93}% 
 \contentsline {subsection}{\numberline {5.3.2}Krzywe gojenia}{97}% 
 \contentsline {subsection}{\numberline {5.3.3}Ocena holistyczna}{103}% 
-\contentsline {chapter}{\numberline {6}Testy nowej metody}{105}% 
-\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{105}% 
-\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z USG}{109}% 
-\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{113}% 
-\contentsline {chapter}{\numberline {7}Wnioski}{118}% 
-\contentsline {chapter}{\numberline {8}Podsumowanie}{122}% 
-\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{141}% 
-\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{142}% 
+\contentsline {chapter}{\numberline {6}Testy nowej metody}{106}% 
+\contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{106}% 
+\contentsline {section}{\numberline {6.2}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o dane z USG}{110}% 
+\contentsline {section}{\numberline {6.3}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o badania biomechaniczne}{114}% 
+\contentsline {chapter}{\numberline {7}Wnioski}{119}% 
+\contentsline {chapter}{\numberline {8}Podsumowanie}{123}% 
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{142}% 
+\contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{143}% 

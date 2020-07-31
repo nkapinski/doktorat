@@ -578,8 +578,10 @@ Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk \l
 Jest to jedyny parametr oceniany w całości na zewnątrz ROI, tylko z wykorzystaniem cech DL. Na przełomie fazy poliferacji i remodelingu (tydz. 6--9) następuje charakterystyczny, krótkotrwały wzrost płynów w tym obszarze, wynikający z intensywności procesu. W ocenach radiologa, szczególnie widoczny jest on dla pacjenta 115805 i 127752. Dla pacjenta 140283 widoczna jest stagnacja, \linebreak a dla 127108 zwiększenie obrzęku, które utrzymuje się przez kolejne etapy do 26-tego tyg. W krzywych wygenerowanych w ocenie automatycznej widoczne są również maksima lokalne w okolicach przełomu faz gojenia się. Są one jednak przesunięte względem oceny radiologa (tydz. 3--6), co wymaga dalszej analizy.
 
 \subsection{Ocena holistyczna}
+\label{seq:achilles-score}
+Dotychczas w pracy posługiwano się 6-cioma parametrami do oceny stanu ścięgna Achillesa w badaniu RM. Wskaźniki te posiadają swoją interpretację kliniczną podaną w p. \ref{seq:ground-truth}, która jest czytelna dla radiologa. Należy jednak pamiętać, że w całym ciągu opieki nad pacjentem w zakresie leczenia ścięgna uczestniczy wiele osób, a w szczególności lekarz prowadzący (ortopeda) i fizjoterapeuci. Multiparametryczna ocena może się okazać zbyt szczegółowa i w praktyce, w procesie wymiany informacji dotyczącej postępów rehabilitacji, może utrudnić komunikację. Dlatego w badaniu zawartym w tym punkcie zdecydowano się podjąć próbę wyznaczenia jednego parametru, który zachowałby możliwie najwięcej informacji z proponowanej ustrukturyzowanej oceny, a jednocześnie stanowiłby komunikatywny sposób wymiany informacji w procesie rehabilitacji, pozwalający odpowiedzieć na proste pytania np. czy stan pacjenta w ogólności polepsza się, czy nie. 
 
-W celu efektywnego porównania nowych zmiennych opisujących biomechanikę ścięgna i wyniku ATRS z predykcjami automatycznej metody oraz oceną radiologa, zdecydowano się również dla badań radiologicznych przeprowadzić analizę czynnikową. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. Czynnik1 zamiast 6-ciu parametrów: SCT, STE, TE, TisE, TT, TU. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
+W tym celu, zarówno dla oceny automatycznej jak i radiologa zdecydowano się dla wyników pacjentów testowych przeprowadzić analizę czynnikową PCA. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. Czynnik1 zamiast 6-ciu parametrów: SCT, STE, TE, TisE, TT, TU. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
 
 \begin{table}[h]
 	\centering
@@ -616,7 +618,7 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. \line
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Korelacja między oceną radiologa, a ocena automatyczną. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
+	\caption{Korelacja między oceną radiologa, a ocena automatyczną. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05.}
 	\label{tab:gtVSpred}
 	\begin{tabular}{c|c|c}
 		&Ocena automatyczna &Ocena radiologa \\
@@ -628,4 +630,13 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. \line
 	\end{tabular}
 \end{table}
 
-Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną. Fakt ten jest kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami.
+Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną, co wynika ze sposobu treningu algorytmu. Fakt ten jest jednak kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami.
+
+Nowa zmienna, będąca holistyczną oceną procesu gojenia w tej pracy będzie dalej nazywana \textit{Achilles score}. W praktyce klinicznej mogłaby stanowić podstawę wymiany informacji pomiędzy lekarzami ortopedami, radiologami i fizjoterapeutami. Propozycja takiego raportu stworzona przez autora tej rozprawy znajduje się na Rys. \ref{fig:raport}. 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\textwidth]{figures/raport.png}
+	\caption{Przykładowy raport zawierający ocenę holistyczną i szczegółową stanu ścięgna Achillesa.}\label{fig:raport}
+\end{figure}
+Wyszczególniono w nim ocenę holistyczną realizowaną przez Achilles score oraz parametr TT -- jedyny niosący informację o geometrii ścięgna. Szczegółowy opis zestawiono na kolejnych wykresach, gdzie kolorem oraz punktorem oznaczono wartości parametrów. Dodatkowo dla każdego szczegółowego parametru umieszczono wizualizację funkcji Gaussa wyliczonej na podstawie wartości ze średniej i odchylenia standardowego wyników dla całej populacji pacjentów (testowych i treningowych). Na dole raportu przedstawiono krzywe gojenia wraz z prezentacją wariancji zbioru całej populacji pacjentów. Raport stanowi wartość dodaną w zakresie analizy wizualnej wyników, jego potencjalne zastosowanie zostało szerzej omówione we wnioskach w p. \ref{seq:wnioski}. 
+

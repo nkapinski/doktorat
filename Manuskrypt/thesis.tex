@@ -18,9 +18,11 @@
 \usepackage[font=small, labelfont=bf, justification=justified, singlelinecheck = false, format=plain]{caption}
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{imakeidx}
 
 % for margins left, right top bottom
 \usepackage{anysize}
+\makeindex[columns=1, title=Wykaz skrótów i oznaczeń, intoc]
 \marginsize{3.5cm}{2.5cm}{2.5cm}{2.5cm}
 \let\origdoublepage\cleardoublepage    %%komenda wstawiająca czyste kartki
 \newcommand{\clearemptydoublepage}{%
@@ -98,5 +100,5 @@
 %dodatki
 \appendix
 \input{appendix.tex}
-
+\printindex
 \end{document}

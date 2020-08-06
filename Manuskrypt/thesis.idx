@@ -1,0 +1,162 @@
+\indexentry{SI -- Sztuczna Inteligencja}{2}
+\indexentry{GPGPU -- skr\IeC {\'o}t od ang. \textit{General-Purpose Computing on Graphics Processing Units}}{3}
+\indexentry{TPU -- skr\IeC {\'o}t od ang. \textit{Tensor Processing Unit}}{3}
+\indexentry{GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}}{4}
+\indexentry{DKFZ -- skr\IeC {\'o}t od niem. \textit{Deutsches Krebsforschungszentrum}}{4}
+\indexentry{RM -- Rezonans Magnetyczny}{5}
+\indexentry{ATP -- adenozyno-5'-trifosforan}{10}
+\indexentry{$F_A$ -- si\IeC {\l }a wywo\IeC {\l }ana skurczem mi\IeC {\k e}\IeC {\'s}ni}{11}
+\indexentry{$F_P$ -- pasywna si\IeC {\l }a odpowiadaj\IeC {\k a}ca za bezw\IeC {\l }adno\IeC {\'s}\IeC {\'c} tkanki mi\IeC {\k e}kkiej w mi\IeC {\k e}\IeC {\'s}niu}{11}
+\indexentry{$F^{mt}$ -- wynikowa si\IeC {\l }a przekazywana przez \IeC {\'s}ci\IeC {\k e}gno}{11}
+\indexentry{$l_t$ -- d\IeC {\l }ugo\IeC {\'s}ci \IeC {\'s}ci\IeC {\k e}gna}{11}
+\indexentry{$\phi$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy \IeC {\'s}ci\IeC {\k e}gnem a mi\IeC {\k e}\IeC {\'s}niem}{11}
+\indexentry{RM -- Rezonans Magnetyczny}{17}
+\indexentry{$\omega_0$ -- cz\IeC {\k e}sto\IeC {\'s}\IeC {\'c} ko\IeC {\l }owa proton\IeC {\'o}w}{18}
+\indexentry{$f_l$ -- cz\IeC {\k e}stotliwo\IeC {\'s}\IeC {\'c} Larmora}{18}
+\indexentry{$\gamma$ -- wsp\IeC {\'o}\IeC {\l }czynnik \IeC {\.z}yromagnetyczny w\IeC {\l }a\IeC {\'s}ciwy dla danego j\IeC {\k a}dra atomowego}{18}
+\indexentry{$B_0$ -- warto\IeC {\'s}\IeC {\'c} indukcji danego pola magnetycznego}{18}
+\indexentry{$M_0$ -- ca\IeC {\l }kowita magnetyzacja}{18}
+\indexentry{Impuls RF -- impuls o odpowiedniej cz\IeC {\k e}stotliwo\IeC {\'s}ci fal radiowych}{19}
+\indexentry{$T2$ -- czas potrzebny na $e$-krotne obni\IeC {\.z}enie magnetyzacji poprzecznej}{19}
+\indexentry{$T1$ -- czas po jakim magnetyzacja pod\IeC {\l }u\IeC {\.z}na wraca do (1 - 1/$e$) pocz\IeC {\k a}tkowej warto\IeC {\'s}ci}{19}
+\indexentry{$G_{zz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $z$}{19}
+\indexentry{$z$ -- trzecia  wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
+\indexentry{$\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF}{19}
+\indexentry{$y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
+\indexentry{$G_{yz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $y$}{19}
+\indexentry{$T_y$ -- czas w\IeC {\l }\IeC {\k a}czenia pola gradientowego $G_{yz}$}{19}
+\indexentry{$x$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
+\indexentry{$G_{xz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $x$}{19}
+\indexentry{$MR_s$ -- warto\IeC {\'s}\IeC {\'c} sygna\IeC {\l }u rezonansu magnetycznego $MR_s$}{20}
+\indexentry{$\gamma_{pd}$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} protonowa tkanki}{20}
+\indexentry{$TR$ -- czas repetycji}{20}
+\indexentry{$TE$ -- czas echa}{21}
+\indexentry{PD -- skr\IeC {\'o}t od ang. Proton density}{21}
+\indexentry{FSPGR -- skr\IeC {\'o}t od ang. Fast Spoiled Gradient Echo}{21}
+\indexentry{USG -- Ultrasonografia}{24}
+\indexentry{$\sigma(t)$ -- warto\IeC {\'s}\IeC {\'c} impulsu elektrycznego}{25}
+\indexentry{$d$ -- grubo\IeC {\'s}\IeC {\'c} np. walca}{25}
+\indexentry{$\lambda$ -- d\IeC {\l }ugo\IeC {\'s}\IeC {\'c} fali}{25}
+\indexentry{$c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} propoagacji drga\IeC {\'n}}{25}
+\indexentry{$Z$ -- impedancja akustyczna o\IeC {\'s}rodka}{25}
+\indexentry{$\rho$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka}{25}
+\indexentry{$\epsilon$ -- modu\IeC {\l } odkszta\IeC {\l }calno\IeC {\'s}ci obj\IeC {\k e}to\IeC {\'s}ciowej}{25}
+\indexentry{$I_r$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej}{26}
+\indexentry{$I_0$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej}{26}
+\indexentry{$R$ -- energetyczny wsp\IeC {\'o}\IeC {\l }czynnik odbicia}{26}
+\indexentry{$\gamma$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali}{26}
+\indexentry{$x$ -- droga przebyta przez fal\IeC {\k e}}{26}
+\indexentry{$f_0$ -- cz\IeC {\k e}stotliwo\IeC {\'s}\IeC {\'c} fali nadawanej}{27}
+\indexentry{$f_r$ -- r\IeC {\'o}\IeC {\.z}nica pomi\IeC {\k e}dzy cz\IeC {\k e}stotliwo\IeC {\'s}ci\IeC {\k a} odbieran\IeC {\k a} i emitowan\IeC {\k a} przez g\IeC {\l }owic\IeC {\k e} USG}{27}
+\indexentry{$\theta$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy kierunkiem propagacji fali ultrad\IeC {\'z}wi\IeC {\k e}kowej i kierunkiem pr\IeC {\k e}dko\IeC {\'s}ci poruszaj\IeC {\k a}cego si\IeC {\k e} o\IeC {\'s}rodka}{27}
+\indexentry{$v$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka}{27}
+\indexentry{$c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} dwi\IeC {\k e}ku w o\IeC {\'s}rodku}{27}
+\indexentry{Power D -- Power Doppler}{27}
+\indexentry{ASIC -- skr\IeC {\'o}t od ang. \textit{Application-Specific Integrated Circuit}}{29}
+\indexentry{UTC -- skr\IeC {\'o}t od ang. \textit{Ultrasonography Tissue Characterization}}{29}
+\indexentry{EMG -- elektromiografia}{30}
+\indexentry{DXA -- skr\IeC {\'o}t od ang. \textit{Double X-Ray Absorption}}{31}
+\indexentry{ATRS -- skr\IeC {\'o}t od ang. \textit{Achilles Tendon Total Rupture Score}}{31}
+\indexentry{$P_{max}$ -- moc maksymalna}{32}
+\indexentry{$P_m$ -- moc \IeC {\'s}rednia}{32}
+\indexentry{$h_{max}$ -- maksymalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem}{32}
+\indexentry{$h_{min}$ -- minimalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem}{32}
+\indexentry{CNN -- skr\IeC {\'o}t od ang. \textit{Convolutional Neural Networks}}{34}
+\indexentry{DNN -- skr\IeC {\'o}t od ang. \textit{Deep Neural Networks}}{34}
+\indexentry{$x$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
+\indexentry{$y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
+\indexentry{$z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
+\indexentry{$I$ -- funkcja obrazowa}{35}
+\indexentry{$K_m$ -- funkcja maski splotu}{35}
+\indexentry{$I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski}{35}
+\indexentry{$i$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru}{35}
+\indexentry{$j$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru}{35}
+\indexentry{$A_1$ -- obiekt zawarty w obrazie}{36}
+\indexentry{$A_2$ -- t\IeC {\l }o zawarte w obrazie}{36}
+\indexentry{$T_p$ -- warto\IeC {\'s}\IeC {\'c} progowe}{36}
+\indexentry{$y$ -- sygna\IeC {\l } wyj\IeC {\'s}ciowy}{37}
+\indexentry{$x$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy}{37}
+\indexentry{$y$ -- funkcja aktywacji neuronu}{37}
+\indexentry{SVM -- skr\IeC {\'o}t od ang. Support Vector Machine}{37}
+\indexentry{$w$ -- wektor wag}{38}
+\indexentry{$T_a$ -- pr\IeC {\'o}g funkcji aktywacji}{38}
+\indexentry{$\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w}{38}
+\indexentry{$o$ -- obserwacja}{38}
+\indexentry{$w$ -- wektor cech}{40}
+\indexentry{FDA -- skr\IeC {\'o}t od ang. Food and Drug Administration}{42}
+\indexentry{GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}}{43}
+\indexentry{MICCAI -- skr\IeC {\'o}t od ang. \textit{Medical Image Computing and Computer Assisted Intervention}}{43}
+\indexentry{$f$($x$) -- funkcja celu}{43}
+\indexentry{$f'$($x$) -- pochodna funkcji celu}{43}
+\indexentry{$\frac{\delta y}{\delta x}$ -- pochodna funkcji celu}{43}
+\indexentry{$\bigtriangledown f$($x$) -- gradient funkcji celu}{44}
+\indexentry{$\epsilon$ -- szybko\IeC {\'s}\IeC {\'c} uczenia si\IeC {\k e}}{44}
+\indexentry{$p$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
+\indexentry{$v$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
+\indexentry{$u$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy}{45}
+\indexentry{$P$ -- miara wydajno\IeC {\'s}ci szkolenia g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{45}
+\indexentry{$T$ -- zbi\IeC {\'o}r testowy}{45}
+\indexentry{SGD -- skr\IeC {\'o}t od ang. \textit{Stochastic Gradient Descent}}{46}
+\indexentry{$m$ -- minipakiet przyk\IeC {\l }ad\IeC {\'o}w}{46}
+\indexentry{$L$ -- funkcja strat}{46}
+\indexentry{$t$ -- krok czasowy}{47}
+\indexentry{$\sigma$ -- sta\IeC {\l }a stabilizacji numerycznej}{47}
+\indexentry{$g$ -- gradient}{47}
+\indexentry{$\bigodot$ -- iloczyn skalarny dw\IeC {\'o}ch grdient\IeC {\'o}w}{47}
+\indexentry{FP -- skr\IeC {\'o}t od ang. \textit{False Positive}}{47}
+\indexentry{FN -- skr\IeC {\'o}t od ang. \textit{False Negative}}{47}
+\indexentry{TP -- skr\IeC {\'o}t od ang. \textit{True Positive}}{47}
+\indexentry{TN -- skr\IeC {\'o}t od ang. \textit{True Negative}}{47}
+\indexentry{$ACC$ -- dok\IeC {\l }adno\IeC {\'s}\IeC {\'c} klasyfikacji}{47}
+\indexentry{$TPR$ -- czu\IeC {\l }o\IeC {\'s}\IeC {\'c} klasyfikacji}{47}
+\indexentry{$TNR$ -- swoisto\IeC {\'s}\IeC {\'c} klasyfikacji}{48}
+\indexentry{$PPV$ -- Warto\IeC {\'s}\IeC {\'c} predykcji dodatniej klasyfikacji}{48}
+\indexentry{$NPV$ -- Warto\IeC {\'s}\IeC {\'c} predykcji ujemnej klasyfikacji}{48}
+\indexentry{$MBE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia}{48}
+\indexentry{$MAE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d absolutny}{48}
+\indexentry{$RMSE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d kwadratowy}{48}
+\indexentry{$MAX_{BE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia}{48}
+\indexentry{$MAX_{AE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d absolutny}{48}
+\indexentry{$MAX_{RMSE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d kwadratowy}{48}
+\indexentry{$Corr$ -- u\IeC {\'s}redniona korelacja z wykorzystaniem transformacji Z-Fishera}{48}
+\indexentry{$r_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji Pearsona}{48}
+\indexentry{$s$ -- liczba segment\IeC {\'o}w w kroswalidacji}{49}
+\indexentry{$D$ -- segment w kroswalidacji}{49}
+\indexentry{$A$ -- macierz przekszta\IeC {\l }cenia liniowego}{50}
+\indexentry{$b$ -- wektor przesuni\IeC {\k e}cia}{50}
+\indexentry{$\theta$ -- k\IeC {\k a}t obrotu obrazu}{50}
+\indexentry{$S$ -- skala zmiany obrazu}{50}
+\indexentry{$n$ -- liczba zmiennych}{52}
+\indexentry{$r$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji}{52}
+\indexentry{$X$ -- zmienna losowa}{52}
+\indexentry{$X_i$ -- warto\IeC {\'s}\IeC {\'c} kolejnych obserwacji}{52}
+\indexentry{$\overline{X}$ -- \IeC {\'s}rednia z warto\IeC {\'s}ci kolejnych obserwacji}{52}
+\indexentry{$d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera}{52}
+\indexentry{$p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa}{52}
+\indexentry{LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}}{52}
+\indexentry{$\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net}{53}
+\indexentry{PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}}{53}
+\indexentry{$S_x$ -- macierz kowariancji}{54}
+\indexentry{$L$ -- macierz diagonalna}{54}
+\indexentry{$K$ -- macierz odwracalna}{54}
+\indexentry{$Y$ -- macierz nowych zmiennych PCA}{54}
+\indexentry{MDS -- skr\IeC {\'o}t od ang. \textit{Multidimensional scaling}}{55}
+\indexentry{t-SNE -- skr\IeC {\'o}t od ang. \textit{T-distributed stochastic neighbor embedding}}{55}
+\indexentry{ICA -- skr\IeC {\'o}t od ang. \textit{Independent Component Analysis}}{55}
+\indexentry{LSA -- skr\IeC {\'o}t od ang. \textit{Latent Semantic Analysis}}{55}
+\indexentry{SOM -- skr\IeC {\'o}t od ang. \textit{Self Organizing Maps}}{55}
+\indexentry{FC -- skr\IeC {\'o}t od ang. \textit{Fully Connected}}{56}
+\indexentry{$\eta_{x,y}^{i}$ -- aktywacja danego neuronu}{56}
+\indexentry{$k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization}{56}
+\indexentry{ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}}{57}
+\indexentry{$A_a$, $B_a$, $C_a$ -- macierze przetwarzane przez sie\IeC {\'c} AlexNet}{59}
+\indexentry{$F$ -- funkcja rezydualna}{64}
+\indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{64}
+\indexentry{$W$ -- macierz wag}{64}
+\indexentry{$L$ - blok rezydualny}{64}
+\indexentry{$w$ -- gradient propagowany w ResNet}{64}
+\indexentry{$\sigma (z)_j$ -- funkcja softmax}{67}
+\indexentry{$z$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax}{67}
+\indexentry{$j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax}{67}
+\indexentry{$w$ -- wektor wag}{67}
+\indexentry{$S^g$ -- stos predykcji}{67}

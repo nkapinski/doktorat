@@ -1,12 +1,12 @@
 \chapter{Konwolucyjne sieci neuronowe}
 \label{CNNs}
-\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}, CNN) \linebreak są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Należą do zbioru \textit{głębokich sieci neuronowych} (ang. \textit{Deep Neural Networks}, DNN), które z kolei są podzbiorem \textit{systemów uczących się} (ang. \textit{Machine Learning Systems}) tj. algorytmów nie wymagających explicite programowania do ustalenia swoich parametrów. Algorytmy te często określane są obecnie wspomnianym we wstępie tej rozprawy terminem Wąskiej Sztucznej Inteligencji.
+\textit{Konwolucyjne sieci neuronowe} (ang. \textit{Convolutional Neural Networks}, CNN)\index{CNN -- skrót od ang. \textit{Convolutional Neural Networks}} \linebreak są biologicznie inspirowanymi sztucznymi sieciami neuronowymi. Należą do zbioru \textit{głębokich sieci neuronowych} (ang. \textit{Deep Neural Networks}, DNN)\index{DNN -- skrót od ang. \textit{Deep Neural Networks}}, które z kolei są podzbiorem \textit{systemów uczących się} (ang. \textit{Machine Learning Systems}) tj. algorytmów nie wymagających explicite programowania do ustalenia swoich parametrów. Algorytmy te często określane są obecnie wspomnianym we wstępie tej rozprawy terminem Wąskiej Sztucznej Inteligencji.
 
 Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w latach 40-tych XX wieku, natomiast fundamentalne inspiracje biologiczne dały badania z lat 50-tych i 60-tych Hubela i Wiesela nad korą wzrokową kotów (zob. \cite{Wurtz2009}). M.in. dzięki pracom tych neurofizjologów ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji \linebreak z wybranych regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane tak, aby wydobyć istotne informacje z naturalnych obrazów. Dla przykładu reagują one na orientację linii, kształty i kolory.
 
-W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$, $y$), gdzie $x$ to kolumna macierzy, a \linebreak $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
+W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$\index{$x$ -- pierwsza współrzędna prostokątna}, $y$\index{$y$ -- druga współrzędna prostokątna}), gdzie $x$ to kolumna macierzy, a \linebreak $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$\index{$z$ -- trzecia współrzędna prostokątna}, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
 
-W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$, $y$). Na tej podstawie dzielimy obrazy na:
+W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$, $y$)\index{$I$ -- funkcja obrazowa}. Na tej podstawie dzielimy obrazy na:
 \begin{itemize}[noitemsep,nolistsep]
 	\item binarne – gdzie kodowane są jedynie dwie możliwe wartości $I$ (0 lub 1);
 	\item monochromatyczne – gdzie kodowana jest informacja o natężeniu jednej barwy (najczęściej są to odcienie szarości lub brązu tzw. \textit{sepia});
@@ -14,11 +14,11 @@ W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodo
 \end{itemize}
 Do zakodowania informacji o wartości funkcji $I$ w obrazie binarnym potrzebny jest jeden bit na punkt. Odcienie obrazu monochromatycznego lub pojedyncze składowe punktu obrazu kolorowego kodowane są przy pomocy 8--16 bitów, co uzależnione jest od zakresu wartości występujących w danych lub precyzji wymaganej do obliczeń. Przykładowo, obrazy medyczne przetwarzane w tej pracy należą do grupy obrazów monochromatycznych i są zapisywane w reprezentacji 16-to bitowej, co podyktowane jest zakresem wartości występujących w sygnale RM.
 
-W sieciach konwolucyjnych, procesy zachodzące w korze wzrokowej są modelowane przy użyciu odpowiednio dobranych parametrów i funkcji służących do ekstrakcji istotnych informacji obrazowych i ich przetwarzania. Parametry wykorzystywane \linebreak do wstępnej ekstrakcji informacji grupowane są w \textit{filtry}, które realizują funkcję \textit{splotu} maski $K_m$ z kolejnymi fragmentami funkcji $I$. $K_m$ jest najczęściej macierzą kwadratową o wymiarze $N$, gdzie zazwyczaj $N$ = {1, 3, 5, 7, 9, 11}. Większe wymiary $K_m$ nie \linebreak są w praktyce stosowane z uwagi na rosnącą wraz z $N$ złożonością obliczeniową. Równanie splotu dyskretnego można zapisać następująco:
+W sieciach konwolucyjnych, procesy zachodzące w korze wzrokowej są modelowane przy użyciu odpowiednio dobranych parametrów i funkcji służących do ekstrakcji istotnych informacji obrazowych i ich przetwarzania. Parametry wykorzystywane \linebreak do wstępnej ekstrakcji informacji grupowane są w \textit{filtry}, które realizują funkcję \textit{splotu} maski $K_m$\index{$K_m$ -- funkcja maski splotu} z kolejnymi fragmentami funkcji $I$. $K_m$ jest najczęściej macierzą kwadratową o wymiarze $N$, gdzie zazwyczaj $N$ = {1, 3, 5, 7, 9, 11}. Większe wymiary $K_m$ nie \linebreak są w praktyce stosowane z uwagi na rosnącą wraz z $N$ złożonością obliczeniową. Równanie splotu dyskretnego można zapisać następująco:
 \begin{equation}
 	I'\left(x, y\right) = \sum_{j=-n}^{n} \sum_{i=-k}^{k} I\left(x - j, y - i \right)K_m\left(j, i\right),
 \end{equation}
-gdzie $I'$ jest nową funkcją obrazową powstałą po filtracji, a $i$ i $j$ to kolejne współrzędne maski filtru w odniesieniu do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
+gdzie $I'$\index{$I'$ -- funkcja obrazowa po operacji splotu z funkcją maski} jest nową funkcją obrazową powstałą po filtracji, a $i$\index{$i$ -- pierwsza współrzędna maski filtru} i $j$\index{$j$ -- druga współrzędna maski filtru} to kolejne współrzędne maski filtru w odniesieniu do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
 
 W kontekście sieci konwolucyjnych, pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} (zob. \cite{Hijazi2015}). W ostatnich latach powstało wiele algorytmów do wizualizacji cech umożliwiających wydajną analizę wyników działania sieci konwolucyjnych np.: Saliency Maps \cite{DBLP:journals/corr/SimonyanVZ13}, GradCam \cite{DBLP:journals/corr/SelvarajuDVCPB16} czy CNNVIS \cite{DBLP:journals/corr/LiuSLLZL16}. Zasada działania tych algorytmów bazuje na wstecznej propagacji informacji, co skutkuje możliwością selekcji cech, które mają zasadniczy wpływ na wynik końcowy wnioskowania. Grupy cech obliczane na tym samym obszarze obrazu wejściowego nazywane są \textit{mapami cech} (ang. \textit{feature maps}). Zazwyczaj mapy cech zawierają hierarchicznie uporządkowaną strukturę składającą się z cech od najniższego do najwyższego poziomu komplikacji (np. od charakterystycznych skupisk pikseli, przez obiekty składowe do finalnego kształtu). Do cech najniższego rzędu zaliczyć można:
 \begin{itemize}[noitemsep,nolistsep]
@@ -33,20 +33,20 @@ Wszystkie cechy wyższego rzędu są kombinacją wymienionych składowych podsta
 
 Na podstawie cech, na końcu toru przetwarzania danych z wykorzystaniem sieci neuronowych, realizowane jest wnioskowanie, gdzie w zależności od problemu można wyszczególnić następujące zadania:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{segmentację} -- podział obrazu na spójne fragmenty, najczęściej wiążące się \linebreak z wyodrębnieniem \textit{obiektu} $A_1$ z \textit{tła} $A_2$ na podstawie ustalonego progu lub miary np.:
+	\item \textit{segmentację} -- podział obrazu na spójne fragmenty, najczęściej wiążące się \linebreak z wyodrębnieniem \textit{obiektu} $A_1$\index{$A_1$ -- obiekt zawarty w obrazie} z \textit{tła} $A_2$\index{$A_2$ -- tło zawarte w obrazie} na podstawie ustalonego progu lub miary np.:
 	\begin{equation*}
 	\begin{aligned}
 	I(x,y) \geq T_p \Rightarrow (x,y) \in A_1 \\
 	I(x,y) < T_p \Rightarrow (x,y) \in A_2,
 	\end{aligned}
 	\end{equation*} 
-	przy czym metody ustalania wartości progowej $T_p$ lub wielu wartości {$T_p^1$,...,$T_p^n$} są obszarem szerokich badań (zob. \cite{DBLP:journals/corr/abs-1005-4020});
+	przy czym metody ustalania wartości progowej $T_p$\index{$T_p$ -- wartość progowe} lub wielu wartości {$T_p^1$,...,$T_p^n$} są obszarem szerokich badań (zob. \cite{DBLP:journals/corr/abs-1005-4020});
 	\item \textit{klasyfikację} -- przyporządkowanie obiektu do odpowiedniej klasy (np. tkanka zdrowa lub patologiczna);
 	\item \textit{detekcję} -- binarne rozróżnienie traktujące o tym, czy obiekt znajduje się \linebreak w obrazie czy nie;
 	\item \textit{śledzenie} -- detekcja lub też klasyfikacja obiektów w kolejnych krokach czasowych.
 \end{itemize} 
 
-Jeszcze do niedawna tor przetwarzania danych w większości badań wykorzystujących uczenie się maszyn, operacje wyliczenia cech i wnioskowania końcowego zawierał w dwóch osobnych krokach\footnote{Są wyjątki od tej reguły jak np. \cite{10.1007/978-3-319-58667-0_7}, inkrementalny algorytm SVM.}. Porównanie tego schematu z obecnie funkcjonującym podejściem realizowanym w algorytmach głębokiego uczenia się przedstawiono \linebreak na Rys. \ref{DLworkflow}.
+Jeszcze do niedawna tor przetwarzania danych w większości badań wykorzystujących uczenie się maszyn, operacje wyliczenia cech i wnioskowania końcowego zawierał w dwóch osobnych krokach\footnote{Są wyjątki od tej reguły jak np. \cite{10.1007/978-3-319-58667-0_7}, inkrementalny algorytm SVM.\index{SVM -- skrót od ang. Support Vector Machine}}. Porównanie tego schematu z obecnie funkcjonującym podejściem realizowanym w algorytmach głębokiego uczenia się przedstawiono \linebreak na Rys. \ref{DLworkflow}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/DLworkflow.png}
@@ -58,10 +58,10 @@ W nowym podejściu zarówno ekstrakcja cech jak i ostateczne wnioskowanie \lineb
 
 \section{Wprowadzenie}
 \label{seq:DL_intro}
-Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch'a i Waltera Pitts'a w roku 1943 (zob. \cite{McCulloch1943}). Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y$ od sygnałów wejściowych $x_1$,...,$x_n$ została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
+Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch'a i Waltera Pitts'a w roku 1943 (zob. \cite{McCulloch1943}). Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y$\index{$y$ -- sygnał wyjściowy} od sygnałów wejściowych $x_1$,...,$x_n$\index{$x$ -- sygnał wejściowy} została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
 \begin{equation}
 \label{eqActFunc}
-y=f\left(x_1, x_2,..., x_n\right)
+y=f\left(x_1, x_2,..., x_n\right)\index{$y$ -- funkcja aktywacji neuronu}
 \end{equation}
 
 W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie istniała natomiast możliwość uczenia się takiej architektury. Problem ten rozwiązano w 1957 proponując sztuczną sieć neuronową zawierającą wiele neuronów \linebreak z ważonymi połączeniami między sobą (zob. \cite{Rosenblatt1957}). Sieć nazwano perceptronem, \linebreak co było implikacją zamiłowania jego twórcy Franka Rosenblatta do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. Schemat sieci pokazano na Rys. \ref{Perceptron}.
@@ -72,17 +72,17 @@ W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie i
 	\label{Perceptron}
 \end{figure}
 
-Zastosowanie dodatkowej jednowymiarowej tablicy współczynników, czyli \textit{wektora wag} $w$ = ($w_1$,...,$w_n$) dało możliwość uczenia się poprzez adaptacyjną zmianę wartości poszczególnych jego elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_a$:
+Zastosowanie dodatkowej jednowymiarowej tablicy współczynników, czyli \textit{wektora wag} $w$ = ($w_1$,...,$w_n$)\index{$w$ -- wektor wag} dało możliwość uczenia się poprzez adaptacyjną zmianę wartości poszczególnych jego elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_a$\index{$T_a$ -- próg funkcji aktywacji}:
 \begin{equation}
 y(\Zeta)=\begin{cases} 0, & n < T_a, \\ 1, & n \ge T_a, \end{cases}
 \end{equation}
-gdzie $\Zeta$ to suma ważona wyjść poszczególnych neuronów:
+gdzie $\Zeta$\index{$\Zeta$ -- suma ważona wyjść neuronów} to suma ważona wyjść poszczególnych neuronów:
 \begin{equation}
 \label{eqLinActFunc}
 \Zeta=\sum_{i=1}^{n}w_i x_i
 \end{equation}
 
-Dla przykładu, w dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2$}  działanie perceptronu można opisać jako wyliczenie funkcji liniowej rozdzielającej obserwacje $o_1$ od $o_2$. W trzech wymiarach będzie to płaszczyzna, a w $n$-wymiarach, hiperpłaszczyzna. Z uwagi na swój liniowy charakter, perceptron proponowany przez Rosenblatta miał wiele ograniczeń, które szczegółowo sformułowali w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} (zob. \cite{Minsky1969}). Autorzy opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu m.in. do najszerzej dyskutowanych należał przykład związany z brakiem możliwości modelowania \textit{funkcji XOR}, aktywującej wyjście przy aktywnym jednym z dwóch wejść.
+Dla przykładu, w dwuwymiarowej przestrzeni sygnałów wejściowych {$x_1$, $x_2$}  działanie perceptronu można opisać jako wyliczenie funkcji liniowej rozdzielającej obserwacje $o_1$ od $o_2$\index{$o$ -- obserwacja}. W trzech wymiarach będzie to płaszczyzna, a w $n$-wymiarach, hiperpłaszczyzna. Z uwagi na swój liniowy charakter, perceptron proponowany przez Rosenblatta miał wiele ograniczeń, które szczegółowo sformułowali w 1969 roku Marvin Minsky i Seymour Papert w książce \textit{Perceptrons} (zob. \cite{Minsky1969}). Autorzy opublikowali listę problemów, których nie można było rozwiązać z użyciem perceptronu m.in. do najszerzej dyskutowanych należał przykład związany z brakiem możliwości modelowania \textit{funkcji XOR}, aktywującej wyjście przy aktywnym jednym z dwóch wejść.
 
 Część z opisanych przez Minsky-Papert problemów udało się rozwiązać dzięki pracy Davida Rumelharta, Geoffa Hintona i Ronalda Williamsa, którzy opublikowali w 1986 roku pracę \cite{Rumelhart1986}, traktującą o perceptronach wielowarstwowych. Schemat takiej sieci zaprezentowano na Rys. \ref{MLperceptron}
 \begin{figure}[h!]
@@ -110,7 +110,7 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, uczeń Geaoffa Hin
 
 Sieć składała się z 7-miu warstw i zawierała około 60.000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32. W architekturze LeNet zaobserwować można dwie podstawowe składowe współczesnych sieci konwolucyjnych wykorzystywanych do klasyfikacji obrazów tj.:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{ekstraktor cech} -- część służąca do automatycznej ekstrakcji wektora cech \linebreak $w$, zawierająca m.in. filtry.
+	\item \textit{ekstraktor cech} -- część służąca do automatycznej ekstrakcji wektora cech \linebreak $w$\index{$w$ -- wektor cech}, zawierająca m.in. filtry.
 	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego \linebreak na podstawie $w$.
 \end{itemize}  
 
@@ -133,7 +133,7 @@ Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm uzyskujących certyfika
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
-	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).}
+	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).\index{FDA -- skrót od ang. Food and Drug Administration}}
 	\label{fda_cert}
 \end{figure}
 \newpage
@@ -147,16 +147,16 @@ Z drugiej strony, należy jednak podkreślić, że jest również szereg problem
 \end{enumerate}
 Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). 
 
-Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych z pozyskiwaniem danych i wykorzystaniem algorytmów uczenia maszynowego.
+Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC\index{GTC -- skróT od ang. \textit{GPU Technology Conference}} (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI\index{MICCAI -- skrót od ang. \textit{Medical Image Computing and Computer Assisted Intervention}} (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych z pozyskiwaniem danych i wykorzystaniem algorytmów uczenia maszynowego.
 
 Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowiły silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem. Szczegółowy opis wykorzystanych architektur jak i problemów związanych z ich wykorzystaniem został przedstawiony w kolejnych sekcjach tego rozdziału.
  
 
 \section{Szkolenie głębokich sieci neuronowych}
 
-Proces szkolenia się sieci nazywany jest również \textit{uczeniem się} lub \textit{treningiem}. Większość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$) przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat} lub \textit{funkcja błędów} (por. \cite{Goodfellow-et-al-2016}). 
+Proces szkolenia się sieci nazywany jest również \textit{uczeniem się} lub \textit{treningiem}. Większość algorytmów szkolenia głębokich sieci neuronowych obejmuje zadanie \textit{optymalizacji}, rozumiane jako minimalizację, bądź maksymalizację \textit{funkcji celu} $f$($x$)\index{$f$($x$) -- funkcja celu} przez zmianę $x$. W literaturze można też znaleźć inne nazwy funkcji celu takie jak \textit{kryterium}, \textit{funkcja kosztów}, \textit{funkcja strat} lub \textit{funkcja błędów} (por. \cite{Goodfellow-et-al-2016}). 
 
-Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$) lub $\frac{\delta y}{\delta x}$, gdyż niesie ona informacje o nachyleniu funkcji \linebreak w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$). Wykorzystywane są również: macierz pochodnych cząstkowych tzw. \textit{macierz Jacobiego} oraz macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) tzw. \textit{macierz Hessego}.
+Podczas zadania optymalizacji bardzo często wykorzystuje się \textit{pochodną funkcji} oznaczaną jako $f'$($x$)\index{$f'$($x$) -- pochodna funkcji celu} lub $\frac{\delta y}{\delta x}$\index{$\frac{\delta y}{\delta x}$ -- pochodna funkcji celu}, gdyż niesie ona informacje o nachyleniu funkcji \linebreak w punkcie $x$. W praktyce funkcje celu są wielowymiarowe dlatego wykorzystywane są \textit{pochodne cząstkowe} informujące o nachyleniu w poszczególnych wymiarach. Wektor zawierający pochodne cząstkowe funkcji nazywany jest \textit{gradientem} i oznaczany jest jako $\bigtriangledown f$($x$)\index{$\bigtriangledown f$($x$) -- gradient funkcji celu}. Wykorzystywane są również: macierz pochodnych cząstkowych tzw. \textit{macierz Jacobiego} oraz macierz \textit{drugich pochodnych} cząstkowych (tj. pochodnych pochodnych) tzw. \textit{macierz Hessego}.
 
 Z uwagi na szybkie znajdowanie lokalnych minimów funkcji celu, to właśnie metody optymalizacji bazujące na wartości gradientu są najczęściej używane w szkoleniu głębokich sieci neuronowych. Inne metody, niegradientowe (zob. \cite{DBLP:journals/corr/TaylorBXSPG16}), przeważnie nie są w tym kontekście wystarczająco efektywne. 
 
@@ -173,11 +173,11 @@ Zasada działania metod gradientowych bazuje na obieraniu w kolejnych krokach it
 \begin{equation}
 x' = x - \epsilon \bigtriangledown f(x),
 \end{equation} 
-gdzie $\epsilon$ to \textit{szybkość uczenia się} -- parametr określający wielkość kroku. Działanie to prowadzi do spadku wartości funkcji celu w kolejnych krokach. 
+gdzie $\epsilon$\index{$\epsilon$ -- szybkość uczenia się} to \textit{szybkość uczenia się} -- parametr określający wielkość kroku. Działanie to prowadzi do spadku wartości funkcji celu w kolejnych krokach. 
 
 Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacjom wykonywanym przez kilka lub więcej funkcji po kolei. \linebreak W takich sytuacjach do obliczeń spadku gradientu wykorzystywane są funkcje, których pochodne są znane.
 
-Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v$ = $g$($p$) i $u$ = $f$($g$($p$)) = $f$($v$), gdzie $p$ i $v$ to wektory. Wówczas regułę łańcuchową można zapisać jako:
+Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v$ = $g$($p$) i $u$ = $f$($g$($p$)) = $f$($v$), gdzie $p$\index{$p$ -- wektor wejściowy do reguły łańcuchowej} i $v$\index{$v$ -- wektor wejściowy do reguły łańcuchowej} to wektory. Wówczas regułę łańcuchową można zapisać jako:
 \begin{equation}
 \frac{\delta u}{\delta p_i} = \sum_{j} \frac{\delta u}{\delta v_j} \frac{\delta v_j}{\delta p_i}, 
 \end{equation}
@@ -190,15 +190,15 @@ gdzie $\frac{\delta v}{\delta p}$ to macierz Jacobiego.
 
 Regułę łańcuchową zapisaną wzorem \ref{regLancuch} prosto uogólnia się do zmiennych tensorowych (zob. \cite{Goodfellow-et-al-2016}, str. 205) i stosuje się w różnych meta-algorytmach służących \linebreak do szkolenia sieci. Przykładem jest \textit{algorytm propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie takim jak topologia perceptronu wielowarstwowego (zob. \cite{Goodfellow-et-al-2016}).
 
-Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę dodatkowy podzbiór, rozłączny z $U$ i $T$ -- \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszych algorytmów i wartości parametrów wpływających na jakość szkolenia sieci.
+Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$\index{$u$ -- zbiór uczący}. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$\index{$P$ -- miara wydajności szkolenia głębokich sieci neuronowych}, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę dodatkowy podzbiór, rozłączny z $U$ i $T$\index{$T$ -- zbiór testowy} -- \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszych algorytmów i wartości parametrów wpływających na jakość szkolenia sieci.
 
 W procesie szkolenia zmniejszana jest wartość funkcji kosztów $f$ w oparciu \linebreak o $U$, a celem jest poprawa $P$, dająca w praktyce satysfakcjonujące działanie algorytmu dla danych testowych. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetwarzają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. Natomiast w praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby \linebreak z przedziału 8--256. Takie podejście zapewnia kompromis między szybkością obliczeń a dokładnością estymacji wartości gradientu.
 
-Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{stochastic gradient descent}, SGD). Bazuje on na założeniu, że estymację gradientu można otrzymać wyliczając średnią gradientu z minipakietu $m$ przykładów. Kolejne kroki algorytmu można zapisać następująco:
+Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{Stochastic Gradient Descent}, SGD)\index{SGD -- skrót od ang. \textit{Stochastic Gradient Descent}}. Bazuje on na założeniu, że estymację gradientu można otrzymać wyliczając średnią gradientu z minipakietu $m$\index{$m$ -- minipakiet przykładów} przykładów. Kolejne kroki algorytmu można zapisać następująco:
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość parametru szybkości uczenia się $\epsilon_k$.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
-	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$ to funkcja strat dla jednego przykładu o wejściowej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
+	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$\index{$L$ -- funkcja strat} to funkcja strat dla jednego przykładu o wejściowej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
 	\item Zastosuj aktualizację wartości funkcji celu równą $\epsilon_k g$.
 	\item Jeżeli kryterium stopu nie zostało spełnione wróć do kroku 2. 
 \end{enumerate}
@@ -213,11 +213,11 @@ Parametry algorytmów szkoleniowych nazywane są \textit{hiperparametrami}, gdy�
 \end{itemize}
 W momencie pisania tej pracy, algorytm Adam jest najczęściej rekomendowany jako domyślna metoda szkolenia głębokich sieci neuronowych, dlatego poniżej zamieszczono jego dokładny opis:
 \begin{enumerate}[noitemsep,nolistsep]
-	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s_a$ = 0 i $r_a$ = 0, wartość kroku czasowego $t$ = 0 \linebreak i stałą $\sigma$ używaną do stabilizacji numerycznej.
+	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s_a$ = 0 i $r_a$ = 0, wartość kroku czasowego $t$ = 0\index{$t$ -- krok czasowy} \linebreak i stałą $\sigma$\index{$\sigma$ -- stała stabilizacji numerycznej} używaną do stabilizacji numerycznej.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
-	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1.
+	\item Oblicz estymację gradientu $g$\index{$g$ -- gradient} = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1.
 	\item Aktualizuj estymację pierwszego momentu. $s_a$ $\mapsto$ $\beta_1$$s_a$ + (1-$\beta_1$)$g$.
-	\item Aktualizuj estymację drugiego momentu. $r_a$ $\mapsto$ $\beta_2$$r_a$ + (1-$\beta_2$)$g\bigodot g$, gdzie $\bigodot$ to iloczyn skalarny dwóch gradientów.
+	\item Aktualizuj estymację drugiego momentu. $r_a$ $\mapsto$ $\beta_2$$r_a$ + (1-$\beta_2$)$g\bigodot g$, gdzie $\bigodot$\index{$\bigodot$ -- iloczyn skalarny dwóch grdientów} to iloczyn skalarny dwóch gradientów.
 	\item Skoryguj obciążenie momentu pierwszego rzędu $s_a$ = $\frac{s_a}{1-\beta_1^t}$.
 	\item Skoryguj obciążenie momentu drugiego rzędu $r_a$ = $\frac{r_a}{1-\beta_2^t}$.
 	\item Zastosuj aktualizację wartości funkcji celu równą -$\epsilon$$\frac{s_a}{\sqrt{r_a}+\sigma}$.
@@ -228,19 +228,19 @@ Ocena procesu szkolenia się sieci polega na obliczeniu odpowiednich miar i wsp�
 
 Parametry:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{Fałszywie dodatnia klasyfikacja} (\textit{FP} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
-	\item \textit{Fałszywie ujemna klasyfikacja} (\textit{FN} od ang. \textit{False Negative}) -- liczba obserwacji zaklasyfikowanych jako negatywne, a należących do klasy obserwacji pozytywnych. 
-	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
-	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne.
+	\item \textit{Fałszywie dodatnia klasyfikacja} (\textit{FP}\index{FP -- skrót od ang. \textit{False Positive}} od ang. \textit{False Positive}) -- liczba obserwacji zaklasyfikowanych jako pozytywne, a należących do klasy obserwacji negatywnych.
+	\item \textit{Fałszywie ujemna klasyfikacja} (\textit{FN}\index{FN -- skrót od ang. \textit{False Negative}} od ang. \textit{False Negative}) -- liczba obserwacji zaklasyfikowanych jako negatywne, a należących do klasy obserwacji pozytywnych. 
+	\item \textit{Prawdziwie pozytywna klasyfikacja} (\textit{TP}\index{TP -- skrót od ang. \textit{True Positive}} od ang. \textit{True Positive}) -- liczba wyników poprawnie zaklasyfikowanych jako pozytywne. 
+	\item \textit{Prawdziwie negatywna klasyfikacja} (\textit{TN}\index{TN -- skrót od ang. \textit{True Negative}} od ang. \textit{True Negative}) -- liczba wyników poprawnie zaklasyfikowanych jako negatywne.
 \end{itemize}
 
 Miary:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy}) -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
-	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity}) -- $TPR = \frac{TP}{TP + FN}$.
-	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity}) -- $TNR = \frac{TN}{TN + FP}$.
-	\item \textit{Wartość predykcyjna dodatnia} (ang. \textit{Precision}) -- $PPV = \frac{TP}{TP + FP}$.
-	\item \textit{Wartość predykcyjna ujemna} (ang. \textit{Negative precision}) -- $NPV = \frac{TN}{TN + FN}$.
+	\item \textit{Dokładność klasyfikacji} (ang. \textit{Accuracy})\index{$ACC$ -- dokładność klasyfikacji} -- $ACC = \frac{TP + TN}{TP+TN+FP+FN}$.
+	\item \textit{Czułość klasyfikacji} (ang. \textit{Sensitivity})\index{$TPR$ -- czułość klasyfikacji} -- $TPR = \frac{TP}{TP + FN}$.
+	\item \textit{Swoistość klasyfikacji} (ang. \textit{Specificity})\index{$TNR$ -- swoistość klasyfikacji} -- $TNR = \frac{TN}{TN + FP}$.
+	\item \textit{Wartość predykcyjna dodatnia} (ang. \textit{Precision})\index{$PPV$ -- Wartość predykcji dodatniej klasyfikacji} -- $PPV = \frac{TP}{TP + FP}$.
+	\item \textit{Wartość predykcyjna ujemna} (ang. \textit{Negative precision})\index{$NPV$ -- Wartość predykcji ujemnej klasyfikacji} -- $NPV = \frac{TN}{TN + FN}$.
 \end{itemize}
 
 W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR, PPV i NPV oraz minimalizowania FP i FN. 
@@ -248,21 +248,21 @@ W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR,
 W kontekście problemu regresji powszechnie stosowane, minimalizowane błędy średnie to:
 
 \begin{itemize}[noitemsep,nolistsep]
-\item \textit{Średni błąd obciążenia} (ang. ) -- $MBE=\frac1N\sum_{i=1}^N{(x_{f,i}-x_{o,i})}$;
-\item \textit{Średni błąd absolutny} (ang. ) --  $MAE=\frac1N\sum_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
-\item \textit{Średni błąd kwadratowy} (ang. ) -- $RMSE=\sqrt{\frac1N\sum_{i=1}^N\left(x_{f,i}-x_{o,i}\right)^2}$;
+\item \textit{Średni błąd obciążenia} (ang. Mean Bias Error)\index{$MBE$ -- średni błąd obciążenia} -- $MBE=\frac1N\sum_{i=1}^N{(x_{f,i}-x_{o,i})}$;
+\item \textit{Średni błąd absolutny}\index{$MAE$ -- średni błąd absolutny} (ang. Mean Absolute Error) --  $MAE=\frac1N\sum_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
+\item \textit{Średni błąd kwadratowy} (ang. Root Mean Square Error)\index{$RMSE$ -- średni błąd kwadratowy} -- $RMSE=\sqrt{\frac1N\sum_{i=1}^N\left(x_{f,i}-x_{o,i}\right)^2}$;
 \end{itemize}
 oraz błędy maksymalne:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{Maksymalny błąd obciążenia} (ang. ) -- $MAX_{BE}=max_{i=1}^N{(x_{f,i}-x_{o,i})}$;
-	\item \textit{Maksymalny błąd absolutny} (ang. ) --  $MAX_{AE}=max_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
-	\item \textit{Maksymalny błąd kwadratowy} (ang. ) -- $MAX_{RSE}=max_{i=1}^N\sqrt{\left(x_{f,i}-x_{o,i}\right)^2}$;
+	\item \textit{Maksymalny błąd obciążenia} (ang. Maximum Bias Error)\index{$MAX_{BE}$ -- maksymalny błąd obciążenia} -- $MAX_{BE}=max_{i=1}^N{(x_{f,i}-x_{o,i})}$;
+	\item \textit{Maksymalny błąd absolutny} (ang. Maximum Absolute Error)\index{$MAX_{AE}$ -- maksymalny błąd absolutny} --  $MAX_{AE}=max_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
+	\item \textit{Maksymalny błąd kwadratowy} (ang. Maximum Root Square Error)\index{$MAX_{RMSE}$ -- maksymalny błąd kwadratowy} -- $MAX_{RMSE}=max_{i=1}^N\sqrt{\left(x_{f,i}-x_{o,i}\right)^2}$;
 \end{itemize}
 z których błędy obciążenia i absolutny charakteryzują się liniową skalą, a kwadratowy wnosi dodatkową karę za większe błędy.   
 
 Dla problemu śledzenia zmian np. w czasie gojenia się tkanek, dodatkowo stosować można miary korelacji, w szczególności średniej korelacji z wykorzystaniem transformacji Z-Fishera (zob. \cite{Corey1998}):
-$Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}$  
-uzyskując średnią zgodność estymacji i wzorca odniesienia. Przy czym $r_f$ to zapisany wzorem \ref{PearsorR} współczynnik korelacji Pearsona. 
+$Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}$\index{$Corr$ -- uśredniona korelacja z wykorzystaniem transformacji Z-Fishera}  
+uzyskując średnią zgodność estymacji i wzorca odniesienia. Przy czym $r_f$\index{$r_f$ -- współczynnik korelacji Pearsona} to zapisany wzorem \ref{PearsorR} współczynnik korelacji Pearsona. 
 
 Oprócz prawidłowego wyboru metryki istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
 
@@ -271,7 +271,7 @@ Oprócz prawidłowego wyboru metryki istotny jest również dobór możliwie efe
 
 Dążenie do najlepszego możliwego przybliżenia zbioru $U$ wprowadza niepożądane zjawisko zwane \textit{nadmiernym dopasowaniem}. Wtedy to dokładność klasyfikacji zbioru $U$ jest wysoka lub nawet bezbłędna, natomiast znacznie niższa jest dokładność klasyfikacji zbioru testowego $T$ i walidacyjnego $W$. W praktyce oznacza to, że model staje się mało użyteczny, gdyż wnioskowanie na nowych danych charakteryzuje się niską dokładnością.
 
-Zatem ogólnym dążeniem w procesie szkolenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wektorów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$. Właściwym działaniem jest ustalenie maksymalnie ogólnych, dostatecznych warunków poprawnej klasyfikacji, dzięki którym wzrasta prawdopodobieństwo, że przykład spoza zbioru $U$ będzie poprawnie klasyfikowany. W tym celu można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru danych na $s$ segmentów $D$, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, \linebreak a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
+Zatem ogólnym dążeniem w procesie szkolenia się sieci jest osiągnięcie \textit{maksymalnej generalizacji} klasyfikacji. Sieć o wysokim współczynniku generalizacji lepiej klasyfikuje ogół zadanych wektorów wejściowych niż sieć, która ma niski współczynnik generalizacji i jest nadmiernie dopasowana do zbioru $U$. Właściwym działaniem jest ustalenie maksymalnie ogólnych, dostatecznych warunków poprawnej klasyfikacji, dzięki którym wzrasta prawdopodobieństwo, że przykład spoza zbioru $U$ będzie poprawnie klasyfikowany. W tym celu można zastosować \textit{metodę oceny krzyżowej} (ang. \textit{cross-validation}). Metoda ta polega na podziale zbioru danych na $s$\index{$s$ -- liczba segmentów w kroswalidacji} segmentów $D$\index{$D$ -- segment w kroswalidacji}, z których każdy w innej iteracji służy jako zbiór testujący i walidacyjny, \linebreak a pozostałe segmenty pełnią rolę zbioru uczącego. Podział zobrazowany jest na Rysunku \ref{cross-validation}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cross-validation.png}
@@ -290,9 +290,9 @@ Dla obrazów stosuje się metody \textit{afinicznych przekształceń} zgodne z d
 \begin{equation}
 	\mathbf o \mapsto \mathbf{Ao} + \mathbf b,
 \end{equation}
-gdzie $A$ jest macierzą przekształcenia liniowego, a $b$ wektorem przesunięcia. Jako przykłady takich przekształceń dla dwuwymiarowych obrazów można wymienić:
+gdzie $A$\index{$A$ -- macierz przekształcenia liniowego} jest macierzą przekształcenia liniowego, a $b$\index{$b$ -- wektor przesunięcia} wektorem przesunięcia. Jako przykłady takich przekształceń dla dwuwymiarowych obrazów można wymienić:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{rotację} -- obrót obrazu o kąt $\theta$, gdzie:
+	\item \textit{rotację} -- obrót obrazu o kąt $\theta$\index{$\theta$ -- kąt obrotu obrazu}, gdzie:
 	\begin{equation}
 	A = \begin{bmatrix} 
 	\cos \theta & \sin \theta\\
@@ -306,7 +306,7 @@ gdzie $A$ jest macierzą przekształcenia liniowego, a $b$ wektorem przesunięci
 		0 & 1
 	\end{bmatrix}
 	\end{equation}
-	\item \textit{skalowanie} -- zmiana rozmiaru obrazu o $S$, gdzie:
+	\item \textit{skalowanie} -- zmiana rozmiaru obrazu o $S$\index{$S$ -- skala zmiany obrazu}, gdzie:
 	\begin{equation}
 			A = \begin{bmatrix} 
 		S_x & 0\\
@@ -332,18 +332,18 @@ Problem (2) ma duże implikacje w praktyce stosowania sieci neuronowych, gdyż u
 
 \begin{itemize}[noitemsep,nolistsep]
 \item wybór podzbioru istotnych cech o liczności $n'$ $<<$ $n$,
-\item przekształcenie oryginalnych $n$ zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
+\item przekształcenie oryginalnych $n$\index{$n$ -- liczba zmiennych} zmiennych na nowy zbiór $n'$ cech, gdzie ponownie $n'$ $<<$ $n$.
 \end{itemize}
 
 W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. Do tych zagadnień wykorzystywane są metody takie jak:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$ dla dwóch zmiennych losowych $X1$ i $X2$, będących dwoma równolicznymi zbiorami sparowanych, obserwowanych wartości, zapisywany jest następującym wzorem:
+	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$\index{$r$ -- współczynnik korelacji} dla dwóch zmiennych losowych $X1$\index{$X$ -- zmienna losowa} i $X2$, będących dwoma równolicznymi zbiorami sparowanych, obserwowanych wartości, zapisywany jest następującym wzorem:
 	\begin{equation}
 	\label{PearsorR}
 	r_{X1X2} = \frac{\sum_{i=1}^n (X1_i - \overline{X1})(X2_i - \overline{X2})}{\sqrt{\sum_{i=1}^n (X1_i - \overline{X1})^2} \sqrt{\sum_{i=1}^n (X2_i - \overline{X2})^2}},
 	\end{equation}
-	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji, a $\overline{X1}$ i $\overline{X2}$ to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
-	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$ dla dwóch porównywanych dyskretnych rozkładów prawdopodobieństwa $p_k$ i $q_k$ zapisany jest wzorem: 
+	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji\index{$X_i$ -- wartość kolejnych obserwacji}, a $\overline{X1}$ i $\overline{X2}$\index{$\overline{X}$ -- średnia z wartości kolejnych obserwacji} to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
+	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$\index{$d_{KL}$ -- współczynnik dywergencji Kullbacka-Leiblera} dla dwóch porównywanych dyskretnych rozkładów prawdopodobieństwa $p_k$ i $q_k$\index{$p_k$, $q_k$ -- rozkłady prawdopodobieństwa} zapisany jest wzorem: 
 	\begin{equation}
 	d_{KL}(p_k, q_k) = \sum_{i} p_k(i) \log_2 \frac{p_k(i)}{q_k(i)}
 	\end{equation}
@@ -351,7 +351,7 @@ W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu min
 \end{itemize}
 Podobieństwo rozkładów ocenione na podstawie powyższych miar daje możliwość skutecznej redukcji wymiarowości z zachowaniem efektywności algorytmu.
 
-W celu selekcji cech można również stosować różnego rodzaju, specjalnie zaprojektowane regresje. Do najbardziej powszechnie stosowanych należą algorytmy regresji grzbietowej, LASSO (od ang. \textit{Least Absolute Shrinkage and Selection Operator}) oraz Elastic Net. Różnią się one definicją zadania minimalizacji funkcji kosztu poprzez optymalizację wektora współczynników regresji pełniącego jednocześnie funkcję wektora cech $w$:  
+W celu selekcji cech można również stosować różnego rodzaju, specjalnie zaprojektowane regresje. Do najbardziej powszechnie stosowanych należą algorytmy regresji grzbietowej, LASSO\index{LASSO -- skrót od ang. \textit{Least Absolute Shrinkage and Selection Operator}} (od ang. \textit{Least Absolute Shrinkage and Selection Operator}) oraz Elastic Net. Różnią się one definicją zadania minimalizacji funkcji kosztu poprzez optymalizację wektora współczynników regresji pełniącego jednocześnie funkcję wektora cech $w$:  
 
 \begin{equation}
 \textrm{Regresja grzbietowa-- } \underset{w}{min} (||X*w-Y||_2^2 + \alpha ||w||_2^2);
@@ -366,9 +366,9 @@ W celu selekcji cech można również stosować różnego rodzaju, specjalnie za
 \label{equ:elasticNet}
 \end{equation}
 
-W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będący pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek minimalizacji \textit{Normy L2} z wektora $w$ ($\left \| w \right \|_2 =\sqrt{ \sum_{k=1}^{n}\left |w_k  \right |^2}$), dzięki czemu wymuszane jest, aby poszczególne współczynniki miały niewielkie wartości. W regresji LASSO stosowana jest \textit{Norma L1}, ($\left \| w \right \|_1 = \sum_{k=1}^{n}\left |w_k  \right |$), dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regresji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
+W szczególności istotny jest czynnik regulujący dołączony do klasycznego zadania regresji liniowej będący pierwszym elementem każdego zadania minimalizacji. W regresji grzbietowej dodatkowo dodawany jest warunek minimalizacji \textit{Normy L2} z wektora $w$ ($\left \| w \right \|_2 =\sqrt{ \sum_{k=1}^{n}\left |w_k  \right |^2}$), dzięki czemu wymuszane jest, aby poszczególne współczynniki miały niewielkie wartości. W regresji LASSO stosowana jest \textit{Norma L1}, ($\left \| w \right \|_1 = \sum_{k=1}^{n}\left |w_k  \right |$), dzięki czemu preferowane są rozwiązania, w których wektor jest rzadki, co przekłada się na efektywny wybór cech z grup silnie skorelowanych. Regresja Elastic Net łączy w sobie cechy regresji grzbietowej oraz LASSO, poprzez zastosowanie dwóch typów norm jednocześnie, których istotność względem siebie kontroluje parametr $\rho$\index{$\rho$ -- współczynnik regulujący istotność zastosowanych norm w metodzie Elastic Net}. Minusem tego podejścia jest większa złożoność obliczeniowa i konieczność doboru wartości dodatkowego parametru. Z uwagi na definicję zadania minimalizacji, powyższe algorytmy znajdują zastosowania głównie w problemach, gdzie występują zależności liniowe. Do nieliniowych problemów stosuje się częściej bardziej skomplikowane algorytmy typu lasy losowe.
 
-W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, bardzo często stosowaną metodą jest algorytm \textit{analizy składowych głównych} (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA}) opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
+W kolejnym omawianym przypadku, tj. gdy zaistnieje potrzeba przekształcenia przestrzeni cech i wyliczenia nowego zbioru, bardzo często stosowaną metodą jest algorytm \textit{analizy składowych głównych} (ang. \textit{Principal Component Analysis}, w skr. \textit{PCA})\index{PCA -- skróT od ang. \textit{Principal Component Analysis}} opracowany przez Karla Pearsona w 1901 r (zob. \cite{PCA}).  
 
 Istotą PCA jest przekształcenie początkowych, skorelowanych cech w nowy zbiór nieskorelowanych zmiennych. Nowe zmienne, tzw. \textit{składowe główne} lub \textit{czynniki główne}, powstają z przekształcenia oryginalnych zmiennych skorelowanych w taki sposób, aby w maksymalnym stopniu wyjaśniać całkowitą wariancję w próbie cech oryginalnych. Wariancje składowych głównych są \textit{wartościami własnymi} macierzy kowariancji oryginalnych zmiennych. Innymi słowy są to \textit{wartości skalarne} (pojedyncze liczby) opisujące poziom wariancji w danych w stosunku do zadanych \textit{ortogonalnych wektorów}, tj. takich, dla których iloczyn skalarny równy jest 0, co \linebreak w przestrzeni Euklidesowej oznacza, że kąt pomiędzy wektorami równy jest 90$^\circ$.
 
@@ -383,19 +383,19 @@ Można zaobserwować, że nowa przestrzeń charakteryzuje się znacznie większy
 
 Opis szczegółowej procedury PCA wygląda następująco:
 \begin{enumerate}[noitemsep,nolistsep]
-\item Oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$ jest symetryczna i pozwala ocenić: (1) wariancje zmiennych poprzez analizę elementów na głównej przekątnej; (2) zależności pomiędzy zmiennymi poprzez analizę elementów poza główną przekątną. 
-\item Dokonaj diagonalizacji: $S_x$ = $KLK^{-1}$, gdzie $L$ to macierz diagonalna, a $K$ to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
-\item Utwórz macierz nowych zmiennych wykonując operację: $Y$ = $XK$
+\item Oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$\index{$S_x$ -- macierz kowariancji} jest symetryczna i pozwala ocenić: (1) wariancje zmiennych poprzez analizę elementów na głównej przekątnej; (2) zależności pomiędzy zmiennymi poprzez analizę elementów poza główną przekątną. 
+\item Dokonaj diagonalizacji: $S_x$ = $KLK^{-1}$, gdzie $L$\index{$L$ -- macierz diagonalna} to macierz diagonalna, a $K$\index{$K$ -- macierz odwracalna} to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
+\item Utwórz macierz nowych zmiennych wykonując operację: $Y$ = $XK$\index{$Y$ -- macierz nowych zmiennych PCA}
 \end{enumerate}
 
 Oprócz PCA, w kontekście redukcji wymiarowości, można również wyróżnić następujące algorytmy: 
 \begin{enumerate}[noitemsep,nolistsep]
-	\item \textit{Multidimensional scaling}, MDS -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości (zob. \cite{Chen:2008:HDV:1370965}).
-	\item \textit{T-distributed stochastic neighbor embedding}, t-SNE -- stosowany do wizualizacji struktur cech w różnych skalach (zob. \cite{vanDerMaaten2008}).
+	\item \textit{Multidimensional scaling}, MDS\index{MDS -- skrót od ang. \textit{Multidimensional scaling}} -- bazuje na wyliczeniu odpowiednio zdefiniowanego dystansu między wartościami cech w oryginalnej przestrzeni i próbie zachowania tego dystansu w zredukowanej wymiarowości (zob. \cite{Chen:2008:HDV:1370965}).
+	\item \textit{T-distributed stochastic neighbor embedding}, t-SNE\index{t-SNE -- skrót od ang. \textit{T-distributed stochastic neighbor embedding}} -- stosowany do wizualizacji struktur cech w różnych skalach (zob. \cite{vanDerMaaten2008}).
 	\item \textit{Isomap} -- algorytm nieliniowej redukcji wymiarowości pozwalający na gwarantowane znalezienie globalnego minimum (zob. \cite{tenenbaum_global_2000}). 
-	\item \textit{Independent Component Analysis}, ICA -- stosowany do znalezienia reprezentacji danych składających się z niezależnych elementów (zob. \cite{ICA}).
-	\item \textit{Latent Semantic Analysis}, LSA -- stosowany głównie w problemach dotyczących przetwarzania języka naturalnego, zwłaszcza do znalezienia kontekstu użycia danego słowa poprzez analizę statystyczną dużych bloków tekstów (zob. \cite{Wolfe2003}). 
-	\item \textit{Self Organizing Maps}, SOM --  bazuje na zachowaniu własności topologicznych przestrzeni cech oryginalnych w zredukowanej wymiarowości (zob. \cite{Vesanto00self-organizingmap}).
+	\item \textit{Independent Component Analysis}, ICA\index{ICA -- skrót od ang. \textit{Independent Component Analysis}} -- stosowany do znalezienia reprezentacji danych składających się z niezależnych elementów (zob. \cite{ICA}).
+	\item \textit{Latent Semantic Analysis}, LSA\index{LSA -- skrót od ang. \textit{Latent Semantic Analysis}} -- stosowany głównie w problemach dotyczących przetwarzania języka naturalnego, zwłaszcza do znalezienia kontekstu użycia danego słowa poprzez analizę statystyczną dużych bloków tekstów (zob. \cite{Wolfe2003}). 
+	\item \textit{Self Organizing Maps}, SOM\index{SOM -- skrót od ang. \textit{Self Organizing Maps}} --  bazuje na zachowaniu własności topologicznych przestrzeni cech oryginalnych w zredukowanej wymiarowości (zob. \cite{Vesanto00self-organizingmap}).
 \end{enumerate}
 
 Zarówno przekleństwo wymiarowości, jak i wcześniej opisany problem nadmiernego dopasowania są zjawiskami bardzo często występującymi w praktycznych zastosowaniach algorytmów głębokiego uczenia się. Nie wyczerpują one jednak tematu. Szereg kolejnych wyzwań i rozwiązań został opisany w kolejnej sekcji przy okazji przedstawienia współczesnych topologii.
@@ -411,20 +411,20 @@ Współczesne sieci konwolucyjne służące do klasyfikacji obrazów, podobnie j
 		f(x) = \max(0, x).
 	\end{equation}
 	Jest ona mniej wymagająca obliczeniowo niż funkcja sigmoid, a dla współczesnych topologii o dużej liczbie parametrów testy empiryczne wykazały, \linebreak że równie dobrze wpływa na uzyskiwane wyniki dokładności (zob. \cite{Krizhevsky2012}); 
-	\item \textit{warstwy gęste lub z ang. fully connected}, FC -- składające się z neuronów, \linebreak z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze;
+	\item \textit{warstwy gęste lub z ang. fully connected}, FC\index{FC -- skrót od ang. \textit{Fully Connected}} -- składające się z neuronów, \linebreak z których każdy jest połączony z każdym neuronem kolejnej warstwy. Występują zazwyczaj w ostatniej części sieci konwolucyjnych tj. w klasyfikatorze;
 	\item \textit{warstwy normalizacji}\footnote{Coraz rzadziej stosowane w praktyce z uwagi na znikomy wpływ na rezultaty.} -- normalizujące wyjście poprzedzającej warstwy \linebreak do pewnego określonego przedziału, zazwyczaj (-1,1). Przykładem jest operacja \textit{Local Response Normalization} dana wzorem:
 	\begin{equation}
 	\label{DLnormEquation}
-	\zeta_{x,y}^{i} = \eta_{x,y}^{i}/\left ( k_n + \lambda \sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)}(\eta_{x,y}^{i})^2 \right )^{\beta_n},
+	\zeta_{x,y}^{i} = \eta_{x,y}^{i}/\left ( k_n + \lambda_n \sum_{j=max(0,i-n/2)}^{min(N-1,i+n/2)}(\eta_{x,y}^{i})^2 \right )^{\beta_n},
 	\end{equation}
-	gdzie $\eta_{x,y}^{i}$ jest aktywacją danego neuronu, a $k_n$, $\lambda$, $n$ i $\beta_n$ to stałe dobierane empirycznie na podstawie zbioru walidacyjnego (za \cite{Krizhevsky2012}). Warstwy normalizacji wykorzystywane są w celu zrównoważenia poziomu wpływu poszczególnych neuronów na wynik końcowy.
+	gdzie $\eta_{x,y}^{i}$ jest aktywacją danego neuronu\index{$\eta_{x,y}^{i}$ -- aktywacja danego neuronu}, a $k_n$, $\lambda_n$, $n$ i $\beta_n$\index{$k_n$, $\lambda_n$, $\beta_n$ - stałę dobierane empirycznie dla algorytmu Local Response Normalization} to stałe dobierane empirycznie na podstawie zbioru walidacyjnego (za \cite{Krizhevsky2012}). Warstwy normalizacji wykorzystywane są w celu zrównoważenia poziomu wpływu poszczególnych neuronów na wynik końcowy.
 \end{itemize}
 
 Wprowadzenie w ostatnich latach dedykowanych rozwiązań dla szkolenia się głębokich sieci neuronowych, zarówno w warstwie sprzętowej jak i oprogramowania, umożliwiło tworzenie architektur o wysokim stopniu komplikacji. W głównej mierze rozwiązania te pozwoliły na optymalizację fazy szkolenia (omówionej w poprzedniej sekcji) jak również \textit{fazy wnioskowania}, gdzie wytrenowana sieć użyta jest \linebreak do przetwarzania kolejnych obserwacji. W warstwie sprzętowej wyróżnić można dedykowane akceleratory do operacji macierzowych, takie jak w \cite{DBLP:journals/corr/abs-1803-04014}, stworzone przez firmę NVIDIA, \textit{Tensor Processing Unit} (w skr. \textit{TPU}) czy opracowane przez firmę Intel procesory Nervana \cite{Intel}. 
 
 W warstwie oprogramowania należy wspomnieć o rozwiązaniach takich jak TensorRT \cite{TensorRT}, które minimalizują czasy przetwarzania sygnału przez wytrenowaną sieć np. stosując optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy. Dynamicznie rozwijają się również frameworki do zoptymalizowanych obliczeń z udziałem głębokich sieci neuronowych np.: Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet. Ich porównanie osadzone w kontekście aplikacji medycznych można znaleźć w \cite{Erickson2017}.
 
-Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla progres w rezultatach konkursu ImageNet Large Scale Visual Recognition Competition (w skr. ILSVRC) przedstawiony na Rys. \ref{ILSVRC}.
+Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla progres w rezultatach konkursu ImageNet Large Scale Visual Recognition Competition (w skr. ILSVRC)\index{ILSVRC -- skrót od ang. \textit{ImageNet Large Scale Visual Recognition Competition}} przedstawiony na Rys. \ref{ILSVRC}.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/ILSVRC.jpg}
@@ -445,14 +445,14 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 
 W skład topologii wchodzi pięć warstw konwolucyjnych i trzy gęste. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z maską o wymiarach 2$\times$2 \footnote{Autorzy pracy podają też przykłady użycia masek o wymiarze 2$\times$3, które nakładają się \linebreak w przestrzeni funkcji obrazowej. Nie znalazły one jednak miejsca w finalnej implementacji.}. 
 \newpage
-Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze \linebreak 227$\times$227$\times$3\footnote{3 jest liczbą kanałów kodujących kolor obrazka.}, na których wykonywana jest operacja splotu z 96-cioma filtrami \linebreak z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256-cioma filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry \linebreak z maską o wymiarze 3$\times$3$\times$384, a w piątej znajduje się 256 filtrów również z maską \linebreak o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale -- w oryginalnej pracy było to 1000 (por. \cite{Krizhevsky2012}).
+Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze \linebreak 227$\times$227$\times$3\footnote{3 jest liczbą kanałów kodujących kolor obrazu.}, na których wykonywana jest operacja splotu z 96-cioma filtrami \linebreak z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256-cioma filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry \linebreak z maską o wymiarze 3$\times$3$\times$384, a w piątej znajduje się 256 filtrów również z maską \linebreak o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale -- w oryginalnej pracy było to 1000 (por. \cite{Krizhevsky2012}).
 
 Poniżej przedstawiono przykład algorytmu wykorzystywanego dla pierwszej warstwy konwolucyjnej opisywanej topologii, umożliwiający zrozumienie sposobu przetwarzania sygnału wejściowego: 
 \begin{enumerate}[noitemsep,nolistsep]
 \item Z danych wejściowych o wymiarze [227$\times$227$\times$3] wybierany jest co czwarty blok  o wymiarach [11$\times$11$\times$3] (zarówno wzdłuż wysokości jak i szerokości). W rezultacie, nie uwzględniając krawędzi obrazu, otrzymywanych jest 217 punktów w każdym rzędzie i w kolumnie, w których mieści się [55$\times$55] tj. 3025 bloków.
 \item Zarówno 11$\times$11$\times$3 = 363 wagi znajdujące się w 96-ciu filtrach jak i wartości 363 punktów obrazowych znajdujących się w 3025-ciu blokach są przedstawiane w postaci macierzy $A_a$ o wymiarach [96$\times$363] i $B_a$ o wymiarach [363$\times$3025].
 \item Liczony jest iloczyn skalarny w postaci $A_a$$^\intercal$$B_a$ = $C_a$, gdzie nowa, wyjściowa macierz $C_a$ ma wymiar [96$\times$3025].
-\item Rezultat w postaci macierzy $C_a$ ponownie przewymiarowany jest na postać [55$\times$55$\times$96].  
+\item Rezultat w postaci macierzy $C_a$ ponownie przewymiarowany jest na postać [55$\times$55$\times$96].\index{$A_a$, $B_a$, $C_a$ -- macierze przetwarzane przez sieć AlexNet}  
 \end{enumerate} 
 
 W architekturze jako funkcję aktywacji neuronów wykorzystano ReLU, co znacząco przyspieszyło trening sieci. Uzyskano 6-krotne przyspieszenie treningu dla danych CIFAR-10 (zob. \cite{CIFAR}) w stosunku do tej samej topologii wykorzystującej sigmoidalną funkcję aktywacji. Ponieważ funkcja ReLU nie posiada górnego ograniczenia, neurony teoretycznie mogą posiadać nieograniczone wartości funkcji aktywacji. \linebreak W celu polepszenia kontrastu pomiędzy neuronami i wydobycia tych, które na tle innych się wyróżniają, zastosowano normalizację zgodną ze wzorem \ref{DLnormEquation}. W wyniku uzyskano redukcję błędu klasyfikacji top-5 o wartość 1,2 punktu procentowego.
@@ -554,9 +554,9 @@ y_l = h(x_l) + F(x_l, W_l),\\
 x_{l+1} = f(y_l),
 \end{split}
 \end{equation}
-gdzie $x_l$ i $x_{l+1}$ stanowią sygnał wejściowy i wyjściowy $l$-tego bloku. $F$ stanowi funkcję rezydualną optymalizowaną podczas treningu sieci, $h$($x_l$) stanowi funkcję przekształcenia sygnału $x_l$ przekazywanego skrótowym połączeniem, $f$ jest funkcją ReLU, \linebreak a $W$ stanowi macierz wag.
+gdzie $x_l$ i $x_{l+1}$ stanowią sygnał wejściowy i wyjściowy $l$-tego bloku. $F$\index{$F$ -- funkcja rezydualna} stanowi funkcję rezydualną optymalizowaną podczas treningu sieci, $h$($x_l$)\index{$h$($x_l$) -- funkcja przekształcenia sygnału} stanowi funkcję przekształcenia sygnału $x_l$ przekazywanego skrótowym połączeniem, $f$ jest funkcją ReLU, \linebreak a $W$\index{$W$ -- macierz wag} stanowi macierz wag.
 
-Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci składającej się \linebreak z bloków rezydualnych. Dla każdego $L$-tego bloku zachodzi równanie:
+Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci składającej się \linebreak z bloków rezydualnych. Dla każdego $L$-tego\index{$L$ - blok rezydualny} bloku zachodzi równanie:
 \begin{equation}
 x_L = x_l + \sum_{i=l}^{L-1}F(x_i, W_i)
 \end{equation}
@@ -565,7 +565,7 @@ Korzystając z reguły łańcuchowej można zapisać równanie na gradient funkc
 \label{gradResBlock}
 \frac{\partial \varepsilon}{\partial x} =  \frac{\partial \varepsilon}{\partial x_L} \frac{\partial x_L}{\partial x_l} =  \frac{\partial \varepsilon}{\partial x_L}\left (1 +   \frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i) \right )
 \end{equation}
-z czego wynika, że gradient może być podzielony na dwie addytywne składowe: (1) $w$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
+z czego wynika, że gradient może być podzielony na dwie addytywne składowe\index{$w$ -- gradient propagowany w ResNet}: (1) $w$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
 
 Przykład propagacji gradientu w sieci składającej się z trzech bloków wygląda zatem następująco:
 \begin{equation}
@@ -603,7 +603,7 @@ Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej s
 \begin{equation}
 \sigma (z)_j= \frac{e^{z_j}}{\sum_{k=1}^{K} e^{z_k}},
 \end{equation} 
-używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z$ sygnałów wejściowych i $j$ wyjściowych. Co istotne, rezultaty funkcji softmax przy przyjęcia odpowiedniego modelu probabilistycznego mogą stanowić prawdopodobieństwa przynależności do odpowiednich klas.
+\index{$\sigma (z)_j$ -- funkcja softmax}używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z$\index{$z$ -- liczba sygnałów wejściowych funkcji softmax} sygnałów wejściowych i $j$\index{$j$ -- liczba sygnałów wyjściowych funkcji softmax} wyjściowych. Co istotne, rezultaty funkcji softmax przy przyjęcia odpowiedniego modelu probabilistycznego mogą stanowić prawdopodobieństwa przynależności do odpowiednich klas.
 
 Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa \linebreak im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty, tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (zob. \cite{Breiman2001}).
 
@@ -616,7 +616,7 @@ W głosowaniu stosuje się mechanizm zliczania przewidzianych przez modele bazow
 W porównaniu do uśredniania, głosowanie jest mniej czułe na predykcje pojedynczych modeli. Wykorzystuje jedynie informacje o przewidzianych etykietach, \linebreak co z kolei utrudnia konstrukcje bardziej wyszukanych rozwiązań.
 
 \subsubsection{Generalizacja stosów}
-Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnej metody, której zadaniem jest wybór optymalnego wektora wag $w$ dla stosu $S^g$ predykcji dla danych $x_s$:
+Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92stackedgeneralization}. Wykorzystana została koncepcja \textit{meta-uczenia}, a zatem konstrukcja nadrzędnej metody, której zadaniem jest wybór optymalnego wektora wag $w$\index{$w$ -- wektor wag} dla stosu $S^g$\index{$S^g$ -- stos predykcji} predykcji dla danych $x_s$:
 \begin{equation}
 S^g(x_s) = \sum_{i=1}^{m}w_i {S^g}_i(x_s)
 \end{equation}

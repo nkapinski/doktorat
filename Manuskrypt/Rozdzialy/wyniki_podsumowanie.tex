@@ -90,19 +90,19 @@ W tej sekcji opracowana metoda została porównana z automatyczną oceną bazuj�
 
 Dane dla metody opartej o Ultrasonografię pochodziły od tych samych pacjentów z projektu START, co w przypadku badań RM. Stosowano się również do identycznych odstępów czasowych. Z przyczyn praktycznych zmniejszyła się jedynie grupa odniesienia, która w tym przypadku wyniosła 18-stu zdrowych ochotników. Badania zrealizowano z wykorzystaniem aparatu GE 3D high-resolution Voluson E8 Expert z liniową sondą (5--18 MHz). Jako dane wejściowe wykorzystano informacje z trybu B (zob. p. \ref{USG}), których ostateczna liczba wyniosła 565 skanów 3D. 
 
-Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno \linebreak w oparciu o przekroje w płaszczyźnie osiowej jak i strzałkowej (wykorzystując obrazy, gdzie widoczne jest ścięgno):
+Dane USG są zbliżone do izotropowych dlatego utworzono zbiory zarówno \linebreak w oparciu o przekroje w płaszczyźnie poprzecznej jak i strzałkowej (wykorzystując obrazy, gdzie widoczne jest ścięgno):
 \begin{itemize}[noitemsep,nolistsep]
 	\item zbiór treningowy USG (strzałkowy) -- zawierał 253.639 2D przekrojów w płaszczyźnie strzałkowej, w tym 245.366 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 8.273 pochodzących od zdrowych ochotników.
-	\item zbiór treningowy USG (osiowy) -- zawierał 467.548 2D przekrojów w płaszczyźnie osiowej, w tym 450.816 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
+	\item zbiór treningowy USG (poprzeczny) -- zawierał 467.548 2D przekrojów w płaszczyźnie poprzecznej, w tym 450.816 pochodzących od chorych 44-ech pacjentów oznaczonych przez radiologa i 16.732 pochodzących od zdrowych ochotników. 
 \end{itemize}
 
 Wizualizacja przykładowych danych USG znajduje się na Rys. \ref{fig:US_sample}.
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{figures/Data_US_sample.jpg}
-	\caption{Wizualizacja przykładowych danych USG w przekrojach osiowych i strzałkowych, w kolejnych tygodniach po zszyciu ścięgna.}
+	\caption{Wizualizacja przykładowych danych USG w przekrojach poprzecznych i strzałkowych, w kolejnych tygodniach po zszyciu ścięgna.}
 	\label{fig:US_sample}
 \end{figure}
-W ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych \linebreak i teksturę oraz tkanki otaczające ścięgno na przekrojach osiowych. Jednak szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa. 
+W ogólności można zaobserwować ułożenie włókien ścięgnistych na przekrojach strzałkowych \linebreak i teksturę oraz tkanki otaczające ścięgno na przekrojach poprzecznych. Jednak szczegółowa analiza załączonych obrazów może być wykonana jedynie przez specjalistę radiologa. 
 
 Utrudniona w stosunku do obrazów RM interpretacja ma związek z obecnymi artefaktami w USG i z szumem ziarnistym tworzącym losowe wzorce. Jakość obrazu obniża również jego wartość kliniczną, co wskazują analizy zamieszczone w tej pracy jak i w wielu pracach innych autorów (zob. np. \cite{Khan2003, Ibrahim2013}). Dlatego na początku zdecydowano się przeprowadzić test polegający na prostym zadaniu klasyfikacji binarnej chory/zdrowy (podobnie jak dla badań RM zamieszczonych w p. \ref{binaryMRI}). Miało \linebreak to na celu porównanie możliwości interpretacji wnioskowania na podstawie obrazów RM i USG. Wyniki dla szkolenia z wykorzystaniem kroswalidacji z 4-ema segmentami zamieszczono w Tabeli \ref{tab:usg-binary}.
 \renewcommand{\arraystretch}{1.2}
@@ -115,7 +115,7 @@ Utrudniona w stosunku do obrazów RM interpretacja ma związek z obecnymi artefa
 	\label{tab:usg-binary}
 	\begin{tabular}{l||c|c|c||c|c|c}
 		%\hline
-		& \multicolumn{3}{c}{\textbf{p. strzałkowy}} & \multicolumn{3}{c}{\textbf{p. osiowy}} \\
+		& \multicolumn{3}{c}{\textbf{p. strzałkowy}} & \multicolumn{3}{c}{\textbf{p. poprzeczny}} \\
 		\textbf{Model} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} & \textbf{ACC} & \textbf{PPV} & \textbf{TPR} \\ \hline \hline
 		AlexNet$_{bu}$ & 0,85$\pm$0,09 & 0,92$\pm$0,08 & 0,78$\pm$0,11 & 0,843$\pm$0,07 & 0,93$\pm$0,06 & 0,73$\pm$0,11  \\ \hline
 		Inception-v3$_{bu}$ & \textbf{0,92}$\pm$0,05 & 0,97$\pm$0,04 & 0,90$\pm$0,06 & 0,90$\pm$0,05 & 0,95$\pm$0,03 & 0,87$\pm$0,07 \\ \hline
@@ -124,14 +124,14 @@ Utrudniona w stosunku do obrazów RM interpretacja ma związek z obecnymi artefa
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju osiowym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednak działania te przyniosły odwrotny~skutek.  
+Wszystkie modele wytrenowano oddzielnie na przekrojach poprzecznych i oddzielnie na strzałkowych. Żeby zbalansować dane, przekroje od zdrowych ochotników powiększono poprzez odbicie, a przekroje od chorych pacjentów próbkowano. Dokładność dla najlepszego modelu w przekroju poprzecznym wyniosła 91,6\%, a w przekroju strzałkowym 91,2\%. Dla porównania, dokładność binarnej klasyfikacji na danych z RM wyniosła 99,83\%. Wyniki te potwierdzają możliwość lepszej interpretacji danych RM dla zadanego problemu, jednak nie dyskryminują USG. W celu polepszenia rezultatów eksperymentowano również z możliwością klasyfikacji binarnej z wykorzystaniem jedynie obszaru ROI, jednak działania te przyniosły odwrotny~skutek.  
 \vspace{6px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
 	\scriptsize
 	\setlength{\tabcolsep}{3pt}
 	\centering
-	\caption{Wyniki szkolenia sieci dla danych z USG. Pogrubieniem oznaczono najlepsze rezultaty, osobno dla przekrojów osiowych i strzałkowych}
+	\caption{Wyniki szkolenia sieci dla danych z USG. Pogrubieniem oznaczono najlepsze rezultaty, osobno dla przekrojów poprzecznych i strzałkowych}
 	\label{tab:usg_train_cross-validation}
 	\begin{tabular}{lc||c|c|c|c|c|c}
 		%\hline
@@ -146,7 +146,7 @@ Wszystkie modele wytrenowano oddzielnie na przekrojach osiowych i oddzielnie na 
 		ResNet-50$_{eus}$ & MAE & 0,89$\pm$0,06 & 0,74$\pm$0,07 & 0,83$\pm$0,11 & \textbf{0,81}$\pm$0,15 & 0,92$\pm$0,15 & 0,99$\pm$0,15 \\
 		& MAX-AE & \textbf{1,53} & \textbf{1,22} & \textbf{1,64} & 1,43 & 1,67 & 1,71 \\
 		& Corr & 0,62 & 0,38 & \textbf{0,23} & 0,62 & 0,12 & 0,43 \\ \hline \hline
-		& & \multicolumn{6}{c}{\textbf{p. osiowy}} \\
+		& & \multicolumn{6}{c}{\textbf{p. poprzeczny}} \\
 		
 		AlexNet$_{euo}$ & MAE & \textbf{0,98}$\pm$0,20 & 0,83$\pm$0,16 & 0,82$\pm$0,17 & 0,94$\pm$0,26 & 0,95$\pm$0,25 & 0,86$\pm$0,14  \\
 		& MAX-AE & \textbf{1,79} & \textbf{1,36} & 1,86 & 1,41 & 1,61 & 1,59 \\ 
@@ -185,7 +185,7 @@ Między modelami nie uzyskano statystycznie istotnych różnic  dla liczonych ś
 		& MAX-AE & \textbf{1,49} & \textbf{1,26} & 1,74 & 1,48 & 1,78 & 1,71 \\
 		& Corr & 0,60 & 0,55 & 0,25 & 0,55 & 0,34 & 0,56 \\
 		\hline \hline
-		& & \multicolumn{6}{c}{\textbf{USG -- p. osiowy}} \\
+		& & \multicolumn{6}{c}{\textbf{USG -- p. poprzeczny}} \\
 		
 		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,27 & 0,75$\pm$0,7 & 0,58$\pm$0,05 & 0,83$\pm$0,05 & \textcolor{red}{\textbf{0,53}}$\pm$0,08 & \textbf{0,83}$\pm$0,15 \\
 		& MAX-AE & 2,8 & 1,46 & \textbf{1,51} & 1,27 & 1,63 & 1,65 \\
@@ -203,7 +203,7 @@ Między modelami nie uzyskano statystycznie istotnych różnic  dla liczonych ś
 \end{table}
 \renewcommand{\arraystretch}{1}
 
-Podobnie jak w przypadku porównania z modelami trenowanymi na danych RM w paradygmacie end-to-end, maksymalne błędy MAX-AE uzyskane przez modele wytrenowane na danych USG były w każdym przypadku mniejsze niż w przypadku metody opartej na fuzji. Ponownie jest to efekt sposobu szkolenia bazującego \textit{explicite} na ocenach radiologa. Bardzo interesujący jest wynik istotnej statystycznie poprawy w parametrze TU realizowanej przez model Inception-v3. Oceniana jest tam jednorodność ścięgna, dobrze widoczna w USG w przekrojach strzałkowych (wynik MAE równy 0,54) jak i przekrojach osiowych (MAE równe 0,53). Metoda fuzji uzyskała natomiast statystycznie istotną poprawę w przypadku Corr dla parametrów związanych z obrzękami (TisE, TE), gdzie dominują efekty związane z ukrwieniem tkanek podczas procesu gojenia się.
+Podobnie jak w przypadku porównania z modelami trenowanymi na danych RM w paradygmacie end-to-end, maksymalne błędy MAX-AE uzyskane przez modele wytrenowane na danych USG były w każdym przypadku mniejsze niż w przypadku metody opartej na fuzji. Ponownie jest to efekt sposobu szkolenia bazującego \textit{explicite} na ocenach radiologa. Bardzo interesujący jest wynik istotnej statystycznie poprawy w parametrze TU realizowanej przez model Inception-v3. Oceniana jest tam jednorodność ścięgna, dobrze widoczna w USG w przekrojach strzałkowych (wynik MAE równy 0,54) jak i przekrojach poprzecznych (MAE równe 0,53). Metoda fuzji uzyskała natomiast statystycznie istotną poprawę w przypadku Corr dla parametrów związanych z obrzękami (TisE, TE), gdzie dominują efekty związane z ukrwieniem tkanek podczas procesu gojenia się.
 
 Bazując na powyższych rezultatach można wnioskować, że metoda oparta o dane USG może być komplementarna z proponowaną oceną bazującą na danych \linebreak z RM, zwłaszcza w kontekście oceny parametru TU. Do tego celu potrzebna jest dokładna analiza i zrozumienie podstaw wnioskowania sieci opartej o USG, a następnie wybór oraz realizacja odpowiedniej metody fuzji.
 

@@ -139,13 +139,6 @@ Ryan Cunningham, Peter Harding, Ian Loram.
   redaktorzy, {\em Medical Image Understanding and Analysis}, strony 63--73,
   Cham, 2017. Springer International Publishing.
 
-\bibitem{BPA}
-Valentino Dardanoni, Giuseppe~De Luca, Salvatore Modica, Franco Peracchi.
-\newblock {Bayesian {M}odel {A}veraging for {G}eneralized {L}inear {M}odels
-  with {M}issing {C}ovariates}.
-\newblock EIEF Working Papers Series 1311, Einaudi Institute for Economics and
-  Finance (EIEF), Grudzień 2013.
-
 \bibitem{Delp2007}
 Scott~L. Delp, Frank~C. Anderson, Allison~S. Arnold, Peter Loan, Ayman Habib,
   Chand~T. John, Eran Guendelman, Darryl~G. Thelen.
@@ -572,13 +565,6 @@ Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
   {P}recision.
 \newblock {\em Computing Research Repository (CoRR)}, abs/1803.04014, 2018.
 
-\bibitem{BMC}
-Miriam Martinez, Luis~Enrique Sucar, Hector~Gabriel Acosta, Nicandro Cruz.
-\newblock Bayesian {M}odel {C}ombination and {I}ts {A}pplication to {C}ervical
-  {C}ancer {D}etection.
-\newblock {\em Advances in Artificial Intelligence - IBERAMIA-SBIA 2006},
-  strony 622--631, Berlin, Heidelberg, 2006. Springer Berlin Heidelberg.
-
 \bibitem{Minsky1969}
 Seymour~Papert Marvin Lee~Minsky.
 \newblock {\em Perceptrons: {A}n {I}ntroduction to {C}omputational {G}eometry}.
@@ -700,12 +686,6 @@ Antoine Rosset, Luca Spadola, Osman Ratib.
 David~E. Rumelhart, Geoffrey~E. Hinton, Ronald~J. Williams.
 \newblock Learning representations by back-propagating errors.
 \newblock {\em Nature}, 323(6088):533--536, Październik 1986.
-
-\bibitem{BMA}
-N.~{Russell}, T.~{Brendan Murphy}, A.~E {Raftery}.
-\newblock {Bayesian model averaging in model-based clustering and density
-  estimation}.
-\newblock {\em ArXiv e-prints}, Czerwiec 2015.
 
 \bibitem{Hijazi2015}
 Hijazi S., Kumar R., Rowen C.

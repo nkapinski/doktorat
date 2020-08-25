@@ -24,12 +24,12 @@
 		19
   \item $G_{zz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $z$, 
 		19
-  \item $H$ -- og\IeC {\'o}lna metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
+  \item $H$ -- og\IeC {\'o}lna metryka dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
 		71
   \item $H_{PC}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
   \item $H_{reg}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
-		85
+		86
   \item $I$ -- funkcja obrazowa, 35
   \item $I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski, 
 		35
@@ -65,6 +65,7 @@
   \item $P_{max}$ -- moc maksymalna, 32
   \item $R$ -- energetyczny wsp\IeC {\'o}\IeC {\l }czynnik odbicia, 26
   \item $R(x_i)$ -- wynik regresji, 71
+  \item $RF[1-46]$ -- kolejne klasyczne cechy obrazowe, 70
   \item $RMSE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d kwadratowy, 
 		48
   \item $S$ -- skala zmiany obrazu, 50
@@ -86,19 +87,19 @@
 		19
   \item $W$ -- macierz wag, 64
   \item $WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany, 
-		116
+		117
   \item $WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty, 
-		116
+		117
   \item $X$ -- zmienna losowa, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
-		85
+		86
   \item $X_i$ -- warto\IeC {\'s}\IeC {\'c} kolejnych obserwacji, 52
   \item $Y$ -- macierz nowych zmiennych PCA, 54
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
-		116
+		117
   \item $ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty, 
-		116
+		117
   \item $\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF, 
 		19
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
@@ -144,7 +145,7 @@
 		27
   \item $c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} propoagacji drga\IeC {\'n}, 
 		25
-  \item $d$ -- dystans separacji dla cech Haralicka, 88
+  \item $d$ -- dystans separacji dla cech Haralicka, 89
   \item $d$ -- grubo\IeC {\'s}\IeC {\'c} np. walca, 25
   \item $d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera, 
 		52
@@ -169,7 +170,7 @@
 		35
   \item $j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax, 
 		67
-  \item $k$ -- index przekroju osiowego, 86
+  \item $k$ -- index przekroju poprzecznego, 86
   \item $k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization, 
 		56
   \item $l_t$ -- d\IeC {\l }ugo\IeC {\'s}ci \IeC {\'s}ci\IeC {\k e}gna, 
@@ -179,7 +180,7 @@
   \item $o$ -- obserwacja, 38
   \item $p$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 
 		45
-  \item $p$ -- wskaznik istotno\IeC {\'s}ci statystycznej, 90
+  \item $p$ -- wskaznik istotno\IeC {\'s}ci statystycznej, 91
   \item $p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa, 
 		52
   \item $r$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji, 52
@@ -198,8 +199,8 @@
   \item $x$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		19, 34
   \item $x$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy, 37
-  \item $x_i$ -- przekr\IeC {\'o}j osiowy, 71
-  \item $x_k$ -- przekr\IeC {\'o}j osiowy, 86
+  \item $x_i$ -- przekr\IeC {\'o}j poprzeczny, 71
+  \item $x_k$ -- przekr\IeC {\'o}j poprzeczny, 86
   \item $y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		19, 34
   \item $y$ -- funkcja aktywacji neuronu, 37
@@ -211,7 +212,7 @@
   \item $z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		34
   \item \textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne, 
-		114
+		115
 
   \indexspace
 
@@ -266,7 +267,7 @@
 
   \item LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}, 
 		52
-  \item LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}, 89
+  \item LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}, 90
   \item LSA -- skr\IeC {\'o}t od ang. \textit{Latent Semantic Analysis}, 
 		55
 
@@ -277,7 +278,7 @@
   \item MICCAI -- skr\IeC {\'o}t od ang. \textit{Medical Image Computing and Computer Assisted Intervention}, 
 		43
   \item MPR -- skr\IeC {\'o}t od ang. \textit{Multilayer Perceptron Regression}, 
-		89
+		90
 
   \indexspace
 
@@ -285,19 +286,19 @@
   \item PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}, 
 		53
   \item PD -- skr\IeC {\'o}t od ang. Proton density, 21
-  \item Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}, 89
+  \item Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}, 90
   \item Power D -- Power Doppler, 27
 
   \indexspace
 
-  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 89
+  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 90
   \item RM -- Rezonans Magnetyczny, 5, 17
   \item ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}, 70
 
   \indexspace
 
   \item SCT -- uszkodzenia \IeC {\'s}r\IeC {\'o}d\IeC {\'s}ci\IeC {\k e}gniste, 
-		75
+		76
   \item SGD -- skr\IeC {\'o}t od ang. \textit{Stochastic Gradient Descent}, 
 		46
   \item SI -- Sztuczna Inteligencja, 2
@@ -313,12 +314,12 @@
   \item t-SNE -- skr\IeC {\'o}t od ang. \textit{T-distributed stochastic neighbor embedding}, 
 		55
   \item TE -- obrz\IeC {\k e}k \IeC {\'s}ci\IeC {\k e}gna, 76
-  \item TisE -- obrz\IeC {\k e}k tkanek, 76
+  \item TisE -- obrz\IeC {\k e}k tkanek, 77
   \item TN -- skr\IeC {\'o}t od ang. \textit{True Negative}, 47
   \item TP -- skr\IeC {\'o}t od ang. \textit{True Positive}, 47
   \item TPU -- skr\IeC {\'o}t od ang. \textit{Tensor Processing Unit}, 
 		3
-  \item TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna, 75
+  \item TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna, 76
   \item TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna, 
 		76
 

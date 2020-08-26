@@ -596,6 +596,7 @@ Architektura ResNet-18 jest najmniejszą z pojawiających się w literaturze prz
 Sieć ResNet i jej warianty dla wielu testowych zbiorów danych takich jak ImageNet, CIFAR czy COCO \cite{COCO} osiągnęły dokładność klasyfikacji porównywalną \linebreak z możliwościami ludzkiego obserwatora. Dalszy progres był możliwy m.in. dzięki zastosowaniu synergii wielu modeli, co zostało opisane w kolejnej podsekcji.
 
 \subsection{Złożenia}
+\label{seq:ensemble}
 Szkolenie złożeń sieci (ang. \textit{esemble learning}) bazuje na wykorzystywaniu kilku modeli bazowych i wybranej metody ich synergii, która w danym zadaniu dokonuje integracji lokalnych wyników. W zależności od zadania, nadrzędna metoda nazywana jest np. \textit{meta-klasyfikatorem} (w przypadku klasyfikacji) bądź np. \textit{meta-regresorem} (w przypadku regresji). W kontekście głębokiego uczenia się stosowane są różne metody kombinacji modeli bazowych (zob. \cite{Ensemble}). Jako często stosowane przykłady można podać: uśrednianie, głosowanie lub generalizację stosów.
 
 \subsubsection{Uśrednianie}

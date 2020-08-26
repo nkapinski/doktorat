@@ -60,7 +60,7 @@
   \item $PPV$ -- Warto\IeC {\'s}\IeC {\'c} predykcji dodatniej klasyfikacji, 
 		48
   \item $PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek, 
-		93
+		94
   \item $P_m$ -- moc \IeC {\'s}rednia, 32
   \item $P_{max}$ -- moc maksymalna, 32
   \item $R$ -- energetyczny wsp\IeC {\'o}\IeC {\l }czynnik odbicia, 26

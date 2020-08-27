@@ -36,4 +36,61 @@ Trwają również prace nad wizualizacją wyników oceny automatycznej wraz \lin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cechy Haralicka}
 \label{app:Haralick}
-Tutaj dodano opis cech Haralicka
+Poszczególne cechy Haralicka w tej pracy wyliczane są dla funkcji obrazowej przekształconej z wykorzystaniem znormalizowanej macierzy konkurencji: 
+\begin{equation}
+HP_{i,j} = \frac{HV_{i,j}}{HR}
+\end{equation}
+gdzie $HP$ to znormalizowana macierz konkurencji\index{$HP$ -- znormalizowana macierz konkurencji}, $HV$\index{$HV$ -- liczba par punktów obrazowych w oknie wyliczania macierzy konkurencji, które mają taką samą wartość funkcji obrazowej, odległych od siebie o dystans separacji} to liczba par punktów obrazowych, które mają taką samą wartość funkcji obrazowej, odległych od siebie o pewien określony dystans wzdłuż półprostej o punkcie początkowym w $i$, $j$, nachylonej pod kątem $\alpha_h$ (tzw. dystans separacji). $HR$\index{$HR$ -- liczba wszystkich par punktów obrazowych w oknie wyliczania macierzy konkurencji oddalonych o dystans separacji} to natomiast liczba wszystkich par oddalonych o dystans separacji. 
+
+Z wykorzystaniem macierzy konkurencji można zdefiniować następujące cechy Haralicka:
+\begin{itemize}
+	\item drugi moment kątowy:
+	\begin{equation}
+		hf_1 = \sum_i \sum_j {HP(i,j)}^2,
+	\end{equation} 
+	\item kontrast:
+	\begin{equation}
+		hf_2 = \sum_{n=0}^{N-1}n^2\left\{{\sum_{\substack{i=1\\|i-j|=n}}^{N} \sum_{j=1}^{N}} HP(i,j)\right\},
+	\end{equation}  
+	\item korelacja:
+	\begin{equation}
+		hf_3 = \frac{\sum_{i} \sum_{j}(ij)HP(i,j) - \mu_{hx}\mu_{hy}}{\sigma_{hx}\sigma_{hy}},
+	\end{equation}
+	gdzie $\mu_{hx}$, $\mu_{hy}$, $\sigma_{hx}$, $\sigma_{hy}$ to odpowiednio średnie i odchylenia standardowe $HP$ liczone po $x$ i $y$ (zgodnie z występowaniem w indeksie).  
+	\item wariancję
+	\begin{equation}
+	zawartość...,
+	\end{equation}
+	\item odwrotny moment różnicowy
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item sumę średnich
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item sumę wariancji
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item sumę entropii
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item entropię
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item różnicę wariancji
+	\begin{equation}
+	zawartość...,
+	\end{equation} 
+	\item różnicę entropii
+	\begin{equation}
+	zawartość...,
+	\end{equation}
+	\item maksimum prawdopodobieństwa
+	\begin{equation}
+	zawartość...,
+	\end{equation}
+\end{itemize}

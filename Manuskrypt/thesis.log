@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  26 AUG 2020 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  27 AUG 2020 11:22
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -2233,19 +2233,92 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [144]
 Dodatek B.
-) [145
+[145
 
 ]
+
+LaTeX Warning: Command \' invalid in math mode on input line 62.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 62.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 66.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 66.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 70.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 70.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 74.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 74.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 78.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 78.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 82.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 82.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 86.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 86.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 90.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 90.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+
+LaTeX Warning: Command \' invalid in math mode on input line 94.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 94.
+
+Missing character: There is no ± in font plmi12!
+Missing character: There is no ¢ in font plmi12!
+)
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[146]
 runsystem(makeindex thesis.idx)...executed (allowed).
 
- (thesis.ind [146
+ (thesis.ind [147
 
 
 ]
-Overfull \vbox (3.2466pt too high) has occurred while \output is active []
-
-
-[147]
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
@@ -2261,11 +2334,15 @@ Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
-[151])
+[151]
 Overfull \vbox (3.2466pt too high) has occurred while \output is active []
 
 
-[152] (thesis.aux (header.aux))
+[152])
+Overfull \vbox (3.2466pt too high) has occurred while \output is active []
+
+
+[153] (thesis.aux (header.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -2310,9 +2387,9 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (166 pages, 16275672 bytes).
+Output written on thesis.pdf (167 pages, 16279989 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
+ 689 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

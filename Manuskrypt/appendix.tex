@@ -36,13 +36,13 @@ Trwają również prace nad wizualizacją wyników oceny automatycznej wraz \lin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Cechy Haralicka}
 \label{app:Haralick}
-Poszczególne cechy Haralicka w tej pracy wyliczane są dla funkcji obrazowej przekształconej z wykorzystaniem znormalizowanej macierzy konkurencji: 
+Poszczególne cechy Haralicka w tej pracy wyliczane są dla funkcji obrazowej przekształconej z wykorzystaniem \textit{znormalizowanej macierzy współwystępowania}: 
 \begin{equation}
 HP_{i,j} = \frac{HV_{i,j}}{HR}
 \end{equation}
-gdzie $HP$ to znormalizowana macierz konkurencji\index{$HP$ -- znormalizowana macierz konkurencji}, $HV$\index{$HV$ -- liczba par punktów obrazowych w oknie wyliczania macierzy konkurencji, które mają taką samą wartość funkcji obrazowej, odległych od siebie o dystans separacji} to liczba par punktów obrazowych, które mają taką samą wartość funkcji obrazowej, odległych od siebie o pewien określony dystans wzdłuż półprostej o punkcie początkowym w $i$, $j$, nachylonej pod kątem $\alpha_h$ (tzw. dystans separacji). $HR$\index{$HR$ -- liczba wszystkich par punktów obrazowych w oknie wyliczania macierzy konkurencji oddalonych o dystans separacji} to natomiast liczba wszystkich par oddalonych o dystans separacji. 
+gdzie $HP$ to znormalizowana macierz współwystępowania\index{$HP$ -- znormalizowana macierz współwystępowania}, $HV$\index{$HV$ -- liczba par punktów obrazowych w oknie wyliczania macierzy współwystępowania, które mają taką samą wartość funkcji obrazowej, odległych od siebie o dystans separacji} to liczba par punktów obrazowych, które mają taką samą wartość funkcji obrazowej, odległych od siebie o pewien określony dystans wzdłuż półprostej o punkcie początkowym w $i$, $j$, nachylonej pod kątem $\alpha_h$ (tzw. dystans separacji). $HR$\index{$HR$ -- liczba wszystkich par punktów obrazowych w oknie wyliczania macierzy współwystępowania oddalonych o dystans separacji} to natomiast liczba wszystkich par oddalonych o dystans separacji. 
 
-Z wykorzystaniem macierzy konkurencji można zdefiniować następujące cechy Haralicka:
+Z wykorzystaniem macierzy współwystępowania można zdefiniować następujących 12 cech Haralicka\index{hf1-12 -- cecha Haralicka}:
 \begin{itemize}
 	\item drugi moment kątowy:
 	\begin{equation}
@@ -59,38 +59,46 @@ Z wykorzystaniem macierzy konkurencji można zdefiniować następujące cechy Ha
 	gdzie $\mu_{hx}$, $\mu_{hy}$, $\sigma_{hx}$, $\sigma_{hy}$ to odpowiednio średnie i odchylenia standardowe $HP$ liczone po $x$ i $y$ (zgodnie z występowaniem w indeksie).  
 	\item wariancję
 	\begin{equation}
-	zawartość...,
+		hf_4 = \sum_i \sum_j (i - \mu_{hxy})^2 HP(i,j),
 	\end{equation}
 	\item odwrotny moment różnicowy
 	\begin{equation}
-	zawartość...,
+		hf_5 = \sum_i \sum_j \frac{1}{1+(i-j)^2}HP(i,j),
 	\end{equation} 
 	\item sumę średnich
 	\begin{equation}
-	zawartość...,
+		hf_6 = \sum_{i=2}^{2N}i HP_{x+y}(i),
+	\end{equation} 
+	gdzie:
+	 \begin{equation}
+	 HP_{x+y}(k) = \sum_{\substack{i=1 \\ i+j = k}^{N}} \sum_{j=1}^{N} HP(i,j)
+	 \end{equation}
+	\item sumę entropii
+	\begin{equation}
+		hf_7 = - \sum_{i=2}^{2N}HP_{x+y}(i) log(HP_{x+y}(i)),
 	\end{equation} 
 	\item sumę wariancji
 	\begin{equation}
-	zawartość...,
-	\end{equation} 
-	\item sumę entropii
-	\begin{equation}
-	zawartość...,
+		hf_8 = \sum_{i=2}^{2N}(i - hf_7)^2 HP(i),
 	\end{equation} 
 	\item entropię
 	\begin{equation}
-	zawartość...,
+		hf_9 =  - \sum_i \sum_j HP(i,j) log(HP(i,j)),
 	\end{equation} 
 	\item różnicę wariancji
 	\begin{equation}
-	zawartość...,
+	 	hf_{10} = \sigma^2(HP_{x-y}),
 	\end{equation} 
+	gdzie:
+	\begin{equation}
+		HP_(x-y)(k) = \sum_{\substack{i=1 \\ |i-j| = k}}^{N} \sum_{j=1}^{N} HP(i,j),
+	\end{equation} 	
 	\item różnicę entropii
 	\begin{equation}
-	zawartość...,
+	 hf_{11} = - \sum_{i=0}^{N-1} HP_{x-i}(i)log(HP_{x-y}(i)),
 	\end{equation}
 	\item maksimum prawdopodobieństwa
 	\begin{equation}
-	zawartość...,
+	hf_12 = max(HP),
 	\end{equation}
 \end{itemize}

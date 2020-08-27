@@ -46,4 +46,4 @@
 \contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{142}% 
 \contentsline {chapter}{\numberline {A}AchillesDL: System komputerowego wspomagania oceny gojenia \IeC {\'s}ci\IeC {\k e}gien i wi\IeC {\k e}zade\IeC {\l }}{143}% 
 \contentsline {chapter}{\numberline {B}Cechy Haralicka}{145}% 
-\contentsline {chapter}{Wykaz skr\IeC {\'o}t\IeC {\'o}w i oznacze\IeC {\'n}}{147}% 
+\contentsline {chapter}{Wykaz skr\IeC {\'o}t\IeC {\'o}w i oznacze\IeC {\'n}}{148}% 

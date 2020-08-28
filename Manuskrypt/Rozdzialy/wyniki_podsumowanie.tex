@@ -10,7 +10,7 @@ W tej sekcji opracowana metoda zostanie porównana z metodą opartą o paradygma
 
 Do szkolenia się sieci wykorzystano powiększony zestaw treningowy, ograniczony jednak do danych 44-ech pacjentów treningowych, zawierających sekwencje wybrane w toku eksperymentów przedstawionych w p. \ref{seq:protocol_selection}: T2 $^\ast$ GRE, T2 $^\ast$ GRE TE\_MIN i PD. Tym razem nie zdecydowano się na zawężenie zbioru danych tylko do jednej sekwencji RM, z uwagi na potrzebę maksymalizacji liczby próbek. Nie zdecydowano się również na pełny zbiór wszystkich sekwencji, z uwagi na różnice w danych, które mogłyby zaburzyć proces szkolenia się. 
 
-Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono metryki MAE, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
+Do szkolenia zastosowano metodę kroswalidacji z podziałem na 4 segmenty. Dla każdego z parametrów z wzorca odniesienia wyszkolono osobną sieć. Wyliczono metryki MAE z informacją na temat błędu średniej, MAX-AE i Corr stosowane również w poprzednim rozdziale. Wyniki zestawiono w Tab. \ref{tab:end-to-endTrain}.
 \vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[ht]

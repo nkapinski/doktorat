@@ -27,11 +27,11 @@
   \item $H$ -- og\IeC {\'o}lna metryka dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
 		71
   \item $HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, 
-		145
+		146
   \item $HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji, 
-		145
+		146
   \item $HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji, 
-		145
+		146
   \item $H_{PC}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
   \item $H_{reg}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
@@ -93,9 +93,9 @@
 		19
   \item $W$ -- macierz wag, 64
   \item $WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany, 
-		117
+		118
   \item $WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty, 
-		117
+		118
   \item $X$ -- zmienna losowa, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
 		86
@@ -103,9 +103,9 @@
   \item $Y$ -- macierz nowych zmiennych PCA, 54
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
-		117
+		118
   \item $ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty, 
-		117
+		118
   \item $\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF, 
 		19
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
@@ -218,7 +218,7 @@
   \item $z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		34
   \item \textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne, 
-		115
+		116
 
   \indexspace
 
@@ -262,7 +262,7 @@
 
   \indexspace
 
-  \item hf1-12 -- cecha Haralicka, 145
+  \item hf1-12 -- cecha Haralicka, 146
 
   \indexspace
 
@@ -317,7 +317,7 @@
 		76
   \item SVM -- skr\IeC {\'o}t od ang. Support Vector Machine, 37
   \item SVR -- skr\IeC {\'o}t od ang. \textit{Support Vector Regression}, 
-		89
+		90
 
   \indexspace
 

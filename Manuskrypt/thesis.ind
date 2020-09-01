@@ -39,15 +39,14 @@
   \item $I$ -- funkcja obrazowa, 35
   \item $I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski, 
 		35
-  \item $I_0$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej, 
-		26
+  \item $I_0$ -- nat\IeC {\k e}\IeC {\.z}enie fali odbitej, 26
   \item $I_r$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej, 
 		26
   \item $K$ -- macierz odwracalna, 54
   \item $K_m$ -- funkcja maski splotu, 35
-  \item $L$ - blok rezydualny, 64
-  \item $L$ -- funkcja strat, 46
-  \item $L$ -- macierz diagonalna, 54
+  \item $L$ - liczba blok\IeC {\'o}w rezydualnych, 64
+  \item $L_d$ -- macierz diagonalna, 54
+  \item $L_s$ -- funkcja strat, 46
   \item $MAE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d absolutny, 48
   \item $MAX_{AE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d absolutny, 48
   \item $MAX_{BE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia, 
@@ -91,15 +90,15 @@
   \item $T_p$ -- warto\IeC {\'s}\IeC {\'c} progowe, 36
   \item $T_y$ -- czas w\IeC {\l }\IeC {\k a}czenia pola gradientowego $G_{yz}$, 
 		19
+  \item $U$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy, 45
   \item $W$ -- macierz wag, 64
   \item $WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany, 
 		118
   \item $WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty, 
 		118
-  \item $X$ -- zmienna losowa, 52
+  \item $X1$, $X2$ -- zmienne losowe, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
 		86
-  \item $X_i$ -- warto\IeC {\'s}\IeC {\'c} kolejnych obserwacji, 52
   \item $Y$ -- macierz nowych zmiennych PCA, 54
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
@@ -111,18 +110,17 @@
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
 		38
   \item $\alpha$ -- sta\IeC {\l }a w metodzie LASSO, 88
-  \item $\bigodot$ -- iloczyn skalarny dw\IeC {\'o}ch grdient\IeC {\'o}w, 
-		47
+  \item $\bigodot$ -- iloczyn skalarny, 47
   \item $\bigtriangledown f$($x$) -- gradient funkcji celu, 44
-  \item $\epsilon$ -- modu\IeC {\l } odkszta\IeC {\l }calno\IeC {\'s}ci obj\IeC {\k e}to\IeC {\'s}ciowej, 
-		25
   \item $\epsilon$ -- szybko\IeC {\'s}\IeC {\'c} uczenia si\IeC {\k e}, 
 		44
+  \item $\epsilon_z$ -- modu\IeC {\l } odkszta\IeC {\l }calno\IeC {\'s}ci obj\IeC {\k e}to\IeC {\'s}ciowej, 
+		25
   \item $\eta_{x,y}^{i}$ -- aktywacja danego neuronu, 56
   \item $\frac{\delta y}{\delta x}$ -- pochodna funkcji celu, 43
   \item $\gamma$ -- wsp\IeC {\'o}\IeC {\l }czynnik \IeC {\.z}yromagnetyczny w\IeC {\l }a\IeC {\'s}ciwy dla danego j\IeC {\k a}dra atomowego, 
 		18
-  \item $\gamma$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali, 
+  \item $\gamma_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali, 
 		26
   \item $\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji, 
 		86
@@ -135,24 +133,24 @@
 		52
   \item $\phi$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy \IeC {\'s}ci\IeC {\k e}gnem a mi\IeC {\k e}\IeC {\'s}niem, 
 		11
-  \item $\rho$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka, 
-		25
   \item $\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net, 
 		53
-  \item $\sigma (z)_j$ -- funkcja softmax, 67
+  \item $\rho_z$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka, 
+		25
+  \item $\sigma (z_s)_j$ -- funkcja softmax, 67
   \item $\sigma$ -- sta\IeC {\l }a stabilizacji numerycznej, 47
   \item $\sigma(t)$ -- warto\IeC {\'s}\IeC {\'c} impulsu elektrycznego, 
 		25
   \item $\theta$ -- k\IeC {\k a}t obrotu obrazu, 50
-  \item $\theta$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy kierunkiem propagacji fali ultrad\IeC {\'z}wi\IeC {\k e}kowej i kierunkiem pr\IeC {\k e}dko\IeC {\'s}ci poruszaj\IeC {\k a}cego si\IeC {\k e} o\IeC {\'s}rodka, 
+  \item $\theta_r$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy kierunkiem propagacji fali ultrad\IeC {\'z}wi\IeC {\k e}kowej i kierunkiem pr\IeC {\k e}dko\IeC {\'s}ci poruszaj\IeC {\k a}cego si\IeC {\k e} o\IeC {\'s}rodka, 
 		27
   \item $b$ -- wektor przesuni\IeC {\k e}cia, 50
-  \item $c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} dwi\IeC {\k e}ku w o\IeC {\'s}rodku, 
-		27
   \item $c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} propoagacji drga\IeC {\'n}, 
 		25
+  \item $c_d$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} d\IeC {\'z}wi\IeC {\k e}ku w o\IeC {\'s}rodku, 
+		27
   \item $d$ -- dystans separacji dla cech Haralicka, 89
-  \item $d$ -- grubo\IeC {\'s}\IeC {\'c} np. walca, 25
+  \item $d_w$ -- grubo\IeC {\'s}\IeC {\'c} walca, 25
   \item $d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera, 
 		52
   \item $f$($x$) -- funkcja celu, 43
@@ -169,14 +167,10 @@
 		32
   \item $h_{min}$ -- minimalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem, 
 		32
-  \item $i$ -- kolejny indeks, 71
-  \item $i$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru, 
-		35
-  \item $j$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru, 
-		35
+  \item $hf1-hf12$ -- cecha Haralicka, 146
+  \item $i$, $j$, $k$ -- indeksy, 35
   \item $j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax, 
 		67
-  \item $k$ -- index przekroju poprzecznego, 86
   \item $k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization, 
 		56
   \item $l_t$ -- d\IeC {\l }ugo\IeC {\'s}ci \IeC {\'s}ci\IeC {\k e}gna, 
@@ -184,39 +178,33 @@
   \item $m$ -- minipakiet przyk\IeC {\l }ad\IeC {\'o}w, 46
   \item $n$ -- liczba zmiennych, 52
   \item $o$ -- obserwacja, 38
-  \item $p$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 
-		45
   \item $p$ -- wskaznik istotno\IeC {\'s}ci statystycznej, 91
   \item $p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa, 
 		52
+  \item $p_l$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 
+		45
   \item $r$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji, 52
   \item $r_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji Pearsona, 48
   \item $s$ -- liczba segment\IeC {\'o}w w kroswalidacji, 49
   \item $t$ -- krok czasowy, 47
-  \item $u$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy, 45
   \item $v$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka, 
 		27
-  \item $v$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 
+  \item $v_l$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 
 		45
-  \item $w$ -- gradient propagowany w ResNet, 64
-  \item $w$ -- wektor cech, 40, 79
   \item $w$ -- wektor wag, 38, 67
-  \item $x$ -- droga przebyta przez fal\IeC {\k e}, 26
+  \item $w_c$ -- wektor cech, 40
+  \item $w_r$ -- gradient propagowany w ResNet, 64
   \item $x$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		19, 34
-  \item $x$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy, 37
-  \item $x_i$ -- przekr\IeC {\'o}j poprzeczny, 71
-  \item $x_k$ -- przekr\IeC {\'o}j poprzeczny, 86
+  \item $x_f$ -- droga przebyta przez fal\IeC {\k e}, 26
+  \item $x_i$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy neuronu, 37
   \item $y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
 		19, 34
-  \item $y$ -- funkcja aktywacji neuronu, 37
-  \item $y$ -- sygna\IeC {\l } wyj\IeC {\'s}ciowy, 37
-  \item $z$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax, 
-		67
-  \item $z$ -- trzecia  wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
-		19
+  \item $y_n$ -- sygna\IeC {\l } wyj\IeC {\'s}ciowy neuronu, 37
   \item $z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna, 
-		34
+		19
+  \item $z_s$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax, 
+		67
   \item \textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne, 
 		116
 
@@ -259,10 +247,6 @@
 		3
   \item GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}, 
 		4, 43
-
-  \indexspace
-
-  \item hf1-12 -- cecha Haralicka, 146
 
   \indexspace
 

@@ -20,7 +20,7 @@
 \indexentry{$T2$ -- czas potrzebny na $e$-krotne obni\IeC {\.z}enie magnetyzacji poprzecznej}{19}
 \indexentry{$T1$ -- czas po jakim magnetyzacja pod\IeC {\l }u\IeC {\.z}na wraca do (1 - 1/$e$) pocz\IeC {\k a}tkowej warto\IeC {\'s}ci}{19}
 \indexentry{$G_{zz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $z$}{19}
-\indexentry{$z$ -- trzecia  wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
+\indexentry{$z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
 \indexentry{$\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF}{19}
 \indexentry{$y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{19}
 \indexentry{$G_{yz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $y$}{19}
@@ -35,22 +35,22 @@
 \indexentry{FSPGR -- skr\IeC {\'o}t od ang. Fast Spoiled Gradient Echo}{21}
 \indexentry{USG -- Ultrasonografia}{24}
 \indexentry{$\sigma(t)$ -- warto\IeC {\'s}\IeC {\'c} impulsu elektrycznego}{25}
-\indexentry{$d$ -- grubo\IeC {\'s}\IeC {\'c} np. walca}{25}
+\indexentry{$d_w$ -- grubo\IeC {\'s}\IeC {\'c} walca}{25}
 \indexentry{$\lambda$ -- d\IeC {\l }ugo\IeC {\'s}\IeC {\'c} fali}{25}
 \indexentry{$c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} propoagacji drga\IeC {\'n}}{25}
 \indexentry{$Z$ -- impedancja akustyczna o\IeC {\'s}rodka}{25}
-\indexentry{$\rho$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka}{25}
-\indexentry{$\epsilon$ -- modu\IeC {\l } odkszta\IeC {\l }calno\IeC {\'s}ci obj\IeC {\k e}to\IeC {\'s}ciowej}{25}
+\indexentry{$\rho_z$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka}{25}
+\indexentry{$\epsilon_z$ -- modu\IeC {\l } odkszta\IeC {\l }calno\IeC {\'s}ci obj\IeC {\k e}to\IeC {\'s}ciowej}{25}
 \indexentry{$I_r$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej}{26}
-\indexentry{$I_0$ -- nat\IeC {\k e}\IeC {\.z}enie fali padaj\IeC {\k a}cej}{26}
+\indexentry{$I_0$ -- nat\IeC {\k e}\IeC {\.z}enie fali odbitej}{26}
 \indexentry{$R$ -- energetyczny wsp\IeC {\'o}\IeC {\l }czynnik odbicia}{26}
-\indexentry{$\gamma$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali}{26}
-\indexentry{$x$ -- droga przebyta przez fal\IeC {\k e}}{26}
+\indexentry{$\gamma_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali}{26}
+\indexentry{$x_f$ -- droga przebyta przez fal\IeC {\k e}}{26}
 \indexentry{$f_0$ -- cz\IeC {\k e}stotliwo\IeC {\'s}\IeC {\'c} fali nadawanej}{27}
 \indexentry{$f_r$ -- r\IeC {\'o}\IeC {\.z}nica pomi\IeC {\k e}dzy cz\IeC {\k e}stotliwo\IeC {\'s}ci\IeC {\k a} odbieran\IeC {\k a} i emitowan\IeC {\k a} przez g\IeC {\l }owic\IeC {\k e} USG}{27}
-\indexentry{$\theta$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy kierunkiem propagacji fali ultrad\IeC {\'z}wi\IeC {\k e}kowej i kierunkiem pr\IeC {\k e}dko\IeC {\'s}ci poruszaj\IeC {\k a}cego si\IeC {\k e} o\IeC {\'s}rodka}{27}
+\indexentry{$\theta_r$ -- k\IeC {\k a}t pomi\IeC {\k e}dzy kierunkiem propagacji fali ultrad\IeC {\'z}wi\IeC {\k e}kowej i kierunkiem pr\IeC {\k e}dko\IeC {\'s}ci poruszaj\IeC {\k a}cego si\IeC {\k e} o\IeC {\'s}rodka}{27}
 \indexentry{$v$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} o\IeC {\'s}rodka}{27}
-\indexentry{$c$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} dwi\IeC {\k e}ku w o\IeC {\'s}rodku}{27}
+\indexentry{$c_d$ -- pr\IeC {\k e}dko\IeC {\'s}\IeC {\'c} d\IeC {\'z}wi\IeC {\k e}ku w o\IeC {\'s}rodku}{27}
 \indexentry{Power D -- Power Doppler}{27}
 \indexentry{ASIC -- skr\IeC {\'o}t od ang. \textit{Application-Specific Integrated Circuit}}{29}
 \indexentry{UTC -- skr\IeC {\'o}t od ang. \textit{Ultrasonography Tissue Characterization}}{29}
@@ -65,24 +65,21 @@
 \indexentry{DNN -- skr\IeC {\'o}t od ang. \textit{Deep Neural Networks}}{34}
 \indexentry{$x$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
 \indexentry{$y$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
-\indexentry{$z$ -- trzecia wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna prostok\IeC {\k a}tna}{34}
 \indexentry{$I$ -- funkcja obrazowa}{35}
 \indexentry{$K_m$ -- funkcja maski splotu}{35}
 \indexentry{$I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski}{35}
-\indexentry{$i$ -- pierwsza wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru}{35}
-\indexentry{$j$ -- druga wsp\IeC {\'o}\IeC {\l }rz\IeC {\k e}dna maski filtru}{35}
+\indexentry{$i$, $j$, $k$ -- indeksy}{35}
 \indexentry{$A_1$ -- obiekt zawarty w obrazie}{36}
 \indexentry{$A_2$ -- t\IeC {\l }o zawarte w obrazie}{36}
 \indexentry{$T_p$ -- warto\IeC {\'s}\IeC {\'c} progowe}{36}
-\indexentry{$y$ -- sygna\IeC {\l } wyj\IeC {\'s}ciowy}{37}
-\indexentry{$x$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy}{37}
-\indexentry{$y$ -- funkcja aktywacji neuronu}{37}
+\indexentry{$y_n$ -- sygna\IeC {\l } wyj\IeC {\'s}ciowy neuronu}{37}
+\indexentry{$x_i$ -- sygna\IeC {\l } wej\IeC {\'s}ciowy neuronu}{37}
 \indexentry{SVM -- skr\IeC {\'o}t od ang. Support Vector Machine}{37}
 \indexentry{$w$ -- wektor wag}{38}
 \indexentry{$T_a$ -- pr\IeC {\'o}g funkcji aktywacji}{38}
 \indexentry{$\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w}{38}
 \indexentry{$o$ -- obserwacja}{38}
-\indexentry{$w$ -- wektor cech}{40}
+\indexentry{$w_c$ -- wektor cech}{40}
 \indexentry{FDA -- skr\IeC {\'o}t od ang. Food and Drug Administration}{42}
 \indexentry{GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}}{43}
 \indexentry{MICCAI -- skr\IeC {\'o}t od ang. \textit{Medical Image Computing and Computer Assisted Intervention}}{43}
@@ -91,18 +88,18 @@
 \indexentry{$\frac{\delta y}{\delta x}$ -- pochodna funkcji celu}{43}
 \indexentry{$\bigtriangledown f$($x$) -- gradient funkcji celu}{44}
 \indexentry{$\epsilon$ -- szybko\IeC {\'s}\IeC {\'c} uczenia si\IeC {\k e}}{44}
-\indexentry{$p$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
-\indexentry{$v$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
-\indexentry{$u$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy}{45}
+\indexentry{$p_l$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
+\indexentry{$v_l$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej}{45}
+\indexentry{$U$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy}{45}
 \indexentry{$P$ -- miara wydajno\IeC {\'s}ci szkolenia g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{45}
 \indexentry{$T$ -- zbi\IeC {\'o}r testowy}{45}
 \indexentry{SGD -- skr\IeC {\'o}t od ang. \textit{Stochastic Gradient Descent}}{46}
 \indexentry{$m$ -- minipakiet przyk\IeC {\l }ad\IeC {\'o}w}{46}
-\indexentry{$L$ -- funkcja strat}{46}
+\indexentry{$L_s$ -- funkcja strat}{46}
 \indexentry{$t$ -- krok czasowy}{47}
 \indexentry{$\sigma$ -- sta\IeC {\l }a stabilizacji numerycznej}{47}
 \indexentry{$g$ -- gradient}{47}
-\indexentry{$\bigodot$ -- iloczyn skalarny dw\IeC {\'o}ch grdient\IeC {\'o}w}{47}
+\indexentry{$\bigodot$ -- iloczyn skalarny}{47}
 \indexentry{FP -- skr\IeC {\'o}t od ang. \textit{False Positive}}{47}
 \indexentry{FN -- skr\IeC {\'o}t od ang. \textit{False Negative}}{47}
 \indexentry{TP -- skr\IeC {\'o}t od ang. \textit{True Positive}}{47}
@@ -128,8 +125,7 @@
 \indexentry{$S$ -- skala zmiany obrazu}{50}
 \indexentry{$n$ -- liczba zmiennych}{52}
 \indexentry{$r$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji}{52}
-\indexentry{$X$ -- zmienna losowa}{52}
-\indexentry{$X_i$ -- warto\IeC {\'s}\IeC {\'c} kolejnych obserwacji}{52}
+\indexentry{$X1$, $X2$ -- zmienne losowe}{52}
 \indexentry{$\overline{X}$ -- \IeC {\'s}rednia z warto\IeC {\'s}ci kolejnych obserwacji}{52}
 \indexentry{$d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera}{52}
 \indexentry{$p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa}{52}
@@ -137,7 +133,7 @@
 \indexentry{$\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net}{53}
 \indexentry{PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}}{53}
 \indexentry{$S_x$ -- macierz kowariancji}{54}
-\indexentry{$L$ -- macierz diagonalna}{54}
+\indexentry{$L_d$ -- macierz diagonalna}{54}
 \indexentry{$K$ -- macierz odwracalna}{54}
 \indexentry{$Y$ -- macierz nowych zmiennych PCA}{54}
 \indexentry{MDS -- skr\IeC {\'o}t od ang. \textit{Multidimensional scaling}}{55}
@@ -153,10 +149,10 @@
 \indexentry{$F$ -- funkcja rezydualna}{64}
 \indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{64}
 \indexentry{$W$ -- macierz wag}{64}
-\indexentry{$L$ - blok rezydualny}{64}
-\indexentry{$w$ -- gradient propagowany w ResNet}{64}
-\indexentry{$\sigma (z)_j$ -- funkcja softmax}{67}
-\indexentry{$z$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax}{67}
+\indexentry{$L$ - liczba blok\IeC {\'o}w rezydualnych}{64}
+\indexentry{$w_r$ -- gradient propagowany w ResNet}{64}
+\indexentry{$\sigma (z_s)_j$ -- funkcja softmax}{67}
+\indexentry{$z_s$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax}{67}
 \indexentry{$j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax}{67}
 \indexentry{$w$ -- wektor wag}{67}
 \indexentry{$S^g$ -- stos predykcji}{67}
@@ -165,8 +161,6 @@
 \indexentry{$H$ -- og\IeC {\'o}lna metryka dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa}{71}
 \indexentry{$TM$ -- \IeC {\'s}rednia trymowana}{71}
 \indexentry{$R(x_i)$ -- wynik regresji}{71}
-\indexentry{$x_i$ -- przekr\IeC {\'o}j poprzeczny}{71}
-\indexentry{$i$ -- kolejny indeks}{71}
 \indexentry{PC - czynnik g\IeC {\l }\IeC {\'o}wny}{72}
 \indexentry{SCT -- uszkodzenia \IeC {\'s}r\IeC {\'o}d\IeC {\'s}ci\IeC {\k e}gniste}{76}
 \indexentry{TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna}{76}
@@ -174,12 +168,9 @@
 \indexentry{TE -- obrz\IeC {\k e}k \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TisE -- obrz\IeC {\k e}k tkanek}{77}
-\indexentry{$w$ -- wektor cech}{79}
 \indexentry{$H_{PC}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej}{80}
 \indexentry{$H_{reg}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{86}
 \indexentry{$X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego}{86}
-\indexentry{$x_k$ -- przekr\IeC {\'o}j poprzeczny}{86}
-\indexentry{$k$ -- index przekroju poprzecznego}{86}
 \indexentry{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji}{86}
 \indexentry{$\alpha$ -- sta\IeC {\l }a w metodzie LASSO}{88}
 \indexentry{$d$ -- dystans separacji dla cech Haralicka}{89}
@@ -198,4 +189,4 @@
 \indexentry{$HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania}{146}
 \indexentry{$HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji}{146}
 \indexentry{$HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji}{146}
-\indexentry{hf1-12 -- cecha Haralicka}{146}
+\indexentry{$hf1-hf12$ -- cecha Haralicka}{146}

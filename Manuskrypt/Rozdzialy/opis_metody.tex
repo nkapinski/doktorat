@@ -22,7 +22,7 @@ Na zbiorze wyliczonych 246-ciu cech dokonano selekcji metodą LASSO (zob. pkt \r
 \label{ecq:H}
 H = TM(R(x_1), R(x_2),..., R(x_n)),
 \end{equation}
-gdzie $TM$\index{$TM$ -- średnia trymowana} jest średnią trymowaną z marginesami 2,5\%, a $R(x_i)$\index{$R(x_i)$ -- wynik regresji} jest wynikiem regresji obliczonym dla przekroju poprzecznego $x_i$\index{$x_i$ -- przekrój poprzeczny}, gdzie $i$\index{$i$ -- kolejny indeks} to indeks przekroju w trójwymiarowym badaniu RM.
+gdzie $TM$\index{$TM$ -- średnia trymowana} jest średnią trymowaną z marginesami 2,5\%, a $R(x_i)$\index{$R(x_i)$ -- wynik regresji} jest wynikiem regresji obliczonym dla przekroju poprzecznego $x_i$, gdzie $i$ to indeks przekroju w trójwymiarowym badaniu RM.
 
 Schemat proponowanej metody dla oceny pojedynczego parametru został zaprezentowany na Fig. \ref{fig:net}. 
 \begin{figure}[h!]
@@ -139,7 +139,7 @@ Powyższe podejścia w opinii autora tej pracy miałyby jednak sens tylko w przy
 
 \subsection{Obliczanie i redukcja wymiarowości wektora cech}
 
-Celem tego eksperymentu jest znalezienie zredukowanego wektora cech $w$\index{$w$ -- wektor cech} pochodzącego z wyjścia sieci neuronowej. W założeniu ma on zawierać możliwie dużo informacji z oryginalnego zbioru i minimalny wymiar. W tym celu, z oryginalnej architektury AlexNet została wydzielona część ekstraktora cech oraz pierwsza warstwa gęsta (zob. Rys. \ref{AlexNetTopology}). Zabieg ten umożliwił wstępne pogrupowanie cech obrazowych przy jednoczesnym braku ich dywersyfikacji w stopniu jaki robi to pełna sieć. Parametry ekstraktora cech przeniesiono z modelu wybranego w eksperymencie binarnej klasyfikacji. 
+Celem tego eksperymentu jest znalezienie zredukowanego wektora cech $w_c$ pochodzącego z wyjścia sieci neuronowej. W założeniu ma on zawierać możliwie dużo informacji z oryginalnego zbioru i minimalny wymiar. W tym celu, z oryginalnej architektury AlexNet została wydzielona część ekstraktora cech oraz pierwsza warstwa gęsta (zob. Rys. \ref{AlexNetTopology}). Zabieg ten umożliwił wstępne pogrupowanie cech obrazowych przy jednoczesnym braku ich dywersyfikacji w stopniu jaki robi to pełna sieć. Parametry ekstraktora cech przeniesiono z modelu wybranego w eksperymencie binarnej klasyfikacji. 
 
 Wykorzystując Zbiór PCA (zob. \ref{seq:zbior-danych}) została przeprowadzona analiza czynników głównych (zob. p. \ref{DimReduction}), gdzie pojedynczą obserwację stanowił wektor 4096 aktywacji na wyjściu zmodyfikowanej architektury AlexNet. Porównanie poziomu wariancji zachowywanej przez różną liczbę czynników głównych zebrano w Tab. \ref{PCA-results}.
 \vspace{10px}
@@ -255,7 +255,7 @@ H_{reg} = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^
 \sum_{\substack{i, j = 1\\ i < j}}^{3}\lambda_{i,j}X_{i}X_{j}
 \end{equation}
 
-\index{$H_{reg}$ -- metryka dla oceny stopnia gojenia się ścięgna Achillesa wykorzystująca informacje z kombinacji czynników głównych}gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$\index{$X_i$ -- predyktor odpowiadający próbkom z trzech sekwencji rezonansu magnetycznego} to kolejne predyktory odpowiadające próbkom z trzech wykorzystywanych w eksperymencie sekwencji, $TM$ \linebreak to średnia trymowana z marginesami 2,5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla przekroju poprzecznego $x_k$\index{$x_k$ -- przekrój poprzeczny}, a $k$\index{$k$ -- index przekroju poprzecznego} jest indeksem przekroju danej sekwencji w trójwymiarowym badaniu RM.
+\index{$H_{reg}$ -- metryka dla oceny stopnia gojenia się ścięgna Achillesa wykorzystująca informacje z kombinacji czynników głównych}gdzie $X_i = TM(PC_n(x_1), PC_n(x_2),..., PC_n(x_n))_{i}$\index{$X_i$ -- predyktor odpowiadający próbkom z trzech sekwencji rezonansu magnetycznego} to kolejne predyktory odpowiadające próbkom z trzech wykorzystywanych w eksperymencie sekwencji, $TM$ \linebreak to średnia trymowana z marginesami 2,5\%, $PC_n(x_k)$ to $n$-ty czynnik główny otrzymany przy wnioskowaniu sieci dla $k$-tego przekroju poprzecznego $x_k$ w danej sekwencji trójwymiarowego badania RM.
 
 W szczególności, wyliczono różne modele regresji poczynając odpowiednio od liniowej\index{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- stałe w modelu regresji}, gdzie ($\gamma_{i}=0, \lambda_{i}=0$), przez nieliniową stopnia drugiego -- $model\_poly$ ($\lambda_{i}=0$) oraz z kombinacją czynników -- $model\_c\_poly$. W przypadku liniowym wykorzystano 1--10 czynników głównych -- odpowiednio $model\_PC[1-10]$. Natomiast w przypadku nieliniowym wykorzystano tylko dwa pierwsze czynniki, ograniczając tym samym efekt nadmiernego dopasowania się modelu. Powyższe modele funkcjonujące w oparciu o trzy sekwencje (tj. T2$^\ast$ GRE TE\_MIN, PD i T2$^\ast$ GRE) zestawiono z modelem liniowej regresji wytrenowanym jedynie na danych z T2$^\ast$ GRE TE\_MIN ($Baseline$). 
 

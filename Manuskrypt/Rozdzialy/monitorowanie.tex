@@ -169,7 +169,7 @@ Zmianę $M_0$ wykonuje się przy pomocy odpowiednio sterowanej cewki nadającej 
 
 Istotnymi stałymi w tym procesie są $T2$\index{$T2$ -- czas potrzebny na $e$-krotne obniżenie magnetyzacji poprzecznej}, czyli czas potrzebny na $e$-krotne obniżenie magnetyzacji poprzecznej oraz $T1$\index{$T1$ -- czas po jakim magnetyzacja podłużna wraca do (1 - 1/$e$) początkowej wartości} tj. czas po jakim magnetyzacja podłużna wraca do (1 - 1/$e$) początkowej wartości. Z reguły T2 $\leq$ T1, a zawsze T2 $\leq$ 2T1.   
 
-Lokalizacja zmian magnetyzacji w poszczególnych \textit{wokselach} (tj. wycinkach przestrzeni 3D o określonych wymiarach) odbywa się przy pomocy celowanego różnicowania fazy i częstotliwości wektorów magnetyzacji. Operacja ta wykonywana jest przy pomocy sygnału z dodatkowych cewek gradientowych. Wartości w warstwie, \linebreak w której dokonywany jest pomiar, kodowane są przy pomocy nałożenia na pole $B_0$ pola gradientowego $G_{zz}$\index{$G_{zz}$ -- wartość pola gradientowego w kierunku $z$}, co umożliwia wzbudzenie jąder atomowych w tych wokselach, dla których współrzędna $z$\index{$z$ -- trzecia  współrzędna prostokątna} wyraża się wzorem:
+Lokalizacja zmian magnetyzacji w poszczególnych \textit{wokselach} (tj. wycinkach przestrzeni 3D o określonych wymiarach) odbywa się przy pomocy celowanego różnicowania fazy i częstotliwości wektorów magnetyzacji. Operacja ta wykonywana jest przy pomocy sygnału z dodatkowych cewek gradientowych. Wartości w warstwie, \linebreak w której dokonywany jest pomiar, kodowane są przy pomocy nałożenia na pole $B_0$ pola gradientowego $G_{zz}$\index{$G_{zz}$ -- wartość pola gradientowego w kierunku $z$}, co umożliwia wzbudzenie jąder atomowych w tych wokselach, dla których współrzędna $z$\index{$z$ -- trzecia współrzędna prostokątna} wyraża się wzorem:
 \begin{equation}
 \Delta z = \frac{\Delta \omega}{\gamma G_{zz}},
 \end{equation}
@@ -234,7 +234,7 @@ Propagacja fal akustycznych w przyrodzie była tematem rozważań myślicieli ta
 
 58 lat po eksperymencie na Jeziorze Genewskim, w 1880 roku bracia Curie opisali w \cite{Curie1880} \textit{efekt piezoelektryczny}, czyli zjawisko polegające na pojawieniu się ładunku elektrycznego pod wpływem naprężeń mechanicznych w krysztale o anizotropowej budowie, takiej jak ma np. kwarc. W przypadku odwrotnym, przyłożenie napięcia do odpowiedniego kryształu generuje drgania (tzw. \textit{odwrotny efekt piezoelektryczny}). 
 
-Efekty te są wykorzystywane w \textit{głowicy aparatu usg}, przyrządu do generowania \linebreak i odbierania ultradźwięków. Przykładowo, polaryzowanie kryształu piezoelektrycznego krótkim impulsem elektrycznym $\sigma_1(t)$\index{$\sigma(t)$ -- wartość impulsu elektrycznego} pobudza go do drgań na własnej \textit{częstotliwości rezonansowej}. Zakładając, że ów kryształ ma kształt walca o grubości $d$=0,64 mm\index{$d$ -- grubość np. walca}, to będzie stanowił rezonator półfalowy, w którym wystąpi drganie rezonansowe o długości fali $\lambda = 2d$ czyli $\lambda = 1,28$ mm\index{$\lambda$ -- długość fali}. Jeżeli wykonany jest z tytanianu baru, dla którego prędkość propagacji drgań wynosi $c$=4460 m/s\index{$c$ -- prędkość propoagacji drgań}, to częstotliwość drgań własnych tego kryształu wyniesie:
+Efekty te są wykorzystywane w \textit{głowicy aparatu usg}, przyrządu do generowania \linebreak i odbierania ultradźwięków. Przykładowo, polaryzowanie kryształu piezoelektrycznego krótkim impulsem elektrycznym $\sigma_1(t)$\index{$\sigma(t)$ -- wartość impulsu elektrycznego} pobudza go do drgań na własnej \textit{częstotliwości rezonansowej}. Zakładając, że ów kryształ ma kształt walca o grubości $d_w$=0,64 mm\index{$d_w$ -- grubość walca}, to będzie stanowił rezonator półfalowy, w którym wystąpi drganie rezonansowe o długości fali $\lambda = 2d_w$ czyli $\lambda = 1,28$ mm\index{$\lambda$ -- długość fali}. Jeżeli wykonany jest z tytanianu baru, dla którego prędkość propagacji drgań wynosi $c$=4460 m/s\index{$c$ -- prędkość propoagacji drgań}, to częstotliwość drgań własnych tego kryształu wyniesie:
 \begin{equation}
 f = \frac{c}{\lambda} = \frac{4460 m/s}{1,28 mm} = 3,5 \; MHz.
 \end{equation}
@@ -242,9 +242,9 @@ Odwrotnie, powracająca fala tzw. \textit{echo} wygeneruje impuls elektryczny $\
 
 Zjawiska te zależą od częstotliwości fali, która propaguje się w ośrodku o pewnej \textit{impedancji akustycznej ośrodka} $Z$\index{$Z$ -- impedancja akustyczna ośrodka} wyrażanej jako:
 \begin{equation}
-Z = \rho c = \sqrt{\epsilon \rho},
+Z = \rho_z c = \sqrt{\epsilon_z \rho_z},
 \end{equation}
-gdzie $c$, to prędkość rozchodzenia się fali, $\rho$\index{$\rho$ -- gęstość ośrodka} to gęstość ośrodka, a $\epsilon$\index{$\epsilon$ -- moduł odkształcalności objętościowej} to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{tab:USG-params}.
+gdzie $c$, to prędkość rozchodzenia się fali, $\rho_z$\index{$\rho_z$ -- gęstość ośrodka} to gęstość ośrodka, a $\epsilon_z$\index{$\epsilon_z$ -- moduł odkształcalności objętościowej} to \textit{moduł odkształcalności objętościowej}, tj. parametr opisujący jak zmieni się objętość ośrodka pod danym ciśnieniem. Parametry wybranych ośrodków zestawiono w Tabeli \ref{tab:USG-params}.
 \vspace{10px} 
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h!]
@@ -277,13 +277,13 @@ Dla przykładu, do zjawiska załamania lub odbicia dochodzi kiedy fala pada \lin
 \begin{equation}
 R = \frac{I_r}{I_0} = \left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2,
 \end{equation}
-gdzie $I_r$\index{$I_r$ -- natężenie fali padającej} to natężenie fali padającej, a $I_0$\index{$I_0$ -- natężenie fali padającej} odbitej. Natomiast $R$\index{$R$ -- energetyczny współczynnik odbicia}, czyli energetyczny współczynnik odbicia, jest parametrem, który rośnie wraz ze wzrostem kąta odchylenia od kierunku prostopadłego, aż do całkowitego odbicia.
+gdzie $I_r$\index{$I_r$ -- natężenie fali padającej} to natężenie fali padającej, a $I_0$\index{$I_0$ -- natężenie fali odbitej} odbitej. Natomiast $R$\index{$R$ -- energetyczny współczynnik odbicia}, czyli energetyczny współczynnik odbicia, jest parametrem, który rośnie wraz ze wzrostem kąta odchylenia od kierunku prostopadłego, aż do całkowitego odbicia.
 
 Z kolei do rozpraszania bądź pochłaniania fali dochodzi kiedy to fala pokonuje daną drogę w ośrodku o pewnej $Z$, co zapisywane jest następująco:
 \begin{equation}
-I=I_0 \epsilon^{-\gamma x},
+I=I_0 \epsilon^{-\gamma_f x_f},
 \end{equation}
-gdzie $\gamma$\index{$\gamma$ -- współczynnik osłabienia fali} to współczynnik osłabienia zależny od $Z$, a $x$\index{$x$ -- droga przebyta przez falę} to droga przebyta przez falę. Efekt ten można korygować poprzez dobór odpowiedniego $I_0$ lub mierząc czas powrotu i na tej podstawie wyliczając spodziewane osłabienie. Zabieg ten pozwala obrazować jednocześnie struktury położone na rożnych głębokościach.
+gdzie $\gamma_f$\index{$\gamma_f$ -- współczynnik osłabienia fali} to współczynnik osłabienia zależny od $Z$, a $x_f$\index{$x_f$ -- droga przebyta przez falę} to droga przebyta przez falę. Efekt ten można korygować poprzez dobór odpowiedniego $I_0$ lub mierząc czas powrotu i na tej podstawie wyliczając spodziewane osłabienie. Zabieg ten pozwala obrazować jednocześnie struktury położone na rożnych głębokościach.
 
 Analiza amplitudy i częstotliwości sygnału nadanego i echa umożliwia rekonstrukcję obrazu USG. W przypadku najczęściej stosowanych w praktyce rekonstrukcji przekrojów dwuwymiarowych (tzw. \textit{tryb B}) współczesny tor budowania prezentacji wizualnej (tzw. \textit{beamforming}) wygląda następująco: 
 \begin{enumerate}[noitemsep,nolistsep]
@@ -296,9 +296,9 @@ Tryb B umożliwia również wizualizację obrazów dynamicznych. Przykładowo, j
 
 Innym często stosowanym trybem rekonstrukcji obrazu jest \textit{tryb D} bazujący \linebreak na \textit{efekcie Dopplera}, do którego dochodzi w przypadku odbicia fali od ośrodka przesuwającego się względem głowicy. Zmienia się wówczas częstotliwość fali, co wyrażone jest następującym wzorem:
 \begin{equation}
-f_r = 2 f_o\frac{v}{c}\cos(\theta),
+f_r = 2 f_o\frac{v}{c_d}\cos(\theta_r),
 \end{equation} 
-gdzie $f_0$\index{$f_0$ -- częstotliwość fali nadawanej} to częstotliwość fali nadawanej.  $f_r$\index{$f_r$ -- różnica pomiędzy częstotliwością odbieraną i emitowaną przez głowicę USG} to różnica pomiędzy częstotliwością odbieraną i emitowaną przez głowicę USG. Kąt $\theta$\index{$\theta$ -- kąt pomiędzy kierunkiem propagacji fali ultradźwiękowej i kierunkiem prędkości poruszającego się ośrodka} jest kątem pomiędzy kierunkiem propagacji fali ultradźwiękowej i kierunkiem prędkości poruszającego się ośrodka. $v$\index{$v$ -- prędkość ośrodka} i $c$\index{$c$ -- prędkość dwięku w ośrodku} natomiast to odpowiednio prędkości ośrodka i dźwięku w ośrodku.
+gdzie $f_0$\index{$f_0$ -- częstotliwość fali nadawanej} to częstotliwość fali nadawanej.  $f_r$\index{$f_r$ -- różnica pomiędzy częstotliwością odbieraną i emitowaną przez głowicę USG} to różnica pomiędzy częstotliwością odbieraną i emitowaną przez głowicę USG. Kąt $\theta_r$\index{$\theta_r$ -- kąt pomiędzy kierunkiem propagacji fali ultradźwiękowej i kierunkiem prędkości poruszającego się ośrodka} jest kątem pomiędzy kierunkiem propagacji fali ultradźwiękowej i kierunkiem prędkości poruszającego się ośrodka. $v$\index{$v$ -- prędkość ośrodka} i $c_d$\index{$c_d$ -- prędkość dźwięku w ośrodku} natomiast to odpowiednio prędkości ośrodka i dźwięku w ośrodku.
 
 Dla przykładu, im większa prędkość komórek przesuwających się w monitorowanym ciele pacjenta, tym większa jest $f_r$. Dlatego tryb D z powodzeniem jest wykorzystywany np. do monitorowania przepływu krwi w dużych naczyniach takich jak tętnice.
 

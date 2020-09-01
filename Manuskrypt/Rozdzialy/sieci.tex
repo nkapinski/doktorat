@@ -4,7 +4,7 @@
 
 Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w latach 40-tych XX wieku, natomiast fundamentalne inspiracje biologiczne dały badania z lat 50-tych i 60-tych Hubela i Wiesela nad korą wzrokową kotów (zob. \cite{Wurtz2009}). M.in. dzięki pracom tych neurofizjologów ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji \linebreak z wybranych regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane tak, aby wydobyć istotne informacje z naturalnych obrazów. Dla przykładu reagują one na orientację linii, kształty i kolory.
 
-W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$\index{$x$ -- pierwsza współrzędna prostokątna}, $y$\index{$y$ -- druga współrzędna prostokątna}), gdzie $x$ to kolumna macierzy, a \linebreak $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$\index{$z$ -- trzecia współrzędna prostokątna}, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
+W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$\index{$x$ -- pierwsza współrzędna prostokątna}, $y$\index{$y$ -- druga współrzędna prostokątna}), gdzie $x$ to kolumna macierzy, a \linebreak $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
 
 W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$, $y$)\index{$I$ -- funkcja obrazowa}. Na tej podstawie dzielimy obrazy na:
 \begin{itemize}[noitemsep,nolistsep]
@@ -18,7 +18,7 @@ W sieciach konwolucyjnych, procesy zachodzące w korze wzrokowej są modelowane 
 \begin{equation}
 	I'\left(x, y\right) = \sum_{j=-n}^{n} \sum_{i=-k}^{k} I\left(x - j, y - i \right)K_m\left(j, i\right),
 \end{equation}
-gdzie $I'$\index{$I'$ -- funkcja obrazowa po operacji splotu z funkcją maski} jest nową funkcją obrazową powstałą po filtracji, a $i$\index{$i$ -- pierwsza współrzędna maski filtru} i $j$\index{$j$ -- druga współrzędna maski filtru} to kolejne współrzędne maski filtru w odniesieniu do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
+gdzie $I'$\index{$I'$ -- funkcja obrazowa po operacji splotu z funkcją maski} jest nową funkcją obrazową powstałą po filtracji, a $i$\index{$i$, $j$, $k$ -- indeksy} i $j$ to kolejne współrzędne maski filtru w odniesieniu do jego punktu centralnego. Dla wartości brzegowych podczas realizacji splotu, dla współrzędnych poza obrazem, przyjmowane są z reguły zera. Rzadziej stosuje się inne metody takie jak: odbicie wartości $I$ obrazu poza jego granicami; powtórzenie wartości $I$ obrazu bez odbicia; modyfikację wymiaru maski filtru na brzegu obrazu, tak by nie wychodziła poza jego granicę.
 
 W kontekście sieci konwolucyjnych, pojedynczy splot filtru z obrazem wejściowym nazywany jest \textit{cechą} (zob. \cite{Hijazi2015}). W ostatnich latach powstało wiele algorytmów do wizualizacji cech umożliwiających wydajną analizę wyników działania sieci konwolucyjnych np.: Saliency Maps \cite{DBLP:journals/corr/SimonyanVZ13}, GradCam \cite{DBLP:journals/corr/SelvarajuDVCPB16} czy CNNVIS \cite{DBLP:journals/corr/LiuSLLZL16}. Zasada działania tych algorytmów bazuje na wstecznej propagacji informacji, co skutkuje możliwością selekcji cech, które mają zasadniczy wpływ na wynik końcowy wnioskowania. Grupy cech obliczane na tym samym obszarze obrazu wejściowego nazywane są \textit{mapami cech} (ang. \textit{feature maps}). Zazwyczaj mapy cech zawierają hierarchicznie uporządkowaną strukturę składającą się z cech od najniższego do najwyższego poziomu komplikacji (np. od charakterystycznych skupisk pikseli, przez obiekty składowe do finalnego kształtu). Do cech najniższego rzędu zaliczyć można:
 \begin{itemize}[noitemsep,nolistsep]
@@ -58,10 +58,10 @@ W nowym podejściu zarówno ekstrakcja cech jak i ostateczne wnioskowanie \lineb
 
 \section{Wprowadzenie}
 \label{seq:DL_intro}
-Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch'a i Waltera Pitts'a w roku 1943 (zob. \cite{McCulloch1943}). Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y$\index{$y$ -- sygnał wyjściowy} od sygnałów wejściowych $x_1$,...,$x_n$\index{$x$ -- sygnał wejściowy} została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
+Pierwszy formalny model neuronu został zaproponowany przez Warrena McCulloch'a i Waltera Pitts'a w roku 1943 (zob. \cite{McCulloch1943}). Była to bramka logiczna, której wyjście stawało się aktywne w momencie, gdy liczba aktywnych wejść przekroczyła pewien zdefiniowany próg. Taka zależność sygnału wyjściowego $y_n$\index{$y_n$ -- sygnał wyjściowy neuronu} od sygnałów wejściowych $x_1$,...,$x_n$\index{$x_i$ -- sygnał wejściowy neuronu} została potem nazwana \textit{funkcją aktywacji neuronu}, którą zapisujemy jako:
 \begin{equation}
 \label{eqActFunc}
-y=f\left(x_1, x_2,..., x_n\right)\index{$y$ -- funkcja aktywacji neuronu}
+y_n=f\left(x_1, x_2,..., x_n\right)
 \end{equation}
 
 W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie istniała natomiast możliwość uczenia się takiej architektury. Problem ten rozwiązano w 1957 proponując sztuczną sieć neuronową zawierającą wiele neuronów \linebreak z ważonymi połączeniami między sobą (zob. \cite{Rosenblatt1957}). Sieć nazwano perceptronem, \linebreak co było implikacją zamiłowania jego twórcy Franka Rosenblatta do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. Schemat sieci pokazano na Rys. \ref{Perceptron}.
@@ -74,7 +74,7 @@ W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie i
 
 Zastosowanie dodatkowej jednowymiarowej tablicy współczynników, czyli \textit{wektora wag} $w$ = ($w_1$,...,$w_n$)\index{$w$ -- wektor wag} dało możliwość uczenia się poprzez adaptacyjną zmianę wartości poszczególnych jego elementów. W modelu Rosenblatta zastosowano ponadto progową funkcję aktywacji z progiem $T_a$\index{$T_a$ -- próg funkcji aktywacji}:
 \begin{equation}
-y(\Zeta)=\begin{cases} 0, & n < T_a, \\ 1, & n \ge T_a, \end{cases}
+y_n(\Zeta)=\begin{cases} 0, & n < T_a, \\ 1, & n \ge T_a, \end{cases}
 \end{equation}
 gdzie $\Zeta$\index{$\Zeta$ -- suma ważona wyjść neuronów} to suma ważona wyjść poszczególnych neuronów:
 \begin{equation}
@@ -95,7 +95,7 @@ Część z opisanych przez Minsky-Papert problemów udało się rozwiązać dzi�
 Spośród najważniejszych innowacji wprowadzonych w perceptronie wielowarstwowym wyszczególnić można zastosowanie w praktyce nowego algorytmu uczenia się sieci, który został opisany w kolejnej sekcji, jak również wykorzystanie nowej, sigmoidalnej funkcji aktywacji:
 \begin{equation}
 \label{eqSigActFunc}
-y(x) = \frac{1}{1 + e^{-x}}
+y_n(x) = \frac{1}{1 + e^{-x}}
 \end{equation}
 
 Po wprowadzeniu innowacji możliwe stało się modelowanie funkcji XOR jak \linebreak i innych problemów nieliniowych o praktycznym wymiarze. 
@@ -110,8 +110,8 @@ Kolejny przełom nastąpił w 1989 roku kiedy to Yann LeCunn, uczeń Geaoffa Hin
 
 Sieć składała się z 7-miu warstw i zawierała około 60.000 parametrów. Oryginalnie, sygnał wejściowy sieci stanowił obrazek o wymiarach 32$\times$32. W architekturze LeNet zaobserwować można dwie podstawowe składowe współczesnych sieci konwolucyjnych wykorzystywanych do klasyfikacji obrazów tj.:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{ekstraktor cech} -- część służąca do automatycznej ekstrakcji wektora cech \linebreak $w$\index{$w$ -- wektor cech}, zawierająca m.in. filtry.
-	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego \linebreak na podstawie $w$.
+	\item \textit{ekstraktor cech} -- część służąca do automatycznej ekstrakcji wektora cech \linebreak $w_c$\index{$w_c$ -- wektor cech}, zawierająca m.in. filtry.
+	\item \textit{klasyfikator} -- część wykorzystywana do zadania wnioskowania końcowego \linebreak na podstawie $w_c$.
 \end{itemize}  
 
 Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu end-to-end learning, w szczególności znalezienie w jednym procesie szkolenia transformacji, która obrazy przekształca bezpośrednio w ostateczną klasyfikację.  
@@ -177,20 +177,20 @@ gdzie $\epsilon$\index{$\epsilon$ -- szybkość uczenia się} to \textit{szybko�
 
 Funkcja celu w przypadku praktycznych zadań optymalizacyjnych, wykorzystujących głębokie uczenie się jest \textit{funkcją złożoną}, a zatem efekt jej działania jest równoważny operacjom wykonywanym przez kilka lub więcej funkcji po kolei. \linebreak W takich sytuacjach do obliczeń spadku gradientu wykorzystywane są funkcje, których pochodne są znane.
 
-Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v$ = $g$($p$) i $u$ = $f$($g$($p$)) = $f$($v$), gdzie $p$\index{$p$ -- wektor wejściowy do reguły łańcuchowej} i $v$\index{$v$ -- wektor wejściowy do reguły łańcuchowej} to wektory. Wówczas regułę łańcuchową można zapisać jako:
+Aplikuje się je do tzw. \textit{reguły łańcuchowej}. Przypuśćmy, że $v_l$ = $g$($p_l$) i $u$ = $f$($g$($p_l$)) = $f$($v_l$), gdzie $p_l$\index{$p_l$ -- wektor wejściowy do reguły łańcuchowej} i $v_l$\index{$v_l$ -- wektor wejściowy do reguły łańcuchowej} to wektory. Wówczas regułę łańcuchową można zapisać jako:
 \begin{equation}
-\frac{\delta u}{\delta p_i} = \sum_{j} \frac{\delta u}{\delta v_j} \frac{\delta v_j}{\delta p_i}, 
+\frac{\delta u}{\delta p_{l,i}} = \sum_{j} \frac{\delta u}{\delta v_{l,j}} \frac{\delta v_{l,j}}{\delta p_{l,i}}, 
 \end{equation}
 co w zapisie wektorowym równoważne jest z równaniem:
 \begin{equation}
 \label{regLancuch}
-\bigtriangledown_x u = (\frac{\delta v}{\delta p})^T \bigtriangledown_q u, 
+\bigtriangledown_x u = (\frac{\delta v_l}{\delta p_l})^T \bigtriangledown_q u, 
 \end{equation}
-gdzie $\frac{\delta v}{\delta p}$ to macierz Jacobiego. 
+gdzie $\frac{\delta v_l}{\delta p_l}$ to macierz Jacobiego. 
 
 Regułę łańcuchową zapisaną wzorem \ref{regLancuch} prosto uogólnia się do zmiennych tensorowych (zob. \cite{Goodfellow-et-al-2016}, str. 205) i stosuje się w różnych meta-algorytmach służących \linebreak do szkolenia sieci. Przykładem jest \textit{algorytm propagacji wstecznej}, który oblicza regułę łańcuchową w wydajnej kolejności stosując działania w grafie takim jak topologia perceptronu wielowarstwowego (zob. \cite{Goodfellow-et-al-2016}).
 
-Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$\index{$u$ -- zbiór uczący}. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$\index{$P$ -- miara wydajności szkolenia głębokich sieci neuronowych}, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę dodatkowy podzbiór, rozłączny z $U$ i $T$\index{$T$ -- zbiór testowy} -- \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszych algorytmów i wartości parametrów wpływających na jakość szkolenia sieci.
+Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$\index{$U$ -- zbiór uczący}. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$\index{$P$ -- miara wydajności szkolenia głębokich sieci neuronowych}, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę dodatkowy podzbiór, rozłączny z $U$ i $T$\index{$T$ -- zbiór testowy} -- \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszych algorytmów i wartości parametrów wpływających na jakość szkolenia sieci.
 
 W procesie szkolenia zmniejszana jest wartość funkcji kosztów $f$ w oparciu \linebreak o $U$, a celem jest poprawa $P$, dająca w praktyce satysfakcjonujące działanie algorytmu dla danych testowych. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetwarzają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. Natomiast w praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby \linebreak z przedziału 8--256. Takie podejście zapewnia kompromis między szybkością obliczeń a dokładnością estymacji wartości gradientu.
 
@@ -198,7 +198,7 @@ Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradient
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość parametru szybkości uczenia się $\epsilon_k$.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
-	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$, gdzie $L$\index{$L$ -- funkcja strat} to funkcja strat dla jednego przykładu o wejściowej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
+	\item Oblicz estymację gradientu $g$ = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L_s(x_i, y_i, f)$, gdzie $L_s$\index{$L_s$ -- funkcja strat} to funkcja strat dla jednego przykładu o wejściowej wartości próbki $x_i$ i oczekiwanym wyjściu $y_i$.
 	\item Zastosuj aktualizację wartości funkcji celu równą $\epsilon_k g$.
 	\item Jeżeli kryterium stopu nie zostało spełnione wróć do kroku 2. 
 \end{enumerate}
@@ -215,9 +215,9 @@ W momencie pisania tej pracy, algorytm Adam jest najczęściej rekomendowany jak
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość początkową $\epsilon$, $\beta_1$, $\beta_2$ oraz ustaw początkowe wartości zmiennych momentu 1 i 2 stopnia $s_a$ = 0 i $r_a$ = 0, wartość kroku czasowego $t$ = 0\index{$t$ -- krok czasowy} \linebreak i stałą $\sigma$\index{$\sigma$ -- stała stabilizacji numerycznej} używaną do stabilizacji numerycznej.
 	\item Wybierz minipakiet złożony z $m$ przykładów ze zbioru szkoleniowego.
-	\item Oblicz estymację gradientu $g$\index{$g$ -- gradient} = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L(x_i, y_i, f)$ i zwiększ $t$ o 1.
+	\item Oblicz estymację gradientu $g$\index{$g$ -- gradient} = $\frac{1}{m}\bigtriangledown \sum_{i=1}^{m}L_s(x_i, y_i, f)$ i zwiększ $t$ o 1.
 	\item Aktualizuj estymację pierwszego momentu. $s_a$ $\mapsto$ $\beta_1$$s_a$ + (1-$\beta_1$)$g$.
-	\item Aktualizuj estymację drugiego momentu. $r_a$ $\mapsto$ $\beta_2$$r_a$ + (1-$\beta_2$)$g\bigodot g$, gdzie $\bigodot$\index{$\bigodot$ -- iloczyn skalarny dwóch grdientów} to iloczyn skalarny dwóch gradientów.
+	\item Aktualizuj estymację drugiego momentu. $r_a$ $\mapsto$ $\beta_2$$r_a$ + (1-$\beta_2$)$g\bigodot g$, gdzie $\bigodot$\index{$\bigodot$ -- iloczyn skalarny} to iloczyn skalarny dwóch gradientów.
 	\item Skoryguj obciążenie momentu pierwszego rzędu $s_a$ = $\frac{s_a}{1-\beta_1^t}$.
 	\item Skoryguj obciążenie momentu drugiego rzędu $r_a$ = $\frac{r_a}{1-\beta_2^t}$.
 	\item Zastosuj aktualizację wartości funkcji celu równą -$\epsilon$$\frac{s_a}{\sqrt{r_a}+\sigma}$.
@@ -337,12 +337,12 @@ Problem (2) ma duże implikacje w praktyce stosowania sieci neuronowych, gdyż u
 
 W pierwszym przypadku, wybór podzbioru istotnych cech polega na określeniu minimalnego podzbioru, dla którego rozkład prawdopodobieństwa różnych klas obiektów jest jak najbliższy oryginalnemu rozkładowi uzyskanemu z wykorzystaniem wszystkich cech. Do tych zagadnień wykorzystywane są metody takie jak:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$\index{$r$ -- współczynnik korelacji} dla dwóch zmiennych losowych $X1$\index{$X$ -- zmienna losowa} i $X2$, będących dwoma równolicznymi zbiorami sparowanych, obserwowanych wartości, zapisywany jest następującym wzorem:
+	\item \textit{miary siły związku} -- określające podobieństwo między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{korelacja Pearsona}, której współczynnik $r$\index{$r$ -- współczynnik korelacji} dla dwóch zmiennych losowych $X1$\index{$X1$, $X2$ -- zmienne losowe} i $X2$, będących dwoma równolicznymi zbiorami sparowanych, obserwowanych wartości, zapisywany jest następującym wzorem:
 	\begin{equation}
 	\label{PearsorR}
 	r_{X1X2} = \frac{\sum_{i=1}^n (X1_i - \overline{X1})(X2_i - \overline{X2})}{\sqrt{\sum_{i=1}^n (X1_i - \overline{X1})^2} \sqrt{\sum_{i=1}^n (X2_i - \overline{X2})^2}},
 	\end{equation}
-	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji\index{$X_i$ -- wartość kolejnych obserwacji}, a $\overline{X1}$ i $\overline{X2}$\index{$\overline{X}$ -- średnia z wartości kolejnych obserwacji} to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
+	gdzie $X1_i$, $X2_i$ to wartości kolejnych obserwacji, a $\overline{X1}$ i $\overline{X2}$\index{$\overline{X}$ -- średnia z wartości kolejnych obserwacji} to ich średnie. Innymi słowy tak zapisany współczynnik $r_{X1X2}$ jest ilorazem \textit{kowariancji} \linebreak i iloczynu \textit{odchyleń standardowych} zmiennych $X1$ i $X2$.
 	\item \textit{miary entropii względnej} --  określające rozbieżności między rozkładami zmiennych losowych. Najczęściej stosowana jest \textit{dywergencja Kullbacka-Leiblera}, której współczynnik $d_{KL}$\index{$d_{KL}$ -- współczynnik dywergencji Kullbacka-Leiblera} dla dwóch porównywanych dyskretnych rozkładów prawdopodobieństwa $p_k$ i $q_k$\index{$p_k$, $q_k$ -- rozkłady prawdopodobieństwa} zapisany jest wzorem: 
 	\begin{equation}
 	d_{KL}(p_k, q_k) = \sum_{i} p_k(i) \log_2 \frac{p_k(i)}{q_k(i)}
@@ -384,7 +384,7 @@ Można zaobserwować, że nowa przestrzeń charakteryzuje się znacznie większy
 Opis szczegółowej procedury PCA wygląda następująco:
 \begin{enumerate}[noitemsep,nolistsep]
 \item Oblicz macierz kowariancji: $S_x$ = $X^{T}X$, gdzie $X$ to macierz danych zawierająca obserwacje w wierszach. Macierz $S_x$\index{$S_x$ -- macierz kowariancji} jest symetryczna i pozwala ocenić: (1) wariancje zmiennych poprzez analizę elementów na głównej przekątnej; (2) zależności pomiędzy zmiennymi poprzez analizę elementów poza główną przekątną. 
-\item Dokonaj diagonalizacji: $S_x$ = $KLK^{-1}$, gdzie $L$\index{$L$ -- macierz diagonalna} to macierz diagonalna, a $K$\index{$K$ -- macierz odwracalna} to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
+\item Dokonaj diagonalizacji: $S_x$ = $KL_dK^{-1}$, gdzie $L_d$\index{$L_d$ -- macierz diagonalna} to macierz diagonalna, a $K$\index{$K$ -- macierz odwracalna} to macierz odwracalna składająca się z wektorów własnych odpowiadających kolejnym wartościom własnym.
 \item Utwórz macierz nowych zmiennych wykonując operację: $Y$ = $XK$\index{$Y$ -- macierz nowych zmiennych PCA}
 \end{enumerate}
 
@@ -556,7 +556,7 @@ x_{l+1} = f(y_l),
 \end{equation}
 gdzie $x_l$ i $x_{l+1}$ stanowią sygnał wejściowy i wyjściowy $l$-tego bloku. $F$\index{$F$ -- funkcja rezydualna} stanowi funkcję rezydualną optymalizowaną podczas treningu sieci, $h$($x_l$)\index{$h$($x_l$) -- funkcja przekształcenia sygnału} stanowi funkcję przekształcenia sygnału $x_l$ przekazywanego skrótowym połączeniem, $f$ jest funkcją ReLU, \linebreak a $W$\index{$W$ -- macierz wag} stanowi macierz wag.
 
-Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci składającej się \linebreak z bloków rezydualnych. Dla każdego $L$-tego\index{$L$ - blok rezydualny} bloku zachodzi równanie:
+Funkcja $h$($x_l$) jest funkcją tożsamościową, a zatem $h$($x_l$) = $x_l$. Żeby uzasadnić ten wybór należy rozważyć propagację gradientu wewnątrz sieci składającej się \linebreak z bloków rezydualnych. Dla każdego $L$-tego\index{$L$ - liczba bloków rezydualnych} bloku zachodzi równanie:
 \begin{equation}
 x_L = x_l + \sum_{i=l}^{L-1}F(x_i, W_i)
 \end{equation}
@@ -565,20 +565,20 @@ Korzystając z reguły łańcuchowej można zapisać równanie na gradient funkc
 \label{gradResBlock}
 \frac{\partial \varepsilon}{\partial x} =  \frac{\partial \varepsilon}{\partial x_L} \frac{\partial x_L}{\partial x_l} =  \frac{\partial \varepsilon}{\partial x_L}\left (1 +   \frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i) \right )
 \end{equation}
-z czego wynika, że gradient może być podzielony na dwie addytywne składowe\index{$w$ -- gradient propagowany w ResNet}: (1) $w$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
+z czego wynika, że gradient może być podzielony na dwie addytywne składowe\index{$w_r$ -- gradient propagowany w ResNet}: (1) $w_r$ = $\frac{\partial \varepsilon}{\partial x_L}$ propagowaną bez wpływu na warstwy zawierające wagi i (2) $\lambda_r$ = $\frac{\partial \varepsilon}{\partial x_L}\frac{\partial }{\partial x_l}\sum_{i=l}^{L-1}F(x_i, W_i)$ propagowaną przez nie.
 
 Przykład propagacji gradientu w sieci składającej się z trzech bloków wygląda zatem następująco:
 \begin{equation}
 \label{gradRes3Block}
-\frac{\partial \varepsilon}{\partial x_0} =  \frac{\partial \varepsilon}{\partial x_3}*(w_2+\lambda_2)*(w_1+\lambda_1)*(w_0+\lambda_0)
+\frac{\partial \varepsilon}{\partial x_0} =  \frac{\partial \varepsilon}{\partial x_3}*(w_{r,2}+\lambda_{r,2})*(w_{r,1}+\lambda_{r,1})*(w_{r,0}+\lambda_{r,0})
 \end{equation}
 
-Wartości $w$ są zazwyczaj znormalizowane do przedziału (-1;1) można więc rozważyć 4 istotne przypadki równania \ref{gradRes3Block}:
+Wartości $w_r$ są zazwyczaj znormalizowane do przedziału (-1;1) można więc rozważyć 4 istotne przypadki równania \ref{gradRes3Block}:
 \begin{enumerate}[noitemsep,nolistsep]
-	\item $\lambda$ = 0 -- nie ma skrótowych połączeń, co odpowiada płaskiej strukturze sieci. Ponieważ wartości $w$ są z przedziału (-1;1) dodawanie kolejnych warstw wzmacnia wcześniej omówiony efekt zanikającego gradientu.
-	\item $\lambda$ $>$ 1 -- z każdą warstwą, sumaryczna wartość gradientu zwiększa się inkrementalnie, co nazywane jest \textit{problemem eksplozji gradientu} (ang. \textit{exploding gradient problem}).
-	\item $\lambda$ $<$ 1 -- przy założeniu, że $w$ + $\lambda$ $<$ 1, dla sieci składających się z wielu warstw występuje problem zaniku gradientu, jak w przypadku 1. Natomiast, gdy \linebreak $w$ + $\lambda$ $>$ 1, podobnie jak w przypadku 2, może występować problem eksplozji gradientu.
-	\item $\lambda$ $=$ 1 -- wartości $w$ są inkrementowane dokładnie o 1, co eliminuje problemy podane w przypadkach 1, 2 i 3 i stanowi uzasadnienie dla wyboru funkcji tożsamościowej $h$($x_l$) w architekturze ResNet.
+	\item $\lambda_r$ = 0 -- nie ma skrótowych połączeń, co odpowiada płaskiej strukturze sieci. Ponieważ wartości $w_r$ są z przedziału (-1;1) dodawanie kolejnych warstw wzmacnia wcześniej omówiony efekt zanikającego gradientu.
+	\item $\lambda_r$ $>$ 1 -- z każdą warstwą, sumaryczna wartość gradientu zwiększa się inkrementalnie, co nazywane jest \textit{problemem eksplozji gradientu} (ang. \textit{exploding gradient problem}).
+	\item $\lambda_r$ $<$ 1 -- przy założeniu, że $w_r$ + $\lambda_r$ $<$ 1, dla sieci składających się z wielu warstw występuje problem zaniku gradientu, jak w przypadku 1. Natomiast, gdy \linebreak $w_r$ + $\lambda_r$ $>$ 1, podobnie jak w przypadku 2, może występować problem eksplozji gradientu.
+	\item $\lambda_r$ $=$ 1 -- wartości $w_r$ są inkrementowane dokładnie o 1, co eliminuje problemy podane w przypadkach 1, 2 i 3 i stanowi uzasadnienie dla wyboru funkcji tożsamościowej $h$($x_l$) w architekturze ResNet.
 \end{enumerate}
 
 Dokładny opis matematyczny funkcjonowania bloków rezydualnych wraz z dowodami znajduje się w \cite{DBLP:journals/corr/HeZR016}. Przykład topologii sieci składającej się z 8-miu bloków i łącznie 18-stu warstw tzw. ResNet-18, przedstawiono na Rys. \ref{ResNetTopo}.
@@ -602,9 +602,9 @@ Szkolenie złożeń sieci (ang. \textit{esemble learning}) bazuje na wykorzystyw
 \subsubsection{Uśrednianie}
 Uśrednianie jest prostą metodą kombinacji wyników predykcji. Najczęściej stosowane jest uśrednienie bez wag, gdzie suma wyników predykcji modeli bazowych podzielona jest przez ich liczbę. Przykład stanowić może uśrednianie wyników \textit{funkcji softmax}:
 \begin{equation}
-\sigma (z)_j= \frac{e^{z_j}}{\sum_{k=1}^{K} e^{z_k}},
+\sigma (z_s)_j= \frac{e^{z_{s,j}}}{\sum_{k=1}^{K} e^{z_{s,k}}},
 \end{equation} 
-\index{$\sigma (z)_j$ -- funkcja softmax}używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z$\index{$z$ -- liczba sygnałów wejściowych funkcji softmax} sygnałów wejściowych i $j$\index{$j$ -- liczba sygnałów wyjściowych funkcji softmax} wyjściowych. Co istotne, rezultaty funkcji softmax przy przyjęcia odpowiedniego modelu probabilistycznego mogą stanowić prawdopodobieństwa przynależności do odpowiednich klas.
+\index{$\sigma (z_s)_j$ -- funkcja softmax}używanej często bezpośrednio przed ostatnią warstwą sieci neuronowych dla $z_s$\index{$z_s$ -- liczba sygnałów wejściowych funkcji softmax} sygnałów wejściowych i $j$\index{$j$ -- liczba sygnałów wyjściowych funkcji softmax} wyjściowych. Co istotne, rezultaty funkcji softmax przy przyjęcia odpowiedniego modelu probabilistycznego mogą stanowić prawdopodobieństwa przynależności do odpowiednich klas.
 
 Główną zaletą uśredniania jest redukcja wariancji. Jest ona tym większa \linebreak im bardziej nieskorelowane są wyniki predykcji modeli bazowych. Pomimo prostoty, tego rodzaju koncepcja odnosiła już sukcesy m.in. w lasach losowych (zob. \cite{Breiman2001}).
 

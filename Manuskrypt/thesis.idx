@@ -158,21 +158,21 @@
 \indexentry{$S^g$ -- stos predykcji}{67}
 \indexentry{ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}}{70}
 \indexentry{$RF[1-46]$ -- kolejne klasyczne cechy obrazowe}{70}
-\indexentry{$H$ -- og\IeC {\'o}lna metryka dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa}{71}
+\indexentry{$H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa}{71}
 \indexentry{$TM$ -- \IeC {\'s}rednia trymowana}{71}
 \indexentry{$R(x_i)$ -- wynik regresji}{71}
-\indexentry{PC - czynnik g\IeC {\l }\IeC {\'o}wny}{72}
+\indexentry{PC - czynnik g\IeC {\l }\IeC {\'o}wny}{71}
 \indexentry{SCT -- uszkodzenia \IeC {\'s}r\IeC {\'o}d\IeC {\'s}ci\IeC {\k e}gniste}{76}
 \indexentry{TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{STE -- ostro\IeC {\'s}\IeC {\'c} granic \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TE -- obrz\IeC {\k e}k \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TisE -- obrz\IeC {\k e}k tkanek}{77}
-\indexentry{$H_{PC}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej}{80}
-\indexentry{$H_{reg}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{86}
+\indexentry{$H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej}{80}
+\indexentry{$H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{86}
 \indexentry{$X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego}{86}
 \indexentry{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji}{86}
-\indexentry{$\alpha$ -- sta\IeC {\l }a w metodzie LASSO}{88}
+\indexentry{$\alpha$ -- sta\IeC {\l }a w metodzie LASSO}{89}
 \indexentry{$d$ -- dystans separacji dla cech Haralicka}{89}
 \indexentry{SVR -- skr\IeC {\'o}t od ang. \textit{Support Vector Regression}}{90}
 \indexentry{MPR -- skr\IeC {\'o}t od ang. \textit{Multilayer Perceptron Regression}}{90}

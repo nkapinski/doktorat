@@ -264,7 +264,7 @@ Dla problemu śledzenia zmian np. w czasie gojenia się tkanek, dodatkowo stosow
 $Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}$\index{$Corr$ -- uśredniona korelacja z wykorzystaniem transformacji Z-Fishera}  
 uzyskując średnią zgodność estymacji i wzorca odniesienia. Przy czym $r_f$\index{$r_f$ -- współczynnik korelacji Pearsona} to zapisany wzorem \ref{PearsorR} współczynnik korelacji Pearsona. 
 
-Oprócz prawidłowego wyboru metryki istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
+Oprócz prawidłowego wyboru miary istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
@@ -443,7 +443,7 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 	\label{AlexNetTopology}
 \end{figure}
 
-W skład topologii wchodzi pięć warstw konwolucyjnych i trzy gęste. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z maską o wymiarach 2$\times$2 \footnote{Autorzy pracy podają też przykłady użycia masek o wymiarze 2$\times$3, które nakładają się \linebreak w przestrzeni funkcji obrazowej. Nie znalazły one jednak miejsca w finalnej implementacji.}. 
+W skład topologii wchodzi pięć warstw konwolucyjnych (ekstraktor cech) i trzy gęste. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z maską o wymiarach 2$\times$2 \footnote{Autorzy pracy podają też przykłady użycia masek o wymiarze 2$\times$3, które nakładają się \linebreak w przestrzeni funkcji obrazowej. Nie znalazły one jednak miejsca w finalnej implementacji.}. 
 \newpage
 Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze \linebreak 227$\times$227$\times$3\footnote{3 jest liczbą kanałów kodujących kolor obrazu.}, na których wykonywana jest operacja splotu z 96-cioma filtrami \linebreak z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256-cioma filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry \linebreak z maską o wymiarze 3$\times$3$\times$384, a w piątej znajduje się 256 filtrów również z maską \linebreak o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale -- w oryginalnej pracy było to 1000 (por. \cite{Krizhevsky2012}).
 

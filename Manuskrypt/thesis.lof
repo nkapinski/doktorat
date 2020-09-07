@@ -8,8 +8,8 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Schemat generowania skurczu mi\IeC {\k e}\IeC {\'s}ni.\relax }}{10}% 
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Schemat modelu typu Hilla stosowany w oprogramowaniu OpenSim (na podst. \cite {Romero2016}).\relax }}{11}% 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Wykres przedstawiaj\IeC {\k a}cy proporcje wyst\IeC {\k e}powania urazu \IeC {\'s}ci\IeC {\k e}gna Achillesa w r\IeC {\'o}\IeC {\.z}nych dyscyplinach sportowych na przyk\IeC {\l }adzie ameryka\IeC {\'n}skiego spo\IeC {\l }ecze\IeC {\'n}stwa (na podst. \cite {EpidemiologyUS}).\relax }}{12}% 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM w p\IeC {\l }aszczy\IeC {\'z}nie strza\IeC {\l }kowej z widoczn\IeC {\k a} struktur\IeC {\k a} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{23}% 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Obszar obrazowania \IeC {\'s}ci\IeC {\k e}gna Achillesa w USG, wraz z danymi wolumetrycznymi -- a), danymi w przekrojach strza\IeC {\l }kowym i czo\IeC {\l }owym -- b) oraz danymi w przekroju poprzecznym -- c).\relax }}{28}% 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Por\IeC {\'o}wnanie wykorzystanych w pracyi w projekcie START sekwencji RM w p\IeC {\l }aszczy\IeC {\'z}nie strza\IeC {\l }kowej z widoczn\IeC {\k a} struktur\IeC {\k a} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{23}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Obszaru obrazowania \IeC {\'s}ci\IeC {\k e}gna Achillesa w badaniach USG w projekcie START, wraz z danymi wolumetrycznymi -- a), danymi w przekrojach strza\IeC {\l }kowym i czo\IeC {\l }owym -- b) oraz danymi w przekroju poprzecznym -- c).\relax }}{28}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i metod klasycznych.\relax }}{37}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Topologia perceptronu (na podst. \cite {Rosenblatt1957}).\relax }}{38}% 
@@ -27,7 +27,7 @@
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet (na podst. \cite {ResNet}).\relax }}{64}% 
 \contentsline {figure}{\numberline {4.15}{\ignorespaces Topologia architektury ResNet-18 (na podst. \cite {ResNet}).\relax }}{66}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny pojedynczego parametru procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{71}% 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny pojedynczego parametru procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{72}% 
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Wizualizacja danych RM w sekwencji PD dla zdrowego (po lewej) i goj\IeC {\k a}cego si\IeC {\k e} (po prawej) \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{74}% 
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{78}% 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H_{PC}$ z 10 pacjent\IeC {\'o}w.\relax }}{81}% 

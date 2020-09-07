@@ -24,7 +24,7 @@
 		19
   \item $G_{zz}$ -- warto\IeC {\'s}\IeC {\'c} pola gradientowego w kierunku $z$, 
 		19
-  \item $H$ -- og\IeC {\'o}lna metryka dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
+  \item $H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
 		71
   \item $HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, 
 		146
@@ -32,9 +32,9 @@
 		146
   \item $HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji, 
 		146
-  \item $H_{PC}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
+  \item $H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
-  \item $H_{reg}$ -- metryka dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
+  \item $H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
 		86
   \item $I$ -- funkcja obrazowa, 35
   \item $I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski, 
@@ -109,7 +109,7 @@
 		19
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
 		38
-  \item $\alpha$ -- sta\IeC {\l }a w metodzie LASSO, 88
+  \item $\alpha$ -- sta\IeC {\l }a w metodzie LASSO, 89
   \item $\bigodot$ -- iloczyn skalarny, 47
   \item $\bigtriangledown f$($x$) -- gradient funkcji celu, 44
   \item $\epsilon$ -- szybko\IeC {\'s}\IeC {\'c} uczenia si\IeC {\k e}, 
@@ -276,7 +276,7 @@
 
   \indexspace
 
-  \item PC - czynnik g\IeC {\l }\IeC {\'o}wny, 72
+  \item PC - czynnik g\IeC {\l }\IeC {\'o}wny, 71
   \item PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}, 
 		53
   \item PD -- skr\IeC {\'o}t od ang. Proton density, 21

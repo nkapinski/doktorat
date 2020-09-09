@@ -35,7 +35,7 @@
   \item $H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
   \item $H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
-		86
+		87
   \item $I$ -- funkcja obrazowa, 35
   \item $I'$ -- funkcja obrazowa po operacji splotu z funkcj\IeC {\k a} maski, 
 		35
@@ -98,7 +98,7 @@
 		118
   \item $X1$, $X2$ -- zmienne losowe, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
-		86
+		87
   \item $Y$ -- macierz nowych zmiennych PCA, 54
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
@@ -123,7 +123,7 @@
   \item $\gamma_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik os\IeC {\l }abienia fali, 
 		26
   \item $\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji, 
-		86
+		87
   \item $\gamma_{pd}$ -- g\IeC {\k e}sto\IeC {\'s}\IeC {\'c} protonowa tkanki, 
 		20
   \item $\lambda$ -- d\IeC {\l }ugo\IeC {\'s}\IeC {\'c} fali, 25
@@ -178,7 +178,7 @@
   \item $m$ -- minipakiet przyk\IeC {\l }ad\IeC {\'o}w, 46
   \item $n$ -- liczba zmiennych, 52
   \item $o$ -- obserwacja, 38
-  \item $p$ -- wskaznik istotno\IeC {\'s}ci statystycznej, 91
+  \item $p$ -- wskaznik istotno\IeC {\'s}ci statystycznej, 92
   \item $p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa, 
 		52
   \item $p_l$ -- wektor wej\IeC {\'s}ciowy do regu\IeC {\l }y \IeC {\l }a\IeC {\'n}cuchowej, 

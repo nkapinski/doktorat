@@ -169,9 +169,9 @@
 \indexentry{TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TisE -- obrz\IeC {\k e}k tkanek}{77}
 \indexentry{$H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej}{80}
-\indexentry{$H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{86}
-\indexentry{$X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego}{86}
-\indexentry{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji}{86}
+\indexentry{$H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{87}
+\indexentry{$X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego}{87}
+\indexentry{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji}{87}
 \indexentry{$\alpha$ -- sta\IeC {\l }a w metodzie LASSO}{89}
 \indexentry{$d$ -- dystans separacji dla cech Haralicka}{89}
 \indexentry{SVR -- skr\IeC {\'o}t od ang. \textit{Support Vector Regression}}{90}
@@ -179,7 +179,7 @@
 \indexentry{RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}}{90}
 \indexentry{LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}}{90}
 \indexentry{Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}}{90}
-\indexentry{$p$ -- wskaznik istotno\IeC {\'s}ci statystycznej}{91}
+\indexentry{$p$ -- wskaznik istotno\IeC {\'s}ci statystycznej}{92}
 \indexentry{$PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek}{94}
 \indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{116}
 \indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{118}

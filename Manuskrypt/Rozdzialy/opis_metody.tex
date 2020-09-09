@@ -224,7 +224,8 @@ Analiza wizualna wskazuje, że różnice w odcieniach szarości mogą wspomóc r
 W sekwencji T2$^\ast$ GRE TE\_MIN, czas TE jest bardzo krótki. W pozostałych sekwencjach wykorzystanych w tej pracy TE $\gg$ T2$^\ast$. Z uwagi na cechy mierzonej tkanki, generowany sygnał ma tendencję do szybkiego zaniku. W T2$^\ast$ GRE TE\_MIN jest on zatem mierzony przed tym faktem, a nie przy wartościach bliskich zeru. \linebreak Na przestrzeni całego procesu gojenia się ścięgna, zmiany uwidaczniają się w postaci silnie rozróżnialnych odcieni szarości w obszarze ścięgna, co z kolei jest również wartościową informacją z uwagi na zastosowane w tej pracy metody sztucznej inteligencji i przetwarzania obrazów. Powyższe obserwacje i wnioski zostały dalej wykorzystane w analizie ilościowej.
 
 \subsubsection{Analiza ilościowa} W ramach tego badania porównano ilościowo wyniki automatycznej oceny procesu gojenia się ścięgna Achillesa przy użyciu danych: (1) tylko z sekwencji \linebreak T2$^\ast$ GRE TE\_MIN; (2) danych z sekwencji T2$^\ast$ GRE TE\_MIN oraz PD i T2$^\ast$ GRE. 
-Wybierając sekwencję T2$^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór pozostałych dwóch sekwencji, poza analizą wizualną i wiedzą dziedzinową, był umotywowany oceną stopnia korelacji zaprezentowaną w Tab. \ref{tab:inter-protocol-corr}, gdzie zestawiono sekwencje z grupy (2) bez 3DFSPGR.
+Wybierając sekwencję T2$^\ast$ GRE TE\_MIN kierowano się wynikami analizy wizualnej, natomiast dobór rozszerzonego zbioru (2) był umotywowany zarówno analizą wizualną jak i wiedzą dziedzinową. Mianowicie, sekwencje MRI są w zdecydowanej większości ze sobą silnie skorelowane. Wynika to z faktu iż rejestrowany sygnał pochodzi tylko od jąder wodoru. Wodór jednak nie jest przestrzennie jednorodnie rozmieszczony, dlatego z obszarów cechujących się niewielką ilością wodoru (powietrze, kości z wyjątkiem szpiku kostnego) sygnał w MRI jest zawsze słaby, natomiast w obszarach silnie uwodnionych lub z dużą ilością tłuszczy silny. Przykład korelacji sekwencji typowych w obecnie stosowanej diagnostyce ścięgna Achillesa zaprezentowano w Tab. \ref{tab:inter-protocol-corr}.
+
 \vspace{10px}
 \renewcommand{\arraystretch}{1.2}
 \begin{table}[h]
@@ -244,11 +245,14 @@ Wybierając sekwencję T2$^\ast$ GRE TE\_MIN kierowano się wynikami analizy wiz
 \end{table} 
 \renewcommand{\arraystretch}{1}
 
-Do obliczeń korelacji wybrano wektor cech DL zredukowany do pojedynczej wartości niosącej ponad 50\% informacji, zagregowany dla badania z wykorzystaniem miary $H_{PC}$ (zob. wzór \ref{ecq:HPC}). Uwzględniając wyniki istotne statystycznie, wśród najbardziej skorelowanych sekwencji znalazły się T1 i PD. PD najmniej koreluje \linebreak z T2$^\ast$GRE, natomiast T1 z sekwencją T2. 
+Do obliczeń korelacji wybrano wektor cech DL zredukowany do pojedynczej wartości niosącej ponad 50\% informacji, zagregowany dla badania z wykorzystaniem miary $H_{PC}$ (zob. wzór \ref{ecq:HPC}). Uwzględniając wyniki istotne statystycznie, wśród najbardziej skorelowanych sekwencji znalazły się T1 i PD. PD najmniej koreluje \linebreak z T2 oraz w drugiej kolejności z T2$^\ast$GRE, natomiast T1 z sekwencją T2. 
 
-W kolejnym kroku wykorzystano tę informację sprawdzając, w odniesieniu \linebreak do wybranej w analizie wizualnej sekwencji T2$^\ast$ GRE TE\_MIN, czy wnioskowanie co do procesu gojenia, na podstawie cech DL ulega polepszeniu z wykorzystaniem większej liczby różnorodnych sekwencji. 
+Sekwencja PD zależy (pomijając artefakty i niedoskonałość pomiaru) tylko od gęstości wodorów. 
+W pozostałych sekwencjach natężenie otrzymanego sygnału zależy od gęstości wodoru ale jest też modyfikowane przez inne czynniki, przede wszystkim czasy relaksacji T1 i T2. Dlatego w rutynowych ocenach ścięgna Achillesa lekarze radiolodzy zlecają badania sekwencją PD i w tym badaniu również została ona uwzględniona w zbiorze dodatkowych sekwencji.
 
-Wykorzystano ponownie zredukowaną przestrzeń cech DL (tym razem 1--10 czynników głównych) i wykonano szereg obliczeń stopnia gojenia się ścięgna stosując poniższą miarę: 
+Wybór T2$^\ast$GRE był natomiast umotywowany stosunkowo niską korelacją z sekwencją PD, co może oznaczać wprowadzenie znaczącej, dodatkowej informacji. W odróżnieniu od sekwencji T2 (uzyskującej najniższy wynik korelacji z PD) T2$^\ast$GRE, co do podstaw jest analogiczna do T2$^\ast$ GRE TE\_MIN, natomiast, co istotne, jest rekonstruowana z całości przestrzeni K, a nie tylko z jej fragmentu (zob. p. \ref{RM}). Zatem interesujące wydaje się pytanie czy utrata informacji w tym zakresie jest znacząca w kontekście proponowanej oceny. 
+
+Do porównań zbioru jednej i trzech sekwencji wykorzystano ponownie zredukowaną przestrzeń cech DL (tym razem 1--10 czynników głównych) oraz szereg obliczeń stopnia gojenia się ścięgna stosując poniższą miarę: 
 
 \begin{equation}
 H_{reg} = \alpha + \sum_{i=1}^{3}\beta_{i}X_{i} + \sum_{i=1}^{3}\gamma_{i}X_{i}^{2} +

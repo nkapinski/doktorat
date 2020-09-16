@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  16 SEP 2020 10:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  16 SEP 2020 12:14
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1637,7 +1637,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [84 <./figures/Protocol_comparison.jpg>]
-Underfull \hbox (badness 1360) in paragraph at lines 230--232
+Underfull \hbox (badness 1360) in paragraph at lines 230--231
 \OT4/cmr/m/n/12 su go-je-nia si¦ ±ci¦-gna Achil-le-sa przy u»y-ciu da-nych: (1)
  tyl-ko z se-kwen-cji
  []
@@ -1654,6 +1654,9 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 Overfull \hbox (24.76419pt too wide) in paragraph at lines 277--346
  [] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1674,19 +1677,14 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 [90]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 378.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 416--417
-\OT4/cmr/m/n/12 zbio-ru te-sto-we-go ze-sta-wio-ne
- []
+               Default added (so using `tbp') on input line 380.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 418.
+               Default added (so using `tbp') on input line 420.
 
 
-Overfull \hbox (0.79677pt too wide) in paragraph at lines 422--457
+Overfull \hbox (0.79677pt too wide) in paragraph at lines 424--459
  [] 
  []
 
@@ -1695,44 +1693,49 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [91]
-Underfull \hbox (badness 2744) in paragraph at lines 463--464
+Underfull \hbox (badness 2744) in paragraph at lines 465--466
 []\OT4/cmr/m/n/12 Poprawa wy-ni-ków z wy-ko-rzy-sta-niem fu-zji kla-sycz-nych c
 ech ob-ra-zo-wych
  []
 
-<figures/XAI.jpg, id=389, 1901.1025pt x 824.07875pt>
-File: figures/XAI.jpg Graphic file (type jpg)
-<use figures/XAI.jpg>
-Package pdftex.def Info: figures/XAI.jpg  used on input line 468.
-(pdftex.def)             Requested size: 426.79135pt x 184.99475pt.
-<figures/3DXAI.jpg, id=390, 1900.09875pt x 792.9625pt>
-File: figures/3DXAI.jpg Graphic file (type jpg)
-<use figures/3DXAI.jpg>
-Package pdftex.def Info: figures/3DXAI.jpg  used on input line 473.
-(pdftex.def)             Requested size: 426.79135pt x 178.10637pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [92]
+<figures/XAI.jpg, id=392, 1901.1025pt x 824.07875pt>
+File: figures/XAI.jpg Graphic file (type jpg)
+<use figures/XAI.jpg>
+Package pdftex.def Info: figures/XAI.jpg  used on input line 470.
+(pdftex.def)             Requested size: 426.79135pt x 184.99475pt.
+<figures/3DXAI.jpg, id=393, 1900.09875pt x 792.9625pt>
+File: figures/3DXAI.jpg Graphic file (type jpg)
+<use figures/3DXAI.jpg>
+Package pdftex.def Info: figures/3DXAI.jpg  used on input line 477.
+(pdftex.def)             Requested size: 426.79135pt x 178.10637pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[93 <./figures/XAI.jpg> <./figures/3DXAI.jpg>]
+[93 <./figures/XAI.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 489.
+               Default added (so using `tbp') on input line 491.
 
 <figures/cm.png, id=397, 1156.32pt x 1806.75pt>
 File: figures/cm.png Graphic file (type png)
 <use figures/cm.png>
-Package pdftex.def Info: figures/cm.png  used on input line 491.
+Package pdftex.def Info: figures/cm.png  used on input line 493.
 (pdftex.def)             Requested size: 384.1096pt x 600.17168pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[94]
+[94 <./figures/3DXAI.jpg>]
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -1740,76 +1743,87 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/cm_summary.jpg, id=406, 1901.1025pt x 1219.55624pt>
 File: figures/cm_summary.jpg Graphic file (type jpg)
 <use figures/cm_summary.jpg>
-Package pdftex.def Info: figures/cm_summary.jpg  used on input line 515.
+Package pdftex.def Info: figures/cm_summary.jpg  used on input line 517.
 (pdftex.def)             Requested size: 426.79135pt x 273.77422pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 <figures/cmScores.jpg, id=407, 1901.1025pt x 1830.84pt>
 File: figures/cmScores.jpg Graphic file (type jpg)
 <use figures/cmScores.jpg>
-Package pdftex.def Info: figures/cmScores.jpg  used on input line 522.
+Package pdftex.def Info: figures/cmScores.jpg  used on input line 524.
 (pdftex.def)             Requested size: 426.79135pt x 410.99933pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[96 <./figures/cm_summary.jpg>]
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[97 <./figures/cmScores.jpg>]
-<figures/cmScores_summary.jpg, id=414, 1901.1025pt x 1231.60126pt>
+[96]
+<figures/cmScores_summary.jpg, id=411, 1901.1025pt x 1231.60126pt>
 File: figures/cmScores_summary.jpg Graphic file (type jpg)
 <use figures/cmScores_summary.jpg>
-Package pdftex.def Info: figures/cmScores_summary.jpg  used on input line 532.
+Package pdftex.def Info: figures/cmScores_summary.jpg  used on input line 534.
 (pdftex.def)             Requested size: 426.79135pt x 276.47816pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[98 <./figures/cmScores_summary.jpg>]
-<figures/SCT.png, id=418, 1517.67pt x 855.195pt>
+[97 <./figures/cm_summary.jpg>]
+<figures/SCT.png, id=415, 1517.67pt x 855.195pt>
 File: figures/SCT.png Graphic file (type png)
 <use figures/SCT.png>
-Package pdftex.def Info: figures/SCT.png  used on input line 544.
+Package pdftex.def Info: figures/SCT.png  used on input line 546.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[99 <./figures/SCT.png>]
+[98 <./figures/cmScores.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[99 <./figures/cmScores_summary.jpg>]
 <figures/TT.png, id=422, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
-Package pdftex.def Info: figures/TT.png  used on input line 554.
+Package pdftex.def Info: figures/TT.png  used on input line 555.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[100 <./figures/TT.png>]
+[100 <./figures/SCT.png>]
 <figures/STE.png, id=426, 1517.67pt x 855.195pt>
 File: figures/STE.png Graphic file (type png)
 <use figures/STE.png>
-Package pdftex.def Info: figures/STE.png  used on input line 564.
+Package pdftex.def Info: figures/STE.png  used on input line 566.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
-
-Overfull \vbox (2.49998pt too high) has occurred while \output is active []
-
-
-[101 <./figures/STE.png>]
-<figures/TE.png, id=431, 1517.67pt x 855.195pt>
+<figures/TE.png, id=427, 1517.67pt x 855.195pt>
 File: figures/TE.png Graphic file (type png)
 <use figures/TE.png>
-Package pdftex.def Info: figures/TE.png  used on input line 572.
+Package pdftex.def Info: figures/TE.png  used on input line 574.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
-[102 <./figures/TE.png>]
+[101 <./figures/TT.png>]
+Overfull \vbox (2.49998pt too high) has occurred while \output is active []
+
+
+[102 <./figures/STE.png> <./figures/TE.png>]
 <figures/TU.png, id=435, 1517.67pt x 855.195pt>
 File: figures/TU.png Graphic file (type png)
 <use figures/TU.png>
-Package pdftex.def Info: figures/TU.png  used on input line 580.
+Package pdftex.def Info: figures/TU.png  used on input line 582.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1819,10 +1833,10 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/TisE.png, id=439, 1517.67pt x 855.195pt>
 File: figures/TisE.png Graphic file (type png)
 <use figures/TisE.png>
-Package pdftex.def Info: figures/TisE.png  used on input line 588.
+Package pdftex.def Info: figures/TisE.png  used on input line 590.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
-Underfull \hbox (badness 1158) in paragraph at lines 585--592
+Underfull \hbox (badness 1158) in paragraph at lines 587--594
 \OT4/cmr/m/n/12 w prze-strze-ni mi¦-dzy-po-wi¦-zio-wej ±ci¦-gna Achil-le-sa. Kr
 zy-we go-je-nia wi-docz-ne
  []
@@ -1832,11 +1846,18 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [104 <./figures/TisE.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 629.
+
 <figures/raport.png, id=443, 448.67625pt x 579.96675pt>
 File: figures/raport.png Graphic file (type png)
 <use figures/raport.png>
-Package pdftex.def Info: figures/raport.png  used on input line 644.
+Package pdftex.def Info: figures/raport.png  used on input line 631.
 (pdftex.def)             Requested size: 426.79135pt x 551.6998pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
@@ -1951,11 +1972,11 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [122]
-<figures/Pred_AI.jpg, id=503, 695.59875pt x 304.7385pt>
+<figures/Pred_AI.jpg, id=503, 1897.0875pt x 806.01125pt>
 File: figures/Pred_AI.jpg Graphic file (type jpg)
 <use figures/Pred_AI.jpg>
 Package pdftex.def Info: figures/Pred_AI.jpg  used on input line 403.
-(pdftex.def)             Requested size: 426.79135pt x 186.97363pt.
+(pdftex.def)             Requested size: 426.79135pt x 181.3201pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1977,7 +1998,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [126]
-Overfull \hbox (4.29654pt too wide) in paragraph at lines 427--428
+Overfull \hbox (4.29654pt too wide) in paragraph at lines 428--429
 []\OT4/cmr/m/n/12 Polepszenie sku-tecz-no-±ci wspo-ma-ga-nia re-ha-bi-li-ta-cji
  w ob-sza-rze ukªa-du mi¦±niowo-
  []
@@ -2228,7 +2249,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  19418 strings out of 492895
  375309 string characters out of 3122802
- 410498 words of memory out of 3000000
+ 411499 words of memory out of 3000000
  23011 multiletter control sequences out of 15000+200000
  559480 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2265,7 +2286,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (169 pages, 16608506 bytes).
+Output written on thesis.pdf (169 pages, 16707505 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

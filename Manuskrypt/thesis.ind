@@ -261,7 +261,7 @@
 
   \item LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}, 
 		53
-  \item LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}, 90
+  \item LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}, 91
   \item LSA -- skr\IeC {\'o}t od ang. \textit{Latent Semantic Analysis}, 
 		56
 
@@ -280,12 +280,12 @@
   \item PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}, 
 		54
   \item PD -- skr\IeC {\'o}t od ang. Proton density, 21
-  \item Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}, 90
+  \item Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}, 91
   \item Power D -- Power Doppler, 27
 
   \indexspace
 
-  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 90
+  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 91
   \item RM -- Rezonans Magnetyczny, 5, 17
   \item ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}, 70
 

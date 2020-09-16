@@ -12,30 +12,30 @@
 \contentsline {chapter}{\numberline {4}Konwolucyjne sieci neuronowe}{34}% 
 \contentsline {section}{\numberline {4.1}Wprowadzenie}{37}% 
 \contentsline {section}{\numberline {4.2}Szkolenie g\IeC {\l }\IeC {\k e}bokich sieci neuronowych}{43}% 
-\contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{48}% 
-\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{51}% 
-\contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{55}% 
-\contentsline {subsection}{\numberline {4.3.1}AlexNet}{58}% 
-\contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{60}% 
-\contentsline {subsection}{\numberline {4.3.3}ResNet}{63}% 
-\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{66}% 
-\contentsline {subsubsection}{U\IeC {\'s}rednianie}{66}% 
-\contentsline {subsubsection}{G\IeC {\l }osowanie}{67}% 
-\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{67}% 
+\contentsline {subsection}{\numberline {4.2.1}Problem nadmiernego dopasowania}{49}% 
+\contentsline {subsection}{\numberline {4.2.2}Problem redukcji wymiarowo\IeC {\'s}ci}{52}% 
+\contentsline {section}{\numberline {4.3}Przyk\IeC {\l }ady wsp\IeC {\'o}\IeC {\l }czesnych topologii}{56}% 
+\contentsline {subsection}{\numberline {4.3.1}AlexNet}{59}% 
+\contentsline {subsection}{\numberline {4.3.2}GoogLeNet}{61}% 
+\contentsline {subsection}{\numberline {4.3.3}ResNet}{64}% 
+\contentsline {subsection}{\numberline {4.3.4}Z\IeC {\l }o\IeC {\.z}enia}{67}% 
+\contentsline {subsubsection}{U\IeC {\'s}rednianie}{67}% 
+\contentsline {subsubsection}{G\IeC {\l }osowanie}{68}% 
+\contentsline {subsubsection}{Generalizacja stos\IeC {\'o}w}{68}% 
 \contentsline {chapter}{\numberline {5}Nowa metoda oceny procesu gojenia \IeC {\'s}ci\IeC {\k e}gna Achillesa}{69}% 
 \contentsline {section}{\numberline {5.1}Metodyka}{70}% 
 \contentsline {subsection}{\numberline {5.1.1}Zbi\IeC {\'o}r danych}{72}% 
 \contentsline {subsection}{\numberline {5.1.2}Wzorzec odniesienia}{75}% 
 \contentsline {section}{\numberline {5.2}Eksperymenty}{77}% 
 \contentsline {subsection}{\numberline {5.2.1}Rozr\IeC {\'o}\IeC {\.z}nienie \IeC {\'s}ci\IeC {\k e}gna zdrowego i po zerwaniu}{77}% 
-\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{79}% 
+\contentsline {subsection}{\numberline {5.2.2}Obliczanie i redukcja wymiarowo\IeC {\'s}ci wektora cech}{80}% 
 \contentsline {subsection}{\numberline {5.2.3}Wyb\IeC {\'o}r sekwencji rezonansu magnetycznego}{82}% 
 \contentsline {subsubsection}{Analiza wizualna}{82}% 
-\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{85}% 
+\contentsline {subsubsection}{Analiza ilo\IeC {\'s}ciowa}{86}% 
 \contentsline {subsection}{\numberline {5.2.4}Optymalna selekcja i konkatenacja cech}{89}% 
 \contentsline {section}{\numberline {5.3}Ocena procesu gojenia}{94}% 
 \contentsline {subsection}{\numberline {5.3.1}Macierze b\IeC {\l }\IeC {\k e}du}{94}% 
-\contentsline {subsection}{\numberline {5.3.2}Krzywe gojenia}{98}% 
+\contentsline {subsection}{\numberline {5.3.2}Krzywe gojenia}{99}% 
 \contentsline {subsection}{\numberline {5.3.3}Ocena zbiorcza}{104}% 
 \contentsline {chapter}{\numberline {6}Testy nowej metody}{108}% 
 \contentsline {section}{\numberline {6.1}Por\IeC {\'o}wnanie z metod\IeC {\k a} opart\IeC {\k a} o paradygmat end-to-end}{108}% 

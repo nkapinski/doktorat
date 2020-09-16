@@ -56,7 +56,7 @@
 \indexentry{UTC -- skr\IeC {\'o}t od ang. \textit{Ultrasonography Tissue Characterization}}{29}
 \indexentry{EMG -- elektromiografia}{30}
 \indexentry{DXA -- skr\IeC {\'o}t od ang. \textit{Double X-Ray Absorption}}{31}
-\indexentry{ATRS -- skr\IeC {\'o}t od ang. \textit{Achilles Tendon Total Rupture Score}}{31}
+\indexentry{ATRS -- skr\IeC {\'o}t od ang. \textit{Achilles Tendon Total Rupture Score}}{32}
 \indexentry{$P_{max}$ -- moc maksymalna}{32}
 \indexentry{$P_m$ -- moc \IeC {\'s}rednia}{32}
 \indexentry{$h_{max}$ -- maksymalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem}{32}
@@ -105,57 +105,57 @@
 \indexentry{TP -- skr\IeC {\'o}t od ang. \textit{True Positive}}{47}
 \indexentry{TN -- skr\IeC {\'o}t od ang. \textit{True Negative}}{47}
 \indexentry{$ACC$ -- dok\IeC {\l }adno\IeC {\'s}\IeC {\'c} klasyfikacji}{47}
-\indexentry{$TPR$ -- czu\IeC {\l }o\IeC {\'s}\IeC {\'c} klasyfikacji}{47}
+\indexentry{$TPR$ -- czu\IeC {\l }o\IeC {\'s}\IeC {\'c} klasyfikacji}{48}
 \indexentry{$TNR$ -- swoisto\IeC {\'s}\IeC {\'c} klasyfikacji}{48}
 \indexentry{$PPV$ -- Warto\IeC {\'s}\IeC {\'c} predykcji dodatniej klasyfikacji}{48}
 \indexentry{$NPV$ -- Warto\IeC {\'s}\IeC {\'c} predykcji ujemnej klasyfikacji}{48}
 \indexentry{$MBE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia}{48}
 \indexentry{$MAE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d absolutny}{48}
 \indexentry{$RMSE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d kwadratowy}{48}
-\indexentry{$MAX_{BE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia}{48}
-\indexentry{$MAX_{AE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d absolutny}{48}
-\indexentry{$MAX_{RMSE}$ -- maksymalny b\IeC {\l }\IeC {\k a}d kwadratowy}{48}
-\indexentry{$Corr$ -- u\IeC {\'s}redniona korelacja z wykorzystaniem transformacji Z-Fishera}{48}
-\indexentry{$r_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji Pearsona}{48}
+\indexentry{$MAX$-$BE$ -- maksymalny b\IeC {\l }\IeC {\k a}d obci\IeC {\k a}\IeC {\.z}enia}{48}
+\indexentry{$MAX$-$AE$ -- maksymalny b\IeC {\l }\IeC {\k a}d absolutny}{48}
+\indexentry{$MAX$-$RMSE$ -- maksymalny b\IeC {\l }\IeC {\k a}d kwadratowy}{48}
+\indexentry{$Corr$ -- u\IeC {\'s}redniona korelacja z wykorzystaniem transformacji Z-Fishera}{49}
+\indexentry{$r_f$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji Pearsona}{49}
 \indexentry{$s$ -- liczba segment\IeC {\'o}w w kroswalidacji}{49}
 \indexentry{$D$ -- segment w kroswalidacji}{49}
-\indexentry{$A$ -- macierz przekszta\IeC {\l }cenia liniowego}{50}
-\indexentry{$b$ -- wektor przesuni\IeC {\k e}cia}{50}
-\indexentry{$\theta$ -- k\IeC {\k a}t obrotu obrazu}{50}
-\indexentry{$S$ -- skala zmiany obrazu}{50}
+\indexentry{$A$ -- macierz przekszta\IeC {\l }cenia liniowego}{51}
+\indexentry{$b$ -- wektor przesuni\IeC {\k e}cia}{51}
+\indexentry{$\theta$ -- k\IeC {\k a}t obrotu obrazu}{51}
+\indexentry{$S$ -- skala zmiany obrazu}{51}
 \indexentry{$n$ -- liczba zmiennych}{52}
 \indexentry{$r$ -- wsp\IeC {\'o}\IeC {\l }czynnik korelacji}{52}
 \indexentry{$X1$, $X2$ -- zmienne losowe}{52}
-\indexentry{$\overline{X}$ -- \IeC {\'s}rednia z warto\IeC {\'s}ci kolejnych obserwacji}{52}
-\indexentry{$d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera}{52}
-\indexentry{$p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa}{52}
-\indexentry{LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}}{52}
-\indexentry{$\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net}{53}
-\indexentry{PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}}{53}
+\indexentry{$\overline{X}$ -- \IeC {\'s}rednia z warto\IeC {\'s}ci kolejnych obserwacji}{53}
+\indexentry{$d_{KL}$ -- wsp\IeC {\'o}\IeC {\l }czynnik dywergencji Kullbacka-Leiblera}{53}
+\indexentry{$p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa}{53}
+\indexentry{LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}}{53}
+\indexentry{$\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net}{54}
+\indexentry{PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}}{54}
 \indexentry{$S_x$ -- macierz kowariancji}{54}
-\indexentry{$L_d$ -- macierz diagonalna}{54}
-\indexentry{$K$ -- macierz odwracalna}{54}
-\indexentry{$Y$ -- macierz nowych zmiennych PCA}{54}
+\indexentry{$L_d$ -- macierz diagonalna}{55}
+\indexentry{$K$ -- macierz odwracalna}{55}
+\indexentry{$Y$ -- macierz nowych zmiennych PCA}{55}
 \indexentry{MDS -- skr\IeC {\'o}t od ang. \textit{Multidimensional scaling}}{55}
 \indexentry{t-SNE -- skr\IeC {\'o}t od ang. \textit{T-distributed stochastic neighbor embedding}}{55}
 \indexentry{ICA -- skr\IeC {\'o}t od ang. \textit{Independent Component Analysis}}{55}
-\indexentry{LSA -- skr\IeC {\'o}t od ang. \textit{Latent Semantic Analysis}}{55}
-\indexentry{SOM -- skr\IeC {\'o}t od ang. \textit{Self Organizing Maps}}{55}
-\indexentry{FC -- skr\IeC {\'o}t od ang. \textit{Fully Connected}}{56}
-\indexentry{$\eta_{x,y}^{i}$ -- aktywacja danego neuronu}{56}
-\indexentry{$k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization}{56}
-\indexentry{ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}}{57}
-\indexentry{$A_a$, $B_a$, $C_a$ -- macierze przetwarzane przez sie\IeC {\'c} AlexNet}{59}
-\indexentry{$F$ -- funkcja rezydualna}{64}
-\indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{64}
-\indexentry{$W$ -- macierz wag}{64}
-\indexentry{$L$ - liczba blok\IeC {\'o}w rezydualnych}{64}
-\indexentry{$w_r$ -- gradient propagowany w ResNet}{64}
+\indexentry{LSA -- skr\IeC {\'o}t od ang. \textit{Latent Semantic Analysis}}{56}
+\indexentry{SOM -- skr\IeC {\'o}t od ang. \textit{Self Organizing Maps}}{56}
+\indexentry{FC -- skr\IeC {\'o}t od ang. \textit{Fully Connected}}{57}
+\indexentry{$\eta_{x,y}^{i}$ -- aktywacja danego neuronu}{57}
+\indexentry{$k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization}{57}
+\indexentry{ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}}{58}
+\indexentry{$A_a$, $B_a$, $C_a$ -- macierze przetwarzane przez sie\IeC {\'c} AlexNet}{60}
+\indexentry{$F$ -- funkcja rezydualna}{65}
+\indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{65}
+\indexentry{$W$ -- macierz wag}{65}
+\indexentry{$L$ - liczba blok\IeC {\'o}w rezydualnych}{65}
+\indexentry{$w_r$ -- gradient propagowany w ResNet}{65}
 \indexentry{$\sigma (z_s)_j$ -- funkcja softmax}{67}
 \indexentry{$z_s$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax}{67}
 \indexentry{$j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax}{67}
-\indexentry{$w$ -- wektor wag}{67}
-\indexentry{$S^g$ -- stos predykcji}{67}
+\indexentry{$w$ -- wektor wag}{68}
+\indexentry{$S^g$ -- stos predykcji}{68}
 \indexentry{ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}}{70}
 \indexentry{$RF[1-46]$ -- kolejne klasyczne cechy obrazowe}{70}
 \indexentry{$H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa}{71}
@@ -173,14 +173,14 @@
 \indexentry{$X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego}{87}
 \indexentry{$\gamma_{i}$, $\lambda_{i}$,  $\beta_{i}$ -- sta\IeC {\l }e w modelu regresji}{87}
 \indexentry{$\alpha$ -- sta\IeC {\l }a w metodzie LASSO}{89}
-\indexentry{$d$ -- dystans separacji dla cech Haralicka}{89}
+\indexentry{$d$ -- dystans separacji dla cech Haralicka}{90}
 \indexentry{SVR -- skr\IeC {\'o}t od ang. \textit{Support Vector Regression}}{90}
 \indexentry{MPR -- skr\IeC {\'o}t od ang. \textit{Multilayer Perceptron Regression}}{90}
 \indexentry{RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}}{90}
 \indexentry{LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}}{90}
 \indexentry{Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}}{90}
 \indexentry{$p$ -- wskaznik istotno\IeC {\'s}ci statystycznej}{92}
-\indexentry{$PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek}{94}
+\indexentry{$PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek}{96}
 \indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{116}
 \indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{118}
 \indexentry{$ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany}{118}

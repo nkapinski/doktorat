@@ -67,7 +67,7 @@ y_n=f\left(x_1, x_2,..., x_n\right)
 W modelu neuronu McCulloch-Pitts można było modyfikować parametr progu, nie istniała natomiast możliwość uczenia się takiej architektury. Problem ten rozwiązano w 1957 proponując sztuczną sieć neuronową zawierającą wiele neuronów \linebreak z ważonymi połączeniami między sobą (zob. \cite{Rosenblatt1957}). Sieć nazwano perceptronem, \linebreak co było implikacją zamiłowania jego twórcy Franka Rosenblatta do aplikacji związanych z percepcją, zwłaszcza mowy czy pisma. Schemat sieci pokazano na Rys. \ref{Perceptron}.
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=1\textwidth]{figures/perceptron.png}
+	\includegraphics[width=1\textwidth]{figures/perceptron.jpg}
 	\caption{Topologia perceptronu (na podst. \cite{Rosenblatt1957}).}
 	\label{Perceptron}
 \end{figure}
@@ -145,9 +145,8 @@ Z drugiej strony, należy jednak podkreślić, że jest również szereg problem
 	\item Unifikacja modeli wykonujących podobne zadania.
 	\item Minimalizacja liczby parametrów modelu przy zachowaniu satysfakcjonującego poziomu dokładności.
 \end{enumerate}
-Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). 
-
-Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC\index{GTC -- skróT od ang. \textit{GPU Technology Conference}} (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI\index{MICCAI -- skrót od ang. \textit{Medical Image Computing and Computer Assisted Intervention}} (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych z pozyskiwaniem danych i wykorzystaniem algorytmów uczenia maszynowego.
+\newpage
+Szeroką dyskusję na temat wyżej wymienionych jak i kolejnych problemów można znaleźć w \cite{Marcus2018}. Jest to też tematem wielu paneli dyskusyjnych i debat konferencyjnych (zob np. \cite{NVIDIApanel}). Najbardziej zaawansowane prace dotyczą rozwiązania problemu gromadzenia dużych zbiorów danych medycznych, co wymaga bliskiej współpracy ekspertów medycznych z ekspertami od uczenia maszynowego. Często konieczna jest również modyfikacja bądź tworzenie dedykowanych programów do akwizycji danych medycznych. Jako przykłady takich inicjatyw można wymienić programy Stanford Medicine \cite{MedicalImageNet}, Harvard School of Medicine \cite{HMS} czy Massachusetts General Hospital, które w swoich repozytoriach zgromadziły już dziesiątki milionów zdjęć radiologicznych (za \cite{MGH}). Ponadto w roku 2018, na konferencji NVIDIA GTC\index{GTC -- skróT od ang. \textit{GPU Technology Conference}} (GPU Technology Conference) w San Jose (Kalifornia), Amerykańskie Stowarzyszenie Radiologii i stowarzyszenie MICCAI\index{MICCAI -- skrót od ang. \textit{Medical Image Computing and Computer Assisted Intervention}} (od ang. \textit{Medical Image Computing and Computer Assisted Intervention}) ogłosiły porozumienie, co do wspólnej współpracy mającej na celu eliminacje barier legislacyjnych związanych z pozyskiwaniem danych i wykorzystaniem algorytmów uczenia maszynowego.
 
 Autor tej rozprawy jest świadom ograniczeń jakie są związane z wykorzystaniem algorytmów głębokiego uczenia się. Jednocześnie jednak nowe metody i ostatnie sukcesy zastosowań współczesnych sztucznych sieci neuronowych w aplikacjach medycznych stanowiły silną motywację do przeprowadzenia własnych badań z ich wykorzystaniem. Szczegółowy opis wykorzystanych architektur jak i problemów związanych z ich wykorzystaniem został przedstawiony w kolejnych sekcjach tego rozdziału.
  
@@ -193,7 +192,7 @@ Regułę łańcuchową zapisaną wzorem \ref{regLancuch} prosto uogólnia się d
 Proces szkolenia się sieci ma na celu najlepsze możliwe przybliżenie docelowej klasyfikacji bazując na danych przykładach, czyli \textit{zbiorze uczącym} $U$\index{$U$ -- zbiór uczący}. Algorytmy optymalizacyjne używane do szkolenia głębokich sieci neuronowych zazwyczaj działają pośrednio, optymalizując pewną miarę wydajności $P$\index{$P$ -- miara wydajności szkolenia głębokich sieci neuronowych}, która jest zdefiniowana na \textit{zbiorze testowym}, zawierającym przykłady inne niż w $U$. Często bierze się również pod uwagę dodatkowy podzbiór, rozłączny z $U$ i $T$\index{$T$ -- zbiór testowy} -- \textit{zbiór walidacyjny}, który ma pomóc w wyborze najlepszych algorytmów i wartości parametrów wpływających na jakość szkolenia sieci.
 
 W procesie szkolenia zmniejszana jest wartość funkcji kosztów $f$ w oparciu \linebreak o $U$, a celem jest poprawa $P$, dająca w praktyce satysfakcjonujące działanie algorytmu dla danych testowych. Algorytmy optymalizacyjne wykorzystujące cały zbiór $U$ do liczenia wartości gradientu nazywane są \textit{pakietowymi} lub \textit{deterministycznymi}, gdyż przetwarzają jednocześnie wszystkie przykłady szkoleniowe. Te, które używają jednego przykładu na raz są nazywane \textit{stochastycznymi}. Natomiast w praktyce przy szkoleniu głębokich sieci stosowane są algorytmy \textit{minipakietowe}, wykorzystujące więcej niż jeden przykład, ale mniej niż cały zbiór. Z reguły są to liczby \linebreak z przedziału 8--256. Takie podejście zapewnia kompromis między szybkością obliczeń a dokładnością estymacji wartości gradientu.
-
+\newpage
 Przykładem algorytmu minipakietowego jest \textit{stochastyczny spadek gradientu} (ang. \textit{Stochastic Gradient Descent}, SGD)\index{SGD -- skrót od ang. \textit{Stochastic Gradient Descent}}. Bazuje on na założeniu, że estymację gradientu można otrzymać wyliczając średnią gradientu z minipakietu $m$\index{$m$ -- minipakiet przykładów} przykładów. Kolejne kroki algorytmu można zapisać następująco:
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Wybierz wartość parametru szybkości uczenia się $\epsilon_k$.
@@ -248,23 +247,43 @@ W problemach empirycznych dąży się do maksymalizowania TP, TN, ACC, TPR, TNR,
 W kontekście problemu regresji powszechnie stosowane, minimalizowane błędy średnie to:
 
 \begin{itemize}[noitemsep,nolistsep]
-\item \textit{Średni błąd obciążenia} (ang. Mean Bias Error)\index{$MBE$ -- średni błąd obciążenia} -- $MBE=\frac1N\sum_{i=1}^N{(x_{f,i}-x_{o,i})}$;
-\item \textit{Średni błąd absolutny}\index{$MAE$ -- średni błąd absolutny} (ang. Mean Absolute Error) --  $MAE=\frac1N\sum_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
-\item \textit{Średni błąd kwadratowy} (ang. Root Mean Square Error)\index{$RMSE$ -- średni błąd kwadratowy} -- $RMSE=\sqrt{\frac1N\sum_{i=1}^N\left(x_{f,i}-x_{o,i}\right)^2}$;
+\item \textit{Średni błąd obciążenia} (ang. Mean Bias Error)\index{$MBE$ -- średni błąd obciążenia}: 
+\begin{equation}
+MBE=\frac1N\sum_{i=1}^N{(x_{f,i}-x_{o,i})};
+\end{equation}
+\item \textit{Średni błąd absolutny}\index{$MAE$ -- średni błąd absolutny} (ang. Mean Absolute Error):
+\begin{equation}
+MAE=\frac1N\sum_{i=1}^N\left|x_{f,i}-x_{o,i}\right|;
+\end{equation}  
+\item \textit{Średni błąd kwadratowy} (ang. Root Mean Square Error)\index{$RMSE$ -- średni błąd kwadratowy}:
+\begin{equation}
+RMSE=\sqrt{\frac1N\sum_{i=1}^N\left(x_{f,i}-x_{o,i}\right)^2};
+\end{equation} 
 \end{itemize}
 oraz błędy maksymalne:
 \begin{itemize}[noitemsep,nolistsep]
-	\item \textit{Maksymalny błąd obciążenia} (ang. Maximum Bias Error)\index{$MAX_{BE}$ -- maksymalny błąd obciążenia} -- $MAX_{BE}=max_{i=1}^N{(x_{f,i}-x_{o,i})}$;
-	\item \textit{Maksymalny błąd absolutny} (ang. Maximum Absolute Error)\index{$MAX_{AE}$ -- maksymalny błąd absolutny} --  $MAX_{AE}=max_{i=1}^N\left|x_{f,i}-x_{o,i}\right|$;
-	\item \textit{Maksymalny błąd kwadratowy} (ang. Maximum Root Square Error)\index{$MAX_{RMSE}$ -- maksymalny błąd kwadratowy} -- $MAX_{RMSE}=max_{i=1}^N\sqrt{\left(x_{f,i}-x_{o,i}\right)^2}$;
+	\item \textit{Maksymalny błąd obciążenia} (ang. Maximum Bias Error)\index{$MAX$-$BE$ -- maksymalny błąd obciążenia}:
+	\begin{equation}
+	MAX\mbox{-}BE=max_{i=1}^N\{(x_{f,i}-x_{o,i})\};
+	\end{equation} 
+	\item \textit{Maksymalny błąd absolutny} (ang. Maximum Absolute Error)\index{$MAX$-$AE$ -- maksymalny błąd absolutny}:
+	\begin{equation}
+	MAX\mbox{-}AE=max_{i=1}^N\{\left|x_{f,i}-x_{o,i}\right|\};
+	\end{equation}  
+	\item \textit{Maksymalny błąd kwadratowy} (ang. Maximum Root Square Error)\index{$MAX$-$RMSE$ -- maksymalny błąd kwadratowy}:
+	\begin{equation}
+	MAX\mbox{-}RMSE=max_{i=1}^N\{\sqrt{\left(x_{f,i}-x_{o,i}\right)^2}\};
+	\end{equation} 
 \end{itemize}
 z których błędy obciążenia i absolutny charakteryzują się liniową skalą, a kwadratowy wnosi dodatkową karę za większe błędy.   
 
-Dla problemu śledzenia zmian np. w czasie gojenia się tkanek, dodatkowo stosować można miary korelacji, w szczególności średniej korelacji z wykorzystaniem transformacji Z-Fishera (zob. \cite{Corey1998}):
-$Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}$\index{$Corr$ -- uśredniona korelacja z wykorzystaniem transformacji Z-Fishera}  
+Dla problemu śledzenia zmian np. w czasie gojenia się tkanek, dodatkowo stosować można miary korelacji, w szczególności średniej korelacji z wykorzystaniem transformacji Z-Fishera ($ZF$) (zob. \cite{Corey1998}):
+\begin{equation}
+Corr=\frac1N\sum_{i=1}^N{ZF(r_{f,i})}
+\end{equation}\index{$Corr$ -- uśredniona korelacja z wykorzystaniem transformacji Z-Fishera}  
 uzyskując średnią zgodność estymacji i wzorca odniesienia. Przy czym $r_f$\index{$r_f$ -- współczynnik korelacji Pearsona} to zapisany wzorem \ref{PearsorR} współczynnik korelacji Pearsona. 
 
-Oprócz prawidłowego wyboru miary istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
+Oprócz prawidłowego wyboru miary skuteczności podejścia istotny jest również dobór możliwie efektywnej architektury sieci. Problemy z tym związane zostaną omówione w kolejnych podsekcjach.
 
 \subsection{Problem nadmiernego dopasowania}
 \label{sec-overffiting}
@@ -425,7 +444,7 @@ Wprowadzenie w ostatnich latach dedykowanych rozwiązań dla szkolenia się gł�
 W warstwie oprogramowania należy wspomnieć o rozwiązaniach takich jak TensorRT \cite{TensorRT}, które minimalizują czasy przetwarzania sygnału przez wytrenowaną sieć np. stosując optymalizację reprezentacji liczb zmiennoprzecinkowych lub przetwarzanych macierzy. Dynamicznie rozwijają się również frameworki do zoptymalizowanych obliczeń z udziałem głębokich sieci neuronowych np.: Caffe, Caffe2, TensorFlow, Theano, PyTorch czy MXNet. Ich porównanie osadzone w kontekście aplikacji medycznych można znaleźć w \cite{Erickson2017}.
 
 Postęp w rozwoju współczesnych sieci konwolucyjnych doskonale odzwierciedla progres w rezultatach konkursu ImageNet Large Scale Visual Recognition Competition (w skr. ILSVRC)\index{ILSVRC -- skrót od ang. \textit{ImageNet Large Scale Visual Recognition Competition}} przedstawiony na Rys. \ref{ILSVRC}.
-\begin{figure}[h!]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/ILSVRC.jpg}
 	\caption{Błąd top-5 klasyfikacji obiektów w kolejnych latach uzyskiwany przez zwycięzców konkursu ILSVRC (na podst. \cite{imagenet_cvpr09})}
@@ -444,7 +463,7 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 \end{figure}
 
 W skład topologii wchodzi pięć warstw konwolucyjnych (ekstraktor cech) i trzy gęste. Po pierwszej, drugiej i piątej warstwie konwolucyjnej występują operacje typu max-pool z maską o wymiarach 2$\times$2 \footnote{Autorzy pracy podają też przykłady użycia masek o wymiarze 2$\times$3, które nakładają się \linebreak w przestrzeni funkcji obrazowej. Nie znalazły one jednak miejsca w finalnej implementacji.}. 
-\newpage
+
 Pierwsza warstwa konwolucyjna przyjmuje na wejściu dane o wymiarze \linebreak 227$\times$227$\times$3\footnote{3 jest liczbą kanałów kodujących kolor obrazu.}, na których wykonywana jest operacja splotu z 96-cioma filtrami \linebreak z maską o wymiarach 11$\times$11$\times$3 i krokiem 4. W rezultacie (uwzględniając również operację max-pool) objętość wynikowa przekazywana do kolejnej warstwy ma wymiar 27$\times$27$\times$96. W drugiej warstwie konwolucyjnej wykonywana jest operacja splotu z 256-cioma filtrami z maską o wymiarach 5$\times$5$\times$96. Wymiar objętości wynikowej zostaje ponownie zredukowany poprzez operacje max-pool do 13$\times$13$\times$256. Kolejne 3 warstwy konwolucyjne są połączone bezpośrednio ze sobą. Trzecia warstwa zawiera 384 filtry z maską o wymiarze 3$\times$3$\times$256, w skład czwartej wchodzą 384 filtry \linebreak z maską o wymiarze 3$\times$3$\times$384, a w piątej znajduje się 256 filtrów również z maską \linebreak o wymiarze 3$\times$3$\times$384. Końcowe dwie warstwy typu FC zawierają po 4096 neuronów, a ostatnia zawiera tyle neuronów ile klas występuje w ostatecznym podziale -- w oryginalnej pracy było to 1000 (por. \cite{Krizhevsky2012}).
 
 Poniżej przedstawiono przykład algorytmu wykorzystywanego dla pierwszej warstwy konwolucyjnej opisywanej topologii, umożliwiający zrozumienie sposobu przetwarzania sygnału wejściowego: 
@@ -477,13 +496,12 @@ Architekturę o nazwie GoogLeNet zaprezentowano w 2014 r. w pracy \cite{GoogleNe
 Redukcję liczby parametrów przy jednoczesnym podwyższeniu dokładności klasyfikacji obiektów udało się uzyskać poprzez poszukiwania konstrukcji optymalnych lokalnych topologii i ich połączeń. Wiadomo, że duża część funkcji aktywacji neuronów przyjmuje wartość 0 lub jest redundantna z powodu wysokiej korelacji między sobą (zob. \cite{DBLP:journals/corr/AroraBGM13}). Matematyka dotycząca przetwarzania \textit{macierzy rzadkich}, tj. takich gdzie przeważająca liczba elementów przyjmuje wartość 0, jest dobrze znana (zob. np. \cite{Umit2010}). Jednak implementacje bibliotek do obliczeń związanych z algebrą liniową są zoptymalizowane pod kątem \textit{macierzy gęstych}, gdzie przeważająca liczba elementów przyjmuje wartości różne od 0 (zob. \cite{Song:2014:SUM:2597652.2597670, Krizhevsky2012}). 
 
 Ideą modułu incepcji zaproponowanego przez twórców GoogLeNet jest aproksymacja rzadkich macierzy z użyciem komponentów o gęstej strukturze. Takie komponenty nazwano \textit{modułami incepcji} (ang. \textit{inception modules}), a ich przykłady pokazano na Rys. \ref{GoogleNetInceptionModules}. 
-\begin{figure}[h!]
+\begin{figure}[t!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/InceptionModules.jpg}
 	\caption{Moduły incepcji o głębokości jednego (a) i dwóch stopni (b) -- (na podst. \cite{GoogleNet}).}
 	\label{GoogleNetInceptionModules}
 \end{figure}
-
 (a) przedstawia naiwną formę modułu incepcji, gdzie grupowane są operacje filtrów z maską o wymiarach 5$\times$5, 3$\times$3, 1$\times$1 oraz operacja max-pool. (b) prezentuje koncepcję zoptymalizowaną obliczeniowo gdzie filtry z maską 1$\times$1 służą do redukcji wymiarowości i używane są bezpośrednio przed splotami z bardziej wymagającymi obliczeniowo splotami 5$\times$5 i 3$\times$3. 
 
 Przy pomocy złożenia różnego rodzaju modułów incepcji otrzymano topologię zaprezentowaną na Rys. \ref{GoogleNetTopo}.

@@ -11,7 +11,7 @@
   \item $Corr$ -- u\IeC {\'s}redniona korelacja z wykorzystaniem transformacji Z-Fishera, 
 		49
   \item $D$ -- segment w kroswalidacji, 49
-  \item $F$ -- funkcja rezydualna, 65
+  \item $F$ -- funkcja rezydualna, 64
   \item $F^{mt}$ -- wynikowa si\IeC {\l }a przekazywana przez \IeC {\'s}ci\IeC {\k e}gno, 
 		11
   \item $F_A$ -- si\IeC {\l }a wywo\IeC {\l }ana skurczem mi\IeC {\k e}\IeC {\'s}ni, 
@@ -27,11 +27,11 @@
   \item $H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
 		71
   \item $HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, 
-		146
+		147
   \item $HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji, 
-		146
+		147
   \item $HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji, 
-		146
+		147
   \item $H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
   \item $H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
@@ -70,7 +70,7 @@
   \item $P_{max}$ -- moc maksymalna, 32
   \item $R$ -- energetyczny wsp\IeC {\'o}\IeC {\l }czynnik odbicia, 26
   \item $R(x_i)$ -- wynik regresji, 71
-  \item $RF[1-46]$ -- kolejne klasyczne cechy obrazowe, 70
+  \item $RF1-RF46$ -- kolejne klasyczne cechy obrazowe, 70
   \item $RMSE$ -- \IeC {\'s}redni b\IeC {\l }\IeC {\k a}d kwadratowy, 
 		48
   \item $S$ -- skala zmiany obrazu, 51
@@ -91,20 +91,20 @@
   \item $T_y$ -- czas w\IeC {\l }\IeC {\k a}czenia pola gradientowego $G_{yz}$, 
 		19
   \item $U$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy, 45
-  \item $W$ -- macierz wag, 65
+  \item $W$ -- macierz wag, 64
   \item $WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany, 
-		118
+		119
   \item $WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty, 
-		118
+		119
   \item $X1$, $X2$ -- zmienne losowe, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
 		87
   \item $Y$ -- macierz nowych zmiennych PCA, 55
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
-		118
+		119
   \item $ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty, 
-		118
+		119
   \item $\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF, 
 		19
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
@@ -162,12 +162,12 @@
 		27
   \item $g$ -- gradient, 47
   \item $h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u, 
-		65
+		64
   \item $h_{max}$ -- maksymalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem, 
 		32
   \item $h_{min}$ -- minimalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem, 
 		32
-  \item $hf1-hf12$ -- cecha Haralicka, 146
+  \item $hf1-hf12$ -- cecha Haralicka, 147
   \item $i$, $j$, $k$ -- indeksy, 35
   \item $j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax, 
 		67
@@ -206,7 +206,7 @@
   \item $z_s$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax, 
 		67
   \item \textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne, 
-		116
+		117
 
   \indexspace
 
@@ -253,7 +253,7 @@
   \item ICA -- skr\IeC {\'o}t od ang. \textit{Independent Component Analysis}, 
 		55
   \item ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}, 
-		58
+		57
   \item Impuls RF -- impuls o odpowiedniej cz\IeC {\k e}stotliwo\IeC {\'s}ci fal radiowych, 
 		19
 
@@ -285,7 +285,7 @@
 
   \indexspace
 
-  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 91
+  \item RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}, 90
   \item RM -- Rezonans Magnetyczny, 5, 17
   \item ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}, 70
 
@@ -315,7 +315,7 @@
 		3
   \item TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna, 76
   \item TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna, 
-		76
+		77
 
   \indexspace
 

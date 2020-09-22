@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Schemat modelu typu Hilla stosowany w oprogramowaniu OpenSim (na podst. \cite {Romero2016}).\relax }}{11}% 
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Wykres przedstawiaj\IeC {\k a}cy proporcje wyst\IeC {\k e}powania urazu \IeC {\'s}ci\IeC {\k e}gna Achillesa w r\IeC {\'o}\IeC {\.z}nych dyscyplinach sportowych na przyk\IeC {\l }adzie ameryka\IeC {\'n}skiego spo\IeC {\l }ecze\IeC {\'n}stwa (na podst. \cite {EpidemiologyUS}).\relax }}{12}% 
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Zestawienie wykorzystanych w pracy i w projekcie START sekwencji RM z widoczn\IeC {\k a} struktur\IeC {\k a} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{23}% 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Obszaru obrazowania \IeC {\'s}ci\IeC {\k e}gna Achillesa w badaniach USG w projekcie START, wraz z danymi wolumetrycznymi -- a), danymi w przekrojach strza\IeC {\l }kowym i czo\IeC {\l }owym -- b) oraz danymi w przekroju poprzecznym -- c).\relax }}{28}% 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Obszar obrazowania \IeC {\'s}ci\IeC {\k e}gna Achillesa w badaniach USG w projekcie START, wraz z danymi wolumetrycznymi -- a), danymi w przekrojach strza\IeC {\l }kowym i czo\IeC {\l }owym -- b) oraz danymi w przekroju poprzecznym -- c).\relax }}{28}% 
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Por\IeC {\'o}wnanie schemat\IeC {\'o}w przetwarzania danych z wykorzystaniem metod g\IeC {\l }\IeC {\k e}bokiego uczenia si\IeC {\k e} i metod klasycznych.\relax }}{37}% 
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Topologia perceptronu (na podst. \cite {Rosenblatt1957}).\relax }}{38}% 
@@ -17,11 +17,11 @@
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Topologia sieci LeNet (na podst. \cite {Lecun1998}).\relax }}{40}% 
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Statystyki dotycz\IeC {\k a}ce publikacji medycznych zawieraj\IeC {\k a}cych s\IeC {\l }owa kluczowe zwi\IeC {\k a}zane z g\IeC {\l }\IeC {\k e}bokim uczeniem si\IeC {\k e} (na podst. \cite {Litjens2017}).\relax }}{41}% 
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Firmy stosuj\IeC {\k a}ce w swoich produktach g\IeC {\l }\IeC {\k e}bokie sieci neuronowe, uzyskuj\IeC {\k a}ce certyfikacj\IeC {\k e} FDA (na podst. \cite {FDA}).\relax }}{42}% 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Reprezentacja graficzna oceny krzy\IeC {\.z}owej.\relax }}{50}% 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Reprezentacja graficzna podzia\IeC {\l }u na segemnty w ocenie krzy\IeC {\.z}owej.\relax }}{50}% 
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Dwuwymiarowa przestrze\IeC {\'n} cech wraz z zaznaczonymi poziomami warianci i sk\IeC {\l }adowymi g\IeC {\l }\IeC {\'o}wnymi.\relax }}{55}% 
 \contentsline {figure}{\numberline {4.9}{\ignorespaces B\IeC {\l }\IeC {\k a}d top-5 klasyfikacji obiekt\IeC {\'o}w w kolejnych latach uzyskiwany przez zwyci\IeC {\k e}zc\IeC {\'o}w konkursu ILSVRC (na podst. \cite {imagenet_cvpr09})\relax }}{58}% 
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Schemat architektury AlexNet (na podst. \cite {Krizhevsky2012}).\relax }}{59}% 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU (na podst. \cite {Krizhevsky2012}).\relax }}{61}% 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU (na podst. \cite {Krizhevsky2012}).\relax }}{60}% 
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Modu\IeC {\l }y incepcji o g\IeC {\l }\IeC {\k e}boko\IeC {\'s}ci jednego (a) i dw\IeC {\'o}ch stopni (b) -- (na podst. \cite {GoogleNet}).\relax }}{62}% 
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury GoogleNet (na podst. \cite {GoogleNet}).\relax }}{62}% 
 \contentsline {figure}{\numberline {4.14}{\ignorespaces Schemat funkcjonalny pojedynczego bloku w architekturze ResNet (na podst. \cite {ResNet}).\relax }}{64}% 
@@ -29,7 +29,7 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Schemat automatycznej metody oceny pojedynczego parametru procesu gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{72}% 
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Wizualizacja danych RM w sekwencji PD dla zdrowego (po lewej) i goj\IeC {\k a}cego si\IeC {\k e} (po prawej) \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{74}% 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{78}% 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Por\IeC {\'o}wnanie czas\IeC {\'o}w treningu architektur na dw\IeC {\'o}ch architekturach GPU: Pascal i Volta.\relax }}{79}% 
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Por\IeC {\'o}wnanie krzywych dla 10 modalno\IeC {\'s}ci RM reprezentuj\IeC {\k a}cych \IeC {\'s}redni\IeC {\k a} $H_{PC}$ z 10 pacjent\IeC {\'o}w.\relax }}{81}% 
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Znormalizowane histogramy dla 10-ciu sekwencji RM.\relax }}{83}% 
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Por\IeC {\'o}wnanie sekwencji RM ilustruj\IeC {\k a}cych proces gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa w 12-tym tygodniu po rekonstrukcji.\relax }}{84}% 
@@ -37,22 +37,22 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.\relax }}{93}% 
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Tr\IeC {\'o}jwymiarowa wizualizacja zmian obszaru zainteresowania w kolejnych etapach gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna.\relax }}{94}% 
 \contentsline {figure}{\numberline {5.10}{\ignorespaces Macierz \IeC {\'s}redniego b\IeC {\l }\IeC {\k e}du absolutnego dla oceny pacjent\IeC {\'o}w testowych.\relax }}{95}% 
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Warto\IeC {\'s}ci $PP_d$ dla parametr\IeC {\'o}w z wzorca odniesienia.\relax }}{97}% 
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{98}% 
-\contentsline {figure}{\numberline {5.13}{\ignorespaces MAE w obr\IeC {\k e}bie klas.\relax }}{99}% 
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru SCT.\relax }}{100}% 
-\contentsline {figure}{\numberline {5.15}{\ignorespaces Ocena parametru TT.\relax }}{101}% 
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Warto\IeC {\'s}ci $PP_d$ dla parametr\IeC {\'o}w z wzorca odniesienia.\relax }}{96}% 
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Macierz b\IeC {\l }\IeC {\k e}du dla noty jako klasy.\relax }}{97}% 
+\contentsline {figure}{\numberline {5.13}{\ignorespaces MAE w obr\IeC {\k e}bie klas.\relax }}{98}% 
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Ocena parametru SCT.\relax }}{99}% 
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Ocena parametru TT.\relax }}{100}% 
 \contentsline {figure}{\numberline {5.16}{\ignorespaces Ocena parametru STE.\relax }}{102}% 
-\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TE.\relax }}{102}% 
-\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TU.\relax }}{103}% 
-\contentsline {figure}{\numberline {5.19}{\ignorespaces Ocena parametru TisE.\relax }}{104}% 
-\contentsline {figure}{\numberline {5.20}{\ignorespaces Przyk\IeC {\l }adowy raport zawieraj\IeC {\k a}cy ocen\IeC {\k e} holistyczn\IeC {\k a} i szczeg\IeC {\'o}\IeC {\l }ow\IeC {\k a} stanu \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{106}% 
+\contentsline {figure}{\numberline {5.17}{\ignorespaces Ocena parametru TE.\relax }}{103}% 
+\contentsline {figure}{\numberline {5.18}{\ignorespaces Ocena parametru TU.\relax }}{104}% 
+\contentsline {figure}{\numberline {5.19}{\ignorespaces Ocena parametru TisE.\relax }}{105}% 
+\contentsline {figure}{\numberline {5.20}{\ignorespaces Przyk\IeC {\l }adowy raport zawieraj\IeC {\k a}cy ocen\IeC {\k e} holistyczn\IeC {\k a} i szczeg\IeC {\'o}\IeC {\l }ow\IeC {\k a} stanu \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{107}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{111}% 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w przekrojach poprzecznych i strza\IeC {\l }kowych, w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna.\relax }}{113}% 
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Automatyczna segmantacja ROI z wykorzystaniem g\IeC {\l }\IeC {\k e}bokich sieci neuronowych.\relax }}{112}% 
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wizualizacja przyk\IeC {\l }adowych danych USG w przekrojach poprzecznych i strza\IeC {\l }kowych, w kolejnych tygodniach po zszyciu \IeC {\'s}ci\IeC {\k e}gna.\relax }}{114}% 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Przewidywania rozwoju mo\IeC {\.z}liwo\IeC {\'s}ci system\IeC {\'o}w opartych o metody AI w radiologii wed\IeC {\l }ug firmy IBM.\relax }}{124}% 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Przewidywania rozwoju mo\IeC {\.z}liwo\IeC {\'s}ci system\IeC {\'o}w opartych o metody AI w radiologii wed\IeC {\l }ug firmy IBM.\relax }}{125}% 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{144}% 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Front-end aplikacji AchillesDL przeznaczonej do oznaczania bada\IeC {\'n} RM \IeC {\'s}ci\IeC {\k e}gna Achillesa.\relax }}{145}% 
 \addvspace {10\p@ }

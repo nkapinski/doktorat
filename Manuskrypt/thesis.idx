@@ -144,11 +144,11 @@
 \indexentry{FC -- skr\IeC {\'o}t od ang. \textit{Fully Connected}}{57}
 \indexentry{$\eta_{x,y}^{i}$ -- aktywacja danego neuronu}{57}
 \indexentry{$k_n$, $\lambda_n$, $\beta_n$ - sta\IeC {\l }\IeC {\k e} dobierane empirycznie dla algorytmu Local Response Normalization}{57}
-\indexentry{ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}}{58}
+\indexentry{ILSVRC -- skr\IeC {\'o}t od ang. \textit{ImageNet Large Scale Visual Recognition Competition}}{57}
 \indexentry{$A_a$, $B_a$, $C_a$ -- macierze przetwarzane przez sie\IeC {\'c} AlexNet}{60}
-\indexentry{$F$ -- funkcja rezydualna}{65}
-\indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{65}
-\indexentry{$W$ -- macierz wag}{65}
+\indexentry{$F$ -- funkcja rezydualna}{64}
+\indexentry{$h$($x_l$) -- funkcja przekszta\IeC {\l }cenia sygna\IeC {\l }u}{64}
+\indexentry{$W$ -- macierz wag}{64}
 \indexentry{$L$ - liczba blok\IeC {\'o}w rezydualnych}{65}
 \indexentry{$w_r$ -- gradient propagowany w ResNet}{65}
 \indexentry{$\sigma (z_s)_j$ -- funkcja softmax}{67}
@@ -157,7 +157,7 @@
 \indexentry{$w$ -- wektor wag}{68}
 \indexentry{$S^g$ -- stos predykcji}{68}
 \indexentry{ROI -- skr\IeC {\'o}t od ang. \textit{Region of Interest}}{70}
-\indexentry{$RF[1-46]$ -- kolejne klasyczne cechy obrazowe}{70}
+\indexentry{$RF1-RF46$ -- kolejne klasyczne cechy obrazowe}{70}
 \indexentry{$H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa}{71}
 \indexentry{$TM$ -- \IeC {\'s}rednia trymowana}{71}
 \indexentry{$R(x_i)$ -- wynik regresji}{71}
@@ -166,7 +166,7 @@
 \indexentry{TT -- pogrubienie \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{STE -- ostro\IeC {\'s}\IeC {\'c} granic \IeC {\'s}ci\IeC {\k e}gna}{76}
 \indexentry{TE -- obrz\IeC {\k e}k \IeC {\'s}ci\IeC {\k e}gna}{76}
-\indexentry{TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna}{76}
+\indexentry{TU -- jednorodno\IeC {\'s}\IeC {\'c} \IeC {\'s}ci\IeC {\k e}gna}{77}
 \indexentry{TisE -- obrz\IeC {\k e}k tkanek}{77}
 \indexentry{$H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej}{80}
 \indexentry{$H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych}{87}
@@ -176,17 +176,17 @@
 \indexentry{$d$ -- dystans separacji dla cech Haralicka}{90}
 \indexentry{SVR -- skr\IeC {\'o}t od ang. \textit{Support Vector Regression}}{90}
 \indexentry{MPR -- skr\IeC {\'o}t od ang. \textit{Multilayer Perceptron Regression}}{90}
-\indexentry{RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}}{91}
+\indexentry{RF -- skr\IeC {\'o}t od ang. \textit{Random Forest}}{90}
 \indexentry{LR -- skr\IeC {\'o}t od ang. \textit{Linear regression}}{91}
 \indexentry{Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}}{91}
 \indexentry{$p$ -- wskaznik istotno\IeC {\'s}ci statystycznej}{92}
 \indexentry{$PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek}{96}
-\indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{116}
-\indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{118}
-\indexentry{$ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany}{118}
-\indexentry{$WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty}{118}
-\indexentry{$WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany}{118}
-\indexentry{$HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania}{146}
-\indexentry{$HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji}{146}
-\indexentry{$HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji}{146}
-\indexentry{$hf1-hf12$ -- cecha Haralicka}{146}
+\indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{117}
+\indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{119}
+\indexentry{$ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany}{119}
+\indexentry{$WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty}{119}
+\indexentry{$WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany}{119}
+\indexentry{$HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania}{147}
+\indexentry{$HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji}{147}
+\indexentry{$HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji}{147}
+\indexentry{$hf1-hf12$ -- cecha Haralicka}{147}

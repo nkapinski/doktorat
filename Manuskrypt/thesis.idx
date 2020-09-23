@@ -81,7 +81,7 @@
 \indexentry{$o$ -- obserwacja}{38}
 \indexentry{$w_c$ -- wektor cech}{40}
 \indexentry{FDA -- skr\IeC {\'o}t od ang. Food and Drug Administration}{42}
-\indexentry{GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}}{43}
+\indexentry{GTC -- skr\IeC {\'o}t od ang. \textit{GPU Technology Conference}}{43}
 \indexentry{MICCAI -- skr\IeC {\'o}t od ang. \textit{Medical Image Computing and Computer Assisted Intervention}}{43}
 \indexentry{$f$($x$) -- funkcja celu}{43}
 \indexentry{$f'$($x$) -- pochodna funkcji celu}{43}
@@ -131,7 +131,7 @@
 \indexentry{$p_k$, $q_k$ -- rozk\IeC {\l }ady prawdopodobie\IeC {\'n}stwa}{53}
 \indexentry{LASSO -- skr\IeC {\'o}t od ang. \textit{Least Absolute Shrinkage and Selection Operator}}{53}
 \indexentry{$\rho$ -- wsp\IeC {\'o}\IeC {\l }czynnik reguluj\IeC {\k a}cy istotno\IeC {\'s}\IeC {\'c} zastosowanych norm w metodzie Elastic Net}{54}
-\indexentry{PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}}{54}
+\indexentry{PCA -- skr\IeC {\'o}t od ang. \textit{Principal Component Analysis}}{54}
 \indexentry{$S_x$ -- macierz kowariancji}{54}
 \indexentry{$L_d$ -- macierz diagonalna}{55}
 \indexentry{$K$ -- macierz odwracalna}{55}
@@ -181,12 +181,12 @@
 \indexentry{Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}}{91}
 \indexentry{$p$ -- wskaznik istotno\IeC {\'s}ci statystycznej}{92}
 \indexentry{$PP_d$ -- pole powierzchni pomi\IeC {\k e}dzy krzyw\IeC {\k a} \IeC {\l }\IeC {\k a}cz\IeC {\k a}c\IeC {\k a} min MAE, a diagonal\IeC {\k a} w macierzach pomy\IeC {\l }ek}{96}
-\indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{117}
-\indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{119}
-\indexentry{$ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany}{119}
-\indexentry{$WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty}{119}
-\indexentry{$WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany}{119}
-\indexentry{$HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania}{147}
-\indexentry{$HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji}{147}
-\indexentry{$HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji}{147}
-\indexentry{$hf1-hf12$ -- cecha Haralicka}{147}
+\indexentry{\textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne}{116}
+\indexentry{$ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty}{118}
+\indexentry{$ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany}{118}
+\indexentry{$WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty}{118}
+\indexentry{$WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany}{118}
+\indexentry{$HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania}{146}
+\indexentry{$HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji}{146}
+\indexentry{$HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji}{146}
+\indexentry{$hf1-hf12$ -- cecha Haralicka}{146}

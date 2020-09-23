@@ -74,9 +74,9 @@ Zbiory trójwymiarowe posłużyły do opracowania zbiorów dwuwymiarowych skład
 
 Sumaryczna liczba tak uzyskanych próbek dwuwymiarowych wyniosła 11.725 (oznaczonych jako obrazy zdrowego ścięgna) i 138.604 (oznaczonych jako obrazy chorego ścięgna). W zależności od eksperymentów służących do optymalizacji parametrów metody wykorzystano:
 \begin{itemize}[noitemsep,nolistsep]
-	\item Powiększony zbiór treningowy RM -- zawierający przekroje poprzeczne względem osi długiej ścięgna ze wszystkich badań pacjentów treningowych, realizowanych wszystkimi sekwencjami. Liczba przekrojów w tym zbiorze została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i, w przypadku chorych przykładów, 10-ciu obrotów w zakresie od -10 do 10 stopni. Finalnie, zbiór zawierał 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
-	\item Ograniczony zbiór treningowy RM -- zawierający przekroje poprzeczne ze zbioru 44-ech pacjentów treningowych jedynie w sekwencji T2$^\ast$ GRE TE\_MIN (18.863 próbek).
-	\item Zbiór PCA -- wykorzystywany dalej w pracy do analiz PCA, zawierający próbki z powiększonego zbioru treningowego ze wszystkich sekwencji RM dla 10-ciu losowo wybranych pacjentów (44.813).
+	\item Powiększony zbiór treningowy RM -- zawierający przekroje poprzeczne względem osi długiej ścięgna ze wszystkich badań pacjentów treningowych, realizowanych wszystkimi sekwencjami. Liczba przekrojów w tym zbiorze została powiększona poprzez zastosowanie transformacji odbicia lustrzanego i, w przypadku badań osób bez zerwania, 10-ciu obrotów w zakresie od -10 do 10 stopni. Finalnie, zbiór zawierał 234.502 przekrojów oznaczonych jako zdrowych i 277.208 oznaczonych jako chorych.
+	\item Ograniczony zbiór treningowy RM -- zawierający przekroje poprzeczne ze zbioru 44-ech pacjentów treningowych jedynie w sekwencji T2$^\ast$ GRE TE\_MIN (18.863 przekrojów).
+	\item Zbiór PCA -- wykorzystywany dalej w pracy do analiz PCA, zawierający próbki z powiększonego zbioru treningowego ze wszystkich sekwencji RM dla 10-ciu losowo wybranych pacjentów (44.813 przekrojów).
 \end{itemize}
 
 W celu wnioskowania i porównań rezultatów metody posłużono się danymi \linebreak od 4-ech pacjentów testowych, z wykorzystaniem, w zależności od potrzeby, od 1 do 10 modalności RM. Szczegóły dotyczące poszczególnych wyborów znajdują się \linebreak w opisach eksperymentów.
@@ -355,7 +355,7 @@ W poprzednim eksperymencie uzyskano najlepsze wyniki z wykorzystaniem modeli reg
 W tym celu, treningowy zbiór pacjentów został podzielony na 4 podzbiory (11-tu pacjentów, około 4300 przekrojów poprzecznych) i wykorzystany do kroswalidacji. Wynikiem tych działań był dobór możliwie najlepszego parametru $\alpha$\index{$\alpha$ -- stała w metodzie LASSO} dla metody LASSO (zob. wzór \ref{equ:lassoReg}). Jako dane wejściowe wykorzystano zbiór ograniczony do sekwencji T2$^\ast$ GRE TE\_MIN, z których dla każdego przekroju wyliczono odpowiednio 200 cech DL i 46 klasycznych cech obrazowych (zob. p. \ref{seq:method}).
 
 Wyniki metody LASSO (tj. błąd średniokwadratowy powiększony o funkcję kary) dla każdego pacjenta zestawiono w krzywe łączące kolejne punkty obrazowania.
-Kryterium selekcji cech była najlepsza korelacja wzorca odniesienia z krzywymi, którą uzyskano dla $\alpha=0,1$. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
+Kryterium selekcji cech była najlepsza korelacja wzorca odniesienia z krzywymi, którą uzyskano dla $\alpha$ = 0,1. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano następujące podzbiory predyktorów:  
 \begin{itemize}[noitemsep,nolistsep]
 	\item SCT: 6 cech DL (PC1, PC2, PC3, PC5, PC7, PC9), 10 klasycznych cech obrazowych, w tym 3 cechy Haralicka (suma wariancji dla dystansu separacji $d$ = 1, suma średnich dla $d$ = 5 i suma średnich dla $d$ = 10)\index{$d$ -- dystans separacji dla cech Haralicka};
 	\item TT: 5 cech DL (PC1, PC2, PC3, PC4, PC5) i 7 klasycznych cech obrazowych bez udziału cech Haralicka;
@@ -365,11 +365,12 @@ Kryterium selekcji cech była najlepsza korelacja wzorca odniesienia z krzywymi,
 	\item TisE: 6 cech DL (PC1, PC2, PC3, PC5, PC7, PC9) i 7 klasycznych cech obrazowych bez udziału cech Haralicka.
 	
 \end{itemize}
-Maksymalna liczba cech w zredukowanej przestrzeni wyniosła 16 dla parametru SCT. Ponadto cechy DL i klasyczne cechy obrazowe są obecne w każdym z ocenianych kryteriów wzorca odniesienia, co wskazuje na możliwość uzyskania polepszonych rezultatów oceny z wykorzystaniem fuzji. Należy również zwrócić uwagę, \linebreak że największa liczba cech Haralicka (tj. 3) występuje w parametrze SCT związanym z oceną struktury włókien widoczną w obrazach jako różne tekstury.
+
+Maksymalna liczba cech w zredukowanej przestrzeni wyniosła 16 dla parametru SCT. Ponadto cechy DL i klasyczne cechy obrazowe są obecne w każdym \linebreak z ocenianych kryteriów wzorca odniesienia, co wskazuje na możliwość uzyskania polepszonych rezultatów oceny z wykorzystaniem fuzji. Należy również zwrócić uwagę, \linebreak że największa liczba cech Haralicka (tj. 3) występuje w parametrze SCT związanym z oceną struktury włókien widoczną w obrazach jako różne tekstury.
 
 Wyselekcjonowane podzbiory wykorzystano w kolejnym kroku eksperymentu, mając na celu porównanie oceny procesu gojenia przy zastosowaniu różnych metod. Wykorzystano zarówno liniową regresję jak i algorytmy mogące modelować nieliniowe zależności. Pomimo wstępnego założenia o dominacji liniowych związków np. wynik modelu $model\_poly$ dla Corr w parametrze TE (zob. Tab. \ref{tab:H_testset}) pozwala zakładać, że ocena w niektórych detalach może mieć również charakter nieliniowy. 
 
-Dlatego w porównaniu metod meta-regresji cech uwzględniono: metodę wektorów nośnych (SVR -- od ang. \textit{Support Vector Regression})\index{SVR -- skrót od ang. \textit{Support Vector Regression}} z jądrem w postaci radialnej funkcji bazowej opisaną w \cite{SVR_drucker}, wielowarstwowy perceptron liniowy z 4-ema neuronami w warstwie ukrytej (MPR -- od ang. \textit{Multilayer Perceptron Regression})\index{MPR -- skrót od ang. \textit{Multilayer Perceptron Regression}} oraz las losowy składający się ze 100 drzew decyzyjnych (RF -- od ang. \textit{Random Forest})\index{RF -- skrót od ang. \textit{Random Forest}}. Wyniki zestawiono w Tab. \ref{tab:trainset} z rezultatami liniowej regresji (LR -- od ang. \textit{Linear regression})\index{LR -- skrót od ang. \textit{Linear regression}} i regresji nieliniowej drugiego stopnia (Poly -- od ang. \textit{Polynomial})\index{Poly -- skrót od ang. \textit{Polynomial}}. Dobór architektur i hiperparametrów wykonano metodami przeszukiwania siatki wielu kombinacji modeli (ang. \textit{grid-search}) z wykorzystaniem mocy obliczeniowej Interdyscyplinarnego Centrum Modelowania Matematycznego i Komputerowego Uniwersytetu Warszawskiego. Kryterium wyboru stanowiło brak nadmiernego dopasowania na danych walidacyjnych oraz niskie wartości mierzonych błędów.
+Dlatego w porównaniu metod meta-regresji cech uwzględniono: metodę wektorów nośnych (SVR -- od ang. \textit{Support Vector Regression})\index{SVR -- skrót od ang. \textit{Support Vector Regression}} z jądrem w postaci radialnej funkcji bazowej opisaną w \cite{SVR_drucker}, wielowarstwowy perceptron liniowy z 4-ema neuronami w warstwie ukrytej (MPR -- od ang. \textit{Multilayer Perceptron Regression})\index{MPR -- skrót od ang. \textit{Multilayer Perceptron Regression}} oraz las losowy składający się ze 100-u drzew decyzyjnych (RF -- od ang. \textit{Random Forest})\index{RF -- skrót od ang. \textit{Random Forest}}. Wyniki zestawiono w Tab. \ref{tab:trainset} z rezultatami liniowej regresji (LR -- od ang. \textit{Linear regression})\index{LR -- skrót od ang. \textit{Linear regression}} i regresji nieliniowej drugiego stopnia (Poly -- od ang. \textit{Polynomial})\index{Poly -- skrót od ang. \textit{Polynomial}}. Dobór architektur i hiperparametrów wykonano metodami przeszukiwania siatki wielu kombinacji modeli (ang. \textit{grid-search}) z wykorzystaniem mocy obliczeniowej Interdyscyplinarnego Centrum Modelowania Matematycznego i Komputerowego Uniwersytetu Warszawskiego. Kryterium wyboru stanowiło brak nadmiernego dopasowania na danych walidacyjnych oraz niskie wartości mierzonych błędów.
 
 Do treningu meta-regresorów wykorzystano ograniczony zbiór treningowy RM i koncepcję generalizacji stosów (zob. p. \ref{seq:ensemble}). Informacją wejściową były cechy wyekstrahowane przez pierwszy stopień algorytmu (cechy DL i RF1-46), następnie wyselekcjonowane metodą LASSO. Z uwagi na liczbę pacjentów nie zdecydowano się na dodatkowy podział, który umożliwiałby odseparowanie zbiorów trenujących dla pierwszego etapu i etapu meta-regresji. Wykorzystano natomiast kroswalidację z losowym podziałem na 4 segmenty.  
 
@@ -411,7 +412,7 @@ Do treningu meta-regresorów wykorzystano ograniczony zbiór treningowy RM i kon
 	\label{tab:trainset}
 \end{table*}
 
-Do oceny ponownie wykorzystano miary średniego błędu absolutnego (MAE) z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Najlepszy rezultat dla każdego z parametrów uzyskano dla lasu losowego, jednak w przypadku tego algorytmu (pomimo wielu prób z różną liczbą drzew decyzyjnych) występuje efekt nadmiernego dopasowania, co można zaobserwować analizując wyniki ze zbioru testowego zestawione w Tab. \ref{tab:testset}. 
+Do oceny ponownie wykorzystano miary średniego błędu absolutnego (MAE) \linebreak z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Najlepszy rezultat dla każdego z parametrów uzyskano dla lasu losowego, jednak \linebreak w przypadku tego algorytmu (pomimo wielu prób z różną liczbą drzew decyzyjnych) występuje efekt nadmiernego dopasowania, co można zaobserwować analizując wyniki ze zbioru testowego zestawione w Tab. \ref{tab:testset}. 
 
 \begin{table*}[]
 	\caption{Wyniki oceny procesu gojenia z wykorzystaniem fuzji cech i zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki uzyskane przez algorytmy meta-regresji z wyłączeniem RF, dla którego występuje efekt przeuczenia. Dodatkowo, w przypadku istotnej statystycznie poprawy z $p$ $<$ 0,05\index{$p$ -- wskaznik istotności statystycznej} liczonych średnich, wyniki najlepsze oznaczono kolorem czerwonym.}
@@ -466,20 +467,19 @@ Dla lepszego zrozumienia różnic między obszarami objętymi cechami DL oraz RO
 	\includegraphics[width=1\textwidth]{figures/XAI.jpg}
 	\caption{Analiza wizualna procesu wnioskowania sieci z zaznaczonym obszarem zainteresowania.}\label{fig:XAI}
 \end{figure}
-
-Można zaobserwować, że obszar zainteresowania wykorzystanej w eksperymentach sieci neuronowej obejmuje ROI jak i tkanki okalające. W celu zilustrowania zmian w czasie, na Rys. \ref{fig:3DXAI} pokazano izopowierzchnie przechodzące przez granicę obszaru zainteresowania w trójwymiarowych badaniach.
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/3DXAI.jpg}
 	\caption{Trójwymiarowa wizualizacja zmian obszaru zainteresowania w kolejnych etapach gojenia się ścięgna.}\label{fig:3DXAI}
 \end{figure}
-Początkowo cechy w kolejnych przekrojach na podstawie, których wnioskuje sieć znajdują się w większym rozrzuceniu niż na końcu monitorowanego etapu gojenia się ścięgna.
 
-Podsumowując, optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową oraz ROI umożliwia bardziej skuteczną ocenę całego procesu poprzez zapewnienie zgrubnej oceny z użyciem sieci i szczegółowej, z dołączenia predyktorów z ROI, bardziej odpornej na szum. 
+Można zaobserwować, że obszar zainteresowania wykorzystanej w eksperymentach sieci neuronowej obejmuje ROI jak i tkanki okalające. W celu zilustrowania zmian w czasie, na Rys. \ref{fig:3DXAI} pokazano izopowierzchnie przechodzące przez granicę obszaru zainteresowania w trójwymiarowych badaniach. Początkowo cechy w kolejnych przekrojach na podstawie, których wnioskuje sieć znajdują się w większym rozrzuceniu niż na końcu monitorowanego etapu gojenia się ścięgna.
+
+Podsumowując, optymalna fuzja cech z widocznego obszaru ocenianego przez sieć neuronową oraz ROI umożliwia bardziej skuteczną ocenę całego procesu poprzez zapewnienie zgrubnej oceny z użyciem sieci i szczegółowej, z dołączeniem predyktorów z ROI, bardziej odpornej na szum. 
 
 \section{Ocena procesu gojenia}
 \label{seq:valuation}
-W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. \linebreak W pierwszej kolejności dokonano zgrubnej analizy. Przeanalizowano macierze błędu dla rożnych klas: (1) tygodni oceny, gdzie wartością jest średni błąd absolutny (MAE); (2) zakresu oceny (0--7), gdzie wartością jest liczba występowań. Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie poszczególnych parametrów ankiety. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia (ang. \textit{ground-truth}) tj. oceną eksperta radiologa.
+W ramach tego eksperymentu zostanie przedstawiona szczegółowa analiza wyników oceny procesu gojenia z wykorzystaniem proponowanej w tej pracy metody. \linebreak W pierwszej kolejności przeanalizowano macierze błędu dla rożnych klas: (1) tygodni oceny, gdzie wartością jest średni błąd absolutny (MAE); (2) przyznanej oceny z zakresu (0--7), gdzie wartością jest liczba występowań. Następnie zostały przedstawione \textit{krzywe gojenia} tj. ocena zmiany w czasie wartości poszczególnych parametrów. Porównane zostały szczegółowo, dla wszystkich testowych pacjentów, wyniki metody automatycznej z wzorcem odniesienia (ang. \textit{ground-truth}) tj. oceną eksperta radiologa.
 
 \subsection{Macierze błędu}
 
@@ -490,7 +490,9 @@ Celem zdefiniowania ogólnych różnic między oceną radiologa i propozycją au
 	\caption{Macierz średniego błędu absolutnego dla oceny pacjentów testowych.}\label{fig:CM_MAE}
 \end{figure}
 
-Z wykorzystaniem macierzy można określić w jakim stopniu wyniki ocen w poszczególnych tygodniach są do siebie zbliżone. W przypadku możliwie najlepszego odwzorowania oceny radiologa przez nową metodę, minimalne błędy znajdowałyby się na diagonali przedstawionych wykresów. Dla poszczególnych parametrów można jednak zaobserwować dryf wartości minimalnych błędów. Pole powierzchni ($PP_d$)\index{$PP_d$ -- pole powierzchni pomiędzy krzywą łączącą min MAE, a diagonalą w macierzach pomyłek} wyliczono jako sumę odległości euklidesowych pomiędzy punktami na krzywej określającej wartości minimalne MAE a punktami na diagonali usytuowanymi w korespondujących rzędach. Wyniki zostały zebrane w Tabeli \ref{tab:dryf_meas}. 
+Z wykorzystaniem macierzy można określić w jakim stopniu wyniki ocen w poszczególnych tygodniach są do siebie zbliżone. W przypadku możliwie najlepszego odwzorowania oceny radiologa przez nową metodę, minimalne błędy znajdowałyby się na diagonali przedstawionych wykresów. Dla poszczególnych parametrów można jednak zaobserwować dryf wartości minimalnych błędów. 
+
+Do oceny dryfu wyliczono pole powierzchni ($PP_d$)\index{$PP_d$ -- pole powierzchni pomiędzy krzywą łączącą min MAE, a diagonalą w macierzach pomyłek}, tj. sumę odległości euklidesowych pomiędzy punktami na krzywej określającej wartości minimalne MAE \linebreak a punktami na diagonali usytuowanymi w korespondujących rzędach. Wyniki zostały zebrane w Tabeli \ref{tab:dryf_meas}. 
 \vspace{10px} 
 \begin{table*}[h!]
 	\caption{Ocena dryfu krzywej łączącej minima lokalne wartości MAE w macierzach błędów z klasą przyjętą jako tydzień rehabilitacji.}
@@ -506,7 +508,7 @@ Z wykorzystaniem macierzy można określić w jakim stopniu wyniki ocen w poszcz
 \end{table*}
 
 \vspace{-10px}
-Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru TT, a najgorszy dla STE, co oznacza, że w tych przypadkach ocena automatyczna najlepiej \linebreak i najgorzej przypomina ocenę radiologa. Kolejne, najlepsze rezultaty otrzymano dla parametrów opisujących obrzęki tj. TE i TisE oraz spójność ścięgna (SCT). Drugi najgorszy wynik został uzyskany dla parametru TU oceniającego jednorodność ścięgna w płaszczyźnie strzałkowej. Powyższe rezultaty są spójne z wnioskami \linebreak do wyników zamieszczonych w Tabeli \ref{tab:testset}, jednak szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
+Najlepszy rezultat (najmniejszy $PP_d$) uzyskano dla parametru TT. Kolejne rezultaty otrzymano odpowiednio dla parametrów opisujących obrzęki tj. TE, TisE, spójność ścięgna (SCT), TU (tj. jednorodność ścięgna w płaszczyźnie strzałkowej) oraz STE. Powyższe rezultaty są spójne z wnioskami do wyników zamieszczonych w Tabeli \ref{tab:testset}. Szczegółowa analiza dryfu tydzień po tygodniu przedstawiono na Rys. \ref{fig:CM_MAE_SUMMARY} umożliwia dalsze wnioskowanie.
 
 \begin{figure}[h!]
 	\centering
@@ -515,25 +517,24 @@ Najlepsze rezultaty (najmniejszy $PP_d$) uzyskano dla parametru TT, a najgorszy 
 \end{figure}
 
 Najmniejsze różnice w ocenie występują w trzecim tygodniu, czyli w pierwszym pomiarze po fazie zapalnej. Natomiast, wyróżniające dwie największe są obecne \linebreak w pierwszym oraz 39-tym tygodniu monitoringu, zatem w szczycie fazy zapalnej \linebreak i w momencie zaawansowania fazy przebudowy. 
+
 \begin{figure}[b!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cmScores.jpg}
-	\caption{Macierz błędu dla noty jako klasy.}\label{fig:cmscores}
+	\caption{Macierz błędu dla wartości oceny jako klasy.}\label{fig:cmscores}
 \end{figure}
 
 Analizując poszczególne parametry od najlepszego pod względem $PP_d$: w przypadku parametru TT, największe różnice w ocenie widoczne są w okresie, który według zarówno eksperta-radiologa, jak i algorytmu należą do przedziału czasowego 3-12 tyg., a zatem na przełomie fazy poliferacji i przebudowy, gdzie włókna ścięgniste zaczynają się ukierunkowywać i zmienia się grubość ścięgna. Dla TE największe odchylenia zaobserwowano dla przełomu fazy zapalnej i poliferacji -- tydz. 1 oraz zaawansowanej przebudowy w 26-tym tyg. Podobny schemat zachowany jest dla TisE, \linebreak z tą różnicą, że oprócz przełomu fazy zapalnej, odchylenia są widoczne w całym okresie przebudowy. Może to świadczyć o różnicy w ocenie płynów nagromadzonych w obrzękach. W przypadku SCT, różnice w ocenie spójności włókien uwidaczniają się w fazie przebudowy, kiedy to automatyczna metoda nie wskazuje na znaczący postęp w stosunku do wyniku z 26-tego tygodnia. W przypadku dwóch parametrów uzyskujących najgorszy wynik $PP_d$ tj. TU i STE rozbieżności są widoczne w całym okresie monitoringu, w szczególności w fazie zapalnej i przebudowy. Faza zapalna jest najbardziej dynamiczna, natomiast faza przebudowy była monitorowana w najdłuższych interwałach, co może powiększać różnice w obrazach tkanek \linebreak w obu przypadkach. 
 
-Do dalszej analizy różnic między ocenami wykorzystano macierz błędu, gdzie klasą jest nota przyznawana w ocenie parametrów (zob. Rys. \ref{fig:cmscores}). Wykorzystano ten sam automatyczny algorytm oceny zaokrąglając wyniki regresji do najbliższej liczby całkowitej, dla wszystkich 40-tu badań w zbiorze testowych 4-ech pacjentów. Celem tego porównania, było sprawdzenie, czy poszczególne stany ścięgna oceniane są przez automat i radiologa w podobny sposób.
-
-\begin{figure}[t!]
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/cmScores_summary.jpg}
-	\caption{MAE w obrębie klas.}\label{fig:cmscores_summary}
+	\caption{MAE w obrębie oceny jako klasy.}\label{fig:cmscores_summary}
 \end{figure}
 
-Największą zgodność otrzymano dla 2, 3 i 4. Notę 5 najczęściej automatyczna metoda oceniła jako 4, podobnie jak notę 6. Notę 7, dwukrotnie oceniona została jako notę 5 albo 6. W przypadku niskich wyników oceny, 1 najczęściej wystąpiła jako nota 2 (7 razy) lub 3 (8 razy). Natomiast nota 0 wystąpiła jako 2. Wartości błędów dla poszczególnych tygodniach przedstawiono na Rys. \ref{fig:cmscores_summary}.
+W kolejnym kroku analizy określono zgodność zaokrąglonych ocen automatu \linebreak i ocen radiologa. Wykorzystano ten sam automatyczny algorytm oceny zaokrąglając wyniki regresji do najbliższej liczby całkowitej, dla wszystkich 40-tu badań \linebreak w zbiorze testowych 4-ech pacjentów.  Celem tego porównania, było sprawdzenie, czy poszczególne stany ścięgna oceniane są przez automat i radiologa w podobny sposób, w szczególnością określenie jak często automat wystawia inne oceny niż radiolog \linebreak i jakie to są wartości. Do analiz wykorzystano macierz błędu, gdzie klasą jest ocena w zakresie (0--7) (zob. Rys. \ref{fig:cmscores}). Największą zgodność otrzymano dla ocen 2, 3 i 4. Ocenę 5 najczęściej automatyczna metoda określiła jako 4, podobnie jak 6. Ocena 7, dwukrotnie została wyliczona jako 5 i 6. W przypadku niskich wyników oceny, 1 najczęściej wystąpiła jako 2 (7 razy) lub 3 (8 razy). Natomiast 0 wystąpiło jako 2. Wartości błędów dla poszczególnych ocen  przedstawiono na Rys. \ref{fig:cmscores_summary}.
 
-Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie not 2--4. Dla noty 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. \linebreak W pozostałych notach skrajnych błąd wynosi $>$ 1,5. Wyniki są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają not skrajnych tj. 7 lub 0--1. 
+Można zaobserwować, że najmniejsze błędy ($<=$1) otrzymywane są w zakresie ocen 2--4. Dla oceny 5 wynik jest nieznacznie gorszy i osiąga poziom MAE=1,15. W pozostałych ocenach największy błąd wynosi $>$ 1,5. Powyższe obserwacje są związane z faktem, że metoda automatyczna charakteryzuje się mniejszym zakresem oceny, co wynika z zastosowania w algorytmie meta-regresji. Wartości oceny nigdy nie osiągają wartości skrajnych tj. 7 lub 0--1. 
 
 \subsection{Krzywe gojenia}
  Dla czterech pacjentów testowych, dla każdego z dziesięciu kroków czasowych, zestawiono wyniki oceny automatycznej z oceną eksperta radiologa. Na kolejnych sześciu rysunkach zaprezentowano rezultaty dla wszystkich parametrów z ankiety. Jako pierwszy przedstawiono parametr SCT (zob. Rys. \ref{fig:SCT}).
@@ -542,8 +543,8 @@ Można zaobserwować, że najmniejsze błędy ($<$1) otrzymywane są w zakresie 
 	\includegraphics[width=1\textwidth]{figures/SCT.png}
 	\caption{Ocena parametru SCT.}\label{fig:SCT}
 \end{figure}
-
-Zgodnie z opisem zamieszczonym w p. \ref{seq:ground-truth} dotyczy on stanu uszkodzeń śródścięgnistych wewnątrz obszaru ROI. Przed interwencją chirurgiczną ścięgno jest całkowicie zerwane, stąd w tygodniu 0, reprezentującym czas na kilka dni przed operacją, ocena radiologa wynosi 7, dla każdego z pacjentów. Po zszyciu w 3-ech z 4-ech przypadkach, proces postępuje z malejącym trendem do osiągnięcia małych, bądź braku uszkodzeń (jedyna anomalia, mogąca wynikać z omawianych wcześniej czynników zaburzających proces gojenia się, widoczna jest w 20-tym tyg. dla pacjenta 140283). W przypadku pacjenta 127108 proces gojenia się jest odmienny, przebiega z wyraźnie zmiennym trendem, jak również kończy się oceną 4, interpretowaną jako dość duże uszkodzenia. Ocena automatyczna proponowana w tej pracy przybliża trendy oceny radiologa, sugerując duże lub bardzo duże uszkodzenia na początku procesu i małe uszkodzenia w 3-ech z 4-ech przypadkach na końcu. Jedynie dla pacjenta 127108 sugerowana nota końcowa oznacza uszkodzenia średniej wielkości. Poza pojedynczym maksymalnym błędem (MAX-AE) występującym w 20-tym tyg. w ocenie pacjenta 115805, największe obserwowalne różnice w ocenie występują przed operacją. \linebreak We wszystkich czterech przypadkach ocena automatyczna stanu ekstremalnie dużych uszkodzeń związanych z całkowitym zerwaniem nie występuje, co wynika z ogólnie mniejszego zakresu punktacji metody automatycznej. 
+\newpage
+Zgodnie z opisem zamieszczonym w p. \ref{seq:ground-truth} dotyczy on stanu uszkodzeń śródścięgnistych wewnątrz obszaru ROI. Przed interwencją chirurgiczną ścięgno jest całkowicie zerwane, stąd w tygodniu 0, reprezentującym czas na kilka dni przed operacją, ocena radiologa wynosi 7, dla każdego z pacjentów. Po zszyciu w 3-ech z 4-ech przypadkach, proces gojenia postępuje z podobnym, w większości, malejącym trendem do osiągnięcia małych, bądź braku uszkodzeń. Jedyna anomalia, mogąca wynikać z omawianych wcześniej czynników zaburzających proces gojenia się, widoczna jest w 20-tym tyg. dla pacjenta 140283. W przypadku pacjenta 127108 proces gojenia się jest odmienny, przebiega z wyraźnie zmiennym trendem, jak również kończy się oceną 4, interpretowaną jako dość duże uszkodzenia. Ocena automatyczna proponowana w tej pracy przybliża trendy oceny radiologa, sugerując duże lub bardzo duże uszkodzenia na początku procesu i małe uszkodzenia w 3-ech z 4-ech przypadkach na końcu. Jedynie dla pacjenta 127108 sugerowana ocena końcowa oznacza uszkodzenia średniej wielkości. Poza pojedynczym maksymalnym błędem (MAX-AE) występującym w 20-tym tyg. w ocenie pacjenta 115805, największe obserwowalne różnice \linebreak w ocenie występują przed operacją. We wszystkich czterech przypadkach ocena automatyczna stanu ekstremalnie dużych uszkodzeń związanych z całkowitym zerwaniem nie występuje, co wynika z mniejszego zakresu punktacji metody automatycznej. 
 
 Kolejnym analizowanym parametrem jest TT. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:TT}.    
 \begin{figure}[h!]
@@ -553,7 +554,6 @@ Kolejnym analizowanym parametrem jest TT. Wykresy krzywych gojenia przedstawiono
 \end{figure}
 Parametr ten zgodnie z przedstawioną interpretacją związany jest z oceną pogrubienia ścięgna. Na początku procesu pogrubienie jest małe lub średnie (9--12 mm.), następnie w fazie poliferacji i początkach przebudowy rośnie, co związane jest z przyrostem włókien ścięgnistych, by finalnie, w większości przypadków, ponownie zmaleć w wyniku przebudowy struktury i pozostawienia jedynie dobrze ukierunkowanych, wytrzymałych struktur. Dla pacjentów 115805 \linebreak i 127752, w ocenie radiologa proces przebiega zgodnie z wyżej przedstawionym opisem. W przypadku pacjenta 140283 widoczna jest anomalia w 3-ecim tyg., co może mieć związek z fluktuacjami np. nadmiernym obciążeniem ścięgna. Ponownie, jedynie w przypadku pacjenta 127108, gojenie przebiega odmiennie i po operacji pogrubienie rośnie, aż do 52-ego tyg. 
 
-\newpage
 Błąd (MAE), równy 0,56, osiągnięty dla oceny tego parametru jest najniższy spośród wszystkich sześciu, co widoczne jest w przebiegach krzywych gojenia, które dobrze przybliżają ocenę radiologa. Anomalia w 3-ecim tyg. występująca u pacjenta 140283 nie została dobrze wykryta i w rezultacie błąd maksymalny (MAX-AE) wyniósł 1,82. W celu detekcji przyczyny konieczna jest dalsza analiza i w pierwszej kolejności weryfikacja, czy błąd popełniony został przez ocenę radiologa, czy metodę.
 
 Następnym analizowanym parametrem jest STE. Wykresy krzywych gojenia przedstawiono na Rys. \ref{fig:STE}.
@@ -578,7 +578,7 @@ Przedostatnim z analizowanych parametrów jest TU. Krzywe gojenia zostały zapre
 	\includegraphics[width=1\textwidth]{figures/TU.png}
 	\caption{Ocena parametru TU.}\label{fig:TU}
 \end{figure}
-Jest to jedyny parametr oceniany w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura \linebreak ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12-tego i 20-tego tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9-tego i 12-tego tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również \linebreak z drugim, najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów poprzecznych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji z innymi parametrami. 
+Jest to jedyny parametr oceniany \linebreak w całości w płaszczyźnie strzałkowej. Przy jego użyciu interpretowana jest jednorodność ścięgna widoczna w postaci charakterystycznego zdrowego warkocza włókien. Struktura ta w procesie gojenia się ulega stopniowej poprawie, co odzwierciedlają oceny radiologa dla pacjentów 115805 i 140283 (z jedną anomalią w 26-tym tyg.). Dla pacjenta 127752 jednorodność ścięgna ulega pogorszeniu na przełomie 12-tego i 20-tego tyg., co może być wynikiem czynników zewnętrznych wpływających na przebieg gojenia. Natomiast krzywa dla pacjenta 127108 ponownie zawiera odmienne trendy, zwłaszcza na przełomie 9-tego i 12-tego tyg. Dla automatycznej oceny, parametr oceniany jest z drugim (zaraz po STE) najgorszym wynikiem pod względem Corr i również z drugim, najgorszym MAE. Analiza automatyczna bazuje na metodzie wytrenowanej jedynie z wykorzystaniem przekrojów poprzecznych. Uzyskane wyniki są zatem efektem agregowanych w mierze $H$ wartości lub korelacji \linebreak z innymi parametrami. 
 
 Jako ostatni został przeanalizowany parametr TisE. Charakteryzuje on obrzęk \linebreak w przestrzeni międzypowięziowej ścięgna Achillesa. Krzywe gojenia widoczne \linebreak są na Rys. \ref{fig:TisE}.
 \begin{figure}[h!]
@@ -590,15 +590,15 @@ Jest to jedyny parametr oceniany w całości na zewnątrz ROI, tylko z wykorzyst
 
 \subsection{Ocena zbiorcza}
 \label{seq:achilles-score}
-Dotychczas w pracy posługiwano się 6-cioma parametrami do oceny stanu ścięgna Achillesa w badaniu RM. Wskaźniki te posiadają swoją interpretację kliniczną podaną w p. \ref{seq:ground-truth}, która jest czytelna dla radiologa. Należy jednak pamiętać, że w całym ciągu opieki nad pacjentem w zakresie leczenia ścięgna uczestniczy wiele osób, a w szczególności lekarz prowadzący (ortopeda) i fizjoterapeuci. Multiparametryczna ocena może się okazać zbyt szczegółowa i w praktyce, w procesie wymiany informacji dotyczącej postępów rehabilitacji, może utrudnić komunikację. Dlatego w badaniu zawartym w tym punkcie zdecydowano się podjąć próbę wyznaczenia jednego parametru, który zachowałby możliwie najwięcej informacji z proponowanej ustrukturyzowanej oceny, a jednocześnie stanowiłby komunikatywny sposób wymiany informacji w procesie rehabilitacji, pozwalający odpowiedzieć na proste pytania np. czy stan pacjenta w ogólności polepsza się, czy nie. 
+Dotychczas w pracy posługiwano się 6-cioma parametrami do oceny stanu ścięgna Achillesa w badaniu RM. Wskaźniki te posiadają swoją interpretację kliniczną podaną w p. \ref{seq:ground-truth}, która jest czytelna dla radiologa. Należy jednak pamiętać, że w całym ciągu opieki nad pacjentem w zakresie leczenia ścięgna uczestniczy wiele osób, a w szczególności lekarz prowadzący (ortopeda) i fizjoterapeuci. Multiparametryczna ocena może się okazać zbyt szczegółowa i w praktyce, w procesie wymiany informacji dotyczącej postępów rehabilitacji, może utrudnić komunikację. Dlatego \linebreak w badaniu zawartym w tym punkcie zdecydowano się podjąć próbę wyznaczenia jednego parametru, który zachowałby możliwie najwięcej informacji z proponowanej ustrukturyzowanej oceny, a jednocześnie stanowiłby komunikatywny sposób wymiany informacji w procesie rehabilitacji, pozwalający odpowiedzieć na proste pytania np. czy stan pacjenta w ogólności polepsza się, czy nie. 
 
-W tym celu, zarówno dla oceny automatycznej jak i radiologa zdecydowano się dla wyników pacjentów testowych przeprowadzić analizę czynnikową PCA. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. Czynnik1 zamiast 6-ciu parametrów: SCT, STE, TE, TisE, TT, TU. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
-
-\begin{table}[t!]
+W tym celu, zarówno dla oceny automatycznej jak i radiologa zdecydowano się przeprowadzić analizę czynnikową PCA dla wyników pacjentów testowych. W obu przypadkach tj. oceny automatycznej i radiologa uzyskano minimalny udział w wyjaśnianej wariancji czynników innych niż pierwszy. Stąd możliwość wprowadzenia nowej zmiennej tj. \textit{Czynnik1} zamiast 6-ciu parametrów: SCT, STE, TE, TisE, TT, TU. Szczegółowe wyniki znajdują się w Tabeli \ref{tab:pca-gt-pred}.
+\vspace{10px}
+\begin{table}[h!]
 	\centering
 	\setlength{\tabcolsep}{3pt}
 	\setlength\extrarowheight{2pt}
-	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanych z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
+	\caption{Rezultaty analizy czynników głównych dla oceny radiologicznej i oceny automatycznej realizowanej z wykorzystaniem 6-ścio parametrycznej ankiety. Oznaczono ładunki, gdzie wartość modułu jest większa niż 0,7.}
 	\label{tab:pca-gt-pred}
 	\begin{tabular}{c|c|c}
 		Zmienna&Czynnik1 - ocena radiologa&Czynnik1 - ocena automatyczna \\
@@ -619,6 +619,7 @@ W tym celu, zarówno dla oceny automatycznej jak i radiologa zdecydowano się dl
 		
 	\end{tabular}
 \end{table}
+\vspace{-10px}
 
 Można zaobserwować, że udział wyjaśnianej wariancji w pierwszym czynniku jest większy dla oceny automatycznej niż dla oceny radiologa. Subiektywna ocena eksperta wprowadza nieuniknioną niepewność do pomiaru, stąd wyniki generowane przez człowieka są w większym stopniu losowe niż wyniki oceny automatycznej. 
 
@@ -644,7 +645,7 @@ W kolejnych badaniach zestawione zostały interkorelacje nowych zmiennych. \line
 		
 	\end{tabular}
 \end{table}
-Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną, co wynika ze sposobu treningu algorytmu. Fakt ten jest jednak kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów i eksperckimi, ludzkimi spostrzeżeniami.
+Naturalnie, nowa zmienna opisująca ocenę radiologa koreluje z nową zmienną opisującą ocenę automatyczną, co wynika ze sposobu treningu algorytmu. Fakt ten jest jednak kolejnym potwierdzeniem na silny związek między zastosowanymi metodami przetwarzania obrazów oraz sztucznej inteligencji, a eksperckimi, ludzkimi spostrzeżeniami.
 
 Nowa zmienna, będąca holistyczną, zbiorczą oceną procesu gojenia w tej pracy będzie dalej nazywana \textit{Achilles score}. W praktyce klinicznej mogłaby stanowić podstawę wymiany informacji pomiędzy lekarzami ortopedami, radiologami i fizjoterapeutami. Propozycja takiego raportu stworzona przez autora tej rozprawy znajduje się na Rys. \ref{fig:raport}. 
 

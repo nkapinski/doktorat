@@ -27,11 +27,11 @@
   \item $H$ -- og\IeC {\'o}lna miara dla oceny parametru charakteryzuj\IeC {\k a}cego stopie\IeC {\'n} gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa, 
 		71
   \item $HP$ -- znormalizowana macierz wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, 
-		147
+		146
   \item $HR$ -- liczba wszystkich par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania oddalonych o dystans separacji, 
-		147
+		146
   \item $HV$ -- liczba par punkt\IeC {\'o}w obrazowych w oknie wyliczania macierzy wsp\IeC {\'o}\IeC {\l }wyst\IeC {\k e}powania, kt\IeC {\'o}re maj\IeC {\k a} tak\IeC {\k a} sam\IeC {\k a} warto\IeC {\'s}\IeC {\'c} funkcji obrazowej, odleg\IeC {\l }ych od siebie o dystans separacji, 
-		147
+		146
   \item $H_{PC}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje jedynie z pierwszego czynnika g\IeC {\l }\IeC {\'o}wnego analizy czynnikowej, 
 		80
   \item $H_{reg}$ -- miara dla oceny stopnia gojenia si\IeC {\k e} \IeC {\'s}ci\IeC {\k e}gna Achillesa wykorzystuj\IeC {\k a}ca informacje z kombinacji czynnik\IeC {\'o}w g\IeC {\l }\IeC {\'o}wnych, 
@@ -93,18 +93,18 @@
   \item $U$ -- zbi\IeC {\'o}r ucz\IeC {\k a}cy, 45
   \item $W$ -- macierz wag, 64
   \item $WW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy wyprostowany, 
-		119
+		118
   \item $WZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano wyprostowane i staw skokowy zgi\IeC {\k e}ty, 
-		119
+		118
   \item $X1$, $X2$ -- zmienne losowe, 52
   \item $X_i$ -- predyktor odpowiadaj\IeC {\k a}cy pr\IeC {\'o}bkom z trzech sekwencji rezonansu magnetycznego, 
 		87
   \item $Y$ -- macierz nowych zmiennych PCA, 55
   \item $Z$ -- impedancja akustyczna o\IeC {\'s}rodka, 25
   \item $ZW$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy wyprostowany, 
-		119
+		118
   \item $ZZ$ -- zmienna okre\IeC {\'s}laj\IeC {\k a}ca deficyty biomechaniczne dla pozycji kolano zgi\IeC {\k e}te i staw skokowy zgi\IeC {\k e}ty, 
-		119
+		118
   \item $\Delta \omega$ -- szeroko\IeC {\'s}\IeC {\'c} widmowa pobudzaj\IeC {\k a}cego j\IeC {\k a}dra impulsu RF, 
 		19
   \item $\Zeta$ -- suma wa\IeC {\.z}ona wyj\IeC {\'s}\IeC {\'c} neuron\IeC {\'o}w, 
@@ -167,7 +167,7 @@
 		32
   \item $h_{min}$ -- minimalna wysoko\IeC {\'s}\IeC {\'c} uniesienia \IeC {\'s}rodka masy cia\IeC {\l }a przed odbiciem, 
 		32
-  \item $hf1-hf12$ -- cecha Haralicka, 147
+  \item $hf1-hf12$ -- cecha Haralicka, 146
   \item $i$, $j$, $k$ -- indeksy, 35
   \item $j$ -- liczba sygna\IeC {\l }\IeC {\'o}w wyj\IeC {\'s}ciowych funkcji softmax, 
 		67
@@ -206,7 +206,7 @@
   \item $z_s$ -- liczba sygna\IeC {\l }\IeC {\'o}w wej\IeC {\'s}ciowych funkcji softmax, 
 		67
   \item \textit{d1}--\textit{d16} -- kolejne deficyty biomechaniczne, 
-		117
+		116
 
   \indexspace
 
@@ -246,7 +246,9 @@
   \item GPGPU -- skr\IeC {\'o}t od ang. \textit{General-Purpose Computing on Graphics Processing Units}, 
 		3
   \item GTC -- skr\IeC {\'o}T od ang. \textit{GPU Technology Conference}, 
-		4, 43
+		4
+  \item GTC -- skr\IeC {\'o}t od ang. \textit{GPU Technology Conference}, 
+		43
 
   \indexspace
 
@@ -277,7 +279,7 @@
   \indexspace
 
   \item PC - czynnik g\IeC {\l }\IeC {\'o}wny, 71
-  \item PCA -- skr\IeC {\'o}T od ang. \textit{Principal Component Analysis}, 
+  \item PCA -- skr\IeC {\'o}t od ang. \textit{Principal Component Analysis}, 
 		54
   \item PD -- skr\IeC {\'o}t od ang. Proton density, 21
   \item Poly -- skr\IeC {\'o}t od ang. \textit{Polynomial}, 91

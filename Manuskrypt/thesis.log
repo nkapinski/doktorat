@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  23 SEP 2020 14:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  28 SEP 2020 12:05
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1965,7 +1965,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/Pred_AI.jpg, id=503, 1897.0875pt x 806.01125pt>
 File: figures/Pred_AI.jpg Graphic file (type jpg)
 <use figures/Pred_AI.jpg>
-Package pdftex.def Info: figures/Pred_AI.jpg  used on input line 403.
+Package pdftex.def Info: figures/Pred_AI.jpg  used on input line 401.
 (pdftex.def)             Requested size: 426.79135pt x 181.3201pt.
 
 
@@ -1988,7 +1988,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [126]
-Overfull \hbox (4.29654pt too wide) in paragraph at lines 427--428
+Overfull \hbox (4.29654pt too wide) in paragraph at lines 425--426
 []\OT4/cmr/m/n/12 Polepszenie sku-tecz-no-±ci wspo-ma-ga-nia re-ha-bi-li-ta-cji
  w ob-sza-rze ukªa-du mi¦±niowo-
  []
@@ -2276,7 +2276,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (169 pages, 16707795 bytes).
+Output written on thesis.pdf (169 pages, 16707884 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

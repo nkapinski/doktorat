@@ -4,7 +4,7 @@
 
 Pierwsze matematyczne formalizmy dotyczące CNN zostały zaproponowane już w latach 40-tych XX wieku, natomiast fundamentalne inspiracje biologiczne dały badania z lat 50-tych i 60-tych Hubela i Wiesela nad korą wzrokową kotów (zob. \cite{Wurtz2009}). M.in. dzięki pracom tych neurofizjologów ustalono, że kora wzrokowa zawiera złożone układy komórek, które odpowiadają za przetwarzanie informacji \linebreak z wybranych regionów pola widzenia, sumarycznie pokrywając je w całości. Komórki kory wzrokowej działają zatem jak lokalne filtry przestrzeni wejściowej zaprojektowane tak, aby wydobyć istotne informacje z naturalnych obrazów. Dla przykładu reagują one na orientację linii, kształty i kolory.
 
-W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$\index{$x$ -- pierwsza współrzędna prostokątna}, $y$\index{$y$ -- druga współrzędna prostokątna}), gdzie $x$ to kolumna macierzy, a \linebreak $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
+W odróżnieniu od naturalnych struktur biologicznych sieci konwolucyjne operują przeważnie na reprezentacji cyfrowej obrazu. Zapisywana jest ona w postaci tablicy liczb tzw. \textit{macierzy} o współrzędnych ($x$\index{$x$ -- pierwsza współrzędna prostokątna}, $y$\index{$y$ -- druga współrzędna prostokątna}), gdzie $x$ to kolumna macierzy,\linebreak a $y$ wiersz. W przypadku obrazów trójwymiarowych dochodzi jeszcze trzecia składowa $z$, a zamiast macierzy użyta jest wówczas ogólna postać odwzorowania wieloliniowego, czyli \textit{tensor}.
 
 W obrazach cyfrowych dla każdego punktu ($x$, $y$), tzw. \textit{piksela}, kodowana jest informacja o wartości funkcji obrazowej $I$($x$, $y$)\index{$I$ -- funkcja obrazowa}. Na tej podstawie dzielimy obrazy na:
 \begin{itemize}[noitemsep,nolistsep]
@@ -116,7 +116,7 @@ Sieć składała się z 7-miu warstw i zawierała około 60.000 parametrów. Ory
 
 Przy użyciu takiej architektury możliwe stało się zastosowanie paradygmatu end-to-end learning, w szczególności znalezienie w jednym procesie szkolenia transformacji, która obrazy przekształca bezpośrednio w ostateczną klasyfikację.  
 
-Potencjał nowych rozwiązań został dostrzeżony w dziedzinie obrazowania medycznego. W 1994 roku ukazała się pierwsza praca, która w praktyce wykorzystywała mechanizmy związane z głębokim uczeniem się do przetwarzania obrazów medycznych (zob. \cite{Zhang1994}). Użyte wówczas sieci nazywano sieciami typu \textit{shift-invariant} i wykorzystano do detekcji skupisk mikro-zwapnień w mammografach.
+Potencjał nowych rozwiązań został dostrzeżony w dziedzinie obrazowania medycznego. W 1994 roku ukazała się pierwsza praca, która w praktyce wykorzystywała mechanizmy związane z głębokim uczeniem się do przetwarzania obrazów medycznych (zob. \cite{Zhang1994}). Użyte wówczas sieci nazywano sieciami typu \textit{shift-invariant} \linebreak i wykorzystano do detekcji skupisk mikro-zwapnień w mammografach.
 
 W ostatnich latach liczba nowych rozwiązań i zastosowań głębokich sieci neuronowych w medycynie dynamicznie wzrasta, co obrazuje praca \cite{Litjens2017} z 2017 roku. Wybrane statystyki z tej publikacji przedstawiono na Rys. \ref{DL_CAD_stats}.
 \begin{figure}[h!]
@@ -129,7 +129,7 @@ Lata 2016 i 2017 były pod pewnym względem przełomowe gdyż pojawiało się co
 
 Fakt ten ma swoje odzwierciedlenie w liczbie nowych firm uzyskujących certyfikację medyczną na produkty wykorzystujące głębokie sieci neuronowe. Infografikę przedstawiającą dziedziny, w których najczęściej uzyskiwana jest certyfikacja zaprezentowano na Rys. \ref{fda_cert}.
 
-\begin{figure}[t!]
+\begin{figure}[b!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/fda_for_ai.jpg}
 	\caption{Firmy stosujące w swoich produktach głębokie sieci neuronowe, uzyskujące certyfikację FDA (na podst. \cite{FDA}).\index{FDA -- skrót od ang. Food and Drug Administration}}
@@ -455,7 +455,7 @@ Sieć AlexNet, której nazwa pochodzi od imienia głównego twórcy tej architek
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\textwidth]{figures/AlexNet.png}
-	\caption{Schemat architektury AlexNet (na podst. \cite{Krizhevsky2012}).}
+	\caption{Schemat architektury AlexNet.}
 	\label{AlexNetTopology}
 \end{figure}
 
@@ -488,7 +488,7 @@ Praca Alexa Krizhevsky, Ilya Sutskever i Geoffrey'a Hinton zapoczątkowała wzro
 
 \subsection{GoogLeNet}
 \label{googlenet}
-Architekturę o nazwie GoogLeNet zaprezentowano w 2014 r. w pracy \cite{GoogleNet}. Nazwa architektury pochodzi od nazwy zwycięskiego zespołu startującego w ILSVRC 2014, składającego się z pracowników firmy Google. Oryginalnie topologia składała się z 22-óch warstw i zawierała około 5-ciu mln parametrów (12 razy mniej niż w przypadku sieci AlexNet). 
+Architekturę o nazwie GoogLeNet zaprezentowano w 2014 r. w pracy \cite{GoogleNet}. Nazwa architektury pochodzi od nazwy zwycięskiego zespołu startującego w ILSVRC 2014, składającego się z pracowników firmy Google. Oryginalnie topologia składała się z 22-óch warstw i zawierała około 5-ciu mln parametrów (12 razy mniej niż \linebreak w przypadku sieci AlexNet). 
 
 Redukcję liczby parametrów przy jednoczesnym podwyższeniu dokładności klasyfikacji obiektów udało się uzyskać poprzez poszukiwania konstrukcji optymalnych lokalnych topologii i ich połączeń. Wiadomo, że duża część funkcji aktywacji neuronów przyjmuje wartość 0 lub jest redundantna z powodu wysokiej korelacji między sobą (zob. \cite{DBLP:journals/corr/AroraBGM13}). Matematyka dotycząca przetwarzania \textit{macierzy rzadkich}, tj. takich gdzie przeważająca liczba elementów przyjmuje wartość 0, jest dobrze znana (zob. np. \cite{Umit2010}). Jednak implementacje bibliotek do obliczeń związanych z algebrą liniową są zoptymalizowane pod kątem \textit{macierzy gęstych}, gdzie przeważająca liczba elementów przyjmuje wartości różne od 0 (zob. \cite{Song:2014:SUM:2597652.2597670, Krizhevsky2012}). 
 
@@ -638,6 +638,6 @@ Idea generalizacji stosów oryginalnie została zaproponowana w \cite{Wolpert92s
 S^g(x_s) = \sum_{i=1}^{m}w_i {S^g}_i(x_s)
 \end{equation}
 
-W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie nadrzędna metoda wykorzystuje je jako dane do treningu poprawnych wartości $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
+W praktyce predykcje z modeli bazowych składowane są na stosie, a następnie nadrzędna metoda wykorzystuje je jako dane do treningu poprawnych wartości \linebreak $w$ wykorzystując jako odniesienie znane, poprawne etykiety.
 
     

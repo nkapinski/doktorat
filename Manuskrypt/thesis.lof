@@ -20,7 +20,7 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Reprezentacja graficzna podzia\IeC {\l }u na segemnty w ocenie krzy\IeC {\.z}owej.\relax }}{50}% 
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Dwuwymiarowa przestrze\IeC {\'n} cech wraz z zaznaczonymi poziomami warianci i sk\IeC {\l }adowymi g\IeC {\l }\IeC {\'o}wnymi.\relax }}{55}% 
 \contentsline {figure}{\numberline {4.9}{\ignorespaces B\IeC {\l }\IeC {\k a}d top-5 klasyfikacji obiekt\IeC {\'o}w w kolejnych latach uzyskiwany przez zwyci\IeC {\k e}zc\IeC {\'o}w konkursu ILSVRC (na podst. \cite {imagenet_cvpr09})\relax }}{58}% 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Schemat architektury AlexNet (na podst. \cite {Krizhevsky2012}).\relax }}{59}% 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Schemat architektury AlexNet.\relax }}{59}% 
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Topologia architektury AlexNet z podzia\IeC {\l }em na dwa akceleratory GPU (na podst. \cite {Krizhevsky2012}).\relax }}{60}% 
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Modu\IeC {\l }y incepcji o g\IeC {\l }\IeC {\k e}boko\IeC {\'s}ci jednego (a) i dw\IeC {\'o}ch stopni (b) -- (na podst. \cite {GoogleNet}).\relax }}{62}% 
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Topologia architektury GoogleNet (na podst. \cite {GoogleNet}).\relax }}{62}% 

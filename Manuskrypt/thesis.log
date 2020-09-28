@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  28 SEP 2020 12:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  28 SEP 2020 15:49
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -1133,12 +1133,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 217.
+               Default added (so using `tbp') on input line 215.
 
 <figures/sciegno.jpg, id=135, 1900.09875pt x 2357.80875pt>
 File: figures/sciegno.jpg Graphic file (type jpg)
 <use figures/sciegno.jpg>
-Package pdftex.def Info: figures/sciegno.jpg  used on input line 219.
+Package pdftex.def Info: figures/sciegno.jpg  used on input line 217.
 (pdftex.def)             Requested size: 426.79135pt x 529.58466pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1154,9 +1154,9 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 [24]
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 262.
+(Font)              <5> on input line 260.
 
-Overfull \hbox (5.11554pt too wide) in paragraph at lines 262--279
+Overfull \hbox (5.11554pt too wide) in paragraph at lines 260--277
  [][] 
  []
 
@@ -1179,7 +1179,7 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 <figures/sciegnoUSG.jpg, id=159, 456.2646pt x 337.7418pt>
 File: figures/sciegnoUSG.jpg Graphic file (type jpg)
 <use figures/sciegnoUSG.jpg>
-Package pdftex.def Info: figures/sciegnoUSG.jpg  used on input line 317.
+Package pdftex.def Info: figures/sciegnoUSG.jpg  used on input line 316.
 (pdftex.def)             Requested size: 426.79135pt x 315.93129pt.
 
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
@@ -1539,6 +1539,12 @@ Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
 [75]
+Underfull \hbox (badness 1178) in paragraph at lines 94--95
+\OT4/cmr/m/n/12 sied-nich prze-kro-jów mie-rzo-nym w pªasz-czy¹-nie strzaª-ko-w
+ej. Za-wie-ra si¦
+ []
+
+
 Overfull \vbox (2.49998pt too high) has occurred while \output is active []
 
 
@@ -2276,7 +2282,7 @@ ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/
 AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/nor
 bert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Use
 rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on thesis.pdf (169 pages, 16707884 bytes).
+Output written on thesis.pdf (169 pages, 16707843 bytes).
 PDF statistics:
  695 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

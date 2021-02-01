@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  1 FEB 2021 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  1 FEB 2021 16:44
 entering extended mode
 **./autoreferat.tex
 (autoreferat.tex
@@ -720,29 +720,29 @@ rs
 ) (autoreferat.aux (header_autoref.aux))
 \openout1 = `autoreferat.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Info: Redefining \celsius on input line 51.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 51.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 53.
+LaTeX Font Info:    ... okay on input line 53.
+LaTeX Info: Redefining \celsius on input line 53.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 53.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 51.
-Package gensymb Info: Using \Omega for \ohm on input line 51.
+LaTeX Info: Redefining \ohm on input line 53.
+Package gensymb Info: Using \Omega for \ohm on input line 53.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -901,20 +901,20 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+plm on input line 51.
+LaTeX Font Info:    Try loading font information for OML+plm on input line 53.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omlplm.fd
 "
 File: omlplm.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMS+plsy on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+plsy on input line 53.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omsplsy.f
 d"
 File: omsplsy.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OMX+plex on input line 51.
+LaTeX Font Info:    Try loading font information for OMX+plex on input line 53.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\omxplex.f
@@ -922,35 +922,35 @@ d"
 File: omxplex.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <12> on input line 51.
+(Font)              <12> on input line 53.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <8> on input line 51.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <6> on input line 51.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 51.
+(Font)              <6> on input line 53.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
  ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT4+cmss on input line 51.
+LaTeX Font Info:    Try loading font information for OT4+cmss on input line 53.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\ot4cmss.f
 d"
 File: ot4cmss.fd 2008/02/24 v1.2.1 Font defs for fonts PL (MW)
 )
-LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 51.
+LaTeX Font Info:    Try loading font information for OT4+cmtt on input line 53.
 
 
 ("C:\Users\norbert\AppData\Local\Programs\MiKTeX 2.9\tex/latex/polski\ot4cmtt.f
@@ -976,58 +976,93 @@ Package pdftex.def Info: ./figures/Logo-UW.jpg  used on input line 18.
 ) [1
 
 ]
-
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 73.
-
-
-Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 74.
-
 (text_autoref.tex
 Rozdzia\PlPrIeC {\l } 1.
+
+Overfull \hbox (11.80548pt too wide) in paragraph at lines 9--10
+[]\OT4/cmr/m/n/12 Ograniczeniem wska-za-nych me-tod sztucz-nej in-te-li-gen-cji
+ jest wy-móg du-»ych, ustruk-
+ []
+
 [1
 
 
 ]
-Rozdzia\PlPrIeC {\l } 2.
-[2
 
-]
-Rozdzia\PlPrIeC {\l } 3.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[2]
+Rozdzia\PlPrIeC {\l } 2.
 [3
 
 ]
-Rozdzia\PlPrIeC {\l } 4.
-[4
 
-]
-Rozdzia\PlPrIeC {\l } 5.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[4]
+Rozdzia\PlPrIeC {\l } 3.
 [5
 
 ]
+Rozdzia\PlPrIeC {\l } 4.
+<figures/net.jpg, id=38, 1897.0875pt x 925.4575pt>
+File: figures/net.jpg Graphic file (type jpg)
+<use figures/net.jpg>
+Package pdftex.def Info: figures/net.jpg  used on input line 48.
+(pdftex.def)             Requested size: 426.79135pt x 208.1907pt.
+[6
+
+ <./figures/net.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 15.2466pt, for example:
+(fancyhdr)                \setlength{\headheight}{15.2466pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-3.2466pt}.
+
+[7]
+Rozdzia\PlPrIeC {\l } 5.
+[8
+
+]
 Rozdzia\PlPrIeC {\l } 6.
-) [6
+) [9
 
 ] (autoreferat.aux (header_autoref.aux)) ) 
 Here is how much of TeX's memory you used:
- 19105 strings out of 492895
- 368295 string characters out of 3122802
- 392957 words of memory out of 3000000
- 22794 multiletter control sequences out of 15000+200000
- 543229 words of font info for 56 fonts, out of 3000000 for 9000
+ 19125 strings out of 492895
+ 368623 string characters out of 3122802
+ 395941 words of memory out of 3000000
+ 22810 multiletter control sequences out of 15000+200000
+ 544284 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,5n,63p,646b,382s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,11n,63p,1206b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/norbert
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb>
-Output written on autoreferat.pdf (10 pages, 196960 bytes).
+ams/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbe
+rt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users
+/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/
+Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb
+><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl
+12.pfb>
+Output written on autoreferat.pdf (13 pages, 472814 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

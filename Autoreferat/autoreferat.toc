@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {1}Uzasadnienie wyboru tematu pracy}{1}% 
+\contentsline {chapter}{\numberline {2}Cele i hipoteza pracy}{2}% 
+\contentsline {chapter}{\numberline {3}Struktura pracy}{3}% 
+\contentsline {chapter}{\numberline {4}Zbi\IeC {\'o}r danych i metody badawcze}{4}% 
+\contentsline {chapter}{\numberline {5}Charakterystyka i wyniki przeprowadzonych bada\IeC {\'n}}{5}% 
+\contentsline {chapter}{\numberline {6}Wnioski ko\IeC {\'n}cowe}{6}% 

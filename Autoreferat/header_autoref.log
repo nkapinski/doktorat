@@ -1,0 +1,785 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  1 FEB 2021 11:07
+entering extended mode
+**./header_autoref.tex
+(header_autoref.tex
+LaTeX2e <2018-12-01>
+
+! LaTeX Error: Environment onehalfspacing undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{onehalfspacing}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \begin{center}
+                   
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 15--15
+[] 
+ []
+
+! Undefined control sequence.
+l.18 \includegraphics
+                     [keepaspectratio,scale=0.9]{./figures/Logo-UW.jpg} \\[....
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no g in font nullfont!
+
+Overfull \hbox (173.16399pt too wide) in paragraph at lines 24--24
+ []\OT1/cmr/m/sc/17.28 Interdyscyplinarne 
+ []
+
+
+Overfull \hbox (40.34851pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 Cen- 
+ []
+
+
+Overfull \hbox (43.73738pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 trum 
+ []
+
+
+Overfull \hbox (45.38849pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 Mod- 
+ []
+
+
+Overfull \hbox (16.16628pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 e- 
+ []
+
+
+Overfull \hbox (49.49734pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 lowa- 
+ []
+
+
+Overfull \hbox (26.4191pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 nia 
+ []
+
+
+Overfull \hbox (65.81712pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 Matem- 
+ []
+
+
+Overfull \hbox (36.78696pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 aty- 
+ []
+
+
+Overfull \hbox (61.19012pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 cznego 
+ []
+
+
+Overfull \hbox (5.22238pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 i 
+ []
+
+
+Overfull \hbox (44.47647pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 Kom- 
+ []
+
+
+Overfull \hbox (36.97897pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 put- 
+ []
+
+
+Overfull \hbox (76.39645pt too wide) in paragraph at lines 24--24
+ \OT1/cmr/m/sc/17.28 erowego 
+ []
+
+! Undefined control sequence.
+l.26 \large
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (45.28564pt too wide) in paragraph at lines 27--27
+ []\OT1/cmr/m/n/17.28 Autor: 
+ []
+
+
+Overfull \hbox (27.38582pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/17.28 mgr 
+ []
+
+
+Overfull \hbox (24.47751pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/17.28 in_z. 
+ []
+
+
+Overfull \hbox (31.24136pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/17.28 Nor- 
+ []
+
+
+Overfull \hbox (28.53998pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/17.28 bert 
+ []
+
+
+Overfull \hbox (61.22575pt too wide) in paragraph at lines 27--27
+ \OT1/cmr/m/n/17.28 Kapinski 
+ []
+
+! Undefined control sequence.
+l.28 \small
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (79.94499pt too wide) in paragraph at lines 29--29
+ []\OT1/cmr/m/n/17.28 Autoreferat 
+ []
+
+
+Overfull \hbox (38.27043pt too wide) in paragraph at lines 29--29
+ \OT1/cmr/m/n/17.28 pracy 
+ []
+
+
+Overfull \hbox (30.34552pt too wide) in paragraph at lines 29--29
+ \OT1/cmr/m/n/17.28 dok- 
+ []
+
+
+Overfull \hbox (55.16463pt too wide) in paragraph at lines 29--29
+ \OT1/cmr/m/n/17.28 torskiej: 
+ []
+
+! Undefined control sequence.
+l.31 \large
+           {
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Command \k unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...orzystaniem głębokich sieci neuronowych}
+                                                  } \\[2.3cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \k unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...orzystaniem głębokich sieci neuronowych}
+                                                  } \\[2.3cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \k unavailable in encoding OT1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.33 ...orzystaniem głębokich sieci neuronowych}
+                                                  } \\[2.3cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (56.658pt too wide) in paragraph at lines 33--33
+ []\OT1/cmr/bx/n/17.28 Proces 
+ []
+
+
+Overfull \hbox (25.91997pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 go- 
+ []
+
+
+Overfull \hbox (21.28998pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 je- 
+ []
+
+
+Overfull \hbox (25.64998pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 nia 
+ []
+
+
+Overfull \hbox (60.54797pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 sciegna 
+ []
+
+
+Overfull \hbox (75.76797pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 Achillesa 
+ []
+
+
+Overfull \hbox (34.24997pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 oce- 
+ []
+
+
+Overfull \hbox (22.67998pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 ni- 
+ []
+
+
+Overfull \hbox (29.96997pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 any 
+ []
+
+
+Overfull \hbox (44.88998pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 przez 
+ []
+
+
+Overfull \hbox (40.18996pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 fuzje 
+ []
+
+
+Overfull \hbox (59.66994pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 danych 
+ []
+
+
+Overfull \hbox (8.64pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 z 
+ []
+
+
+Overfull \hbox (50.21996pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 wyko- 
+ []
+
+
+Overfull \hbox (40.988pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 rzys- 
+ []
+
+
+Overfull \hbox (58.27997pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 taniem 
+ []
+
+
+Overfull \hbox (79.6099pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 g lebokich 
+ []
+
+
+Overfull \hbox (35.978pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 sieci 
+ []
+
+
+Overfull \hbox (36.94997pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 neu- 
+ []
+
+
+Overfull \hbox (80.83992pt too wide) in paragraph at lines 33--33
+ \OT1/cmr/bx/n/17.28 ronowych 
+ []
+
+! Undefined control sequence.
+l.35 \large
+           
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (68.13538pt too wide) in paragraph at lines 36--36
+ []\OT1/cmr/m/n/17.28 Rozprawa 
+ []
+
+
+Overfull \hbox (30.34552pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 dok- 
+ []
+
+
+Overfull \hbox (41.77174pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 torska 
+ []
+
+
+Overfull \hbox (81.75748pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 przed lo_zona 
+ []
+
+
+Overfull \hbox (46.86897pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 Radzie 
+ []
+
+
+Overfull \hbox (67.00345pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 Naukowej 
+ []
+
+
+Overfull \hbox (19.70537pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 In- 
+ []
+
+
+Overfull \hbox (25.47054pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 sty- 
+ []
+
+
+Overfull \hbox (29.89413pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 tutu 
+ []
+
+
+Overfull \hbox (28.7622pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 Bio- 
+ []
+
+
+Overfull \hbox (20.61507pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 cy- 
+ []
+
+
+Overfull \hbox (27.63722pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 ber- 
+ []
+
+
+Overfull \hbox (21.06647pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 ne- 
+ []
+
+
+Overfull \hbox (26.73439pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 tyki 
+ []
+
+
+Overfull \hbox (4.31383pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 i 
+ []
+
+
+Overfull \hbox (64.79791pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 In_zynierii 
+ []
+
+
+Overfull \hbox (42.10374pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 Biom- 
+ []
+
+
+Overfull \hbox (12.23877pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 e- 
+ []
+
+
+Overfull \hbox (22.42061pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 dy- 
+ []
+
+
+Overfull \hbox (34.65938pt too wide) in paragraph at lines 36--36
+ \OT1/cmr/m/n/17.28 cznej 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.36 ...ocybernetyki i Inżynierii Biomedycznej \\
+                                                  [1.7cm]}}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{C:/Users/norbert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Missing character: There is no K in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no j in font nullfont!
+
+
+! LaTeX Error: Command \k unavailable in encoding .
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 Kierują
+             cy pracą:  dr hab. inż. Antoni Grzanka (Warszawski Uniwersyte...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+
+! LaTeX Error: Command \k unavailable in encoding .
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 Kierujący pracą
+                      :  dr hab. inż. Antoni Grzanka (Warszawski Uniwersyte...
+
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+LaTeX Font Info:    Try loading font information for +cmr on input line 42.
+LaTeX Font Info:    No file cmr.fd. on input line 42.
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 42.
+
+! Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.42 Kierujący pracą:  dr hab. inż
+                                     . Antoni Grzanka (Warszawski Uniwersyte...
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 42.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ) in font nullfont!
+
+Overfull \hbox (7.22223pt too wide) in paragraph at lines 42--42
+\/cmr/m/n/10 _z 
+ []
+
+Missing character: There is no P in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no J in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no Z in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no k in font nullfont!
+Missing character: There is no i in font nullfont!
+
+Overfull \hbox (5.55557pt too wide) in paragraph at lines 43--43
+\/cmr/m/n/10 n  
+ []
+
+Missing character: There is no W in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no z in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{onehalfspacing}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 \end{onehalfspacing}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.51 \singlespacing
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.52 \newpage
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--55
+[][] 
+ []
+
+! Undefined control sequence.
+l.58 \doublespacing
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 \newpage
+             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[3]
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--62
+[][] 
+ []
+
+! Undefined control sequence.
+l.68 \tableofcontents
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \undefinedpagestyle 
+                               
+l.72 \pagestyle{fancy}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> ./header_autoref.tex
+                        
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 36 strings out of 492895
+ 462 string characters out of 3122802
+ 59154 words of memory out of 3000000
+ 4046 multiletter control sequences out of 15000+200000
+ 4547 words of font info for 17 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 16i,4n,16p,231b,186s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

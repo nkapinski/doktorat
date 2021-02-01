@@ -1,6 +1,6 @@
-\contentsline {chapter}{\numberline {1}Uzasadnienie wyboru tematu pracy}{1}% 
-\contentsline {chapter}{\numberline {2}Cel i struktura pracy}{3}% 
-\contentsline {chapter}{\numberline {3}Zbi\IeC {\'o}r danych}{5}% 
-\contentsline {chapter}{\numberline {4}Nowa metoda oceny \IeC {\'s}ci\IeC {\k e}gna Achillesa}{6}% 
-\contentsline {chapter}{\numberline {5}Charakterystyka i wyniki przeprowadzonych bada\IeC {\'n}}{8}% 
-\contentsline {chapter}{\numberline {6}Wnioski ko\IeC {\'n}cowe}{9}% 
+\contentsline {chapter}{Uzasadnienie wyboru tematu pracy}{1}% 
+\contentsline {chapter}{Cel i struktura pracy}{2}% 
+\contentsline {chapter}{Zbi\IeC {\'o}r danych}{3}% 
+\contentsline {chapter}{Nowa metoda oceny \IeC {\'s}ci\IeC {\k e}gna Achillesa}{4}% 
+\contentsline {chapter}{Charakterystyka i wyniki przeprowadzonych bada\IeC {\'n}}{5}% 
+\contentsline {chapter}{Wnioski ko\IeC {\'n}cowe}{5}% 

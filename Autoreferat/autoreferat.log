@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  1 FEB 2021 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  1 FEB 2021 17:00
 entering extended mode
 **./autoreferat.tex
 (autoreferat.tex
@@ -976,93 +976,51 @@ Package pdftex.def Info: ./figures/Logo-UW.jpg  used on input line 18.
 ) [1
 
 ]
-(text_autoref.tex
-Rozdzia\PlPrIeC {\l } 1.
 
-Overfull \hbox (11.80548pt too wide) in paragraph at lines 9--10
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 75.
+
+
+Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 76.
+
+(text_autoref.tex
+Overfull \hbox (11.80548pt too wide) in paragraph at lines 10--11
 []\OT4/cmr/m/n/12 Ograniczeniem wska-za-nych me-tod sztucz-nej in-te-li-gen-cji
  jest wy-móg du-»ych, ustruk-
  []
 
 [1
 
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[2]
-Rozdzia\PlPrIeC {\l } 2.
-[3
-
-]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4]
-Rozdzia\PlPrIeC {\l } 3.
-[5
-
-]
-Rozdzia\PlPrIeC {\l } 4.
-<figures/net.jpg, id=38, 1897.0875pt x 925.4575pt>
+] [2] [3]
+<figures/net.jpg, id=31, 1897.0875pt x 925.4575pt>
 File: figures/net.jpg Graphic file (type jpg)
 <use figures/net.jpg>
-Package pdftex.def Info: figures/net.jpg  used on input line 48.
+Package pdftex.def Info: figures/net.jpg  used on input line 52.
 (pdftex.def)             Requested size: 426.79135pt x 208.1907pt.
-[6
-
- <./figures/net.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 15.2466pt, for example:
-(fancyhdr)                \setlength{\headheight}{15.2466pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-3.2466pt}.
-
-[7]
-Rozdzia\PlPrIeC {\l } 5.
-[8
-
-]
-Rozdzia\PlPrIeC {\l } 6.
-) [9
-
-] (autoreferat.aux (header_autoref.aux)) ) 
+ [4 <./figures/net.jpg>]) [5] (autoreferat.aux (header_autoref.aux)) ) 
 Here is how much of TeX's memory you used:
- 19125 strings out of 492895
- 368623 string characters out of 3122802
- 395941 words of memory out of 3000000
- 22810 multiletter control sequences out of 15000+200000
- 544284 words of font info for 58 fonts, out of 3000000 for 9000
+ 19123 strings out of 492895
+ 368602 string characters out of 3122802
+ 395938 words of memory out of 3000000
+ 22809 multiletter control sequences out of 15000+200000
+ 543735 words of font info for 57 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,63p,1206b,548s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/norbert/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/Users/norbe
-rt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users
-/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/
-Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb
-><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsl
-12.pfb>
-Output written on autoreferat.pdf (13 pages, 472814 bytes).
+ 40i,7n,63p,1206b,550s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users
+/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/User
+s/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Use
+rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Us
+ers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb>
+<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx1
+2.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl
+/plcsc10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/pl/plmi12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/pl/plr12.pfb>
+Output written on autoreferat.pdf (9 pages, 460385 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

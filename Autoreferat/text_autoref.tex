@@ -1,4 +1,5 @@
-\chapter{Uzasadnienie wyboru tematu pracy}
+{\let\clearpage\relax\chapter*{Uzasadnienie wyboru tematu pracy}}
+\addcontentsline{toc}{chapter}{Uzasadnienie wyboru tematu pracy}
 
 Wraz z występującym w ostatnich latach systematycznym wzrostem liczby obrazowań medycznych uwidacznia się potrzeba na komputerowe wspomaganie pracy radiologów oceniających badania obrazowe. W szczególności zastosowanie znajdują aplikacje usprawniające generowanie raportów, rozwiązania do personalizacji diagnostyki i narzędzia poprawiające jej jakość.
 
@@ -11,7 +12,8 @@ Ograniczeniem wskazanych metod sztucznej inteligencji jest wymóg dużych, ustru
 Biorąc zatem pod uwagę występującą potrzebę w radiologii na wskazane innowacje, dynamiczny rozwój możliwości metod sztucznej inteligencji w tym zakresie i dostęp do zasobów umożliwiających realizację pierwszych w skali światowej badań nad możliwością strukturyzacji i automatyzacji oceny ścięgna Achillesa widocznego w badaniu RM, autor zdecydował się na wybór przedstawionej w pracy tematyki.  
  
 
-\chapter{Cel i struktura pracy}
+{\let\clearpage\relax\chapter*{Cel i struktura pracy}}
+\addcontentsline{toc}{chapter}{Cel i struktura pracy}
 
 W ramach prac w projekcie START powstała koncepcja automatyzacji procesu monitorowania gojenia się ścięgna przy pomocy metod przetwarzania obrazów i sztucznej inteligencji. Założono, że głębokie sieci neuronowe będą skuteczne do oceny procesów patofizjologicznych widocznych w obrazowaniu medycznym takich jak gojenie tkanki miękkiej, co stanowi hipotezę przedmiotowej pracy.
 
@@ -31,7 +33,8 @@ W Rozdziale 5 zaprezentowano nowatorską metodę automatycznej oceny procesu goj
 
 W Rozdziale 6 opisano zestawienie wyników metody z wynikami oceny realizowanej przez inne podejścia. W szczególności porównano przedmiotową metodę z metodą uczącą się explicite modelować ocenę radiologa, opracowaną również pod kierownictwem autora tej pracy w ramach pobocznych działań. Następnie zaprezentowano zestawienie z wynikami metody działającej w oparciu o dane z ultrasonografii, również opracowanej pod kierownictwem autora tej pracy. Finalnie, porównano wyniki z oceną biomechaniczną realizowaną standardowo przez fizjoterapeutów. Wnioski z porównań natury praktycznej spisano w Rozdziale 7. Całość pracy zakończono podsumowaniem przedstawionym w Rozdziale 8.
 
-\chapter{Zbiór danych}
+{\let\clearpage\relax\chapter*{Zbiór danych}}
+\addcontentsline{toc}{chapter}{Zbiór danych}
 
 W ramach projektu przebadano 59-ciu pacjentów po całkowitym zerwaniu ścięgna Achillesa i 27-ciu ochotników. Kryteria kwalifikacji i szczegóły dotyczące urazów opisano w pracy.
 
@@ -41,7 +44,8 @@ W grupie zdrowych ochotników przeprowadzono pojedyncze badanie, natomiast pacje
 
 Dodatkowo zgromadzono ustrukturyzowany opis radiologiczny dla 48-miu pacjentów w 10 krokach czasowych (480 ankiet z 6-cioma parametrami ocenionymi w skali 0--7). Czterech pacjentów (40 badań) zostało losowo wydzielonych na początku eksperymentów jako pacjenci testowi wykorzystani do celów wnioskowania i porównań wyników badań.
 
-\chapter{Nowa metoda oceny ścięgna Achillesa}
+{\let\clearpage\relax\chapter*{Nowa metoda oceny ścięgna Achillesa}}
+\addcontentsline{toc}{chapter}{Nowa metoda oceny ścięgna Achillesa}
 
 W wyniku prac została opracowana komputerowa metoda oceny ścięgna Achillesa widocznego w badaniach RM, generująca numeryczny wynik w skali 0--7 dla 6-ciu zdefiniowanych w ramach projektu START radiologicznych parametrów opisujących strukturę i morfologię tkanek miękkich. Schemat generacji wartości pojedynczego parametru ilustruje rysunek poniżej. 
 \begin{figure}[h!]
@@ -51,7 +55,9 @@ W wyniku prac została opracowana komputerowa metoda oceny ścięgna Achillesa w
 
 Dane wejściowe stanowi trójwymiarowe badanie RM obszaru podudzia. Badanie dzielone jest na $n$ obrazów będących przekrojami poprzecznymi względem osi długiej ścięgna. Z każdego przekroju dwojako ekstrahowane są zestawy cech. Po pierwsze, wykorzystywany jest ekstraktor cech będący zestawem warstw konwolucyjnych i jednej warstwy gęstej odpowiednio wytrenowanej sieci neuronowej na wyjściu (po redukcji z wykorzystaniem metody analizy czynników głównych) generującej 200 wartości. Po drugie, dla obszaru ścięgna widocznego na każdym z przekrojów, wyliczane są cechy statystyczne i teksturalne, których łączna liczba wynosi 46. Z pośród tak utworzonego zestawu 246 wartości, dla każdego z 6-ciu radiologicznych parametrów, wybierane są z wykorzystaniem metody LASSO optymalne podzbiory o liczebności mniejszej niż 20. Podzbiory są kolejno procesowane z wykorzystaniem regresji opartej o algorytm wektorów nośnych, której wyniki dla poszczególnych przekrojów łączone są z wykorzystaniem średniej trymowanej, odrzucając rezultaty skrajne i generując pojedynczą wartość parametru dla całego badania 3D RM.   
 
-\chapter{Charakterystyka i wyniki przeprowadzonych badań}
+
+{\let\clearpage\relax\chapter*{Charakterystyka i wyniki przeprowadzonych badań}}
+\addcontentsline{toc}{chapter}{Charakterystyka i wyniki przeprowadzonych badań}
 
 -- wybór danych wejściowych
 -- dobór parametrów FE
@@ -60,6 +66,7 @@ Dane wejściowe stanowi trójwymiarowe badanie RM obszaru podudzia. Badanie dzie
 -- wyniki, krzywe gojenia, ocena zbiorcza
 -- porównanie z end-to-end, USG, biomechanika
 
-\chapter{Wnioski końcowe}
+{\let\clearpage\relax\chapter*{Wnioski końcowe}}
+\addcontentsline{toc}{chapter}{Wnioski końcowe}
 
 -- Wnioski

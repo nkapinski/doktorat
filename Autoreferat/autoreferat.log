@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  2 FEB 2021 14:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  2 FEB 2021 16:13
 entering extended mode
 **./autoreferat.tex
 (autoreferat.tex
@@ -1002,10 +1002,10 @@ Package pdftex.def Info: figures/net.jpg  used on input line 52.
 <figures/T2gremin.jpg, id=37, 1901.1025pt x 1276.77pt>
 File: figures/T2gremin.jpg Graphic file (type jpg)
 <use figures/T2gremin.jpg>
-Package pdftex.def Info: figures/T2gremin.jpg  used on input line 67.
+Package pdftex.def Info: figures/T2gremin.jpg  used on input line 69.
 (pdftex.def)             Requested size: 426.79135pt x 286.61795pt.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 68.
+(Font)              <10.95> on input line 70.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1022,17 +1022,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [6 <./figures/T2gremin.jpg>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 78.
+               Default added (so using `tbp') on input line 80.
 
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 82.
+(Font)              <5> on input line 84.
 <figures/TT.png, id=45, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
-Package pdftex.def Info: figures/TT.png  used on input line 100.
+Package pdftex.def Info: figures/TT.png  used on input line 102.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
-Overfull \hbox (6.0636pt too wide) in paragraph at lines 111--120
+Overfull \hbox (6.0636pt too wide) in paragraph at lines 113--122
  [] 
  []
 
@@ -1054,19 +1054,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8]
-
-LaTeX Warning: Reference `seq:ground-truth' on page 9 undefined on input line 1
-99.
-
-
-LaTeX Warning: Reference `seq:valuation' on page 9 undefined on input line 199.
-
-
-
-LaTeX Warning: Reference `seq:epidemiology' on page 9 undefined on input line 1
-99.
-
+[8])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1077,18 +1065,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: Reference `seq:epidemiology' on page 10 undefined on input line 
-201.
-
-
-LaTeX Warning: Reference `seq:comp-biomechanics' on page 10 undefined on input 
-line 201.
-
-
-LaTeX Warning: Reference `seq:protocol_selection' on page 10 undefined on input
- line 201.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1096,69 +1072,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11]
-
-LaTeX Warning: Reference `seq:comp-biomechanics' on page 12 undefined on input 
-line 204.
-
-)
-Underfull \hbox (badness 10000) in paragraph at lines 203--90
-\OT4/cmr/m/n/12 stycz-ne roz-po-zna-j¡-ce pa-to-lo-gie ca-ªych struk-tur ana-to
--micz-nych
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12] (autoreferat.aux (header_autoref.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[10] (autoreferat.aux (header_autoref.aux)) ) 
 Here is how much of TeX's memory you used:
- 19180 strings out of 492895
- 369415 string characters out of 3122802
- 410995 words of memory out of 3000000
- 22851 multiletter control sequences out of 15000+200000
+ 19174 strings out of 492895
+ 369303 string characters out of 3122802
+ 409986 words of memory out of 3000000
+ 22845 multiletter control sequences out of 15000+200000
  549724 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,12n,63p,3613b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.e
-nc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plit.
-enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm
-.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plm
-s.enc}{C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/pl
-sc.enc}<C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/p
-l/plbx10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/pl/plbx12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/pl/plbx8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/pl/plcsc10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/pl/plmi10.pfb><C:/Users/norbert/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/pl/plmi12.pfb><C:/Users/norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/pl/plmi6.pfb><C:/Users/norbert/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi8.pfb><C:/Users/norbert/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr10.pfb><C:/Users/norbert/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr12.pfb><C:/Users/norber
-t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plr8.pfb><C:/Users/no
-rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Use
-rs/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on autoreferat.pdf (16 pages, 1394720 bytes).
+ 40i,11n,63p,2076b,554s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/norbert/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Local/
+Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local
+/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx8.pfb><C:/Users/no
+rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/U
+sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb
+><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi
+12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/p
+l/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/pl/plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/pl/plti12.pfb>
+Output written on autoreferat.pdf (14 pages, 1387212 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

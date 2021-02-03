@@ -59,137 +59,152 @@ Dane wejściowe stanowi trójwymiarowe badanie RM obszaru podudzia. Badanie dzie
 {\let\clearpage\relax\chapter*{Charakterystyka i wyniki przeprowadzonych badań}}
 \addcontentsline{toc}{chapter}{Charakterystyka i wyniki przeprowadzonych badań}
 
-[Najpierw charakterystyka/ potem wyniki i ich omówienie]
-
 Eksperymenty podzielono na dwa etapy. W pierwszym zrealizowano zagadnienia związane z doborem parametrów komponentów nowej metody i oceną jej skuteczności działania. W drugim porównano skuteczność nowej metody z innymi koncepcjami oceny gojenia ścięgna Achillesa. 
 
-W ramach pierwszego etapu wyłoniono, z pośród 10-ciu modalności RM analizowanych w pracy, jedną sekwencję będącą najlepszym kandydatem na dane wejściowe. W tym celu zrealizowano zarówno badania związane z analizą wizualną jak i testami ilościowymi. Wybrana sekwencja to T2$^\ast$ GRE TE\_MIN, w której obraz ścięgna najlepiej różnicuje etapy gojenia się. Taki proces widoczny jest na rysunku poniżej.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/T2gremin.jpg}
-	\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
-\end{figure}
+W ramach pierwszego etapu wyłoniono, z pośród 10-ciu modalności RM analizowanych w pracy, jedną sekwencję będącą najlepszym kandydatem na dane wejściowe. W tym celu zrealizowano zarówno badania związane z analizą wizualną jak i testami ilościowymi. Jednocześnie zbadano, iż dodawanie kolejnych sekwencji nie miało istotnie statycznego wpływu na polepszenie jakości predykcji wartości parametrów radiologicznych, a skutkowało wydłużeniem czasu badania pacjenta. 
 
-Na przestrzeni całego procesu gojenia się ścięgna, zmiany uwidaczniają się w postaci silnie rozróżnialnych odcieni szarości w obszarze ścięgna, co nie występuje w innych sekwencjach.
-Jednocześnie zbadano, iż dodawanie kolejnych sekwencji nie miało istotnie statycznego wpływu na polepszenie jakości predykcji wartości parametrów radiologicznych, a skutkowało wydłużeniem czasu badania pacjenta. 
+W ramach badań nad doborem parametrów nowej metody zrealizowano następujące badania:
+\begin{enumerate}
+	\item Zoptymalizowano parametry ekstraktora cech poprzez zadanie treningu z celem binarnego podziału obrazów pacjentów na zdrowe i chore ścięgna. Przetestowano 3 architektury sieci neuronowych i na podstawie analizy ich dokładności klasyfikacji oraz czasu treningu wybrano sieć AlexNet. Takie podejście umożliwiło zakodowanie w ekstraktorze charakterystycznych cech dla tkanki zdrowej i patologicznej oraz finalne pogrupowanie ich w wektor o wymiarze 4096.
+	\item Przeprowadzono analizę czynników głównych i wykonano redukcję przestrzeni z 4096 parametrów do 200-tu z zachowaniem blisko 99\% poziomu wariancji.
+	\item Zrealizowano fuzję i selekcję cech pochodzących z ekstraktora z 46-cioma cechami wybranymi na podstawie analizy literatury, ekstrahowanymi z obszaru ścięgna. W tym celu wykorzystano własność metody LASSO związaną z zerowaniem się współczynników mających marginalny wpływ na ostateczny wynik zadania.
+	\item Określono optymalne podzbiory predyktorów dla każdego z 6-ciu parametrów radiologicznych stosując kryterium selekcji współczynników jako najlepszą korelację ocen radiologa wzorca z krzywymi gojenia się generowanymi przez automat.
+	\item Stosując metodę generalizacji stosów (stacking) wytrenowano oraz porównano szereg meta-regresorów: maszynę wektorów nośnych, wielowarstwowy perceptron, drzewa losowe jak i regresję liniową oraz nieliniową. W wyniku badania wybrano algorytm bazujący na wektorach nośnych, który dla każdego przekroju badania 3D oblicza ocenę z zakresu 0--7 dla zadanego parametru radiologicznego.
+	\item Finalnie zrealizowano metodę oceny badania 3D stosując średnią z odrzuceniem wartości skrajnych ocen poszczególnych przekrojów.
+\end{enumerate}
 
-W ramach badań nad doborem parametrów nowej metody, po pierwsze, zrealizowano wyliczenie parametrów ekstraktora cech poprzez zadanie treningu z celem binarnego podziału obrazów pacjentów na zdrowe i chore ścięgna. Przetestowano 3 architektury sieci neuronowych i na podstawie analizy ich dokładności klasyfikacji oraz czasu treningu wybrano sieć AlexNet. Takie podejście umożliwiło zakodowanie w ekstraktorze charakterystycznych cech dla tkanki zdrowej i patologicznej oraz finalne pogrupowanie ich w wektor o wymiarze 4096. Analiza tego wektora dla 10-ciu wybranych losowo pacjentów, uwidoczniła możliwość redukcji do 200 czynników głównych z zachowaniem blisko 99\% poziomu wariancji. W kolejnym kroku podjęto próbą fuzji tych cech z 46-cioma cechami wybranymi na podstawie analizy literatury, ekstrahowanymi z obszaru ścięgna. W tym celu wykorzystano własność metody LASSO związaną z zerowaniem się współczynników mających marginalny wpływ na ostateczny wynik zadania. Zrealizowano badanie, dla którego wyniki metody LASSO (tj. błąd średniokwadratowy powiększony o funkcje kary) dla każdego pacjenta zestawiono w krzywe łączące kolejne punkty obrazowania. Kryterium selekcji współczynników była najlepsza korelacja wzorca odniesienia z krzywymi, którą uzyskano dla $\alpha$ = 0,1. W rezultacie, dla 6-ciu parametrów wzorca odniesienia uzyskano różnicujące podzbiory $n$ predyktorów, gdzie $n<$ 20. Wykorzystując podzbiory i stosując metodę generalizacji stosów (stacking) wytrenowano oraz porównano szereg meta-regresorów: maszynę wektorów nośnych, wielowarstwowy perceptron, drzewa losowe jak i regresję liniową oraz nieliniową. W wyniku badania wybrano algorytm bazujący na wektorach nośnych, który dla każdego przekroju badania 3D oblicza ocenę z zakresu 0--7 dla zadanego parametru radiologicznego. Dla finalnej oceny badania 3D wybrano prostą metodę uśrednienia z odrzuceniem wartości skrajnych ocen poszczególnych przekrojów. 
+Opracowaną metodę (SVR) zwalidowano z wykorzystaniem zbioru testowego tj. 4-ech pacjentów (40 badań). Do oceny wykorzystano miary średniego błędu absolutnego (MAE) z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Ocenę wykonano dla wszystkich sześciu parametrów radiologicznych o nazwach: SCT, TT, STE, TE, TU, TisE.
 
-Opracowaną metodę (SVR) zwalidowano z wykorzystaniem zbioru testowego tj. 4-ech pacjentów (40 badań). Do oceny wykorzystano miary średniego błędu absolutnego (MAE) z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Ocenę wykonano dla wszystkich sześciu parametrów radiologicznych o nazwach: SCT, TT, STE, TE, TU, TisE. Szczegóły znajdują się w tabeli poniżej.
+Nową metodę porównano również z dwiema innymi propozycjami oceny gojenia się ścięgna opracowanymi w grupie pod kierownictwem autora tej rozprawy, który odpowiadał za sformułowanie założeń eksperymentów i ich analizę, oraz z metodą bazującą na testach biomechanicznych realizowaną u partnera klinicznego. Pierwsze dwa podejścia wytrenowano w koncepcji end-to-end tak, aby modelowały \textit{explicite} ocenę radiologa wykorzystując (1) poetykietowane obrazy RM, (2) poetykietowane obrazy ultrasonografii (USG).
 
-\begin{table*}[]
-	\caption{Wyniki oceny procesu gojenia z wykorzystaniem proponowanej metody.}
-	\scriptsize
-	\begin{center}
-		\begin{tabular}{lc||c|c|c|c|c|c}
-			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
-			
-			\hline \hline
-			\multirow{3}{*}{SVR}
-& MAE & 1,05$\pm0,06$ & $0,56\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & 0,94$\pm0,05$\\
-& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & 2,01 & 2,38 \\
-& Corr   & 0,85 & 0,85 & 0,31 & 0,72 & 0,65 & 0,80 \\
-\hline
-		\end{tabular}
-	\end{center}
-	\label{tab:trainset}
-\end{table*}
+Wśród najbardziej interesujących wyników uzyskanych w pracy należy wyróżnić:
 
-Dla każdego z pacjentów testowych przeanalizowano również krzywe gojenia, których przykład znajduje się na rysunku poniżej.
+\begin{enumerate}
+	\item Wybór sekwencji jako danych wejściowych T2$^\ast$ GRE TE\_MIN, w której obraz ścięgna bardzo dobrze różnicuje etapy gojenia się. Taki proces widoczny jest na rysunku poniżej.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=1\textwidth]{figures/T2gremin.jpg}
+		\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
+	\end{figure}
+	Skrócenie protokołu badania z 10-ciu do jednej modalności przełożyło się na skrócenie czasu potrzebnego na akwizycję danych od pacjenta. W przypadku protokołu stosowanego w projekcie START jest to oszczędność około 50 min. Natomiast w przypadku standardowego protokołu, rutynowo stosowanego w klinikach oszczędność to około 15 min. biorąc pod uwagę obecny stan techniki. 
+	\item Uzyskanie ocen automatu porównywalną z poziomem ocen radiologa (średni błąd absolutny w zakresie 0,56--1,05 dla 40-tu testowych badań). Szczegóły w tabeli poniżej. 
+	\vspace{0.5cm}
+	\begin{table}[h!]
+		\caption{Wyniki oceny procesu gojenia z wykorzystaniem proponowanej metody.}
+		\scriptsize
+		\begin{center}
+			\begin{tabular}{lc||c|c|c|c|c|c}
+				\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ 
+				
+				\hline \hline
+				\multirow{3}{*}{SVR}
+				& MAE & 1,05$\pm0,06$ & $0,56\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & 0,94$\pm0,05$\\
+				& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & 2,01 & 2,38 \\
+				& Corr   & 0,85 & 0,85 & 0,31 & 0,72 & 0,65 & 0,80 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		\label{tab:trainset}
+	\end{table}
+	
+	Biorąc pod uwagę również błąd w ocenie radiologa spowodowany np. zmęczeniem, niedoborem czasu itp. uzyskane wyniki są wysoce satysfakcjonujące.
+	\item Zrealizowanie warstwy prezentacji z oceną krzywych gojenia. Przykład takich krzywych znajduje się na poniższym rysunku.
+	 \begin{figure}[h!]
+	 	\centering
+	 	\includegraphics[width=1\textwidth]{figures/TT.png}
+	 	\caption{Ocena parametru TT.}\label{fig:TT}
+	 \end{figure}
+ 
+ W pracy ponadto zaproponowano przykładowy raport, który mógłby być generowany dla każdego z pacjentów oraz ocenę holistyczną będącą wynikiem analizy czynników głównych dla zbioru parametrów radiologicznych. Całość prac była nacelowana na ułatwienie przepływu informacji między osobami najbardziej zaangażowanymi w proces rehabilitacji pacjenta tj. radiologiem, ortopedą i fizjoterapeutą.
+ \item Porównanie z innym podejściem tj. modelującym bezpośrednio ocenę radiologa. Wyniki znajdują się w Tabeli \ref{tab:end-to-end_testset}.
+ 
+ \renewcommand{\arraystretch}{1.2}
+ \begin{table}[h!]
+ 	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze rezultaty, a kolorem czerwonym istotne statystycznie różnice w liczonych średnich ($p$ $<$ 0,05).}
+ 	\scriptsize
+ 	\begin{center}
+ 		\begin{tabular}{lc||c|c|c|c|c|c}
+ 			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ \hline \hline
+ 			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,08}$ & 0,80$\pm{0,04}$ & 1,40$\pm{0,07}$ & \textbf{0,89}$\pm{0,05}$ & 1,08$\pm{0,04}$ & \textcolor{red}{\textbf{0,69}}$\pm{0,07}$ \\
+ 			& MAX-AE & \textbf{2,14} & \textbf{1,01} & 2,13 & \textbf{1,18} & \textbf{1,44} & \textbf{0,78} \\
+ 			& Corr & 0,82 & 0,77 & 0,05 & 0,59 & 0,52 & 0,77 \\ \hline
+ 			SVR & MAE & \textbf{1,05}$\pm0,06$ & \textcolor{red}{\textbf{0,56}}$\pm0,03$ & \textcolor{red}{\textbf{0,75}}$\pm0,04$ & 0,91$\pm0,05$ & \textcolor{red}{\textbf{0,91}}$\pm0,04$ & $0,94\pm0,05$\\
+ 			& MAX-AE & 2,62 & 1,82 & \textbf{1,92} & 2,54 & 2,01 & 2,38 \\
+ 			& Corr & \textbf{0,85} & \textbf{0,85} & \textcolor{red}{\textbf{0,31}} & \textcolor{red}{\textbf{0,72}} & \textcolor{red}{\textbf{0,65}} & \textbf{0,80} 
+ 		\end{tabular}
+ 	\end{center}
+ 	\label{tab:end-to-end_testset}
+ \end{table}
+ \renewcommand{\arraystretch}{1}
+ 
+ W zestawieniu z alternatywną metodą analizy obrazów RM, wykazano przewagę zaproponowanego podejścia w kontekście oceny trendów gojenia się i uzyskiwanych średnich błędów, a dokładniej uzyskano istotnie statystycznie lepsze rezultaty dla 4 z 6-ciu parametrów, a istotne pogorszenie tylko w jednym.
+ \item Porównanie z podejściem bazującym na ocenie procesu gojenia widocznym na zdjęciach z ultrasonografii. Wyniki znajdują się w Tabeli \ref{tab:USGvsRM-cross-validation}.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width=1\textwidth]{figures/TT.png}
-	\caption{Ocena parametru TT.}\label{fig:TT}
-\end{figure}
+ \renewcommand{\arraystretch}{1.2}
+ \begin{table}[h!]
+ 	\scriptsize
+ 	\setlength{\tabcolsep}{1pt}
+ 	\centering
+ 	\caption{Porównanie wyników oceny automatycznej, bazującej na danych USG i RM, dla pacjentów ze zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki. Kolorem czerwonym oznaczono poprawę w stosunku do kolejnego wyniku istotną statystycznie z $p$ $<$ 0,05.}
+ 	\label{tab:USGvsRM-cross-validation}
+ 	\begin{tabular}{lc||c|c|c|c|c|c}
+ 		%\hline
+ 		& & \multicolumn{6}{c}{\textbf{USG -- p. strzałkowy}} \\
+ 		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
+ 		Inception-v3$_{eus}$ & MAE & \textbf{0,81}$\pm$0,19 & 0,63$\pm$0,03 & \textbf{0,56}$\pm$0,09 & 0,85$\pm$0,10 & 0,54$\pm$0,02 & 0,87$\pm$0,14 \\
+ 		& MAX-AE & 1,59 & 1,79 & 1,7 & \textbf{1,25} & \textbf{1,38} & 1,69 \\
+ 		& Corr & 0,80 & 0,77 & 0,31 & 0,52 & \textbf{0,69} & 0,62 \\ \hline
+ 		ResNet-50$_{eus}$ & MAE & 0,88$\pm$0,16 & 0,65$\pm$0,07 & 0,66$\pm$0,04 & 0,83$\pm$0,12 & 0,75$\pm$0,06 & 0,93$\pm$0,11 \\
+ 		& MAX-AE & \textbf{1,49} & \textbf{1,26} & 1,74 & 1,48 & 1,78 & 1,71 \\
+ 		& Corr & 0,60 & 0,55 & 0,25 & 0,55 & 0,34 & 0,56 \\
+ 		\hline \hline
+ 		& & \multicolumn{6}{c}{\textbf{USG -- p. poprzeczny}} \\
+ 		
+ 		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,27 & 0,75$\pm$0,7 & 0,58$\pm$0,05 & 0,83$\pm$0,05 & \textcolor{red}{\textbf{0,53}}$\pm$0,08 & \textbf{0,83}$\pm$0,15 \\
+ 		& MAX-AE & 2,8 & 1,46 & \textbf{1,51} & 1,27 & 1,63 & 1,65 \\
+ 		& Corr & 0,69 & 0,68 & \textbf{0,45} & 0,51 & 0,66 & 0,68 \\ \hline
+ 		ResNet-50$_{euo}$ & MAE & 0,92$\pm$0,18 & 0,76$\pm$0,16 & 0,68$\pm$0,04 & \textbf{0,81}$\pm$0,08 & 0,65$\pm$0,10 & 0,94$\pm$0,05 \\
+ 		& MAX-AE & 2,01 & 1,56 & 1,61 & 1,69& 1,43 & \textbf{1,58}\\
+ 		& Corr & 0,55 & 0,57 & 0,35 & 0,44 & 0,39 & 0,61 \\ \hline \hline
+ 		& & \multicolumn{6}{c}{\textbf{Rezonans magnetyczny}} \\
+ 		
+ 		SVR & MAE & $1,05\pm0,06$ & \textbf{0,56}$\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & $0,94\pm0,05$\\
+ 		& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & 2,01 & 2,38 \\
+ 		& Corr   & \textbf{0,85} & \textbf{0,85} & 0,31 & \textcolor{red}{\textbf{0,72}} & 0,65 & \textcolor{red}{\textbf{0,80}} \\
+ 		
+ 	\end{tabular}
+ \end{table}
+ \renewcommand{\arraystretch}{1}
 
-Nową metodę porównano z dwiema innymi propozycjami oceny gojenia się ścięgna opracowanymi w grupie pod kierownictwem autora tej rozprawy, który odpowiadał za sformułowanie założeń eksperymentów i ich analizę, oraz z metodą bazującą na testach biomechanicznych realizowaną u partnera klinicznego. Pierwsze dwa podejścia wytrenowano w koncepcji end-to-end tak, aby modelowały \textit{explicite} ocenę radiologa wykorzystując (1) poetykietowane obrazu RM, (2) poetykietowane obrazy ultrasonografii (USG). Wyniki przedstawione są w tabeli poniżej.
+ W tym przypadku wykazano możliwość synergii obu podejść, bazując na większej izotropowości danych USG i dobrych wynikach oceny parametrów widocznych w płaszczyźnie strzałkowej.
+ \item Zrealizowano porównanie oceny holistycznej generowanej przez nową metodę (pierwszy czynnik główny z wartości parametrów radiologicznych) z testami ATRS i deficytami sił mięśniowych dla których w pracy z wykorzystaniem analizy czynników głównych zaproponowano 4 zmienne (WW, WZ, ZW, ZZ) związane z pozycją kończyny dolnej. Szczegółowe wyniki znajdują się w tabeli poniżej. 
+ \vspace{0.5 cm} 
+ \begin{table}[h!]
+ 	\centering
+ 	\setlength{\tabcolsep}{3pt}
+ 	\setlength\extrarowheight{2pt}
+ 	\caption{Korelacja badań biomechanicznych i testu ATRS z badaniami radiologicznymi ocenionymi automatycznie i przez radiologa. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
+ 	\label{tab:bioATRSvspredGT}
+ 	\begin{tabular}{c|c|c}
+ 		&ocena automatyczna&ocena radiologa \\
+ 		\hline \hline
+ 		WW&0,1197&0,0706\\
+ 		\hline
+ 		WZ&0,1576&0,1931\\
+ 		\hline
+ 		ZW&0,3429&0,3092\\
+ 		\hline
+ 		ZZ&0,3100&0,2996\\
+ 		\hline
+ 		ATRS&\textbf{0,3854}&0,2088\\
+ 		
+ 		
+ 	\end{tabular}
+ \end{table}
+	
+	Badania biomechaniczne były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center. Porównania ilościowe przedstawione w pracy potwierdziły znane w literaturze fakty np. że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS jak i dostarczyły wskazówek odnośnie możliwych nowych obszarów badań np. stworzenie nowego komplementarnego testu bazującego na fuzji informacji biomechanicznych i obrazowania medycznego. 
 
-\renewcommand{\arraystretch}{1.2}
-\begin{table*}[h]
-	\caption{Porównanie wyników wnioskowania z wykorzystaniem zbioru testowego dla metody proponowanej tj. SVR oraz metody wyszkolonej w paradygmacie end-to-end. Pogrubieniem oznaczono najlepsze rezultaty, a kolorem czerwonym istotne statystycznie różnice w liczonych średnich ($p$ $<$ 0,05).}
-	\scriptsize
-	\begin{center}
-		\begin{tabular}{lc||c|c|c|c|c|c}
-			\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE}\\ \hline \hline
-			Inception-v3$_{e}$ & MAE & 1,12$\pm{0,08}$ & 0,80$\pm{0,04}$ & 1,40$\pm{0,07}$ & \textbf{0,89}$\pm{0,05}$ & 1,08$\pm{0,04}$ & \textcolor{red}{\textbf{0,69}}$\pm{0,07}$ \\
-			& MAX-AE & \textbf{2,14} & \textbf{1,01} & 2,13 & \textbf{1,18} & \textbf{1,44} & \textbf{0,78} \\
-			& Corr & 0,82 & 0,77 & 0,05 & 0,59 & 0,52 & 0,77 \\ \hline
-			SVR & MAE & \textbf{1,05}$\pm0,06$ & \textcolor{red}{\textbf{0,56}}$\pm0,03$ & \textcolor{red}{\textbf{0,75}}$\pm0,04$ & 0,91$\pm0,05$ & \textcolor{red}{\textbf{0,91}}$\pm0,04$ & $0,94\pm0,05$\\
-			& MAX-AE & 2,62 & 1,82 & \textbf{1,92} & 2,54 & 2,01 & 2,38 \\
-			& Corr & \textbf{0,85} & \textbf{0,85} & \textcolor{red}{\textbf{0,31}} & \textcolor{red}{\textbf{0,72}} & \textcolor{red}{\textbf{0,65}} & \textbf{0,80} 
-		\end{tabular}
-	\end{center}
-	\label{tab:end-to-end_testset}
-\end{table*}
-\renewcommand{\arraystretch}{1}
-
-\renewcommand{\arraystretch}{1.2}
-\begin{table}[h]
-	\scriptsize
-	\setlength{\tabcolsep}{1pt}
-	\centering
-	\caption{Porównanie wyników oceny automatycznej, bazującej na danych USG i RM, dla pacjentów ze zbioru testowego. Pogrubieniem oznaczono najlepsze wyniki. Kolorem czerwonym oznaczono poprawę w stosunku do kolejnego wyniku istotną statystycznie z $p$ $<$ 0,05.}
-	\label{tab:USGvsRM-cross-validation}
-	\vspace{-0.5cm}
-	\begin{tabular}{lc||c|c|c|c|c|c}
-		%\hline
-		& & \multicolumn{6}{c}{\textbf{USG -- p. strzałkowy}} \\
-		\textbf{Model} & & \textbf{SCT} & \textbf{TT} & \textbf{STE} & \textbf{TE} & \textbf{TU} & \textbf{TisE} \\ \hline \hline
-		Inception-v3$_{eus}$ & MAE & \textbf{0,81}$\pm$0,19 & 0,63$\pm$0,03 & \textbf{0,56}$\pm$0,09 & 0,85$\pm$0,10 & 0,54$\pm$0,02 & 0,87$\pm$0,14 \\
-		& MAX-AE & 1,59 & 1,79 & 1,7 & \textbf{1,25} & \textbf{1,38} & 1,69 \\
-		& Corr & 0,80 & 0,77 & 0,31 & 0,52 & \textbf{0,69} & 0,62 \\ \hline
-		ResNet-50$_{eus}$ & MAE & 0,88$\pm$0,16 & 0,65$\pm$0,07 & 0,66$\pm$0,04 & 0,83$\pm$0,12 & 0,75$\pm$0,06 & 0,93$\pm$0,11 \\
-		& MAX-AE & \textbf{1,49} & \textbf{1,26} & 1,74 & 1,48 & 1,78 & 1,71 \\
-		& Corr & 0,60 & 0,55 & 0,25 & 0,55 & 0,34 & 0,56 \\
-		\hline \hline
-		& & \multicolumn{6}{c}{\textbf{USG -- p. poprzeczny}} \\
-		
-		Inception-v3$_{euo}$ & MAE & 0,84$\pm$0,27 & 0,75$\pm$0,7 & 0,58$\pm$0,05 & 0,83$\pm$0,05 & \textcolor{red}{\textbf{0,53}}$\pm$0,08 & \textbf{0,83}$\pm$0,15 \\
-		& MAX-AE & 2,8 & 1,46 & \textbf{1,51} & 1,27 & 1,63 & 1,65 \\
-		& Corr & 0,69 & 0,68 & \textbf{0,45} & 0,51 & 0,66 & 0,68 \\ \hline
-		ResNet-50$_{euo}$ & MAE & 0,92$\pm$0,18 & 0,76$\pm$0,16 & 0,68$\pm$0,04 & \textbf{0,81}$\pm$0,08 & 0,65$\pm$0,10 & 0,94$\pm$0,05 \\
-		& MAX-AE & 2,01 & 1,56 & 1,61 & 1,69& 1,43 & \textbf{1,58}\\
-		& Corr & 0,55 & 0,57 & 0,35 & 0,44 & 0,39 & 0,61 \\ \hline \hline
-		& & \multicolumn{6}{c}{\textbf{Rezonans magnetyczny}} \\
-		
-		SVR & MAE & $1,05\pm0,06$ & \textbf{0,56}$\pm0,03$ & $0,75\pm0,04$ & $0,91\pm0,05$ & $0,91\pm0,04$ & $0,94\pm0,05$\\
-		& MAX-AE & 2,62 & 1,82 & 1,92 & 2,54 & 2,01 & 2,38 \\
-		& Corr   & \textbf{0,85} & \textbf{0,85} & 0,31 & \textcolor{red}{\textbf{0,72}} & 0,65 & \textcolor{red}{\textbf{0,80}} \\
-		
-	\end{tabular}
-\end{table}
-\renewcommand{\arraystretch}{1}
-
-opracowana metoda została porównana z ATRS i deficyty sił mięśniowych będące rezultatem badań biomechanicznych. Badania te były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center.
-
-\begin{table}[h]
-	\centering
-	\setlength{\tabcolsep}{3pt}
-	\setlength\extrarowheight{2pt}
-	\caption{Korelacja badań biomechanicznych i testu ATRS z badaniami radiologicznymi ocenionymi automatycznie i przez radiologa. Oznaczone wsp. korelacji są istotne z $p$ $<$ 0,05 dla $N$=30.}
-	\label{tab:bioATRSvspredGT}
-	\begin{tabular}{c|c|c}
-		&ocena automatyczna&ocena radiologa \\
-		\hline \hline
-		WW&0,1197&0,0706\\
-		\hline
-		WZ&0,1576&0,1931\\
-		\hline
-		ZW&0,3429&0,3092\\
-		\hline
-		ZZ&0,3100&0,2996\\
-		\hline
-		ATRS&\textbf{0,3854}&0,2088\\
-		
-		
-	\end{tabular}
-\end{table}
-
-Można zaobserwować, że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS, co jest zgodne z obecną praktyką kliniczną. Fakt ten jest znany ortopedom i ekspertom dziedzinowym, którzy w swojej praktyce spotykają pacjentów z patologiami ścięgna Achillesa z symptomami bólu, deficytami funkcjonalnymi jak również z brakiem tych objawów (tzw. pacjentów asymptomatycznych). Dlatego zalecane jest wykonywanie badań radiologicznych, które dostarczają komplementarnych informacji. 
-
-Interesującym rezultatem jest również wynik istotnej, niewielkiej korelacji oceny automatycznej z ATRS. Można wnioskować, że eliminacja losowości wynikającej \linebreak z czynnika ludzkiego, spowodowała usystematyzowanie oceny i uwspólnienie pewnych informacji, które obecne są również w ustrukturyzowanym teście ATRS. Wynik ten wyznacza ciekawy kierunek dalszych prac, mających na celu stworzenie komplementarnego testu maksymalizującego informację dla lekarza prowadzącego, przy jednoczesnym minimalizowaniu objętości protokołu monitorowania pacjentów. Powyższe wnioski w opinii autora tej pracy stanowią bardzo duże pole do optymalizacji obecnej praktyki klinicznej w zakresie diagnostyki ścięgna Achillesa i są dalej dyskutowane w kolejnym rozdziale dotyczącym możliwości zastosowań praktycznych przedmiotowego rozwiązania.
-
+\end{enumerate}
 
 {\let\clearpage\relax\chapter*{Wnioski końcowe}}
 \addcontentsline{toc}{chapter}{Wnioski końcowe}

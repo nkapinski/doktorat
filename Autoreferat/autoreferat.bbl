@@ -1,3 +1,123 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{Christiansen2018}
+Eric~M. Christiansen, Samuel~J. Yang, D.~Michael Ando, Ashkan Javaherian, Gaia
+  Skibinski, Scott Lipnick, Elliot Mount, Alison O'Neil, Kevan Shah, Alicia~K.
+  Lee, Piyush Goyal, William Fedus, Ryan Poplin, Andre Esteva, Marc Berndl,
+  Lee~L. Rubin, Philip Nelson, Steven Finkbeiner.
+\newblock In {S}ilico {L}abeling: {P}redicting {F}luorescent {L}abels in
+  {U}nlabeled {I}mages.
+\newblock {\em Cell}, 173(3):792--803, Kwiecień 2018.
+
+\bibitem{LungChalenge}
+Qi~Dou, Hao Chen, Lequan Yu, Jing Qin, Pheng-Ann Heng.
+\newblock Multilevel {C}ontextual {3D} {CNNs} for {F}alse {P}ositive
+  {R}eduction in {P}ulmonary {N}odule {D}etection.
+\newblock {\em {IEEE} Transactions on Biomedical Engineering},
+  64(7):1558--1567, Lipiec 2017.
+
+\bibitem{Erickson2018}
+Bradley~J. Erickson, Panagiotis Korfiatis, Timothy~L. Kline, Zeynettin Akkus,
+  Kenneth Philbrick, Alexander~D. Weston.
+\newblock Deep {L}earning in {R}adiology: {D}oes {O}ne {S}ize {F}it {A}ll?
+\newblock {\em Journal of the American College of Radiology}, 15(3):521--526,
+  Marzec 2018.
+
+\bibitem{Esteva2017}
+Andre Esteva, Brett Kuprel, Roberto~A. Novoa, Justin Ko, Susan~M. Swetter,
+  Helen~M. Blau, Sebastian Thrun.
+\newblock Dermatologist-level classification of skin cancer with deep neural
+  networks.
+\newblock {\em Nature}, 542(7639):115--118, Styczeń 2017.
+
+\bibitem{Glasser2016}
+Matthew~F. Glasser, Timothy~S. Coalson, Emma~C. Robinson, Carl~D. Hacker, John
+  Harwell, Essa Yacoub, Kamil Ugurbil, Jesper Andersson, Christian~F. Beckmann,
+  Mark Jenkinson, Stephen~M. Smith, David C.~Van Essen.
+\newblock A multi-modal parcellation of human cerebral cortex.
+\newblock {\em Nature}, 536(7615):171--178, Lipiec 2016.
+
+\bibitem{Gulshan2016}
+Varun Gulshan, Lily Peng, Marc Coram, Martin~C. Stumpe, Derek Wu, Arunachalam
+  Narayanaswamy, Subhashini Venugopalan, Kasumi Widner, Tom Madams, Jorge
+  Cuadros, Ramasamy Kim, Rajiv Raman, Philip~C. Nelson, Jessica~L. Mega,
+  Dale~R. Webster.
+\newblock Development and {V}alidation of a {D}eep {L}earning {A}lgorithm for
+  {D}etection of {D}iabetic {R}etinopathy in {R}etinal {F}undus {P}hotographs.
+\newblock {\em {Journal of American Medical Association}}, 316(22):2402,
+  Grudzień 2016.
+
+\bibitem{ResNet}
+Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun.
+\newblock Deep {R}esidual {L}earning for {I}mage {R}ecognition.
+\newblock {\em Computing Research Repository (CoRR)}, abs/1512.03385, 2015.
+
+\bibitem{EpidemiologySport}
+Tero~A.H. J\"{a}rvinen, Pekka Kannus, Nicola Maffulli, Karim~M. Khan.
+\newblock Achilles tendon disorders: Etiology and epidemiology.
+\newblock {\em Foot and Ankle Clinics}, 10(2):255--266, Czerwiec 2005.
+
+\bibitem{Krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, Geoffrey~E. Hinton.
+\newblock Image{N}et {C}lassification with {D}eep {C}onvolutional {N}eural
+  {N}etworks.
+\newblock {\em Proceedings of the 25th International Conference on Neural
+  Information Processing Systems - Volume 1}, NIPS'12, strony 1097--1105, USA,
+  2012. Curran Associates Inc.
+
+\bibitem{DBLP:journals/corr/abs-1803-04014}
+Stefano Markidis, Steven Wei~Der Chien, Erwin Laure, Ivy~Bo Peng, Jeffrey~S.
+  Vetter.
+\newblock {NVIDIA} {T}ensor {C}ore {P}rogrammability, {P}erformance {\&}
+  {P}recision.
+\newblock {\em Computing Research Repository (CoRR)}, abs/1803.04014, 2018.
+
+\bibitem{NilssonHelander2007}
+Katarina Nilsson-Helander, Roland Thome{\'{e}}, Karin Gr\"{a}vare-Silbernagel,
+  Pia Thome{\'{e}}, Eva Fax{\'{e}}n, Bengt~I. Eriksson, Jon Karlsson.
+\newblock The {A}chilles {T}endon {T}otal {R}upture {S}core ({ATRS}).
+\newblock {\em The American Journal of Sports Medicine}, 35(3):421--426, Marzec
+  2007.
+
+\bibitem{EpidemiologyUS}
+M.~S. Raikin.
+\newblock Epidemiology of {A}chilles tendon rupture in the {US}.
+\newblock
+  \url{http://lermagazine.com/article/epidemiology-of-achilles-tendon-rupture-in-the-us},
+  2014.
+\newblock Dost.: 2018-07-23.
+
+\bibitem{Sarraf2016}
+Saman Sarraf,  Ghassem Tofighi.
+\newblock Deep learning-based pipeline to recognize {A}lzheimer disease using
+  {fMRI} data.
+\newblock {\em Future Technologies Conference ({FTC})}. {IEEE}, Grudzień 2016.
+
+\bibitem{GoogleNet}
+Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott~E. Reed,
+  Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich.
+\newblock Going {D}eeper with {C}onvolutions.
+\newblock {\em Computing Research Repository (CoRR)}, abs/1409.4842, 2014.
+
+\bibitem{Tajbakhsh2016}
+Nima Tajbakhsh, Jae~Y. Shin, Suryakanth~R. Gurudu, R.~Todd Hurst,
+  Christopher~B. Kendall, Michael~B. Gotway, Jianming Liang.
+\newblock Convolutional {N}eural {N}etworks for {M}edical {I}mage {A}nalysis:
+  {F}ull {T}raining or {F}ine {T}uning?
+\newblock {\em {IEEE} Transactions on Medical Imaging}, 35(5):1299--1312, Maj
+  2016.
+
+\bibitem{vanSchie2009}
+H.~T.~M. van Schie, R.~J. de~Vos, S.~de~Jonge, E.~M. Bakker, M.~P. Heijboer,
+  J.~A.~N. Verhaar, J.~L. Tol, H.~Weinans.
+\newblock Ultrasonographic tissue characterisation of human {A}chilles tendons:
+  quantification of tendon structure through a novel non-invasive approach.
+\newblock {\em British Journal of Sports Medicine}, 44(16):1153--1159,
+  Sierpień 2009.
+
+\bibitem{2016arXiv160605718W}
+D.~{Wang}, A.~{Khosla}, R.~{Gargeya}, H.~{Irshad}, A.~H. {Beck}.
+\newblock {Deep {L}earning for {I}dentifying {M}etastatic {B}reast {C}ancer}.
+\newblock {\em ArXiv e-prints}, Czerwiec 2016.
 
 \end{thebibliography}

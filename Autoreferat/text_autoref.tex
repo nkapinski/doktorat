@@ -1,11 +1,11 @@
 {\let\clearpage\relax\chapter*{Uzasadnienie wyboru tematu pracy}}
 \addcontentsline{toc}{chapter}{Uzasadnienie wyboru tematu pracy}
 
-Wraz z występującym w ostatnich latach systematycznym wzrostem liczby obrazowań medycznych uwidacznia się potrzeba na komputerowe wspomaganie pracy radiologów. W szczególności zastosowanie znajdują aplikacje usprawniające generowanie raportów, rozwiązania do personalizacji diagnostyki i narzędzia poprawiające jej jakość.
+Wraz z występującym w ostatnich latach systematycznym wzrostem liczby obrazowań medycznych uwidacznia się potrzeba komputerowego wspomagania pracy radiologów. W szczególności zastosowanie znajdują aplikacje usprawniające generowanie raportów, rozwiązania do personalizacji diagnostyki i narzędzia poprawiające jej jakość (np. \cite{LungChalenge, Tajbakhsh2016, Gulshan2016, Esteva2017, Erickson2018, Christiansen2018, Sarraf2016, Glasser2016, 2016arXiv160605718W}).
 
-Niniejsza praca, w odpowiedzi na powyższe zagadnienia, przedstawia propozycję strukturyzacji i automatyzacji oceny gojenia ścięgna Achillesa widocznego w obrazowaniu Rezonansem Magnetycznym (w skr. RM). Badanie to, w kontekście przedmiotowego ścięgna, jest dokładną metodą wykorzystywaną do oceny zmian strukturalnych i morfologicznych w zakresie tkanek miękkich. Wedle obecnych standardów ocena tego badania jest subiektywna i niesparametryzowana, a zatem stanowi ciekawy temat badawczy związany z możliwościami komputerowego wspomagania radiologów i usprawnienia ich pracy oraz w konsekwencji pomocy osobom ze schorzeniami ścięgna Achillesa.
+Niniejsza praca, w odpowiedzi na powyższe zagadnienia, przedstawia propozycję strukturyzacji i automatyzacji oceny gojenia ścięgna Achillesa widocznego w obrazowaniu Rezonansem Magnetycznym (w skr. RM). Badanie to, w kontekście przedmiotowego ścięgna, jest dokładną metodą wykorzystywaną do oceny zmian strukturalnych i morfologicznych w zakresie tkanek miękkich. Wedle obecnych standardów ocena tego badania jest subiektywna i niesparametryzowana, a zatem stanowi ciekawy temat badawczy związany z możliwościami komputerowego wspomagania radiologów i usprawnienia ich pracy oraz w konsekwencji pomocy osobom ze schorzeniami ścięgna Achillesa. W szczególności, iż wdrożenie takiego sposobu opisu do praktyki klinicznej leczenia przedmiotowego ścięgna ułatwiłoby integrację z istniejącymi na chwilę obecną testami funkcjonalnymi np. ATRS \cite{NilssonHelander2007} lub metodami dotyczącymi opisu badań ultrasonografii np. \cite{vanSchie2009}.  
 
-Dodatkową motywację stanowi fakt dynamicznego rozwoju metod sztucznej inteligencji, a dokładniej ich podzbioru tj. głębokich sieci neuronowych, których rozwój znacząco przyspieszył od 2012 r. za sprawą innowacji w budowie sieci i szybkiej ewolucji możliwości sprzętowych. W szczególności konwolucyjne sieci neuronowe, z uwagi na dużą skuteczność w problemach związanych z przetwarzaniem obrazów, znajdują zastosowanie w rosnącej liczbie narzędzi z certyfikacją medyczną, dedykowanych dla radiologii.
+Dodatkową motywację stanowi fakt dynamicznego rozwoju metod sztucznej inteligencji, a dokładniej ich podzbioru tj. głębokich sieci neuronowych, których rozwój znacząco przyspieszył od 2012 r. za sprawą innowacji w budowie sieci (zob. \cite{Krizhevsky2012, ResNet, GoogleNet}) i szybkiej ewolucji możliwości sprzętowych (zob. \cite{DBLP:journals/corr/abs-1803-04014}). W szczególności konwolucyjne sieci neuronowe, z uwagi na dużą skuteczność w problemach związanych z przetwarzaniem obrazów, znajdują zastosowanie w rosnącej liczbie narzędzi z certyfikacją medyczną, dedykowanych dla radiologii.
 
 Ograniczeniem wskazanych metod sztucznej inteligencji jest wymóg dużych, ustrukturyzowanych zbiorów danych, które mogą służyć do skutecznego uczenia się algorytmu. W toku prac nad wybraną problematyką, autor przedmiotowej rozprawy miał dostęp do unikatowego w skali światowej zbioru danych składającego się z m.in. 590 badań RM pacjentów po zerwaniu ścięgna Achillesa. Badania pochodziły z projektu START ("Wykorzystanie autologicznych mezenchymalnych komórek macierzystych w procesie regeneracji rekonstruowanego ścięgna Achillesa"), finansowanego przez Narodowe Centrum Badań i Rozwoju z krajowego programu STRATEGMED1.
 
@@ -53,7 +53,7 @@ Zaproponowana w pracy metoda generuje numeryczny wynik w skali 0--7 dla 6-ciu zd
 	\caption{Schemat automatycznej metody oceny pojedynczego parametru radiologicznego opisującego proces gojenia się ścięgna Achillesa.} \label{fig:net}
 \end{figure}
 
-Dane wejściowe stanowi trójwymiarowe badanie RM obszaru podudzia. Badanie dzielone jest na $n$ obrazów będących przekrojami poprzecznymi względem osi długiej ścięgna. Z każdego przekroju dwojako ekstrahowane są zestawy cech. Po pierwsze, wykorzystywany jest ekstraktor cech będący złożeniem warstw konwolucyjnych i jednej warstwy gęstej wytrenowanej sieci neuronowej na wyjściu (po redukcji z wykorzystaniem metody analizy czynników głównych) generującej 200 wartości. Po drugie, dla obszaru ścięgna widocznego na każdym z przekrojów, wyliczane są cechy statystyczne i teksturalne, których łączna liczba wynosi 46. Z pośród tak utworzonego zestawu 246 wartości, dla każdego z 6-ciu radiologicznych parametrów, wybierane są z wykorzystaniem metody LASSO optymalne podzbiory o liczebności mniejszej niż 20. Podzbiory są kolejno procesowane z wykorzystaniem regresji opartej o algorytm wektorów nośnych, której wyniki dla poszczególnych przekrojów łączone są z wykorzystaniem średniej trymowanej odrzucającej rezultaty skrajne i generującej pojedynczą wartość parametru dla całego badania 3D RM.   
+Danymi wejściowymi jest trójwymiarowy obraz obszaru podudzia otrzymany w badaniu RM. Badanie dzielone jest na $n$ obrazów będących przekrojami poprzecznymi względem osi długiej ścięgna. Z każdego przekroju dwojako ekstrahowane są zestawy cech. Po pierwsze, wykorzystywany jest ekstraktor cech będący złożeniem warstw konwolucyjnych i jednej warstwy gęstej wytrenowanej sieci neuronowej na wyjściu (po redukcji z wykorzystaniem metody analizy czynników głównych) generującej 200 wartości. Po drugie, dla obszaru ścięgna widocznego na każdym z przekrojów, wyliczane są cechy statystyczne i teksturalne, których łączna liczba wynosi 46. Spośród tak utworzonego zestawu 246 wartości, dla każdego z 6-ciu radiologicznych parametrów, wybierane są z wykorzystaniem metody LASSO optymalne podzbiory o liczebności mniejszej niż 20. Podzbiory są kolejno procesowane z wykorzystaniem regresji opartej o algorytm wektorów nośnych, której wyniki dla poszczególnych przekrojów łączone są z wykorzystaniem średniej trymowanej odrzucającej rezultaty skrajne i generującej pojedynczą wartość parametru dla całego badania 3D RM.   
 
 
 {\let\clearpage\relax\chapter*{Charakterystyka i wyniki przeprowadzonych badań}}
@@ -61,19 +61,19 @@ Dane wejściowe stanowi trójwymiarowe badanie RM obszaru podudzia. Badanie dzie
 
 Eksperymenty podzielono na dwa etapy. W pierwszym zrealizowano zagadnienia związane z doborem parametrów komponentów nowej metody i oceną jej skuteczności działania. W drugim porównano skuteczność nowej metody z innymi koncepcjami oceny gojenia ścięgna Achillesa. 
 
-W ramach pierwszego etapu wyłoniono, z pośród 10-ciu modalności RM analizowanych w pracy, jedną sekwencję będącą najlepszym kandydatem na dane wejściowe. W tym celu zrealizowano zarówno badania związane z analizą wizualną jak i testami ilościowymi. Jednocześnie zbadano, iż dodawanie kolejnych sekwencji nie miało istotnie statycznego wpływu na polepszenie jakości predykcji wartości parametrów radiologicznych, a skutkowało wydłużeniem czasu badania pacjenta. 
+W ramach pierwszego etapu wyłoniono, spośród 10-ciu modalności RM analizowanych w pracy, jedną sekwencję będącą najlepszym kandydatem na dane wejściowe. W tym celu zrealizowano zarówno badania związane z analizą wizualną jak i testami ilościowymi. Jednocześnie zbadano, iż dodawanie kolejnych sekwencji nie miało istotnie statycznego wpływu na polepszenie jakości predykcji wartości parametrów radiologicznych, a skutkowało wydłużeniem czasu badania pacjenta. 
 
-W ramach badań nad doborem parametrów nowej metody zrealizowano następujące badania:
+W ramach badań nad doborem parametrów nowej metody zrealizowano następujące działania:
 \begin{enumerate}
-	\item Zoptymalizowano parametry ekstraktora cech poprzez zadanie treningu z celem binarnego podziału obrazów pacjentów na zdrowe i chore ścięgna. Przetestowano 3 architektury sieci neuronowych i na podstawie analizy ich dokładności klasyfikacji oraz czasu treningu wybrano sieć AlexNet. Takie podejście umożliwiło zakodowanie w ekstraktorze charakterystycznych cech dla tkanki zdrowej i patologicznej oraz finalne pogrupowanie ich w wektor o wymiarze 4096.
+	\item Zoptymalizowano parametry ekstraktora cech poprzez zadanie treningu z celem binarnego podziału obrazów pacjentów na zdrowe i chore ścięgna. Przetestowano 3 architektury sieci neuronowych i na podstawie analizy ich dokładności klasyfikacji oraz czasu treningu wybrano sieć AlexNet. Takie podejście umożliwiło zakodowanie w ekstraktorze jąder konwolucji umożliwiających ekstrakcję charakterystycznych cech dla tkanki zdrowej i patologicznej oraz finalne pogrupowanie ich w wektor o wymiarze 4096.
 	\item Przeprowadzono analizę czynników głównych i wykonano redukcję przestrzeni z 4096 parametrów do 200-tu z zachowaniem blisko 99\% poziomu wariancji.
 	\item Zrealizowano fuzję i selekcję cech pochodzących z ekstraktora z 46-cioma cechami wybranymi na podstawie analizy literatury, ekstrahowanymi z obszaru ścięgna. W tym celu wykorzystano własność metody LASSO związaną z zerowaniem się współczynników mających marginalny wpływ na ostateczny wynik zadania.
-	\item Określono optymalne podzbiory predyktorów dla każdego z 6-ciu parametrów radiologicznych stosując kryterium selekcji współczynników jako najlepszą korelację ocen radiologa wzorca z krzywymi gojenia się generowanymi przez automat.
-	\item Stosując metodę generalizacji stosów (stacking) wytrenowano oraz porównano szereg meta-regresorów: maszynę wektorów nośnych, wielowarstwowy perceptron, drzewa losowe jak i regresję liniową oraz nieliniową. W wyniku badania wybrano algorytm bazujący na wektorach nośnych (SVR), który dla każdego przekroju badania 3D oblicza ocenę z zakresu 0--7 dla zadanego parametru radiologicznego.
+	\item Określono optymalne podzbiory predyktorów dla każdego z 6-ciu parametrów radiologicznych stosując kryterium selekcji współczynników jako najlepszą korelację ocen radiologa z krzywymi gojenia się generowanymi przez automat.
+	\item Stosując metodę generalizacji stosów (ang. \textit{stacking}) wytrenowano oraz porównano szereg meta-regresorów: maszynę wektorów nośnych, wielowarstwowy perceptron, drzewa losowe jak i regresję liniową oraz nieliniową. W wyniku badania wybrano algorytm bazujący na wektorach nośnych (SVR), który dla każdego przekroju badania 3D oblicza ocenę z zakresu 0--7 dla zadanego parametru radiologicznego.
 	\item Finalnie zrealizowano metodę oceny badania 3D stosując średnią z odrzuceniem wartości skrajnych wyników dla poszczególnych przekrojów.
 \end{enumerate}
 
-Opracowaną metodę (SVR) zwalidowano z wykorzystaniem zbioru testowego tj. 4-ech pacjentów (40 badań). Do oceny wykorzystano miary średniego błędu absolutnego (MAE) z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji Z-Fishera (Corr). Ocenę wykonano dla wszystkich sześciu parametrów radiologicznych:
+Opracowaną metodę (SVR) zwalidowano z wykorzystaniem zbioru testowego tj. 4-ech pacjentów (40 badań). Do oceny wykorzystano miary średniego błędu absolutnego (MAE) z informacją na temat błędu średniej, maksymalnego błędu absolutnego (MAX-AE) i średniej korelacji obliczonej z wykorzystaniem transformacji z-Fishera (Corr). Ocenę wykonano dla wszystkich sześciu parametrów radiologicznych:
 
 \begin{enumerate}[noitemsep,nolistsep]
 	\item Uszkodzenia śródścięgniste (SCT od ang. \textit{Structural Changes within Tendon}).
@@ -84,19 +84,20 @@ Opracowaną metodę (SVR) zwalidowano z wykorzystaniem zbioru testowego tj. 4-ec
 	\item Obrzęk tkanek (TisE od ang. \textit{Tissue Edema}).
 \end{enumerate}
 
-Nową metodę porównano również z dwiema innymi propozycjami oceny gojenia się ścięgna opracowanymi w grupie pod kierownictwem autora tej rozprawy, który odpowiadał za sformułowanie założeń eksperymentów i ich analizę, oraz z metodą bazującą na testach biomechanicznych realizowaną u partnera klinicznego. Pierwsze dwa podejścia wytrenowano w koncepcji end-to-end tak, aby modelowały \textit{explicite} ocenę radiologa wykorzystując (1) poetykietowane obrazy RM, (2) poetykietowane obrazy ultrasonografii (USG).
+Nową metodę porównano również z dwiema innymi propozycjami oceny gojenia się ścięgna opracowanymi w grupie pod kierownictwem autora tej rozprawy, który odpowiadał za sformułowanie założeń eksperymentów i ich analizę, oraz z metodą bazującą na testach biomechanicznych realizowaną u partnera klinicznego. W dwóch pierwszych podejściach trening przeprowadzono w koncepcji end-to-end tak, aby sieci modelowały \textit{explicite} ocenę radiologa wykorzystując (1) poetykietowane obrazy RM, (2) poetykietowane obrazy ultrasonografii (USG).
 
 Wśród najbardziej interesujących wyników uzyskanych w pracy należy wyróżnić:
 
 \begin{enumerate}
-	\item Wybór sekwencji jako danych wejściowych T2$^\ast$ GRE TE\_MIN, w której obraz ścięgna bardzo dobrze różnicuje etapy gojenia się. Taki proces widoczny jest na rysunku poniżej.
+	\item Wybór sekwencji jako danych wejściowych T2$^\ast$ GRE TE\_MIN, w której obraz ścięgna bardzo dobrze różnicuje etapy gojenia się. Taki proces, ze szczególnym pokazaniem różnic w poziomach jasności w obszarze ścięgna, widoczny jest na rysunku poniżej.
 	\begin{figure}[h!]
 		\centering
 		\includegraphics[width=1\textwidth]{figures/T2gremin.jpg}
 		\caption{Proces gojenia się ścięgna Achillesa widoczny w obrazach zrekonstruowanych na podstawie danych z sekwencji T2$^\ast$ GRE TE\_MIN.}\label{fig:T2comp}
 	\end{figure}
+	
 	Skrócenie protokołu badania z 10-ciu do jednej modalności przełożyło się na skrócenie czasu potrzebnego na akwizycję danych od pacjenta. W przypadku protokołu stosowanego w projekcie START jest to oszczędność około 50 min. Natomiast w przypadku standardowego protokołu, rutynowo stosowanego w klinikach oszczędność to około 15 min. biorąc pod uwagę obecny stan techniki. 
-	\item Uzyskanie ocen automatu porównywalną z poziomem ocen radiologa (MAE w zakresie 0,56--1,05 dla 40-tu testowych badań). Szczegóły w Tabeli \ref{tab:trainset}. 
+	\item Uzyskanie oceny automatu porównywalnej z poziomem oceny radiologa (np. MAE w zakresie 0,56--1,05 dla 40-tu testowych badań). Szczegóły w Tabeli \ref{tab:trainset}. 
 	\vspace{0.5 cm}
 	\begin{table}[h!]
 		\scriptsize
@@ -116,7 +117,7 @@ Wśród najbardziej interesujących wyników uzyskanych w pracy należy wyróżn
 		\label{tab:trainset}
 	\end{table}	
 	
-	Biorąc pod uwagę również błąd w ocenie radiologa spowodowany np. zmęczeniem, niedoborem czasu itp. uzyskane wyniki są wysoce satysfakcjonujące.
+	Biorąc pod uwagę również błąd w ocenie radiologa, czyli niedoskonałość wzorca odniesienia, spowodowany np. zmęczeniem, niedoborem czasu itp. uzyskane wyniki są wysoce satysfakcjonujące.
 	\item Zrealizowanie warstwy prezentacji z oceną krzywych gojenia. Przykład takich krzywych znajduje się na poniższym rysunku.
 	 \begin{figure}[h!]
 	 	\centering
@@ -209,13 +210,13 @@ W zestawieniu z alternatywną metodą analizy obrazów RM, wykazano przewagę za
  	\end{tabular}
  \end{table}
 	
-	Badania biomechaniczne były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center. Porównania ilościowe przedstawione w pracy potwierdziły znane w literaturze fakty np. że wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS jak i dostarczyły wskazówek odnośnie możliwych nowych obszarów badań np. stworzenia nowatorskiego komplementarnego testu bazującego na fuzji informacji biomechanicznych i obrazowania medycznego. 
+	Badania biomechaniczne były realizowane w ramach protokołu monitorowania rehabilitacji pacjentów opracowanego w klinice Carolina Medical Center. Porównania ilościowe przedstawione w pracy potwierdziły znane w literaturze fakty (np. wskazania radiologa słabo korelują z wynikami badań biomechanicznych oraz ATRS) jak i dostarczyły wskazówek odnośnie możliwych nowych obszarów badań np. stworzenia nowatorskiego, komplementarnego testu bazującego na fuzji informacji biomechanicznych i z obrazowania medycznego. 
 
 \end{enumerate}
 
 {\let\clearpage\relax\chapter*{Wnioski końcowe}}
 \addcontentsline{toc}{chapter}{Wnioski końcowe}
 
-W ramach pracy osiągnięto wszystkie założone cele. Zrealizowane badania zostały pozytywnie ocenione przez panel ekspertów Nardowego Centrum Badań i Rozwoju z rekomendacją do ich komercjalizacji. Przedmiotowe rozwiązanie, bazujące na głębokich sieciach neuronowych, może być podstawą do budowy narzędzi komputerowo wspomaganej radiologii, w szczególności w zakresie bieżących potrzeb tj. przyspieszenia generowania raportów, polepszenia personalizacji diagnostyki i poprawy jej jakość.
+W ramach pracy osiągnięto wszystkie założone cele jak i potwierdzono postawioną hipotezę dokumentując utylitarność głębokich sieci neuronowych w kontekście oceny ścięgna Achillesa widocznego w badaniu RM. Zrealizowane badania zostały pozytywnie ocenione przez panel ekspertów Nardowego Centrum Badań i Rozwoju z rekomendacją do ich komercjalizacji. Przedstawione rozwiązanie może być podstawą do budowy narzędzi komputerowo wspomaganej radiologii, w szczególności w zakresie bieżących potrzeb tj. przyspieszenia generowania raportów, polepszenia personalizacji diagnostyki i poprawy jej jakość.
 
-Wstępne szacunki przedstawione w pracy, bazujące na liczbie wykonywanych rocznie opisów badań RM ścięgna Achillesa w USA i Europie Zachodniej wskazują, że z wykorzystaniem wspomagania generowania raportów w zakresie przedmiotowego badania, sumarycznie, możliwa jest oszczędność do 83 tys. godzin pracy radiologów rocznie. Opracowane metody mogą również wspomóc wczesną detekcję zmian strukturalnych ścięgna i zredukować finalną liczbę zerwań, których np. w grupie sportowców (najliczniejszej biorąc pod uwagę problemy ze ścięgnem Achillesa) jest obecnie ok. 1 mln. rocznie. Certyfikowane narzędzie zaprojektowane na bazie przedstawionych algorytmów, żywotnie wpisałoby się również w ideę poprawy jakości diagnostyki, umożliwiając gromadzenie ustrukturyzowanych danych, porównań między pacjentami i holistycznego wnioskowania będącego katalizatorem innowacji. Autor ma nadzieję na realizację kolejnych etapów w ramach działań związanych z założoną w Styczniu 2020 r. spółką spin-off Uniwersytetu Warszawskiego.
+Wstępne szacunki przedstawione w pracy, bazujące na liczbie wykonywanych rocznie opisów badań RM ścięgna Achillesa w USA i Europie Zachodniej wskazują, że poprzez wspomaganie generowania raportów w zakresie przedmiotowego badania, sumarycznie, możliwa jest oszczędność do 83 tys. godzin pracy radiologów rocznie. Opracowane metody mogą również wspomóc wczesną detekcję zmian strukturalnych ścięgna i zredukować finalną liczbę zerwań, których np. w grupie sportowców (najliczniejszej biorąc pod uwagę problemy ze ścięgnem Achillesa) jest obecnie ok. 1 mln. rocznie \cite{EpidemiologySport, EpidemiologyUS}. Certyfikowane narzędzie zaprojektowane na bazie przedstawionych algorytmów, żywotnie wpisałoby się również w ideę poprawy jakości diagnostyki, umożliwiając gromadzenie ustrukturyzowanych danych, porównań między pacjentami i holistycznego wnioskowania będącego katalizatorem innowacji. Autor ma nadzieję na realizację kolejnych etapów w ramach działań związanych z założoną w Styczniu 2020 r. spółką spin-off Uniwersytetu Warszawskiego.

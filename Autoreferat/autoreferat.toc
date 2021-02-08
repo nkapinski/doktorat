@@ -4,3 +4,4 @@
 \contentsline {chapter}{Nowa metoda oceny \IeC {\'s}ci\IeC {\k e}gna Achillesa}{4}% 
 \contentsline {chapter}{Charakterystyka i wyniki przeprowadzonych bada\IeC {\'n}}{5}% 
 \contentsline {chapter}{Wnioski ko\IeC {\'n}cowe}{10}% 
+\contentsline {chapter}{\numberline {Bibliografia\hspace {-96pt}}}{14}% 

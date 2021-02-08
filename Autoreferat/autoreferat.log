@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  4 FEB 2021 09:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  8 FEB 2021 11:26
 entering extended mode
 **./autoreferat.tex
 (autoreferat.tex
@@ -965,32 +965,7 @@ File: ./figures/Logo-UW.jpg Graphic file (type jpg)
 <use ./figures/Logo-UW.jpg>
 Package pdftex.def Info: ./figures/Logo-UW.jpg  used on input line 18.
 (pdftex.def)             Requested size: 142.65965pt x 153.93367pt.
-
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 \end{flushleft} \\
-                       [1.3cm]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.48 \end{center}
-                 
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-[1
+ [1
 
 
 {C:/Users/norbert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures
@@ -1024,14 +999,6 @@ File: figures/net.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/net.jpg  used on input line 52.
 (pdftex.def)             Requested size: 426.79135pt x 208.1907pt.
  [4 <./figures/net.jpg>] [5]
-<figures/T2gremin.jpg, id=40, 1901.1025pt x 1276.77pt>
-File: figures/T2gremin.jpg Graphic file (type jpg)
-<use figures/T2gremin.jpg>
-Package pdftex.def Info: figures/T2gremin.jpg  used on input line 95.
-(pdftex.def)             Requested size: 426.79135pt x 286.61795pt.
-LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10.95> on input line 96.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1041,8 +1008,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
+<figures/T2gremin.jpg, id=44, 1901.1025pt x 1276.77pt>
+File: figures/T2gremin.jpg Graphic file (type jpg)
+<use figures/T2gremin.jpg>
+Package pdftex.def Info: figures/T2gremin.jpg  used on input line 95.
+(pdftex.def)             Requested size: 426.79135pt x 286.61795pt.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <5> on input line 106.
+(Font)              <10.95> on input line 96.
+LaTeX Font Info:    External font `plex10' loaded for size
+(Font)              <5> on input line 107.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1053,18 +1030,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7 <./figures/T2gremin.jpg>]
-<figures/TT.png, id=52, 1517.67pt x 855.195pt>
+<figures/TT.png, id=49, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
-Package pdftex.def Info: figures/TT.png  used on input line 123.
+Package pdftex.def Info: figures/TT.png  used on input line 124.
 (pdftex.def)             Requested size: 426.79135pt x 240.48386pt.
 
-Overfull \hbox (6.0636pt too wide) in paragraph at lines 134--143
+Overfull \hbox (6.0636pt too wide) in paragraph at lines 135--144
  [] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1086,7 +1060,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]) [10]
+[9]) [10] (autoreferat.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1095,38 +1069,77 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11] (autoreferat.aux (header_autoref.aux)) ) 
+[11] [12
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+[]\OT4/cmr/m/n/12 M. S. Ra-ikin.  Epi-de-mio-lo-gy of Achil-les ten-don rup-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+\OT4/cmr/m/n/12 tu-re in the US.  $\OT4/cmtt/m/n/12 http : / / lermagazine . co
+m / article /
+ []
+
+
+Underfull \hbox (badness 4072) in paragraph at lines 83--89
+\OT4/cmtt/m/n/12 epidemiology-[]of-[]achilles-[]tendon-[]rupture-[]in-[]the-[]u
+s$\OT4/cmr/m/n/12 , 2014.  Dost.:
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14] (autoreferat.aux (header_autoref.aux)) ) 
 Here is how much of TeX's memory you used:
- 19174 strings out of 492895
- 369303 string characters out of 3122802
- 407987 words of memory out of 3000000
- 22845 multiletter control sequences out of 15000+200000
+ 19196 strings out of 492895
+ 369663 string characters out of 3122802
+ 408046 words of memory out of 3000000
+ 22864 multiletter control sequences out of 15000+200000
  549724 words of font info for 75 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,11n,63p,1200b,680s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,12n,63p,1218b,680s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/norbert/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local/P
+ograms/MiKTeX 2.9/fonts/enc/dvips/pl/pltt.enc}{C:/Users/norbert/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/enc/dvips/pl/plrm.enc}{C:/Users/norbert/AppData/Local/
-Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Local
-/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norbert
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx8.pfb><C:/Users/no
-rbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/U
-sers/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pfb
-><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi
-12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/p
-l/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/pl/plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/pl/plti12.pfb>
-Output written on autoreferat.pdf (15 pages, 1390621 bytes).
+Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plmi.enc}{C:/Users/norbert/AppData/Local
+/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plms.enc}{C:/Users/norbert/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plit.enc}{C:/Users/norbert/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/enc/dvips/pl/plsc.enc}<C:/Users/norbert/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx10.pfb><C:/Users/norbert/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx12.pfb><C:/Users/norber
+t/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plbx8.pfb><C:/Users/n
+orbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plcsc10.pfb><C:/
+Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plmi10.pf
+b><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plm
+i12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+pl/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/pl/plmi8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
+e1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/pl/plr8.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
+Output written on autoreferat.pdf (18 pages, 1416736 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

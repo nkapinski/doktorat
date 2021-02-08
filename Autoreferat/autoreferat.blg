@@ -1,11 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: autoreferat.aux
 A level-1 auxiliary file: header_autoref.aux
 The style file: plplain.bst
-I couldn't open database file refs.bib
----line 4 of file autoreferat.aux
- : \bibdata{refs
- :              }
-I'm skipping whatever remains of this command
-I found no \citation commands---while reading file autoreferat.aux
-I found no database files---while reading file autoreferat.aux
-(There were 3 error messages)
+Database file #1: biblio.bib
+Warning--entry type for "EpidemiologyUS" isn't style-file defined
+--line 98 of file biblio.bib
+(There was 1 warning)

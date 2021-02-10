@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  9 FEB 2021 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.9.9)  10 FEB 2021 09:53
 entering extended mode
 **./autoreferat.tex
 (autoreferat.tex
@@ -965,11 +965,11 @@ File: ./figures/Logo-UW.jpg Graphic file (type jpg)
 <use ./figures/Logo-UW.jpg>
 Package pdftex.def Info: ./figures/Logo-UW.jpg  used on input line 18.
 (pdftex.def)             Requested size: 142.65965pt x 153.93367pt.
- [1
+ [0
 
 
 {C:/Users/norbert/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./figures
-/Logo-UW.jpg>] [2] [0] (autoreferat.toc)
+/Logo-UW.jpg>] (autoreferat.toc)
 \tf@toc=\write4
 \openout4 = `autoreferat.toc'.
 
@@ -987,7 +987,7 @@ less on input line 76.
 (text_autoref.tex [1
 
 ] [2] [3]
-<figures/net.jpg, id=31, 1897.0875pt x 925.4575pt>
+<figures/net.jpg, id=24, 1897.0875pt x 925.4575pt>
 File: figures/net.jpg Graphic file (type jpg)
 <use figures/net.jpg>
 Package pdftex.def Info: figures/net.jpg  used on input line 52.
@@ -1002,7 +1002,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-<figures/T2gremin.jpg, id=44, 1901.1025pt x 1276.77pt>
+<figures/T2gremin.jpg, id=38, 1901.1025pt x 1276.77pt>
 File: figures/T2gremin.jpg Graphic file (type jpg)
 <use figures/T2gremin.jpg>
 Package pdftex.def Info: figures/T2gremin.jpg  used on input line 95.
@@ -1023,7 +1023,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [7 <./figures/T2gremin.jpg>]
-<figures/TT.png, id=50, 1517.67pt x 855.195pt>
+<figures/TT.png, id=44, 1517.67pt x 855.195pt>
 File: figures/TT.png Graphic file (type png)
 <use figures/TT.png>
 Package pdftex.def Info: figures/TT.png  used on input line 123.
@@ -1108,18 +1108,19 @@ b><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plm
 i12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
 pl/plmi5.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/pl/plmi6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/pl/plr6.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/pl/plsy7.pfb><C:/Users/norbert/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbert/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
-Output written on autoreferat.pdf (17 pages, 1422859 bytes).
+e1/public/pl/plmi7.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/pl/plr10.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/pl/plr12.pfb><C:/Users/norbert/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/pl/plr6.pfb><C:/Users/norbert/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/pl/plsl12.pfb><C:/Users/norbert/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/pl/plsy6.pfb><C:/Users/norbert/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy7.pfb><C:/Users/norbert/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plsy8.pfb><C:/Users/norbert/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/plti12.pfb><C:/Users/norbe
+rt/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/pl/pltt12.pfb>
+Output written on autoreferat.pdf (15 pages, 1425538 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
+ 135 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
